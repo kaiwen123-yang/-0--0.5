@@ -1,0 +1,847 @@
+{
+  "updated_at": "2026-10-23T12:59:06.833444+00:00",
+  "started_at": "2026-10-23T12:29:35.128542+00:00",
+  "finished": true,
+  "requested_checkpoints": [
+    "tokenizer",
+    "pi0_base",
+    "pi05_base"
+  ],
+  "complete": true,
+  "checkpoints": {
+    "tokenizer": {
+      "total_bytes": 4264023,
+      "present_bytes": 4264023,
+      "partial_bytes": 0,
+      "verified_files": 1,
+      "total_files": 1,
+      "complete": true,
+      "objects": [
+        {
+          "name": "paligemma_tokenizer.model",
+          "expected_bytes": 4264023,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:35.134597+00:00",
+          "md5Hash": "FCCtyYVnIKVZ6KhyhLGV4g==",
+          "crc32c": "cKDEzw=="
+        }
+      ]
+    },
+    "pi05_libero": {
+      "total_bytes": 12439085481,
+      "present_bytes": 12439085481,
+      "partial_bytes": 0,
+      "verified_files": 16,
+      "total_files": 16,
+      "complete": true,
+      "objects": [
+        {
+          "name": "checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json",
+          "expected_bytes": 1914,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:32.847144+00:00",
+          "md5Hash": "A9ECp3wKo0Ovv3VpyXu8ug==",
+          "crc32c": "l595yA=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/_METADATA",
+          "expected_bytes": 23493,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:32.847190+00:00",
+          "md5Hash": "h87nNUGOGM+SlQTXZuiH5w==",
+          "crc32c": "Pv6Rvg=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/_sharding",
+          "expected_bytes": 17952,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:32.847226+00:00",
+          "md5Hash": "uQbKjd0yzEAsRluwGbXx7g==",
+          "crc32c": "LEfJOw=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/array_metadatas/process_0",
+          "expected_bytes": 9062,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:32.847252+00:00",
+          "md5Hash": "6L3QQHzl7m1hSqp/D9Ilrw==",
+          "crc32c": "PlgOXQ=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979",
+          "expected_bytes": 42307,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:32.847316+00:00",
+          "md5Hash": "yR0NA7yotjSH8i6fOWmjEQ==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/manifest.ocdbt",
+          "expected_bytes": 120,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:32.847334+00:00",
+          "md5Hash": "ScBVzgi9/ARq6oxG/2fzaw==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/0eaaecefaa9720d30a32cc56e65fd345",
+          "expected_bytes": 2449323387,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:35.165580+00:00",
+          "md5Hash": "SDByZotYj//pjCHzD/1/sg==",
+          "crc32c": "RnXVZg=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/155391c1cbf93a1be16266de052e5b48",
+          "expected_bytes": 2307885530,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:37.309509+00:00",
+          "md5Hash": "MGmrmWU0yyNGJTfhq7xDJw==",
+          "crc32c": "Zdn1CA=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25",
+          "expected_bytes": 1077,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:37.309555+00:00",
+          "md5Hash": "9FWQ08KGmJK/8T7dQ0vkQg==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/475fab3ee8821662585a8cde3eb32e22",
+          "expected_bytes": 2150232827,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:39.308818+00:00",
+          "md5Hash": "GDw9vghTGRl9iOgwiOOvdQ==",
+          "crc32c": "yuEuTQ=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/6c54da5a6f62c20a09c0f3f8c3329e00",
+          "expected_bytes": 1608436908,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:40.804698+00:00",
+          "md5Hash": "e86KIbO9uonB23jAhczarw==",
+          "crc32c": "gpmyhg=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/896bf93c5cf2e8ddd274a6ea0a2feec0",
+          "expected_bytes": 2240080987,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.884097+00:00",
+          "md5Hash": "pcZkrSRaoPENYbnKKWRdNQ==",
+          "crc32c": "4+0XtA=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/bc613ff288a162563e622d01bb60622a",
+          "expected_bytes": 217,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.884136+00:00",
+          "md5Hash": "wenKw3gyf+/fW/vslaBp7Q==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/bda87d9791f23df771cd2d15293780cc",
+          "expected_bytes": 2926522,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887131+00:00",
+          "md5Hash": "vYZMwVn2STx4dPZljLmW3Q==",
+          "crc32c": "Ibt0iQ=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e",
+          "expected_bytes": 1680102856,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:19:25.393511+00:00",
+          "md5Hash": "A5LGi23E4IKvN8qblf8Uaw==",
+          "crc32c": "nhZ3lQ=="
+        },
+        {
+          "name": "checkpoints/pi05_libero/params/ocdbt.process_0/manifest.ocdbt",
+          "expected_bytes": 322,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887561+00:00",
+          "md5Hash": "+aR0apS1rB7YibqQ1VVA7w==",
+          "crc32c": "SGdLxw=="
+        }
+      ]
+    },
+    "pi0_libero": {
+      "total_bytes": 12014131888,
+      "present_bytes": 12014131888,
+      "partial_bytes": 0,
+      "verified_files": 19,
+      "total_files": 19,
+      "complete": true,
+      "objects": [
+        {
+          "name": "checkpoints/pi0_libero/assets/physical-intelligence/libero/norm_stats.json",
+          "expected_bytes": 4507,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887582+00:00",
+          "md5Hash": "jR2R68XJcYGPDNhCzAptJQ==",
+          "crc32c": "4ZDi7Q=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/_METADATA",
+          "expected_bytes": 21156,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887614+00:00",
+          "md5Hash": "nm+FHGAnRI/P3vtoi405XA==",
+          "crc32c": "Mq8dZg=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/_sharding",
+          "expected_bytes": 12457,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887636+00:00",
+          "md5Hash": "2Dn7ChFf9T+yPICiYa+t5A==",
+          "crc32c": "vtwzNw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/d/5b6b2a896e0651f82a2c879b8a2a8ba8",
+          "expected_bytes": 2165,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887648+00:00",
+          "md5Hash": "PsUR62sdLmS9DWNmjJFz0g==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/manifest.ocdbt",
+          "expected_bytes": 117,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887658+00:00",
+          "md5Hash": "uzvCbS/GGT4N2IUnGjXQKg==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d",
+          "expected_bytes": 1553506716,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:20:28.810448+00:00",
+          "md5Hash": "V5VaqOqSUUNMmESemflriQ==",
+          "crc32c": "bz37BQ=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/15ad1c4fa76e1c764766b9bc865e8d1d",
+          "expected_bytes": 5362,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:42.887835+00:00",
+          "md5Hash": "j88sCEvKoPCOINbHfuY8mA==",
+          "crc32c": "Cs5b5Q=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d",
+          "expected_bytes": 2240225020,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:22:54.272110+00:00",
+          "md5Hash": "UGDDEXdtsVYvJ9EqdjQCkw==",
+          "crc32c": "3ok0MQ=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/5b573f911a8101f0fcfdd62f73b218fb",
+          "expected_bytes": 608826847,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:43.454861+00:00",
+          "md5Hash": "qWcnXkl1BEJwAMHs4FSg7Q==",
+          "crc32c": "9oZyEw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/5c296f4f9a224be488612a6025ca58c6",
+          "expected_bytes": 979384911,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.366693+00:00",
+          "md5Hash": "beLBNbAJHIUflMFfZ2QKAg==",
+          "crc32c": "XlLtrg=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/680b47b37cc767ff45156e23565e2252",
+          "expected_bytes": 126439,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.366834+00:00",
+          "md5Hash": "2BzpkrGvqtwNo93eT9kDKA==",
+          "crc32c": "fWHczA=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54",
+          "expected_bytes": 2240224527,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:24:39.106222+00:00",
+          "md5Hash": "y/OsBYT1u+wMHxQN007OCw==",
+          "crc32c": "yz4Bfg=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/a3bd463a29df7b76a4d71263d8c05704",
+          "expected_bytes": 132936601,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.491852+00:00",
+          "md5Hash": "3NiaLOpePjX9hi4NcPLIaQ==",
+          "crc32c": "SiwsFQ=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/a87389eb66cb14add95ad6441a413ee9",
+          "expected_bytes": 213,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.491872+00:00",
+          "md5Hash": "QaQyI+7mjGABv5noXvL+Jg==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/cae25c26b881cdb73257fea25bd132a2",
+          "expected_bytes": 34975043,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.525786+00:00",
+          "md5Hash": "b2AetvpihP+oum4jWn3gLA==",
+          "crc32c": "ZN3jMg=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b",
+          "expected_bytes": 2240265403,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:26:41.255184+00:00",
+          "md5Hash": "Jk44FYtk289mv7bb8ez6ig==",
+          "crc32c": "MRTQrw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/f0bdaf7cbb943edbc868f15a685f9881",
+          "expected_bytes": 26171469,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.552249+00:00",
+          "md5Hash": "1Qi37TfglNwoRc3itjvDxQ==",
+          "crc32c": "D1zIPQ=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50",
+          "expected_bytes": 1957442360,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:26:27.522103+00:00",
+          "md5Hash": "4Z2yW6bO47JePoH1ndK0UA==",
+          "crc32c": "XULkBw=="
+        },
+        {
+          "name": "checkpoints/pi0_libero/params/ocdbt.process_0/manifest.ocdbt",
+          "expected_bytes": 575,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:17:44.552351+00:00",
+          "md5Hash": "gj7bedwXApNvmYimHsymOA==",
+          "crc32c": "SGdLxw=="
+        }
+      ]
+    },
+    "pi0_base": {
+      "total_bytes": 12014440489,
+      "present_bytes": 12014440489,
+      "partial_bytes": 0,
+      "verified_files": 33,
+      "total_files": 33,
+      "complete": true,
+      "objects": [
+        {
+          "name": "checkpoints/pi0_base/assets/arx/norm_stats.json",
+          "expected_bytes": 2796,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:37.538566+00:00",
+          "md5Hash": "bYlnoj1VmU3yyxeI5AzZCA==",
+          "crc32c": "1BSE5Q=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/arx_mobile/norm_stats.json",
+          "expected_bytes": 2865,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:37.642213+00:00",
+          "md5Hash": "FfTGCbWoD6qv/FSz9J8UDg==",
+          "crc32c": "Jk3LnA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/droid/norm_stats.json",
+          "expected_bytes": 2413,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:39.611155+00:00",
+          "md5Hash": "mjiBOkTRND6KG0i8nLPOVQ==",
+          "crc32c": "yHfGbA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/fibocom_mobile/norm_stats.json",
+          "expected_bytes": 2968,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:37.227958+00:00",
+          "md5Hash": "WP+KUJ7cyXDGcDf+Uw/FWA==",
+          "crc32c": "gg/7qQ=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/franka/norm_stats.json",
+          "expected_bytes": 2424,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:38.992483+00:00",
+          "md5Hash": "Xv9U1SmiXdqAIkMGi4FMBA==",
+          "crc32c": "MseAtQ=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/trossen/norm_stats.json",
+          "expected_bytes": 2797,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:38.049253+00:00",
+          "md5Hash": "XgXyiDUy7zp3MzPj05z+VA==",
+          "crc32c": "M5X90A=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/trossen_mobile/norm_stats.json",
+          "expected_bytes": 2867,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:39.627992+00:00",
+          "md5Hash": "MAYEVfU/6fxPWsToI2NpoA==",
+          "crc32c": "rBZ0/g=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/ur5e/norm_stats.json",
+          "expected_bytes": 2354,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:36.040692+00:00",
+          "md5Hash": "I74QM3J+7py7Ts15Phmf4g==",
+          "crc32c": "G0AJPg=="
+        },
+        {
+          "name": "checkpoints/pi0_base/assets/ur5e_dual/norm_stats.json",
+          "expected_bytes": 2806,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:36.081435+00:00",
+          "md5Hash": "+exKy6NXPbAV241JytirxA==",
+          "crc32c": "agqtqg=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/_CHECKPOINT_METADATA",
+          "expected_bytes": 92,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:36.037882+00:00",
+          "md5Hash": "an8X2UpOj/9wFJPK8tPRLg==",
+          "crc32c": "m8iVaw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/_METADATA",
+          "expected_bytes": 19031,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:36.449920+00:00",
+          "md5Hash": "yQ+FrRQy9rZQR7M1DezBzA==",
+          "crc32c": "bUFIOA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/_sharding",
+          "expected_bytes": 7607,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:36.118792+00:00",
+          "md5Hash": "Qaa8hHGwcRua42eXRgm+1g==",
+          "crc32c": "mqRDgg=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/d/85a4b908b188b86024ebb92e85065acd",
+          "expected_bytes": 2184,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:37.710241+00:00",
+          "md5Hash": "rCsf5QgQ2sZF50bzX7fpOQ==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/manifest.ocdbt",
+          "expected_bytes": 117,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:38.617248+00:00",
+          "md5Hash": "1aF+sZk4fFZVBQH0+ngc2A==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/085d261a6434a2182b9cf8204a14f929",
+          "expected_bytes": 203056647,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:30:44.392907+00:00",
+          "md5Hash": "PhUhjaFznWTRfZHpbX13Sg==",
+          "crc32c": "4bowgg=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/148068583a1e9abda7c46b410e91850f",
+          "expected_bytes": 2240220744,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:32:53.585846+00:00",
+          "md5Hash": "h3PMaHtPKuwIlTo7rjPL4w==",
+          "crc32c": "Vrog6w=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/2f72ae7e4e549700e9d7da10816ed9a4",
+          "expected_bytes": 25249068,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:32:21.413937+00:00",
+          "md5Hash": "IKlvMnjrjnOTBXl0vcY0nQ==",
+          "crc32c": "+sFNvQ=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/309555f68bee51df688c4564b4d66fa5",
+          "expected_bytes": 1048478,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:32:11.973761+00:00",
+          "md5Hash": "qcJ6f/IK16YntVcgYZPiGA==",
+          "crc32c": "KA6NTQ=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/450c3d3cb6793dc644c1faf981296eb3",
+          "expected_bytes": 34976130,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:32:36.409666+00:00",
+          "md5Hash": "vaj1mHjlZUPdCS5QA95pAg==",
+          "crc32c": "yTdu4Q=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/45c6cbcc04a07d5f963bcf46cba903c4",
+          "expected_bytes": 3077824146,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:36:09.416690+00:00",
+          "md5Hash": "S6CaE0VV58FkgmrZqB5HYQ==",
+          "crc32c": "b9C07A=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/4e5aa230b6c768224fb6b77d78d6a1be",
+          "expected_bytes": 1649,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:35:28.531407+00:00",
+          "md5Hash": "TtAeZdoiwYIBgiuhYtIwxA==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/5e775a3f399b6add8c3c8330df655e1b",
+          "expected_bytes": 5379,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:35:28.693272+00:00",
+          "md5Hash": "puOPiUy7rY0gFhD8I/tyzg==",
+          "crc32c": "6uGCHA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/5f605020f3dadefc18287f67f369e264",
+          "expected_bytes": 132845636,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:36:41.541499+00:00",
+          "md5Hash": "g1JlTPndVbJiBK1zg+U2/Q==",
+          "crc32c": "Fn6bdA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/6629f15468f4d0cc39fb27518b7034a8",
+          "expected_bytes": 2173,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:35:39.504123+00:00",
+          "md5Hash": "JJFTHN0ix5aRPE1fkMNghg==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/808abec8853273a1e0076b0e42d19910",
+          "expected_bytes": 209,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:35:41.477900+00:00",
+          "md5Hash": "NtJWthUikHHrV7eP2zOnEg==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/8dd6f7ae99ab482b841a1eefa796bb41",
+          "expected_bytes": 1040,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:35:37.386117+00:00",
+          "md5Hash": "lk/5xHlXVmp455B2ZducVA==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/93fcf358bb740a5f61526a13e9a2c769",
+          "expected_bytes": 839453563,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:37:30.844272+00:00",
+          "md5Hash": "Q8aHhINdHhN6yRs0AYAy5A==",
+          "crc32c": "v7ON0g=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/99debaeabd76bd2cc1600905278c454b",
+          "expected_bytes": 559736645,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:38:01.509272+00:00",
+          "md5Hash": "suL7tdEHlXIOQ3EEsAks/Q==",
+          "crc32c": "DtTBsQ=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/c5e0b7744afd7fde8b33a80d7f0329bc",
+          "expected_bytes": 2240216669,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:40:13.791362+00:00",
+          "md5Hash": "q0Zp122vEdUeb7ww1JsI/A==",
+          "crc32c": "Stpkqg=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/d5e67a46c20fea80fd9ccf63a434178c",
+          "expected_bytes": 993821460,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:41:13.781422+00:00",
+          "md5Hash": "WX57yk9Trdnaa8GPIDXLlA==",
+          "crc32c": "isU2UA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/fc0caaf15ec5a8930e6d0a269722cbe6",
+          "expected_bytes": 545792151,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:41:48.229723+00:00",
+          "md5Hash": "vakgSVOsSc69xwMnH0Wgjw==",
+          "crc32c": "71Q0sA=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/d/fec2923fef877d6b2a636a44d72670b8",
+          "expected_bytes": 1120134616,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:43:21.621124+00:00",
+          "md5Hash": "J4i2s0gi8rYd/w2P2w6K1A==",
+          "crc32c": "s11KvQ=="
+        },
+        {
+          "name": "checkpoints/pi0_base/params/ocdbt.process_0/manifest.ocdbt",
+          "expected_bytes": 765,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:10.893265+00:00",
+          "md5Hash": "FVHrvrvbRNs0V+Ry8ztkvw==",
+          "crc32c": "SGdLxw=="
+        }
+      ]
+    },
+    "pi05_base": {
+      "total_bytes": 12441749581,
+      "present_bytes": 12441749581,
+      "partial_bytes": 0,
+      "verified_files": 29,
+      "total_files": 29,
+      "complete": true,
+      "objects": [
+        {
+          "name": "checkpoints/pi05_base/assets/arx/norm_stats.json",
+          "expected_bytes": 3476,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:11.565466+00:00",
+          "md5Hash": "Qy/oPSHJD94BHxRaLllgsg==",
+          "crc32c": "6nyXHA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/arx_mobile/norm_stats.json",
+          "expected_bytes": 3677,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:11.781582+00:00",
+          "md5Hash": "Cs4bLtdB+15zZI0ObagbEQ==",
+          "crc32c": "3XZHoA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/droid/norm_stats.json",
+          "expected_bytes": 2062,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:12.868730+00:00",
+          "md5Hash": "HQC4cGUtEo+86jMc1vBR7w==",
+          "crc32c": "sr4eWw=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/fibocom_mobile/norm_stats.json",
+          "expected_bytes": 3951,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:15.413511+00:00",
+          "md5Hash": "w0SZXV8c/ogHVtS7Ckh++Q==",
+          "crc32c": "Fh5IlA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/franka/norm_stats.json",
+          "expected_bytes": 2081,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:12.714696+00:00",
+          "md5Hash": "LC6+FS5cfmXjBJKG9hderA==",
+          "crc32c": "LDm8qg=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/trossen/norm_stats.json",
+          "expected_bytes": 3394,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:14.273870+00:00",
+          "md5Hash": "OfbauPUY0C6yjwF1jFjdsg==",
+          "crc32c": "ej6a+A=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/trossen_mobile/norm_stats.json",
+          "expected_bytes": 3699,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:14.292677+00:00",
+          "md5Hash": "PEW+oUP3c2vo1fwB0Qtp+A==",
+          "crc32c": "l2F3EA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/ur5e/norm_stats.json",
+          "expected_bytes": 1851,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:14.423790+00:00",
+          "md5Hash": "ljxT2aK0MQVTC87Sw+ZeQw==",
+          "crc32c": "o9bKwg=="
+        },
+        {
+          "name": "checkpoints/pi05_base/assets/ur5e_dual/norm_stats.json",
+          "expected_bytes": 3459,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:15.492430+00:00",
+          "md5Hash": "YxVr2ClglFN0p/7g43ycPw==",
+          "crc32c": "X5QwQA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/_CHECKPOINT_METADATA",
+          "expected_bytes": 258,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:17.768616+00:00",
+          "md5Hash": "uDrD0GJ9/soyYRTjoi8CTw==",
+          "crc32c": "3q5lUQ=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/_METADATA",
+          "expected_bytes": 21402,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:16.584121+00:00",
+          "md5Hash": "2KbT3SeW+TztM+bI4gRvTQ==",
+          "crc32c": "frXw2w=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/_sharding",
+          "expected_bytes": 11420,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:16.399602+00:00",
+          "md5Hash": "fWlnNNk1SS+IQh+CEMIX6g==",
+          "crc32c": "4PKBJg=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/array_metadatas/process_0",
+          "expected_bytes": 8856,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:17.550227+00:00",
+          "md5Hash": "/YmvRR2S0+o29qZiGEPt0w==",
+          "crc32c": "CS/yRg=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/commit_success.txt",
+          "expected_bytes": 0,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:29:35.137735+00:00",
+          "md5Hash": "1B2M2Y8AsgTpgAmY7PhCfg==",
+          "crc32c": "AAAAAA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/d/1c4302d2d2000b5f3eb4fa1350fdef9a",
+          "expected_bytes": 2132,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:16.425150+00:00",
+          "md5Hash": "M9VQtg9mmNpNxUk3PFqKaA==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/manifest.ocdbt",
+          "expected_bytes": 117,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:42:17.283560+00:00",
+          "md5Hash": "JHMt8vA2+4zTj7e08rGstQ==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/0832cad6c37f82d4eedd897dcbb8da9d",
+          "expected_bytes": 2240590484,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:45:44.737607+00:00",
+          "md5Hash": "MIC5UeZLIdIf3IW7U3KyXQ==",
+          "crc32c": "4YAIHA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/247d4b7c814d8b1a23fa8a20f36a88f7",
+          "expected_bytes": 34945019,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:44:56.414761+00:00",
+          "md5Hash": "OXwd3VCCtNmDWnq+Av+/8w==",
+          "crc32c": "ceM1dg=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/35a545f74995e511808d4f94dfbef3b6",
+          "expected_bytes": 70041571,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:45:23.772909+00:00",
+          "md5Hash": "H9E9107OxwddcrM7+5WzAw==",
+          "crc32c": "Iq8YUA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/73bbae8a4deba6498bf07d96b215a574",
+          "expected_bytes": 2935855,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:44:54.258584+00:00",
+          "md5Hash": "HVlWzNlQc0i4zG5dA3jWrA==",
+          "crc32c": "2IEHcA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/7bc9d3296d23a6fb83a6b3778ac6e964",
+          "expected_bytes": 2240315383,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:47:36.241111+00:00",
+          "md5Hash": "ETJr4bxcFXcz0wI6UktZjQ==",
+          "crc32c": "R6AiOQ=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/7d78f38c5d8be1eea31406644dde9bd6",
+          "expected_bytes": 133821,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:47:12.917493+00:00",
+          "md5Hash": "qA3aTOnuJOm8TSyveL+ScA==",
+          "crc32c": "3ljcDg=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/828bee85475e37c61e1cc19e32d1c5ef",
+          "expected_bytes": 929,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:47:13.182988+00:00",
+          "md5Hash": "l5njiIkDe+WMHZv9hjz9yQ==",
+          "crc32c": "SGdLxw=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/8c5d7070ea57bdce2f0a19f95b8a21b4",
+          "expected_bytes": 3077149148,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:51:15.808264+00:00",
+          "md5Hash": "iLx3tcAQiMU0/L6f4xTXog==",
+          "crc32c": "gQSvJQ=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/b4349aaadb7dfa45c3a53fc67c04b8f6",
+          "expected_bytes": 1120156687,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:52:41.993461+00:00",
+          "md5Hash": "6WCc/DIq2leq+/WMoBAHeA==",
+          "crc32c": "FlwBrA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/caf01a82962cbd4651563d2ac1063e0b",
+          "expected_bytes": 27445152,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:52:03.437213+00:00",
+          "md5Hash": "eKeUW1e7wkNVuJ7OtsXgXQ==",
+          "crc32c": "Yosa6g=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/deefd3c43390a50472cbcd317b0fff58",
+          "expected_bytes": 2393670849,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:56:15.688370+00:00",
+          "md5Hash": "XRFI4iMyLCKk2MjT8rBdZw==",
+          "crc32c": "JyiHIA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/d/ec484cf8f02dcf59e1892180f0862e40",
+          "expected_bytes": 1234292390,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:59:06.830350+00:00",
+          "md5Hash": "JNt/GN/Rkh+OCqFJOtZ4Xw==",
+          "crc32c": "TP2sFA=="
+        },
+        {
+          "name": "checkpoints/pi05_base/params/ocdbt.process_0/manifest.ocdbt",
+          "expected_bytes": 458,
+          "state": "verified",
+          "verified_at": "2026-10-23T12:58:18.353257+00:00",
+          "md5Hash": "76clmla5BpNyk9xZmuw44g==",
+          "crc32c": "SGdLxw=="
+        }
+      ]
+    }
+  }
+}

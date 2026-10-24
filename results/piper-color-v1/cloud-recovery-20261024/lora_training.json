@@ -1,0 +1,25 @@
+{
+  "mode": "lora",
+  "requested_steps": 1500,
+  "batch_size": 4,
+  "seed": 42,
+  "training_domain": "synthetic_piper_h",
+  "hardware_execution": false,
+  "completed": true,
+  "trainable_parameters": 466957072,
+  "total_parameters": 3403421456,
+  "checkpoint": "/autodl-fs/data/pi05/piper-color-v1/checkpoints/pi05_piper_color_lora/v1/1499",
+  "wall_seconds": 1555.6878524255008,
+  "jax_memory_stats": {
+    "num_allocs": 66783,
+    "bytes_in_use": 0,
+    "peak_bytes_in_use": 18313139200,
+    "largest_alloc_size": 6824480000,
+    "bytes_limit": 86679475788,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 86679475712,
+    "peak_pool_bytes": 86679475712
+  }
+}

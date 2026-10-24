@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-24T10:49:24.215303+00:00",
+  "corrections": [
+    {
+      "run": "pi0-object",
+      "field": "base_position_m",
+      "before": [
+        -0.46,
+        0,
+        0.9
+      ],
+      "after": [
+        -0.46,
+        0.0,
+        0.0
+      ],
+      "reason": "Corrected table-only log label after evaluation; actual ground mount verified in all 25 saved scene.xml files. Evaluation and source snapshots unchanged.",
+      "original_manifest": "pi0-object/provenance/manifest-before-metadata-correction.json",
+      "original_manifest_sha256": "8e74277c2f77e62301a94dd730c4362d025569ce848bf4feb5aa7b1c5b12cab3",
+      "episodes_changed": false
+    },
+    {
+      "run": "pi05-object",
+      "field": "base_position_m",
+      "before": [
+        -0.46,
+        0,
+        0.9
+      ],
+      "after": [
+        -0.46,
+        0.0,
+        0.0
+      ],
+      "reason": "Corrected table-only log label after evaluation; actual ground mount verified in all 25 saved scene.xml files. Evaluation and source snapshots unchanged.",
+      "original_manifest": "pi05-object/provenance/manifest-before-metadata-correction.json",
+      "original_manifest_sha256": "7172486516ae52ed567f3b6a56e86b8e4ee378bfe4fc0f6c2879c898aee90ea8",
+      "episodes_changed": false
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "checkpoint": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499",
+  "observations": 54,
+  "groups": [
+    {
+      "split": "train",
+      "stage": "approach",
+      "observations": 3,
+      "joint_mae_rad": 0.010655048148085674,
+      "width_mae_m": 0.00034736071635658544,
+      "joint1_pred_delta": -0.13759236658612886,
+      "joint1_true_delta": -0.1443848473330339
+    },
+    {
+      "split": "train",
+      "stage": "descend",
+      "observations": 3,
+      "joint_mae_rad": 0.010606401599943638,
+      "width_mae_m": 0.00022479122465786835,
+      "joint1_pred_delta": -0.0034208002034574747,
+      "joint1_true_delta": -0.004912743732954065
+    },
+    {
+      "split": "train",
+      "stage": "grasp",
+      "observations": 3,
+      "joint_mae_rad": 0.0075699024212857085,
+      "width_mae_m": 0.00513514728906254,
+      "joint1_pred_delta": -0.00061744909423093,
+      "joint1_true_delta": -0.0005379840731620789
+    },
+    {
+      "split": "train",
+      "stage": "lift",
+      "observations": 3,
+      "joint_mae_rad": 0.008909891669948896,
+      "width_mae_m": 0.0001951056425847734,
+      "joint1_pred_delta": 0.0011883111825833719,
+      "joint1_true_delta": -0.0011604334188935657
+    },
+    {
+      "split": "train",
+      "stage": "transfer",
+      "observations": 3,
+      "joint_mae_rad": 0.007061695835242669,
+      "width_mae_m": 0.00016531068346618363,
+      "joint1_pred_delta": 0.24767222007115683,
+      "joint1_true_delta": 0.25372834006945294
+    },
+    {
+      "split": "train",
+      "stage": "lower",
+      "observations": 3,
+      "joint_mae_rad": 0.006250378675758839,
+      "width_mae_m": 0.0006331662152661011,
+      "joint1_pred_delta": 0.0028302293891708055,
+      "joint1_true_delta": 0.005506460865338643
+    },
+    {
+      "split": "train",
+      "stage": "release",
+      "observations": 3,
+      "joint_mae_rad": 0.0044269512097040815,
+      "width_mae_m": 0.019784273579716682,
+      "joint1_pred_delta": 0.00037570693530142307,
+      "joint1_true_delta": 0.0004937867245947322
+    },
+    {
+      "split": "train",
+      "stage": "retreat",
+      "observations": 3,
+      "joint_mae_rad": 0.004102877030769984,
+      "width_mae_m": 0.00026980812738959986,
+      "joint1_pred_delta": 0.0016369591079031427,
+      "joint1_true_delta": 0.00020582377813601246
+    },
+    {
+      "split": "train",
+      "stage": "settle",
+      "observations": 3,
+      "joint_mae_rad": 0.0020631758961826563,
+      "width_mae_m": 0.00026421174212979775,
+      "joint1_pred_delta": 0.0028171856344367066,
+      "joint1_true_delta": 0.00016353826019136855
+    },
+    {
+      "split": "validation",
+      "stage": "approach",
+      "observations": 3,
+      "joint_mae_rad": 0.010355127975344658,
+      "width_mae_m": 0.0002948130277218297,
+      "joint1_pred_delta": -0.14939603954553604,
+      "joint1_true_delta": -0.15110901494820914
+    },
+    {
+      "split": "validation",
+      "stage": "descend",
+      "observations": 3,
+      "joint_mae_rad": 0.008370925361911455,
+      "width_mae_m": 0.00024979710481905687,
+      "joint1_pred_delta": 0.00018914292256037393,
+      "joint1_true_delta": -0.0052589902964731055
+    },
+    {
+      "split": "validation",
+      "stage": "grasp",
+      "observations": 3,
+      "joint_mae_rad": 0.0048039637816449,
+      "width_mae_m": 0.0038285672198981047,
+      "joint1_pred_delta": -0.0024950921457881727,
+      "joint1_true_delta": -0.0005796859719945738
+    },
+    {
+      "split": "validation",
+      "stage": "lift",
+      "observations": 3,
+      "joint_mae_rad": 0.009488951259603104,
+      "width_mae_m": 0.0003283514524810016,
+      "joint1_pred_delta": 0.0010949532152153552,
+      "joint1_true_delta": -0.0011285513367814322
+    },
+    {
+      "split": "validation",
+      "stage": "transfer",
+      "observations": 3,
+      "joint_mae_rad": 0.022210311765472095,
+      "width_mae_m": 0.00017356018846233687,
+      "joint1_pred_delta": 0.2689038912455241,
+      "joint1_true_delta": 0.2606440832217534
+    },
+    {
+      "split": "validation",
+      "stage": "lower",
+      "observations": 3,
+      "joint_mae_rad": 0.009372281997154156,
+      "width_mae_m": 0.0003352613081612314,
+      "joint1_pred_delta": 0.0034174731554230675,
+      "joint1_true_delta": 0.005470064158240954
+    },
+    {
+      "split": "validation",
+      "stage": "release",
+      "observations": 3,
+      "joint_mae_rad": 0.004189714867000778,
+      "width_mae_m": 0.015446515132983526,
+      "joint1_pred_delta": 0.003252419837129613,
+      "joint1_true_delta": 0.00044169823134628433
+    },
+    {
+      "split": "validation",
+      "stage": "retreat",
+      "observations": 3,
+      "joint_mae_rad": 0.004816270899027586,
+      "width_mae_m": 0.00016905888818049183,
+      "joint1_pred_delta": 0.003948158089770004,
+      "joint1_true_delta": 0.00022228261029037336
+    },
+    {
+      "split": "validation",
+      "stage": "settle",
+      "observations": 3,
+      "joint_mae_rad": 0.0021255568135529757,
+      "width_mae_m": 0.00013850033186220875,
+      "joint1_pred_delta": 0.0032305042259395123,
+      "joint1_true_delta": 0.00013259550117557714
+    }
+  ],
+  "evaluation": "teacher-forced action prediction only, not success rate",
+  "purpose": "Local diagnostic before spending more rented GPU time",
+  "hardware_execution": false,
+  "model_updated": false,
+  "independent_test_set_used": false
+}

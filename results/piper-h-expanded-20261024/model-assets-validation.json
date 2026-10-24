@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "identical_model_assets_all_four_runs": true,
+  "files_per_run": 6,
+  "sha256": {
+    "provenance.json": "6c15b724308381c5fab35860cf96bff8e536334ab437283412e859b0b60befe0",
+    "gripper.xml": "d5b6596eb8a87a34940db63634cd617fb8788f2e35fa904d819973e9f1b97bf6",
+    "adapter_v3.json": "f760fd7211356ae0b3e3b6adef5004c65632a334544f9381445fed306e9f5b48",
+    "home.json": "e27377db6dec5046c7501d4f098be31cafd189bff3825d9bbd6b158ad679df45",
+    "robot.xml": "f566e13182e4fd1e413ca5a98a9599c241a98c0ad044d362ee85a74bc3d1eb86",
+    "adapter_v3b.json": "a9fb5371e01e4978228ebb13fe51f3a9b9fc8d75dc911f53acfca1063fd8ed10"
+  },
+  "official_urdf_xacro_mesh_hashes_verified": 14
+}

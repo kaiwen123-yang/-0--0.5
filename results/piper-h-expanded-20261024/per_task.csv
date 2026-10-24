@@ -1,0 +1,31 @@
+model,suite,task_id,task_name,successes,episodes,success_rate
+pi0,libero_spatial,0,pick up the black bowl between the plate and the ramekin and place it on the plate,3,5,0.6
+pi0,libero_spatial,1,pick up the black bowl next to the ramekin and place it on the plate,4,5,0.8
+pi0,libero_spatial,2,pick up the black bowl from table center and place it on the plate,5,5,1.0
+pi0,libero_spatial,3,pick up the black bowl on the cookie box and place it on the plate,5,5,1.0
+pi0,libero_spatial,4,pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate,0,5,0.0
+pi0,libero_spatial,5,pick up the black bowl on the ramekin and place it on the plate,5,5,1.0
+pi0,libero_spatial,6,pick up the black bowl next to the cookie box and place it on the plate,5,5,1.0
+pi0,libero_spatial,7,pick up the black bowl on the stove and place it on the plate,0,5,0.0
+pi0,libero_spatial,8,pick up the black bowl next to the plate and place it on the plate,0,5,0.0
+pi0,libero_spatial,9,pick up the black bowl on the wooden cabinet and place it on the plate,0,5,0.0
+pi0,libero_object,0,pick up the alphabet soup and place it in the basket,0,5,0.0
+pi0,libero_object,1,pick up the cream cheese and place it in the basket,0,5,0.0
+pi0,libero_object,2,pick up the salad dressing and place it in the basket,1,5,0.2
+pi0,libero_object,3,pick up the bbq sauce and place it in the basket,4,5,0.8
+pi0,libero_object,4,pick up the ketchup and place it in the basket,0,5,0.0
+pi05,libero_spatial,0,pick up the black bowl between the plate and the ramekin and place it on the plate,5,5,1.0
+pi05,libero_spatial,1,pick up the black bowl next to the ramekin and place it on the plate,5,5,1.0
+pi05,libero_spatial,2,pick up the black bowl from table center and place it on the plate,5,5,1.0
+pi05,libero_spatial,3,pick up the black bowl on the cookie box and place it on the plate,5,5,1.0
+pi05,libero_spatial,4,pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate,0,5,0.0
+pi05,libero_spatial,5,pick up the black bowl on the ramekin and place it on the plate,4,5,0.8
+pi05,libero_spatial,6,pick up the black bowl next to the cookie box and place it on the plate,4,5,0.8
+pi05,libero_spatial,7,pick up the black bowl on the stove and place it on the plate,0,5,0.0
+pi05,libero_spatial,8,pick up the black bowl next to the plate and place it on the plate,5,5,1.0
+pi05,libero_spatial,9,pick up the black bowl on the wooden cabinet and place it on the plate,5,5,1.0
+pi05,libero_object,0,pick up the alphabet soup and place it in the basket,5,5,1.0
+pi05,libero_object,1,pick up the cream cheese and place it in the basket,3,5,0.6
+pi05,libero_object,2,pick up the salad dressing and place it in the basket,0,5,0.0
+pi05,libero_object,3,pick up the bbq sauce and place it in the basket,0,5,0.0
+pi05,libero_object,4,pick up the ketchup and place it in the basket,1,5,0.2

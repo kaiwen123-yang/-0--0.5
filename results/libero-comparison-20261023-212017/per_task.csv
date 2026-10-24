@@ -1,0 +1,81 @@
+model,suite,task_id,task_name,expected,episodes,missing,successes,failures,errors,success_rate,wilson_95_lower,wilson_95_upper,elapsed_seconds,complete
+pi0,libero_spatial,0,pick up the black bowl between the plate and the ramekin and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.043968695012154,True
+pi0,libero_spatial,1,pick up the black bowl next to the ramekin and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.801423659024294,True
+pi0,libero_spatial,2,pick up the black bowl from table center and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,16.840023480006494,True
+pi0,libero_spatial,3,pick up the black bowl on the cookie box and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.70005953303189,True
+pi0,libero_spatial,4,pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate,5,5,0,2,3,0,0.4,0.11762077423264783,0.769275718723987,30.347967584006255,True
+pi0,libero_spatial,5,pick up the black bowl on the ramekin and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,16.146648166992236,True
+pi0,libero_spatial,6,pick up the black bowl next to the cookie box and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,17.802896408975357,True
+pi0,libero_spatial,7,pick up the black bowl on the stove and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,20.917941018997226,True
+pi0,libero_spatial,8,pick up the black bowl next to the plate and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,19.745591958984733,True
+pi0,libero_spatial,9,pick up the black bowl on the wooden cabinet and place it on the plate,5,5,0,3,2,0,0.6,0.2307242812760128,0.882379225767352,25.4108115620038,True
+pi05,libero_spatial,0,pick up the black bowl between the plate and the ramekin and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.80433790301322,True
+pi05,libero_spatial,1,pick up the black bowl next to the ramekin and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.429922343988437,True
+pi05,libero_spatial,2,pick up the black bowl from table center and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.27454954397399,True
+pi05,libero_spatial,3,pick up the black bowl on the cookie box and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.937293271999806,True
+pi05,libero_spatial,4,pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,21.0674379740085,True
+pi05,libero_spatial,5,pick up the black bowl on the ramekin and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,16.551635551004438,True
+pi05,libero_spatial,6,pick up the black bowl next to the cookie box and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.07139196197386,True
+pi05,libero_spatial,7,pick up the black bowl on the stove and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,20.5791304820159,True
+pi05,libero_spatial,8,pick up the black bowl next to the plate and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,16.81942190605332,True
+pi05,libero_spatial,9,pick up the black bowl on the wooden cabinet and place it on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,19.84367345200735,True
+pi0,libero_object,0,pick up the alphabet soup and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,23.064742282032967,True
+pi0,libero_object,1,pick up the cream cheese and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.608877169986954,True
+pi0,libero_object,2,pick up the salad dressing and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,17.34135164495092,True
+pi0,libero_object,3,pick up the bbq sauce and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,19.942248995008413,True
+pi0,libero_object,4,pick up the ketchup and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,20.99922786001116,True
+pi0,libero_object,5,pick up the tomato sauce and place it in the basket,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,24.142377571959514,True
+pi0,libero_object,6,pick up the butter and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,21.639851342973998,True
+pi0,libero_object,7,pick up the milk and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,19.46264303600765,True
+pi0,libero_object,8,pick up the chocolate pudding and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,21.49710492300801,True
+pi0,libero_object,9,pick up the orange juice and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,19.124292644992238,True
+pi05,libero_object,0,pick up the alphabet soup and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,24.437300811056048,True
+pi05,libero_object,1,pick up the cream cheese and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,19.666533618990798,True
+pi05,libero_object,2,pick up the salad dressing and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.99054941601935,True
+pi05,libero_object,3,pick up the bbq sauce and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,20.635658719955245,True
+pi05,libero_object,4,pick up the ketchup and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,21.302644547016826,True
+pi05,libero_object,5,pick up the tomato sauce and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.433027563005453,True
+pi05,libero_object,6,pick up the butter and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,23.56150745099876,True
+pi05,libero_object,7,pick up the milk and place it in the basket,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,24.146085428015795,True
+pi05,libero_object,8,pick up the chocolate pudding and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,21.196538890973898,True
+pi05,libero_object,9,pick up the orange juice and place it in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,20.03737924800953,True
+pi0,libero_goal,0,open the middle drawer of the cabinet,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,17.637987714027986,True
+pi0,libero_goal,1,put the bowl on the stove,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,13.676938763062935,True
+pi0,libero_goal,2,put the wine bottle on top of the cabinet,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.647927869984414,True
+pi0,libero_goal,3,open the top drawer and put the bowl inside,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,26.45385324000381,True
+pi0,libero_goal,4,put the bowl on top of the cabinet,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.533679426065646,True
+pi0,libero_goal,5,push the plate to the front of the stove,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,22.220420602010563,True
+pi0,libero_goal,6,put the cream cheese in the bowl,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,16.118836072972044,True
+pi0,libero_goal,7,turn on the stove,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,12.18712724497891,True
+pi0,libero_goal,8,put the bowl on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,13.844981703005033,True
+pi0,libero_goal,9,put the wine bottle on the rack,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,25.03149578801822,True
+pi05,libero_goal,0,open the middle drawer of the cabinet,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,18.44448022195138,True
+pi05,libero_goal,1,put the bowl on the stove,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,15.297893521026708,True
+pi05,libero_goal,2,put the wine bottle on top of the cabinet,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.117260304046795,True
+pi05,libero_goal,3,open the top drawer and put the bowl inside,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,29.92250315696583,True
+pi05,libero_goal,4,put the bowl on top of the cabinet,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.199388881999766,True
+pi05,libero_goal,5,push the plate to the front of the stove,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,20.054238798009465,True
+pi05,libero_goal,6,put the cream cheese in the bowl,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,14.820707906997995,True
+pi05,libero_goal,7,turn on the stove,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,12.764609772042604,True
+pi05,libero_goal,8,put the bowl on the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,12.920386809040792,True
+pi05,libero_goal,9,put the wine bottle on the rack,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,24.970382357016206,True
+pi0,libero_10,0,put both the alphabet soup and the tomato sauce in the basket,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,45.03916381200543,True
+pi0,libero_10,1,put both the cream cheese box and the butter in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,35.966962259990396,True
+pi0,libero_10,2,turn on the stove and put the moka pot on it,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,38.71657017097459,True
+pi0,libero_10,3,put the black bowl in the bottom drawer of the cabinet and close it,5,5,0,3,2,0,0.6,0.2307242812760128,0.882379225767352,45.815414347016485,True
+pi0,libero_10,4,put the white mug on the left plate and put the yellow and white mug on the right plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,32.690901243971894,True
+pi0,libero_10,5,pick up the book and place it in the back compartment of the caddy,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,33.309924407018116,True
+pi0,libero_10,6,put the white mug on the plate and put the chocolate pudding to the right of the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,32.23893906502053,True
+pi0,libero_10,7,put both the alphabet soup and the cream cheese box in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,37.464546508999774,True
+pi0,libero_10,8,put both moka pots on the stove,5,5,0,1,4,0,0.2,0.03622410863243014,0.6244653702374747,64.53554685896961,True
+pi0,libero_10,9,put the yellow and white mug in the microwave and close it,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,43.05363982100971,True
+pi05,libero_10,0,put both the alphabet soup and the tomato sauce in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,48.76886327500688,True
+pi05,libero_10,1,put both the cream cheese box and the butter in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,37.54549090296496,True
+pi05,libero_10,2,turn on the stove and put the moka pot on it,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,33.05826141903526,True
+pi05,libero_10,3,put the black bowl in the bottom drawer of the cabinet and close it,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,32.20078815301531,True
+pi05,libero_10,4,put the white mug on the left plate and put the yellow and white mug on the right plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,33.9029540400079,True
+pi05,libero_10,5,pick up the book and place it in the back compartment of the caddy,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,30.895199798978865,True
+pi05,libero_10,6,put the white mug on the plate and put the chocolate pudding to the right of the plate,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,33.58479379300843,True
+pi05,libero_10,7,put both the alphabet soup and the cream cheese box in the basket,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,36.69795075300499,True
+pi05,libero_10,8,put both moka pots on the stove,5,5,0,4,1,0,0.8,0.37553462976252533,0.9637758913675698,61.92794629599666,True
+pi05,libero_10,9,put the yellow and white mug in the microwave and close it,5,5,0,5,0,0,1.0,0.5655175352168251,1.0,37.32095863803988,True

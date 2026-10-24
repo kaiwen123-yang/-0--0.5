@@ -1,0 +1,17 @@
+[
+  {
+    "recorded_at": "2026-10-24T10:35:52.952701+00:00",
+    "reason": "LIBERO-Object uses OnTheGround robot registration, missing in table-only Piper adapter; setup failed before any Object policy episode.",
+    "changed_file": "piper_h_sim.py",
+    "old_sha256": "c839a9ab4c81861ae12479403e2b7dd635657da9364b9dbb625b650d46eeb5f5",
+    "new_sha256": "5055b174b45764938d4a7bea1a2214e4d9b114d6b22f6a0f39967087e36f423a",
+    "existing_class_source_equal": [
+      "AgileXGripper",
+      "MountedPiperH"
+    ],
+    "addition": "OnTheGroundPiperH inherits existing adapter; base z=0 instead of 0.9, recording panorama camera z translated by -0.9 m. Same robot joint home, tool rotation, wrist camera relative pose, command ramp and policy.",
+    "policy_settings_changed": false,
+    "evaluation_grid_changed": false,
+    "failed_setup_preserved": "pi0-object-setup-failed"
+  }
+]

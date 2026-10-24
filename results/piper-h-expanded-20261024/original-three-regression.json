@@ -1,0 +1,386 @@
+[
+  {
+    "model": "pi0",
+    "suite": "libero_spatial",
+    "task_id": 0,
+    "trial_index": 0,
+    "old_run": "piper-h-transfer-20261024-174527",
+    "new_run": "pi0-spatial",
+    "before": {
+      "model": "pi0",
+      "task_id": 0,
+      "trial_index": 0,
+      "policy_success": false,
+      "adapter_version": "v2_quaternion_hemisphere_and_home_yaw",
+      "target_initial_xyz": [
+        -0.0634743669788058,
+        0.20202566461895705,
+        0.8984038856841015
+      ],
+      "plate_initial_xyz": [
+        0.05341726860522414,
+        0.20518007059522494,
+        0.9024995937037765
+      ],
+      "target_lift_m": 0.04429693855574801,
+      "target_final_xyz": [
+        0.051820689210897435,
+        0.16411873587408432,
+        0.9109288896478979
+      ],
+      "target_plate_final_xy_m": 0.03692393279718055,
+      "bilateral_contact_frames": 39,
+      "one_finger_contact_frames": 40,
+      "nearest_eef_frame": 81,
+      "nearest_eef_distance_m": 0.06304127344837919,
+      "nearest_eef_xyz": [
+        -0.0444576959856568,
+        0.15498877634608058,
+        0.9379099396189366
+      ],
+      "gripper_width_at_nearest_m": 0.009408324540133059,
+      "joint_limit_frames_within_1_degree": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "original_scipy_rotvec_disagreement_frames": 225,
+      "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+      "action_clipped_by_axis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        49
+      ]
+    },
+    "after": {
+      "model": "pi0",
+      "task_id": 0,
+      "trial_index": 0,
+      "policy_success": true,
+      "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+      "target_initial_xyz": [
+        -0.0634743669788058,
+        0.20202566461895705,
+        0.8984038856841015
+      ],
+      "plate_initial_xyz": [
+        0.05341726860522414,
+        0.20518007059522494,
+        0.9024995937037765
+      ],
+      "target_lift_m": 0.07392972065897463,
+      "target_final_xyz": [
+        0.029910241503872018,
+        0.19082330681073584,
+        0.9169354857742229
+      ],
+      "target_plate_final_xy_m": 0.02517835782695141,
+      "bilateral_contact_frames": 23,
+      "one_finger_contact_frames": 27,
+      "nearest_eef_frame": 97,
+      "nearest_eef_distance_m": 0.05447047254499553,
+      "nearest_eef_xyz": [
+        -0.03873627523318601,
+        0.169783103639425,
+        0.9492774842590352
+      ],
+      "gripper_width_at_nearest_m": 0.004465376700876394,
+      "joint_limit_frames_within_1_degree": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "original_scipy_rotvec_disagreement_frames": 115,
+      "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+      "action_clipped_by_axis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29
+      ]
+    },
+    "release": {
+      "model": "pi0",
+      "task_id": 0,
+      "trial_index": 0,
+      "policy_success": true,
+      "check_version": "v2_fresh_forward",
+      "terminal_success_after_forward": true,
+      "release_check_passed": true,
+      "last_2s_success_frames": 40,
+      "total_check_steps": 100,
+      "final_gripper_width_m": 0.09999899525002912,
+      "method": "restore final qpos/qvel, record fresh-forward terminal predicate, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require fresh-forward success throughout final 2 seconds",
+      "source_trajectory": "videos/pi0/libero_spatial/task_00/trial_000/trajectory.npz"
+    }
+  },
+  {
+    "model": "pi0",
+    "suite": "libero_spatial",
+    "task_id": 1,
+    "trial_index": 1,
+    "old_run": "piper-h-transfer-20261024-174527",
+    "new_run": "pi0-spatial",
+    "before": {
+      "model": "pi0",
+      "task_id": 1,
+      "trial_index": 1,
+      "policy_success": false,
+      "adapter_version": "v2_quaternion_hemisphere_and_home_yaw",
+      "target_initial_xyz": [
+        -0.1652700743153826,
+        0.3131683717418181,
+        0.8984038856841015
+      ],
+      "plate_initial_xyz": [
+        0.056665120571230354,
+        0.19763682178916273,
+        0.9024995937037765
+      ],
+      "target_lift_m": 0.007935334108809755,
+      "target_final_xyz": [
+        -0.1645063517160007,
+        0.31296489634442254,
+        0.898404150188853
+      ],
+      "target_plate_final_xy_m": 0.24944088073306395,
+      "bilateral_contact_frames": 0,
+      "one_finger_contact_frames": 3,
+      "nearest_eef_frame": 50,
+      "nearest_eef_distance_m": 0.08437012159829925,
+      "nearest_eef_xyz": [
+        -0.17833793684654392,
+        0.24475099760595068,
+        0.9579020696793275
+      ],
+      "gripper_width_at_nearest_m": 0.00033744476178430225,
+      "joint_limit_frames_within_1_degree": [
+        0,
+        0,
+        0,
+        0,
+        7,
+        32
+      ],
+      "original_scipy_rotvec_disagreement_frames": 121,
+      "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+      "action_clipped_by_axis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        119
+      ]
+    },
+    "after": {
+      "model": "pi0",
+      "task_id": 1,
+      "trial_index": 1,
+      "policy_success": true,
+      "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+      "target_initial_xyz": [
+        -0.1652700743153826,
+        0.3131683717418181,
+        0.8984038856841015
+      ],
+      "plate_initial_xyz": [
+        0.056665120571230354,
+        0.19763682178916273,
+        0.9024995937037765
+      ],
+      "target_lift_m": 0.1837005550256856,
+      "target_final_xyz": [
+        0.065933226807738,
+        0.20421388756026632,
+        0.9182500786660549
+      ],
+      "target_plate_final_xy_m": 0.01136259598940106,
+      "bilateral_contact_frames": 64,
+      "one_finger_contact_frames": 67,
+      "nearest_eef_frame": 56,
+      "nearest_eef_distance_m": 0.06536246820062562,
+      "nearest_eef_xyz": [
+        -0.15419735898631307,
+        0.2733534182669682,
+        0.9481015160819389
+      ],
+      "gripper_width_at_nearest_m": 0.03048412313958429,
+      "joint_limit_frames_within_1_degree": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      "original_scipy_rotvec_disagreement_frames": 119,
+      "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+      "action_clipped_by_axis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        51
+      ]
+    },
+    "release": {
+      "model": "pi0",
+      "task_id": 1,
+      "trial_index": 1,
+      "policy_success": true,
+      "check_version": "v2_fresh_forward",
+      "terminal_success_after_forward": true,
+      "release_check_passed": true,
+      "last_2s_success_frames": 40,
+      "total_check_steps": 100,
+      "final_gripper_width_m": 0.0999996358955196,
+      "method": "restore final qpos/qvel, record fresh-forward terminal predicate, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require fresh-forward success throughout final 2 seconds",
+      "source_trajectory": "videos/pi0/libero_spatial/task_01/trial_001/trajectory.npz"
+    }
+  },
+  {
+    "model": "pi05",
+    "suite": "libero_spatial",
+    "task_id": 0,
+    "trial_index": 1,
+    "old_run": "piper-h-transfer-20261024-174003",
+    "new_run": "pi05-spatial",
+    "before": {
+      "model": "pi05",
+      "task_id": 0,
+      "trial_index": 1,
+      "policy_success": false,
+      "adapter_version": "v2_quaternion_hemisphere_and_home_yaw",
+      "target_initial_xyz": [
+        -0.06430681439238266,
+        0.19694192532901414,
+        0.8984038856841015
+      ],
+      "plate_initial_xyz": [
+        0.06130267261569608,
+        0.1950557066679284,
+        0.9024995937037765
+      ],
+      "target_lift_m": 0.06228983824111334,
+      "target_final_xyz": [
+        0.10022350061491976,
+        0.17524953067390606,
+        0.9114052202810478
+      ],
+      "target_plate_final_xy_m": 0.040910627134489404,
+      "bilateral_contact_frames": 106,
+      "one_finger_contact_frames": 138,
+      "nearest_eef_frame": 40,
+      "nearest_eef_distance_m": 0.061559174413646806,
+      "nearest_eef_xyz": [
+        -0.03292959529759446,
+        0.1305176416021477,
+        0.9329826205574904
+      ],
+      "gripper_width_at_nearest_m": 0.012249350093714157,
+      "joint_limit_frames_within_1_degree": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        49
+      ],
+      "original_scipy_rotvec_disagreement_frames": 158,
+      "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+      "action_clipped_by_axis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        32
+      ]
+    },
+    "after": {
+      "model": "pi05",
+      "task_id": 0,
+      "trial_index": 1,
+      "policy_success": true,
+      "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+      "target_initial_xyz": [
+        -0.06430681439238266,
+        0.19694192532901414,
+        0.8984038856841015
+      ],
+      "plate_initial_xyz": [
+        0.06130267261569608,
+        0.1950557066679284,
+        0.9024995937037765
+      ],
+      "target_lift_m": 0.10454167037989426,
+      "target_final_xyz": [
+        0.0763594583346851,
+        0.18264346119969754,
+        0.9097861697428409
+      ],
+      "target_plate_final_xy_m": 0.019895829192967885,
+      "bilateral_contact_frames": 41,
+      "one_finger_contact_frames": 43,
+      "nearest_eef_frame": 45,
+      "nearest_eef_distance_m": 0.05618391489813379,
+      "nearest_eef_xyz": [
+        -0.03547346709743125,
+        0.13940032457390872,
+        0.9190799158806892
+      ],
+      "gripper_width_at_nearest_m": 0.02810675620336155,
+      "joint_limit_frames_within_1_degree": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "original_scipy_rotvec_disagreement_frames": 86,
+      "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+      "action_clipped_by_axis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14
+      ]
+    },
+    "release": {
+      "model": "pi05",
+      "task_id": 0,
+      "trial_index": 1,
+      "policy_success": true,
+      "check_version": "v2_fresh_forward",
+      "terminal_success_after_forward": false,
+      "release_check_passed": true,
+      "last_2s_success_frames": 40,
+      "total_check_steps": 100,
+      "final_gripper_width_m": 0.09999881652078155,
+      "method": "restore final qpos/qvel, record fresh-forward terminal predicate, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require fresh-forward success throughout final 2 seconds",
+      "source_trajectory": "videos/pi05/libero_spatial/task_00/trial_001/trajectory.npz"
+    }
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "status": "passed_with_dynamics_warnings",
+  "video_integrity_status": "passed",
+  "episodes": 150,
+  "matched_initial_state_pairs": 75,
+  "identical_adapter": true,
+  "identical_sources_within_each_paired_suite": true,
+  "cross_suite_source_difference": "documented OnTheGroundPiperH registration and panorama height addition only; original classes unchanged",
+  "source_snapshots_match_manifest_hashes": true,
+  "same_initial_full_qpos_qvel": true,
+  "base_position_metadata_matches_all_saved_scenes": true,
+  "original_video_files": 300,
+  "full_decode_all_original_videos": true,
+  "whole_robot_in_all_original_panorama_frames": true,
+  "release_checks": 79,
+  "release_checks_passed": 77,
+  "joint_limit_check": {
+    "status": "failed",
+    "threshold_rad": 0.01,
+    "violations": [
+      {
+        "model": "pi0",
+        "suite": "libero_object",
+        "task_id": 1,
+        "trial_index": 3,
+        "maximum_violation_rad": 0.01150531920216924
+      }
+    ]
+  },
+  "per_run_validation": [
+    "pi0-spatial/validation.json",
+    "pi0-object/validation.json",
+    "pi05-spatial/validation.json",
+    "pi05-object/validation.json"
+  ]
+}

@@ -1,0 +1,1879 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T13:56:19.546424+00:00",
+  "status": "complete",
+  "complete": true,
+  "manifest": {
+    "run_id": "libero-comparison-20261023-212017",
+    "created_at": "2026-10-23T21:20:17.324323+08:00",
+    "models": [
+      "pi0",
+      "pi05"
+    ],
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "task_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "trials_per_task": 5,
+    "expected_episodes": 400,
+    "scope": "pilot comparison; official default is 50 trials per task",
+    "seed": 7,
+    "initial_state_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "policy_seed_formula": "7 + suite_index * 10000 + task_id * 100 + trial_index; suite indices follow suites array",
+    "environment_seed_reset": "numpy and env seed reset to 7 at the start of every episode for reproducible resume",
+    "replan_steps": 5,
+    "num_steps_wait": 10,
+    "max_steps": {
+      "libero_spatial": 220,
+      "libero_object": 280,
+      "libero_goal": 300,
+      "libero_10": 520
+    },
+    "image_render_size": 256,
+    "image_model_size": 224,
+    "image_rotation_degrees": 180,
+    "render_backend": "NVIDIA EGL",
+    "egl_device": 0,
+    "video_fps": 20,
+    "video_views": [
+      "agentview",
+      "wrist"
+    ],
+    "flow_denoising_steps": 10,
+    "model_action_horizons": {
+      "pi0": 50,
+      "pi05": 10
+    },
+    "backend": "jax",
+    "precision": "bfloat16",
+    "error_handling": "record error separately and stop evaluator; no silent error-to-policy-failure conversion",
+    "source_commits": {
+      "openpi": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "libero": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c"
+    },
+    "checkpoint_manifests": {
+      "pi0": {
+        "path": "provenance/checkpoints-manifest-pi0_libero.json",
+        "sha256": "50f584947f5f4417d5befc5a9f7af9a2383f65d30499259650bd63ddf2dca3dc"
+      },
+      "pi05": {
+        "path": "provenance/checkpoints-manifest-pi05_libero.json",
+        "sha256": "855f0b148af996d2db037a7cf2cee9fee8bbfa42043c53681fe894338ecfa52b"
+      }
+    },
+    "environment_locks": {
+      "openpi-freeze.txt": {
+        "path": "provenance/openpi-freeze.txt",
+        "sha256": "bffbb44a95fe0a865d5c1825b4e71a188cd1e7ed922ff052ad42471d7341f790"
+      },
+      "libero-freeze.txt": {
+        "path": "provenance/libero-freeze.txt",
+        "sha256": "0414c19df3a5102fc6462408f20d24836105382f43c9766012b4c1911e6269bd"
+      },
+      "libero-requirements.lock": {
+        "path": "provenance/libero-requirements.lock",
+        "sha256": "205ed7f31a9df31d03990710669806bd4a5dd504d8a5edfc72cbc6213cc9563c"
+      }
+    },
+    "gpu": "NVIDIA GeForce RTX 5080, 580.178.04, 16303 MiB",
+    "python": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+    "control_frequency_hz": 20,
+    "render_vendor_validated": "NVIDIA Corporation; NVIDIA GeForce RTX 5080/PCIe/SSE2",
+    "environment_hard_reset": true,
+    "success_criterion": "done returned by LIBERO BDDLBaseDomain.step(), assigned from self._check_success(); no external reward threshold",
+    "comparison_scope": "two official LIBERO-adapted checkpoints; measured differences are not attributable solely to algorithm architecture or training method",
+    "paired_seed_limitation": "identical per-episode seed values; pi0 horizon 50 versus pi05 horizon 10 means the sampled Gaussian tensors are not identical",
+    "method_notes": "Each model keeps its official policy config, checkpoint normalization, and delta-action transform. The first five provided initial states are a pilot sample, not a random sample of all states."
+  },
+  "expected_episodes": 400,
+  "recorded_episodes": 400,
+  "missing_episodes": [],
+  "error_episodes": [],
+  "overall": {
+    "pi0": {
+      "expected": 200,
+      "episodes": 200,
+      "missing": 0,
+      "successes": 183,
+      "failures": 17,
+      "errors": 0,
+      "success_rate": 0.915,
+      "wilson_95": [
+        0.8681041292843443,
+        0.9462542498225244
+      ],
+      "elapsed_seconds": 985.7649064570724,
+      "complete": true
+    },
+    "pi05": {
+      "expected": 200,
+      "episodes": 200,
+      "missing": 0,
+      "successes": 196,
+      "failures": 4,
+      "errors": 0,
+      "success_rate": 0.98,
+      "wilson_95": [
+        0.9497129130941735,
+        0.9921955735836505
+      ],
+      "elapsed_seconds": 955.2010788822372,
+      "complete": true
+    }
+  },
+  "per_suite": [
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 45,
+      "failures": 5,
+      "errors": 0,
+      "success_rate": 0.9,
+      "wilson_95": [
+        0.7863976856252035,
+        0.9565242350681096
+      ],
+      "elapsed_seconds": 194.75733206703444,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 50,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.9286524008666414,
+        1.0
+      ],
+      "elapsed_seconds": 179.37879439003882,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 49,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.98,
+      "wilson_95": [
+        0.8950455641036219,
+        0.9964607407283539
+      ],
+      "elapsed_seconds": 205.82271747093182,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 49,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.98,
+      "wilson_95": [
+        0.8950455641036219,
+        0.9964607407283539
+      ],
+      "elapsed_seconds": 212.4072256940417,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 49,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.98,
+      "wilson_95": [
+        0.8950455641036219,
+        0.9964607407283539
+      ],
+      "elapsed_seconds": 176.35324842412956,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 48,
+      "failures": 2,
+      "errors": 0,
+      "success_rate": 0.96,
+      "wilson_95": [
+        0.8653990931249297,
+        0.9889611156723802
+      ],
+      "elapsed_seconds": 177.51185172909754,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 40,
+      "failures": 10,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.6696289406777459,
+        0.887562499842239
+      ],
+      "elapsed_seconds": 408.83160849497654,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "expected": 50,
+      "episodes": 50,
+      "missing": 0,
+      "successes": 49,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.98,
+      "wilson_95": [
+        0.8950455641036219,
+        0.9964607407283539
+      ],
+      "elapsed_seconds": 385.90320706905914,
+      "complete": true
+    }
+  ],
+  "per_task": [
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.043968695012154,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "task_name": "pick up the black bowl next to the ramekin and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.801423659024294,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "task_name": "pick up the black bowl from table center and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 16.840023480006494,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "task_name": "pick up the black bowl on the cookie box and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.70005953303189,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "task_name": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 2,
+      "failures": 3,
+      "errors": 0,
+      "success_rate": 0.4,
+      "wilson_95": [
+        0.11762077423264783,
+        0.769275718723987
+      ],
+      "elapsed_seconds": 30.347967584006255,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "task_name": "pick up the black bowl on the ramekin and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 16.146648166992236,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "task_name": "pick up the black bowl next to the cookie box and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 17.802896408975357,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "task_name": "pick up the black bowl on the stove and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 20.917941018997226,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "task_name": "pick up the black bowl next to the plate and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 19.745591958984733,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "task_name": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 3,
+      "failures": 2,
+      "errors": 0,
+      "success_rate": 0.6,
+      "wilson_95": [
+        0.2307242812760128,
+        0.882379225767352
+      ],
+      "elapsed_seconds": 25.4108115620038,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.80433790301322,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "task_name": "pick up the black bowl next to the ramekin and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.429922343988437,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "task_name": "pick up the black bowl from table center and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.27454954397399,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "task_name": "pick up the black bowl on the cookie box and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.937293271999806,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "task_name": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 21.0674379740085,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "task_name": "pick up the black bowl on the ramekin and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 16.551635551004438,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "task_name": "pick up the black bowl next to the cookie box and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.07139196197386,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "task_name": "pick up the black bowl on the stove and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 20.5791304820159,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "task_name": "pick up the black bowl next to the plate and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 16.81942190605332,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "task_name": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 19.84367345200735,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "task_name": "pick up the alphabet soup and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 23.064742282032967,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "task_name": "pick up the cream cheese and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.608877169986954,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "task_name": "pick up the salad dressing and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 17.34135164495092,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "task_name": "pick up the bbq sauce and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 19.942248995008413,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "task_name": "pick up the ketchup and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 20.99922786001116,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 5,
+      "task_name": "pick up the tomato sauce and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 24.142377571959514,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 6,
+      "task_name": "pick up the butter and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 21.639851342973998,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 7,
+      "task_name": "pick up the milk and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 19.46264303600765,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 8,
+      "task_name": "pick up the chocolate pudding and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 21.49710492300801,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 9,
+      "task_name": "pick up the orange juice and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 19.124292644992238,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "task_name": "pick up the alphabet soup and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 24.437300811056048,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "task_name": "pick up the cream cheese and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 19.666533618990798,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "task_name": "pick up the salad dressing and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.99054941601935,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "task_name": "pick up the bbq sauce and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 20.635658719955245,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "task_name": "pick up the ketchup and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 21.302644547016826,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 5,
+      "task_name": "pick up the tomato sauce and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.433027563005453,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 6,
+      "task_name": "pick up the butter and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 23.56150745099876,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 7,
+      "task_name": "pick up the milk and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 24.146085428015795,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 8,
+      "task_name": "pick up the chocolate pudding and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 21.196538890973898,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 9,
+      "task_name": "pick up the orange juice and place it in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 20.03737924800953,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "task_name": "open the middle drawer of the cabinet",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 17.637987714027986,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "task_name": "put the bowl on the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 13.676938763062935,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "task_name": "put the wine bottle on top of the cabinet",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.647927869984414,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "task_name": "open the top drawer and put the bowl inside",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 26.45385324000381,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "task_name": "put the bowl on top of the cabinet",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.533679426065646,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "task_name": "push the plate to the front of the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 22.220420602010563,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "task_name": "put the cream cheese in the bowl",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 16.118836072972044,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "task_name": "turn on the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 12.18712724497891,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "task_name": "put the bowl on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 13.844981703005033,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "task_name": "put the wine bottle on the rack",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 25.03149578801822,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "task_name": "open the middle drawer of the cabinet",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 18.44448022195138,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "task_name": "put the bowl on the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 15.297893521026708,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "task_name": "put the wine bottle on top of the cabinet",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.117260304046795,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "task_name": "open the top drawer and put the bowl inside",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 29.92250315696583,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "task_name": "put the bowl on top of the cabinet",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.199388881999766,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "task_name": "push the plate to the front of the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 20.054238798009465,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "task_name": "put the cream cheese in the bowl",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 14.820707906997995,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "task_name": "turn on the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 12.764609772042604,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "task_name": "put the bowl on the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 12.920386809040792,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "task_name": "put the wine bottle on the rack",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 24.970382357016206,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 0,
+      "task_name": "put both the alphabet soup and the tomato sauce in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 45.03916381200543,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 1,
+      "task_name": "put both the cream cheese box and the butter in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 35.966962259990396,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 2,
+      "task_name": "turn on the stove and put the moka pot on it",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 38.71657017097459,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 3,
+      "task_name": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 3,
+      "failures": 2,
+      "errors": 0,
+      "success_rate": 0.6,
+      "wilson_95": [
+        0.2307242812760128,
+        0.882379225767352
+      ],
+      "elapsed_seconds": 45.815414347016485,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 4,
+      "task_name": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 32.690901243971894,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 5,
+      "task_name": "pick up the book and place it in the back compartment of the caddy",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 33.309924407018116,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 6,
+      "task_name": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 32.23893906502053,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 7,
+      "task_name": "put both the alphabet soup and the cream cheese box in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 37.464546508999774,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 8,
+      "task_name": "put both moka pots on the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 1,
+      "failures": 4,
+      "errors": 0,
+      "success_rate": 0.2,
+      "wilson_95": [
+        0.03622410863243014,
+        0.6244653702374747
+      ],
+      "elapsed_seconds": 64.53554685896961,
+      "complete": true
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 9,
+      "task_name": "put the yellow and white mug in the microwave and close it",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 43.05363982100971,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 0,
+      "task_name": "put both the alphabet soup and the tomato sauce in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 48.76886327500688,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 1,
+      "task_name": "put both the cream cheese box and the butter in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 37.54549090296496,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 2,
+      "task_name": "turn on the stove and put the moka pot on it",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 33.05826141903526,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 3,
+      "task_name": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 32.20078815301531,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 4,
+      "task_name": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 33.9029540400079,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 5,
+      "task_name": "pick up the book and place it in the back compartment of the caddy",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 30.895199798978865,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 6,
+      "task_name": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 33.58479379300843,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 7,
+      "task_name": "put both the alphabet soup and the cream cheese box in the basket",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 36.69795075300499,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 8,
+      "task_name": "put both moka pots on the stove",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "success_rate": 0.8,
+      "wilson_95": [
+        0.37553462976252533,
+        0.9637758913675698
+      ],
+      "elapsed_seconds": 61.92794629599666,
+      "complete": true
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 9,
+      "task_name": "put the yellow and white mug in the microwave and close it",
+      "expected": 5,
+      "episodes": 5,
+      "missing": 0,
+      "successes": 5,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "wilson_95": [
+        0.5655175352168251,
+        1.0
+      ],
+      "elapsed_seconds": 37.32095863803988,
+      "complete": true
+    }
+  ],
+  "paired_comparison": {
+    "overall": {
+      "expected_pairs": 200,
+      "paired_episodes": 200,
+      "missing_pairs": 0,
+      "mismatched_pairs": [],
+      "pi05_wins": 16,
+      "pi05_losses": 3,
+      "both_success": 180,
+      "both_failure": 1,
+      "pairs_with_errors": 0,
+      "pi05_minus_pi0_percentage_points": 6.5,
+      "complete": true
+    },
+    "per_suite": {
+      "libero_spatial": {
+        "expected_pairs": 50,
+        "paired_episodes": 50,
+        "missing_pairs": 0,
+        "mismatched_pairs": [],
+        "pi05_wins": 5,
+        "pi05_losses": 0,
+        "both_success": 45,
+        "both_failure": 0,
+        "pairs_with_errors": 0,
+        "pi05_minus_pi0_percentage_points": 10.0,
+        "complete": true
+      },
+      "libero_object": {
+        "expected_pairs": 50,
+        "paired_episodes": 50,
+        "missing_pairs": 0,
+        "mismatched_pairs": [],
+        "pi05_wins": 1,
+        "pi05_losses": 1,
+        "both_success": 48,
+        "both_failure": 0,
+        "pairs_with_errors": 0,
+        "pi05_minus_pi0_percentage_points": 0.0,
+        "complete": true
+      },
+      "libero_goal": {
+        "expected_pairs": 50,
+        "paired_episodes": 50,
+        "missing_pairs": 0,
+        "mismatched_pairs": [],
+        "pi05_wins": 1,
+        "pi05_losses": 2,
+        "both_success": 47,
+        "both_failure": 0,
+        "pairs_with_errors": 0,
+        "pi05_minus_pi0_percentage_points": -2.0,
+        "complete": true
+      },
+      "libero_10": {
+        "expected_pairs": 50,
+        "paired_episodes": 50,
+        "missing_pairs": 0,
+        "mismatched_pairs": [],
+        "pi05_wins": 9,
+        "pi05_losses": 0,
+        "both_success": 40,
+        "both_failure": 1,
+        "pairs_with_errors": 0,
+        "pi05_minus_pi0_percentage_points": 18.0,
+        "complete": true
+      }
+    }
+  },
+  "method": {
+    "rate_denominator": "Recorded episodes, including error episodes as unsuccessful; missing episodes are excluded and explicitly reported.",
+    "interval": "Two-sided Wilson score 95% interval with z=1.959963984540054; descriptive episode-level binomial interval, not a task-cluster-adjusted interval.",
+    "paired_difference": "100*(pi05_wins-pi05_losses)/matched_pairs; equal suite, task_id, trial_index, environment seed, initial state index/hash and policy seed are required. Error episodes count as unsuccessful.",
+    "scope": "Results apply to this manifest and checkpoints; this report does not establish paper benchmark replication or statistical superiority."
+  }
+}

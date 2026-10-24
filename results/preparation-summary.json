@@ -1,0 +1,364 @@
+{
+  "checked_at": "2026-10-23T19:57:25.231208+08:00",
+  "openpi": {
+    "url": "https://github.com/Physical-Intelligence/openpi",
+    "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "submodules": [
+      " d1dc83afd89ded4379851257fe5d85632d31d5ec third_party/aloha (d1dc83a)",
+      " f78abd68ee283de9f9be3c8f7e2a9ad60246e95c third_party/libero (f78abd6)"
+    ]
+  },
+  "base_python": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+  "base_environment_changed": false,
+  "upstream_cpu_tests": "39 passed (transforms, normalization, images, LoRA shape/filter, client serialization)",
+  "cpu_test_log": "logs/openpi-cpu-tests.log",
+  "gpu_inference_tested": true,
+  "training_started": false,
+  "robot_connected": false,
+  "model_definitions": "passed both JAX abstract and PyTorch meta construction; no full weights allocated",
+  "checkpoint_shapes": "passed all four pi0_libero/pi05_libero/pi0_base/pi05_base checkpoints; 50 pi0 / 51 pi05 parameter arrays; no missing, extra, or mismatched global shapes; tensor data not restored",
+  "libero_physics": "passed CPU-only reset, initial state, 10 steps",
+  "libero_rendering": "passed CPU llvmpipe and actual NVIDIA EGL device 0 double-camera rendering during 400 model rollouts",
+  "piper_sdk": "passed import only",
+  "checkpoints_status_file": "results/checkpoints-status.json",
+  "model_definition_report": "results/model-definitions.json",
+  "checkpoint_shape_report": "results/checkpoint-shapes.json",
+  "ros_built": false,
+  "training_cli_imports": "passed train.py --help and compute_norm_stats.py --help; no training executed",
+  "cuda_library_audit": "Read-only library checks and actual PyTorch/JAX CUDA execution passed; full JAX models also passed",
+  "updated_at": "2026-10-24T12:53:46.370802+00:00",
+  "latest_named_pi_model": "pi0.7 (2026-04-16)",
+  "latest_official_local_source_and_weights": "not found for pi0.7/pi0.6 in the audited public official sources as of 2026-10-23",
+  "latest_release_evidence": "results/latest-pi-availability.json",
+  "papers": "four version-pinned PDFs; hashes verified in docs/papers/SHA256SUMS",
+  "policy_transport": "passed two loopback WebSocket round-trips from LIBERO env to OpenPI env with synthetic data; no model inference",
+  "policy_transport_report": "results/policy-transport-check.json",
+  "base_checkpoints": "pi0_base and pi05_base fully downloaded and verified against pinned official generations",
+  "libero_checkpoints": "pi0_libero and pi05_libero fully downloaded, file sizes and CRC32C/available MD5 verified; serving preflight passed",
+  "preparation_completed_at": "2026-10-23T13:09:23.889775+00:00",
+  "checkpoint_inventory": {
+    "pi0_libero": {
+      "total_bytes": 12014131888,
+      "verified_files": 19,
+      "total_files": 19,
+      "complete": true
+    },
+    "pi05_libero": {
+      "total_bytes": 12439085481,
+      "verified_files": 16,
+      "total_files": 16,
+      "complete": true
+    },
+    "pi0_base": {
+      "total_bytes": 12014440489,
+      "verified_files": 33,
+      "total_files": 33,
+      "complete": true
+    },
+    "pi05_base": {
+      "total_bytes": 12441749581,
+      "verified_files": 29,
+      "total_files": 29,
+      "complete": true
+    }
+  },
+  "checkpoint_total_bytes": 48909407439,
+  "checkpoint_verification": "all 97 checkpoint objects have matching complete verification records and current file sizes; each full object CRC32C and available MD5 verified during download",
+  "upstream_source_worktrees_clean": true,
+  "limits": [
+    "Local baseline uses pretrained checkpoints; new AutoDL fine-tuning has separate records; completed LIBERO comparison uses only five initial states per task.",
+    "Piper H hardware connection and ROS build not performed.",
+    "No official downloadable pi0.6/pi0.7 implementation or weights found in audited public sources."
+  ],
+  "gpu_inference_scope": "Full JAX checkpoints; seeded synthetic LIBERO inputs, two predictions per model; no rollout or success-rate measurement",
+  "gpu_inference_reports": {
+    "pi0": {
+      "backend": "jax",
+      "device": "NVIDIA GeForce RTX 5080",
+      "batch_size": 1,
+      "predictions": 2,
+      "action_shape": [
+        50,
+        7
+      ],
+      "load_seconds": 9.524474581994582,
+      "inference_wall_seconds": [
+        30.909755385975586,
+        0.10856036702170968
+      ]
+    },
+    "pi05": {
+      "backend": "jax",
+      "device": "NVIDIA GeForce RTX 5080",
+      "batch_size": 1,
+      "predictions": 2,
+      "action_shape": [
+        10,
+        7
+      ],
+      "load_seconds": 7.536850980017334,
+      "inference_wall_seconds": [
+        12.419033254991518,
+        0.09633694600779563
+      ]
+    }
+  },
+  "gpu_backend_checks": {
+    "pytorch": "BF16 matmul and cuDNN convolution passed",
+    "jax": "BF16 JIT matmul passed"
+  },
+  "full_pytorch_model_inference_tested": false,
+  "libero_success_rate_evaluation_tested": true,
+  "libero_evaluation": {
+    "run_dir": "results/libero-comparison-20261023-212017",
+    "status": "complete",
+    "expected_episodes": 400,
+    "validated_episodes": 400,
+    "videos": 400,
+    "action_arrays": 400,
+    "errors": 0,
+    "missing": 0,
+    "trials_per_task": 5,
+    "tasks_per_suite": 10,
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal",
+      "libero_10"
+    ],
+    "overall": {
+      "pi0": {
+        "expected": 200,
+        "episodes": 200,
+        "missing": 0,
+        "successes": 183,
+        "failures": 17,
+        "errors": 0,
+        "success_rate": 0.915,
+        "wilson_95": [
+          0.8681041292843443,
+          0.9462542498225244
+        ],
+        "elapsed_seconds": 985.7649064570724,
+        "complete": true
+      },
+      "pi05": {
+        "expected": 200,
+        "episodes": 200,
+        "missing": 0,
+        "successes": 196,
+        "failures": 4,
+        "errors": 0,
+        "success_rate": 0.98,
+        "wilson_95": [
+          0.9497129130941735,
+          0.9921955735836505
+        ],
+        "elapsed_seconds": 955.2010788822372,
+        "complete": true
+      }
+    },
+    "pi05_minus_pi0_percentage_points": 6.5,
+    "matched_initial_conditions": 200,
+    "report": "results/libero-comparison-20261023-212017/comparison.html",
+    "highlights": "results/libero-comparison-20261023-212017/highlights.html",
+    "validation": "results/libero-comparison-20261023-212017/artifact-validation.json",
+    "scope": "pilot using first five provided initial states/task; two official LIBERO checkpoints, not a paper-score reproduction or pure algorithm ablation",
+    "robot_connected": false,
+    "training_started": false
+  },
+  "piper_h_simulation": {
+    "status": "v3_expanded_evaluation_complete_with_documented_failures_and_one_dynamics_warning",
+    "date": "2026-10-24",
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "adapter_config": "models/piper_h/adapter_v3b.json",
+    "gripper": "AgileX official default 100 mm; actual hardware stroke not confirmed",
+    "source": "models/piper_h",
+    "report": "results/piper-h-expanded-20261024/index.html",
+    "validation": "results/piper-h-expanded-20261024/validation.json",
+    "pi0_successes": 32,
+    "pi0_trials": 75,
+    "pi05_successes": 47,
+    "pi05_trials": 75,
+    "videos": 300,
+    "supplementary_video_files": 12,
+    "original_three_failures_fixed": true,
+    "new_evaluation_cases": {
+      "pi0": {
+        "successes": 26,
+        "episodes": 69,
+        "success_rate": 0.37681159420289856
+      },
+      "pi05": {
+        "successes": 41,
+        "episodes": 69,
+        "success_rate": 0.5942028985507246
+      }
+    },
+    "suites": {
+      "pi0": {
+        "libero_spatial": {
+          "successes": 27,
+          "episodes": 50,
+          "success_rate": 0.54
+        },
+        "libero_object": {
+          "successes": 5,
+          "episodes": 25,
+          "success_rate": 0.2
+        }
+      },
+      "pi05": {
+        "libero_spatial": {
+          "successes": 38,
+          "episodes": 50,
+          "success_rate": 0.76
+        },
+        "libero_object": {
+          "successes": 9,
+          "episodes": 25,
+          "success_rate": 0.36
+        }
+      }
+    },
+    "post_policy_release": {
+      "pi0": {
+        "passed": 32,
+        "checked": 32,
+        "terminal_predicate_changed_after_fresh_forward": 2
+      },
+      "pi05": {
+        "passed": 45,
+        "checked": 47,
+        "terminal_predicate_changed_after_fresh_forward": 4
+      }
+    },
+    "joint_limit_validation": {
+      "status": "failed",
+      "threshold_rad": 0.01,
+      "violations": [
+        {
+          "model": "pi0",
+          "suite": "libero_object",
+          "task_id": 1,
+          "trial_index": 3,
+          "maximum_violation_rad": 0.01150531920216924
+        }
+      ]
+    },
+    "whole_robot_in_all_original_panorama_frames": true,
+    "control_check": "results/piper-v3-development-20261024/control-v3b.log",
+    "execution_notes": "results/piper-h-expanded-20261024/execution-notes.json",
+    "hardware_calibrated": false,
+    "robot_connected": false,
+    "fine_tuning_performed": false,
+    "limitations": "Piper transfer, not standard Panda LIBERO. 6 development cases and 69 new cases per model. Positive-x quaternion convention, idealized actuators/contact/TCP and virtual cameras are not calibrated to hardware. New Object, drawer and stove failures remain."
+  },
+  "piper_h_simulation_history": [
+    {
+      "status": "adapter_v2_grasp_and_place_validated_small_sample",
+      "date": "2026-10-24",
+      "gripper": "AgileX default 100 mm model; actual hardware stroke not confirmed",
+      "source": "models/piper_h",
+      "control_check": "results/piper-h-sim-check/controller.json",
+      "gripper_and_render_check": "results/piper-h-sim-check/check.json",
+      "demo_run": "results/piper-h-adaptation-20261024",
+      "pi0_successes": 4,
+      "pi0_trials": 6,
+      "pi05_successes": 5,
+      "pi05_trials": 6,
+      "videos": 24,
+      "validation": "results/piper-h-adaptation-20261024/validation.json",
+      "hardware_calibrated": false,
+      "robot_connected": false,
+      "limitations": "Only LIBERO-Spatial tasks 0/1/2, initial states 0/1. State 0 used for diagnosis, state 1 added after freezing adaptation. Positive-x quaternion hemisphere is limited to downward tool tasks. Idealized actuators, convex contacts and virtual camera mounts are not identified from hardware; not a standard Panda LIBERO score.",
+      "adapter_version": "v2_quaternion_hemisphere_and_home_yaw",
+      "source_runs": {
+        "pi0": "results/piper-h-transfer-20261024-174527",
+        "pi05": "results/piper-h-transfer-20261024-174003"
+      },
+      "panorama_with_release_videos": 9,
+      "stable_after_release": {
+        "pi0": 4,
+        "pi05": 5
+      },
+      "report": "results/piper-h-adaptation-20261024/index.html",
+      "initial_failed_run": "results/piper-h-transfer-20261024-171827",
+      "fine_tuning_performed": false
+    }
+  ],
+  "public_finetuning_datasets": {
+    "checked_at": "2026-10-24",
+    "report": "docs/public_datasets_piper_20261024.md",
+    "evidence": "results/public-datasets-20261024",
+    "sample_quality": "results/public-datasets-20261024/sample-quality.json",
+    "download_scope": "metadata, two episode Parquet samples, three matching videos; not full datasets",
+    "sample_rows": 930,
+    "sample_datasets": [
+      "aromanus/openpi_PiPER_demo_train_2",
+      "Ray0v0/cl-piper-single-stack-bowls"
+    ],
+    "piper_h_exact_match_confirmed": false,
+    "training_started": false,
+    "low_memory_training_fit_tested": false
+  },
+  "training_started_scope": "This legacy boolean describes local fy-5080 training only; cloud training smoke checks are recorded separately under autodl_training_smoke.",
+  "autodl_training_smoke": {
+    "source": "results/autodl-context-20261024.json",
+    "source_thread": "codex://threads/01a16d34-479f-7911-9cd3-c44c5c8db349",
+    "training_started": true,
+    "status": "both_20_step_training_save_reload_inference_checks_complete",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "nominal_vram_gb": 96,
+    "data_scope": "16 Panda LIBERO episodes; not Piper H training",
+    "robot_connected": false,
+    "evidence_scope": "recorded remote command output read from the linked conversation, not a fresh SSH inspection"
+  },
+  "current_goal_context": "Prepare matched real Piper H data and interfaces; AutoDL training, local 5080 inference/simulation. Camera setup and first task pending user input.",
+  "piper_h_color_task": {
+    "task": "language-conditioned red/green/blue same-shape block into one neutral box",
+    "hardware_cameras": {
+      "wrist": "DaBai DC1 with AgileX bracket",
+      "external": "D435i"
+    },
+    "source": "tasks/piper_color_v1",
+    "teacher_demonstrations": 165,
+    "split_episodes": {
+      "train": 120,
+      "validation": 15,
+      "test": 30
+    },
+    "teacher_successes": 165,
+    "teacher_is_learned_policy": false,
+    "local_data_preprocessing": "passed full OpenPI transforms; 10x32 internal actions",
+    "autodl_root": "/root/autodl-fs/pi05/piper-color-v1",
+    "tmux_session": "piper-color-v1",
+    "hardware_execution": false,
+    "user_authorized_finetuning": true,
+    "requested_modes": [
+      "lora",
+      "full"
+    ],
+    "training_outcome": "pending; see remote logs/status and mode_training.json",
+    "pipeline_launched": true,
+    "launch_time": "2026-10-24T20:46:52+08:00",
+    "current_stage_at_handoff": "no-GPU recovery; local weight backup and queued offline diagnostic",
+    "cuda_training_updates_verified": true,
+    "remote_render_and_teacher_preflight_passed": true,
+    "tmux_keeps_running_after_chat": true,
+    "task_handoff": "results/piper-color-v1/HANDOFF.md",
+    "last_verified_training_step": 124,
+    "last_verified_training_at": "2026-10-24T23:18:20+08:00",
+    "platform_shutdown_timer_found": "2026-10-24T22:00:00+08:00",
+    "connection_incident": "results/piper-color-v1/connection-incident-20261024-2310.json",
+    "lora_completed_updates": 1500,
+    "lora_validation": {
+      "successes": 0,
+      "total": 15
+    },
+    "full_updates_before_interruption": 1456,
+    "full_committed_checkpoint_directory": 1000,
+    "full_remaining_updates_from_checkpoint": 499,
+    "recovery_status": "results/piper-color-v1/cloud-recovery-20261024/recovery-status.json"
+  }
+}

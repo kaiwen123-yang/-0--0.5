@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-10-23T19:54:38.639844+08:00",
+  "repositories": [
+    {
+      "name": "pyAgxArm",
+      "path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/pyAgxArm",
+      "remote": "https://github.com/agilexrobotics/pyAgxArm.git",
+      "commit": "d90e234ba8e408cfa964b38aa9120b3131fc9f85",
+      "branch": "master",
+      "clean": true
+    },
+    {
+      "name": "agx_arm_ros",
+      "path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_ros",
+      "remote": "https://github.com/agilexrobotics/agx_arm_ros.git",
+      "commit": "286633e0d2edb038ee3a1047d9feb7f614a1c076",
+      "branch": "ros2",
+      "clean": true,
+      "urdf_submodule": "680fa925cd00db7e2628563d2edc5540963045de src/agx_arm_description/agx_arm_urdf (heads/main)"
+    },
+    {
+      "name": "agx_arm_urdf",
+      "path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf",
+      "remote": "https://github.com/agilexrobotics/agx_arm_urdf.git",
+      "commit": "680fa925cd00db7e2628563d2edc5540963045de",
+      "branch": "main",
+      "clean": true,
+      "checkout": "sparse: piper_h, agx_gripper, root files",
+      "other_models": "git tree available; blobs not downloaded"
+    }
+  ]
+}

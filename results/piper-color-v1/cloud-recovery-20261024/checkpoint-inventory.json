@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-24T23:28:36.835940+08:00",
+  "checkpoints": [
+    {
+      "mode": "lora",
+      "directory": "/root/autodl-fs/pi05/piper-color-v1/checkpoints/pi05_piper_color_lora/v1/1499",
+      "checkpoint_metadata": {
+        "item_handlers": {
+          "assets": "openpi.training.checkpoints.CallbackHandler",
+          "params": "orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler",
+          "train_state": "orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler"
+        },
+        "metrics": {},
+        "performance_metrics": {},
+        "init_timestamp_nsecs": 1792848146053674282,
+        "commit_timestamp_nsecs": 1792848266731627276,
+        "custom_metadata": {}
+      },
+      "groups": {
+        "params": {
+          "files": 13,
+          "bytes": 6335864568
+        },
+        "train_state": {
+          "files": 11,
+          "bytes": 3178945047
+        },
+        "assets": {
+          "files": 1,
+          "bytes": 1867
+        }
+      }
+    },
+    {
+      "mode": "full",
+      "directory": "/root/autodl-fs/pi05/piper-color-v1/checkpoints/pi05_piper_color_full/v1/1000",
+      "checkpoint_metadata": {
+        "item_handlers": {
+          "assets": "openpi.training.checkpoints.CallbackHandler",
+          "params": "orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler",
+          "train_state": "orbax.checkpoint._src.handlers.pytree_checkpoint_handler.PyTreeCheckpointHandler"
+        },
+        "metrics": {},
+        "performance_metrics": {},
+        "init_timestamp_nsecs": 1792849695412983318,
+        "commit_timestamp_nsecs": 1792850134579602726,
+        "custom_metadata": {}
+      },
+      "groups": {
+        "params": {
+          "files": 17,
+          "bytes": 12441709579
+        },
+        "train_state": {
+          "files": 17,
+          "bytes": 19882171962
+        },
+        "assets": {
+          "files": 1,
+          "bytes": 1867
+        }
+      }
+    }
+  ],
+  "verification": "Read committed metadata and file inventory only; no GPU / no model restoration in no-GPU mode"
+}

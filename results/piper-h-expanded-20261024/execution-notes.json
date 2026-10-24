@@ -1,0 +1,53 @@
+{
+  "completed_at": "2026-10-24T11:01:10.136276+00:00",
+  "episodes": 150,
+  "infrastructure_errors_during_episodes": 0,
+  "setup_failure_before_object_evaluation": "Missing OnTheGroundPiperH registration; failed setup retained at pi0-object-setup-failed; no policy episode discarded.",
+  "protocol_amendments": "protocol-amendments.json",
+  "metadata_corrections": "metadata-corrections.json",
+  "video_validation": "All 300 original videos fully decoded; 150 panoramas contain full robot in every saved frame.",
+  "joint_limit_validation": {
+    "status": "failed",
+    "threshold_rad": 0.01,
+    "violations": [
+      {
+        "model": "pi0",
+        "suite": "libero_object",
+        "task_id": 1,
+        "trial_index": 3,
+        "maximum_violation_rad": 0.01150531920216924
+      }
+    ]
+  },
+  "validation_handling": "Kept original 0.01 rad threshold. A failed dynamics check is reported separately, so video checks continue and no episode is excluded. Initial failing validation log is preserved.",
+  "release_check_version": "v2_fresh_forward",
+  "release_check_scope": "Fixed open/retreat/hold after existing policy success; separate score, never upgrades policy failures.",
+  "release_terminal_predicate_changes": 6,
+  "release_checks_passed": 77,
+  "release_checks_total": 79,
+  "success_definition": "Original LIBERO success returned within original suite step limit. No changes to predicates, horizon, physical geometry or limits.",
+  "inference": "Official unchanged pi0_libero / pi05_libero JAX BF16; 10 flow steps and replan every 5 steps.",
+  "development_cases_per_model": 6,
+  "new_evaluation_cases_per_model": 69,
+  "new_evaluation_note": "New to this adapter debugging, not claimed unseen in model training.",
+  "models_or_environment_packages_modified": false,
+  "robot_connected": false,
+  "training_started": false,
+  "upstream_git_status": {
+    "openpi": "",
+    "openpi/third_party/libero": "",
+    "agx_arm_urdf": "",
+    "agx_arm_ros": "",
+    "pyAgxArm": ""
+  },
+  "current_runner_metadata_fix": "After all evaluations, corrected Object nominal base height logging and clarified policy tool yaw field. Frozen execution-source snapshots remain unchanged.",
+  "acceptance_script_sha256": {
+    "check_piper_release.py": "ea1cade19ff5f0e7b245d6e8ded7c109bbf34a6488cb96fe4c32e37b553f4b51",
+    "report_piper_h_demo.py": "50f1670c7b7e2f01ef2af2445a62afd9b83621283d50b34350be30d930186462",
+    "check_piper_h_control.py": "1ca05e4b8ec256a52c234b7448e4fc821f58dafa02b1365f8917b79576d31696",
+    "validate_piper_supplementary.py": "37cc3ad147fb0ac8f1ae6cb89c79e5856c43408ac6a75f5e615c0d921d219fad",
+    "audit_piper_failures.py": "c0ceba8a159bfe934db30530107f8e55b42dc7a065a181fc346c5e464d50e903",
+    "report_piper_expanded.py": "e4761a24ff062e488b637e5e750b293737e2b5cc176973dff3a88ea968d697dd",
+    "audit_piper_object.py": "3df72a349aaf914ccff139b40fcf2790946788dc095e22b309a66999166552a4"
+  }
+}

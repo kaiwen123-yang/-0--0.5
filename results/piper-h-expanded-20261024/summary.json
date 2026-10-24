@@ -1,0 +1,474 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-24T10:52:35.882425+00:00",
+  "scope": {
+    "created_at": "2026-10-24T10:20:39.058934+00:00",
+    "status": "prespecified_before_expanded_evaluation",
+    "models": [
+      "pi0",
+      "pi05"
+    ],
+    "suites": {
+      "libero_spatial": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "libero_object": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "initial_state_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "episodes_per_model": 75,
+    "total_episodes": 150,
+    "development_pairs": [
+      {
+        "suite": "libero_spatial",
+        "task_id": 0,
+        "trial_index": 0
+      },
+      {
+        "suite": "libero_spatial",
+        "task_id": 0,
+        "trial_index": 1
+      },
+      {
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "trial_index": 0
+      },
+      {
+        "suite": "libero_spatial",
+        "task_id": 1,
+        "trial_index": 1
+      },
+      {
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "trial_index": 0
+      },
+      {
+        "suite": "libero_spatial",
+        "task_id": 2,
+        "trial_index": 1
+      }
+    ],
+    "new_pairs_per_model": 69,
+    "adapter": {
+      "version": "v3_symmetric_tool_frame_matched_gripper_rate",
+      "tool_frame_z_rad": 3.141592653589793,
+      "home_qpos": [
+        -1.1159036001750049e-08,
+        1.4466463733164918,
+        -1.2650348504201725,
+        -5.358037748824591e-08,
+        1.4764511809283598,
+        -0.3499999561488895
+      ],
+      "replan_steps": 5,
+      "gripper_state_scale": 0.8,
+      "notes": "180-degree symmetric parallel-gripper tool frame and corresponding virtual wrist-camera mount; physical URDF geometry/limits unchanged; no task-object feedback; match Panda normalized per-physics-step gripper command ramp (0.01 at 2 ms), not a measured hardware actuator response",
+      "gripper_command_speed": 0.01
+    },
+    "adapter_sha256": "a9fb5371e01e4978228ebb13fe51f3a9b9fc8d75dc911f53acfca1063fd8ed10",
+    "weights": "unchanged official pi0_libero and pi05_libero",
+    "policy_success": "original LIBERO success predicate within original suite step limit",
+    "post_policy_release_check": "reported separately; cannot upgrade policy failures",
+    "video": "all episodes panorama 1280x720 and multiview 1280x1008 at 20 fps, no cropping/speedup",
+    "selection": "all specified trials retained, no further adapter tuning after evaluation starts",
+    "hardware_connected": false
+  },
+  "protocol_amendments": [
+    {
+      "recorded_at": "2026-10-24T10:35:52.952701+00:00",
+      "reason": "LIBERO-Object uses OnTheGround robot registration, missing in table-only Piper adapter; setup failed before any Object policy episode.",
+      "changed_file": "piper_h_sim.py",
+      "old_sha256": "c839a9ab4c81861ae12479403e2b7dd635657da9364b9dbb625b650d46eeb5f5",
+      "new_sha256": "5055b174b45764938d4a7bea1a2214e4d9b114d6b22f6a0f39967087e36f423a",
+      "existing_class_source_equal": [
+        "AgileXGripper",
+        "MountedPiperH"
+      ],
+      "addition": "OnTheGroundPiperH inherits existing adapter; base z=0 instead of 0.9, recording panorama camera z translated by -0.9 m. Same robot joint home, tool rotation, wrist camera relative pose, command ramp and policy.",
+      "policy_settings_changed": false,
+      "evaluation_grid_changed": false,
+      "failed_setup_preserved": "pi0-object-setup-failed"
+    }
+  ],
+  "models": {
+    "pi0": {
+      "all": {
+        "successes": 32,
+        "episodes": 75,
+        "success_rate": 0.4266666666666667
+      },
+      "development": {
+        "successes": 6,
+        "episodes": 6,
+        "success_rate": 1.0
+      },
+      "new_evaluation_cases": {
+        "successes": 26,
+        "episodes": 69,
+        "success_rate": 0.37681159420289856
+      },
+      "suites": {
+        "libero_spatial": {
+          "successes": 27,
+          "episodes": 50,
+          "success_rate": 0.54
+        },
+        "libero_object": {
+          "successes": 5,
+          "episodes": 25,
+          "success_rate": 0.2
+        }
+      },
+      "post_policy_release": {
+        "passed": 32,
+        "checked": 32,
+        "terminal_predicate_changed_after_fresh_forward": 2
+      }
+    },
+    "pi05": {
+      "all": {
+        "successes": 47,
+        "episodes": 75,
+        "success_rate": 0.6266666666666667
+      },
+      "development": {
+        "successes": 6,
+        "episodes": 6,
+        "success_rate": 1.0
+      },
+      "new_evaluation_cases": {
+        "successes": 41,
+        "episodes": 69,
+        "success_rate": 0.5942028985507246
+      },
+      "suites": {
+        "libero_spatial": {
+          "successes": 38,
+          "episodes": 50,
+          "success_rate": 0.76
+        },
+        "libero_object": {
+          "successes": 9,
+          "episodes": 25,
+          "success_rate": 0.36
+        }
+      },
+      "post_policy_release": {
+        "passed": 45,
+        "checked": 47,
+        "terminal_predicate_changed_after_fresh_forward": 4
+      }
+    }
+  },
+  "per_task": [
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "successes": 3,
+      "episodes": 5,
+      "success_rate": 0.6
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "task_name": "pick up the black bowl next to the ramekin and place it on the plate",
+      "successes": 4,
+      "episodes": 5,
+      "success_rate": 0.8
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "task_name": "pick up the black bowl from table center and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "task_name": "pick up the black bowl on the cookie box and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "task_name": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "task_name": "pick up the black bowl on the ramekin and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "task_name": "pick up the black bowl next to the cookie box and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "task_name": "pick up the black bowl on the stove and place it on the plate",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "task_name": "pick up the black bowl next to the plate and place it on the plate",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "task_name": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "task_name": "pick up the alphabet soup and place it in the basket",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "task_name": "pick up the cream cheese and place it in the basket",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "task_name": "pick up the salad dressing and place it in the basket",
+      "successes": 1,
+      "episodes": 5,
+      "success_rate": 0.2
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "task_name": "pick up the bbq sauce and place it in the basket",
+      "successes": 4,
+      "episodes": 5,
+      "success_rate": 0.8
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "task_name": "pick up the ketchup and place it in the basket",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "task_name": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "task_name": "pick up the black bowl next to the ramekin and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "task_name": "pick up the black bowl from table center and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "task_name": "pick up the black bowl on the cookie box and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "task_name": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "task_name": "pick up the black bowl on the ramekin and place it on the plate",
+      "successes": 4,
+      "episodes": 5,
+      "success_rate": 0.8
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "task_name": "pick up the black bowl next to the cookie box and place it on the plate",
+      "successes": 4,
+      "episodes": 5,
+      "success_rate": 0.8
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "task_name": "pick up the black bowl on the stove and place it on the plate",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "task_name": "pick up the black bowl next to the plate and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "task_name": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "task_name": "pick up the alphabet soup and place it in the basket",
+      "successes": 5,
+      "episodes": 5,
+      "success_rate": 1.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "task_name": "pick up the cream cheese and place it in the basket",
+      "successes": 3,
+      "episodes": 5,
+      "success_rate": 0.6
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "task_name": "pick up the salad dressing and place it in the basket",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "task_name": "pick up the bbq sauce and place it in the basket",
+      "successes": 0,
+      "episodes": 5,
+      "success_rate": 0.0
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "task_name": "pick up the ketchup and place it in the basket",
+      "successes": 1,
+      "episodes": 5,
+      "success_rate": 0.2
+    }
+  ],
+  "matched_scene_pairs": 75,
+  "paired_outcomes": {
+    "all": {
+      "both_success": 25,
+      "pi0_only": 7,
+      "pi05_only": 22,
+      "both_failed": 21
+    },
+    "new_evaluation_cases": {
+      "both_success": 19,
+      "pi0_only": 7,
+      "pi05_only": 22,
+      "both_failed": 21
+    }
+  },
+  "original_three_failures_now_pass_policy_and_release": true,
+  "pi05_minus_pi0_percentage_points": 20.0
+}

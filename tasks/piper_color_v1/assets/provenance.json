@@ -1,0 +1,52 @@
+{
+  "source": "https://github.com/agilexrobotics/agx_arm_urdf",
+  "commit": "680fa925cd00db7e2628563d2edc5540963045de",
+  "upstream_license_file": "No LICENSE file present in pinned sparse checkout; no new license assigned to vendor meshes.",
+  "local_conversion": "models/piper_h/robot.xml and gripper.xml; only portable mesh paths changed",
+  "files": [
+    {
+      "path": "assets/meshes/piper_h/base_link.stl",
+      "sha256": "11105df3b27e8ba50429f75334abae7d37eb13fc54d7a711ccd16968d2b05d42"
+    },
+    {
+      "path": "assets/meshes/piper_h/link1.stl",
+      "sha256": "55ed2dc7e060800e510505c23f7dc5d1f3d6e7b21d70a689e471fb525add4b1f"
+    },
+    {
+      "path": "assets/meshes/piper_h/link2.stl",
+      "sha256": "4b60473539386cd5d81090eee3dbc8c8a10b3d81798b73da1ca4aed97990c49e"
+    },
+    {
+      "path": "assets/meshes/piper_h/link3.stl",
+      "sha256": "4ea19f971be435ede84f647c11408d9de6c230d3a9ac7e06582cbc8102bf3dc7"
+    },
+    {
+      "path": "assets/meshes/piper_h/link4.stl",
+      "sha256": "2077c29f1f370aaaa922be19be1610ce6a0a2553e0953a75fcb703bdb3fc2c07"
+    },
+    {
+      "path": "assets/meshes/piper_h/link5.stl",
+      "sha256": "964670daa2832688d2322d6d67029de555d8e626211fea30f68e90b96c6d0fe3"
+    },
+    {
+      "path": "assets/meshes/piper_h/link6.stl",
+      "sha256": "9222c39f2291d7b9839b1254b06a22876b19c071608041462a69bf7b565704a3"
+    },
+    {
+      "path": "assets/meshes/piper_h/flange.stl",
+      "sha256": "f9ce752f93a6598858a779e3d8755a09e466b588efcffc3a1c3953773753a22b"
+    },
+    {
+      "path": "assets/meshes/agx_gripper/gripper_base.stl",
+      "sha256": "0b839dc0bcb7d94e3422c74f6396b54a0441ba4836448ab5586e7f372d1bdbf3"
+    },
+    {
+      "path": "assets/meshes/agx_gripper/gripper_link1.stl",
+      "sha256": "475a7d8db056524d7659fadf5a2c307d62791047b6214d733dfc7846ed1c613d"
+    },
+    {
+      "path": "assets/meshes/agx_gripper/gripper_link2.stl",
+      "sha256": "3f88d534a85e28a33ef7d2061adacbd1d25214aa9325f9e464aad0f9e4b74606"
+    }
+  ]
+}

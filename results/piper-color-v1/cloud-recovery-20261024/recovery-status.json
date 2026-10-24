@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-24T23:25:22.430221+08:00",
+  "access_mode": "no GPU; user confirmed",
+  "lora": {
+    "optimizer_updates": 1500,
+    "complete": true,
+    "checkpoint_directory": "1499",
+    "stored_optimizer_step_from_upstream_save_semantics": 1500,
+    "validation_successes": 0,
+    "validation_total": 15
+  },
+  "full": {
+    "optimizer_updates_before_interruption": 1456,
+    "last_update_time": "2026-10-24T22:00:20.657187+08:00",
+    "committed_checkpoint_directory": "1000",
+    "stored_optimizer_step_from_upstream_save_semantics": 1001,
+    "updates_to_repeat": 455,
+    "remaining_updates_from_checkpoint": 499,
+    "training_complete": false,
+    "checkpoint_load_after_restart_verified": false
+  },
+  "backups": {
+    "logs_and_evaluation_videos": "downloaded to this directory",
+    "inference_weights": "copying in local tmux piper-color-backup; optimizer state remains in cloud file storage"
+  },
+  "hardware_execution": false
+}

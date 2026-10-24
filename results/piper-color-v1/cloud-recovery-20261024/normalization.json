@@ -1,0 +1,15 @@
+{
+  "split": "train",
+  "frames": 32160,
+  "horizon": 10,
+  "action_delta_mask": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "heldout_used": false
+}

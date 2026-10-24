@@ -1,0 +1,146 @@
+{
+  "episodes": [
+    {
+      "seed": 1000,
+      "target": "red",
+      "target_lift_m": 0.1546489720360057,
+      "other_lift_max_m": 0.00013182645408381724,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1000,
+      "target": "green",
+      "target_lift_m": 0.08323267698059382,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1000,
+      "target": "blue",
+      "target_lift_m": 0.1141499612605159,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1001,
+      "target": "red",
+      "target_lift_m": 0.14983654910981153,
+      "other_lift_max_m": 0.0017319839031120637,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1001,
+      "target": "green",
+      "target_lift_m": 0.0008754300202096221,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1001,
+      "target": "blue",
+      "target_lift_m": 0.13798410384920068,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1002,
+      "target": "red",
+      "target_lift_m": 0.07264003470901134,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1002,
+      "target": "green",
+      "target_lift_m": 0.024506939981157924,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1002,
+      "target": "blue",
+      "target_lift_m": 0.17292002616869623,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1003,
+      "target": "red",
+      "target_lift_m": 0.03399812627919265,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1003,
+      "target": "green",
+      "target_lift_m": 0.0,
+      "other_lift_max_m": 0.13598901478345815,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1003,
+      "target": "blue",
+      "target_lift_m": 0.13390274084468268,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1004,
+      "target": "red",
+      "target_lift_m": 0.2439094097372862,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1004,
+      "target": "green",
+      "target_lift_m": 0.11940641241113063,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    },
+    {
+      "seed": 1004,
+      "target": "blue",
+      "target_lift_m": 0.00047934414380176524,
+      "other_lift_max_m": 0.0,
+      "correct_in_box": false,
+      "gripper_open": false,
+      "success": false
+    }
+  ],
+  "target_lift_over_5cm": 10,
+  "only_target_lifted_over_5cm": 10,
+  "correct_in_box": 0,
+  "final_gripper_open": 0,
+  "successes": 0,
+  "total": 15,
+  "note": "Lift is diagnostic, not task success. Full success criterion unchanged."
+}
