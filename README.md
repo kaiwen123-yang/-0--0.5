@@ -1,20 +1,48 @@
 # π0 / π0.5 · Piper H 仿真与微调实验归档
 
-本仓库保存 fy-5080 / AutoDL 上的复现工作。当前正在上传；大文件尚未全部上传，不能据此释放原实例。
+**状态：源码、结果及视频上传中，暂未完成。** 按用户最终决定，仅保留源码、环境配置、日志、评测结果和全景视频；不上传权重、优化器或训练示范数据。完整归档约 1.08 GB。完成状态见 `ARCHIVE_STATUS.json`。
 
-## 已核实的实验状态（2026-10-24）
+## 已核实结果（2026-10-24）
 
-- LIBERO 原版 Panda 基线：π0 183/200（91.5%），π0.5 196/200（98%）。
-- Piper H 扩展仿真：π0 32/75（42.7%），π0.5 47/75（62.7%）。这些是机械臂适配实验，不能与原版 Panda 基线混为一项基准。
-- 颜色物体入盒：165 条仿真教师示范，包含训练、验证、测试划分。
-- π0.5 LoRA：完成 1500 步，保存 checkpoint 1499；验证完整任务成功率 0/15。
-- π0.5 全参数：执行到 1456 步后实例被平台定时关机；最后已提交 checkpoint 1000（内部 step 1001）。后续更新未保存。本次归档不重新训练。
-- 尚未连接或部署实机。预定硬件为 Piper H、松灵官方夹爪、DaBai DC1 腕部相机、D435i 外部相机；相机尚未完成实物标定。
+| 实验 | π0 | π0.5 |
+|---|---:|---:|
+| 原版 LIBERO / Panda | 183/200（91.5%） | 196/200（98%） |
+| Piper H 适配扩展仿真 | 32/75（42.7%） | 47/75（62.7%） |
 
-## 归档结构
+两行使用不同机械臂和实验条件，不能当作同一基准的直接比较。
 
-代码、配置、文档与结果索引将提交到 Git；权重、优化器状态、数据和视频按 GitHub Release 单文件限制分卷上传，并附校验和与恢复说明。上传完成状态以最终清单为准。
+颜色物体入盒任务：LoRA 完成 1500 步，验证完整任务 **0/15**；全参数执行至 1456 步被平台定时关机中断，最后已保存 checkpoint 1000。没有续训、没有全参数最终评测，不将抓起物体计为完整任务成功。教师示范 165/165 的通过率也不是学习策略成功率。
 
-SSH 密钥、访问令牌、账户配置不会上传。
+尚未连接或部署实机。计划硬件：Piper H、松灵官方夹爪（仿真默认 100 mm）、DaBai DC1 腕部相机、D435i 外部相机。未完成相机实物标定与真实机器人验收。
 
-原始训练结果和失败记录均保留，不将教师示范通过率或中间抓起物体的比例冒充策略任务成功率。
+## 文件
+
+- `scripts/`、`tasks/`、`models/`：适配、训练、评测代码。
+- `docs/`：实验说明、公开数据调研、原项目说明；历史文档可能记载已取消的续训计划，以本页最终范围为准。
+- `results/`：可直接查看的统计、环境锁定信息与恢复记录。
+- `archives/source.tar.gz.part-*`：完整工作源码快照、上游源码及资源、论文、云端代码与配置。
+- `archives/results.tar.gz.part-*`：全部本轮保留的实验日志、结构化结果、轨迹及视频。
+- `archives/manifest.json`：逐文件清单、大小与明确排除项。没有重新计算校验哈希。
+- `archives/piper-color-original-source-v1.tar.gz`：训练启动时的原始任务源码包。
+
+## 恢复源码和结果
+
+请等 `ARCHIVE_STATUS.json` 中 `complete` 为 `true` 后，再下载或克隆整个仓库；分卷须全部下载。
+
+```bash
+git clone https://github.com/kaiwen123-yang/-0--0.5.git pi-reproduction-archive
+cd pi-reproduction-archive
+mkdir -p restored/pi-reproduction
+cat archives/source.tar.gz.part-* | tar -xz -C restored/pi-reproduction
+cat archives/results.tar.gz.part-* | tar -xz -C restored/pi-reproduction
+```
+
+完整视频及 HTML 报告在 `restored/pi-reproduction/results/`。原版比较入口为 `libero-comparison-20261023-212017/comparison.html`；Piper H 扩展实验入口为 `piper-h-expanded-20261024/index.html`。保留对应子目录后，本地打开 HTML 即可查看视频。
+
+云端代码另位于解压目录中的 `archive-upload/cloud-source-config.tar.gz`，内部保留 `pi05/` 与 `piper-color-v1/` 路径。环境可根据版本锁定文件、云端 `python_packages.txt`、`blackwell_environment.patch` 和安装脚本重新构建。旧脚本含原机器绝对路径，换机器前需要修改；运行入口原用 Python 3.11。
+
+## 本次没有归档的内容
+
+模型检查点及优化器、训练数据数组及数据 tar、可重新下载的安装缓存和已安装环境二进制、Git 对象库、账户凭据不在本仓库。官方权重的来源与版本记录保留在文档和清单中。LoRA 推理参数此前已完整保存于 fy-5080 本地，**不在 GitHub**；全参数检查点没有完整本地副本，释放云端原存储后不能从该断点继续训练。
+
+第三方源码和模型资源保留原许可证及来源；没有为未提供许可证的上游资源另行声明开源许可。
