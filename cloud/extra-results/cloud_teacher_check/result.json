@@ -1,0 +1,40 @@
+{
+  "layout_seed": 2000,
+  "target": "blue",
+  "correct_in_box": true,
+  "wrong_in_box": false,
+  "gripper_open": true,
+  "distractor_displacement_m": {
+    "red": 0.0,
+    "green": 0.0
+  },
+  "max_lift_m": {
+    "red": 0.0,
+    "green": 0.0,
+    "blue": 0.13846627289393154
+  },
+  "max_joint_violation_rad": 0.0,
+  "success": true,
+  "final_positions": {
+    "red": [
+      -0.20087928267831995,
+      -0.04146658367868465,
+      0.017393255988701235
+    ],
+    "green": [
+      -0.23289618307198617,
+      -0.1456201109418467,
+      0.017393255988701235
+    ],
+    "blue": [
+      -0.1476157393343771,
+      0.15633237042884046,
+      0.025393255988701242
+    ]
+  },
+  "steps": 308,
+  "stable_2s": true,
+  "source": "scripted_ik_simulation_teacher",
+  "privileged_object_poses": true,
+  "hardware_execution": false
+}
