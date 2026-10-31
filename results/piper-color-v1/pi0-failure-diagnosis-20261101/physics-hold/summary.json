@@ -1,0 +1,409 @@
+{
+  "probes": [
+    {
+      "source": "teacher_100_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.043906181210123026,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.950175994736481,
+        9.996218453928416
+      ],
+      "minimum_height_after_start_m": 0.043992558154559554,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.4535536007096364,
+        -0.006199890912800809,
+        6.142414641878666
+      ],
+      "object_in_tcp_end_mm": [
+        -1.637636505354762,
+        0.005548992511456113,
+        12.588849729123766
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.044021283705408955,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.93306888393921,
+        10.055588241967614
+      ],
+      "minimum_height_after_start_m": 0.044112268029616375,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.120199428731863,
+        -0.000872078067516051,
+        6.117521585627019
+      ],
+      "object_in_tcp_end_mm": [
+        -1.7644569313434988,
+        -0.0026526809993286968,
+        12.461988236124336
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04336291683599692,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.934610195970246,
+        10.012715659618912
+      ],
+      "minimum_height_after_start_m": 0.043464258305038105,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8549388657721815,
+        -0.005933685587393492,
+        6.10755298965655
+      ],
+      "object_in_tcp_end_mm": [
+        -2.7123505469001437,
+        -0.006584011401084566,
+        13.117817937016463
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04379629103585153,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.944874859318395,
+        10.018597256913697
+      ],
+      "minimum_height_after_start_m": 0.043895056226608935,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8770016698242227,
+        -0.00017892983148277392,
+        6.1047624242919705
+      ],
+      "object_in_tcp_end_mm": [
+        -1.9680426888769595,
+        -0.007006774203613235,
+        12.66664741489655
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.044006814701053616,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.894103633694831,
+        10.10380241939034
+      ],
+      "minimum_height_after_start_m": 0.044098462611775434,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.5108740299719066,
+        -0.0019707942380333804,
+        6.13441083861353
+      ],
+      "object_in_tcp_end_mm": [
+        -2.562258924613124,
+        0.0009444949859850965,
+        12.500184372648553
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04425452714614097,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.988963689100897,
+        9.970676718996824
+      ],
+      "minimum_height_after_start_m": 0.04434218984685563,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.255300519503859,
+        -0.0035015195251131494,
+        6.0947631086284115
+      ],
+      "object_in_tcp_end_mm": [
+        -2.385700714478088,
+        -0.001400415208277731,
+        12.23668773196818
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 111,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.0355631739238416,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.004313216471232,
+        9.898755068647034
+      ],
+      "minimum_height_after_start_m": 0.0357597639050928,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -14.18647053734406,
+        0.008276133454131161,
+        -1.4041979021705389
+      ],
+      "object_in_tcp_end_mm": [
+        -16.085790270135707,
+        0.006668320152132933,
+        14.113027848344553
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 99,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04368352524363688,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.912595364121906,
+        10.077244717714196
+      ],
+      "minimum_height_after_start_m": 0.04378064582303028,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        3.4586936267473525,
+        -0.005192262251373863,
+        -3.5622846270452606
+      ],
+      "object_in_tcp_end_mm": [
+        3.882263341539401,
+        -0.000751838674062731,
+        3.8477043031732996
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 120,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129878719,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0011048055278114824,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.21666666666666667,
+      "object_in_tcp_start_mm": [
+        -28.070670617040886,
+        -0.040049622765115964,
+        1.1513653373926591
+      ],
+      "object_in_tcp_end_mm": [
+        -73.00985022868855,
+        -6.545364411776522,
+        55.27158483368176
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 93,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04582803286479098,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.051838591179385,
+        9.962657170839915
+      ],
+      "minimum_height_after_start_m": 0.04591533789162361,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.8305990487276362,
+        -0.0027345175410641107,
+        6.3517525660275975
+      ],
+      "object_in_tcp_end_mm": [
+        0.6648689767026895,
+        -0.0009496856405836851,
+        11.438816344014212
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 103,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.03735955666009117,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.963330374883226,
+        10.158949859190837
+      ],
+      "minimum_height_after_start_m": 0.037538186281310136,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -9.112343600022434,
+        0.010539498700148786,
+        -1.1073954234748438
+      ],
+      "object_in_tcp_end_mm": [
+        -12.68887469169061,
+        -0.0046652152961256955,
+        10.151842674861829
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 193,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129879413,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0009659794974169814,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.2,
+      "object_in_tcp_start_mm": [
+        -26.43100265529529,
+        -0.0010421208066387524,
+        6.4844776914605955
+      ],
+      "object_in_tcp_end_mm": [
+        -84.15685668226374,
+        13.94891498747532,
+        58.530306573191865
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 95,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.0425741194369619,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.984914910296766,
+        10.025853324946777
+      ],
+      "minimum_height_after_start_m": 0.042661626012349706,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.38644298374725844,
+        -0.00095098608059177,
+        -3.2781577868236176
+      ],
+      "object_in_tcp_end_mm": [
+        0.4262661134012755,
+        0.0017246511056927842,
+        3.1411744766803684
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 129,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010730305599367801,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0008125020657061138,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.7833333333333333,
+      "object_in_tcp_start_mm": [
+        22.83298659031406,
+        0.0027129338665778154,
+        2.0242008690754547
+      ],
+      "object_in_tcp_end_mm": [
+        64.77357111114593,
+        11.042030571442595,
+        58.54930570476824
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 122,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.038081526625065525,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.958964133582997,
+        10.166812788951288
+      ],
+      "minimum_height_after_start_m": 0.03827050643650766,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -12.449244509445393,
+        -0.01797180741551871,
+        -2.455260156067424
+      ],
+      "object_in_tcp_end_mm": [
+        -14.451137107873503,
+        -0.0035746299102575683,
+        9.561644529109001
+      ]
+    }
+  ]
+}

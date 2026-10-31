@@ -1,0 +1,78 @@
+{
+  "name": "prefix85_101_green_seed42",
+  "prefix": 85,
+  "layout": 101,
+  "target": "green",
+  "base_seed": 42,
+  "episode_seed": 346,
+  "teacher_prefix": true,
+  "policy_success_rate_eligible": false,
+  "rng_advance_calls": 17,
+  "error": null,
+  "handoff_state_max_difference": 0.0006073117256164551,
+  "handoff_xy_offset_mm": 1.496272800929055,
+  "handoff_normal_force_N": [
+    10.04374716294047,
+    9.945557487531357
+  ],
+  "success": true,
+  "max_lift_cm": 13.566172421077793,
+  "first_lifted_frame": 14,
+  "first_bilateral_lift_frame": 14,
+  "over_box_frames": 177,
+  "drop_frame": null,
+  "bilateral_contact_frames": 90,
+  "approach_reference_frame": 14,
+  "approach_xy_offset_mm": 1.5519165574051108,
+  "approach_object_in_tcp_mm": [
+    -1.5111598812873945,
+    0.00016394472531686737,
+    6.311559761963872
+  ],
+  "approach_orientation_error_deg": 0.7108025532107467,
+  "normal_force_at_reference_N": [
+    9.988984198289948,
+    10.011083216047176
+  ],
+  "gripper_width_at_reference_m": 0.03163301944732666,
+  "raw_to_executed_joint_mae_rad": 1.6300098316089985e-06,
+  "command_tracking_joint_mae_rad": 0.013344020318119763,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "green",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.13566172421077793,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.1254529980359631,
+        0.12463191823582154,
+        0.025393255988701225
+      ],
+      "blue": [
+        -0.22258108984087696,
+        -0.15393621106855343,
+        0.017393255988701235
+      ]
+    },
+    "steps": 344
+  }
+}

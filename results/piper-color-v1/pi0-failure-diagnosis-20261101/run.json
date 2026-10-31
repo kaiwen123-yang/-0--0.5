@@ -3,5 +3,13 @@
   "scope": "diagnosis only; no new optimizer updates",
   "source_commit": "242d0d03a88335dc7eafd9d1ef98583c9389f179",
   "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
-  "stage": "replay"
+  "stage": "prefix60_refinement",
+  "completed_stages": [
+    "replay",
+    "physics",
+    "fixed",
+    "prefix85_and_115",
+    "static_hold"
+  ],
+  "updated_at_utc": "2026-10-31T16:37:03.605626+00:00"
 }

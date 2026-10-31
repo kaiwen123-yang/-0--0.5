@@ -1,0 +1,78 @@
+{
+  "name": "prefix115_101_green_seed42",
+  "prefix": 115,
+  "layout": 101,
+  "target": "green",
+  "base_seed": 42,
+  "episode_seed": 346,
+  "teacher_prefix": true,
+  "policy_success_rate_eligible": false,
+  "rng_advance_calls": 23,
+  "error": null,
+  "handoff_state_max_difference": 0.00034132745349779725,
+  "handoff_xy_offset_mm": 1.516629780671478,
+  "handoff_normal_force_N": [
+    9.975079548220211,
+    10.020737284820008
+  ],
+  "success": true,
+  "max_lift_cm": 14.028288075720447,
+  "first_lifted_frame": 0,
+  "first_bilateral_lift_frame": 0,
+  "over_box_frames": 85,
+  "drop_frame": null,
+  "bilateral_contact_frames": 80,
+  "approach_reference_frame": 0,
+  "approach_xy_offset_mm": 1.516629780671478,
+  "approach_object_in_tcp_mm": [
+    -1.499710741511171,
+    0.001439090159868594,
+    7.7137705217986845
+  ],
+  "approach_orientation_error_deg": 0.15294559306475838,
+  "normal_force_at_reference_N": [
+    9.975079548220211,
+    10.020737284820008
+  ],
+  "gripper_width_at_reference_m": 0.031640950590372086,
+  "raw_to_executed_joint_mae_rad": 0.0,
+  "command_tracking_joint_mae_rad": 0.02048676233781875,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "green",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.14028288075720446,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.1453122336560665,
+        0.15260657267644157,
+        0.02539325598870124
+      ],
+      "blue": [
+        -0.22258108984087696,
+        -0.15393621106855343,
+        0.017393255988701235
+      ]
+    },
+    "steps": 240
+  }
+}

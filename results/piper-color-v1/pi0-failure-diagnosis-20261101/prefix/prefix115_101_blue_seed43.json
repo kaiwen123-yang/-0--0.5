@@ -1,0 +1,78 @@
+{
+  "name": "prefix115_101_blue_seed43",
+  "prefix": 115,
+  "layout": 101,
+  "target": "blue",
+  "base_seed": 43,
+  "episode_seed": 348,
+  "teacher_prefix": true,
+  "policy_success_rate_eligible": false,
+  "rng_advance_calls": 23,
+  "error": null,
+  "handoff_state_max_difference": 0.00015934061957523227,
+  "handoff_xy_offset_mm": 1.2868809150208833,
+  "handoff_normal_force_N": [
+    9.990658313459708,
+    9.97541064419309
+  ],
+  "success": true,
+  "max_lift_cm": 14.10079696199707,
+  "first_lifted_frame": 0,
+  "first_bilateral_lift_frame": 0,
+  "over_box_frames": 103,
+  "drop_frame": null,
+  "bilateral_contact_frames": 91,
+  "approach_reference_frame": 0,
+  "approach_xy_offset_mm": 1.2868809150208833,
+  "approach_object_in_tcp_mm": [
+    -1.2700172664911364,
+    -0.0024354925163653698,
+    7.681848654925002
+  ],
+  "approach_orientation_error_deg": 0.17410365239508208,
+  "normal_force_at_reference_N": [
+    9.990658313459708,
+    9.97541064419309
+  ],
+  "gripper_width_at_reference_m": 0.03163377568125725,
+  "raw_to_executed_joint_mae_rad": 0.0001565808177738468,
+  "command_tracking_joint_mae_rad": 0.022207927660503526,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "blue",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "green": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.0,
+      "blue": 0.1410079696199707
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.12202544846572949,
+        -0.14744421081155182,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.1500705461109063,
+        0.14987054654523416,
+        0.025393255988701215
+      ]
+    },
+    "steps": 251
+  }
+}
