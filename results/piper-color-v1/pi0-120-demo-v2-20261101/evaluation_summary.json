@@ -1,0 +1,18 @@
+{
+  "evaluations": [
+    {
+      "evaluation": "baseline_old2010_v2_validation_seed42",
+      "split": "validation",
+      "successes": 5,
+      "total": 15,
+      "errors": 0,
+      "complete": true,
+      "lifted_5cm": 6,
+      "bilateral_lift": 6,
+      "over_box": 6,
+      "observed_drops": 0
+    }
+  ],
+  "test_used": false,
+  "decision": "Review both seeds and grouped layouts at 8040 before authorizing the next segment"
+}
