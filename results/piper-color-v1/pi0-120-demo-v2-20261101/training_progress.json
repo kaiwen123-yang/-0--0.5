@@ -1,20 +1,20 @@
 {
-  "step": 3500,
-  "grad_norm": 1.0850039399339009,
-  "loss": 0.023757822733356082,
-  "param_norm": 1380.0632290391568,
-  "wall_time": 1793471924.3497403,
-  "compute_seconds": 0.2951031383126974,
-  "data_wait_seconds": 0.0210358127951622,
-  "learning_rate": 2.8687813686570472e-05,
+  "step": 4000,
+  "grad_norm": 1.0731256073224793,
+  "loss": 0.029623225257772293,
+  "param_norm": 1380.1030326971295,
+  "wall_time": 1793472109.3487208,
+  "compute_seconds": 0.35620492324233055,
+  "data_wait_seconds": 0.018358780071139336,
+  "learning_rate": 2.828236094632209e-05,
   "sample_indices": [
-    10260,
-    4981,
-    31545,
-    19345
+    5652,
+    31996,
+    27160,
+    15367
   ],
-  "sample_starts_seen": 14000,
-  "equivalent_start_epochs": 0.43532338308457713,
+  "sample_starts_seen": 16000,
+  "equivalent_start_epochs": 0.4975124378109453,
   "segment_end": 4020,
   "schedule_budget": 24120
 }
