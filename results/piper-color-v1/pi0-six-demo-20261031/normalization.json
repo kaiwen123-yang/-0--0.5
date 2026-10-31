@@ -1,0 +1,114 @@
+{
+  "model_family": "pi0",
+  "normalization": "mean_std",
+  "state_input": "continuous",
+  "split": "train",
+  "frames": 1608,
+  "episodes": 6,
+  "horizon": 10,
+  "action_delta_mask": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "heldout_used": false,
+  "sample_order_sha256": "c44e94e122738d8b53877a0b871197789c9a48df5377be8a5253f6360bf0a89d",
+  "sampling": "five complete permutations; numpy PCG64 seeds 42..46; saved order defines resume offset",
+  "source_manifest_sha256": "43f3879364cb8b205ebdca8d9a9eed23b8f723c991e8311fca2749390cc55785",
+  "selected_episodes": [
+    {
+      "directory": "train/layout_00100_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 100,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "npz_sha256": "2f250c17ff6df9182fbbdf2b62821e6eac33856b4df91695433632cc7281d961",
+      "array_sha256": {
+        "state": "df541ee128a23077057d2db0748ef89484cfa46afe55547186fc90aa6d36ddf5",
+        "action": "d54138b0e78eef07beb4dbae5a612fffb856ce43afa9543d078f7bc219548544",
+        "external_rgb": "7f0f2ddec06baf517e850a1620b318ac157986f3b940024a05d9d43bd99ddc6c",
+        "wrist_rgb": "3c8ac20cf083315cb85285e9e4eb747f74c44107f3252915f801b0d9c7184b58"
+      }
+    },
+    {
+      "directory": "train/layout_00100_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 100,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "npz_sha256": "f26c545a83a4b06480eaff8719880e10fddc6157cbbca0073b0555fb80609b87",
+      "array_sha256": {
+        "state": "3418d5249a11b49c7cf6701595548efa8931c140cabd63368bde11de8e6bf141",
+        "action": "241c92e09c1f7822ac82c88842a9bf5fb9886ccd360fc7c9c8075e2241419122",
+        "external_rgb": "5f1f32445db5b9bfa8e6a914a3276a696e99a55e183640b97b11e591e456d3ac",
+        "wrist_rgb": "858e9876e52c05e7b2018bd3a702beec0eee881e5ed921e00546ec23851c4566"
+      }
+    },
+    {
+      "directory": "train/layout_00100_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 100,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "npz_sha256": "491d8aa28cffa3e73e74c9b3c2a535c10bbf6af1fbb505cec4231906dd8cc291",
+      "array_sha256": {
+        "state": "29c99a4c03b477a5b5d74faf400768a94779df72f439b44a83c778f3a7c9c4fb",
+        "action": "d8d22561f4d22d4358e20a5920404558ee06c5f476aa015d7f76b7488328c346",
+        "external_rgb": "3efeebb7a6d8001efe67149c902de923c639a1a2e06e903c4b944dcbe3b73346",
+        "wrist_rgb": "4f6d103c5c28611d2cde5171f961bf2c152ae0d23294263ec631673fb3a11cab"
+      }
+    },
+    {
+      "directory": "train/layout_00101_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 101,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "npz_sha256": "c61b081fc7fb2882f41f8e89eb78afcdcd344cc4c70542d6cd03f3513775cb21",
+      "array_sha256": {
+        "state": "b548a37eedabc45ef6cc5d598fc5e14d18b2e002efcb75e372f4c5b414f9411f",
+        "action": "8a7295c4ff034658c02fd740c9f34370b742f2e73ef1300b95676c1798e13a1e",
+        "external_rgb": "831dc7f51208880168391c113ee0ec7f363bcb22ac417f69dc2cbc829872cfab",
+        "wrist_rgb": "ee2320b21522ed8f2bd21c0eef62d7dba20a7bc9b2509e64bf413e6b98b21583"
+      }
+    },
+    {
+      "directory": "train/layout_00101_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 101,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "npz_sha256": "8def91d80192c0eae32c79d2734e4e3b1330cc37437db57b781eb5d89662b37e",
+      "array_sha256": {
+        "state": "de0d881f309aa3d880a5bd0c4a48b95a038b79175247c94ee6ba0beb13da6564",
+        "action": "3a5135eb6fa7d08723b22dc33508e483b173b0967a85ea17366b6a4bf9f952aa",
+        "external_rgb": "52ba406d6835dbc3861b023410ac98ebed9524e62ae9b05b219b4ea7cbc431a4",
+        "wrist_rgb": "5aadf08520e6e46e76a465220567ef7ef9587abfbb663a7d1ebb67641ec5dd28"
+      }
+    },
+    {
+      "directory": "train/layout_00101_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 101,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "npz_sha256": "206ad9564e0eafff40baf5b6fecc073b94e6773f666a355b73c060295f01fafc",
+      "array_sha256": {
+        "state": "f264eadb9bef7b59e8898edb533a506e78b958084ea91dd2a1a8538e8653e045",
+        "action": "aef3eb8279611972dd8933a573f521da08169a39893074727a83289b0fddc9f3",
+        "external_rgb": "a50ce53e8b0283be9a78087f8d6e2b5531a5011f4f8c4977506ab0af0476891a",
+        "wrist_rgb": "8f0c9036e8b7e6973db7cf6e3582a9608510ca222d9c65dcad4ff9e8478ec802"
+      }
+    }
+  ]
+}

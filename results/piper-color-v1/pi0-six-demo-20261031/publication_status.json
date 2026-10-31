@@ -1,0 +1,20 @@
+{
+  "updated_at_utc": "2026-10-31T14:12:49.865746+00:00",
+  "stage": "started",
+  "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031",
+  "branch": "codex/pi0-six-demo-20261031",
+  "tracked_files": [
+    "assets/piper_h_color_v1/norm_stats.json",
+    "dataset/index.json",
+    "dataset/manifest.json",
+    "logs/prepare.log",
+    "logs/train.log",
+    "lora_training.json",
+    "normalization.json",
+    "run.json",
+    "train_config.txt"
+  ],
+  "local_checkpoints": [],
+  "publication_scope": "source/config and all per-update logs; model parameters, optimizer, videos and NPZ remain on D57",
+  "success_claim": "Only complete closed-loop evaluation determines task success"
+}
