@@ -1,10 +1,11 @@
 {
-  "stage": "baseline_old2010_v2_validation_seed43",
-  "snapshot_at_utc": "2026-10-31T18:04:48.762495+00:00",
+  "stage": "train-update-500",
+  "snapshot_at_utc": "2026-10-31T18:09:07.094044+00:00",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
   "branch": "codex/pi0-120-demo-v2-20261101",
   "tracked_files": [
     "assets/piper_h_color_contact_v2_120/norm_stats.json",
+    "checkpoint_history.jsonl",
     "data_complete.json",
     "data_progress.json",
     "dataset/audit.json",
@@ -53,17 +54,45 @@
     "logs/prepare.log",
     "logs/serve_baseline_old2010_v2.log",
     "logs/supervisor.log",
+    "logs/train_to_2010.log",
+    "lora_metrics.jsonl",
+    "lora_training.json",
     "normalization.json",
     "publication_attempts.jsonl",
     "publication_delivery.json",
     "publication_receipts.jsonl",
     "resources.jsonl",
+    "resume_verification_0.json",
     "run.json",
     "scene/scene.xml",
     "scene/version.json",
-    "teacher_controls.json"
+    "teacher_controls.json",
+    "train_config.txt",
+    "training_eta.json",
+    "training_progress.json"
   ],
-  "local_checkpoints": [],
+  "local_checkpoints": [
+    {
+      "updates": 500,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/500",
+      "file_count": 50,
+      "bytes": 9807774157,
+      "resume": {
+        "completed_updates": 500,
+        "sample_offset": 2000,
+        "sample_order_sha256": "326200084605413e084f31b8379b411c5be3b847795a1b420b4240263a021d10",
+        "config_sha256": "a26a2698af326ac021edd7ecc867a7b7c0e9a0577a0765abac6ce538e66cf9ea",
+        "train_rng_key_data": [
+          1832780943,
+          270669613
+        ],
+        "rng_rule": "OpenPI folds train_rng with restored train_state.step",
+        "optimizer_saved_by": "OpenPI train_state item",
+        "schedule_budget": 24120
+      },
+      "uploaded": false
+    }
+  ],
   "publication_scope": "source, config, all per-update logs, teacher and evaluation JSON, scene and checksums",
   "binary_location": "D57: regenerated RGB data, full checkpoints, videos and raw trajectories retained locally",
   "success_criterion": "Complete closed-loop task under the frozen v2 environment"

@@ -1,0 +1,20 @@
+{
+  "model_family": "pi0",
+  "mode": "lora",
+  "schedule_budget": 24120,
+  "segment_end": 2010,
+  "batch_size": 4,
+  "seed": 42,
+  "completed_updates": 500,
+  "segment_complete": false,
+  "trainable_parameters": 468039440,
+  "total_parameters": 3288036112,
+  "resumed_from_update": 0,
+  "initialization_seconds": 17.481695050373673,
+  "hardware_execution": false,
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/500",
+  "retained_checkpoints": [
+    500
+  ],
+  "wall_seconds": 249.82308714836836
+}
