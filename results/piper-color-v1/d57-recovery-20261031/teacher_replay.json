@@ -1,0 +1,404 @@
+[
+  {
+    "split": "train",
+    "seed": 100,
+    "color": "red",
+    "teacher_replay": true,
+    "success": true,
+    "state_max_abs": 0.0019943714141845703,
+    "state_mean_abs": 5.05831885675434e-05,
+    "pixel_mae_255": [
+      {
+        "frame": 0,
+        "external_rgb": 5.314625850340136e-05,
+        "wrist_rgb": 0.0008901998299319728
+      },
+      {
+        "frame": 95,
+        "external_rgb": 0.0032552083333333335,
+        "wrist_rgb": 0.10312367134353742
+      },
+      {
+        "frame": 185,
+        "external_rgb": 0.03952752976190476,
+        "wrist_rgb": 0.49768149447278914
+      },
+      {
+        "frame": 245,
+        "external_rgb": 0.07516209608843537,
+        "wrist_rgb": 1.1585220025510203
+      }
+    ],
+    "result": {
+      "layout_seed": 100,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13837981356047468,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14667052881202736,
+          0.15563532376875558,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.2256205143479754,
+          -0.14729648724286828,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19173767693702598,
+          -0.032298792286188725,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308
+    }
+  },
+  {
+    "split": "train",
+    "seed": 100,
+    "color": "green",
+    "teacher_replay": true,
+    "success": true,
+    "state_max_abs": 0.003171205520629883,
+    "state_mean_abs": 6.00260536884889e-05,
+    "pixel_mae_255": [
+      {
+        "frame": 0,
+        "external_rgb": 5.978954081632653e-05,
+        "wrist_rgb": 0.0007971938775510204
+      },
+      {
+        "frame": 95,
+        "external_rgb": 0.009034863945578231,
+        "wrist_rgb": 0.15830277423469388
+      },
+      {
+        "frame": 185,
+        "external_rgb": 0.06364264455782313,
+        "wrist_rgb": 0.701258237670068
+      },
+      {
+        "frame": 245,
+        "external_rgb": 0.024473852040816327,
+        "wrist_rgb": 0.5127949617346939
+      }
+    ],
+    "result": {
+      "layout_seed": 100,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13829487477789942,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13591182923150522,
+          -0.1627973560185335,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.15203562325432893,
+          0.15789174091883854,
+          0.025393255988701242
+        ],
+        "blue": [
+          -0.19173767693702598,
+          -0.032298792286188725,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308
+    }
+  },
+  {
+    "split": "train",
+    "seed": 100,
+    "color": "blue",
+    "teacher_replay": true,
+    "success": true,
+    "state_max_abs": 0.0037104636430740356,
+    "state_mean_abs": 4.6761044359300286e-05,
+    "pixel_mae_255": [
+      {
+        "frame": 0,
+        "external_rgb": 3.985969387755102e-05,
+        "wrist_rgb": 0.000624468537414966
+      },
+      {
+        "frame": 95,
+        "external_rgb": 0.0067362882653061226,
+        "wrist_rgb": 0.07912149234693877
+      },
+      {
+        "frame": 185,
+        "external_rgb": 0.04587850765306122,
+        "wrist_rgb": 0.3552096619897959
+      },
+      {
+        "frame": 245,
+        "external_rgb": 0.026799000850340135,
+        "wrist_rgb": 0.5800050488945578
+      }
+    ],
+    "result": {
+      "layout_seed": 100,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383645458189674
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13591182923150522,
+          -0.1627973560185335,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2256205143479754,
+          -0.14729648724286828,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15000884482490817,
+          0.15346463833022364,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308
+    }
+  },
+  {
+    "split": "validation",
+    "seed": 1000,
+    "color": "red",
+    "teacher_replay": true,
+    "success": true,
+    "state_max_abs": 0.0016881749033927917,
+    "state_mean_abs": 4.168734449194744e-05,
+    "pixel_mae_255": [
+      {
+        "frame": 0,
+        "external_rgb": 4.650297619047619e-05,
+        "wrist_rgb": 0.0006111819727891157
+      },
+      {
+        "frame": 95,
+        "external_rgb": 0.007533482142857143,
+        "wrist_rgb": 0.06643946641156463
+      },
+      {
+        "frame": 185,
+        "external_rgb": 0.06105840773809524,
+        "wrist_rgb": 0.899772799744898
+      },
+      {
+        "frame": 245,
+        "external_rgb": 0.07553411989795919,
+        "wrist_rgb": 1.0778393388605443
+      }
+    ],
+    "result": {
+      "layout_seed": 1000,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13840083424110572,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1446803263144902,
+          0.15862434552734223,
+          0.025393255988701208
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308
+    }
+  },
+  {
+    "split": "validation",
+    "seed": 1000,
+    "color": "green",
+    "teacher_replay": true,
+    "success": true,
+    "state_max_abs": 0.0013318476267158985,
+    "state_mean_abs": 2.8315831514191814e-05,
+    "pixel_mae_255": [
+      {
+        "frame": 0,
+        "external_rgb": 8.636267006802721e-05,
+        "wrist_rgb": 0.0005115327380952381
+      },
+      {
+        "frame": 95,
+        "external_rgb": 0.015538637329931973,
+        "wrist_rgb": 0.09547725340136054
+      },
+      {
+        "frame": 185,
+        "external_rgb": 0.023610225340136053,
+        "wrist_rgb": 0.328835831207483
+      },
+      {
+        "frame": 245,
+        "external_rgb": 0.004344706632653061,
+        "wrist_rgb": 0.11920705782312925
+      }
+    ],
+    "result": {
+      "layout_seed": 1000,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13834302392901066,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.14509335338810928,
+          0.1548924401416513,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308
+    }
+  },
+  {
+    "split": "validation",
+    "seed": 1000,
+    "color": "blue",
+    "teacher_replay": true,
+    "success": true,
+    "state_max_abs": 0.03357549011707306,
+    "state_mean_abs": 0.0002505588927306235,
+    "pixel_mae_255": [
+      {
+        "frame": 0,
+        "external_rgb": 3.321641156462585e-05,
+        "wrist_rgb": 0.0005779655612244898
+      },
+      {
+        "frame": 95,
+        "external_rgb": 0.00664328231292517,
+        "wrist_rgb": 0.01822252338435374
+      },
+      {
+        "frame": 185,
+        "external_rgb": 0.36146763392857145,
+        "wrist_rgb": 7.745442708333333
+      },
+      {
+        "frame": 245,
+        "external_rgb": 0.09543075042517007,
+        "wrist_rgb": 3.5304395195578233
+      }
+    ],
+    "result": {
+      "layout_seed": 1000,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13840395580255027
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15095650534989855,
+          0.15763591561027715,
+          0.025393255988701215
+        ]
+      },
+      "steps": 308
+    }
+  }
+]

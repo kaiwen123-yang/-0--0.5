@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-31T13:24:27.691364+00:00",
+  "protected_file_count": 12,
+  "changed_protected_files": [],
+  "other_training_pids_alive": {
+    "3269": true,
+    "15983": true
+  },
+  "gpu_after": "pid, used_gpu_memory [MiB], process_name\n3269, 754 MiB, python\n15983, 21872 MiB, python\n",
+  "simulator_environment": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/d57-color-sim",
+  "model_environment": "/root/autodl-tmp/robot-repro/pi05/openpi/.venv",
+  "hardware_execution": false,
+  "training_updates": 0,
+  "sim_core_unchanged": true,
+  "model_config_unchanged": true
+}

@@ -1,0 +1,284 @@
+[
+  {
+    "prefix_steps": 112,
+    "seed": 1000,
+    "color": "red",
+    "success": true,
+    "error": null,
+    "prefix_state_max_abs": 1.9431114196777344e-05,
+    "result": {
+      "layout_seed": 1000,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1439287358721948,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14946515587009965,
+          0.13895566328243933,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 307
+    },
+    "teacher_prefix": true,
+    "policy_success_rate_eligible": false,
+    "note": "Video begins with recorded teacher commands; intervention, not unassisted policy evaluation"
+  },
+  {
+    "prefix_steps": 112,
+    "seed": 1000,
+    "color": "green",
+    "success": true,
+    "error": null,
+    "prefix_state_max_abs": 3.7317629903554916e-05,
+    "result": {
+      "layout_seed": 1000,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14053308190820707,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15763785820582119,
+          0.1594650247315247,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 261
+    },
+    "teacher_prefix": true,
+    "policy_success_rate_eligible": false,
+    "note": "Video begins with recorded teacher commands; intervention, not unassisted policy evaluation"
+  },
+  {
+    "prefix_steps": 112,
+    "seed": 1000,
+    "color": "blue",
+    "success": true,
+    "error": null,
+    "prefix_state_max_abs": 0.00012427568435668945,
+    "result": {
+      "layout_seed": 1000,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13994136612353292
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1641897608205086,
+          0.18458464468798014,
+          0.025393255988701215
+        ]
+      },
+      "steps": 318
+    },
+    "teacher_prefix": true,
+    "policy_success_rate_eligible": false,
+    "note": "Video begins with recorded teacher commands; intervention, not unassisted policy evaluation"
+  },
+  {
+    "prefix_steps": 178,
+    "seed": 1000,
+    "color": "red",
+    "success": true,
+    "error": null,
+    "prefix_state_max_abs": 0.00037434324622154236,
+    "result": {
+      "layout_seed": 1000,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13840083424110572,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14635895853163405,
+          0.1593731691643053,
+          0.02539325598870124
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 237
+    },
+    "teacher_prefix": true,
+    "policy_success_rate_eligible": false,
+    "note": "Video begins with recorded teacher commands; intervention, not unassisted policy evaluation"
+  },
+  {
+    "prefix_steps": 178,
+    "seed": 1000,
+    "color": "green",
+    "success": true,
+    "error": null,
+    "prefix_state_max_abs": 0.00022125244140625,
+    "result": {
+      "layout_seed": 1000,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13834302392901066,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1467878912839539,
+          0.15736155541889832,
+          0.025393255988701204
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 231
+    },
+    "teacher_prefix": true,
+    "policy_success_rate_eligible": false,
+    "note": "Video begins with recorded teacher commands; intervention, not unassisted policy evaluation"
+  },
+  {
+    "prefix_steps": 178,
+    "seed": 1000,
+    "color": "blue",
+    "success": true,
+    "error": null,
+    "prefix_state_max_abs": 0.03357549011707306,
+    "result": {
+      "layout_seed": 1000,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13840395580255027
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15243740557386756,
+          0.15665694232905594,
+          0.025393255988701215
+        ]
+      },
+      "steps": 231
+    },
+    "teacher_prefix": true,
+    "policy_success_rate_eligible": false,
+    "note": "Video begins with recorded teacher commands; intervention, not unassisted policy evaluation"
+  }
+]

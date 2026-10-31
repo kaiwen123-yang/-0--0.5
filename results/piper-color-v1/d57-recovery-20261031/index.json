@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-31",
+  "status": "evaluation_and_diagnosis_complete_publication_pending",
+  "checkpoint": "historical pi05_piper_color_lora/v1/1499; inference parameters only",
+  "historical_validation": {
+    "successes": 0,
+    "total": 15
+  },
+  "new_runs": {
+    "baseline_validation": {
+      "successes": 3,
+      "total": 15,
+      "errors": 0,
+      "complete": true,
+      "wall_seconds": 211.00669307261705
+    },
+    "repeated_validation": {
+      "successes": 0,
+      "total": 15,
+      "errors": 0,
+      "complete": true,
+      "wall_seconds": 207.70507630705833
+    },
+    "train_layout_100": {
+      "successes": 1,
+      "total": 3,
+      "errors": 0,
+      "complete": true,
+      "wall_seconds": 37.15081552788615
+    },
+    "replan_one_layout_1000": {
+      "successes": 0,
+      "total": 3,
+      "errors": 0,
+      "complete": true,
+      "wall_seconds": 125.0167854372412
+    },
+    "episode_seed_layout_1000": {
+      "successes": 1,
+      "total": 3,
+      "errors": 0,
+      "complete": true,
+      "wall_seconds": 39.23338791169226
+    }
+  },
+  "teacher_replay": {
+    "successes": 6,
+    "total": 6,
+    "policy_success_rate_eligible": false
+  },
+  "prefix_interventions": {
+    "successes": 6,
+    "total": 6,
+    "prefix_steps": [
+      112,
+      178
+    ],
+    "policy_success_rate_eligible": false
+  },
+  "baseline_failure_breakdown": {
+    "did_not_lift_target_5cm": 5,
+    "lifted_but_never_over_box": 6,
+    "over_box_but_not_success": 1
+  },
+  "frozen_teacher_observations": 54,
+  "repeatability": "Identical stored input and seed reproduce exactly in D57 in this probe, including across two model processes. Historical fy-5080 output differs; cause not fully isolated. Full closed-loop repeats differ.",
+  "interpretation": [
+    "Dominant failures occur in acquiring and retaining the object through transfer, not only release.",
+    "Teacher-prefix completions demonstrate conditional suffix capability and are not unassisted policy successes.",
+    "One-step replanning failed 0/3 in this probe; shorter action chunks are not an established remedy.",
+    "Training-layout probe is 1/3; failure is not restricted to held-out layouts.",
+    "A short initial training budget and exposure to off-demonstration states remain training hypotheses; no new training was performed."
+  ],
+  "execution": {
+    "new_training_updates": 0,
+    "hardware_commands": 0,
+    "independent_test_set_used": false,
+    "autonomous_episodes": 39,
+    "teacher_replay_episodes": 6,
+    "prefix_intervention_episodes": 6,
+    "preserved_old_results": true
+  },
+  "next_plan": "docs/PI0_FIRST_PLAN.md",
+  "release_tag": "piper-color-d57-recovery-20261031",
+  "release_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/piper-color-d57-recovery-20261031"
+}

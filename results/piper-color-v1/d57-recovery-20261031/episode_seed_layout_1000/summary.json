@@ -1,0 +1,156 @@
+{
+  "mode": "lora",
+  "split": "validation",
+  "successes": 1,
+  "total": 3,
+  "success_rate": 0.3333333333333333,
+  "errors": 0,
+  "expected_episodes": 3,
+  "complete": true,
+  "wall_seconds": 39.23338791169226,
+  "domain": "simulation",
+  "hardware_validated": false,
+  "episodes": [
+    {
+      "layout_seed": 1000,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.15346000514449448,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14554590850541985,
+          0.1573272843293493,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 243,
+      "stable_2s": true,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "seed_scope": "episode",
+      "episode_seed": 3042,
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.0943891080096364,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "green",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0023760103437825905,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.23721939702069023,
+          -0.14340519982539862,
+          0.01739325598870123
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.01739325598870124
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "seed_scope": "episode",
+      "episode_seed": 3043,
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.0896711777895689,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "blue",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.0038044144480110786
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.11890261312956996,
+          -0.14416960431696707,
+          0.017393255988701246
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "seed_scope": "episode",
+      "episode_seed": 3044,
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.09072594158351421,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    }
+  ]
+}

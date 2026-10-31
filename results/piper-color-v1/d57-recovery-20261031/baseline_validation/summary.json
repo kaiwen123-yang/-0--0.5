@@ -1,0 +1,690 @@
+{
+  "mode": "lora",
+  "split": "validation",
+  "successes": 3,
+  "total": 15,
+  "success_rate": 0.2,
+  "errors": 0,
+  "expected_episodes": 15,
+  "complete": true,
+  "wall_seconds": 211.00669307261705,
+  "domain": "simulation",
+  "hardware_validated": false,
+  "episodes": [
+    {
+      "layout_seed": 1000,
+      "target": "red",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0032383879227524184,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.17858471320647137,
+          -0.07829180938617188,
+          0.01739325598870122
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08795754611492157,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13311723480993565,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.17164396010567645,
+          0.15980972906690988,
+          0.025393255988701225
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 257,
+      "stable_2s": true,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08656526170670986,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "blue",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.11436579695875433
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14158518643107676,
+          -0.008982036617884735,
+          0.01739325598870123
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08633761294186115,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1001,
+      "target": "red",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0026090971475687635
+      },
+      "max_lift_m": {
+        "red": 0.20406367847624113,
+        "green": 0.0,
+        "blue": 0.00314751375665873
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.2322089510676115,
+          -0.16138330293647005,
+          0.0522629122260439
+        ],
+        "green": [
+          -0.13874469184819577,
+          -0.1399790781948989,
+          0.01739325598870132
+        ],
+        "blue": [
+          -0.23399392836400543,
+          -0.16207729725276224,
+          0.01728870409528679
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08146822266280651,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1001,
+      "target": "green",
+      "correct_in_box": false,
+      "wrong_in_box": true,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.3129437580929899
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.12145714123052602
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.216866438242442,
+          -0.04336947315552922,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13874469184819577,
+          -0.1399790781948989,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15898650632295497,
+          0.1407833239840964,
+          0.0253932559887012
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08554140292108059,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1001,
+      "target": "blue",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.08527282966605855
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.216866438242442,
+          -0.04336947315552922,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13874469184819577,
+          -0.1399790781948989,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2254298236836189,
+          -0.17559276181127656,
+          0.01739325598870122
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.0843085516244173,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1002,
+      "target": "red",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0001499661950824134,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.11864679503767253,
+          -0.15169624519356584,
+          0.01739325598870123
+        ],
+        "green": [
+          -0.23833700753031165,
+          -0.15399869854731654,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.20956032676768616,
+          -0.033462953173171606,
+          0.017393255988701235
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08261509239673615,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1002,
+      "target": "green",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.002904033961902284,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.12306685512209066,
+          -0.15309422626708605,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.24833916612833967,
+          -0.1731617666548239,
+          0.01739325598870122
+        ],
+        "blue": [
+          -0.20956032676768616,
+          -0.033462953173171606,
+          0.01739325598870124
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08459789492189884,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1002,
+      "target": "blue",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.12992989118419707
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.12306685512209066,
+          -0.15309422626708605,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.23833700753031165,
+          -0.15399869854731654,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.27775643551336804,
+          -0.08652231011093835,
+          0.017393255988701208
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08567506819963455,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1003,
+      "target": "red",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.11120329725640697,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.24160129673954187,
+          -0.09504834701598408,
+          0.01739325598870127
+        ],
+        "green": [
+          -0.13014897883960505,
+          -0.14549783638840863,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19794083987306985,
+          -0.028753259692089056,
+          0.01739325598870124
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08504259586334229,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1003,
+      "target": "green",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.003422796728401803,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.24374279368847826,
+          -0.15681223731192515,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.12052993816541258,
+          -0.14656045840563645,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.19794083987306985,
+          -0.028753259692089056,
+          0.017393255988701235
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08235242031514645,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1003,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1559776397795743
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24374279368847826,
+          -0.15681223731192515,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13014897883960505,
+          -0.14549783638840863,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1551703062237003,
+          0.15634755775492098,
+          0.02539325598870122
+        ]
+      },
+      "steps": 292,
+      "stable_2s": true,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08198942244052887,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1004,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14827978170124728,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.16686165404318057,
+          0.1313339329885842,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.24897534732325996,
+          -0.16035576325847942,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14012263377049844,
+          -0.1533416701676116,
+          0.017393255988701235
+        ]
+      },
+      "steps": 331,
+      "stable_2s": true,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08436383306980133,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1004,
+      "target": "green",
+      "correct_in_box": false,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.10797897730795787,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.20162113346397634,
+          -0.02556140249835242,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.3012333915583007,
+          -0.17663982163209593,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.14012263377049844,
+          -0.1533416701676116,
+          0.017393255988701235
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08319072239100933,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    },
+    {
+      "layout_seed": 1004,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": false,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13039459123809988
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": false,
+      "final_positions": {
+        "red": [
+          -0.20162113346397634,
+          -0.02556140249835242,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.24897534732325996,
+          -0.16035576325847942,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1871907562350904,
+          0.14309748647476025,
+          0.025387687898823424
+        ]
+      },
+      "steps": 420,
+      "stable_2s": false,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_median_excluding_first": 0.08149061538279057,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    }
+  ]
+}

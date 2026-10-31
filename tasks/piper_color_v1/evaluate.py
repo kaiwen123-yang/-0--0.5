@@ -24,6 +24,7 @@ def main():
     p.add_argument("--targets", choices=COLORS, nargs="+", default=list(COLORS))
     p.add_argument("--replan-steps", type=int, choices=range(1, 11), default=5)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--seed-scope", choices=["run", "episode"], default="run")
     p.add_argument("--data", type=Path, default=DATA)
     p.add_argument("--output", type=Path)
     p.add_argument("--checkpoint", type=Path)
@@ -74,7 +75,9 @@ def main():
     directory = a.output or RUN / "evaluations" / f"{a.mode}_{a.split}"
     directory.mkdir(exist_ok=False, parents=True)
     protocol = dict(mode=a.mode, split=a.split, layout_seeds=seeds, targets=a.targets,
-                    max_steps=a.steps, replan_steps=a.replan_steps, seed=a.seed, policy=metadata,
+                    max_steps=a.steps, replan_steps=a.replan_steps, seed=a.seed, seed_scope=a.seed_scope,
+                    episode_seed_formula="base_seed + layout_seed * 3 + color_index" if a.seed_scope == "episode" else None,
+                    policy=metadata,
                     policy_transport="websocket" if a.policy_host else "in_process",
                     dataset_manifest_sha256=hashlib.sha256((a.data / "manifest.json").read_bytes()).hexdigest(),
                     source_sha256={name: hashlib.sha256((HERE / name).read_bytes()).hexdigest()
@@ -87,6 +90,12 @@ def main():
     try:
         for seed in seeds:
             for color in a.targets:
+                episode_seed = a.seed + seed * len(COLORS) + COLORS.index(color) if a.seed_scope == "episode" else None
+                if episode_seed is not None:
+                    if a.policy_host:
+                        policy.reset_seed(episode_seed)
+                    else:
+                        policy._rng = jax.random.key(episode_seed)
                 env.reset(seed, color)
                 stem = directory / f"layout_{seed:05d}_{color}"
                 writer = None if a.no_video else imageio.get_writer(str(stem.with_suffix(".mp4")), fps=HZ, codec="libx264", quality=7, macro_block_size=1, output_params=["-threads", "2"])
@@ -131,6 +140,7 @@ def main():
                 result = env.result()
                 result.update(success=bool(stable and error is None), stable_2s=stable, error=error,
                               mode=a.mode, split=a.split, checkpoint=str(checkpoint),
+                              seed_scope=a.seed_scope, episode_seed=episode_seed,
                               video=str(stem.with_suffix(".mp4")) if writer else None, hardware_execution=False,
                               privileged_policy_input=False, scripted_rescue=False,
                               inference_seconds=latencies,
