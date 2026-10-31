@@ -141,6 +141,8 @@ def train(resume=False):
         raise ValueError("Saved sampling order changed")
     if resuming:
         saved = json.loads((cfg.checkpoint_dir / str(start) / "resume.json").read_text())
+        if saved["config_sha256"] != sha(config_path):
+            raise ValueError("Resume configuration checksum differs from the saved checkpoint")
         if saved["completed_updates"] != start or saved["sample_offset"] != start * cfg.batch_size:
             raise ValueError("Checkpoint state and sampler offset disagree")
         if saved["train_rng_key_data"] != jax.random.key_data(train_rng).tolist():
@@ -154,11 +156,29 @@ def train(resume=False):
     if resuming:
         state = checkpoints.restore_state(manager, state, loader, step=start)
     jax.block_until_ready(state)
+    if int(state.step) != start:
+        raise ValueError("Restored train state has a different update count")
+    previous = json.loads((RUN / "lora_training.json").read_text()) if resuming else {}
+    if resuming:
+        existing_steps = [json.loads(line)["step"] for line in (RUN / "lora_metrics.jsonl").read_text().splitlines()]
+        if existing_steps != list(range(1, start + 1)):
+            raise ValueError("Recorded updates do not match the resume checkpoint")
+        counters = [int(x) for x in jax.tree.leaves(state.opt_state)
+                    if x.ndim == 0 and np.issubdtype(x.dtype, np.integer)]
+        write_json(RUN / "resume_verification.json", {
+            "restored_updates": int(state.step), "optimizer_scalar_counters": counters,
+            "optimizer_array_leaves": len(jax.tree.leaves(state.opt_state)),
+            "sample_offset": start * cfg.batch_size, "next_sample_indices": order[start * cfg.batch_size:(start + 1) * cfg.batch_size].tolist(),
+            "sample_order_sha256": normalization["sample_order_sha256"],
+            "config_sha256": sha(config_path), "train_rng_key_data": jax.random.key_data(train_rng).tolist(),
+            "first_new_update": start + 1, "final_update_budget": 2010})
     report = {"model_family": "pi0", "mode": "lora", "requested_steps": 2010, "batch_size": 4,
               "seed": cfg.seed, "trainable_parameters": sum(x.size for x in jax.tree.leaves(state.params.filter(cfg.trainable_filter))),
               "total_parameters": sum(x.size for x in jax.tree.leaves(state.params.filter(nnx.Param))),
               "training_domain": "synthetic_piper_h", "hardware_execution": False,
-              "completed": False, "completed_updates": start, "checkpoints": [],
+              "completed": False, "completed_updates": start,
+              "checkpoints": previous.get("checkpoints", []), "resumed_from_update": start,
+              "prior_attempt_wall_seconds": previous.get("wall_seconds", 0.0),
               "initialization_seconds": time.monotonic() - started}
     write_json(RUN / "lora_training.json", report)
     print("TRAIN_INITIALIZED " + json.dumps(report), flush=True)
@@ -223,6 +243,7 @@ def train(resume=False):
     finally:
         manager.wait_until_finished()
         report["wall_seconds"] = time.monotonic() - started
+        report["cumulative_train_process_wall_seconds"] = report["wall_seconds"] + report["prior_attempt_wall_seconds"]
         report["jax_memory_stats"] = {k: int(v) for k, v in (jax.devices()[0].memory_stats() or {}).items()}
         write_json(RUN / "lora_training.json", report)
         manager.close()

@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import socket
+import shutil
 import subprocess
 import time
 
@@ -29,10 +30,23 @@ def capture(*command):
     return subprocess.check_output(command, text=True).strip()
 
 
-def main(run):
+def main(run, resume=False):
     run = run.resolve()
-    run.mkdir(parents=True, exist_ok=False)
-    (run / "logs").mkdir()
+    prior = None
+    resume_stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    if resume:
+        prior = json.loads((run / "run.json").read_text())
+        training = json.loads((run / "lora_training.json").read_text())
+        if prior["stage"] != "failed" or training["completed"] or training["completed_updates"] >= 2010:
+            raise ValueError("Resume expects an interrupted training run below 2010 updates")
+        history = run / "history" / f"interruption-{resume_stamp}"
+        history.mkdir(parents=True, exist_ok=False)
+        for name in ("run.json", "lora_training.json", "training_progress.json", "training_eta.json"):
+            if (run / name).exists():
+                shutil.copyfile(run / name, history / name)
+    else:
+        run.mkdir(parents=True, exist_ok=False)
+        (run / "logs").mkdir()
     env = dict(os.environ, PIPER_COLOR_RUN=str(run))
     status = {"started_at": now(), "pid": os.getpid(), "stage": "preparing", "completed": False,
               "authorized_scope": "pi0 LoRA 6 demos, 2010 updates, 5 checkpoint evaluations and final seed-43 repeat",
@@ -44,6 +58,11 @@ def main(run):
               "gpu_processes_before": capture("nvidia-smi", "--query-compute-apps=pid,process_name,used_memory", "--format=csv"),
               "evaluation_base_seeds": [42, 43], "checkpoint_update_counts": list(UPDATES),
               "hardware_execution": False}
+    if prior:
+        status.update(started_at=prior["started_at"], resumed_at=now(),
+                      original_source_commit=prior["source_commit"],
+                      resumed_from_update=training["completed_updates"],
+                      prior_failure_record=str(history / "run.json"))
     save(run / "run.json", status)
 
     def execute(stage, *args, label=None, timeout=14400):
@@ -61,8 +80,11 @@ def main(run):
             lock.flush()
             with socket.socket() as probe:
                 probe.bind(("127.0.0.1", 18766))
-            execute("prepare", timeout=900)
-            execute("train")
+            if resume:
+                execute("train", "--resume", label=f"train_resume_{resume_stamp}")
+            else:
+                execute("prepare", timeout=900)
+                execute("train")
             for updates in UPDATES:
                 checkpoint = run / "checkpoints/pi0_piper_color_lora/six_demo_v1" / str(updates)
                 norm = checkpoint / "assets/piper_h_color_v1"
@@ -126,4 +148,6 @@ def main(run):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", type=Path, required=True)
-    main(parser.parse_args().run)
+    parser.add_argument("--resume", action="store_true")
+    args = parser.parse_args()
+    main(args.run, args.resume)
