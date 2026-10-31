@@ -107,8 +107,8 @@ def scene_xml():
 
 
 class ColorEnv:
-    def __init__(self, render=False):
-        self.model = mujoco.MjModel.from_xml_string(scene_xml())
+    def __init__(self, render=False, xml=None):
+        self.model = mujoco.MjModel.from_xml_string(scene_xml() if xml is None else xml)
         self.data = mujoco.MjData(self.model)
         self.ik_data = mujoco.MjData(self.model)
         self.qadr = np.array([self.model.jnt_qposadr[self.model.joint(f"joint{i}").id] for i in range(1, 7)])
@@ -288,6 +288,7 @@ def teacher(env, output=None, video=None, trace=False):
         output.parent.mkdir(parents=True, exist_ok=True)
         np.savez_compressed(output, state=np.stack([r[0]["state"] for r in rows]),
                             action=np.stack([r[1] for r in rows]).astype(np.float32),
+                            executed_command=np.stack([r[1] for r in rows]),
                             external_rgb=np.stack([r[0]["external_rgb"] for r in rows]),
                             wrist_rgb=np.stack([r[0]["wrist_rgb"] for r in rows]),
                             timestamp=np.array([r[2] for r in rows]),

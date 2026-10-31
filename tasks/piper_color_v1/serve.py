@@ -34,6 +34,7 @@ if __name__ == "__main__":
     p.add_argument("--norm-stats", type=Path)
     p.add_argument("--port", type=int, default=8002)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--config-scope", choices=["six", "120"], default="six")
     args = p.parse_args()
     logging.basicConfig(level=logging.INFO)
     if args.export:
@@ -49,6 +50,11 @@ if __name__ == "__main__":
     if args.model_family == "pi0" and mode != "lora":
         p.error("The dedicated pi0 six-demo config supports LoRA only")
     cfg = make_pi0_config() if args.model_family == "pi0" else make_config(mode)
+    if args.config_scope == "120":
+        if args.model_family != "pi0":
+            p.error("120-demo config is Pi0 only")
+        from train_pi0_120 import config
+        cfg = config()
     stats = normalize.load(args.norm_stats) if args.norm_stats else None
     policy = upstream.create_trained_policy(cfg, checkpoint, norm_stats=stats,
                                             sample_kwargs={"num_steps": 10})
