@@ -1,7 +1,7 @@
 {
   "started_at": "2026-10-31T17:55:59.136504+00:00",
   "pid": 46801,
-  "stage": "train_to_2010",
+  "stage": "update_2010_train_seed42",
   "completed": false,
   "scope": "pi0 v2 120-demo first cycle to 8040; pause for closed-loop review before longer stages",
   "schedule_budget": 24120,
@@ -48,6 +48,7 @@
   ],
   "baseline": "old six-demo pi0 checkpoint 2010, original normalization, frozen v2 validation 15x2",
   "hardware_execution": false,
-  "updated_at": "2026-10-31T18:04:52.268184+00:00",
-  "child_pid": 48181
+  "updated_at": "2026-10-31T18:19:31.535841+00:00",
+  "service_pid": 49743,
+  "child_pid": 49836
 }

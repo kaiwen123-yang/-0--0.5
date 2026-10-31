@@ -17,5 +17,17 @@
     2000,
     2010
   ],
-  "wall_seconds": 854.2931613828987
+  "wall_seconds": 857.3115492351353,
+  "jax_memory_stats": {
+    "num_allocs": 142898,
+    "bytes_in_use": 12034597376,
+    "peak_bytes_in_use": 18863737600,
+    "largest_alloc_size": 6824325376,
+    "bytes_limit": 50987925504,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 34361835520,
+    "peak_pool_bytes": 34361835520
+  }
 }

@@ -23,6 +23,18 @@
       "bilateral_lift": 10,
       "over_box": 8,
       "observed_drops": 0
+    },
+    {
+      "evaluation": "update_2010_train_seed42",
+      "split": "train",
+      "successes": 1,
+      "total": 6,
+      "errors": 0,
+      "complete": true,
+      "lifted_5cm": 1,
+      "bilateral_lift": 1,
+      "over_box": 1,
+      "observed_drops": 0
     }
   ],
   "test_used": false,
