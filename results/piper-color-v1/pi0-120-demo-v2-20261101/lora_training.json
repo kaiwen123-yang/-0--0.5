@@ -5,17 +5,17 @@
   "segment_end": 2010,
   "batch_size": 4,
   "seed": 42,
-  "completed_updates": 1500,
+  "completed_updates": 2000,
   "segment_complete": false,
   "trainable_parameters": 468039440,
   "total_parameters": 3288036112,
   "resumed_from_update": 0,
   "initialization_seconds": 17.481695050373673,
   "hardware_execution": false,
-  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/1500",
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/2000",
   "retained_checkpoints": [
-    1000,
-    1500
+    1500,
+    2000
   ],
-  "wall_seconds": 630.06830085814
+  "wall_seconds": 829.6969909351319
 }
