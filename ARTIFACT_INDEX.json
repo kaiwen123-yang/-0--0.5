@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-31",
-  "status": "release_upload_in_progress",
+  "status": "source_and_assets_verified",
   "source": {
     "host": "fy-5080",
     "root": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction",
@@ -82,10 +82,13 @@
     },
     "expected_asset_count": 33,
     "expected_asset_bytes": 14585786322,
-    "verified_asset_count": 17,
+    "verified_asset_count": 33,
     "asset_receipt": "publication/fy5080-release-assets.json",
     "package_manifest": "publication/fy5080-package-manifest.json",
-    "is_draft": true
+    "verified_asset_bytes": 14585786322,
+    "verified_at_utc": "2026-10-31T11:31:26.037892+00:00",
+    "verification": "Every asset state=uploaded and size/SHA256 equals the local upload manifest; no asset re-download.",
+    "draft_at_asset_verification": true
   },
   "migration": {
     "target_host": "autodl-d57",
