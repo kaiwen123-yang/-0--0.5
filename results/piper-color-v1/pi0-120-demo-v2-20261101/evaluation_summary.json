@@ -155,6 +155,18 @@
       "bilateral_lift": 1,
       "over_box": 1,
       "observed_drops": 0
+    },
+    {
+      "evaluation": "update_8040_validation_seed43",
+      "split": "validation",
+      "successes": 1,
+      "total": 15,
+      "errors": 0,
+      "complete": true,
+      "lifted_5cm": 2,
+      "bilateral_lift": 2,
+      "over_box": 1,
+      "observed_drops": 0
     }
   ],
   "test_used": false,
