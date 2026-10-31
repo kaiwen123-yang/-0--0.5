@@ -47,6 +47,18 @@
       "bilateral_lift": 0,
       "over_box": 0,
       "observed_drops": 0
+    },
+    {
+      "evaluation": "update_2010_validation_seed42",
+      "split": "validation",
+      "successes": 2,
+      "total": 15,
+      "errors": 0,
+      "complete": true,
+      "lifted_5cm": 3,
+      "bilateral_lift": 3,
+      "over_box": 2,
+      "observed_drops": 1
     }
   ],
   "test_used": false,
