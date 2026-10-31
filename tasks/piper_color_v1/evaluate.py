@@ -17,6 +17,7 @@ DATA = Path(os.environ.get("PIPER_COLOR_DATA", RUN / "dataset"))
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--mode", choices=["base", "lora", "full"], required=True)
+    p.add_argument("--model-family", choices=["pi0", "pi05"], default="pi05")
     p.add_argument("--split", choices=["train", "validation", "test"], default="test")
     p.add_argument("--steps", type=int, default=420)
     p.add_argument("--limit-layouts", type=int)
@@ -39,6 +40,8 @@ def main():
         from policy_client import PolicyClient
         policy = PolicyClient(a.policy_host, a.policy_port)
         metadata = policy.metadata
+        if metadata.get("model_family", "pi05") != a.model_family:
+            raise ValueError("Server model family differs from requested evaluation")
         if metadata["mode"] != a.mode:
             raise ValueError("Server mode differs from requested evaluation")
         checkpoint = Path(metadata["checkpoint"])
@@ -51,8 +54,10 @@ def main():
         import jax
         from openpi.policies import policy_config as upstream_policy
         from openpi.shared import normalize
-        from policy_config import ASSET_ID, make_config
-        cfg = make_config(a.mode)
+        from policy_config import ASSET_ID, make_config, make_pi0_config
+        if a.model_family == "pi0" and a.mode != "lora":
+            p.error("The dedicated pi0 six-demo config supports LoRA only")
+        cfg = make_pi0_config() if a.model_family == "pi0" else make_config(a.mode)
         if a.checkpoint:
             checkpoint = a.checkpoint
         elif a.mode == "base":
@@ -63,7 +68,8 @@ def main():
         policy = upstream_policy.create_trained_policy(cfg, checkpoint,
                         norm_stats=normalize.load(norm), sample_kwargs={"num_steps":10})
         policy._rng = jax.random.key(a.seed)
-        metadata = {"checkpoint": str(checkpoint), "norm_stats": str(norm), "mode": a.mode}
+        metadata = {"checkpoint": str(checkpoint), "norm_stats": str(norm), "mode": a.mode,
+                    "model_family": a.model_family}
     manifest = json.loads((a.data / "manifest.json").read_text())
     seeds = manifest["split_seeds"][a.split]
     if a.layout_seeds is not None:

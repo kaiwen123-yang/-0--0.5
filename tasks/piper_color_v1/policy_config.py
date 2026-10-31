@@ -75,3 +75,27 @@ def make_config(mode="lora", steps=1500, batch=8, resume=False):
                          policy_metadata={"robot":"Piper H", "action_units":"6 joint rad + opening m",
                                           "training_domain":"simulation", "hardware_validated":False,
                                           "cameras":"external RGB + wrist RGB; virtual uncalibrated geometry"})
+
+
+def make_pi0_config(steps=2010, batch=4, resume=False):
+    """Pi0 LoRA: continuous state and upstream PI0 mean/std normalization."""
+    model = Pi0Config(pi05=False, discrete_state_input=False, action_horizon=10,
+                      paligemma_variant="gemma_2b_lora", action_expert_variant="gemma_300m_lora")
+    base = Path(os.environ["PIPER_BASE_PARAMS"]).resolve(strict=True)
+    if base.parent.name != "pi0_base":
+        raise ValueError(f"Pi0 six-demo training requires pi0_base/params, got {base}")
+    return C.TrainConfig(
+        name="pi0_piper_color_lora", exp_name="six_demo_v1", model=model,
+        freeze_filter=model.get_freeze_filter(), ema_decay=None,
+        data=PiperData(assets=C.AssetsConfig(assets_dir=str(RUN / "assets"), asset_id=ASSET_ID)),
+        weight_loader=weight_loaders.CheckpointWeightLoader(str(base)),
+        assets_base_dir=str(RUN / "assets"), checkpoint_base_dir=str(RUN / "checkpoints"),
+        batch_size=batch, num_workers=2, num_train_steps=steps, seed=42,
+        log_interval=10, save_interval=500, keep_period=1, resume=resume, wandb_enabled=False,
+        lr_schedule=optimizer.CosineDecaySchedule(warmup_steps=100, peak_lr=3e-5,
+                                                  decay_steps=steps, decay_lr=3e-6),
+        policy_metadata={"model_family": "pi0", "robot": "Piper H",
+                         "action_units": "6 joint rad + opening m", "training_domain": "simulation",
+                         "state_input": "continuous", "normalization": "mean_std",
+                         "training_layouts": [100, 101], "hardware_validated": False,
+                         "cameras": "external RGB + wrist RGB; virtual uncalibrated geometry"})

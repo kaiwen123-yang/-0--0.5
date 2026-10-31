@@ -8,7 +8,7 @@ import jax
 from openpi.policies import policy_config as upstream
 from openpi.shared import normalize
 from openpi.serving.websocket_policy_server import WebsocketPolicyServer
-from policy_config import make_config
+from policy_config import make_config, make_pi0_config
 
 
 class SeededPolicy:
@@ -30,6 +30,7 @@ if __name__ == "__main__":
     source.add_argument("--export", type=Path)
     source.add_argument("--checkpoint", type=Path)
     p.add_argument("--mode", choices=["base", "lora", "full"])
+    p.add_argument("--model-family", choices=["pi0", "pi05"], default="pi05")
     p.add_argument("--norm-stats", type=Path)
     p.add_argument("--port", type=int, default=8002)
     p.add_argument("--seed", type=int, default=42)
@@ -45,12 +46,15 @@ if __name__ == "__main__":
             p.error("--checkpoint requires --mode")
         mode, checkpoint = args.mode, args.checkpoint
     checkpoint = checkpoint.resolve(strict=True)
-    cfg = make_config(mode)
+    if args.model_family == "pi0" and mode != "lora":
+        p.error("The dedicated pi0 six-demo config supports LoRA only")
+    cfg = make_pi0_config() if args.model_family == "pi0" else make_config(mode)
     stats = normalize.load(args.norm_stats) if args.norm_stats else None
     policy = upstream.create_trained_policy(cfg, checkpoint, norm_stats=stats,
                                             sample_kwargs={"num_steps": 10})
     policy._rng = jax.random.key(args.seed)
-    metadata = {**cfg.policy_metadata, "mode": mode, "checkpoint": str(checkpoint),
+    metadata = {**cfg.policy_metadata, "model_family": args.model_family,
+                "mode": mode, "checkpoint": str(checkpoint),
                 "norm_stats": str(args.norm_stats.resolve()) if args.norm_stats else "checkpoint_assets",
                 "seed": args.seed, "reset_seed_supported": True, "action_horizon": 10,
                 "flow_denoising_steps": 10}
