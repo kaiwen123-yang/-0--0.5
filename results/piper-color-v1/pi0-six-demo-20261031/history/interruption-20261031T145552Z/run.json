@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-10-31T14:11:22.715906+00:00",
+  "pid": 27932,
+  "stage": "failed",
+  "completed": false,
+  "authorized_scope": "pi0 LoRA 6 demos, 2010 updates, 5 checkpoint evaluations and final seed-43 repeat",
+  "source_commit": "eb5e39de1cfdc190164bcd8c5cc2bd3f01b9ec88",
+  "upstream_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "source_sha256": {
+    "scripts/run_pi0_six_d57.sh": "159bdc9413bd4a17988c50afdf980ad3986dd33b43895a0075a3954b890920e3",
+    "tasks/piper_color_v1/audit_policy_offline.py": "22dd344e63f2133035d37c0afffadc7e15898fce284a6fa4c423b78982f4d728",
+    "tasks/piper_color_v1/dataset.py": "7dd781019a7ff26352576b109eaafbc73b8816b36cd969afa67712d9fd896e34",
+    "tasks/piper_color_v1/deployment_io.py": "7cd46b361e6b49af5968c3e49c210640acce53ab831faba304071d5371a65077",
+    "tasks/piper_color_v1/diagnose_d57.py": "90b71d4a9eaa5389eaa85eb5e2a598108e35ea3ad98e3074e7850347294b04c2",
+    "tasks/piper_color_v1/evaluate.py": "56b6391f4507dea85f42cdfa1ee93633739383c1af52c096414c7f5bfd2e7a97",
+    "tasks/piper_color_v1/generate.py": "3b707d8db9e069eecc535d94a49cd027bc41701899608547ccec78806791ec50",
+    "tasks/piper_color_v1/package_assets.py": "ed36383e093f4726c6555128df1bd24bcdf5fbc59052de7d9d22131311fa0957",
+    "tasks/piper_color_v1/policy_client.py": "42aa52f811c4101a552dc7e0c14897771dc19207c07fed8f2ed6aaba56da5600",
+    "tasks/piper_color_v1/policy_config.py": "cda90d6429a485adf30df3243ecfb3588f516de77ef547982bfe10600516ff35",
+    "tasks/piper_color_v1/publish_pi0_six.py": "d52a10904717cc822a32869a00c09ade1c0e15131d4046e3e77aab4fd29e429b",
+    "tasks/piper_color_v1/report.py": "e95a099c4e7849c6d26d3e4dda204ba59a2d2344389ada1f442d14c91a586ece",
+    "tasks/piper_color_v1/run_pi0_six.py": "fdbd95eb26d388e57bfab3a0e39add78965010b13a5b276c23b27f3a4986c8f4",
+    "tasks/piper_color_v1/serve.py": "79c9843a28715e213b81c8f0d3797a2cb127ddfc723079eef2a02ae052f74409",
+    "tasks/piper_color_v1/sim.py": "2be8488d966e42146226eae634ab24bbe4283c21ffdea77dbab2345d46d949d3",
+    "tasks/piper_color_v1/summarize_pi0_six.py": "ab0017813daa9c679a1dcb7128d3d69c0fd41820066bec7a1358406b02f522e1",
+    "tasks/piper_color_v1/train_pi0_six.py": "64d2072cdddde7738c66769a3e671a9f9d1ea28a9d54afdce05b17c166d87a87",
+    "tasks/piper_color_v1/train_task.py": "3e57a7fdf571e332c247ef716b2fae519100e869b442c3a02d8915ea8a57c609"
+  },
+  "gpu_before": "name, memory.total [MiB], memory.used [MiB], utilization.gpu [%]\nNVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 22640 MiB, 94 %",
+  "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3269, python, 754 MiB\n15983, python, 21872 MiB",
+  "evaluation_base_seeds": [
+    42,
+    43
+  ],
+  "checkpoint_update_counts": [
+    500,
+    1000,
+    1500,
+    2000,
+    2010
+  ],
+  "hardware_execution": false,
+  "updated_at": "2026-10-31T14:11:30.394616+00:00",
+  "error": "CalledProcessError(1, ['bash', '/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_six_d57.sh', 'train'])",
+  "finished_at": "2026-10-31T14:23:52.051649+00:00",
+  "failure_publication_error": "CalledProcessError(1, ['/root/miniconda3/bin/python', '/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py', '/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031', '--stage', 'failed'])"
+}

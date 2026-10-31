@@ -1,0 +1,32 @@
+{
+  "model_family": "pi0",
+  "mode": "lora",
+  "requested_steps": 2010,
+  "batch_size": 4,
+  "seed": 42,
+  "trainable_parameters": 468039440,
+  "total_parameters": 3288036112,
+  "training_domain": "synthetic_piper_h",
+  "hardware_execution": false,
+  "completed": false,
+  "completed_updates": 1000,
+  "checkpoints": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/500",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000"
+  ],
+  "initialization_seconds": 28.70883492939174,
+  "wall_seconds": 734.035357568413,
+  "error": "CalledProcessError(1, ['/root/miniconda3/bin/python', '/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py', '/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031', '--stage', 'train-update-1000'])",
+  "jax_memory_stats": {
+    "num_allocs": 46742,
+    "bytes_in_use": 12034593280,
+    "peak_bytes_in_use": 18860845824,
+    "largest_alloc_size": 6824325376,
+    "bytes_limit": 50987925504,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 34361835520,
+    "peak_pool_bytes": 34361835520
+  }
+}
