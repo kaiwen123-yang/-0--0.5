@@ -1,0 +1,949 @@
+{
+  "probes": [
+    {
+      "source": "teacher_100_red",
+      "mode": "recorded_motion",
+      "start_frame": 97,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870122,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.4535536007096364,
+        -0.006199890912800809,
+        6.142414641878666
+      ],
+      "object_in_tcp_end_mm": [
+        8.101947114449189,
+        -1.8724379457037994,
+        144.50829087492153
+      ]
+    },
+    {
+      "source": "teacher_100_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.043906181210123026,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.4535536007096364,
+        -0.006199890912800809,
+        6.142414641878666
+      ],
+      "object_in_tcp_end_mm": [
+        -1.637636505354762,
+        0.005548992511456113,
+        12.588849729123766
+      ]
+    },
+    {
+      "source": "teacher_100_red",
+      "mode": "double_friction",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701213,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.4535536007096364,
+        -0.006199890912800809,
+        6.142414641878666
+      ],
+      "object_in_tcp_end_mm": [
+        19.417801899228646,
+        -0.6705366739029496,
+        144.49691715991256
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "recorded_motion",
+      "start_frame": 97,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870124,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.120199428731863,
+        -0.000872078067516051,
+        6.117521585627019
+      ],
+      "object_in_tcp_end_mm": [
+        12.363165248377456,
+        2.07896785537914,
+        144.50525831314135
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.044021283705408955,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.120199428731863,
+        -0.000872078067516051,
+        6.117521585627019
+      ],
+      "object_in_tcp_end_mm": [
+        -1.7644569313434988,
+        -0.0026526809993286968,
+        12.461988236124336
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "double_friction",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870121,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.120199428731863,
+        -0.000872078067516051,
+        6.117521585627019
+      ],
+      "object_in_tcp_end_mm": [
+        22.25047415264565,
+        -0.5655628647054832,
+        144.49382019460023
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "recorded_motion",
+      "start_frame": 97,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870121,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.8549388657721815,
+        -0.005933685587393492,
+        6.10755298965655
+      ],
+      "object_in_tcp_end_mm": [
+        11.984201339226255,
+        -2.7522801795217364,
+        144.50398281528993
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04336291683599692,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8549388657721815,
+        -0.005933685587393492,
+        6.10755298965655
+      ],
+      "object_in_tcp_end_mm": [
+        -2.7123505469001437,
+        -0.006584011401084566,
+        13.117817937016463
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "double_friction",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701216,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.8549388657721815,
+        -0.005933685587393492,
+        6.10755298965655
+      ],
+      "object_in_tcp_end_mm": [
+        14.828693454800302,
+        -0.5233831466507011,
+        144.5016690718678
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "recorded_motion",
+      "start_frame": 97,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701223,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.8770016698242227,
+        -0.00017892983148277392,
+        6.1047624242919705
+      ],
+      "object_in_tcp_end_mm": [
+        9.988022552608436,
+        -1.0718090070313853,
+        144.50658207401912
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04379629103585153,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8770016698242227,
+        -0.00017892983148277392,
+        6.1047624242919705
+      ],
+      "object_in_tcp_end_mm": [
+        -1.9680426888769595,
+        -0.007006774203613235,
+        12.66664741489655
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "double_friction",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701227,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.8770016698242227,
+        -0.00017892983148277392,
+        6.1047624242919705
+      ],
+      "object_in_tcp_end_mm": [
+        14.625697350777436,
+        -0.4132792678938673,
+        144.50185836319025
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "recorded_motion",
+      "start_frame": 97,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870122,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.5108740299719066,
+        -0.0019707942380333804,
+        6.13441083861353
+      ],
+      "object_in_tcp_end_mm": [
+        11.01586038422,
+        -0.7384618782816826,
+        144.50568020148083
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.044006814701053616,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.5108740299719066,
+        -0.0019707942380333804,
+        6.13441083861353
+      ],
+      "object_in_tcp_end_mm": [
+        -2.562258924613124,
+        0.0009444949859850965,
+        12.500184372648553
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "double_friction",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870121,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.5108740299719066,
+        -0.0019707942380333804,
+        6.13441083861353
+      ],
+      "object_in_tcp_end_mm": [
+        16.3961180603292,
+        -0.5143123005170427,
+        144.50002470942235
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "recorded_motion",
+      "start_frame": 97,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701213,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.255300519503859,
+        -0.0035015195251131494,
+        6.0947631086284115
+      ],
+      "object_in_tcp_end_mm": [
+        12.33740764243026,
+        -0.3849261225516673,
+        144.50423053575943
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04425452714614097,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.255300519503859,
+        -0.0035015195251131494,
+        6.0947631086284115
+      ],
+      "object_in_tcp_end_mm": [
+        -2.385700714478088,
+        -0.001400415208277731,
+        12.23668773196818
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "double_friction",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701199,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.4218009478672986,
+      "object_in_tcp_start_mm": [
+        -1.255300519503859,
+        -0.0035015195251131494,
+        6.0947631086284115
+      ],
+      "object_in_tcp_end_mm": [
+        25.669029271304638,
+        -3.382963343487553,
+        144.4894256689484
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "recorded_motion",
+      "start_frame": 111,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129875943,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.313915857605178,
+      "object_in_tcp_start_mm": [
+        -14.18647053734406,
+        0.008276133454131161,
+        -1.4041979021705389
+      ],
+      "object_in_tcp_end_mm": [
+        167.2884751846435,
+        -245.23929796447646,
+        122.83614616585722
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 111,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.0355631739238416,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -14.18647053734406,
+        0.008276133454131161,
+        -1.4041979021705389
+      ],
+      "object_in_tcp_end_mm": [
+        -16.085790270135707,
+        0.006668320152132933,
+        14.113027848344553
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "double_friction",
+      "start_frame": 111,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129878025,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.16828478964401294,
+      "object_in_tcp_start_mm": [
+        -14.18647053734406,
+        0.008276133454131161,
+        -1.4041979021705389
+      ],
+      "object_in_tcp_end_mm": [
+        193.30270083927022,
+        -248.88127094215733,
+        121.60525117704516
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "recorded_motion",
+      "start_frame": 99,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701227,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.7204968944099379,
+      "object_in_tcp_start_mm": [
+        3.4586936267473525,
+        -0.005192262251373863,
+        -3.5622846270452606
+      ],
+      "object_in_tcp_end_mm": [
+        6.64220721012356,
+        0.546063361232784,
+        136.47722876734343
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 99,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04368352524363688,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        3.4586936267473525,
+        -0.005192262251373863,
+        -3.5622846270452606
+      ],
+      "object_in_tcp_end_mm": [
+        3.882263341539401,
+        -0.000751838674062731,
+        3.8477043031732996
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "double_friction",
+      "start_frame": 99,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701237,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.7204968944099379,
+      "object_in_tcp_start_mm": [
+        3.4586936267473525,
+        -0.005192262251373863,
+        -3.5622846270452606
+      ],
+      "object_in_tcp_end_mm": [
+        24.936917245270877,
+        -1.0302331496117063,
+        135.984695333862
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "recorded_motion",
+      "start_frame": 120,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129878025,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.03,
+      "object_in_tcp_start_mm": [
+        -28.070670617040886,
+        -0.040049622765115964,
+        1.1513653373926591
+      ],
+      "object_in_tcp_end_mm": [
+        76.00417137775766,
+        -205.6252121496676,
+        155.130648410691
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 120,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129878719,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.21666666666666667,
+      "object_in_tcp_start_mm": [
+        -28.070670617040886,
+        -0.040049622765115964,
+        1.1513653373926591
+      ],
+      "object_in_tcp_end_mm": [
+        -73.00985022868855,
+        -6.545364411776522,
+        55.27158483368176
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "double_friction",
+      "start_frame": 120,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129877331,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.016666666666666666,
+      "object_in_tcp_start_mm": [
+        -28.070670617040886,
+        -0.040049622765115964,
+        1.1513653373926591
+      ],
+      "object_in_tcp_end_mm": [
+        85.49384153562187,
+        -195.89667108392374,
+        154.8216785041248
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "recorded_motion",
+      "start_frame": 93,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701234,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.6140350877192983,
+      "object_in_tcp_start_mm": [
+        0.8305990487276362,
+        -0.0027345175410641107,
+        6.3517525660275975
+      ],
+      "object_in_tcp_end_mm": [
+        8.499437873707775,
+        -14.412555696072522,
+        124.30257177557726
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 93,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.04582803286479098,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.8305990487276362,
+        -0.0027345175410641107,
+        6.3517525660275975
+      ],
+      "object_in_tcp_end_mm": [
+        0.6648689767026895,
+        -0.0009496856405836851,
+        11.438816344014212
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "double_friction",
+      "start_frame": 93,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.00789325598870122,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.7134502923976608,
+      "object_in_tcp_start_mm": [
+        0.8305990487276362,
+        -0.0027345175410641107,
+        6.3517525660275975
+      ],
+      "object_in_tcp_end_mm": [
+        23.21827502891189,
+        8.40156971098339,
+        123.89543361611791
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "recorded_motion",
+      "start_frame": 103,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129876984,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.3911671924290221,
+      "object_in_tcp_start_mm": [
+        -9.112343600022434,
+        0.010539498700148786,
+        -1.1073954234748438
+      ],
+      "object_in_tcp_end_mm": [
+        15.293405839797689,
+        -31.05101375410618,
+        110.97793442121738
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 103,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.03735955666009117,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -9.112343600022434,
+        0.010539498700148786,
+        -1.1073954234748438
+      ],
+      "object_in_tcp_end_mm": [
+        -12.68887469169061,
+        -0.0046652152961256955,
+        10.151842674861829
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "double_friction",
+      "start_frame": 103,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129880107,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.1829652996845426,
+      "object_in_tcp_start_mm": [
+        -9.112343600022434,
+        0.010539498700148786,
+        -1.1073954234748438
+      ],
+      "object_in_tcp_end_mm": [
+        37.31343688999192,
+        -63.27433140751694,
+        110.02496153204396
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "recorded_motion",
+      "start_frame": 193,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.0001067440112987629,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.03524229074889868,
+      "object_in_tcp_start_mm": [
+        -26.43100265529529,
+        -0.0010421208066387524,
+        6.4844776914605955
+      ],
+      "object_in_tcp_end_mm": [
+        32.95534532669202,
+        -280.41956269131555,
+        62.57929552773006
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 193,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129879413,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.2,
+      "object_in_tcp_start_mm": [
+        -26.43100265529529,
+        -0.0010421208066387524,
+        6.4844776914605955
+      ],
+      "object_in_tcp_end_mm": [
+        -84.15685668226374,
+        13.94891498747532,
+        58.530306573191865
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "double_friction",
+      "start_frame": 193,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129876637,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.02643171806167401,
+      "object_in_tcp_start_mm": [
+        -26.43100265529529,
+        -0.0010421208066387524,
+        6.4844776914605955
+      ],
+      "object_in_tcp_end_mm": [
+        57.11889006446147,
+        -249.02029319801986,
+        62.01889632332281
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "recorded_motion",
+      "start_frame": 95,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701223,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.7653061224489796,
+      "object_in_tcp_start_mm": [
+        0.38644298374725844,
+        -0.00095098608059177,
+        -3.2781577868236176
+      ],
+      "object_in_tcp_end_mm": [
+        6.098609208287082,
+        -1.6225771943361125,
+        140.78459366729268
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "hold_pose_3s",
+      "start_frame": 95,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.0425741194369619,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.38644298374725844,
+        -0.00095098608059177,
+        -3.2781577868236176
+      ],
+      "object_in_tcp_end_mm": [
+        0.4262661134012755,
+        0.0017246511056927842,
+        3.1411744766803684
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "double_friction",
+      "start_frame": 95,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701199,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.7653061224489796,
+      "object_in_tcp_start_mm": [
+        0.38644298374725844,
+        -0.00095098608059177,
+        -3.2781577868236176
+      ],
+      "object_in_tcp_end_mm": [
+        7.188882963176553,
+        -1.5374324401262147,
+        140.75618957487094
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "recorded_motion",
+      "start_frame": 129,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.007893255988701227,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": true,
+      "bilateral_contact_fraction": 0.25806451612903225,
+      "object_in_tcp_start_mm": [
+        22.83298659031406,
+        0.0027129338665778154,
+        2.0242008690754547
+      ],
+      "object_in_tcp_end_mm": [
+        51.53146155084365,
+        8.972158705816172,
+        128.93419676943088
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "hold_pose_3s",
+      "start_frame": 129,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010730305599367801,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.7833333333333333,
+      "object_in_tcp_start_mm": [
+        22.83298659031406,
+        0.0027129338665778154,
+        2.0242008690754547
+      ],
+      "object_in_tcp_end_mm": [
+        64.77357111114593,
+        11.042030571442595,
+        58.54930570476824
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "double_friction",
+      "start_frame": 129,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129873862,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.0967741935483871,
+      "object_in_tcp_start_mm": [
+        22.83298659031406,
+        0.0027129338665778154,
+        2.0242008690754547
+      ],
+      "object_in_tcp_end_mm": [
+        134.41490919001998,
+        -79.01882346758238,
+        133.9862810709573
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "recorded_motion",
+      "start_frame": 122,
+      "diagnostic_intervention": false,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129879413,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.3422818791946309,
+      "object_in_tcp_start_mm": [
+        -12.449244509445393,
+        -0.01797180741551871,
+        -2.455260156067424
+      ],
+      "object_in_tcp_end_mm": [
+        4.0587684132810224,
+        -60.03150538676057,
+        147.08578320975823
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "hold_pose_3s",
+      "start_frame": 122,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": 0.038081526625065525,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -12.449244509445393,
+        -0.01797180741551871,
+        -2.455260156067424
+      ],
+      "object_in_tcp_end_mm": [
+        -14.451137107873503,
+        -0.0035746299102575683,
+        9.561644529109001
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "double_friction",
+      "start_frame": 122,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "target_height_at_end_m": -0.00010674401129877331,
+      "held_5cm_at_end": false,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.1342281879194631,
+      "object_in_tcp_start_mm": [
+        -12.449244509445393,
+        -0.01797180741551871,
+        -2.455260156067424
+      ],
+      "object_in_tcp_end_mm": [
+        38.36220063151868,
+        -89.22562588456393,
+        145.97532018601834
+      ]
+    }
+  ]
+}

@@ -155,7 +155,7 @@ def replay(out):
         env.close()
 
 
-def physics_probes(replay_dir, out):
+def physics_probes(replay_dir, out, modes=("recorded_motion", "hold_pose_3s", "double_friction")):
     """Keep the exact acquired grasp; change subsequent motion or contact friction."""
     out.mkdir(parents=True, exist_ok=False)
     rows = []
@@ -165,7 +165,7 @@ def physics_probes(replay_dir, out):
             continue
         with np.load(replay_dir / f"{source_row['name']}.npz", allow_pickle=False) as x:
             commands = x["executed_command"].copy()
-        for mode in ("recorded_motion", "hold_pose_3s", "double_friction"):
+        for mode in modes:
             env = ColorEnv(render=False)
             try:
                 env.reset(source_row["layout"], source_row["target"])
@@ -184,10 +184,14 @@ def physics_probes(replay_dir, out):
                     stable_count = stable_count + 1 if env.result()["success"] else 0
                     stable = stable or stable_count >= 40
                 trace = arrays(samples)
+                final = sample(env)
                 row = {"source": source_row["name"], "mode": mode, "start_frame": start,
                        "diagnostic_intervention": mode != "recorded_motion", "autonomous_success_eligible": False,
                        "target_height_at_end_m": float(env.positions()[env.target][2] - HALF),
                        "held_5cm_at_end": bool(env.positions()[env.target][2] - HALF > .05),
+                       "retained_bilateral_above_table": bool(env.positions()[env.target][2] - HALF > .02 and (final["normal_force"] > .05).all()),
+                       "final_normal_force_N": final["normal_force"].tolist(),
+                       "minimum_height_after_start_m": float(np.min(trace["target_position"][:, 2] - HALF)),
                        "full_task_conditions_observed": stable,
                        "bilateral_contact_fraction": float(np.mean((trace["normal_force"] > .05).all(axis=1))),
                        "object_in_tcp_start_mm": (trace["object_in_tcp"][0] * 1000).tolist(),
@@ -205,8 +209,10 @@ if __name__ == "__main__":
     p.add_argument("stage", choices=["replay", "physics"])
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--replay", type=Path)
+    p.add_argument("--physics-modes", nargs="+", choices=["recorded_motion", "hold_pose_3s", "double_friction"],
+                   default=["recorded_motion", "hold_pose_3s", "double_friction"])
     a = p.parse_args()
     if a.stage == "replay":
         replay(a.output)
     else:
-        physics_probes(a.replay, a.output)
+        physics_probes(a.replay, a.output, a.physics_modes)
