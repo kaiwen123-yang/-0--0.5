@@ -47,3 +47,22 @@ source /root/autodl-tmp/robot-repro/piper-h/activate.sh
 Git 保留代码、配置、紧凑结果和索引。2026-10-25 的 source/results 分卷继续复用；本轮新增训练数据、参数备份和补充资料置于新的 GitHub Release，详见 ARTIFACT_INDEX.json。
 
 完整的已安装环境、下载缓存、原官方权重不再复制为 GitHub 资产；已有版本锁、补丁和官方权重清单提供重建入口。私钥和认证配置留在原机私有位置。临时服务器间传输密钥已移除。
+
+
+## 2026-10-31：独立颜色任务入口
+
+颜色任务的模型服务沿用 pi05 环境，仿真客户端使用新建的 `runtime/d57-color-sim`。它不继承模型、SuperMimic 或 MPC-RL 的包。仿真核心版本沿用历史锁：MuJoCo 3.2.3、NumPy 1.26.4、SciPy 1.14.1；完整安装记录为 `deployment/d57/color-sim.freeze.txt`。
+
+```bash
+cd /root/autodl-tmp/robot-repro/pi-reproduction
+bash scripts/setup_piper_color_d57.sh
+# 终端 1：仅监听 127.0.0.1:18765，加载旧 LoRA 1499 与原归一化。
+bash scripts/run_piper_color_d57.sh serve
+# 终端 2：输出目录必须尚不存在，保留完整的 15 条验证任务。
+bash scripts/run_piper_color_d57.sh evaluate --split validation \
+  --output outputs/my-new-run/validation
+```
+
+`evaluate.py` 支持显式检查点、归一化和数据路径，连接后校验服务器的模型身份。每次评估显式重置策略随机种子。记录模型预测与实际执行命令、物理状态、物体轨迹、配置和源码摘要；这些诊断量不会作为策略输入。默认仍为原来的 420 步上限、每 5 步重新规划和连续 2 秒成功判据。评估期间仍暂停物理时钟，不属于实机实时性验收。
+
+服务启动、检查点实际加载和完整闭环评估正在通过真实任务验证；本轮没有训练或连接硬件。用户要求的后续优先级是先完成 π0 仿真与实机链路，再推进 π0.5；旧 π0.5 LoRA 在此用于诊断共用接口与数据。
