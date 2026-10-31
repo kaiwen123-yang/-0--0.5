@@ -1,0 +1,7 @@
+REPLAY teacher_100_red success True reproduced False offset_mm 1.51 drop None
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/diagnose_pi0_failures.py", line 204, in <module>
+    replay(a.output)
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/diagnose_pi0_failures.py", line 147, in replay
+    raise RuntimeError(f"Replay differs from the stored trajectory: {name}")
+RuntimeError: Replay differs from the stored trajectory: teacher_100_red

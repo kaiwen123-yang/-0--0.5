@@ -1,0 +1,72 @@
+{
+  "name": "teacher_101_green",
+  "source_type": "teacher",
+  "layout": 101,
+  "target": "green",
+  "source": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/dataset-v1/train/layout_00101_green.npz",
+  "source_sha256": "8def91d80192c0eae32c79d2734e4e3b1330cc37437db57b781eb5d89662b37e",
+  "max_replay_state_difference": 0.0012410436756908894,
+  "original_success": true,
+  "success": true,
+  "max_lift_cm": 13.838381401481353,
+  "first_lifted_frame": 97,
+  "first_bilateral_lift_frame": 97,
+  "over_box_frames": 163,
+  "drop_frame": null,
+  "bilateral_contact_frames": 113,
+  "approach_reference_frame": 97,
+  "approach_xy_offset_mm": 1.5662583417973204,
+  "approach_object_in_tcp_mm": [
+    -1.5108740299719066,
+    -0.0019707942380333804,
+    6.13441083861353
+  ],
+  "approach_orientation_error_deg": 0.640312490628188,
+  "normal_force_at_reference_N": [
+    9.99910605438082,
+    9.947661035319152
+  ],
+  "gripper_width_at_reference_m": 0.03163418546319008,
+  "raw_to_executed_joint_mae_rad": 0.0,
+  "command_tracking_joint_mae_rad": 0.017733147367835045,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "green",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.13838381401481353,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.01739325598870124
+      ],
+      "green": [
+        -0.1498025625494333,
+        0.15571032331726703,
+        0.02539325598870122
+      ],
+      "blue": [
+        -0.22258108984087696,
+        -0.15393621106855343,
+        0.017393255988701242
+      ]
+    },
+    "steps": 308
+  },
+  "replay_state_match_required": false,
+  "reproduced": true
+}

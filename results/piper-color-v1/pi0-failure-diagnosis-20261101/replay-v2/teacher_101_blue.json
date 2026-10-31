@@ -1,0 +1,72 @@
+{
+  "name": "teacher_101_blue",
+  "source_type": "teacher",
+  "layout": 101,
+  "target": "blue",
+  "source": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/dataset-v1/train/layout_00101_blue.npz",
+  "source_sha256": "206ad9564e0eafff40baf5b6fecc073b94e6773f666a355b73c060295f01fafc",
+  "max_replay_state_difference": 0.0018137656152248383,
+  "original_success": true,
+  "success": true,
+  "max_lift_cm": 13.836709197706137,
+  "first_lifted_frame": 97,
+  "first_bilateral_lift_frame": 97,
+  "over_box_frames": 162,
+  "drop_frame": null,
+  "bilateral_contact_frames": 113,
+  "approach_reference_frame": 97,
+  "approach_xy_offset_mm": 1.3110833393354127,
+  "approach_object_in_tcp_mm": [
+    -1.255300519503859,
+    -0.0035015195251131494,
+    6.0947631086284115
+  ],
+  "approach_orientation_error_deg": 0.7450109257189484,
+  "normal_force_at_reference_N": [
+    9.982678987027018,
+    10.004830011766304
+  ],
+  "gripper_width_at_reference_m": 0.03164065256714821,
+  "raw_to_executed_joint_mae_rad": 0.0,
+  "command_tracking_joint_mae_rad": 0.018879756331443787,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "blue",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "green": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.0,
+      "blue": 0.13836709197706137
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.12202544846572949,
+        -0.14744421081155182,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.15115312814693235,
+        0.15556398140134936,
+        0.025393255988701215
+      ]
+    },
+    "steps": 308
+  },
+  "replay_state_match_required": false,
+  "reproduced": true
+}

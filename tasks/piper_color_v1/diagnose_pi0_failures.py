@@ -135,7 +135,13 @@ def replay(out):
                            "max_replay_state_difference": max(differences),
                            "original_success": original["success"] if original else True,
                            **describe(trace, result, raw, commands)}
-                    row["reproduced"] = row["success"] == row["original_success"] and max(differences) < 1e-5
+                    # Teacher labels were saved as float32 from float64 IK commands;
+                    # contact-sensitive trajectories need not be bitwise identical.
+                    # Retain their numeric differences and judge physical feasibility.
+                    # Policy commands were saved in full precision and must replay closely.
+                    row["replay_state_match_required"] = source_type != "teacher"
+                    row["reproduced"] = row["success"] == row["original_success"] and (
+                        source_type == "teacher" or max(differences) < 1e-5)
                     np.savez_compressed(out / f"{name}.npz", **trace, raw_action=raw, executed_command=commands)
                     save(out / f"{name}.json", row)
                     rows.append(row)

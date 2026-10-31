@@ -1,0 +1,72 @@
+{
+  "name": "policy42_101_green",
+  "source_type": "policy42",
+  "layout": 101,
+  "target": "green",
+  "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_green.npz",
+  "source_sha256": "676184cb26df44bcfb1b2a197438f4fd927ac0f6e057bdbf9e95428f5bd55146",
+  "max_replay_state_difference": 0.0,
+  "original_success": false,
+  "success": false,
+  "max_lift_cm": 10.276784132052715,
+  "first_lifted_frame": 103,
+  "first_bilateral_lift_frame": 103,
+  "over_box_frames": 0,
+  "drop_frame": 229,
+  "bilateral_contact_frames": 161,
+  "approach_reference_frame": 103,
+  "approach_xy_offset_mm": 9.116204666482197,
+  "approach_object_in_tcp_mm": [
+    -9.112343600022434,
+    0.010539498700148786,
+    -1.1073954234748438
+  ],
+  "approach_orientation_error_deg": 2.3859552897540057,
+  "normal_force_at_reference_N": [
+    10.018080540148356,
+    10.121186408928256
+  ],
+  "gripper_width_at_reference_m": 0.0318591445684433,
+  "raw_to_executed_joint_mae_rad": 3.1603192526196905e-05,
+  "command_tracking_joint_mae_rad": 0.011648877602591479,
+  "gripper_open_command_frames_before_drop": 0,
+  "open_low_reapproach_frames_after_drop": 0,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "green",
+    "correct_in_box": false,
+    "wrong_in_box": false,
+    "gripper_open": false,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.10276784132052715,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": false,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.10689248915610104,
+        -0.13371398367547127,
+        0.017393255988701232
+      ],
+      "blue": [
+        -0.22258108984087696,
+        -0.15393621106855343,
+        0.017393255988701235
+      ]
+    },
+    "steps": 420
+  },
+  "replay_state_match_required": true,
+  "reproduced": true
+}
