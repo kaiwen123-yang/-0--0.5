@@ -9,12 +9,14 @@
   "training_domain": "synthetic_piper_h",
   "hardware_execution": false,
   "completed": false,
-  "completed_updates": 1000,
+  "completed_updates": 1500,
   "checkpoints": [
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/500",
-    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000"
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1500"
   ],
   "resumed_from_update": 1000,
   "prior_attempt_wall_seconds": 734.035357568413,
-  "initialization_seconds": 9.219351012259722
+  "initialization_seconds": 9.219351012259722,
+  "wall_seconds": 329.03845258802176
 }
