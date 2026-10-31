@@ -1,0 +1,78 @@
+{
+  "name": "prefix60_101_blue_seed42",
+  "prefix": 60,
+  "layout": 101,
+  "target": "blue",
+  "base_seed": 42,
+  "episode_seed": 347,
+  "teacher_prefix": true,
+  "policy_success_rate_eligible": false,
+  "rng_advance_calls": 12,
+  "error": null,
+  "handoff_state_max_difference": 8.149072527885437e-10,
+  "handoff_xy_offset_mm": 2.4544769334264065,
+  "handoff_normal_force_N": [
+    0.0,
+    0.0
+  ],
+  "success": false,
+  "max_lift_cm": 13.59524702101384,
+  "first_lifted_frame": 30,
+  "first_bilateral_lift_frame": 30,
+  "over_box_frames": 0,
+  "drop_frame": 79,
+  "bilateral_contact_frames": 58,
+  "approach_reference_frame": 30,
+  "approach_xy_offset_mm": 0.20872843512233424,
+  "approach_object_in_tcp_mm": [
+    -0.08102503820163501,
+    -0.00397863410239533,
+    10.54695379348677
+  ],
+  "approach_orientation_error_deg": 0.8236059029037679,
+  "normal_force_at_reference_N": [
+    9.9855484619046,
+    9.966778612018528
+  ],
+  "gripper_width_at_reference_m": 0.03161724656820297,
+  "raw_to_executed_joint_mae_rad": 9.671999569292413e-05,
+  "command_tracking_joint_mae_rad": 0.01253276278096319,
+  "gripper_open_command_frames_before_drop": 0,
+  "open_low_reapproach_frames_after_drop": 0,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "blue",
+    "correct_in_box": false,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "green": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.0,
+      "blue": 0.1359524702101384
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": false,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.12202544846572949,
+        -0.14744421081155182,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.13586298497395707,
+        0.03566783275202376,
+        0.01739325598870122
+      ]
+    },
+    "steps": 420
+  }
+}

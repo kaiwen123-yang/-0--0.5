@@ -1,0 +1,1444 @@
+{
+  "probes": [
+    {
+      "source": "teacher_100_red",
+      "mode": "hold_impratio10",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.048482667506659166,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.998736124753496,
+        10.001263894858932
+      ],
+      "minimum_height_after_start_m": 0.048493818698225846,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.4533922873838905,
+        -0.00686865324420228,
+        6.146029562947359
+      ],
+      "object_in_tcp_end_mm": [
+        -1.4879667363424272,
+        0.00032057407782764544,
+        8.128968864184674
+      ]
+    },
+    {
+      "source": "teacher_100_red",
+      "mode": "hold_noslip3",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.05047897456525764,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.99275487860675,
+        9.995261835648924
+      ],
+      "minimum_height_after_start_m": 0.050479274181782594,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.4533922873838905,
+        -0.00686865324420228,
+        6.146029562947359
+      ],
+      "object_in_tcp_end_mm": [
+        -1.4305089191402691,
+        0.1312496311262129,
+        6.155827930902771
+      ]
+    },
+    {
+      "source": "teacher_100_red",
+      "mode": "hold_friction2",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 7.55,
+      "target_height_at_end_m": -0.0001067440112987525,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0006700110124891606,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.755,
+      "object_in_tcp_start_mm": [
+        -1.4533922873838905,
+        -0.00686865324420228,
+        6.146029562947359
+      ],
+      "object_in_tcp_end_mm": [
+        7.446615154777757,
+        -10.486374905657346,
+        58.05366484815449
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "hold_impratio10",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.048496686694183985,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.012708031295453,
+        10.016004848523284
+      ],
+      "minimum_height_after_start_m": 0.048506378110375836,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.1202260637389851,
+        -0.006380761882751417,
+        6.12117195084739
+      ],
+      "object_in_tcp_end_mm": [
+        -1.1500152039660054,
+        0.000487676666599251,
+        8.099286290733174
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "hold_noslip3",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.0504704893194067,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.94988294701448,
+        9.953216340792665
+      ],
+      "minimum_height_after_start_m": 0.05047059969715886,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.1202260637389851,
+        -0.006380761882751417,
+        6.12117195084739
+      ],
+      "object_in_tcp_end_mm": [
+        -1.0897254094435054,
+        0.04321491899297766,
+        6.137588681841181
+      ]
+    },
+    {
+      "source": "teacher_100_green",
+      "mode": "hold_friction2",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 6.05,
+      "target_height_at_end_m": -0.00010674401129876984,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0025648105540335576,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.605,
+      "object_in_tcp_start_mm": [
+        -1.1202260637389851,
+        -0.006380761882751417,
+        6.12117195084739
+      ],
+      "object_in_tcp_end_mm": [
+        -16.413383697486967,
+        -2.714998165154916,
+        58.12684564894943
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "hold_impratio10",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.0485439319806098,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.997775464019009,
+        10.002020432127255
+      ],
+      "minimum_height_after_start_m": 0.048552847424719284,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8550325965559697,
+        0.0013127602733955072,
+        6.111363169395043
+      ],
+      "object_in_tcp_end_mm": [
+        -1.8789328763072124,
+        0.0002280235872855496,
+        8.054519740508281
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "hold_noslip3",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.050508499644769125,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.950188773356214,
+        9.95582592948391
+      ],
+      "minimum_height_after_start_m": 0.050508633305501455,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8550325965559697,
+        0.0013127602733955072,
+        6.111363169395043
+      ],
+      "object_in_tcp_end_mm": [
+        -1.9111708684001203,
+        -0.1119027391491955,
+        6.134032953731896
+      ]
+    },
+    {
+      "source": "teacher_100_blue",
+      "mode": "hold_friction2",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 6.2,
+      "target_height_at_end_m": -0.00010674401129874556,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0013695244700998171,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.62,
+      "object_in_tcp_start_mm": [
+        -1.8550325965559697,
+        0.0013127602733955072,
+        6.111363169395043
+      ],
+      "object_in_tcp_end_mm": [
+        5.375645207268845,
+        6.857484618568915,
+        57.82362688188597
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "hold_impratio10",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04853089017320174,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.988545209900554,
+        9.992451276682585
+      ],
+      "minimum_height_after_start_m": 0.048540365378120495,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8769574031056182,
+        0.00020090039027642688,
+        6.108518321127803
+      ],
+      "object_in_tcp_end_mm": [
+        -1.8983633022691266,
+        0.00014191160428523987,
+        8.043952939825932
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "hold_noslip3",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.05045495225234835,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.991016639156511,
+        9.99130181250097
+      ],
+      "minimum_height_after_start_m": 0.05045511555069744,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.8769574031056182,
+        0.00020090039027642688,
+        6.108518321127803
+      ],
+      "object_in_tcp_end_mm": [
+        -1.8693007974414868,
+        0.0025754888231091654,
+        6.132907529893719
+      ]
+    },
+    {
+      "source": "teacher_101_red",
+      "mode": "hold_friction2",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 6.0,
+      "target_height_at_end_m": -0.00010674401129876984,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.001367384900925979,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.6,
+      "object_in_tcp_start_mm": [
+        -1.8769574031056182,
+        0.00020090039027642688,
+        6.108518321127803
+      ],
+      "object_in_tcp_end_mm": [
+        4.037975175941573,
+        -16.062861351393938,
+        57.89670602985426
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "hold_impratio10",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04859645645716994,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.000187079913545,
+        10.000515248600742
+      ],
+      "minimum_height_after_start_m": 0.04860527447549266,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.5109695550201077,
+        5.31254938338588e-06,
+        6.137848550356369
+      ],
+      "object_in_tcp_end_mm": [
+        -1.5185283409389445,
+        0.0003656128838173548,
+        8.02340700952092
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "hold_noslip3",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.050506119322928464,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.969424321023386,
+        9.970940444087935
+      ],
+      "minimum_height_after_start_m": 0.050506207500248576,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.5109695550201077,
+        5.31254938338588e-06,
+        6.137848550356369
+      ],
+      "object_in_tcp_end_mm": [
+        -1.565940810538089,
+        -0.0670831682034658,
+        6.154914823608793
+      ]
+    },
+    {
+      "source": "teacher_101_green",
+      "mode": "hold_friction2",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 6.85,
+      "target_height_at_end_m": -0.00010674401129874556,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0015134305941955188,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.685,
+      "object_in_tcp_start_mm": [
+        -1.5109695550201077,
+        5.31254938338588e-06,
+        6.137848550356369
+      ],
+      "object_in_tcp_end_mm": [
+        5.457609643205503,
+        6.644697327537207,
+        57.987483299705694
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "hold_impratio10",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.048631836327567624,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.99905557616004,
+        10.001038739916375
+      ],
+      "minimum_height_after_start_m": 0.048640675594813484,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.2553923703206267,
+        -0.001596662419968118,
+        6.098298883170064
+      ],
+      "object_in_tcp_end_mm": [
+        -1.2585319428982384,
+        0.0005487919591418136,
+        7.965905222021449
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "hold_noslip3",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.0504900818160498,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.973830176031647,
+        9.975937127328406
+      ],
+      "minimum_height_after_start_m": 0.05049020417426603,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -1.2553923703206267,
+        -0.001596662419968118,
+        6.098298883170064
+      ],
+      "object_in_tcp_end_mm": [
+        -1.228779137377072,
+        -0.022684640763480268,
+        6.118037182035758
+      ]
+    },
+    {
+      "source": "teacher_101_blue",
+      "mode": "hold_friction2",
+      "start_frame": 97,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 5.9,
+      "target_height_at_end_m": -0.00010674401129874209,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0020175573325792156,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.59,
+      "object_in_tcp_start_mm": [
+        -1.2553923703206267,
+        -0.001596662419968118,
+        6.098298883170064
+      ],
+      "object_in_tcp_end_mm": [
+        -16.01637526177475,
+        -2.8015158840002132,
+        58.126382946298534
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "hold_impratio10",
+      "start_frame": 111,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.046587179718811905,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.997186691843895,
+        10.002813534219236
+      ],
+      "minimum_height_after_start_m": 0.04660498644524502,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -14.189262872050262,
+        -0.004180626701149787,
+        -1.3969420461480495
+      ],
+      "object_in_tcp_end_mm": [
+        -16.20032470909949,
+        0.00026361097989835604,
+        3.2886802565692013
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "hold_noslip3",
+      "start_frame": 111,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.05125214762578552,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.989602547941276,
+        10.002912708959713
+      ],
+      "minimum_height_after_start_m": 0.05125226621204368,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -14.189262872050262,
+        -0.004180626701149787,
+        -1.3969420461480495
+      ],
+      "object_in_tcp_end_mm": [
+        -14.168456156415212,
+        0.38834898458843103,
+        -1.374115724785856
+      ]
+    },
+    {
+      "source": "policy42_100_red",
+      "mode": "hold_friction2",
+      "start_frame": 111,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 1.85,
+      "target_height_at_end_m": -0.00010674401129876984,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0005076200197825197,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.185,
+      "object_in_tcp_start_mm": [
+        -14.189262872050262,
+        -0.004180626701149787,
+        -1.3969420461480495
+      ],
+      "object_in_tcp_end_mm": [
+        -26.27965399291102,
+        -5.236433946754515,
+        51.646622035555964
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "hold_impratio10",
+      "start_frame": 99,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04927205181736091,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.990657974198392,
+        10.011328629834527
+      ],
+      "minimum_height_after_start_m": 0.049282079945976484,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        3.4587605490316884,
+        0.004542206408313338,
+        -3.558614519468535
+      ],
+      "object_in_tcp_end_mm": [
+        3.792674569219548,
+        0.00032233004525598766,
+        -1.6186411517951154
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "hold_noslip3",
+      "start_frame": 99,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.051219240062264665,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.952101316266763,
+        9.95494525535207
+      ],
+      "minimum_height_after_start_m": 0.05121932174309253,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        3.4587605490316884,
+        0.004542206408313338,
+        -3.558614519468535
+      ],
+      "object_in_tcp_end_mm": [
+        3.4887590419826315,
+        -0.13917761028029546,
+        -3.543103707289604
+      ]
+    },
+    {
+      "source": "policy42_100_green",
+      "mode": "hold_friction2",
+      "start_frame": 99,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 7.3,
+      "target_height_at_end_m": -0.00010674401129879413,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0006482970108163122,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.73,
+      "object_in_tcp_start_mm": [
+        3.4587605490316884,
+        0.004542206408313338,
+        -3.558614519468535
+      ],
+      "object_in_tcp_end_mm": [
+        22.803286913165916,
+        -17.465651275149945,
+        48.9799666093947
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "hold_impratio10",
+      "start_frame": 120,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04440730703146337,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.998464095900216,
+        9.99555615302384
+      ],
+      "minimum_height_after_start_m": 0.04445191642582264,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -28.07204249279932,
+        -0.03669626974310045,
+        1.1643901279259343
+      ],
+      "object_in_tcp_end_mm": [
+        -29.562121437209754,
+        0.3332221526313451,
+        8.900179235502243
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "hold_noslip3",
+      "start_frame": 120,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.05212098222956661,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.995176465145411,
+        9.99748475957421
+      ],
+      "minimum_height_after_start_m": 0.05212111946609921,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -28.07204249279932,
+        -0.03669626974310045,
+        1.1643901279259343
+      ],
+      "object_in_tcp_end_mm": [
+        -28.087248636425578,
+        0.1088669107770463,
+        1.2169456885914478
+      ]
+    },
+    {
+      "source": "policy42_100_blue",
+      "mode": "hold_friction2",
+      "start_frame": 120,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 0.25,
+      "target_height_at_end_m": -0.0001067440112987976,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0031502890003516464,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.025,
+      "object_in_tcp_start_mm": [
+        -28.07204249279932,
+        -0.03669626974310045,
+        1.1643901279259343
+      ],
+      "object_in_tcp_end_mm": [
+        -72.01965009568711,
+        -9.34435113988069,
+        55.398822726316084
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "hold_impratio10",
+      "start_frame": 93,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04909698315013575,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.003625391053687,
+        9.995338057361767
+      ],
+      "minimum_height_after_start_m": 0.049105819982534674,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.8304763000952977,
+        -0.002040417762401401,
+        6.355178793633637
+      ],
+      "object_in_tcp_end_mm": [
+        0.793158975654661,
+        -0.0009335545110596245,
+        8.241602742254743
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "hold_noslip3",
+      "start_frame": 93,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.05101585533209063,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.958776894715854,
+        9.951867070593083
+      ],
+      "minimum_height_after_start_m": 0.051016027605684786,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.8304763000952977,
+        -0.002040417762401401,
+        6.355178793633637
+      ],
+      "object_in_tcp_end_mm": [
+        0.7775756554943515,
+        -0.006555699179032155,
+        6.374651773737751
+      ]
+    },
+    {
+      "source": "policy42_101_red",
+      "mode": "hold_friction2",
+      "start_frame": 93,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 5.15,
+      "target_height_at_end_m": -0.00010674401129877331,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.001150480573964708,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.515,
+      "object_in_tcp_start_mm": [
+        0.8304763000952977,
+        -0.002040417762401401,
+        6.355178793633637
+      ],
+      "object_in_tcp_end_mm": [
+        -11.745004164699465,
+        5.638573098081121,
+        58.35079440502
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "hold_impratio10",
+      "start_frame": 103,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04647583583918827,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.018847920491513,
+        9.972439688189343
+      ],
+      "minimum_height_after_start_m": 0.046487978479669456,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -9.116504193793254,
+        -8.17380758215929e-05,
+        -1.1018589785279242
+      ],
+      "object_in_tcp_end_mm": [
+        -9.960220795009228,
+        0.0008681180939034134,
+        1.2467668853079845
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "hold_noslip3",
+      "start_frame": 103,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04868831655326736,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.891423763698892,
+        9.987183856674728
+      ],
+      "minimum_height_after_start_m": 0.0486829725472504,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -9.116504193793254,
+        -8.17380758215929e-05,
+        -1.1018589785279242
+      ],
+      "object_in_tcp_end_mm": [
+        -9.417871100627611,
+        0.08858392511433882,
+        -0.8833614256197417
+      ]
+    },
+    {
+      "source": "policy42_101_green",
+      "mode": "hold_friction2",
+      "start_frame": 103,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 2.9,
+      "target_height_at_end_m": -0.0001067440112987525,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0006212975814112454,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.29,
+      "object_in_tcp_start_mm": [
+        -9.116504193793254,
+        -8.17380758215929e-05,
+        -1.1018589785279242
+      ],
+      "object_in_tcp_end_mm": [
+        -18.16742289074153,
+        -12.540890566244075,
+        49.20157308346803
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "hold_impratio10",
+      "start_frame": 193,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 1.35,
+      "target_height_at_end_m": -0.00010674401129877678,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.00034292380646963605,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.135,
+      "object_in_tcp_start_mm": [
+        -26.43078577819768,
+        -0.004569104029944178,
+        6.49737716235787
+      ],
+      "object_in_tcp_end_mm": [
+        -62.11082821503341,
+        2.751741317219013,
+        58.714909696755996
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "hold_noslip3",
+      "start_frame": 193,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": 1.15,
+      "target_height_at_end_m": -0.00010674401129878025,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.000544372485768118,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.115,
+      "object_in_tcp_start_mm": [
+        -26.43078577819768,
+        -0.004569104029944178,
+        6.49737716235787
+      ],
+      "object_in_tcp_end_mm": [
+        -72.63121091788474,
+        5.387868073610232,
+        58.5105146135887
+      ]
+    },
+    {
+      "source": "policy43_100_red",
+      "mode": "hold_friction2",
+      "start_frame": 193,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 0.25,
+      "target_height_at_end_m": -0.00010674401129879413,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0009060820931928205,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.025,
+      "object_in_tcp_start_mm": [
+        -26.43078577819768,
+        -0.004569104029944178,
+        6.49737716235787
+      ],
+      "object_in_tcp_end_mm": [
+        -51.90710100707504,
+        -3.1699884864245718,
+        58.74215859120139
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "hold_impratio10",
+      "start_frame": 95,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04728213433808921,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.008931422701583,
+        10.015636387983884
+      ],
+      "minimum_height_after_start_m": 0.04729098729884057,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.38632569498564384,
+        -0.001645416818712401,
+        -3.2747333387312527
+      ],
+      "object_in_tcp_end_mm": [
+        0.3978784564037796,
+        0.0007843093434427614,
+        -1.5135803045535958
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "hold_noslip3",
+      "start_frame": 95,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.049071399299842694,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.96747162440395,
+        9.972053854845472
+      ],
+      "minimum_height_after_start_m": 0.04907149093821461,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.38632569498564384,
+        -0.001645416818712401,
+        -3.2747333387312527
+      ],
+      "object_in_tcp_end_mm": [
+        0.33336577152593627,
+        0.008885073380521046,
+        -3.2570848748630277
+      ]
+    },
+    {
+      "source": "policy43_100_green",
+      "mode": "hold_friction2",
+      "start_frame": 95,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.01677997429534976,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        9.980921261482356,
+        10.020339849671503
+      ],
+      "minimum_height_after_start_m": 0.016867989114208184,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        0.38632569498564384,
+        -0.001645416818712401,
+        -3.2747333387312527
+      ],
+      "object_in_tcp_end_mm": [
+        -5.033288905263385,
+        0.0021170604751186233,
+        28.934463655492628
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "hold_impratio10",
+      "start_frame": 129,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.047937481921684816,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.007330859429425,
+        9.992669106175502
+      ],
+      "minimum_height_after_start_m": 0.04796322788961885,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        22.834356708040595,
+        0.008124459704706821,
+        2.034507924591623
+      ],
+      "object_in_tcp_end_mm": [
+        22.75519978412349,
+        -0.0016194673446030504,
+        7.107000740669189
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "hold_noslip3",
+      "start_frame": 129,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.053080556001112084,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        10.008681482952973,
+        9.992907450576212
+      ],
+      "minimum_height_after_start_m": 0.05308078562701382,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        22.834356708040595,
+        0.008124459704706821,
+        2.034507924591623
+      ],
+      "object_in_tcp_end_mm": [
+        22.839128314755584,
+        -0.2770105972459529,
+        2.0588954041398146
+      ]
+    },
+    {
+      "source": "policy43_101_red",
+      "mode": "hold_friction2",
+      "start_frame": 129,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 1.05,
+      "target_height_at_end_m": -0.00010674401129876984,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0005990839647042924,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.105,
+      "object_in_tcp_start_mm": [
+        22.834356708040595,
+        0.008124459704706821,
+        2.034507924591623
+      ],
+      "object_in_tcp_end_mm": [
+        40.912797625179614,
+        -6.39425918472853,
+        57.13236647269041
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "hold_impratio10",
+      "start_frame": 122,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 10.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.04801224840537159,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.994342095876531,
+        10.005683360924255
+      ],
+      "minimum_height_after_start_m": 0.04802118916348856,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -12.451527438765467,
+        -0.012087423077647232,
+        -2.449584068567685
+      ],
+      "object_in_tcp_end_mm": [
+        -12.885726427261737,
+        0.0017738471634484315,
+        -0.18359307422849827
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "hold_noslip3",
+      "start_frame": 122,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 3,
+      "first_sustained_contact_loss_seconds": null,
+      "target_height_at_end_m": 0.05025149150866859,
+      "held_5cm_at_end": true,
+      "retained_bilateral_above_table": true,
+      "final_normal_force_N": [
+        9.991238130552562,
+        10.013181829790772
+      ],
+      "minimum_height_after_start_m": 0.05025161633544095,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 1.0,
+      "object_in_tcp_start_mm": [
+        -12.451527438765467,
+        -0.012087423077647232,
+        -2.449584068567685
+      ],
+      "object_in_tcp_end_mm": [
+        -12.429160642349622,
+        0.4115950410324825,
+        -2.426774673295288
+      ]
+    },
+    {
+      "source": "policy43_101_blue",
+      "mode": "hold_friction2",
+      "start_frame": 122,
+      "diagnostic_intervention": true,
+      "autonomous_success_eligible": false,
+      "hold_frames": 200,
+      "object_recenter_local_x_mm": 0.0,
+      "impratio": 1.0,
+      "noslip_iterations": 0,
+      "first_sustained_contact_loss_seconds": 2.85,
+      "target_height_at_end_m": -0.00010674401129875943,
+      "held_5cm_at_end": false,
+      "retained_bilateral_above_table": false,
+      "final_normal_force_N": [
+        0.0,
+        0.0
+      ],
+      "minimum_height_after_start_m": -0.0007826153591998092,
+      "full_task_conditions_observed": false,
+      "bilateral_contact_fraction": 0.285,
+      "object_in_tcp_start_mm": [
+        -12.451527438765467,
+        -0.012087423077647232,
+        -2.449584068567685
+      ],
+      "object_in_tcp_end_mm": [
+        -17.78029921885191,
+        -12.697647029326507,
+        49.66819097769693
+      ]
+    }
+  ]
+}

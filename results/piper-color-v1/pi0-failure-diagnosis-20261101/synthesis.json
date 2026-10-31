@@ -1,0 +1,368 @@
+{
+  "updated_at_utc": "2026-10-31T16:40:12.089652+00:00",
+  "replay_teacher_successes": 6,
+  "policy_replays": 12,
+  "policy_max_state_difference": 0.0,
+  "prefix_failure_case_results": {
+    "85": {
+      "successes": 6,
+      "total": 8,
+      "intervention_not_autonomous": true
+    },
+    "115": {
+      "successes": 8,
+      "total": 8,
+      "intervention_not_autonomous": true
+    },
+    "60": {
+      "successes": 3,
+      "total": 8,
+      "intervention_not_autonomous": true
+    }
+  },
+  "contact_and_recovery": [
+    {
+      "name": "policy42_100_red",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.04411228179931648,
+      "clipping_frames": [
+        0,
+        10,
+        140,
+        180,
+        250,
+        275,
+        295,
+        300,
+        345,
+        346,
+        360,
+        370,
+        380
+      ],
+      "reference_offset_mm": 14.170948022957335,
+      "drop_frame": 209,
+      "first_sustained_bilateral_loss": 208,
+      "local_x_at_lift_mm": -14.18647053734406,
+      "local_x_before_contact_loss_mm": -16.149466128127514,
+      "normal_force_before_loss_N": [
+        5.152264028040878,
+        4.882713795769636
+      ],
+      "tangential_force_before_loss_N": [
+        5.152253237688899,
+        0.32647370891212385
+      ],
+      "open_commands_before_drop": 0,
+      "post_drop_available_seconds": 10.55,
+      "max_relift_after_drop_cm": 0.27563614471449105,
+      "open_low_reapproach_frames": 0
+    },
+    {
+      "name": "policy42_100_green",
+      "original_success": true,
+      "max_joint_clipping_rad": 0.05485011816024776,
+      "clipping_frames": [
+        0,
+        1,
+        15,
+        90,
+        91,
+        92,
+        105,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "reference_offset_mm": 3.479223708919542,
+      "drop_frame": null
+    },
+    {
+      "name": "policy42_100_blue",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.022615017294883744,
+      "clipping_frames": [
+        65,
+        85,
+        105,
+        195,
+        200,
+        201
+      ],
+      "reference_offset_mm": 28.080313427057128,
+      "drop_frame": 131,
+      "first_sustained_bilateral_loss": 129,
+      "local_x_at_lift_mm": -28.070670617040886,
+      "local_x_before_contact_loss_mm": -28.706929273653444,
+      "normal_force_before_loss_N": [
+        10.04163588754001,
+        9.951129880296284
+      ],
+      "tangential_force_before_loss_N": [
+        2.6470516984122123,
+        3.148307483504988
+      ],
+      "open_commands_before_drop": 0,
+      "post_drop_available_seconds": 14.45,
+      "max_relift_after_drop_cm": -0.010674401129878025,
+      "open_low_reapproach_frames": 0
+    },
+    {
+      "name": "policy42_101_red",
+      "original_success": true,
+      "max_joint_clipping_rad": 0.051069395542144735,
+      "clipping_frames": [
+        40,
+        75,
+        76,
+        77,
+        175
+      ],
+      "reference_offset_mm": 1.0180356619765158,
+      "drop_frame": null
+    },
+    {
+      "name": "policy42_101_green",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.021482663154602122,
+      "clipping_frames": [
+        105,
+        145,
+        220,
+        260,
+        400,
+        415
+      ],
+      "reference_offset_mm": 9.116204666482197,
+      "drop_frame": 229,
+      "first_sustained_bilateral_loss": 227,
+      "local_x_at_lift_mm": -9.112343600022434,
+      "local_x_before_contact_loss_mm": -11.71256811684142,
+      "normal_force_before_loss_N": [
+        9.913058072120021,
+        9.989650379538755
+      ],
+      "tangential_force_before_loss_N": [
+        2.5180689956632807,
+        3.246231747178053
+      ],
+      "open_commands_before_drop": 0,
+      "post_drop_available_seconds": 9.55,
+      "max_relift_after_drop_cm": 0.15398192564614993,
+      "open_low_reapproach_frames": 0
+    },
+    {
+      "name": "policy42_101_blue",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.0625683137178421,
+      "clipping_frames": [
+        0,
+        10,
+        11,
+        90,
+        165,
+        295,
+        360,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419
+      ],
+      "reference_offset_mm": 29.798630551114282,
+      "drop_frame": null
+    },
+    {
+      "name": "policy43_100_red",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.03282471179962165,
+      "clipping_frames": [
+        0,
+        15,
+        25,
+        26,
+        55,
+        130,
+        170,
+        205,
+        210,
+        215,
+        225,
+        230,
+        255
+      ],
+      "reference_offset_mm": 26.430441527398276,
+      "drop_frame": 203,
+      "first_sustained_bilateral_loss": 201,
+      "local_x_at_lift_mm": -26.43100265529529,
+      "local_x_before_contact_loss_mm": -26.26009017993256,
+      "normal_force_before_loss_N": [
+        10.025838980194907,
+        9.962569115926296
+      ],
+      "tangential_force_before_loss_N": [
+        3.167139959603076,
+        3.6081973400738128
+      ],
+      "open_commands_before_drop": 0,
+      "post_drop_available_seconds": 10.85,
+      "max_relift_after_drop_cm": 0.536095107884892,
+      "open_low_reapproach_frames": 0
+    },
+    {
+      "name": "policy43_100_green",
+      "original_success": true,
+      "max_joint_clipping_rad": 0.10253889083862289,
+      "clipping_frames": [
+        0,
+        5,
+        25,
+        120,
+        125,
+        126,
+        127,
+        128,
+        129,
+        132,
+        133
+      ],
+      "reference_offset_mm": 0.4249505357944442,
+      "drop_frame": null
+    },
+    {
+      "name": "policy43_100_blue",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.007468240261077841,
+      "clipping_frames": [
+        50
+      ],
+      "reference_offset_mm": 17.21424699292855,
+      "drop_frame": null
+    },
+    {
+      "name": "policy43_101_red",
+      "original_success": true,
+      "max_joint_clipping_rad": 0.014694677591323868,
+      "clipping_frames": [
+        145,
+        150
+      ],
+      "reference_offset_mm": 22.905702606128468,
+      "drop_frame": null
+    },
+    {
+      "name": "policy43_101_green",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.03789560675621029,
+      "clipping_frames": [
+        0,
+        10,
+        20,
+        25,
+        90,
+        95,
+        96,
+        100,
+        125,
+        135
+      ],
+      "reference_offset_mm": 34.15027874250901,
+      "drop_frame": null
+    },
+    {
+      "name": "policy43_101_blue",
+      "original_success": false,
+      "max_joint_clipping_rad": 0.03326632261276241,
+      "clipping_frames": [
+        0,
+        15,
+        16,
+        110,
+        111,
+        380,
+        410
+      ],
+      "reference_offset_mm": 12.407058473695185,
+      "drop_frame": 226,
+      "first_sustained_bilateral_loss": 224,
+      "local_x_at_lift_mm": -12.449244509445393,
+      "local_x_before_contact_loss_mm": -14.28700053967753,
+      "normal_force_before_loss_N": [
+        9.915653386884978,
+        9.96274326210297
+      ],
+      "tangential_force_before_loss_N": [
+        2.4859421679855105,
+        2.825461925550317
+      ],
+      "open_commands_before_drop": 0,
+      "post_drop_available_seconds": 9.7,
+      "max_relift_after_drop_cm": 0.5732054586574699,
+      "open_low_reapproach_frames": 0
+    }
+  ],
+  "training_data_coverage": {
+    "episodes": 120,
+    "layouts": 40,
+    "starts": 32160,
+    "stage_frame_counts": {
+      "approach": 3600,
+      "descend": 3840,
+      "grasp": 2400,
+      "lift": 3600,
+      "transfer": 4800,
+      "lower": 3120,
+      "release": 2400,
+      "retreat": 3600,
+      "settle": 4800
+    },
+    "stage_sequences": [
+      [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat",
+        "settle"
+      ]
+    ],
+    "authored_recovery_branch": false,
+    "source_basis": "sim.teacher uses a fixed nine-stage plan and no drop/regrasp condition; these are all successful scripted demonstrations"
+  }
+}

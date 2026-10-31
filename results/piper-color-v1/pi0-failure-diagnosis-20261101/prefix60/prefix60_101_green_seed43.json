@@ -1,0 +1,78 @@
+{
+  "name": "prefix60_101_green_seed43",
+  "prefix": 60,
+  "layout": 101,
+  "target": "green",
+  "base_seed": 43,
+  "episode_seed": 347,
+  "teacher_prefix": true,
+  "policy_success_rate_eligible": false,
+  "rng_advance_calls": 12,
+  "error": null,
+  "handoff_state_max_difference": 1.1920928955078125e-07,
+  "handoff_xy_offset_mm": 2.285042356578784,
+  "handoff_normal_force_N": [
+    0.0,
+    0.0
+  ],
+  "success": true,
+  "max_lift_cm": 13.838116739898787,
+  "first_lifted_frame": 46,
+  "first_bilateral_lift_frame": 46,
+  "over_box_frames": 174,
+  "drop_frame": null,
+  "bilateral_contact_frames": 106,
+  "approach_reference_frame": 46,
+  "approach_xy_offset_mm": 3.0511257074243465,
+  "approach_object_in_tcp_mm": [
+    -2.9840983746909138,
+    -0.001959250657516166,
+    7.355532959901756
+  ],
+  "approach_orientation_error_deg": 1.3332962686387806,
+  "normal_force_at_reference_N": [
+    9.972919536879997,
+    10.003527562538633
+  ],
+  "gripper_width_at_reference_m": 0.031654756516218185,
+  "raw_to_executed_joint_mae_rad": 0.0,
+  "command_tracking_joint_mae_rad": 0.01380647412845558,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 101,
+    "target": "green",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.13838116739898787,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.21075880028842647,
+        -0.02316368078015953,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.1208246832233889,
+        0.1535894042419975,
+        0.02539325598870121
+      ],
+      "blue": [
+        -0.22258108984087696,
+        -0.15393621106855343,
+        0.017393255988701235
+      ]
+    },
+    "steps": 334
+  }
+}

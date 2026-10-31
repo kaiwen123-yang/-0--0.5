@@ -171,11 +171,28 @@ def physics_probes(replay_dir, out, modes=("recorded_motion", "hold_pose_3s", "d
                 env.reset(source_row["layout"], source_row["target"])
                 for command in commands[:start]:
                     env.step(command)
-                if mode == "double_friction":
+                recenter_x_mm = 0.0
+                long_hold_modes = ("hold_pose_10s", "recenter_x_hold_10s", "hold_impratio10", "hold_noslip3", "hold_friction2")
+                if mode in long_hold_modes:
+                    # Both paired conditions recompute derived state at the same point.
+                    mujoco.mj_forward(env.model, env.data)
+                    if mode == "recenter_x_hold_10s":
+                        rotation = env.data.site_xmat[env.site].reshape(3, 3)
+                        offset = rotation.T @ (env.positions()[env.target] - env.data.site_xpos[env.site])
+                        address = env.model.jnt_qposadr[env.model.joint(f"free_{env.target}").id]
+                        env.data.qpos[address:address + 3] -= rotation[:, 0] * offset[0]
+                        recenter_x_mm = float(-offset[0] * 1000)
+                        mujoco.mj_forward(env.model, env.data)
+                if mode == "hold_impratio10":
+                    env.model.opt.impratio = 10
+                if mode == "hold_noslip3":
+                    env.model.opt.noslip_iterations = 3
+                if mode in ("double_friction", "hold_friction2"):
                     for name in (f"geom_{env.target}", "gripper_link1_collision", "gripper_link2_collision"):
                         env.model.geom_friction[env.model.geom(name).id, 0] *= 2
                 hold = np.r_[env.state()[:6], 0.0]
-                sequence = np.repeat(hold[None], 60, axis=0) if mode == "hold_pose_3s" else commands[start:]
+                hold_frames = 60 if mode == "hold_pose_3s" else 200 if mode in long_hold_modes else 0
+                sequence = np.repeat(hold[None], hold_frames, axis=0) if hold_frames else commands[start:]
                 samples = []
                 stable_count, stable = 0, False
                 for command in sequence:
@@ -185,8 +202,13 @@ def physics_probes(replay_dir, out, modes=("recorded_motion", "hold_pose_3s", "d
                     stable = stable or stable_count >= 40
                 trace = arrays(samples)
                 final = sample(env)
+                bilateral = (trace["normal_force"] > .05).all(axis=1)
+                lost = next((i for i in range(max(0, len(bilateral) - 2)) if not bilateral[i:i + 3].any()), None)
                 row = {"source": source_row["name"], "mode": mode, "start_frame": start,
                        "diagnostic_intervention": mode != "recorded_motion", "autonomous_success_eligible": False,
+                       "hold_frames": hold_frames, "object_recenter_local_x_mm": recenter_x_mm,
+                       "impratio": float(env.model.opt.impratio), "noslip_iterations": int(env.model.opt.noslip_iterations),
+                       "first_sustained_contact_loss_seconds": lost / 20 if lost is not None else None,
                        "target_height_at_end_m": float(env.positions()[env.target][2] - HALF),
                        "held_5cm_at_end": bool(env.positions()[env.target][2] - HALF > .05),
                        "retained_bilateral_above_table": bool(env.positions()[env.target][2] - HALF > .02 and (final["normal_force"] > .05).all()),
@@ -209,7 +231,7 @@ if __name__ == "__main__":
     p.add_argument("stage", choices=["replay", "physics"])
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--replay", type=Path)
-    p.add_argument("--physics-modes", nargs="+", choices=["recorded_motion", "hold_pose_3s", "double_friction"],
+    p.add_argument("--physics-modes", nargs="+", choices=["recorded_motion", "hold_pose_3s", "double_friction", "hold_pose_10s", "recenter_x_hold_10s", "hold_impratio10", "hold_noslip3", "hold_friction2"],
                    default=["recorded_motion", "hold_pose_3s", "double_friction"])
     a = p.parse_args()
     if a.stage == "replay":
