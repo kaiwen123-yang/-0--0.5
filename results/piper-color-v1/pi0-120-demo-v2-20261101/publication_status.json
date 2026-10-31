@@ -1,6 +1,6 @@
 {
-  "stage": "update_2010_validation_seed43",
-  "snapshot_at_utc": "2026-10-31T18:28:22.637204+00:00",
+  "stage": "train-update-2500",
+  "snapshot_at_utc": "2026-10-31T18:32:52.140664+00:00",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
   "branch": "codex/pi0-120-demo-v2-20261101",
   "tracked_files": [
@@ -107,6 +107,7 @@
     "logs/serve_update_2010.log",
     "logs/supervisor.log",
     "logs/train_to_2010.log",
+    "logs/train_to_4020.log",
     "logs/update_2010_train_seed42.log",
     "logs/update_2010_train_seed43.log",
     "logs/update_2010_validation_seed42.log",
@@ -119,6 +120,7 @@
     "publication_receipts.jsonl",
     "resources.jsonl",
     "resume_verification_0.json",
+    "resume_verification_2010.json",
     "run.json",
     "scene/scene.xml",
     "scene/version.json",
@@ -129,13 +131,13 @@
   ],
   "local_checkpoints": [
     {
-      "updates": 2000,
-      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/2000",
-      "file_count": 45,
-      "bytes": 9822683240,
+      "updates": 2010,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/2010",
+      "file_count": 41,
+      "bytes": 9820374947,
       "resume": {
-        "completed_updates": 2000,
-        "sample_offset": 8000,
+        "completed_updates": 2010,
+        "sample_offset": 8040,
         "sample_order_sha256": "326200084605413e084f31b8379b411c5be3b847795a1b420b4240263a021d10",
         "config_sha256": "a26a2698af326ac021edd7ecc867a7b7c0e9a0577a0765abac6ce538e66cf9ea",
         "train_rng_key_data": [
@@ -149,13 +151,13 @@
       "uploaded": false
     },
     {
-      "updates": 2010,
-      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/2010",
-      "file_count": 41,
-      "bytes": 9820374947,
+      "updates": 2500,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/2500",
+      "file_count": 49,
+      "bytes": 9816758448,
       "resume": {
-        "completed_updates": 2010,
-        "sample_offset": 8040,
+        "completed_updates": 2500,
+        "sample_offset": 10000,
         "sample_order_sha256": "326200084605413e084f31b8379b411c5be3b847795a1b420b4240263a021d10",
         "config_sha256": "a26a2698af326ac021edd7ecc867a7b7c0e9a0577a0765abac6ce538e66cf9ea",
         "train_rng_key_data": [
