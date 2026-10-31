@@ -1,0 +1,1705 @@
+{
+  "model_family": "pi0",
+  "normalization": "mean_std",
+  "state_input": "continuous",
+  "split": "train",
+  "frames": 32160,
+  "episodes": 120,
+  "horizon": 10,
+  "action_delta_mask": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "heldout_used": false,
+  "norm_stats_sha256": "20dffc782a9e94a016d55e5039d7d6c4d09b606c032c43feb12c6812c8df5752",
+  "sample_order_sha256": "326200084605413e084f31b8379b411c5be3b847795a1b420b4240263a021d10",
+  "sampling": "three complete permutations; numpy PCG64 seeds 42,43,44; fixed saved order",
+  "source_manifest_sha256": "c179a6ed234f5dae6f467cf701490f74d1c737891af6ee1811dec87b357c62e9",
+  "selected_episodes": [
+    {
+      "directory": "train/layout_00100_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 100,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "07365bfe2ae912c3f15292ebcf0fb6d3dc47bd05f934f3b5ea600529beda1408",
+        "action": "aaec4f603dbd0662e8ea8fec7deacb2864f3782b92426598b553f6dec35be195",
+        "external_rgb": "1b22a25733d99613a9c7f674bf2c57383f9ff2ea896aafdc31b2e31992875306",
+        "wrist_rgb": "33186e469911cf6fdd585f5cc0216f6946f6566d2b0f11b1c77ad8a8d54e839d"
+      }
+    },
+    {
+      "directory": "train/layout_00100_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 100,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "35bd6d0e266645c2b68c6837c4acaf82630e37c02baf8359367b8e018eeae6e8",
+        "action": "25c301988c38a35d6c0c0e524cd4817945b353555bbc15f2c540be38cd02e681",
+        "external_rgb": "468385bf80044bf22685163c66ad8eaf230743883ccf7a05a097368abbf6e591",
+        "wrist_rgb": "30d1949a028230912880ffa8d1fc573ccd35e7f2992c160307d873e9a3de7649"
+      }
+    },
+    {
+      "directory": "train/layout_00100_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 100,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "b06654feee1273bcd8ca7ce7c5fcf323bb9b796eca5f7c6a357079179fa511ed",
+        "action": "56a734351ecbec96677335a557aff7ef9f28b39979cdff237897b8ae6fed1ef7",
+        "external_rgb": "ae89b51cf14ad8eeaff310cbe3777e8a877458bf7562ccf23f68c4162ba01187",
+        "wrist_rgb": "e0b4cf38f4808e4dc3847fce0d2d2fbb6702d04a9d2656a8cd85aacc72e09602"
+      }
+    },
+    {
+      "directory": "train/layout_00101_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 101,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "4d4ae7b0a8a37e7ff44d3ca2bf157cf2d72b6f25adca7df1fbcc0cbff156615b",
+        "action": "2933fbdf3dfabd29479ce0284a4cdf4423454de0de6d178277bbd037995484ab",
+        "external_rgb": "7e40bcf3ff88ee9a7ca2f201922c17192563f0f0dee4b0ee026ca34c3e0dfc4d",
+        "wrist_rgb": "2680d88dd518d6855e11e5b423bfe3af76d6187c5fbdea4d87166bb28fc33330"
+      }
+    },
+    {
+      "directory": "train/layout_00101_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 101,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "225b0efe6d784573e5641ab0a3914adc4b31ca593a19cfca7542ad8b66254525",
+        "action": "2d5b3e1e2c2c7759e4b71b8cbb95ec1fab251a0736b46c9e4922069cf608bfea",
+        "external_rgb": "517824b60330bd25c3bd0164ed4bc6e6ecc7b06741d676d57f25c253a094c775",
+        "wrist_rgb": "ee42cfe3ed5004d59cdd045dc618c61f710e0a148962fc2719a7d0436827cc4e"
+      }
+    },
+    {
+      "directory": "train/layout_00101_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 101,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "e99247cac677236eda9945793d3d29b91838aacd0603485db2404bd9ae7c10df",
+        "action": "4bd57ba6730c024b68403f45ff79084a32668a81b93e2e884dfc7b2a036f6940",
+        "external_rgb": "564edb89cf7bd8eafb3b30f8b234e9abb9cc603e1c5096e761484fe98a9a27aa",
+        "wrist_rgb": "9046e377f9d2a88bc62a3ff84bbb941977ae498270ce1837e41f081431963bd7"
+      }
+    },
+    {
+      "directory": "train/layout_00102_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 102,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "16bb23d34b9e3fd6816f848c6b3c3fbfd3244e43cfe769d9125127026cb282b2",
+        "action": "ef22c8ca396750cde3062e5cadec71fe285b9c000da8bf0b7774a5c771fb99ce",
+        "external_rgb": "2a490d1d3af6306582f6273e32ebb8ec0bd1d0ae61d28b6e06bc33ddcb14d35b",
+        "wrist_rgb": "3787aaac8d6b60fd7d6d827b80eb16416563bdd15654046828afe6589b6381ff"
+      }
+    },
+    {
+      "directory": "train/layout_00102_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 102,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "b5a6ce45b6a2f5dba358a7c4cbf9f5baf94f126bdf9ea02660c7c76d7a4f9419",
+        "action": "9ed582c6178300461b321fb497e8b27b7c3381a0e6245aaaa664075bde9fab26",
+        "external_rgb": "34e8a24b2e1c7012c8aecdd1af84ad68da6dfc9844bb2f10684cdec0cd63d8da",
+        "wrist_rgb": "211d9e091d960457924677d27d42c41ea93cefb79e44c1550c674714faf9245a"
+      }
+    },
+    {
+      "directory": "train/layout_00102_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 102,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "39495a839c14e5512014ac48f304c21eff63511d207a0fbef14c72b62cce021b",
+        "action": "4383348d97fcfcc18eb136ef0c800d5b6cba7757dd28e354c0b23e1d48e78420",
+        "external_rgb": "3489d56953111b731e372ce0c3a321cfb54389206c21b8a06a702908592c2fee",
+        "wrist_rgb": "d3761b96ab6f538da96ad60f4943109f870a26c330866658504a1f56003df4d8"
+      }
+    },
+    {
+      "directory": "train/layout_00103_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 103,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "4eebb772412eede458cfcad39f6d2b89533e5f2e7f864780da7f7f8b6fe44d95",
+        "action": "183c4dbe6c8205fdc5770dd2438b52e6c4e0456a068509684c0a22599dabda70",
+        "external_rgb": "af80187a937f0fc3dc1a0efc8c36ce9076acbf886f565a04571fb2e22c557f2e",
+        "wrist_rgb": "ae73dc34ffd38a61c98b2cb8dc8d42c798c706cd96ac0231c9253fb8f5524e15"
+      }
+    },
+    {
+      "directory": "train/layout_00103_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 103,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "462069f056605e32f61c909e67f485a9a60e36c5f90fd9629b5ff939a08c34f6",
+        "action": "d27a398a4a50f751cf4fa0a82360a3875ca03347f587412bddf485ef9abd0977",
+        "external_rgb": "3144f75735c778885ef6bbc00f5fc6adfbe899a304c6b247f8b384e088f8c5be",
+        "wrist_rgb": "2d9e680110ba5f9ae99a07a04ede7ccb5c8220a677fe50db13127af2ce008b63"
+      }
+    },
+    {
+      "directory": "train/layout_00103_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 103,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "2d0f6821510df8c8b8ffc40ead540c3e3705e152f6a8a70fd58721b99ff49461",
+        "action": "8017e5243432c16f82dac482457432142e1b0ce6baf6276b50710afcf3373e86",
+        "external_rgb": "bfaa19c70cf685e7aadc330eb0f3b4c4d3d8ca97bbde92dc675a38308cf83140",
+        "wrist_rgb": "23771147f34c785711a7dbfb563e1591a71792ad252242a245b6d01ac4060ae8"
+      }
+    },
+    {
+      "directory": "train/layout_00104_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 104,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "29f1c8f6c2cfb2b0f71967c117c434c67b1393dcebcd3d03ac2d6a081e2efbdb",
+        "action": "2076b2ddcd83e4bf3103127c4b5e955eab7abff54dd8a920e0994031e9776598",
+        "external_rgb": "a2a9d4e23d2aa6ae91fa8c679695bbe6bbd97d8cc7c61363e5970808b48e528f",
+        "wrist_rgb": "14fd6b5048248aace54aefeace3f1665d2e42f9ac9b489a8ff09473416d7da87"
+      }
+    },
+    {
+      "directory": "train/layout_00104_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 104,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "48c6047871abee74e1759a5bbc7d88d23aa2c983956aefc3bbb42925ea6a84a4",
+        "action": "98c5b76e5c81ea2297cb5a0c2dc9ab2f1c6ac2c6ab4017b4c31254833522abb3",
+        "external_rgb": "3cc1d1cb0a9f28f1e8d551fedf3d44f6b69960711d930d8b4c54f6c5ed955013",
+        "wrist_rgb": "6b24c7710451e10609a507a49c4b0757a90655f05f26c52f9bb920f02a41fd13"
+      }
+    },
+    {
+      "directory": "train/layout_00104_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 104,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "0da29c679d9ed65bb5580dcb15ed74d6052840ee72879eb66530eaf6b99ae766",
+        "action": "4c7088f3e6ac1e66b7d987edbe5678b176c9f006ab809a96135dd32f6f8377fc",
+        "external_rgb": "792c1ff821cb632c92b7a33f41b3e20c2d2b45bf53e6c793786a41eae8ff5ff9",
+        "wrist_rgb": "7fc5e3086ee47dec4fcc22cbdcc547333ebea2876b3ca5e5e820eef00cff3bba"
+      }
+    },
+    {
+      "directory": "train/layout_00105_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 105,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "b526e372656b0057c56766d2c218a79456768dc416856946edd9ca6b504d6dbc",
+        "action": "9c4fda7cf518efe4bfa0a4e31c6e6028c8f8c57572ddce035071c3394d8392f3",
+        "external_rgb": "a74ab4d833459e35ea6b23d48215fcc482de0c8329ef7395ef207db54cb7faca",
+        "wrist_rgb": "bd7d02a4547bb8f6ed8da73f73bb8b0ee70cd6980b76485ccab725eb8b945d32"
+      }
+    },
+    {
+      "directory": "train/layout_00105_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 105,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "bd899e8ee6f04ebfc0edb1b73550e6bb019a2d9a2166c9fcd3daf2b74addde4f",
+        "action": "dedb48910dae8e14f18185dda422a90cedd8e0761d66518c5af25d2d1bea8317",
+        "external_rgb": "e3cc62058db18983f85c0387cd2c71fb2cde7d22938984c3e09e9a61d56fd6c8",
+        "wrist_rgb": "f7c6a8d1d7ed28b95a9f938666856ffd8efc017449c28b22e590809b75b7b4a5"
+      }
+    },
+    {
+      "directory": "train/layout_00105_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 105,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "ba72fc8155a99c245283c5077dca1a014e5bc86c7ada4b0de9720ecd4ecfca73",
+        "action": "916abfff4d5ba35cb74e77606b2d25c096c101de45b6b29f49550b898e5e183e",
+        "external_rgb": "03e93e222d4f63af392b8d5dcbf0427aaff1a1b66b653a6c280f05a5948533af",
+        "wrist_rgb": "03fb537b9b5875c61ddaf75c973ca5f39f09162d72a9a7579694da20f6ac98a5"
+      }
+    },
+    {
+      "directory": "train/layout_00106_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 106,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "7a93e0f50f176fdfe9a9dbe70ac6a8aee5a365f613df4bd870008091bbf75b34",
+        "action": "ce721004478ef5dcbf216af3d9e2f77ce4a950f29f213f51103dd410fcef8b02",
+        "external_rgb": "3451ccab97a68362d144cd23e175cde087f570b1c32cbbd67a76d595752ae41c",
+        "wrist_rgb": "368add4c032a93ab0fb2bfaa9594e776d48d6743d0ba2da0328ba612441f9131"
+      }
+    },
+    {
+      "directory": "train/layout_00106_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 106,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "7257a5e48f17bcaa73bfcd3bc1fe5db7d961c8adddc5d1179112d860b625508e",
+        "action": "be4bde9e93b2505769bd0cfd84c2bb769451fdb51ee553ed2c3c4d3ba4013a7e",
+        "external_rgb": "eae564d682736a9b25b103e0db12039b88fad91b4ffaf5de7cdf31ebf48b12c0",
+        "wrist_rgb": "70f9afedc09d5eac459ab9abfcae0c10e893489315990a23c9c678d9c824df3c"
+      }
+    },
+    {
+      "directory": "train/layout_00106_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 106,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "1cd78e3066e9104693329a1d7704649b28fb0f99b906f8d7ec8dbbfad8d93096",
+        "action": "1ecfd2f89edf0c1c4fc64255b6d4c479ca0bd43c9db2e2191402ee25d62aae80",
+        "external_rgb": "edb4f267112c0bf9cde66c5805d91f11df5edd2f2fee1cdda795d343c53ac8f7",
+        "wrist_rgb": "89a9a16b52ac7bc55011bd685116a93843409dd2530316a67de62a0bd5a46d7e"
+      }
+    },
+    {
+      "directory": "train/layout_00107_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 107,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "98b5ba1b5ea8c9ce812ab910771b69bd9c3bee696479a0d29421f8ca030a48a3",
+        "action": "ee815dac23ed66cfc75e629aea564eb52fc70f2d7c19cf8b0a2500837a9d3fb0",
+        "external_rgb": "40a5c86bfeac0f624ea85b221a5493608887212b6e24dc24aecda39822631d04",
+        "wrist_rgb": "a81f0f94301f4e6825b05afa28d40cff3be082fec49c1ed9b8523f103e876a7a"
+      }
+    },
+    {
+      "directory": "train/layout_00107_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 107,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "7ccda4fdb91e5b4f1880442f0df617ca98910e414a55fe9a4a7cb04f0f2804c2",
+        "action": "ecdd182c02a3bea96463cbc37408dc1887a2954b0ec2b6ed621a4f399d5581f9",
+        "external_rgb": "e65a5f81acf2d14c3ca6165bf36de7b6cef26806cfde9319a2a93f1aad509f4b",
+        "wrist_rgb": "82f20c0bb6abe85894c683d8af4c62ac4b98efbb4f152b5127b80fd843a76a7e"
+      }
+    },
+    {
+      "directory": "train/layout_00107_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 107,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "f44e726ffb724575db279f664d0790ee37da18e4ccde74f8a840ffe3f373ae16",
+        "action": "92ce98876557b24a71604a340d1d09cc51f7f5f0d1006e057e6f3de02837d7e6",
+        "external_rgb": "21bc3d713d02180091d0bb068492387c3ad0f25795402548ac4ebe9dfb8b4de4",
+        "wrist_rgb": "2ee72d5ecefd716acaa4f1701fcb681c2a358a2c8c86f4c1e48f1ffdd98dc937"
+      }
+    },
+    {
+      "directory": "train/layout_00108_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 108,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "a5d7cf08f3c0345934e4f4f0c15192e39418349e32a91b312b48e8b4e607c2a6",
+        "action": "adb3d2af961613a28fa06f0e6ddbb388c5099c81ce1f2277b0c90b98ba1c8b0c",
+        "external_rgb": "cb95d95b0d20e2efec28ab786736a1f5b758862fa288a373a5d9c938bcd76691",
+        "wrist_rgb": "beb61f1674af37645373e41a56ddbc515ed7adcdfca81ae51670edc5e45a2457"
+      }
+    },
+    {
+      "directory": "train/layout_00108_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 108,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "fc27e88b6d1c4de3332aaaf722e2c77d8ce90ff681406e3a4d881b3eea23c36f",
+        "action": "2726d6a6fde68306f0938241835c5f40d12f7a75f770ae6a6359536b10f1f0ac",
+        "external_rgb": "7d7bcee6735e81752c1afcf4a1081dbb4c50eb4dff8d42e06d0c64b44358da23",
+        "wrist_rgb": "47f06c492c560d526fc4cf0d43e43c4f0d35b7c25d297d1de79a97a2f1637166"
+      }
+    },
+    {
+      "directory": "train/layout_00108_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 108,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "3df4a91ce777050da36f2a8021bf11e49efbadcf3aa7adefbf19fcc52a784cf0",
+        "action": "725824c2ae67fecf5ba195c423ead330b09bedf2fde07369cfc0b303d03bf3aa",
+        "external_rgb": "b181b92f4a05ed31cc40e46492115371ca626c5502247640a40f65e7a8570319",
+        "wrist_rgb": "9dd1e48b5c8998833a8926e90e673ba4866dab2a535077a557df071e58e88220"
+      }
+    },
+    {
+      "directory": "train/layout_00109_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 109,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "c592c84b9c727362f0e90851af927fb1696bd3c56c1a92056eeff27c771cf8cc",
+        "action": "201d7bec6abb890823f9efff3e679b2dfeb4207d55d3f7e4777b0432f1981608",
+        "external_rgb": "523da9a11d1aa54425403d82c519a7ba0abe0968e5ee9b957862487e1b1b1a6a",
+        "wrist_rgb": "f345ba78e68deb882bac7270016369026f140aa779cf695b81adad9c0e778709"
+      }
+    },
+    {
+      "directory": "train/layout_00109_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 109,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "7dd59148ac58ddd665b5ee937c0ce1e90fd3a3c4dd6e371b8f61d78a88bc0b2b",
+        "action": "75ece301a21e404754f597896d0f3047cefd1d1f14b4942a28b808a724aa791f",
+        "external_rgb": "e77c27c71238fbb46979f96f754c7a7be14085083720e192510fcb57848a098d",
+        "wrist_rgb": "2c847232230a879edef12e4c4f05f979ef1e8e2a5eca26dd62e588fa96f345c2"
+      }
+    },
+    {
+      "directory": "train/layout_00109_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 109,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "a73d121678d86bc3cb8897ff3171a395d108148dc32074dc583b80657fdffafe",
+        "action": "aba85fee0bbe4cd164f96bdaaee31eedad3a77220492481cd6a4e49b766badfa",
+        "external_rgb": "ddfb3ca28585cf7fbd74f29185e548c557eec1b434101de88f287eab9f5c4dad",
+        "wrist_rgb": "7bb64e60128d91de5533553fda5d416e77afb9edd996b0d522bd6a894134c894"
+      }
+    },
+    {
+      "directory": "train/layout_00110_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 110,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "927712f102c183598138c14450a62a510f0f8e9ae623126caed40a7340b036d2",
+        "action": "e3397d75b59d94335eee7c69fe325cf3ccaf6c01a81c27cbd312b03a4443e3ea",
+        "external_rgb": "58b1c1e62095f799bffb70f3e61336b7f724c50c5d7b2feae4bba7af4f353130",
+        "wrist_rgb": "c051f03b19c09eb2a2867d862472b2a20903362be6117fe23e70805cf1f9c005"
+      }
+    },
+    {
+      "directory": "train/layout_00110_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 110,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "c8f50692f825df023339950a6e6ce530939cb36c53e1ec1b2318bda15b969bf3",
+        "action": "045d23491564aac441db3337e7854bdb3a0bab6ba8f247a943ca88d08b374ecb",
+        "external_rgb": "28a5a11e69585c421f95766cb5e4d1c3103d45069fc606eef1fc5d6533630f75",
+        "wrist_rgb": "ccdf9d86d12f69fbf47da25c8c11992fb9fbe68034c58b46d89f16994c434a6b"
+      }
+    },
+    {
+      "directory": "train/layout_00110_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 110,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "a211fb80e52734a3d2f7dbb67b4e75e18f1c5fa49708abcec8c633a2d12a6d2e",
+        "action": "c44b8c80d43db2ec4bf364f803c737968690c42b6e468e6b634d3f19231ab1a1",
+        "external_rgb": "14fafea61807b1bfcfa8c0228e56b55062e6f212580e7af167818cc988b00bf3",
+        "wrist_rgb": "a94adc3d8232bfcef1530c694ac03f855dcc0b50522917d1a85eb997b3693a32"
+      }
+    },
+    {
+      "directory": "train/layout_00111_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 111,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "a90ce51df2e404403c1f3cbd2bf74d840cf1e8991d6a2ebe64835b4a8e26415b",
+        "action": "ff9f353aa9dbeeec1adaaa7f38c5815289e4ffa2024819ba2009ad9b40d876ee",
+        "external_rgb": "15f3e70291bf3a25f405475798ef5961c86c2dbce15c1b6c9b1b5a8443e68756",
+        "wrist_rgb": "5bfcb381a45b9ec285e7c43e1ade5b6e089a4a930cbf3a40549d3a0f0181bbf9"
+      }
+    },
+    {
+      "directory": "train/layout_00111_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 111,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "8684bfd5484a19ca9771428bb11d150575ff65883ac592d762d07f3855e8ecf7",
+        "action": "523b338e798a9865942a5902eee61ca396af96a0b18b669b11a1f6114b7b0e06",
+        "external_rgb": "b788a3334ece864acaa5649977abde395f50df2b9facd992cdcab2d48f165f09",
+        "wrist_rgb": "e73be9f307132cc5f28d0dfa3fde128df9d13841fb7dcb7532fad8f03aa31ba2"
+      }
+    },
+    {
+      "directory": "train/layout_00111_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 111,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "c81586f7c99d6a4fb5ef4d0f56e945f3221f999a337928051188a9528d825367",
+        "action": "f84e5096ff4d81a0c3bc7a93df1a085fdb5cac4fee100c0a6ef6c8f0da7bf47a",
+        "external_rgb": "84cfe44bb5e787a602a8996f9895466348f1a1220626657de8e2dadef870e9b2",
+        "wrist_rgb": "544aef9c869c8f5de2e213e6feb1019981432c680390237c4190d2749bfb1d94"
+      }
+    },
+    {
+      "directory": "train/layout_00112_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 112,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "698686d31e83279473e52d141a85a16968ccc2d1d7c6e6c9bb43c015828a6a18",
+        "action": "766d038833a6bc11b582791c0f848519ed4ab6d39666664814821f0ac4b1d18a",
+        "external_rgb": "3befe9806d3208554e6ebc369ab2ff9202001ea191de6ad24ca65d759b8eb15e",
+        "wrist_rgb": "cb4779234231a944628e488f4de805daf5728adf4e26ae433188e00a933c3c29"
+      }
+    },
+    {
+      "directory": "train/layout_00112_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 112,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "bed25a1f6e3337eecf94f16b810b9c3d649ddaca22b39a97a55ff94831988f7c",
+        "action": "d45a125f0ab14d9efe95e50a911f68fbe47d2fc254fe18cbd56dae6ef67ca20f",
+        "external_rgb": "dadae3ec8f99b7f86a45d74e637255c81684b1170628bc69446b95b9a325e721",
+        "wrist_rgb": "a1ce74a4ebbd02ac44b89fcbb1567408c8f45de26277e497a2ce3d05583f7265"
+      }
+    },
+    {
+      "directory": "train/layout_00112_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 112,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "d53dbba8e67e929e610d154d0d35b7052a810a5885ea8ccbc751fcda6baff34f",
+        "action": "69105b128c7c52d350d23514ee5fa3bc2e564853bb48c1957b6798b9695274c7",
+        "external_rgb": "03c7cc51b8e790410ccae9578a17db5110ce1f4b1245d99c08fe7db30fa6dccc",
+        "wrist_rgb": "ffe996110b09d5bd3cc51433dac4c4b1dabe43707ddcfffe274bc61b441ba6d0"
+      }
+    },
+    {
+      "directory": "train/layout_00113_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 113,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "6ec4bca0cae4b0301de71ea07a324f7bf44ae37a37344200689e79d995628864",
+        "action": "9eae322260d05573039113a152f25d8f50e53465050f0cb9a0a3dd0e01d15077",
+        "external_rgb": "ff95e2151ea25d0f3bfe8e82b47e750ddd9fb5b9c162e2207d906cb34d3e3e6b",
+        "wrist_rgb": "1aa650dd25e429e2e124364d78d568aca074a44108da24da235408b990588582"
+      }
+    },
+    {
+      "directory": "train/layout_00113_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 113,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "197c5aab812351872973fbd5bf26919bade23600a625584783387a2f596e5fa4",
+        "action": "4603e8a4b1cd872beeccb417ba2ea11e11cac7568c03d6a09304dec16642d856",
+        "external_rgb": "dded5ecb066854c0510498b62110ae53de42649d5fbea32578cebc32729ba4f1",
+        "wrist_rgb": "be4fabaabbb54d99b2eee2636b19edaa60441413a115294d3fae140ad5534f47"
+      }
+    },
+    {
+      "directory": "train/layout_00113_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 113,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "d8740235d5ec97cfc33ff7ee4766a7dd7664bbf45a0844aa9d8194fa25c028e7",
+        "action": "8ebba04dda7422ff693d0e47040553251e2e1b24e9504451eec4dc641ec7e034",
+        "external_rgb": "2171f28561ebfc5974ba49932b94813be737798aad9cd32179b05d01f2ce6a13",
+        "wrist_rgb": "27580b57ccf967e62ec2a088152891e882fca10a97ed321b5031e529df8714e0"
+      }
+    },
+    {
+      "directory": "train/layout_00114_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 114,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "3ff6604480b92c9f15fe7779cd29ab2f46bcef46c56595f745f14b20886e1c43",
+        "action": "9514cdbbcd1a58f54f84ecbefe2fdaf48a29fec5cfcc28cc44dff2b7e3f01344",
+        "external_rgb": "10b0fbfbfa29efe371c99a07ebb85b0cee91894f1e6116d8c1c5412480e6c7d9",
+        "wrist_rgb": "84f574ef0ae6c08dc32a08d9c8e48d21cc2ac271ff73d9e6c85661e023887318"
+      }
+    },
+    {
+      "directory": "train/layout_00114_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 114,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "47369c2aacd89d523766c076179bd5f749615d12ebb803b8ef8a44f0757657bd",
+        "action": "d1c1f83f08581ba9804e17a50f4dd4b4579deaf60313a82951950dc061018f57",
+        "external_rgb": "ccfd43a64e474a57091bdd7e83b8cc90ce17fd439a3b2849c32670e30b7403d1",
+        "wrist_rgb": "70fe257b6cda2a7d7be73f32fcedacf08b072f5573140fda00369df4b84c21cc"
+      }
+    },
+    {
+      "directory": "train/layout_00114_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 114,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "b27497df2e1168f3f234f47a63553bf7a304c08e690ee984e2c4353f23a8c75c",
+        "action": "1f248d3170cb60132d13ddea169abcbc0d14dd4afe7b251772cf15c1fa0a6733",
+        "external_rgb": "22363b55399454f82440657ab5f50776a8efc5cc54cf958e2ca23fda020fb3bc",
+        "wrist_rgb": "fcf8c78bda619cc114c4348059063ceda217490f8238a61d2c9d0dbc1e780d82"
+      }
+    },
+    {
+      "directory": "train/layout_00115_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 115,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "16fa9bf989a0c98ddc72464480694160fd42ebbea2e6a5e042bc634c7b0f6dd8",
+        "action": "1dc36a9b42bd5fe42db8da62163c4dbefb3d68f7eae872c797e8eb36379b4b42",
+        "external_rgb": "d889b2f72a22aea24d76e62c2f9e2b8a5012fd4d6ec3011c93bc3f6d9537da1e",
+        "wrist_rgb": "7110b610d5ad3ae8672744d2599709a6cceed7ae4e5bedd97e4119a423d2626f"
+      }
+    },
+    {
+      "directory": "train/layout_00115_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 115,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "1b78d8bd74ccabca3d631677a7285aeda862571f16449e48a4797bc4c782f6d8",
+        "action": "03e36f74787fed4d461ef2bb9b7b0f30331737d996f543a6809de260255ff1ec",
+        "external_rgb": "1ced43339abc7618c67e4bd0ed51979ba71a1f221055c8639ab9dbb5aa0ed164",
+        "wrist_rgb": "2c27033cee22c17c52ae0cbf5683fb2dd47bc360bfc4fb74448ad35cbe544434"
+      }
+    },
+    {
+      "directory": "train/layout_00115_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 115,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "7b1a912859240929495466bf5ffd6a52b76932f2887bc2035b0abcf0b5cf9fb6",
+        "action": "dd7658a89d535d3d7632ed1fa3f4bd5c8caedbf3e71c10230d9c5b8338dbd6b4",
+        "external_rgb": "003589bffd348c98c857ffa3baca1495eadfdb3a5c6d505c16dda24a40e40780",
+        "wrist_rgb": "bc8236425583023b84c54b956c7a61600716bfaf7a1bb65b2881208046b3bfe4"
+      }
+    },
+    {
+      "directory": "train/layout_00116_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 116,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "011c878e2f07084b5284973cbf1edc9bddf3b31fe54f82847c398b6b10ad43ac",
+        "action": "c9c5789464381081e0918ebdef13c7d151eaa6f610d9afa6ef09a2782807f5fd",
+        "external_rgb": "8f7aea105365bb1213b4a9d0106ff9b7ee4a0f7462231caa58f9ddb43e1559a6",
+        "wrist_rgb": "d2842ac2c962167f238c4290b7ee18bedfb224671052e61879ffb58736918cca"
+      }
+    },
+    {
+      "directory": "train/layout_00116_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 116,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "84b842972b06b5e9d656905c151caa6c73f405827aae77b70f51b470ee6c5f85",
+        "action": "5e1eeb87a158184c7f28a5d4a9ef79f22d6e7c8f68003533d328e32459866df9",
+        "external_rgb": "8d8a5c76dec6cf5abeffbb93521db5b013112dfba09fa681ad9766c176265b77",
+        "wrist_rgb": "8ed68c260582680670311953f2298ade8bab8435570148ff231b26b4c8b65706"
+      }
+    },
+    {
+      "directory": "train/layout_00116_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 116,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "edbb8ed4147375ec1c07e32f32cdb61670d6f889d565a2eec9e0269ec77b12f4",
+        "action": "5cd87ce2696e771dc9ab0d7f90e2d1c33fcc06ab98c8da215572683d0f1022a7",
+        "external_rgb": "563a32b7d8079f08740b18aec1aca18bf0cca54bf3b2142d6adb12f696619a6c",
+        "wrist_rgb": "1c066c215fc0fe65c38c33497914269635b2653728d0ed6a5729a2944afce289"
+      }
+    },
+    {
+      "directory": "train/layout_00117_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 117,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "e91b32d1c919bc30b36eba9323244008fc44928c22421657976ebe80db04716d",
+        "action": "d549a42ff3e54f30b57b163f0e5d84e1eba60fe45dd1a23ace67b0eb1526951f",
+        "external_rgb": "a5422ff26b569ca3f3013f8049e34f42c56516b578e8fd4f75c9ae6e98025752",
+        "wrist_rgb": "48e0db248a3ba3f52ad6484c43d4db3e65e020ae52e72530334e1c79b0f24df4"
+      }
+    },
+    {
+      "directory": "train/layout_00117_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 117,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "5688e736dde812dacc0c0b1338653e859dfc5e56357f5a0e9ac837de768a0731",
+        "action": "453ace85491a1b19dcd238a03103d748cced478c03da0f1dd751c5fd5b99950e",
+        "external_rgb": "69d410983257939b57f8baff096edf13ee58c39f1c74fcddce29d1d4fa5b3976",
+        "wrist_rgb": "1fddea1436fe79469dd8a7bda8b0099b4eb92d8c0d8831dcecf1e9f0b7bb1e95"
+      }
+    },
+    {
+      "directory": "train/layout_00117_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 117,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "7bbb8996e34bf88729a26e318ba1303268be5ce9c1ea781a6af8014800fcef5b",
+        "action": "c25d0d52e31ea9e7b227c2da3bfa573c0e6ac93f0724ec91997479a0edd651b5",
+        "external_rgb": "545f4b2298b3abd78da26f7eec61e2efcd44206f7b30b5dababa84c6792914f1",
+        "wrist_rgb": "db21c2a2dfe78aaba3ba4e5c865580774d1d722577863802709e5f83a89f4687"
+      }
+    },
+    {
+      "directory": "train/layout_00118_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 118,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "18ee7dbbc7c68eabe372ca03631661fdbb6a7e530ce2af50e67dc8553260374d",
+        "action": "4550e41c7ec1809eae2f4ad53073deaee243e6880c440ab31b5333acdde68d9b",
+        "external_rgb": "4cc18433647e02fd68b7d1dddfa4e015ca94b177d70136f02acf50efadf2805a",
+        "wrist_rgb": "e3bd2e6c50510b9753b0380268fb7d65ac8730281febc7586363e982bdf35bb8"
+      }
+    },
+    {
+      "directory": "train/layout_00118_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 118,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "02e5c702a5c88a083438953a53c2890383894143953d17e9a45476059248c693",
+        "action": "55f2366b1908482e38d5e3a1414a5769832c4ae75aad9f63f5f3a2db7e912b35",
+        "external_rgb": "7fbb94e430d5b6a6a2ba2c4547674b95dd70dabd609a5d0179bfffa823be4e41",
+        "wrist_rgb": "0825a7e9ba943e43056a2b6dff4fcaf21433bc0ecd9233be377ce5b4a385e83e"
+      }
+    },
+    {
+      "directory": "train/layout_00118_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 118,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "2c0a32347d7d9eb140f2d4a63d6dfef5c75a38eec1ffc3e0678d59ae2de492cc",
+        "action": "1593c80378f9a51b7765c92fc5d535240726da0530cbdba0841c0317875ba75f",
+        "external_rgb": "97e45c5c7822e99e7e1d1305a5822686947d187e7be584cf1c7b01bc2a4ec448",
+        "wrist_rgb": "d23bbd3acc02aa21ce9a4d43f7b58c1aa3de0dd571e4e9377ed908c03340731c"
+      }
+    },
+    {
+      "directory": "train/layout_00119_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 119,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "84bb7495a733b0359acc06b44b299677f56e3d19f024d6febcbd121f5018f58f",
+        "action": "465b93e88cc43ccbfb103d09cf6435d83445d6ad4399d2152f160737a7e9a82d",
+        "external_rgb": "9baf4979b64965321c2d367f1a40621cf635a8c3941b0b37cd73a753f57ca8a7",
+        "wrist_rgb": "7c991fe0e5d3e7720f3b44d26654a7c7886a42b1992d31abe708da387d28f7ba"
+      }
+    },
+    {
+      "directory": "train/layout_00119_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 119,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "2745c613c866d1b6ccab865fd969e9ea9e54d72b441c1f402218c0d3e05e386d",
+        "action": "d4a817c6bc2a98f5af5c4f30e9c1b5b575cb63eb93e06a70d2558accf7e443bc",
+        "external_rgb": "728b08aec2261bb37bbe39dcf6d28a70ea2763137f0ee4abe91ca23ca81c7a2c",
+        "wrist_rgb": "4d1c744d6d8e83fe6facb540d9d3c4d4df3e2b60305b5b9d9202334e0f326998"
+      }
+    },
+    {
+      "directory": "train/layout_00119_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 119,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "d3d88e05f21bbb1b89c5ae9b0901c75f2d8260e68f06fbdee3457f2a8f94dc70",
+        "action": "bb0e2ccf474391f30a8586098e8c818406c2e7b0e0aa0e507ab93e2a8dabc12e",
+        "external_rgb": "a10ffe06447c0c7e26a9c020154e28b3196b493f0cc5e3305a2336d8d03c7927",
+        "wrist_rgb": "7d8d848fb4dcf54258051c5be0c155de5cb7e7c49fd5c7324a1b81aeae332731"
+      }
+    },
+    {
+      "directory": "train/layout_00120_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 120,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "9b16810be3e41529df40c021f596ba260e40dbb2f13d6e06328ad63b5a9feb59",
+        "action": "246e925fda1bc3fb31a5316f4a040f90bc2cfd0d2c69cdd3085c45d32ba473b8",
+        "external_rgb": "7f6cf6dfbbd6ae99476a4bf6122dfff649b392110c3f1805df011c4867c91095",
+        "wrist_rgb": "e1fbbce758b74923cadec0f66ae8b974c18114393c9f8174a1d2c6aabc15a1fd"
+      }
+    },
+    {
+      "directory": "train/layout_00120_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 120,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "62bf1ac0e601169cfe5e4502cdece3d97a5e390782abdc4bb3e992a1c0254d86",
+        "action": "ead356c9f643d94fc9e1e3c19893b6ea6a4b1a647f789b598a559a54ebd1d344",
+        "external_rgb": "dbb605030ac098279141182bd150067705f6710ccf2a08c5c473a4e554c70335",
+        "wrist_rgb": "6de6741294999002f456d6cc726222b03c6b4710f259fe46fffd8db6d21858be"
+      }
+    },
+    {
+      "directory": "train/layout_00120_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 120,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "c5a2533f78a7345ed00c1091348cf54365af47aab0dcb1fe45e0569beac17a01",
+        "action": "adff4deb579480543222e433795fd204384a7f520eff1851a5b6f82a2da3781e",
+        "external_rgb": "5ee01deaa14203ca41200b7515e14c8c13b7bf38229e66304c2a019b49a6b7b6",
+        "wrist_rgb": "ada7322df40670e32434fba29fcb407793607eaa88bdea5fae1f882eb00c468d"
+      }
+    },
+    {
+      "directory": "train/layout_00121_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 121,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "13f5df5a8e52d271ccb509725d677aaeda2b7e12dc70bda9639945a1a5ed4054",
+        "action": "78bb43eb8918a48922d1bf6c984290eb187e9f6ad002bc93f399ab7fa8025e27",
+        "external_rgb": "026eb7a7fea9fef684f325dc320a680031fc66feb7f998e188b6a974dd1d1324",
+        "wrist_rgb": "7b8cf36138e5f4d86b78e876e01fa0fbd719843d3cfab51cce47df1bc6e28fbd"
+      }
+    },
+    {
+      "directory": "train/layout_00121_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 121,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "a600f82476cf991a02ccd5e80a114c62ec6e8c4bc8773067579c6c5bc07bf423",
+        "action": "af6c8c4b5c07223af598c1150a38c4bdd2b41743f190e759446582d8bec0b1d0",
+        "external_rgb": "9bf7f6f5803d82c4158c86b4c4c50824471ea604510cc2a0b04eb6b8c0f9628d",
+        "wrist_rgb": "12915a63c2c22aa8e30705b6e94833c4b600336a95c33f62a5102a0c972bcb26"
+      }
+    },
+    {
+      "directory": "train/layout_00121_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 121,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "87c569b0289dc291ba69d876340e0c9ba2448202c184c04cb6d50c87a0f513e6",
+        "action": "e26d50eb9c9f64f54f694ed54538a3fa461f14d10a9380627d7bd462494cb19f",
+        "external_rgb": "3a9d5c3f0dad3d7fe40fc1733b92dc04138b3c38236a60577eb9957a70bf08f6",
+        "wrist_rgb": "ede0bf277edb9db01794ea40dd83975de01b42eb0cfbee37e0debe94aa2376a3"
+      }
+    },
+    {
+      "directory": "train/layout_00122_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 122,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "7d89c0ede37f6367eb9b628023c466d11fffe2056160ff951256b65ace858f55",
+        "action": "53d6f372a0a3dd2a40d40b19e0da9341c3b5926abd1af86bfae8d97adf31c2c2",
+        "external_rgb": "f25a05784da2ccc102f38fe4ade2050979cce5ad608aa225b81bf708a8f94fc9",
+        "wrist_rgb": "0d51fde0063a682be7ccc45fc726f5af143790d05f1312068d56069f55bd910f"
+      }
+    },
+    {
+      "directory": "train/layout_00122_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 122,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "70e67ff2c1c08bc6f191bda6cfe79f9b9bb8f8878593811ae719b7060e5b75b9",
+        "action": "397f354788da2ef484aa3f58d98a234694c2cf42d84ae4b78d53c3cd168dc13c",
+        "external_rgb": "a6aa698cde985d492bae6b129c46f4d35baf7bd1153d0ec4bcfcc8e01ee8671c",
+        "wrist_rgb": "800a6b579e92242fcedf65f78d26f79bafe61e1b78c6ff28671a75ff3e29057f"
+      }
+    },
+    {
+      "directory": "train/layout_00122_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 122,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "b1bebf9cda42654d76c2e23cdd4aa2ff528bfed52e3bec09540641de4be85ac2",
+        "action": "dd832316efc0e45e855867fd7157668217cc434020e3e0ef7844e62e706a63d4",
+        "external_rgb": "aee657b7b7a73bf395e3357cab0fda9a2840b1473d7a9921cf394d5d0d0fdcfd",
+        "wrist_rgb": "0779e45c108b8d1dd6a1516ea5a57672217aaf2d40772f7280e917280b66fe6e"
+      }
+    },
+    {
+      "directory": "train/layout_00123_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 123,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "cfd50bfbbb31b4b71d1885c888e2c6b989517d6f6386de9bd05f3decae9e0c47",
+        "action": "4ab317e1f3c016502ff0aea761a7f8c529e7b3e503331a7bc6a0a219296462a1",
+        "external_rgb": "cd637169b18213224558de2b576cb46c4a08bb051bb75f225e5eb53362dc8c0c",
+        "wrist_rgb": "6ab8b5c78c18be0e8a347e697a140905533baab0b4a481a4200f7b6307bad970"
+      }
+    },
+    {
+      "directory": "train/layout_00123_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 123,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "ac2632d2fb84dacef13ed0064a7f3f5ef0143147a64bba3abecb372f8f23a7c6",
+        "action": "27c0cae47dcd7cfb5aa6659789aab2cd770586c979784a8b00e28403026f0817",
+        "external_rgb": "9011d116a183d97bf6e6fe313adb48efffa306a97f840ce983da8d9212e611a7",
+        "wrist_rgb": "d580d46efa87a2420838b3b9c178963ae96ae0b0e0a48439432302e3ca220c8b"
+      }
+    },
+    {
+      "directory": "train/layout_00123_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 123,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "a073612180a1badd31da8488cc0ac8258748d6e5f1d7b21a022b748f7eb0f6e4",
+        "action": "bd994401a37a58253e0d0bedf06be7427fc290d23b2ecc25480d8a6ab12d7027",
+        "external_rgb": "36d881d24536410d4f69dbeb556a4ffa779792993cd66875a4dbd55a16428f11",
+        "wrist_rgb": "f74a05fbc5eacefe9b09b6871562be6b725be29f8e200b33795e40f63c5a8bab"
+      }
+    },
+    {
+      "directory": "train/layout_00124_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 124,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "f48200a977d94320494cfda33e8454ae1a55e20b1f90f9bb21bd4a82b0f2802d",
+        "action": "b74a400e86e9e7d09b42e875f3dff2e3085a2e5e983a224f00fb08f94739aec7",
+        "external_rgb": "50407d605afe1bb63739c2fb1c6ebcd29c09f32f066261d9be94f909bb7ac689",
+        "wrist_rgb": "adbe4f35664a87c5d53fdc8c4f7198e648c92e16bb5bd8b2e3bcbc99063a33ac"
+      }
+    },
+    {
+      "directory": "train/layout_00124_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 124,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "5b8d6c358ce4a4dfa68228031f0e2d73aa96eda1dadb32b4761b74d49f636eea",
+        "action": "7d9c4a3cc38375a2cc257ba53b8f4ebb856a7c8ea1a3182b7cdd5ed75dd0a2b3",
+        "external_rgb": "c9475af79d89284c3771683967f1d197252c89d288356e5fdaed88c0bae1f2da",
+        "wrist_rgb": "687573b96d46cbfb4ddf05a2b0e723931b3ae8730bcb146d320a9d4c349b157e"
+      }
+    },
+    {
+      "directory": "train/layout_00124_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 124,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "438a484f37f3875c42984b8bfb6d449e04e40b054bcb64604c321dbea5e73faf",
+        "action": "5f25aac3373cee2a6233ed3969b9c5444c8123508b5ef6ae592b860f54d73b25",
+        "external_rgb": "3fbcf7c520cb3e119be38de6ac1e90bcfd50d1c88e107654a33f648d2e2085b1",
+        "wrist_rgb": "0d4e44a430f294dc130dec4656a238bac24f8f73b9cf3025aca59ce2f9aac18b"
+      }
+    },
+    {
+      "directory": "train/layout_00125_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 125,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "ca9031e4de6a89e6bb7251222acf493cfc575fc764d4b676d5a5a2dda3dd9311",
+        "action": "93cda59fe83053d4196121efca78f1c11f0478b9c0be8b746a4d578c1180f5a1",
+        "external_rgb": "28dff544a79da7065c2c3eebbeb921b8b7c07d85ffd9e3ee45dad14d25f4aaa2",
+        "wrist_rgb": "f95ce5a3fe1c6048a28fd09d32c3ad23e481bd3d7502406b8755a90795630f38"
+      }
+    },
+    {
+      "directory": "train/layout_00125_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 125,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "4d1935180f136ba4049303c5ed9facc676a211acbf45c8f243ea3a299ea41090",
+        "action": "a572ac48359a1b8dddb19fd0fb5c95b0199c98780d0d42fd28a9428d6bf41d54",
+        "external_rgb": "b89b1cc64484ee3ea6ba3a78638fad515b5e343c21731aa4e7a7c06410ebdf45",
+        "wrist_rgb": "804def43c417f4a80d5011eac60ecf916952e41a04b2804d32dbe7441367fee7"
+      }
+    },
+    {
+      "directory": "train/layout_00125_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 125,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "e8f7e5f6c7a6cf08eb3b15a29c17ddddb2f0594a13c053ddfc7489c2239e448e",
+        "action": "72329aacd8e452aed56c18e640c67aff8d05d9f3348fdb5142746285e3740d18",
+        "external_rgb": "5e8b4c1616d6815c9e01fbb2104491f792f1e652b42737a0939318abca2b578e",
+        "wrist_rgb": "fb374c9e004fdc11fb14866470aeee96b8db161638ed4f836fede67090feca5e"
+      }
+    },
+    {
+      "directory": "train/layout_00126_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 126,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "89b05fbf0741119cfa608b1741469006279e2e584323e4e8a2bd04e9ea6804f0",
+        "action": "b0427fb8804cb33d8f6b30cbd022b19a9491f01623abcea8fed45e9217b1b208",
+        "external_rgb": "e3ee0589d8b4e78ba9bc4940e8142cdac1a32a7017fb2a65f1152bf3d6776145",
+        "wrist_rgb": "a297015a0c3dd2c8f2982ca40e076ca354dad7717dcd4f9a9e58cccce021ea82"
+      }
+    },
+    {
+      "directory": "train/layout_00126_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 126,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "2f34437c4b66109ff6f8336fb87b692eac3a45038fc6160cf27762cbd5671cf6",
+        "action": "e5ae9649506e999aa7558da279fe8c977ba75eec3a6b738e853b7abd50797bb9",
+        "external_rgb": "3781dd0ddbabb565e6ad8f6873bf1f96688f2dc162ba0dfdc54e5adadc93a02c",
+        "wrist_rgb": "0b5fd390f2efec237edfe5534be35b579731e481f883e33bb0d69518fbf61f1f"
+      }
+    },
+    {
+      "directory": "train/layout_00126_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 126,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "f16ea2e70d688bb95e3b42680b6e7905a736e9a94498cc473a57a3730ff6b680",
+        "action": "27b0e323bb179d8226b09a3328f5d4cd81a16fe1e566a7179bc67b57fd298aeb",
+        "external_rgb": "1db4b9be09cd9d6cdbaec4c3bb0926d69ce87f660cfa124e8c0d4c8139cfda9d",
+        "wrist_rgb": "8d4d6ed7d89dbb9bdaa73ff84a952254a0100dc350241e0b43a5a74ec25876d9"
+      }
+    },
+    {
+      "directory": "train/layout_00127_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 127,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "ab0d3d156ce9d81962d0dcb2814becc48da6ee44eb0ffa6261fe4fea931928fb",
+        "action": "b39d1519b8ab7d8f3df1ed48335e06011687f2bd4d0402394327614e392f8f97",
+        "external_rgb": "85d54c22e8f958c7d80a38fcf70df176b061024b27de75c795120a67e62b625f",
+        "wrist_rgb": "f95d9ac40c469601a5d54829e8069451f97b0f7941d020ccff975bccef70455e"
+      }
+    },
+    {
+      "directory": "train/layout_00127_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 127,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "1d9c8702488a4d06b757c4be27f71853069daa8cb7fb84f24b2feda7e74108af",
+        "action": "6c83d2058c2c433ffb057f40d727c4fd3b3aa682a8eeda01748e05f18a517d48",
+        "external_rgb": "d3d45f09ccb7b4adaeccd3f171b3e7317d6a7e63146a4b87ee58f755edda7f2d",
+        "wrist_rgb": "7bc259e337593e4c0e257285afb5e0896558523092ee08ee9e7acbd0b8b83392"
+      }
+    },
+    {
+      "directory": "train/layout_00127_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 127,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "181791cf9e465e2b60346994bba78ea45610a882e49a3e16cfb13a42989ad6aa",
+        "action": "c3a3cc5f16b8aff53dfaefdd5b7a94c259006970cb54907c7fff10fb0091f5ba",
+        "external_rgb": "4e3dfe4f9b41401489d84194dd8854cfdeeabb2099502a94f70e22cba9370491",
+        "wrist_rgb": "2c516d3ee6d35fddc21e8963078f31d66887c48783637757c4cb335ac0a0566f"
+      }
+    },
+    {
+      "directory": "train/layout_00128_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 128,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "54e8c2a97de2fa13951a3080fb45a266436dbadad6ca8aba52db5b4349f3b2e5",
+        "action": "421845f97ecd68148a411c075bcd4fba23c293bcb0962012e5ac49b7c2b9fb66",
+        "external_rgb": "ebd79b08c53200b25e622396edcb3605f1072e391fa9ef5fdfd757810557aa00",
+        "wrist_rgb": "6ddfaaa32e998ee8ff0998527b27b1409e16c6cbcc3a335219fdec707760d59f"
+      }
+    },
+    {
+      "directory": "train/layout_00128_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 128,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "f8da485b319751cda65a4113861526758b81bf62974f03082e9ea21372968233",
+        "action": "b194fcd67aae3284187626486dcc8c23d839b13ff52684cda52d37a32fdaef31",
+        "external_rgb": "f00f28832a1ead6fcffad59708f5ebc0e8687d531011899ca5d0c444746a4574",
+        "wrist_rgb": "5bef5192e53013b455e7ff0d106a49c7cfea3648884aa59641c1b2426bf8a169"
+      }
+    },
+    {
+      "directory": "train/layout_00128_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 128,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "421f5107901ac46822342ddc9d1c0854ed435530935c617ffe167e41dede9a60",
+        "action": "a761977d34d9478783d281532cdc94b83185da8d7c4b3e95475bf68381c86947",
+        "external_rgb": "d65a35992c4be5f168eff30d3cd9555a61e0d2168ddde14b0e22c69e5d17bc5a",
+        "wrist_rgb": "49938dacb52e77b6430c7e48f1ec53551411888bd504f856279507a13a061cce"
+      }
+    },
+    {
+      "directory": "train/layout_00129_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 129,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "73140e9b6aceba3613626d6c35184f66a20c3ff8a62a64379eaff4a267fafc02",
+        "action": "da25711f30c19ece6b59589fc9df02e03a58a0ec99319511fcfb0c03b12ed9f4",
+        "external_rgb": "7f0c26a02957d72670f217dc356dc4a44149e4decedfe3a1ab7e758eddeef36c",
+        "wrist_rgb": "6eeae337eed1712b522088e1cc774afacf4bfa9eb0af7f78139875487f799fa1"
+      }
+    },
+    {
+      "directory": "train/layout_00129_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 129,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "dd5283db9dd28cbb59323460930265928b06efbeec36bf9c94c91b2807d7236e",
+        "action": "114af9069b5403c4e9a8a506acb793736f704ec8ad2d4b80a3da84f2ea2766ed",
+        "external_rgb": "6db2a681bd5eeda6179b1fe6ad43c17f6a6d1b7522ee65585fa082eef8391f2f",
+        "wrist_rgb": "929e5b173cd9cddc6cf6afd09335d84cd824af482d0d94d1389f0f8ee1c67d83"
+      }
+    },
+    {
+      "directory": "train/layout_00129_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 129,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "61ccda044a4dfa73e925ab2a04b53fd78816c45547569107bf6a71a18919cecf",
+        "action": "21aa0291bbd826eb32818e12eab54fa422a7dd76221c35f07c3cd363e2506177",
+        "external_rgb": "bd7cb54367c308f9fbaf346de564331eeb0b541dd8a3f8daa37916fbee136f30",
+        "wrist_rgb": "7df23d0be244eec2cabce5f5a0bbdffd76100dccabf4bd49bcddbe944ee49e2c"
+      }
+    },
+    {
+      "directory": "train/layout_00130_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 130,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "5931d0ff1a81533ff761880165debdba16d3ed9d03db0e8206bec1596faa7cb5",
+        "action": "91f09662e833e9a9a75ab7a9b3e9f5ae4f80f6fbc69e43e2fe56f707c53a5984",
+        "external_rgb": "af6f696ba7232306e5f3c1dbd9e6fc84481215ad4ca287a2f5085e614f652990",
+        "wrist_rgb": "375b2a7c526f872d7ec64feaf3c5e75fa60a81858a347cac4b52ca6c9447d5e2"
+      }
+    },
+    {
+      "directory": "train/layout_00130_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 130,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "e6db943b7f8eb3ff5722f8b9a614e4cc0fbd04ea3aa4dea6b5dc66ee4f3e997f",
+        "action": "85291ac577700a03ac2446e67e066823790ae004a4e3df202e56b21041a0c83f",
+        "external_rgb": "f271d1c0273e5421f7685151fab4d898d5d0b8dd34528724106769ad2bbf633b",
+        "wrist_rgb": "185f2fc8722b2097fe1ab358cc9991ee00efc000f27b8554dd44bb06adf3109f"
+      }
+    },
+    {
+      "directory": "train/layout_00130_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 130,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "e48ebf6e5aed940c2eae988996bfa3b78e27b3c5eb7e540c00d78422493d8f4c",
+        "action": "651ba960db1499c609ec249386fe1b5a2b64f791af75513b271ccaf72db83bc0",
+        "external_rgb": "6766e8f870c8e177528caf7c5023316bd862f8e54d151a9bfe9a5f61b46ca10b",
+        "wrist_rgb": "512bb9555327b1af162804af64cfb2851f9251654b6f84000965437a57d6a59f"
+      }
+    },
+    {
+      "directory": "train/layout_00131_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 131,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "d9caf7eeb8a5a665341ab41b8c74593278bf5277b4dc20a6337bc166405ef1c5",
+        "action": "8c0484c6d1630dddbb68897f0a9eb94335fd36b95c5cc562d2dae0dccf261842",
+        "external_rgb": "fbf860598c71db2e6dca11c7b9050186f55f95b668665bf17931aee54eac0939",
+        "wrist_rgb": "e2f8cdb994214ebee2832997027608f6b301a5c5e42e119213213b42e4ff2a9e"
+      }
+    },
+    {
+      "directory": "train/layout_00131_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 131,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "932fb92e85ff4a007bd25a6afb6af6b4da5c332a195401119409669078a48aa0",
+        "action": "78b4d1de305a119db500cffd4d62685d6d6bcfe753e8a1f5a12ff1f22a310bd0",
+        "external_rgb": "3db7643c365780748164257f2563e62202484dc33ff6142911019a42e676fc8f",
+        "wrist_rgb": "223427d9c0f11ab63c78df67c46004a12584243c6579636cb42aa278d29a2452"
+      }
+    },
+    {
+      "directory": "train/layout_00131_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 131,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "aa22856f844796041487d6f00b8950acc884ee44f030dbde6f2e703b3901b63c",
+        "action": "6834fd588305221bc3e257e9fa5e3ee9cab19aa79696bbf05b57cc32bb43d0b9",
+        "external_rgb": "a41265fcb83cf0d8f5b698932dfba02a0534586870ddb012580223c32cb5dcbb",
+        "wrist_rgb": "0ae746a2a0e66458c20fd0d87f4d23f72a53819878f7939dadf8387b44ee5233"
+      }
+    },
+    {
+      "directory": "train/layout_00132_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 132,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "e47afa901c922f0172c920f4ef42ddc724d95b2caec216ff260b145d2c1480e3",
+        "action": "4fb6706f82d5398de467cf47973101841222db526e07806bf7e48d612f815917",
+        "external_rgb": "2968c642f2419d14b1da0588c8eb291f82ed785a182559368a9cd07afcd70ca1",
+        "wrist_rgb": "ed85155e98eaf82a25152e91529b3f9ba4939917d22922b7bb25b9a7bda7e633"
+      }
+    },
+    {
+      "directory": "train/layout_00132_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 132,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "99df9a9a15e89a7825163b274d593c34cefd9ccbc732d08c7505ad8d84b4d847",
+        "action": "1afd5fc2de23b73eaa29c963a395e3bdf58e5b9fbee7bb8c849a04c810f5744b",
+        "external_rgb": "95cb9ff8f4d5d893bf8be232bfd89a00f55331df7ed3ab7022020cec4ef6dd70",
+        "wrist_rgb": "b5019d72ed5658f472583c4af62ba9f3824aa43209d514074cc29dca62b8851e"
+      }
+    },
+    {
+      "directory": "train/layout_00132_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 132,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "0d1af343e00ce459dfed1114ae95cf8ae8ac15a32294da79b8a0cade2b507a01",
+        "action": "efa2c43226a18635a2cf7be99a5d4e22d25c0868fc2d5c30b11d50237bca4ed6",
+        "external_rgb": "e075a0d4e4d6f7d926f5ab894dce86808d5794a0af96b389b7e206226e760cf0",
+        "wrist_rgb": "34d7d4034fe0782bae2636e2992c20d76c8c029e58045dfe88a0cdd6867e6555"
+      }
+    },
+    {
+      "directory": "train/layout_00133_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 133,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "2837603d93916d9323e6eba6eb996d9ec56050e048736bf125e9fdfd25bd1912",
+        "action": "844ba8f2e6959abda1d23c95d41b5aa6a99b3844b28c59f5e88da4da8f0e8c9f",
+        "external_rgb": "07911562ea20b89226545fae62b09e3aeceb7f0d8bfce9eb5544e5012bf37566",
+        "wrist_rgb": "ac3cdf1274c16d481e85d94133940a17544fbf8a8229028d5fc92e2c1bb6226f"
+      }
+    },
+    {
+      "directory": "train/layout_00133_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 133,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "d1268ac39b43618a368bf40cc1a7f36352dde32f50cdc80b3637c26554327e78",
+        "action": "420e06f2c60149cfcf0c52b6ceed3d58c816d3a956575fc93fc3f7d0d49d45c8",
+        "external_rgb": "e531d0e8d7171215f4ad2eff0e4d32a4573dac457539c043b75b5612d93fd053",
+        "wrist_rgb": "f6377839d5602e050a600095152f5435d5e0dc328fe8365e1c067515c8213767"
+      }
+    },
+    {
+      "directory": "train/layout_00133_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 133,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "69b569312cd01c53418c4ece7cacf59e322ec3515bea3a468f00d8eb9ab72fcb",
+        "action": "1cd884c8b8e4e95b0c106371a3b190d7d3bdca69857df96dfc905d0ed1d35fc8",
+        "external_rgb": "c3361f91cc6e9ef5d5e80a73b86e555968dc2bfe8e926b12bd1e522062a29ed4",
+        "wrist_rgb": "b020a00f52e582c7d64f54940c9c10a2586382d9b5eba45c47024bb457daf499"
+      }
+    },
+    {
+      "directory": "train/layout_00134_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 134,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "c8fd8b2a8b8e6434930e65bdf644914b5f58e73fe8af64f9c7aaccdc5a8b9582",
+        "action": "87e4514bee5d9b5a5c0eb6ac826c2260498da9a6c1e4977719807caafe976eef",
+        "external_rgb": "cfc5fcdede013a185ee864d1588245985936bd1d03d6a816aa5577bd99565fc4",
+        "wrist_rgb": "5bc9949ed321023579342f085d6a597f6b2d14c33f510bc9d90bd7868bd6cd13"
+      }
+    },
+    {
+      "directory": "train/layout_00134_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 134,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "288ae2133fd68b0ae0d98171909699385ce8b58807627a51306cda0b112d682c",
+        "action": "1666a24a27a36939d76552ab54916654a122b289e56b79efc711390ea52ab698",
+        "external_rgb": "e40f8c6ed2fbc8a26182f734a25033afe334d4c76dd0b3119b63b687fade6481",
+        "wrist_rgb": "d8ac6e3e54b24fcc7343554be1af5dc2c203687d115c96263a5cbf47d1dc4be1"
+      }
+    },
+    {
+      "directory": "train/layout_00134_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 134,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "1123eece0e9b8e49ca9988303d6bf418d8c95990b50324e17d2e551dc1b11220",
+        "action": "f17f423cbafde67178d2cb899f73855c5e8bf52e571b93c5e17985f4748775dc",
+        "external_rgb": "c40178ceaa61d00165ab1a62ffb979c9777621b97247c31333b9fbc487ba3ff2",
+        "wrist_rgb": "c10aea56ea939b09740b23a0a9b167632fe147fc88603c0bd57353500f49674b"
+      }
+    },
+    {
+      "directory": "train/layout_00135_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 135,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "6da69346b02493b7ddc3fd3d67d3854b3d2edd7ad9158ea61ce7e63b8822be06",
+        "action": "d24d9dca8d083e6e801a8980e813ef6ceaa6ad6285cebaf9ef7bab47663ff8b6",
+        "external_rgb": "4dd0b1d7e64d8972915f5e7c556841515c3ee735d9a7fc21bd01d76925c53781",
+        "wrist_rgb": "57d5463d822c68c7df4b51e13a73cf2fe0f0e8586c0c2209da5616b5e87fbbc1"
+      }
+    },
+    {
+      "directory": "train/layout_00135_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 135,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "25fb2a44ecf42c32659faf217938b8bdb2a27b30621b9cdb9f5fb64a6b36eedc",
+        "action": "a0c34e3b0413087cdae2d6bf572370a9e433d1905459b479b689f0af83ac1cdf",
+        "external_rgb": "31b622d40a25eb236d135462ac8981f706aad1b2bc05864225e923d2aaadc099",
+        "wrist_rgb": "1b64b5faa1d697543a61fd8d6b21f9b54b0f1b9a0e31dc909065d13cff58bc88"
+      }
+    },
+    {
+      "directory": "train/layout_00135_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 135,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "5d47fd5f139c8499a259d46d7533f4c45e6eec90e0aacf7f638f78a2cce6de59",
+        "action": "2e3e34a649f9ea5a7a8c4c15056bd5b195efa54c3c7082a4603ddf71aecc96d4",
+        "external_rgb": "30af14b24373caa98d8c93601585c4f16438e35565dbabcf7a8e4f3867354288",
+        "wrist_rgb": "20558f932f36d1f78f3bc771028eae94d6349d9c173be244a80dee46e85e8291"
+      }
+    },
+    {
+      "directory": "train/layout_00136_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 136,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "cc4fbd175ec5dbeab73108bfae6488be6750369c55164e8f43dae1a95acdb785",
+        "action": "81f41b551f8664cbee6174716931219c2626a3b35e2945fba0257bedcd5cfb4c",
+        "external_rgb": "a8320f1ce312769c0d8aaf93a9d84dc3f9f824ea6629f6285ae6335bc2c6d283",
+        "wrist_rgb": "f1f99fa0b6ad250f4645139556a38f99275f88caa1cd05ce9182ee4183e6ae95"
+      }
+    },
+    {
+      "directory": "train/layout_00136_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 136,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "17f21285f78eae89fe2d9c693d0444b8b1f6652bd8370af8b665909cf9215c87",
+        "action": "6e240193fb4d161d6d217a8087dd84181c3cf0039cb6dc2c1f32e7d11aa1a7a3",
+        "external_rgb": "1be0fb9530bbbccef65ac68cc81183b096b7747313317cc0d239bd8270ec9180",
+        "wrist_rgb": "74ec51e986b91cd3c70ab6371f197ba0f0e312fe3491c2b84d11e929946a40db"
+      }
+    },
+    {
+      "directory": "train/layout_00136_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 136,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "b071f9c88056c0c8f85d0565a3066954018c0c545141535873c8e87c49074a31",
+        "action": "3cf49ae42e99f552f6af04f279576b3188bdd2261d9c0f61d87c4c329480754f",
+        "external_rgb": "d30a16c2c940c2a9ebe6b245bab27fdfbcff276e309c7f41b30ce843c8028560",
+        "wrist_rgb": "59ebb4d44791b8000776844953eb5a05f63a1621265b5adbcb6cb0c0aa13ee4f"
+      }
+    },
+    {
+      "directory": "train/layout_00137_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 137,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "f61473676724c44337001a275a8ba0a03ee50f0a5d1818318c87c7a0c4429534",
+        "action": "cd104c0d164e83eef85ff3a5406a6578cbb521d26376a65d37394f898367baa3",
+        "external_rgb": "fac6466fc43c57563dc8f4834a6d265689181df6754f5b6bc8b58ebca6a21a28",
+        "wrist_rgb": "3fccc93877fa23e4cf3fa790f80c3be94514c962b561d6f16aff7ca7e7bde8de"
+      }
+    },
+    {
+      "directory": "train/layout_00137_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 137,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "d12c262b0169d158d9997899a7ecf9a901cc14995394d284e9eec3de8f829888",
+        "action": "6f6b8447f5febec040396db3741db58a552a1bb041fd4c2f5f2c4739d3bdfd3d",
+        "external_rgb": "5f09f02ae0ee31801b42a41d827ec5165d176a4bc5e0934d14832e8d30b9dd0d",
+        "wrist_rgb": "f2fb360d8e512c09c2f6a88180733b41fba00c6e7e6d71fb917b5aee53814f17"
+      }
+    },
+    {
+      "directory": "train/layout_00137_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 137,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "5db1f006f97c4dcda5a9121230a0f207ea7f3f4eb2706980028e85451a41f8f6",
+        "action": "aee6f7a272005841daa2208ef8a7448d9c2768be09c93efe400d7555ca7b9089",
+        "external_rgb": "76f062bf0705aa1e2e6c9b186be8e99e34559425f8564ce39904ed8d00012663",
+        "wrist_rgb": "e0d4c2abefbd7f3683548855321029200a21a4bc88b2ec85105eea1bfda52264"
+      }
+    },
+    {
+      "directory": "train/layout_00138_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 138,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "fb99a6cc2868b30757f4a178c155d2b68cbe3b899743ed83df4e7556193ea808",
+        "action": "abef995c4dfeebbb7e5126a8b8d3cd74e75c41a671e270f9ca6c9a7e1e52fbaf",
+        "external_rgb": "e1fc17af7b47796512b1dc45ace8dd54330e339d0863c0de0f085b558721f6f4",
+        "wrist_rgb": "8d2dd891fd4a68040d276e5df9f006c1de3d4a28e78bd329d5ea5281ae91c2c8"
+      }
+    },
+    {
+      "directory": "train/layout_00138_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 138,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "71c9a8225987b3158d4c93b5cd8505c2f2bc23b6c11a133917a31bc4af1b44f6",
+        "action": "60b497910360944a00245506d01c19f40ddaff948337cc30f23f0be546e6e579",
+        "external_rgb": "cdbbb5c8c93e5f4f3680533eae39023f1ead4fa0e0dd5989cb561fd9da3ae1f5",
+        "wrist_rgb": "597b25b2687ad4201fde9098bcf50637dac59c127a89ea7e446b7e0d10963f8c"
+      }
+    },
+    {
+      "directory": "train/layout_00138_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 138,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "3c1231d654eb9c0facb5e72cd1b01de862f032ad2264b7de0471f645df69d81b",
+        "action": "19231386c0ea819e8fd18b26b757beeb202a8a5ff81e6ac6a8cfa0d53719ae98",
+        "external_rgb": "b435e4f2790ef6d10bc67982fa45d05f868d4bd2693bc97cc223c29993797bec",
+        "wrist_rgb": "12b594259e6f302bbb77ad1cc28818981c920cd22df309d413a95dfd623530d7"
+      }
+    },
+    {
+      "directory": "train/layout_00139_red",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 139,
+      "target": "red",
+      "prompt": "pick up the red block and place it in the box",
+      "array_sha256": {
+        "state": "01e39504a853dbfed0c32365f9b09aec337651e555af5cb25d152416e7321baa",
+        "action": "370e6a6398778d633030bcf21c916d6fb7742244781a767e4c25418ac4aac0f4",
+        "external_rgb": "3a3ebd69f492d75461aba640c47b878ef171793604112f55bf7bf0b0b3d47ca6",
+        "wrist_rgb": "1d0138f301e7b2faa4dc7818c9de9f341801a4b508eedcb0f83ecb3f4d7a5ce1"
+      }
+    },
+    {
+      "directory": "train/layout_00139_green",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 139,
+      "target": "green",
+      "prompt": "pick up the green block and place it in the box",
+      "array_sha256": {
+        "state": "2eea7a5c0cfd8ed9876df2d0d8bbcb129c00c6846025893424f12948153a9363",
+        "action": "309946a8a6d334e73a0b4219d21be7e8cbae2ad961b796b81627a8a15884c68f",
+        "external_rgb": "d1d60e552abf68e877a03dfc17a2e90d1de7e54c8689097e121418e17e99474c",
+        "wrist_rgb": "d6598737e9f7e79b511ffa89b0100335a84c491857d91663aa380fee4de6ff84"
+      }
+    },
+    {
+      "directory": "train/layout_00139_blue",
+      "frames": 268,
+      "split": "train",
+      "layout_seed": 139,
+      "target": "blue",
+      "prompt": "pick up the blue block and place it in the box",
+      "array_sha256": {
+        "state": "fd66dc99260b3b573c5eb68eeeced93d58ae00fe98b0d6350d02c7147d7688e2",
+        "action": "849b5d03d410bf18487f81385e9be04aeea16817cf340074a44d15ae674d39aa",
+        "external_rgb": "bdf9d846b58bf950156cc03bb1b9bf9eec2a08022e322bd950be8c6b652bc94a",
+        "wrist_rgb": "7518860f0d359e41b5977f1c417df0e3ca74f905718672d627c0d9732b927ce1"
+      }
+    }
+  ]
+}

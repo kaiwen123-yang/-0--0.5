@@ -1,0 +1,19 @@
+{
+  "episodes": 120,
+  "frames": 32160,
+  "splits": {
+    "train": 120,
+    "validation": 0,
+    "test": 0
+  },
+  "layout_disjoint": true,
+  "finite": true,
+  "timestamp_hz": 20,
+  "image_color_order": "RGB",
+  "labels": "actual_command_targets_before_physics_step",
+  "hardware_execution": false,
+  "scene_sha256": "e846d1ca50552e5a7686d48ecd1052dff711061c338a696399a1812711f9ba2d",
+  "manifest_sha256": "c179a6ed234f5dae6f467cf701490f74d1c737891af6ee1811dec87b357c62e9",
+  "heldout_demonstrations_generated_or_read": false,
+  "elapsed_seconds": 407.8505425248295
+}

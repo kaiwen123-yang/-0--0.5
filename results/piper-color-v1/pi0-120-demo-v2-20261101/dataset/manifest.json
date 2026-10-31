@@ -4295,7 +4295,1063 @@
       "file": "train/layout_00131_blue.npz",
       "sha256": "59a08e2b3339111ecebf8f96561c92d0c0ac36cb59b69ffa5ff18af567ace9c8",
       "elapsed_seconds": 2.989411000162363
+    },
+    {
+      "layout_seed": 132,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1436471757069357,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14063375417257865,
+          0.1578361209881008,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.19559144199929265,
+          -0.03192308259518988,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.12313484678205514,
+          -0.13929359620148618,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00132_red.npz",
+      "sha256": "020ebac1678cc9bb75d2806d2dc8312c0d4c04b986cca074d56f83ecc783091d",
+      "elapsed_seconds": 2.99806066788733
+    },
+    {
+      "layout_seed": 132,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14378222036022498,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2450071629112658,
+          -0.14146935647451706,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13839796532671994,
+          0.16035124729591743,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.12313484678205514,
+          -0.13929359620148618,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00132_green.npz",
+      "sha256": "c6da20d584c622ab73e36eb13187084d9185be79d9badf42b23967ca6545a1a9",
+      "elapsed_seconds": 3.005775710567832
+    },
+    {
+      "layout_seed": 132,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14391629938776657
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2450071629112658,
+          -0.14146935647451706,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19559144199929265,
+          -0.03192308259518988,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1411746639257373,
+          0.1576071862001551,
+          0.02539325598870122
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00132_blue.npz",
+      "sha256": "dc404025d6cd86897a5fadcfa17ed865b20f847b36aa8ad529e5dbea0134ca96",
+      "elapsed_seconds": 2.993955049663782
+    },
+    {
+      "layout_seed": 133,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14366398203967834,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14176830527208006,
+          0.16015079263375687,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.20225255500434694,
+          -0.04233759497602034,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1338962257077644,
+          -0.14786554784452274,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00133_red.npz",
+      "sha256": "610f2b6fdd5c5d3b3c5a93fd5743bfb94b9c46d35864328868033d3e901be26e",
+      "elapsed_seconds": 3.019890772178769
+    },
+    {
+      "layout_seed": 133,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14377159167160736,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2216957644886953,
+          -0.14965825113458886,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13842537061931845,
+          0.16035762591967584,
+          0.025393255988701235
+        ],
+        "blue": [
+          -0.1338962257077644,
+          -0.14786554784452274,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00133_green.npz",
+      "sha256": "1977f8da6eef637455372fcd24e9e6b0e76e71635103ceb75e707ee34d5dbc20",
+      "elapsed_seconds": 3.0051599964499474
+    },
+    {
+      "layout_seed": 133,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1438869867789626
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2216957644886953,
+          -0.14965825113458886,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20225255500434694,
+          -0.04233759497602034,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14148915137102175,
+          0.1599434250215686,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00133_blue.npz",
+      "sha256": "d4d2f0c5648e10796b5e0b1b299e2f8391e6fdd87249094a12bc5fd168954bf7",
+      "elapsed_seconds": 2.9934213999658823
+    },
+    {
+      "layout_seed": 134,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14366635363853908,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14057887900410715,
+          0.15778895797472403,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.12876280787022915,
+          -0.14215667671809215,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2105271433167115,
+          -0.026688136602481795,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00134_red.npz",
+      "sha256": "e278061df5d4d96bb95be43470743ca5a192cfb4dacb64055eac24ee363984ae",
+      "elapsed_seconds": 2.9806172735989094
+    },
+    {
+      "layout_seed": 134,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14389814816656704,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22188277044645263,
+          -0.14988063917805744,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14057155787064593,
+          0.15952532666175212,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.2105271433167115,
+          -0.026688136602481795,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00134_green.npz",
+      "sha256": "be60ff410183bd182f739286d9a691008b036df181647fd054b529570dd1f9c1",
+      "elapsed_seconds": 2.9914062283933163
+    },
+    {
+      "layout_seed": 134,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14376747297052794
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22188277044645263,
+          -0.14988063917805744,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.12876280787022915,
+          -0.14215667671809215,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13908714514126655,
+          0.16170535786134058,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00134_blue.npz",
+      "sha256": "4bf31a350aa02fae668fd0b1a6ddfd599b5bbaafa1e954a4d192ab4976c941f4",
+      "elapsed_seconds": 3.0020916666835546
+    },
+    {
+      "layout_seed": 135,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14392904902496184,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14167268263509994,
+          0.15909433754424673,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.2336494926120063,
+          -0.15613902801806434,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.21274445612509815,
+          -0.043837962330568726,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00135_red.npz",
+      "sha256": "62a6a96029b9c9e22f68a8fdbcaf767a20f30725ab0aac5deaca5b0c408e3839",
+      "elapsed_seconds": 3.0009947530925274
+    },
+    {
+      "layout_seed": 135,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14359539614707,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.11877891788721685,
+          -0.13636065350273863,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1418472421502583,
+          0.16010793922268884,
+          0.0253932559887012
+        ],
+        "blue": [
+          -0.21274445612509815,
+          -0.043837962330568726,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00135_green.npz",
+      "sha256": "53f810836440aba632dc04befedc987d69ab721d258adbfd9336c8eb3ae8fe9f",
+      "elapsed_seconds": 3.0122577883303165
+    },
+    {
+      "layout_seed": 135,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14374484791984032
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.11877891788721685,
+          -0.13636065350273863,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2336494926120063,
+          -0.15613902801806434,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14047064241397297,
+          0.15903737687025135,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00135_blue.npz",
+      "sha256": "bf79329eff8c8aacc886b547864cc345e12f1f3eaa5aa7a31ee657dc9c435a5b",
+      "elapsed_seconds": 3.0824890192598104
+    },
+    {
+      "layout_seed": 136,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14386981135197868,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1412836910491439,
+          0.159279045444728,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.24543162340995475,
+          -0.1620337156009381,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19559251990005017,
+          -0.034827237167770544,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00136_red.npz",
+      "sha256": "8905d394a0151600f7661df879741960575230af827e1a396771d6c25eefd9e1",
+      "elapsed_seconds": 3.0123961437493563
+    },
+    {
+      "layout_seed": 136,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.143587527167427,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14073853555491248,
+          -0.15359283974950796,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14635155833846436,
+          0.16056500196291076,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.19559251990005017,
+          -0.034827237167770544,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00136_green.npz",
+      "sha256": "730fae0263b8e508cee7f86fb8b450fa994228ff093c2045a9e2d922e637e415",
+      "elapsed_seconds": 2.9885409083217382
+    },
+    {
+      "layout_seed": 136,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14378570518962858
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14073853555491248,
+          -0.15359283974950796,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.24543162340995475,
+          -0.1620337156009381,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1399958942194321,
+          0.15997896278653084,
+          0.025393255988701204
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00136_blue.npz",
+      "sha256": "cbe7f7b9c8008e9ac33f9b7793db6af466584b7de728523abbbfe6628205f584",
+      "elapsed_seconds": 2.9973616413772106
+    },
+    {
+      "layout_seed": 137,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14376292742797658,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14043268479851567,
+          0.15962161345594827,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.2249709025541233,
+          -0.15629871915391086,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13204539815070343,
+          -0.14649098497768875,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00137_red.npz",
+      "sha256": "763e58e2b8a3db833903c25a95f23a87cbecc59598a30965ec9a82d3f5ab9e12",
+      "elapsed_seconds": 3.0051990915089846
+    },
+    {
+      "layout_seed": 137,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1436328709594364,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20591290146938812,
+          -0.03568461471568069,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14176060828920306,
+          0.15999310818681536,
+          0.025393255988701218
+        ],
+        "blue": [
+          -0.13204539815070343,
+          -0.14649098497768875,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00137_green.npz",
+      "sha256": "d06b4eb0a882dbd8d3930163dbfc95d47bc4725aee61de5eae290aa48494a819",
+      "elapsed_seconds": 2.9838379342108965
+    },
+    {
+      "layout_seed": 137,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14388893526074337
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20591290146938812,
+          -0.03568461471568069,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2249709025541233,
+          -0.15629871915391086,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14044959631392132,
+          0.15776320689993203,
+          0.025393255988701208
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00137_blue.npz",
+      "sha256": "4127e89d87fcc998147bb2e8a22a14259fef2a80cead739caa72e4893f49fb1e",
+      "elapsed_seconds": 3.0006218906491995
+    },
+    {
+      "layout_seed": 138,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.14390113711210556,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1405793843410279,
+          0.15952098557204905,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.2329526348327167,
+          -0.14200822290791482,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19481933851414748,
+          -0.03241563729161003,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00138_red.npz",
+      "sha256": "6d18755165482f7bfd647393308b104745d660fadd9b933a57af2a5291068bb3",
+      "elapsed_seconds": 3.003313010558486
+    },
+    {
+      "layout_seed": 138,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14365292227158605,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12830663726938946,
+          -0.13772431125928822,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14138709885687828,
+          0.1611815481214351,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.19481933851414748,
+          -0.03241563729161003,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00138_green.npz",
+      "sha256": "cd5cd57ce152302a5197686530b6a67ff69678fc3968508c7e055fde35c543a9",
+      "elapsed_seconds": 2.99327009357512
+    },
+    {
+      "layout_seed": 138,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14378226213518014
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12830663726938946,
+          -0.13772431125928822,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2329526348327167,
+          -0.14200822290791482,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1399490561821593,
+          0.1597816884174204,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00138_blue.npz",
+      "sha256": "ad82ed816bb63451c335d6ea39f2fde213dee692f364decea05a2aaa49fa5c94",
+      "elapsed_seconds": 2.995309816673398
+    },
+    {
+      "layout_seed": 139,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1436457592649374,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1414475634192156,
+          0.16083511872412923,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.14002838616508168,
+          -0.16192525183123938,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1924061208944298,
+          -0.046557309154243345,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00139_red.npz",
+      "sha256": "c8bdebc0d981da21fdb452afce758a67ab869edab06a52609adb68a1c5180869",
+      "elapsed_seconds": 2.9788853488862514
+    },
+    {
+      "layout_seed": 139,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.14387465703438024,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.23733064993669062,
+          -0.14781400317466292,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14149426311467989,
+          0.16000688457506484,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.1924061208944298,
+          -0.046557309154243345,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00139_green.npz",
+      "sha256": "46904fe21e4ed14eeceb3a7938fdfd0e1d67a7eb382da2e0ea33788faf64a7e3",
+      "elapsed_seconds": 2.9942215755581856
+    },
+    {
+      "layout_seed": 139,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1437770731974095
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.23733064993669062,
+          -0.14781400317466292,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14002838616508168,
+          -0.16192525183123938,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14277097951019435,
+          0.16125496328381697,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00139_blue.npz",
+      "sha256": "041b5a3b83f03615cfc2dbd90f1e8c0a97f0ab2965d70915e4b67ff7e0879fb8",
+      "elapsed_seconds": 3.018944026902318
     }
   ],
-  "elapsed_seconds": 307.5550235286355
+  "elapsed_seconds": 380.1920846439898
 }
