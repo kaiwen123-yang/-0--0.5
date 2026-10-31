@@ -8,16 +8,18 @@
   "total_parameters": 3288036112,
   "training_domain": "synthetic_piper_h",
   "hardware_execution": false,
-  "completed": false,
-  "completed_updates": 2000,
+  "completed": true,
+  "completed_updates": 2010,
   "checkpoints": [
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/500",
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000",
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1500",
-    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000"
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010"
   ],
   "resumed_from_update": 1000,
   "prior_attempt_wall_seconds": 734.035357568413,
   "initialization_seconds": 9.219351012259722,
-  "wall_seconds": 601.1309793442488
+  "wall_seconds": 629.2622009366751,
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010"
 }

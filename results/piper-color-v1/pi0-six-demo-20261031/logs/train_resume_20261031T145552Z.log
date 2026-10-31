@@ -109,3 +109,6 @@ UPDATE {"step": 1980, "grad_norm": 0.3030938982005676, "loss": 0.005422590997590
 UPDATE {"step": 1990, "grad_norm": 0.9318700621745222, "loss": 0.020301941373878918, "param_norm": 1379.8335311935173, "wall_time": 1793459134.9099066, "compute_seconds": 0.4575666096061468, "sample_starts_seen": 7960, "equivalent_start_epochs": 4.9502487562189055}
 UPDATE {"step": 2000, "grad_norm": 0.42355505931275556, "loss": 0.01416927574593021, "param_norm": 1379.8335743166842, "wall_time": 1793459139.8049679, "compute_seconds": 0.45821453630924225, "sample_starts_seen": 8000, "equivalent_start_epochs": 4.975124378109452}
 CHECKPOINT_COMPLETE updates=2000 path=/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000
+GITHUB_PUSHED {"stage": "train-update-2000", "commit": "00762abc66cbfff36151d1d920b8a51a46d6fc0f", "pushed_at_utc": "2026-10-31T15:06:03.617979+00:00"}
+UPDATE {"step": 2010, "grad_norm": 0.3873614029850195, "loss": 0.003737339463130186, "param_norm": 1379.8336246738315, "wall_time": 1793459168.6990383, "compute_seconds": 0.5820985175669193, "sample_starts_seen": 8040, "equivalent_start_epochs": 5.0}
+CHECKPOINT_COMPLETE updates=2010 path=/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010
