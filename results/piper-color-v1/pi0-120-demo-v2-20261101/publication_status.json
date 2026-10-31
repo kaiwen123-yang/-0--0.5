@@ -1,6 +1,6 @@
 {
-  "stage": "train-update-8000",
-  "snapshot_at_utc": "2026-10-31T19:16:37.479932+00:00",
+  "stage": "train-update-8040",
+  "snapshot_at_utc": "2026-10-31T19:17:11.502398+00:00",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
   "branch": "codex/pi0-120-demo-v2-20261101",
   "tracked_files": [
@@ -228,13 +228,13 @@
       "uploaded": false
     },
     {
-      "updates": 7500,
-      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/7500",
-      "file_count": 42,
-      "bytes": 9830602700,
+      "updates": 8000,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/8000",
+      "file_count": 38,
+      "bytes": 9841219254,
       "resume": {
-        "completed_updates": 7500,
-        "sample_offset": 30000,
+        "completed_updates": 8000,
+        "sample_offset": 32000,
         "sample_order_sha256": "326200084605413e084f31b8379b411c5be3b847795a1b420b4240263a021d10",
         "config_sha256": "a26a2698af326ac021edd7ecc867a7b7c0e9a0577a0765abac6ce538e66cf9ea",
         "train_rng_key_data": [
@@ -248,13 +248,13 @@
       "uploaded": false
     },
     {
-      "updates": 8000,
-      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/8000",
-      "file_count": 38,
-      "bytes": 9841219254,
+      "updates": 8040,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/8040",
+      "file_count": 40,
+      "bytes": 9837673264,
       "resume": {
-        "completed_updates": 8000,
-        "sample_offset": 32000,
+        "completed_updates": 8040,
+        "sample_offset": 32160,
         "sample_order_sha256": "326200084605413e084f31b8379b411c5be3b847795a1b420b4240263a021d10",
         "config_sha256": "a26a2698af326ac021edd7ecc867a7b7c0e9a0577a0765abac6ce538e66cf9ea",
         "train_rng_key_data": [
