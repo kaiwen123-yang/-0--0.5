@@ -19,5 +19,17 @@
     8000,
     8040
   ],
-  "wall_seconds": 1556.863628713414
+  "wall_seconds": 1560.433970803395,
+  "jax_memory_stats": {
+    "num_allocs": 285606,
+    "bytes_in_use": 12072390656,
+    "peak_bytes_in_use": 18899121920,
+    "largest_alloc_size": 6824325376,
+    "bytes_limit": 50987925504,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 34357641216,
+    "peak_pool_bytes": 34357641216
+  }
 }

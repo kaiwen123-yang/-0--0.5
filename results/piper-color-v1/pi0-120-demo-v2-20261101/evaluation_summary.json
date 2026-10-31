@@ -119,6 +119,18 @@
       "bilateral_lift": 2,
       "over_box": 1,
       "observed_drops": 1
+    },
+    {
+      "evaluation": "update_8040_train_seed42",
+      "split": "train",
+      "successes": 1,
+      "total": 6,
+      "errors": 0,
+      "complete": true,
+      "lifted_5cm": 2,
+      "bilateral_lift": 2,
+      "over_box": 1,
+      "observed_drops": 1
     }
   ],
   "test_used": false,
