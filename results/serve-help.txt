@@ -1,0 +1,12 @@
+usage: serve_local.py [-h] [--model {pi0,pi05}] [--backend {jax,pytorch}]
+                      [--checkpoint CHECKPOINT] [--host HOST] [--port PORT]
+
+Serve an official LIBERO checkpoint. This starts inference, not training.
+
+options:
+  -h, --help            show this help message and exit
+  --model {pi0,pi05}
+  --backend {jax,pytorch}
+  --checkpoint CHECKPOINT
+  --host HOST
+  --port PORT

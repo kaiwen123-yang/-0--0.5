@@ -1,0 +1,15 @@
+{
+  "episodes": 165,
+  "frames": 44220,
+  "splits": {
+    "train": 120,
+    "validation": 15,
+    "test": 30
+  },
+  "layout_disjoint": true,
+  "finite": true,
+  "timestamp_hz": 20,
+  "image_color_order": "RGB",
+  "labels": "actual_command_targets_before_physics_step",
+  "hardware_execution": false
+}

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-23",
+  "status": "no_cudnn_version_conflict_found",
+  "scope": "Read-only installed-package and shared-library audit. No dependency changes, CUDA backend initialization, GPU contexts, inference, or training.",
+  "execution": {
+    "launcher": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/run.sh openpi",
+    "interpreter": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+    "CUDA_VISIBLE_DEVICES": "",
+    "JAX_PLATFORMS": "cpu"
+  },
+  "installed_versions": {
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "jax-cuda12-plugin": "0.5.3",
+    "jax-cuda12-pjrt": "0.5.3",
+    "torch": "2.7.1+cu128",
+    "nvidia-cudnn-cu12": "9.7.1.26",
+    "nvidia-cuda-runtime-cu12": "12.8.57",
+    "nvidia-cublas-cu12": "12.8.3.14",
+    "nvidia-cufft-cu12": "11.3.3.41",
+    "nvidia-cusolver-cu12": "11.7.2.55",
+    "nvidia-cusparse-cu12": "12.5.7.53"
+  },
+  "jax_cuda12_plugin_build_constants": {
+    "cublas_build_version": 120304,
+    "cuda_runtime_build_version": 12030,
+    "cudnn_build_version": 90101,
+    "cufft_build_version": 11012,
+    "cupti_build_version": 21,
+    "cusolver_build_version": 11504,
+    "cusparse_build_version": 12200
+  },
+  "measured_cudnn_runtime": {
+    "integer": 90701,
+    "version": "9.7.1",
+    "getter": "jax_cuda12_plugin._versions.cudnn_get_version()",
+    "getter_source_checked": "CudnnGetVersion calls cudnnGetVersion only, not cudnnCreate or CUDA device initialization",
+    "mapped_libraries": [
+      "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+      "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/nvidia/cudnn/lib/libcudnn_graph.so.9"
+    ],
+    "libcuda_so_mapped": false,
+    "mapping_evidence": "/proc/self/maps in the getter process"
+  },
+  "static_pjrt_audit": {
+    "binary": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so",
+    "method": "nm -C and objdump -d -C; binary inspected, not executed",
+    "function": "stream_executor::gpu::CudnnSupport::Init()",
+    "function_address": "0x876d970",
+    "compiled_cudnn_source_version": "9.1.1",
+    "evidence": [
+      "0x876da08 compares runtime major with immediate 0x9",
+      "0x876da11 / 0x876da14 rejects runtime minor <= 0",
+      "error-message source-version construction passes immediates 9, 1, 1 at 0x876dbce, 0x876dbe6, 0x876dc04"
+    ],
+    "result": "Runtime9.7.1 satisfies same-major and minor>=1 requirement. This PJRT binary does not require9.8."
+  },
+  "ptxas": {
+    "command": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/nvidia/cuda_nvcc/bin/ptxas --version",
+    "cuda_release": "12.9",
+    "version": "12.9.41",
+    "compilation_performed": false
+  },
+  "conclusion": "Keep cuDNN9.7.1.26: compatible with measured JAX/PJRT9.1.1 requirement and required exactly by installed torch2.7.1+cu128. No dependency fix indicated by this audit.",
+  "gpu_execution_tested": false,
+  "remaining_validation": "Actual RTX5080 JAX/PyTorch GPU execution, compilation, memory usage and model inference remain untested while GPU is occupied.",
+  "primary_sources": [
+    "https://raw.githubusercontent.com/jax-ml/jax/jax-v0.5.3/jaxlib/cuda/versions.cc",
+    "https://raw.githubusercontent.com/jax-ml/jax/jax-v0.5.3/jaxlib/cuda/versions_helpers.cc",
+    "https://raw.githubusercontent.com/jax-ml/jax/jax-v0.5.3/.bazelrc",
+    "https://raw.githubusercontent.com/openxla/xla/df971129bd82e381954da0185b534220e21798a4/xla/stream_executor/cuda/cuda_dnn.cc"
+  ]
+}

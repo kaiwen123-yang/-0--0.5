@@ -1,0 +1,11 @@
+{
+  "status": "interrupted",
+  "received_signal": "SIGTERM (15)",
+  "source_of_signal": "unknown",
+  "completed_episodes": 3,
+  "expected_episodes": 6,
+  "excluded_from_final_comparison": true,
+  "reason": "Incomplete prespecified 3 tasks x 2 states grid; rerun entire grid in a new directory without selecting successes.",
+  "cleanup": "orchestrator finally stopped its owned client/server; GPU compute process query empty",
+  "original_outputs_preserved": true
+}

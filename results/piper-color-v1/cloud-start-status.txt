@@ -1,0 +1,9 @@
+2026-10-24T20:53:46+08:00
+0: pipeline- (1 panes) [80x24] [layout b25d,80x24,0,0,0] @0
+1: progress* (1 panes) [80x24] [layout b25e,80x24,0,0,1] @1 (active)
+session=piper-color-v1 pid=19892 dead=0 exit=
+dataset-audit
+2026-10-24T20:46:52+08:00 dataset-audit
+ 19902       06:54 timeout --signal=TERM --kill-after=60s 3h python -u dataset.py /root/autodl-fs/pi05/piper-color-v1/dataset
+ 19903       06:54 python -u dataset.py /root/autodl-fs/pi05/piper-color-v1/dataset
+147

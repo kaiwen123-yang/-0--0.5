@@ -1,0 +1,7 @@
+{
+  "orchestrator_exit_code": 143,
+  "observation": "All six episode records and final video files existed when orchestration was found terminated; summary had not yet been written. Exact SIGTERM source was not established.",
+  "recovery": "Validated all six episode grids, matching scenes, saved trajectories, joint limits, full-frame robot coverage, and decoded all twelve videos. Regenerated summary solely from validated records. Stopped only the remaining server whose command line matched this run.",
+  "future_cleanup_fix": "Added SIGTERM/SIGINT handling to run_piper_h_demo.py after this run so its finally block can stop owned children. Original executed script is preserved under provenance.",
+  "recording_data_changed": false
+}

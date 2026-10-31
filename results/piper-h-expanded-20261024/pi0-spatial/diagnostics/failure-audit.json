@@ -1,0 +1,2652 @@
+[
+  {
+    "model": "pi0",
+    "task_id": 0,
+    "trial_index": 0,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.0634743669788058,
+      0.20202566461895705,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.05341726860522414,
+      0.20518007059522494,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.07392972065897463,
+    "target_final_xyz": [
+      0.029910241503872018,
+      0.19082330681073584,
+      0.9169354857742229
+    ],
+    "target_plate_final_xy_m": 0.02517835782695141,
+    "bilateral_contact_frames": 23,
+    "one_finger_contact_frames": 27,
+    "nearest_eef_frame": 97,
+    "nearest_eef_distance_m": 0.05447047254499553,
+    "nearest_eef_xyz": [
+      -0.03873627523318601,
+      0.169783103639425,
+      0.9492774842590352
+    ],
+    "gripper_width_at_nearest_m": 0.004465376700876394,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 115,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      29
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 0,
+    "trial_index": 1,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.06430681439238266,
+      0.19694192532901414,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.06130267261569608,
+      0.1950557066679284,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.08136447939639668,
+    "target_final_xyz": [
+      0.04029756613463105,
+      0.18315928878336935,
+      0.9124992037853844
+    ],
+    "target_plate_final_xy_m": 0.022711989913529722,
+    "bilateral_contact_frames": 37,
+    "one_finger_contact_frames": 39,
+    "nearest_eef_frame": 97,
+    "nearest_eef_distance_m": 0.045321765347463204,
+    "nearest_eef_xyz": [
+      -0.05136255256323977,
+      0.15573068584283142,
+      0.9191334639519422
+    ],
+    "gripper_width_at_nearest_m": 0.03049804579271888,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 136,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      52
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 0,
+    "trial_index": 2,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.09867560318328189,
+      0.19747202604585598,
+      0.8990058448535333
+    ],
+    "plate_initial_xyz": [
+      0.06941647765372622,
+      0.20846336067075077,
+      0.9024997364592594
+    ],
+    "target_lift_m": 0.1042428417633453,
+    "target_final_xyz": [
+      0.06248104670682878,
+      0.1965151758076733,
+      0.914261922958569
+    ],
+    "target_plate_final_xy_m": 0.013439895143623353,
+    "bilateral_contact_frames": 37,
+    "one_finger_contact_frames": 40,
+    "nearest_eef_frame": 51,
+    "nearest_eef_distance_m": 0.047819675268218634,
+    "nearest_eef_xyz": [
+      -0.0884241671854981,
+      0.15607568186513654,
+      0.9221773650216608
+    ],
+    "gripper_width_at_nearest_m": 0.026710304898076576,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 71,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      34
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 0,
+    "trial_index": 3,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.04720014081629145,
+      0.20107927688600122,
+      0.8986660793766585
+    ],
+    "plate_initial_xyz": [
+      0.06399926301173475,
+      0.19433494133801762,
+      0.9024981517663807
+    ],
+    "target_lift_m": 0.046258480157287396,
+    "target_final_xyz": [
+      0.07204948533327822,
+      0.16422848331499645,
+      0.9095707905779329
+    ],
+    "target_plate_final_xy_m": 0.03180859762282748,
+    "bilateral_contact_frames": 61,
+    "one_finger_contact_frames": 66,
+    "nearest_eef_frame": 118,
+    "nearest_eef_distance_m": 0.06024622654974643,
+    "nearest_eef_xyz": [
+      0.08654443109497403,
+      0.13240675886879538,
+      0.9596483944580197
+    ],
+    "gripper_width_at_nearest_m": 0.0234786425030791,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      52
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 0,
+    "trial_index": 4,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.046821490904452534,
+      0.18565251044374845,
+      0.8984037837738086
+    ],
+    "plate_initial_xyz": [
+      0.07170763653381694,
+      0.19394437156550726,
+      0.902499621560492
+    ],
+    "target_lift_m": 0.010545034546377452,
+    "target_final_xyz": [
+      -0.04968081519469731,
+      0.19608733544630538,
+      0.8984041501888531
+    ],
+    "target_plate_final_xy_m": 0.12140736532616053,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 2,
+    "nearest_eef_frame": 47,
+    "nearest_eef_distance_m": 0.12458824898504783,
+    "nearest_eef_xyz": [
+      0.005200186928389751,
+      0.08374934563116973,
+      0.9484987270571926
+    ],
+    "gripper_width_at_nearest_m": 0.0933535618770361,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      46
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "trial_index": 0,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.19484799124803148,
+      0.31522075594224097,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.06977817942846122,
+      0.18817272125318465,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.230370960505764,
+    "target_final_xyz": [
+      0.07497793853309744,
+      0.1991465675231536,
+      0.914393089345413
+    ],
+    "target_plate_final_xy_m": 0.011995165740742173,
+    "bilateral_contact_frames": 79,
+    "one_finger_contact_frames": 81,
+    "nearest_eef_frame": 57,
+    "nearest_eef_distance_m": 0.032305867003005244,
+    "nearest_eef_xyz": [
+      -0.1790919762865053,
+      0.29075819636885636,
+      0.916854013672288
+    ],
+    "gripper_width_at_nearest_m": 0.05257921471130933,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      19,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 117,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      56
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "trial_index": 1,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.1652700743153826,
+      0.3131683717418181,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.056665120571230354,
+      0.19763682178916273,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.1837005550256856,
+    "target_final_xyz": [
+      0.065933226807738,
+      0.20421388756026632,
+      0.9182500786660549
+    ],
+    "target_plate_final_xy_m": 0.01136259598940106,
+    "bilateral_contact_frames": 64,
+    "one_finger_contact_frames": 67,
+    "nearest_eef_frame": 56,
+    "nearest_eef_distance_m": 0.06536246820062562,
+    "nearest_eef_xyz": [
+      -0.15419735898631307,
+      0.2733534182669682,
+      0.9481015160819389
+    ],
+    "gripper_width_at_nearest_m": 0.03048412313958429,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 119,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      51
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "trial_index": 2,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.17692425808455878,
+      0.3084077394768394,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.04616740225901307,
+      0.203803741874445,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.21193535124429297,
+    "target_final_xyz": [
+      0.06985238035706941,
+      0.20965722470321568,
+      0.9171579691181283
+    ],
+    "target_plate_final_xy_m": 0.02440041182956126,
+    "bilateral_contact_frames": 77,
+    "one_finger_contact_frames": 82,
+    "nearest_eef_frame": 56,
+    "nearest_eef_distance_m": 0.028414117636548022,
+    "nearest_eef_xyz": [
+      -0.1823149165427787,
+      0.2851653463036478,
+      0.9173590649781396
+    ],
+    "gripper_width_at_nearest_m": 0.055056713045064605,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 112,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      37
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "trial_index": 3,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.18603337786687862,
+      0.33225109590235585,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.05503495122691551,
+      0.19472147955788086,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.21585064649706753,
+    "target_final_xyz": [
+      0.058982961893232,
+      0.21222651885154012,
+      0.9134620643222343
+    ],
+    "target_plate_final_xy_m": 0.0178212538575409,
+    "bilateral_contact_frames": 72,
+    "one_finger_contact_frames": 72,
+    "nearest_eef_frame": 59,
+    "nearest_eef_distance_m": 0.04131917489336505,
+    "nearest_eef_xyz": [
+      -0.17447962668314212,
+      0.30464606752326845,
+      0.9268953322772429
+    ],
+    "gripper_width_at_nearest_m": 0.05152007437690713,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      11,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 128,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      76
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "trial_index": 4,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.17035605894378258,
+      0.3335486532903883,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.046759108261619414,
+      0.19245055141879913,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.21457307356202016,
+    "target_final_xyz": [
+      0.07819521638549301,
+      0.19778910247661008,
+      0.9099910691026618
+    ],
+    "target_plate_final_xy_m": 0.032014888683576166,
+    "bilateral_contact_frames": 66,
+    "one_finger_contact_frames": 90,
+    "nearest_eef_frame": 60,
+    "nearest_eef_distance_m": 0.03966565911189538,
+    "nearest_eef_xyz": [
+      -0.17173856899410672,
+      0.2972804512454457,
+      0.919424844853152
+    ],
+    "gripper_width_at_nearest_m": 0.04026301031334151,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 223,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      72
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "trial_index": 0,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.07499154926640153,
+      0.014961109880627824,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.07160355689736295,
+      0.20039042799571696,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.15074040959285084,
+    "target_final_xyz": [
+      0.06845220290841873,
+      0.20288584126779,
+      0.9141413749164956
+    ],
+    "target_plate_final_xy_m": 0.0040263620966206806,
+    "bilateral_contact_frames": 59,
+    "one_finger_contact_frames": 59,
+    "nearest_eef_frame": 47,
+    "nearest_eef_distance_m": 0.05428802074242033,
+    "nearest_eef_xyz": [
+      -0.08285131155595503,
+      0.06930975111542265,
+      0.9206180200344956
+    ],
+    "gripper_width_at_nearest_m": 0.02740250520245039,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 106,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      41
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "trial_index": 1,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.07499154926640153,
+      -0.0031532350964715026,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.06768787701919134,
+      0.1869358244317293,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.13988114797276374,
+    "target_final_xyz": [
+      0.06593910459045613,
+      0.19392909113691556,
+      0.913734431777361
+    ],
+    "target_plate_final_xy_m": 0.007221216254034209,
+    "bilateral_contact_frames": 55,
+    "one_finger_contact_frames": 60,
+    "nearest_eef_frame": 43,
+    "nearest_eef_distance_m": 0.028667279316124082,
+    "nearest_eef_xyz": [
+      -0.07880355938023062,
+      0.021693473077860594,
+      0.9168320360874024
+    ],
+    "gripper_width_at_nearest_m": 0.05727201903827891,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 100,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      32
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "trial_index": 2,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.07499154926640153,
+      0.007872235836247063,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.054757132755728286,
+      0.20369406579509433,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.15465286458579475,
+    "target_final_xyz": [
+      0.05794366299467537,
+      0.20463190187890762,
+      0.9141561752476792
+    ],
+    "target_plate_final_xy_m": 0.003323483342226065,
+    "bilateral_contact_frames": 57,
+    "one_finger_contact_frames": 59,
+    "nearest_eef_frame": 46,
+    "nearest_eef_distance_m": 0.04861112482301966,
+    "nearest_eef_xyz": [
+      -0.10516500470981707,
+      0.04934145549401393,
+      0.9198176678700667
+    ],
+    "gripper_width_at_nearest_m": 0.028657932503508635,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 103,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      30
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "trial_index": 3,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.07499154926640153,
+      0.008538601448851381,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.05385202911675273,
+      0.20050639411447124,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.13585610676381488,
+    "target_final_xyz": [
+      0.057534902919170836,
+      0.20779883747074915,
+      0.9156445725600302
+    ],
+    "target_plate_final_xy_m": 0.008175872742058278,
+    "bilateral_contact_frames": 52,
+    "one_finger_contact_frames": 54,
+    "nearest_eef_frame": 45,
+    "nearest_eef_distance_m": 0.04551111252894144,
+    "nearest_eef_xyz": [
+      -0.09559236693802725,
+      0.05184161977595712,
+      0.920307571327484
+    ],
+    "gripper_width_at_nearest_m": 0.022307622743804194,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 92,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      33
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "trial_index": 4,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.07499154926640107,
+      -0.004902230370508144,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.0856237185653483,
+      0.19454053204901578,
+      0.9024997189575552
+    ],
+    "target_lift_m": 0.1501242624714585,
+    "target_final_xyz": [
+      0.09251971616302249,
+      0.1905142914793325,
+      0.914128909238619
+    ],
+    "target_plate_final_xy_m": 0.007963036864699959,
+    "bilateral_contact_frames": 53,
+    "one_finger_contact_frames": 53,
+    "nearest_eef_frame": 46,
+    "nearest_eef_distance_m": 0.049172532016452164,
+    "nearest_eef_xyz": [
+      -0.09445484148504532,
+      0.032376648924484296,
+      0.9238875431681217
+    ],
+    "gripper_width_at_nearest_m": 0.02652006740944545,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 88,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      31
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 3,
+    "trial_index": 0,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.06787929100217979,
+      0.02373525691312493,
+      0.9171638481513267
+    ],
+    "plate_initial_xyz": [
+      0.06976893326646029,
+      0.19004476835931372,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.09038166406247217,
+    "target_final_xyz": [
+      0.07373769217442334,
+      0.18601655697808206,
+      0.9165968215961465
+    ],
+    "target_plate_final_xy_m": 0.005643220783506453,
+    "bilateral_contact_frames": 32,
+    "one_finger_contact_frames": 39,
+    "nearest_eef_frame": 49,
+    "nearest_eef_distance_m": 0.041259893122334156,
+    "nearest_eef_xyz": [
+      0.026997771448395626,
+      0.03603926908911352,
+      0.9327765209762885
+    ],
+    "gripper_width_at_nearest_m": 0.052551702087086274,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 83,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      27
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 3,
+    "trial_index": 1,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.07741580145642596,
+      0.042488271095570684,
+      0.9171638481513267
+    ],
+    "plate_initial_xyz": [
+      0.06757807732053621,
+      0.21170738476568188,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.09810173781031861,
+    "target_final_xyz": [
+      0.06687350069667065,
+      0.20678713383567285,
+      0.9117937136473676
+    ],
+    "target_plate_final_xy_m": 0.0049356542605114555,
+    "bilateral_contact_frames": 34,
+    "one_finger_contact_frames": 39,
+    "nearest_eef_frame": 55,
+    "nearest_eef_distance_m": 0.03492366858422458,
+    "nearest_eef_xyz": [
+      0.04796475702090665,
+      0.054698469898753994,
+      0.9340232366781578
+    ],
+    "gripper_width_at_nearest_m": 0.05237484465332253,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 91,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      24
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 3,
+    "trial_index": 2,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.08310020521385943,
+      0.020018592802284435,
+      0.9171638481513267
+    ],
+    "plate_initial_xyz": [
+      0.05096737610542798,
+      0.18865932174808492,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.06998768428022195,
+    "target_final_xyz": [
+      0.05433381683571288,
+      0.16841975005355758,
+      0.9105491901009726
+    ],
+    "target_plate_final_xy_m": 0.01999379128495711,
+    "bilateral_contact_frames": 26,
+    "one_finger_contact_frames": 31,
+    "nearest_eef_frame": 62,
+    "nearest_eef_distance_m": 0.05635262496503272,
+    "nearest_eef_xyz": [
+      0.030802349948783076,
+      0.0738764045571557,
+      0.934831001289252
+    ],
+    "gripper_width_at_nearest_m": 0.026852127418003205,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 89,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      25
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 3,
+    "trial_index": 3,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.07014129106546747,
+      0.0155225536487902,
+      0.9171638481513267
+    ],
+    "plate_initial_xyz": [
+      0.07117109322827114,
+      0.19165760996793163,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.10125131748806737,
+    "target_final_xyz": [
+      0.05831245206945931,
+      0.1924657599346832,
+      0.9119127537376911
+    ],
+    "target_plate_final_xy_m": 0.012899847056530453,
+    "bilateral_contact_frames": 35,
+    "one_finger_contact_frames": 40,
+    "nearest_eef_frame": 54,
+    "nearest_eef_distance_m": 0.02691181287738631,
+    "nearest_eef_xyz": [
+      0.049752176146248994,
+      0.03361739223464398,
+      0.9335542287418978
+    ],
+    "gripper_width_at_nearest_m": 0.0541172609321846,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 90,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      18
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 3,
+    "trial_index": 4,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.07863755713469708,
+      0.03128007968715594,
+      0.9171638481513267
+    ],
+    "plate_initial_xyz": [
+      0.05875361611034734,
+      0.19436147660878667,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.08088460363069072,
+    "target_final_xyz": [
+      0.058558728758642764,
+      0.1891890277307649,
+      0.9091153296084251
+    ],
+    "target_plate_final_xy_m": 0.005149098886807679,
+    "bilateral_contact_frames": 31,
+    "one_finger_contact_frames": 33,
+    "nearest_eef_frame": 61,
+    "nearest_eef_distance_m": 0.04227193330555911,
+    "nearest_eef_xyz": [
+      0.04714113187489313,
+      0.05697931636949149,
+      0.9359652580223004
+    ],
+    "gripper_width_at_nearest_m": 0.02811194277393933,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 92,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      23
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 4,
+    "trial_index": 0,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.08514477629166887,
+      -0.1299960445221062,
+      1.0625599683749734
+    ],
+    "plate_initial_xyz": [
+      0.05507449844045388,
+      0.20966742142625944,
+      0.9024995937037765
+    ],
+    "target_lift_m": 2.1519230841704484e-11,
+    "target_final_xyz": [
+      0.08693826548140605,
+      -0.1259854886306367,
+      1.0625599683744016
+    ],
+    "target_plate_final_xy_m": 0.3371619428479999,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 222,
+    "nearest_eef_distance_m": 0.17081589326455798,
+    "nearest_eef_xyz": [
+      -0.05585852173922543,
+      -0.041890864749206974,
+      1.103960029934247
+    ],
+    "gripper_width_at_nearest_m": 0.09591442061683886,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      48
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 4,
+    "trial_index": 1,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.08665234913832882,
+      -0.14394564902756246,
+      1.0625599683749811
+    ],
+    "plate_initial_xyz": [
+      0.0642640151383375,
+      0.1968852888545865,
+      0.9024995937037765
+    ],
+    "target_lift_m": 1.580646724619328e-11,
+    "target_final_xyz": [
+      0.09346935924546755,
+      -0.13038280374307862,
+      1.0625599683767153
+    ],
+    "target_plate_final_xy_m": 0.32856864820258125,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 175,
+    "nearest_eef_distance_m": 0.16751847542646464,
+    "nearest_eef_xyz": [
+      -0.04488413419118994,
+      -0.041124566793118156,
+      1.0935123077747477
+    ],
+    "gripper_width_at_nearest_m": 0.0963855198020688,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      60
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 4,
+    "trial_index": 2,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.0900359031532898,
+      -0.13349076780662264,
+      1.0625599683749734
+    ],
+    "plate_initial_xyz": [
+      0.046570160267595584,
+      0.18769464514193626,
+      0.9024995937037765
+    ],
+    "target_lift_m": 6.032818689050146e-11,
+    "target_final_xyz": [
+      0.09193929323669109,
+      -0.12950733697648578,
+      1.0625599683748574
+    ],
+    "target_plate_final_xy_m": 0.32043011049188375,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 210,
+    "nearest_eef_distance_m": 0.15623115680095123,
+    "nearest_eef_xyz": [
+      -0.0008097599146387885,
+      -0.015859377331993114,
+      1.0087352943071808
+    ],
+    "gripper_width_at_nearest_m": 0.0988670584974321,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      51
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 4,
+    "trial_index": 3,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.08159394832661393,
+      -0.14297270747959823,
+      1.0625599683749734
+    ],
+    "plate_initial_xyz": [
+      0.07443164162405062,
+      0.21429309899781007,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.015650283007605736,
+    "target_final_xyz": [
+      0.06607945784488019,
+      -0.10404639232934491,
+      1.0625599683749989
+    ],
+    "target_plate_final_xy_m": 0.31844903946654024,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 98,
+    "nearest_eef_frame": 74,
+    "nearest_eef_distance_m": 0.06776282662418205,
+    "nearest_eef_xyz": [
+      0.010938770410925246,
+      -0.06104191352174176,
+      1.0803694859503619
+    ],
+    "gripper_width_at_nearest_m": 0.040703180788970214,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      110,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 194,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      127
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 4,
+    "trial_index": 4,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.09261623191075194,
+      -0.13092483074590894,
+      1.0625599683749734
+    ],
+    "plate_initial_xyz": [
+      0.052909346660356196,
+      0.20216527223674366,
+      0.9024995937037765
+    ],
+    "target_lift_m": 1.3965495426759844e-11,
+    "target_final_xyz": [
+      0.09354348934206771,
+      -0.12910772078410962,
+      1.0625599683736477
+    ],
+    "target_plate_final_xy_m": 0.33375579318010484,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 182,
+    "nearest_eef_distance_m": 0.1656207267279954,
+    "nearest_eef_xyz": [
+      -0.0525698945696277,
+      -0.05662515294948522,
+      1.09117083587769
+    ],
+    "gripper_width_at_nearest_m": 0.09642750857548749,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      51
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 5,
+    "trial_index": 0,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.2114220518053513,
+      0.202155879961702,
+      0.9343992920324057
+    ],
+    "plate_initial_xyz": [
+      0.07346816781788112,
+      0.18547477337762588,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.14031428953492997,
+    "target_final_xyz": [
+      0.07778377890853318,
+      0.19385872598673184,
+      0.9144609128282312
+    ],
+    "target_plate_final_xy_m": 0.00941787553099064,
+    "bilateral_contact_frames": 65,
+    "one_finger_contact_frames": 69,
+    "nearest_eef_frame": 47,
+    "nearest_eef_distance_m": 0.04586658947041436,
+    "nearest_eef_xyz": [
+      -0.20087679647951803,
+      0.15848593519720353,
+      0.953780553233869
+    ],
+    "gripper_width_at_nearest_m": 0.03476124996918252,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 76,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      51
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 5,
+    "trial_index": 1,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.22758802642637424,
+      0.18960085696258192,
+      0.9343992920319261
+    ],
+    "plate_initial_xyz": [
+      0.06060510782527537,
+      0.19244251907373197,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.14380954915865962,
+    "target_final_xyz": [
+      0.06068897031024781,
+      0.20422190210670282,
+      0.9169082618421851
+    ],
+    "target_plate_final_xy_m": 0.011778880387474948,
+    "bilateral_contact_frames": 69,
+    "one_finger_contact_frames": 69,
+    "nearest_eef_frame": 40,
+    "nearest_eef_distance_m": 0.059768285506840234,
+    "nearest_eef_xyz": [
+      -0.18929134365799094,
+      0.14968039688934281,
+      0.9616778720339302
+    ],
+    "gripper_width_at_nearest_m": 0.014253111432490955,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 76,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      50
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 5,
+    "trial_index": 2,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.22211359368124708,
+      0.19678800530221338,
+      0.9343992920326433
+    ],
+    "plate_initial_xyz": [
+      0.049885784260636355,
+      0.20180292461853344,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.12735111515844466,
+    "target_final_xyz": [
+      0.047984368567869314,
+      0.19659032490456818,
+      0.9142255226647693
+    ],
+    "target_plate_final_xy_m": 0.005693301982334022,
+    "bilateral_contact_frames": 53,
+    "one_finger_contact_frames": 62,
+    "nearest_eef_frame": 41,
+    "nearest_eef_distance_m": 0.04592727268786096,
+    "nearest_eef_xyz": [
+      -0.2190307714649477,
+      0.15195588308169208,
+      0.9555130231606699
+    ],
+    "gripper_width_at_nearest_m": 0.042297066691877716,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 64,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      45
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 5,
+    "trial_index": 3,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.2112796504539976,
+      0.18872383040333984,
+      0.9343992920285857
+    ],
+    "plate_initial_xyz": [
+      0.045469945556337675,
+      0.20082939373148354,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.12695887654373839,
+    "target_final_xyz": [
+      0.043925390064454874,
+      0.2092396670187045,
+      0.9158173696311087
+    ],
+    "target_plate_final_xy_m": 0.0080931786182599,
+    "bilateral_contact_frames": 61,
+    "one_finger_contact_frames": 65,
+    "nearest_eef_frame": 42,
+    "nearest_eef_distance_m": 0.05044439654821976,
+    "nearest_eef_xyz": [
+      -0.20225463336758576,
+      0.13505207394347304,
+      0.9538785544707618
+    ],
+    "gripper_width_at_nearest_m": 0.033636240286733426,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 65,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      41
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 5,
+    "trial_index": 4,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.21163484004065528,
+      0.18978809452515777,
+      0.934399292032811
+    ],
+    "plate_initial_xyz": [
+      0.055407553313988424,
+      0.19015083281190742,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.12600818503935507,
+    "target_final_xyz": [
+      0.05928012768430529,
+      0.19677948161644326,
+      0.9161114103861522
+    ],
+    "target_plate_final_xy_m": 0.007675790127931762,
+    "bilateral_contact_frames": 57,
+    "one_finger_contact_frames": 58,
+    "nearest_eef_frame": 42,
+    "nearest_eef_distance_m": 0.05156216338923806,
+    "nearest_eef_xyz": [
+      -0.19203899865659568,
+      0.14445149919330164,
+      0.9542997916619268
+    ],
+    "gripper_width_at_nearest_m": 0.027544368484365818,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 70,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      41
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 6,
+    "trial_index": 0,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.1373446163445185,
+      -0.07046842643838834,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.06890651203755975,
+      0.19442107256801644,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.09667096640369621,
+    "target_final_xyz": [
+      0.07122376008993532,
+      0.1791778646817794,
+      0.9171424422511844
+    ],
+    "target_plate_final_xy_m": 0.015407583018303844,
+    "bilateral_contact_frames": 43,
+    "one_finger_contact_frames": 47,
+    "nearest_eef_frame": 63,
+    "nearest_eef_distance_m": 0.05753290573758675,
+    "nearest_eef_xyz": [
+      0.10112224196212329,
+      -0.03645479460416287,
+      0.9297888248207586
+    ],
+    "gripper_width_at_nearest_m": 0.1000968279486331,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 113,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      28
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 6,
+    "trial_index": 1,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.12151319876643936,
+      -0.0782698942570071,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.047273619442805115,
+      0.21029847959808654,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.11795148936460298,
+    "target_final_xyz": [
+      0.06722647958932224,
+      0.20582346487151745,
+      0.9157952662885014
+    ],
+    "target_plate_final_xy_m": 0.020414897083481532,
+    "bilateral_contact_frames": 54,
+    "one_finger_contact_frames": 57,
+    "nearest_eef_frame": 78,
+    "nearest_eef_distance_m": 0.061091443135863704,
+    "nearest_eef_xyz": [
+      0.07654782933314194,
+      -0.016120060800255118,
+      0.9334290312582666
+    ],
+    "gripper_width_at_nearest_m": 0.018045021857751652,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 132,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      47
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 6,
+    "trial_index": 2,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.1274151285229052,
+      -0.056389107511052805,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.07469388091205068,
+      0.21391102943832738,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.11068121997747316,
+    "target_final_xyz": [
+      0.060330829186122245,
+      0.19916705101172677,
+      0.9157472246623756
+    ],
+    "target_plate_final_xy_m": 0.020242471782385175,
+    "bilateral_contact_frames": 50,
+    "one_finger_contact_frames": 59,
+    "nearest_eef_frame": 76,
+    "nearest_eef_distance_m": 0.06100912832685771,
+    "nearest_eef_xyz": [
+      0.06784887631501632,
+      0.010566936623176176,
+      0.9324576397312265
+    ],
+    "gripper_width_at_nearest_m": 0.022008580940614524,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 126,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      46
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 6,
+    "trial_index": 3,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.12218783098078015,
+      -0.05639340386345026,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.04865004250996939,
+      0.21192296190819046,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.10256378546638456,
+    "target_final_xyz": [
+      0.05584370239153529,
+      0.19803261234465294,
+      0.9151285066675809
+    ],
+    "target_plate_final_xy_m": 0.0150808732710602,
+    "bilateral_contact_frames": 51,
+    "one_finger_contact_frames": 57,
+    "nearest_eef_frame": 68,
+    "nearest_eef_distance_m": 0.05561664032388797,
+    "nearest_eef_xyz": [
+      0.07819747133377783,
+      -0.028903223551964768,
+      0.9288819012573386
+    ],
+    "gripper_width_at_nearest_m": 0.10038100245363862,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 126,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      33
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 6,
+    "trial_index": 4,
+    "policy_success": true,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.11581564147357766,
+      -0.06033436452378639,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.052741796611470756,
+      0.19228135637501007,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.10843250888979972,
+    "target_final_xyz": [
+      0.060865032295154345,
+      0.19258846723514275,
+      0.9130377650145888
+    ],
+    "target_plate_final_xy_m": 0.008081190473553915,
+    "bilateral_contact_frames": 49,
+    "one_finger_contact_frames": 56,
+    "nearest_eef_frame": 65,
+    "nearest_eef_distance_m": 0.04740269915613381,
+    "nearest_eef_xyz": [
+      0.08127130399946633,
+      -0.039081067173368046,
+      0.9301126098560586
+    ],
+    "gripper_width_at_nearest_m": 0.10005798870114321,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 121,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      56
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 7,
+    "trial_index": 0,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.262143712978074,
+      -0.13143926021762478,
+      0.9289032295256588
+    ],
+    "plate_initial_xyz": [
+      0.060082215654817216,
+      0.20497376773526524,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.04195443096305762,
+    "target_final_xyz": [
+      -0.29970712163423646,
+      -0.14523233384462292,
+      0.9289041501888531
+    ],
+    "target_plate_final_xy_m": 0.5020883197660339,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 15,
+    "nearest_eef_frame": 45,
+    "nearest_eef_distance_m": 0.08711231041313906,
+    "nearest_eef_xyz": [
+      -0.24760946463005284,
+      -0.05847781785079773,
+      0.9424624053287464
+    ],
+    "gripper_width_at_nearest_m": 0.07180520277477989,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 11,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      129
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 7,
+    "trial_index": 1,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.2588067361504948,
+      -0.12264544202885655,
+      0.9289032295256588
+    ],
+    "plate_initial_xyz": [
+      0.06437422328408449,
+      0.2113265238696912,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.04276456566056119,
+    "target_final_xyz": [
+      -0.33349498712512826,
+      -0.1450354408591514,
+      0.9698033186312766
+    ],
+    "target_plate_final_xy_m": 0.5341289718159262,
+    "bilateral_contact_frames": 92,
+    "one_finger_contact_frames": 176,
+    "nearest_eef_frame": 230,
+    "nearest_eef_distance_m": 0.06282867229481297,
+    "nearest_eef_xyz": [
+      -0.2843223841978527,
+      -0.11129198424917326,
+      0.9500327263362538
+    ],
+    "gripper_width_at_nearest_m": 1.7987765721030045e-06,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 11,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      135
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 7,
+    "trial_index": 2,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.2512276621550094,
+      -0.15504229678109618,
+      0.9289032295256588
+    ],
+    "plate_initial_xyz": [
+      0.05785942003873066,
+      0.1936611857952136,
+      0.9024995937037765
+    ],
+    "target_lift_m": 9.206631942371146e-07,
+    "target_final_xyz": [
+      -0.25122765545007564,
+      -0.1550422964988337,
+      0.9289041501888531
+    ],
+    "target_plate_final_xy_m": 0.46597096350719314,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 0,
+    "nearest_eef_distance_m": 0.17761773582917137,
+    "nearest_eef_xyz": [
+      -0.1999998834475679,
+      2.119197645314587e-08,
+      1.0800001256986753
+    ],
+    "gripper_width_at_nearest_m": 0.1,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      6,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 24,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      69
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 7,
+    "trial_index": 3,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.2664398409390217,
+      -0.13413402027740218,
+      0.9289032295256588
+    ],
+    "plate_initial_xyz": [
+      0.05701479539464731,
+      0.20053543020855502,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.04099338414720832,
+    "target_final_xyz": [
+      -0.28282999837500344,
+      -0.15685880653123993,
+      0.9289041501888531
+    ],
+    "target_plate_final_xy_m": 0.4931785927451528,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 10,
+    "nearest_eef_frame": 41,
+    "nearest_eef_distance_m": 0.0914920329508356,
+    "nearest_eef_xyz": [
+      -0.25330876139168557,
+      -0.05207097498001323,
+      0.944811812940835
+    ],
+    "gripper_width_at_nearest_m": 0.03916917494926354,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      14,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 11,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      98
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 7,
+    "trial_index": 4,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.2550239428114414,
+      -0.13317456083146315,
+      0.9289032295256588
+    ],
+    "plate_initial_xyz": [
+      0.05763518360392316,
+      0.19370767542516826,
+      0.9024995937037765
+    ],
+    "target_lift_m": 9.206631942371146e-07,
+    "target_final_xyz": [
+      -0.2550814611554034,
+      -0.13320963313288864,
+      0.9289041501888531
+    ],
+    "target_plate_final_xy_m": 0.4524009577535921,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 2,
+    "nearest_eef_frame": 41,
+    "nearest_eef_distance_m": 0.08637395952886577,
+    "nearest_eef_xyz": [
+      -0.21933319312592223,
+      -0.05594124940635559,
+      0.9434684542121374
+    ],
+    "gripper_width_at_nearest_m": 0.05489494998652869,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 14,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      145
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 8,
+    "trial_index": 0,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.007137055766551898,
+      0.2982463186170342,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.05518606344433317,
+      0.18896035738620773,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.03240124876675465,
+    "target_final_xyz": [
+      0.013728000115234142,
+      0.31916023980532315,
+      0.8999344565804753
+    ],
+    "target_plate_final_xy_m": 0.1373215494885571,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 14,
+    "nearest_eef_frame": 229,
+    "nearest_eef_distance_m": 0.034350770900991395,
+    "nearest_eef_xyz": [
+      0.025383129028512176,
+      0.3063306909355368,
+      0.9311838396598673
+    ],
+    "gripper_width_at_nearest_m": 0.09951045166293548,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      14,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 184,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      88
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 8,
+    "trial_index": 1,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.016733764424946743,
+      0.32072485031068526,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.04719538685747778,
+      0.20471528334718775,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.16360482966006318,
+    "target_final_xyz": [
+      0.099028808851843,
+      0.1740502920927242,
+      0.9078176284258209
+    ],
+    "target_plate_final_xy_m": 0.060385001088056195,
+    "bilateral_contact_frames": 143,
+    "one_finger_contact_frames": 148,
+    "nearest_eef_frame": 230,
+    "nearest_eef_distance_m": 0.0598656212000697,
+    "nearest_eef_xyz": [
+      0.09266929575121122,
+      0.12451569621554064,
+      0.9408293385614264
+    ],
+    "gripper_width_at_nearest_m": 0.00616753932563004,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      122
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 8,
+    "trial_index": 2,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.016725187782894783,
+      0.3140182610601824,
+      0.8984039982684161
+    ],
+    "plate_initial_xyz": [
+      0.08365533713073413,
+      0.20506557045873766,
+      0.9024997855237054
+    ],
+    "target_lift_m": 1.5192043700817948e-07,
+    "target_final_xyz": [
+      -0.016725171100068326,
+      0.31401826387395193,
+      0.8984041501888531
+    ],
+    "target_plate_final_xy_m": 0.14794499258701457,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 90,
+    "nearest_eef_distance_m": 0.14385714108979755,
+    "nearest_eef_xyz": [
+      -0.15107070088756092,
+      0.2662436847028312,
+      0.9174762568808308
+    ],
+    "gripper_width_at_nearest_m": 0.03917760663506209,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      16,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 155,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      107
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 8,
+    "trial_index": 3,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.013870447495560915,
+      0.3242304802643115,
+      0.8984038548678486
+    ],
+    "plate_initial_xyz": [
+      0.05428204456314849,
+      0.20187543692109947,
+      0.9024996740813666
+    ],
+    "target_lift_m": 0.15157883159009566,
+    "target_final_xyz": [
+      0.09525332832392999,
+      0.1845389935612419,
+      0.9105724187993618
+    ],
+    "target_plate_final_xy_m": 0.04165936726605598,
+    "bilateral_contact_frames": 68,
+    "one_finger_contact_frames": 92,
+    "nearest_eef_frame": 159,
+    "nearest_eef_distance_m": 0.04568876697257237,
+    "nearest_eef_xyz": [
+      0.00892425650564958,
+      0.3020998005135599,
+      0.9269752017330405
+    ],
+    "gripper_width_at_nearest_m": 0.0515180295754456,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      118
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 8,
+    "trial_index": 4,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      -0.03838870603690324,
+      0.33475956418872715,
+      0.8984038476467238
+    ],
+    "plate_initial_xyz": [
+      0.07495402383809549,
+      0.20134636245453225,
+      0.9024997262681559
+    ],
+    "target_lift_m": 3.025421293489927e-07,
+    "target_final_xyz": [
+      -0.038388705179386994,
+      0.3347595767119585,
+      0.8984041501888531
+    ],
+    "target_plate_final_xy_m": 0.17549454329941377,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 80,
+    "nearest_eef_distance_m": 0.11754438709847925,
+    "nearest_eef_xyz": [
+      -0.14867630925142028,
+      0.3038368384136798,
+      0.9248070209142825
+    ],
+    "gripper_width_at_nearest_m": 0.013100634957755883,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      17,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 178,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      120
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 9,
+    "trial_index": 0,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.03896156716367369,
+      -0.26517986510022856,
+      1.126399968394474
+    ],
+    "plate_initial_xyz": [
+      0.0482258084093372,
+      0.21470303051252904,
+      0.9024995937037765
+    ],
+    "target_lift_m": 1.580957587066223e-13,
+    "target_final_xyz": [
+      0.03896156716367369,
+      -0.26517986510022856,
+      1.1263999683946322
+    ],
+    "target_plate_final_xy_m": 0.4799723113940335,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 48,
+    "nearest_eef_distance_m": 0.12817676143087925,
+    "nearest_eef_xyz": [
+      -0.04578547993674119,
+      -0.17275027068174897,
+      1.15293278306447
+    ],
+    "gripper_width_at_nearest_m": 0.09454705499229746,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      20,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      44
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 9,
+    "trial_index": 1,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.05556360823274024,
+      -0.2756041592179404,
+      1.126399968394474
+    ],
+    "plate_initial_xyz": [
+      0.04645925483016096,
+      0.1969109155581833,
+      0.9024995937037765
+    ],
+    "target_lift_m": 1.580957587066223e-13,
+    "target_final_xyz": [
+      0.05556360823274024,
+      -0.2756041592179404,
+      1.1263999683946322
+    ],
+    "target_plate_final_xy_m": 0.4726027773701623,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 36,
+    "nearest_eef_distance_m": 0.31742342075658964,
+    "nearest_eef_xyz": [
+      -0.06255794521136353,
+      0.01620775068337065,
+      1.1670292176679793
+    ],
+    "gripper_width_at_nearest_m": 0.10000020820632831,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      35
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 9,
+    "trial_index": 2,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.014806736301040572,
+      -0.2921326357249765,
+      1.126399968394474
+    ],
+    "plate_initial_xyz": [
+      0.0742359362281629,
+      0.20074611241080148,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.016200219180658948,
+    "target_final_xyz": [
+      0.007590332207515972,
+      -0.30867746380799754,
+      1.1365594739571516
+    ],
+    "target_plate_final_xy_m": 0.5137645536466355,
+    "bilateral_contact_frames": 7,
+    "one_finger_contact_frames": 38,
+    "nearest_eef_frame": 230,
+    "nearest_eef_distance_m": 0.06888225624509924,
+    "nearest_eef_xyz": [
+      -0.047679258225334725,
+      -0.2719028506937177,
+      1.1549351488861301
+    ],
+    "gripper_width_at_nearest_m": 0.051557520701616844,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      51,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 220,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      68
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 9,
+    "trial_index": 3,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.030110106647058352,
+      -0.2934217347026706,
+      1.126399968394474
+    ],
+    "plate_initial_xyz": [
+      0.05999817213402217,
+      0.20461974971527963,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.0052260411862528056,
+    "target_final_xyz": [
+      0.03561622508210434,
+      -0.29610442035052215,
+      1.1263999683946324
+    ],
+    "target_plate_final_xy_m": 0.5013174382259746,
+    "bilateral_contact_frames": 1,
+    "one_finger_contact_frames": 51,
+    "nearest_eef_frame": 178,
+    "nearest_eef_distance_m": 0.06878145648166702,
+    "nearest_eef_xyz": [
+      -0.030879118778380746,
+      -0.2811660896543115,
+      1.1671338502102417
+    ],
+    "gripper_width_at_nearest_m": 0.0998116377188966,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      86,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      56
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 9,
+    "trial_index": 4,
+    "policy_success": false,
+    "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "target_initial_xyz": [
+      0.04490888116544221,
+      -0.26054847983166,
+      1.126399968394474
+    ],
+    "plate_initial_xyz": [
+      0.051458473648824166,
+      0.18794096459952536,
+      0.9024995937037765
+    ],
+    "target_lift_m": 1.580957587066223e-13,
+    "target_final_xyz": [
+      0.04490888116544221,
+      -0.26054847983166,
+      1.1263999683946322
+    ],
+    "target_plate_final_xy_m": 0.4485372659688259,
+    "bilateral_contact_frames": 0,
+    "one_finger_contact_frames": 0,
+    "nearest_eef_frame": 92,
+    "nearest_eef_distance_m": 0.16229883784521038,
+    "nearest_eef_xyz": [
+      0.00452528613303348,
+      -0.10693495822625129,
+      1.093038853333098
+    ],
+    "gripper_width_at_nearest_m": 0.039020082778615905,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 231,
+    "rotvec_comparison_note": "Historical raw quaternion diagnostic only; not an error count for the v2 positive-x hemisphere adapter.",
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      24
+    ]
+  }
+]

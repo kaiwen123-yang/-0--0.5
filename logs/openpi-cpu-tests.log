@@ -1,0 +1,26 @@
+.......................................                                  [100%]
+=============================== warnings summary ===============================
+src/openpi/models/pi0_test.py::test_pi0_full_finetune
+src/openpi/models/pi0_test.py::test_pi0_full_finetune
+src/openpi/models/pi0_test.py::test_pi0_gemma_lora
+src/openpi/models/pi0_test.py::test_pi0_gemma_lora
+src/openpi/models/pi0_test.py::test_pi0_action_expert_lora
+src/openpi/models/pi0_test.py::test_pi0_action_expert_lora
+src/openpi/models/pi0_test.py::test_pi0_all_lora
+src/openpi/models/pi0_test.py::test_pi0_all_lora
+  /home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/jax/extend/linear_util.py:38: DeprecationWarning: linear_util.wrap_init is missing a DebugInfo object. This behavior is deprecated, use api_util.debug_info() to construct a proper DebugInfo object and propagate it to this function. See https://github.com/jax-ml/jax/issues/26480 for more details.
+    debug_info = debug_info or _missing_debug_info("linear_util.wrap_init")
+
+src/openpi/models/pi0_test.py::test_pi0_full_finetune
+src/openpi/models/pi0_test.py::test_pi0_full_finetune
+src/openpi/models/pi0_test.py::test_pi0_gemma_lora
+src/openpi/models/pi0_test.py::test_pi0_gemma_lora
+src/openpi/models/pi0_test.py::test_pi0_action_expert_lora
+src/openpi/models/pi0_test.py::test_pi0_action_expert_lora
+src/openpi/models/pi0_test.py::test_pi0_all_lora
+src/openpi/models/pi0_test.py::test_pi0_all_lora
+  /home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/flax/core/scope.py:959: DeprecationWarning: shape requires ndarray or scalar arguments, got <class 'jax._src.api.ShapeDtypeStruct'> at position 0. In a future JAX release this will be an error.
+    if jnp.shape(val) != jnp.shape(abs_val):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+39 passed, 16 warnings in 3.66s

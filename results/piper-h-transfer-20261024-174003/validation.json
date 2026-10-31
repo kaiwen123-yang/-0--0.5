@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-24T09:44:14.438728+00:00",
+  "episodes": 6,
+  "video_files": 12,
+  "matched_scene_pairs": 0,
+  "full_video_decode": true,
+  "panorama_contains_entire_robot_in_all_saved_frames": true,
+  "projection_method": "Conservative camera-space visual mesh bounding spheres; all projected extents below 1",
+  "artifacts": [
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_000/panorama.mp4",
+      "frames": 74,
+      "sha256": "b756dc51584c60f5648a11f080a3d73acc28a634c5c37017addc84ed2d032fcd",
+      "max_robot_projected_extent": 0.5379534637845084,
+      "joint_limit_violation_rad": 0.0016310927838159017
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_000/multiview.mp4",
+      "frames": 74,
+      "sha256": "71ebd3950f1b2872cecea2abc8a923e95357ae1cc0e29020717c9e6c0dd942a9",
+      "max_robot_projected_extent": 0.5379534637845084,
+      "joint_limit_violation_rad": 0.0016310927838159017
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_001/panorama.mp4",
+      "frames": 231,
+      "sha256": "d6cd3505e5c12d2080e7a9ff875810a304543fd11e8ded71556a0fce6b517f81",
+      "max_robot_projected_extent": 0.5382293493094479,
+      "joint_limit_violation_rad": 0.0013315465453107578
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_001/multiview.mp4",
+      "frames": 231,
+      "sha256": "35bb5278c08631b07044b08901d647ffc4a733ffd483b283d7ab37680384b0b6",
+      "max_robot_projected_extent": 0.5382293493094479,
+      "joint_limit_violation_rad": 0.0013315465453107578
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_000/panorama.mp4",
+      "frames": 112,
+      "sha256": "af65f166c523684a3c90c1eb4b5ca31d293d9eb827ae518d82c5af2fd432c9e7",
+      "max_robot_projected_extent": 0.5378710894999091,
+      "joint_limit_violation_rad": 0.0022560403366576054
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_000/multiview.mp4",
+      "frames": 112,
+      "sha256": "30bdb62206876a53107ffbc78f20456ecb7f665c3ec1986db097ea7bb194590c",
+      "max_robot_projected_extent": 0.5378710894999091,
+      "joint_limit_violation_rad": 0.0022560403366576054
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_001/panorama.mp4",
+      "frames": 110,
+      "sha256": "ccb7537f814c15d5bca11ea3da5d90d618b2be3fac1559295e1c37e42cee9bfc",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.002571901925986886
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_001/multiview.mp4",
+      "frames": 110,
+      "sha256": "e21ed3fd5dea40761b84c0b77be56ba7e202b9f6e744aafe0e8a64eeeba0c700",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.002571901925986886
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_000/panorama.mp4",
+      "frames": 86,
+      "sha256": "db076f3e1b28f802c1a38f3185d3d9cb98d6a1a828fdc5878da8dc2baf48930a",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.001187691198761165
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_000/multiview.mp4",
+      "frames": 86,
+      "sha256": "b649cf0de6d4459e1edf9e9fe54da9657be187d57a46266bb7d3c72485c3941c",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.001187691198761165
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_001/panorama.mp4",
+      "frames": 128,
+      "sha256": "b16be1557feb98e30a93f2b440c56a6dacc108e89ac13ec0356202501fc168b9",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0005032252443841756
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_001/multiview.mp4",
+      "frames": 128,
+      "sha256": "37981c826a13b4466b2a16776295c75d54919a9da903d39fb45a454b76a09f61",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0005032252443841756
+    }
+  ]
+}

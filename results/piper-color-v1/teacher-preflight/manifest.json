@@ -1,0 +1,535 @@
+{
+  "task": "piper_h_color_pick_v1",
+  "data_source": "synthetic_scripted_ik",
+  "hardware_execution": false,
+  "fps": 20,
+  "split_unit": "layout_seed_including_all_color_prompts",
+  "split_seeds": {
+    "preflight": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "action": "commanded_absolute_joint_radians_6_and_gripper_opening_metres_1",
+  "episodes": [
+    {
+      "layout_seed": 0,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13925102409774243,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14389327657862788,
+          0.1585100890971905,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.19622843330239237,
+          -0.023442843836223796,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.14285274132978656,
+          -0.16353722620724362,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00000_red.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 0,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13834387577799406,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2311650727529667,
+          -0.15644597201673424,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1131044574980108,
+          0.139268172625217,
+          0.025393255988701225
+        ],
+        "blue": [
+          -0.14285274132978656,
+          -0.16353722620724362,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00000_green.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 0,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13827851425451387
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2311650727529667,
+          -0.15644597201673424,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19622843330239237,
+          -0.023442843836223796,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.1460886442475588,
+          0.15753908871851902,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00000_blue.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 1,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13827472599956026,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12930409208504925,
+          0.13818169812859618,
+          0.02539325598870127
+        ],
+        "green": [
+          -0.1399635308447422,
+          -0.13743781548221257,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2346689945083928,
+          -0.13738701650092885,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00001_red.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 1,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13835518687000803,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21026871934176092,
+          -0.03714685942876898,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15114356744216584,
+          0.15544846469802637,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.2346689945083928,
+          -0.13738701650092885,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00001_green.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 1,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13838952379628428
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21026871934176092,
+          -0.03714685942876898,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1399635308447422,
+          -0.13743781548221257,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1436234141673383,
+          0.15653088997274484,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00001_blue.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 2,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13818776092309787,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1533670505892716,
+          0.15414853887890884,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.24167486023684862,
+          -0.1556422479823873,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.12120167926336016,
+          -0.16142635362224536,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00002_red.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 2,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1395286715636173,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20219718527296168,
+          -0.028600305249269757,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.1480957809098959,
+          0.15640828162696538,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.12120167926336016,
+          -0.16142635362224536,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00002_green.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 2,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1384394892430002
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20219718527296168,
+          -0.028600305249269757,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.24167486023684862,
+          -0.1556422479823873,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15335484382766087,
+          0.15427010147750725,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00002_blue.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 3,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13832666298899698,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1481740272688463,
+          0.15618485275990904,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.24660182331247,
+          -0.15736930581329786,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.21636439801537644,
+          -0.03687244567337874,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00003_red.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 3,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1392514680601309,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12156431497422089,
+          -0.14769946299217823,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.14552052298268917,
+          0.15625606712176862,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.21636439801537644,
+          -0.03687244567337874,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00003_green.npz",
+      "video": null
+    },
+    {
+      "layout_seed": 3,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13833362214362216
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12156431497422089,
+          -0.14769946299217823,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.24660182331247,
+          -0.15736930581329786,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14666641257997567,
+          0.1564828505500056,
+          0.025393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "preflight",
+      "file": "preflight/layout_00003_blue.npz",
+      "video": null
+    }
+  ],
+  "elapsed_seconds": 6.5363461359957
+}

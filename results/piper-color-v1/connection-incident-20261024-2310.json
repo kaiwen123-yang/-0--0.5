@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-24T15:14:02.878573+00:00",
+  "timezone": "Asia/Shanghai",
+  "observed": "SSH connect.westd.seetacloud.com:47745 consistently returns Connection refused; no latest cloud files read",
+  "platform_schedule_evidence": {
+    "source_thread": "01a16d34-479f-7911-9cd3-c44c5c8db349",
+    "instance_id": "f3c348b58e-affc060f",
+    "scheduled_shutdown": "2026-10-24T22:00:00+08:00",
+    "evidence": "Other thread final message explicitly states the AutoDL console 22:00 automatic shutdown remained enabled"
+  },
+  "shutdown_cause_confirmed": false,
+  "probable_cause": "Platform shutdown timer; needs console verification",
+  "correction": "Previous claim that automatic shutdown was not enabled was unsupported: task script had no shutdown command, but the platform timer was not checked.",
+  "last_direct_training_observation": {
+    "checked_at": "2026-10-24T21:02:56+08:00",
+    "mode": "lora",
+    "step": 124,
+    "planned_steps": 1500
+  },
+  "latest_training_and_evaluation_results": "LoRA complete at 1500, validation 0/15; full interrupted at 1456 with committed checkpoint approximately step 1000",
+  "requested_user_action": "Check existing instance, power on if off, clear obsolete timer, provide current SSH command if changed",
+  "hardware_execution": false,
+  "access_restored_no_gpu": true,
+  "restored_observed_at": "2026-10-24T23:18:20+08:00",
+  "user_reported_normal_boot_error": "insufficient idle CPU",
+  "restored_results": "cloud-recovery-20261024/recovery-status.json"
+}

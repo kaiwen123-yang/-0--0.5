@@ -1,0 +1,1 @@
+Third-party notices are preserved from the source snapshots. See publication/upstream-provenance.json for exact commits. agx_arm_urdf had no root LICENSE in the captured snapshot; this repository does not relicense those resources.

@@ -1,0 +1,712 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-24T10:33:18.231219+00:00",
+  "episodes": 50,
+  "video_files": 100,
+  "matched_scene_pairs": 0,
+  "full_video_decode": true,
+  "panorama_contains_entire_robot_in_all_saved_frames": true,
+  "projection_method": "Conservative camera-space visual mesh bounding spheres; all projected extents below 1",
+  "artifacts": [
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_000/panorama.mp4",
+      "frames": 80,
+      "sha256": "838181c5a7b552f7e053feb06eb835e7dba0a8c05d05d78d8f587dc009fc3c7b",
+      "max_robot_projected_extent": 0.5379527018117176,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_000/multiview.mp4",
+      "frames": 80,
+      "sha256": "e31cfdfa9d73cb57f1b10862bac05fcf6b8fdef16ad95afdb4b8b10e9bdb6369",
+      "max_robot_projected_extent": 0.5379527018117176,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_001/panorama.mp4",
+      "frames": 86,
+      "sha256": "1bca56b930e73e071b0acac366a790f574e50937cc94b4365879223b968a032d",
+      "max_robot_projected_extent": 0.5382262199112293,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_001/multiview.mp4",
+      "frames": 86,
+      "sha256": "de08028354afb27b2125e9ec4a3e8473c79783f182b0552b37564909bb83a18e",
+      "max_robot_projected_extent": 0.5382262199112293,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_002/panorama.mp4",
+      "frames": 92,
+      "sha256": "9afcdbb9174363522c08587c3fdd0be94c87ab2ac6e37aa0c165a9857c589d80",
+      "max_robot_projected_extent": 0.5378990986358873,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_002/multiview.mp4",
+      "frames": 92,
+      "sha256": "a827d4276feddae71e123bbf584759451d038ca84c991b52323eb7d1786a75eb",
+      "max_robot_projected_extent": 0.5378990986358873,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_003/panorama.mp4",
+      "frames": 85,
+      "sha256": "2868e438bbec8f3dc9cda952b1e363824fd7491590ac93a5560eddd9a2eb2ee9",
+      "max_robot_projected_extent": 0.5379684260525583,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_003/multiview.mp4",
+      "frames": 85,
+      "sha256": "58c9314b2fc6a3317a88ad629fe3c66ffd1e56fd593b3eabd8d8ac149ce78d8a",
+      "max_robot_projected_extent": 0.5379684260525583,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_004/panorama.mp4",
+      "frames": 86,
+      "sha256": "523fd71a613913888e356d39511f2326a6965a119f0c5e551221cf5604846cf7",
+      "max_robot_projected_extent": 0.5379324680457483,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_00/trial_004/multiview.mp4",
+      "frames": 86,
+      "sha256": "244194ebf9fade84a57dabda6ff061134509c613437bf38dc55b6983d3ce026f",
+      "max_robot_projected_extent": 0.5379324680457483,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_000/panorama.mp4",
+      "frames": 116,
+      "sha256": "a5213bf9f46e8fe2ce70086cfc39ce3397588fa803fe3bbf66fbbc71cffdeb6a",
+      "max_robot_projected_extent": 0.5378683936364225,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_000/multiview.mp4",
+      "frames": 116,
+      "sha256": "840f3c8cf56720a04d70071fe39236f2dd0179cc9a1387fc7bc99e9afae73a50",
+      "max_robot_projected_extent": 0.5378683936364225,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_001/panorama.mp4",
+      "frames": 108,
+      "sha256": "e23f762823fa974084a95929c613f315ac63df30bb67eba64663894e07aca6df",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_001/multiview.mp4",
+      "frames": 108,
+      "sha256": "278366e70afcc122d0deaf0257defbecf550e22cab50906d0f92c34bbe41b54b",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_002/panorama.mp4",
+      "frames": 110,
+      "sha256": "020abe550c9b3a6787e4bb0dbec0ced175ad5875afd3a913efed890f394adbdf",
+      "max_robot_projected_extent": 0.537948003325802,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_002/multiview.mp4",
+      "frames": 110,
+      "sha256": "3f171d957064f7a15ccc4eb2fc2704eb098e5250e0a45536519d937842c49c86",
+      "max_robot_projected_extent": 0.537948003325802,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_003/panorama.mp4",
+      "frames": 115,
+      "sha256": "9d690f6f3a66122a5ecede5d47f13fe31155bd5ae253fa86516ea053f67ee490",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_003/multiview.mp4",
+      "frames": 115,
+      "sha256": "8995be340461481216c920b66da7b79aa3336c762c6220e43163ac73b653c9c0",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_004/panorama.mp4",
+      "frames": 109,
+      "sha256": "e020d23c9d247bf41cb9e91d9ae2222abc8c3857fcd8e0db0a26ef51083cf3bb",
+      "max_robot_projected_extent": 0.5381953174598779,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_01/trial_004/multiview.mp4",
+      "frames": 109,
+      "sha256": "8fd507fa951767e11929411d684c34a53f5513002417db9c5f931290b30fc29c",
+      "max_robot_projected_extent": 0.5381953174598779,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_000/panorama.mp4",
+      "frames": 93,
+      "sha256": "c012bd671014e4405760479dbe01402f3c6a02ed6c45bac943f79fed85ae9e10",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_000/multiview.mp4",
+      "frames": 93,
+      "sha256": "95e20b44eb83ab5f74992bc295fee565e7e993f3103149e29a3729305a577cae",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_001/panorama.mp4",
+      "frames": 105,
+      "sha256": "07942f62e8f71aff06d3b4664953b0a64c7bf79463fd3e44bdc25791a12ff952",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_001/multiview.mp4",
+      "frames": 105,
+      "sha256": "7bb0647725ba41066e9c3a0f3bcea36db8f8af27d7d086d6dd22986b1b145d2d",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_002/panorama.mp4",
+      "frames": 97,
+      "sha256": "b611c1dac7ab230747fbe0e24ea3960879926732f67bd164bd01d0860e81f335",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_002/multiview.mp4",
+      "frames": 97,
+      "sha256": "e259cbae7097bd89e75d7c7c61e3f069a08e148418c21768d6d035f02dc26f2d",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_003/panorama.mp4",
+      "frames": 94,
+      "sha256": "bbf1b80c90f6f43fbd1a774b2be8a0005e8326aa2e6f7e5c38870317b6a6c166",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_003/multiview.mp4",
+      "frames": 94,
+      "sha256": "d85937d559a90c9695162efc98d58a5ac7ec7a0629a7eb9822ef2e0bc2a92a8f",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_004/panorama.mp4",
+      "frames": 95,
+      "sha256": "19647b5c8aac7bff542a3935bf37cae817919e6eaeda3d1d589eeb270f87b7ef",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_02/trial_004/multiview.mp4",
+      "frames": 95,
+      "sha256": "e26904aa56338de5d58edca7a5fa2f15915045f700b53e5b627f7d539879dfb7",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_000/panorama.mp4",
+      "frames": 82,
+      "sha256": "f272a640a047b37704f7ee2bc0ac9b6a1051bded0e60d96d393cd4b3ce832431",
+      "max_robot_projected_extent": 0.538006569260447,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_000/multiview.mp4",
+      "frames": 82,
+      "sha256": "fdafd390bb32b5839e863ac0752ff90f062883958d48168c182072f37fd77a71",
+      "max_robot_projected_extent": 0.538006569260447,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_001/panorama.mp4",
+      "frames": 89,
+      "sha256": "a1fec1f578ac3da30fd97287dda33e1ce8ba07dc4614719dec03564b84a3bc60",
+      "max_robot_projected_extent": 0.5390562439684009,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_001/multiview.mp4",
+      "frames": 89,
+      "sha256": "ffbd177088867b6469ce313fff39ac779a5e6ae4566e4f359f4971def6b3f4a1",
+      "max_robot_projected_extent": 0.5390562439684009,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_002/panorama.mp4",
+      "frames": 87,
+      "sha256": "0926eac2e21c09378439c959d079cccd1cb9d82717a474d8718ae6292384c254",
+      "max_robot_projected_extent": 0.5387592615043755,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_002/multiview.mp4",
+      "frames": 87,
+      "sha256": "cb67ea28b6e78fe212b2bf80f4d1bd4e424cd139e66db662ec052adb5dcc0d45",
+      "max_robot_projected_extent": 0.5387592615043755,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_003/panorama.mp4",
+      "frames": 91,
+      "sha256": "354069d20f6634cf0c2ae9d8d91dfae1a76a69aef99d46f5fc5bdb1c7e7342f8",
+      "max_robot_projected_extent": 0.5379781069170724,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_003/multiview.mp4",
+      "frames": 91,
+      "sha256": "0834d3e2737ac1807016ec48b536b65530dd1ddb05b104e2e35c37cb669cff2a",
+      "max_robot_projected_extent": 0.5379781069170724,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_004/panorama.mp4",
+      "frames": 89,
+      "sha256": "8884279418be41b46b4c65cda0a415aad745640df64dcedd014d2b97fd20c6af",
+      "max_robot_projected_extent": 0.5380867197702504,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_03/trial_004/multiview.mp4",
+      "frames": 89,
+      "sha256": "4c47086baa8acdd5ab573c8dd1c09a7fd2d14de8bd652fefd5271fc77aacd6de",
+      "max_robot_projected_extent": 0.5380867197702504,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_000/panorama.mp4",
+      "frames": 231,
+      "sha256": "91b01581ce5fe0df0ccd435a3ae52015dca36d50b8ee476ab0da6c58b5d7e333",
+      "max_robot_projected_extent": 0.564387704235302,
+      "joint_limit_violation_rad": 0.001009873287717955
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_000/multiview.mp4",
+      "frames": 231,
+      "sha256": "2c8dd75b8e69ba0769a1ef80525150138670969faa397a1d921f23254aa6366d",
+      "max_robot_projected_extent": 0.564387704235302,
+      "joint_limit_violation_rad": 0.001009873287717955
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_001/panorama.mp4",
+      "frames": 231,
+      "sha256": "ddbdd89f918d4d786ce4ca170520f2fd93a6c1effad72d8fab1d3228b3c110aa",
+      "max_robot_projected_extent": 0.5511262188589826,
+      "joint_limit_violation_rad": 0.006743181390624908
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_001/multiview.mp4",
+      "frames": 231,
+      "sha256": "8a861f012ac15bd4c4bff0e4ac555ccb8f8c321e6069d667e2c3eb342db06f69",
+      "max_robot_projected_extent": 0.5511262188589826,
+      "joint_limit_violation_rad": 0.006743181390624908
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_002/panorama.mp4",
+      "frames": 231,
+      "sha256": "4c1750a193fccf8eb027879c0d1c7731364b2b6ae83e5393c28323d9c408160f",
+      "max_robot_projected_extent": 0.5590248777157409,
+      "joint_limit_violation_rad": 0.0014422983323949534
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_002/multiview.mp4",
+      "frames": 231,
+      "sha256": "fefaa885ce04e636759c6b22793e0623e2f300253025ca118d992dda8ec0bf39",
+      "max_robot_projected_extent": 0.5590248777157409,
+      "joint_limit_violation_rad": 0.0014422983323949534
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_003/panorama.mp4",
+      "frames": 231,
+      "sha256": "fb5a2fdfa13ab3e75c0e9f30eec6e021d227e260954452d7c72277ea56654130",
+      "max_robot_projected_extent": 0.5690564114941956,
+      "joint_limit_violation_rad": 0.0014133880796374232
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_003/multiview.mp4",
+      "frames": 231,
+      "sha256": "4c574fa6b8c146be0eda8950f6a4ba606dd7cdd17ea497cb076e6bc207a69e60",
+      "max_robot_projected_extent": 0.5690564114941956,
+      "joint_limit_violation_rad": 0.0014133880796374232
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_004/panorama.mp4",
+      "frames": 231,
+      "sha256": "1254cfbeb4e1debc60a8f69f31034e0191c6f8208a80c31a1823c8cb8b95817d",
+      "max_robot_projected_extent": 0.5531906979018878,
+      "joint_limit_violation_rad": 0.000665583873113551
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_04/trial_004/multiview.mp4",
+      "frames": 231,
+      "sha256": "01f0780914621849451e83ae53848fd2b92a214c45aea9dea99bd8af43b8bb23",
+      "max_robot_projected_extent": 0.5531906979018878,
+      "joint_limit_violation_rad": 0.000665583873113551
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_000/panorama.mp4",
+      "frames": 105,
+      "sha256": "17edb6fc0c91e2e1c168e95f602bd8a0c794809502cf5867980a30958b9f3e8e",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_000/multiview.mp4",
+      "frames": 105,
+      "sha256": "347ee037950f846f36ecd7b351670a6c360d8283c4b0dadafa7a1798ac14188d",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_001/panorama.mp4",
+      "frames": 100,
+      "sha256": "1d445f640a9ef1e0bd30c97ae75c1aa507ef52cec13243c8f46896e5844a5555",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_001/multiview.mp4",
+      "frames": 100,
+      "sha256": "a1508a9d6be6ba2888ea88a9f0b3fb419e57a00c8634bb7463a0e128489c9582",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_002/panorama.mp4",
+      "frames": 103,
+      "sha256": "c6b747001258d0dd8a467083340a0028bdae7e7f8139e4e11a1a0e4581a489df",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_002/multiview.mp4",
+      "frames": 103,
+      "sha256": "bd5b18ede908e20ad79e77e877f31ba0bfc8cf974bf2ba8bc57303954f0a51bb",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_003/panorama.mp4",
+      "frames": 103,
+      "sha256": "d5fcf61118875687e92bfdf4c7b4678ecadb9a6f2f6ff6a9945c5cbaa7b85602",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_003/multiview.mp4",
+      "frames": 103,
+      "sha256": "5371e92989b675628fb07b5a2c08e452da56c202f62a7408fae43b0e88d679f3",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_004/panorama.mp4",
+      "frames": 231,
+      "sha256": "967cd564eff5f4a5c68a0391b0a441f5794f6637214afbf8a2f2f16b77cf441c",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_05/trial_004/multiview.mp4",
+      "frames": 231,
+      "sha256": "57c3eab6752f4b79e1df60acdb720c8e54e91af2b75a9bb6aa08d919ad1f17a7",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_000/panorama.mp4",
+      "frames": 231,
+      "sha256": "7def75e648d3998032c90799e08d5786b26691e5d956898aeb5232a9d0e9d9b3",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_000/multiview.mp4",
+      "frames": 231,
+      "sha256": "f80e400db4304ba5afcdfe6f6a08f861a9b09b085ea0cc8d9d2ef315fe1f1e32",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_001/panorama.mp4",
+      "frames": 114,
+      "sha256": "0640d131f85ae7e4f53803acf34366449ef520ef3308caabbd2dcc699cbaf2d4",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_001/multiview.mp4",
+      "frames": 114,
+      "sha256": "e2f1f490dfeaa7977623d96b9957a63aa23264b4895300494ebe0f5eea546e6b",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_002/panorama.mp4",
+      "frames": 175,
+      "sha256": "7cb3bdd1b22e0c61da25b5a96d95ca1c73fdec947e57335300eb1309163fd051",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_002/multiview.mp4",
+      "frames": 175,
+      "sha256": "a83045d017ced0899db3b225da66d27ccedd113086c4208f7a2be8622cca5ca9",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_003/panorama.mp4",
+      "frames": 208,
+      "sha256": "a08e88e20156d6e587c73dacf6857b1b5ca0a0db649783dbe3d5e041028e57ca",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_003/multiview.mp4",
+      "frames": 208,
+      "sha256": "2830d5d65dcc6f792ee2f326871c4b87835503eea8bd68be9dbd4449fad69f72",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_004/panorama.mp4",
+      "frames": 208,
+      "sha256": "8a9e0d993de6a5a7773ecee721f13c262419b8da2c574fae8e704aaccb8c8127",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_06/trial_004/multiview.mp4",
+      "frames": 208,
+      "sha256": "a6788f71f189812755ecb76d785857d53c635e553c24ad8604ad85effd7df872",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_000/panorama.mp4",
+      "frames": 231,
+      "sha256": "6bd9a96409dd9acebc32919603ccd83b10fbde0bf3b45df54c3b7981a107cee3",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_000/multiview.mp4",
+      "frames": 231,
+      "sha256": "0410f3fd158604396b41d752b47834c14cfc9f381a87df493f5d1249dc19725f",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_001/panorama.mp4",
+      "frames": 231,
+      "sha256": "413e6bf737c178af50ff9747a8474be223982929f57f36896df7b3e38376b8c4",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_001/multiview.mp4",
+      "frames": 231,
+      "sha256": "036c36acca8730c3dbcf3d32babfa005f796dca6bac5a545a35bed90a8a30111",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_002/panorama.mp4",
+      "frames": 231,
+      "sha256": "dfb5045b6de06dfcf6225b98cbb95e282983ee9d941dff4bcfa049fb4e5bd26d",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_002/multiview.mp4",
+      "frames": 231,
+      "sha256": "a9408eeac2fd41ed8c7ecc5c37b72bf0483be1acec41312036e33bab14dd62ab",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_003/panorama.mp4",
+      "frames": 231,
+      "sha256": "9e57f273a14ca013c2f7ceae39523760060c618979fbfb5792930c7b31c5d2f2",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_003/multiview.mp4",
+      "frames": 231,
+      "sha256": "f929ff29223fbc1dac27e971011e0c030388ea0a81f645bae45f242f922ac2b6",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_004/panorama.mp4",
+      "frames": 231,
+      "sha256": "31de0adfb883cca0e9d008f9aec99b3d0abb8edb42a3cbb2396400452177c33e",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_07/trial_004/multiview.mp4",
+      "frames": 231,
+      "sha256": "ea21d030ddd46a2942a964ff3c8941b1760426531e5a1a4bd03d55dbf4b7ea89",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_000/panorama.mp4",
+      "frames": 108,
+      "sha256": "422285a1339ffaa1ba2e527b2a403f1be2a34c6c0086b12ad279611bbfd8bbd2",
+      "max_robot_projected_extent": 0.5378952957975045,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_000/multiview.mp4",
+      "frames": 108,
+      "sha256": "196cac7ba001a0f1834542d91f9120c9c981ecf31eeb7b79e6d7ff4f9852cc00",
+      "max_robot_projected_extent": 0.5378952957975045,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_001/panorama.mp4",
+      "frames": 107,
+      "sha256": "5552e69957d5b8c43b2d5f56a47277cbf503c4ac1bfb4d4a7441e8ccf3edf4f8",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_001/multiview.mp4",
+      "frames": 107,
+      "sha256": "f7f613590442fea05d4c86a72644a40c2b7711fe4c9d21decd5b8e07ca42348d",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_002/panorama.mp4",
+      "frames": 103,
+      "sha256": "1d3506cad64a08f919ce1e22f873e532bc42a5ce36ebff33e4b2d5d291103ae6",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_002/multiview.mp4",
+      "frames": 103,
+      "sha256": "f9a91f4bbbfbc7ef9d393d1c3f7aee992c0cf9efeb4adc833334d92324e0fd88",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_003/panorama.mp4",
+      "frames": 104,
+      "sha256": "e21beb19642d20ad1d5908a9b9ab8f7a46f14b25cfe5b1c5e1bed4ebf2c236fa",
+      "max_robot_projected_extent": 0.537996220327966,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_003/multiview.mp4",
+      "frames": 104,
+      "sha256": "4df8f8fd7cd20a27087ec1424a85d0f8ff4ad0cfa157e6207ffd337659fc960b",
+      "max_robot_projected_extent": 0.537996220327966,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_004/panorama.mp4",
+      "frames": 145,
+      "sha256": "720dc72757ad96e1a5e681b261032d2fd260e5b8be5b7e38c79984aa1e75e1f4",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_08/trial_004/multiview.mp4",
+      "frames": 145,
+      "sha256": "e4790e835c88cbae179cdd6ba35aad16ad6f7d40e320c510586f0f7800f73ae0",
+      "max_robot_projected_extent": 0.5378650458408497,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_000/panorama.mp4",
+      "frames": 129,
+      "sha256": "3a09eebe4ef90894ba7ac4f7886fb43ae16219851679674171cd22c3e13ed289",
+      "max_robot_projected_extent": 0.6024703889102072,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_000/multiview.mp4",
+      "frames": 129,
+      "sha256": "95c56807cfa722f2917dd41dabc48dcc93dd47c8851a99a11e6b147bd78093b1",
+      "max_robot_projected_extent": 0.6024703889102072,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_001/panorama.mp4",
+      "frames": 135,
+      "sha256": "789b3ea85af1196ad737d91d9c5bc96a7e95a2c1273b59b8d88d8472778275d9",
+      "max_robot_projected_extent": 0.6019784540977834,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_001/multiview.mp4",
+      "frames": 135,
+      "sha256": "0bb3c8e098e2f51693f139011b3da50971b134e32fd144863db40c1c486b5438",
+      "max_robot_projected_extent": 0.6019784540977834,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_002/panorama.mp4",
+      "frames": 133,
+      "sha256": "ffbbc73ecd53e48a28552ad5a13fdc48080bd67540991f129eced6939e75fbfd",
+      "max_robot_projected_extent": 0.603339642575575,
+      "joint_limit_violation_rad": 0.0026612191562327414
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_002/multiview.mp4",
+      "frames": 133,
+      "sha256": "052e613a3904117b23cc29f4fb33315b9c3b862ec6bb8655b9662281dc36788e",
+      "max_robot_projected_extent": 0.603339642575575,
+      "joint_limit_violation_rad": 0.0026612191562327414
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_003/panorama.mp4",
+      "frames": 137,
+      "sha256": "7bfead4bd796739289ac9aaf1d0e92252b3644a3a26ed3ed361a6ab2ab180d30",
+      "max_robot_projected_extent": 0.5949828669849107,
+      "joint_limit_violation_rad": 0.002847573680632376
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_003/multiview.mp4",
+      "frames": 137,
+      "sha256": "19150c6c6129bbfcc12348e7f032122129abf44355562fea63d85f45a05d2e38",
+      "max_robot_projected_extent": 0.5949828669849107,
+      "joint_limit_violation_rad": 0.002847573680632376
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_004/panorama.mp4",
+      "frames": 130,
+      "sha256": "c6a31fd239f6a98ebc68620c02a283571b4162519aad1e31f20134c15b3c0878",
+      "max_robot_projected_extent": 0.5946635930295416,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_spatial/task_09/trial_004/multiview.mp4",
+      "frames": 130,
+      "sha256": "50b80c2e7c76764bb3fa317609274635b31199c73abadaf66fbb738df59c7451",
+      "max_robot_projected_extent": 0.5946635930295416,
+      "joint_limit_violation_rad": 0.0
+    }
+  ]
+}

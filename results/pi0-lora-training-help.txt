@@ -1,0 +1,148 @@
+usage: train.py pi0_libero_low_mem_finetune [-h]
+                                            [PI0_LIBERO_LOW_MEM_FINETUNE 
+OPTIONS]
+
+pi0_libero_low_mem_finetune
+
+╭─ options ──────────────────────────────────────────────────────────────────╮
+│ -h, --help                                                                 │
+│     show this help message and exit                                        │
+│ --project-name STR                                                         │
+│     Project name. (default: openpi)                                        │
+│ --exp-name STR                                                             │
+│     Experiment name. Will be used to name the metadata and checkpoint      │
+│     directories. (required)                                                │
+│ --pytorch-weight-path {None}|STR                                           │
+│     Optional path to a PyTorch checkpoint to load weights from. (default:  │
+│     None)                                                                  │
+│ --pytorch-training-precision {bfloat16,float32}                            │
+│     Precision for PyTorch training. (default: bfloat16)                    │
+│ --ema-decay {None}|FLOAT                                                   │
+│     (default: None)                                                        │
+│ --assets-base-dir STR                                                      │
+│     Base directory for config assets (e.g., norm stats). (default:         │
+│     ./assets)                                                              │
+│ --checkpoint-base-dir STR                                                  │
+│     Base directory for checkpoints. (default: ./checkpoints)               │
+│ --seed INT                                                                 │
+│     Random seed that will be used by random generators during training.    │
+│     (default: 42)                                                          │
+│ --batch-size INT                                                           │
+│     Global batch size. (default: 32)                                       │
+│ --num-workers INT                                                          │
+│     Number of workers to use for the data loader. Increasing this number   │
+│     will speed up data loading but will increase memory and CPU usage.     │
+│     (default: 2)                                                           │
+│ --num-train-steps INT                                                      │
+│     Number of train steps (batches) to run. (default: 30000)               │
+│ --log-interval INT                                                         │
+│     How often (in steps) to log training metrics. (default: 100)           │
+│ --save-interval INT                                                        │
+│     How often (in steps) to save checkpoints. (default: 1000)              │
+│ --keep-period {None}|INT                                                   │
+│     If set, any existing checkpoints matching step % keep_period == 0 will │
+│     not be deleted. (default: 5000)                                        │
+│ --overwrite, --no-overwrite                                                │
+│     If true, will overwrite the checkpoint directory if it already exists. │
+│     (default: False)                                                       │
+│ --resume, --no-resume                                                      │
+│     If true, will resume training from the last checkpoint. (default:      │
+│     False)                                                                 │
+│ --wandb-enabled, --no-wandb-enabled                                        │
+│     If true, will enable wandb logging. (default: True)                    │
+│ --policy-metadata {fixed}                                                  │
+│     Used to pass metadata to the policy server. (fixed to: None)           │
+│ --fsdp-devices INT                                                         │
+│     If the value is greater than 1, FSDP will be enabled and shard across  │
+│     number of specified devices; overall device memory will be reduced but │
+│     training could potentially be slower. eg. if total device is 4 and     │
+│     fsdp devices is 2; then the model will shard to 2 devices and run data │
+│     parallel between 2 groups of devices. (default: 1)                     │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ model options ────────────────────────────────────────────────────────────╮
+│ Defines the model config. Some attributes (action_dim, action_horizon, and │
+│ max_token_len) are shared by all models                                    │
+│ -- see BaseModelConfig. Specific model implementations (e.g., Pi0Config)   │
+│ inherit from BaseModelConfig and may define additional attributes.         │
+│ ────────────────────────────────────────────────────────────────────────── │
+│ --model.action-dim INT                                                     │
+│     Set the model specific defaults. (default: 32)                         │
+│ --model.action-horizon INT                                                 │
+│     Set the model specific defaults. (default: 50)                         │
+│ --model.max-token-len INT                                                  │
+│     type: ignore (default: 48)                                             │
+│ --model.dtype STR                                                          │
+│     (default: bfloat16)                                                    │
+│ --model.paligemma-variant                                                  │
+│ {dummy,gemma_300m,gemma_300m_lora,gemma_2b,gemma_2b_lora}                  │
+│     (default: gemma_2b_lora)                                               │
+│ --model.action-expert-variant                                              │
+│ {dummy,gemma_300m,gemma_300m_lora,gemma_2b,gemma_2b_lora}                  │
+│     (default: gemma_300m_lora)                                             │
+│ --model.pi05, --model.no-pi05                                              │
+│     Pi05 has two differences from Pi0:                                     │
+│     - the state input is part of the discrete language tokens rather than  │
+│     a continuous input that is part of the suffix                          │
+│     - the action expert uses adaRMSNorm to inject the flow matching        │
+│     timestep (default: False)                                              │
+│ --model.discrete-state-input, --model.no-discrete-state-input              │
+│     type: ignore (default: False)                                          │
+│ --model.pytorch-compile-mode {None}|STR                                    │
+│     (default: max-autotune)                                                │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ weight-loader options ────────────────────────────────────────────────────╮
+│ A weight loader can optionally load (possibly partial) weights from disk   │
+│ after the model is initialized.                                            │
+│ ────────────────────────────────────────────────────────────────────────── │
+│ --weight-loader.params-path STR                                            │
+│     (default: gs://openpi-assets/checkpoints/pi0_base/params)              │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ lr-schedule options ──────────────────────────────────────────────────────╮
+│ Cosine decay schedule with warmup.                                         │
+│ ────────────────────────────────────────────────────────────────────────── │
+│ --lr-schedule.warmup-steps INT                                             │
+│     (default: 1000)                                                        │
+│ --lr-schedule.peak-lr FLOAT                                                │
+│     (default: 2.5e-05)                                                     │
+│ --lr-schedule.decay-steps INT                                              │
+│     (default: 30000)                                                       │
+│ --lr-schedule.decay-lr FLOAT                                               │
+│     (default: 2.5e-06)                                                     │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ optimizer options ────────────────────────────────────────────────────────╮
+│ AdamW optimizer.                                                           │
+│ ────────────────────────────────────────────────────────────────────────── │
+│ --optimizer.b1 FLOAT                                                       │
+│     (default: 0.9)                                                         │
+│ --optimizer.b2 FLOAT                                                       │
+│     (default: 0.95)                                                        │
+│ --optimizer.eps FLOAT                                                      │
+│     (default: 1e-08)                                                       │
+│ --optimizer.weight-decay FLOAT                                             │
+│     Changing this to 0 can cause out-of-memory errors for some reason, so  │
+│     we set it to a negligible value. (default: 1e-10)                      │
+│ --optimizer.clip-gradient-norm FLOAT                                       │
+│     Changing this to 0 can cause out-of-memory errors for some reason, so  │
+│     we set it to a negligible value. (default: 1.0)                        │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ data options ─────────────────────────────────────────────────────────────╮
+│ Determines the data to be trained on.                                      │
+│ ────────────────────────────────────────────────────────────────────────── │
+│ --data.repo-id STR                                                         │
+│     The LeRobot repo id. (default: physical-intelligence/libero)           │
+│ --data.extra-delta-transform, --data.no-extra-delta-transform              │
+│     (default: True)                                                        │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ data.assets options ──────────────────────────────────────────────────────╮
+│ Determines how the assets will be loaded.                                  │
+│ ────────────────────────────────────────────────────────────────────────── │
+│ --data.assets.assets-dir {None}|STR                                        │
+│     Assets directory. If not provided, the config assets_dirs will be      │
+│     used. This is useful to load assets from a different checkpoint (e.g., │
+│     base model checkpoint) or some other centralized location. (default:   │
+│     None)                                                                  │
+│ --data.assets.asset-id {None}|STR                                          │
+│     Asset id. If not provided, the repo id will be used. This allows users │
+│     to reference assets that describe different robot platforms. (default: │
+│     None)                                                                  │
+╰────────────────────────────────────────────────────────────────────────────╯

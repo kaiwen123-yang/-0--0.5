@@ -1,0 +1,7334 @@
+{
+  "task": "piper_h_color_pick_v1",
+  "data_source": "synthetic_scripted_ik",
+  "hardware_execution": false,
+  "fps": 20,
+  "split_unit": "layout_seed_including_all_color_prompts",
+  "split_seeds": {
+    "train": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139
+    ],
+    "validation": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+    ],
+    "test": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+    ]
+  },
+  "action": "commanded_absolute_joint_radians_6_and_gripper_opening_metres_1",
+  "episodes": [
+    {
+      "layout_seed": 100,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13834106814728797,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15280762188128375,
+          0.15041170566388865,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.2256205143479754,
+          -0.14729648724286828,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19173767693702598,
+          -0.032298792286188725,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00100_red.npz",
+      "video": "train/layout_00100_red.mp4",
+      "sha256": "2f250c17ff6df9182fbbdf2b62821e6eac33856b4df91695433632cc7281d961"
+    },
+    {
+      "layout_seed": 100,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1382841820307686,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13591182923150522,
+          -0.1627973560185335,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.15238310879406386,
+          0.15491705945145529,
+          0.025393255988701225
+        ],
+        "blue": [
+          -0.19173767693702598,
+          -0.032298792286188725,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00100_green.npz",
+      "video": "train/layout_00100_green.mp4",
+      "sha256": "f26c545a83a4b06480eaff8719880e10fddc6157cbbca0073b0555fb80609b87"
+    },
+    {
+      "layout_seed": 100,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13827183599991832
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13591182923150522,
+          -0.1627973560185335,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2256205143479754,
+          -0.14729648724286828,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.15363505991161067,
+          0.1543340657669243,
+          0.02539325598870122
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00100_blue.npz",
+      "video": "train/layout_00100_blue.mp4",
+      "sha256": "491d8aa28cffa3e73e74c9b3c2a535c10bbf6af1fbb505cec4231906dd8cc291"
+    },
+    {
+      "layout_seed": 101,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13821867402503946,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14988508870669506,
+          0.15443831696786614,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.12202544846572949,
+          -0.14744421081155182,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.22258108984087696,
+          -0.15393621106855343,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00101_red.npz",
+      "video": null,
+      "sha256": "c61b081fc7fb2882f41f8e89eb78afcdcd344cc4c70542d6cd03f3513775cb21"
+    },
+    {
+      "layout_seed": 101,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1384539734544729,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21075880028842647,
+          -0.02316368078015953,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15133702426198317,
+          0.15345679929241482,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.22258108984087696,
+          -0.15393621106855343,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00101_green.npz",
+      "video": null,
+      "sha256": "8def91d80192c0eae32c79d2734e4e3b1330cc37437db57b781eb5d89662b37e"
+    },
+    {
+      "layout_seed": 101,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13837037283587023
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21075880028842647,
+          -0.02316368078015953,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.12202544846572949,
+          -0.14744421081155182,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1528965098055287,
+          0.1549523474203339,
+          0.025393255988701232
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00101_blue.npz",
+      "video": null,
+      "sha256": "206ad9564e0eafff40baf5b6fecc073b94e6773f666a355b73c060295f01fafc"
+    },
+    {
+      "layout_seed": 102,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13902744471513895,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14800931825000482,
+          0.1568413970485576,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.12093257023888031,
+          -0.15567671337273978,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.19982281339670352,
+          -0.03601124351143248,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00102_red.npz",
+      "video": null,
+      "sha256": "16426146228f4a43a159108c5010e3c043e12863ed503534585331a1e4a66217"
+    },
+    {
+      "layout_seed": 102,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13842424304491924,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24452024793570895,
+          -0.1475935815824564,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15384996006880305,
+          0.15440564710208513,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.19982281339670352,
+          -0.03601124351143248,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00102_green.npz",
+      "video": null,
+      "sha256": "e4d9ef359878d4bfc775430db082c1c748b9e9128ccc81ef9f189494891a8c72"
+    },
+    {
+      "layout_seed": 102,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13833580960303632
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24452024793570895,
+          -0.1475935815824564,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.12093257023888031,
+          -0.15567671337273978,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1291115298698157,
+          0.13770045995800703,
+          0.025393255988701232
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00102_blue.npz",
+      "video": null,
+      "sha256": "aa7d778d9cc25c6c8faa8e5a0edc3de6506e4bc6fe841dee191389492633e6d1"
+    },
+    {
+      "layout_seed": 103,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13847860092028275,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15226852483856695,
+          0.15690796304291849,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.13890372761424388,
+          -0.1399149979213682,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.24024486947958873,
+          -0.1577190897644543,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00103_red.npz",
+      "video": null,
+      "sha256": "f465530da8c24e366180e462f950c4ea644fa6f6074097573488d5bf76e2df7c"
+    },
+    {
+      "layout_seed": 103,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1383625147649435,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.19498881032534965,
+          -0.04610025185974674,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15169368119710297,
+          0.15205030740796632,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.24024486947958873,
+          -0.1577190897644543,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00103_green.npz",
+      "video": null,
+      "sha256": "4a3e65740b9c69d402ea32398fda682d320d9d5372324c6627413162835ce559"
+    },
+    {
+      "layout_seed": 103,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1382769124077487
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.19498881032534965,
+          -0.04610025185974674,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.13890372761424388,
+          -0.1399149979213682,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14656466273157168,
+          0.1550444134984071,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00103_blue.npz",
+      "video": null,
+      "sha256": "1585c1e8c151dcd787f33037a775dcc607416648f1e21729f6cd86e52c6a4bb2"
+    },
+    {
+      "layout_seed": 104,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13891401073905013,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1443758066392372,
+          0.1580457620428591,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.20849805990170736,
+          -0.027891121492484645,
+          0.017393255988701246
+        ],
+        "blue": [
+          -0.13794951280851342,
+          -0.1604884668597778,
+          0.017393255988701246
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00104_red.npz",
+      "video": null,
+      "sha256": "97ceb5896f9dfdb22e8fd59a3e416891a31746c781e961621d44ef1f50af5f69"
+    },
+    {
+      "layout_seed": 104,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1385191999978631,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22552018525567968,
+          -0.14461985184055054,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15219429770154577,
+          0.15719705634390452,
+          0.025393255988701246
+        ],
+        "blue": [
+          -0.13794951280851342,
+          -0.1604884668597778,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00104_green.npz",
+      "video": null,
+      "sha256": "b004107e14e6b1facb068f316104a070f001bbd6819da7df893333a8942a3189"
+    },
+    {
+      "layout_seed": 104,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13846949047566937
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22552018525567968,
+          -0.14461985184055054,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20849805990170736,
+          -0.027891121492484645,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15068011025505762,
+          0.15322525398556036,
+          0.0253932559887012
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00104_blue.npz",
+      "video": null,
+      "sha256": "b5d01fdefc39abc3c335cd1a61acba07f3e2e58af4a96e97bcde3057a81a67ab"
+    },
+    {
+      "layout_seed": 105,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1385010292922072,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15082327605657056,
+          0.15528890090011352,
+          0.02539325598870124
+        ],
+        "green": [
+          -0.23113053065712919,
+          -0.13623912628449636,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14129157524838418,
+          -0.14981227843256645,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00105_red.npz",
+      "video": null,
+      "sha256": "83ee473032173c5a4d5c38fa536ed617ed1a3ab9513b0d1f5f4725ac9afb6a17"
+    },
+    {
+      "layout_seed": 105,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13893885837777042,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20789970935653676,
+          -0.04323154539069504,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15011106678428782,
+          0.1563378663370103,
+          0.02539325598870122
+        ],
+        "blue": [
+          -0.14129157524838418,
+          -0.14981227843256645,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00105_green.npz",
+      "video": null,
+      "sha256": "15c5c7f48a37ffdf4e604ca71818b2b371a3edab20bd89afc0526c5ba9948341"
+    },
+    {
+      "layout_seed": 105,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1385405725366255
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20789970935653676,
+          -0.04323154539069504,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23113053065712919,
+          -0.13623912628449636,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13375314478237757,
+          0.1454188078766422,
+          0.02539325598870123
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00105_blue.npz",
+      "video": null,
+      "sha256": "f93c40cbe53a13b1564ee3f08af406aff52838917095469648d01da0b59463a0"
+    },
+    {
+      "layout_seed": 106,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13949978744254976,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14711825213258944,
+          0.15646598621467922,
+          0.02539325598870124
+        ],
+        "green": [
+          -0.19199561575111368,
+          -0.045113619215162784,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.14056197268562534,
+          -0.15100056703455508,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00106_red.npz",
+      "video": null,
+      "sha256": "12ed55dc932f707a3df97a0d78fc5cc1274040c62b9c3ac3859297d42d1f78e1"
+    },
+    {
+      "layout_seed": 106,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1384220849465881,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2214925800449948,
+          -0.1628687957169466,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1263342579633905,
+          0.16810835204357188,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.14056197268562534,
+          -0.15100056703455508,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00106_green.npz",
+      "video": null,
+      "sha256": "f5d5ab14bac0b684cf8b68427de6190816ab2dc902723c5d00959cfcabee96f6"
+    },
+    {
+      "layout_seed": 106,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13839749815058172
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2214925800449948,
+          -0.1628687957169466,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19199561575111368,
+          -0.045113619215162784,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14908784475902784,
+          0.1527653429674948,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00106_blue.npz",
+      "video": null,
+      "sha256": "0c074ea3a52c0d31ef5b259f966d168f21f262c658329f62d8879d65d16ece2a"
+    },
+    {
+      "layout_seed": 107,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383707095441432,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14953262932728878,
+          0.1563289347875672,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.12992335330715216,
+          -0.14342605121179539,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.23084099425476232,
+          -0.1506247200611081,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00107_red.npz",
+      "video": null,
+      "sha256": "06619751f1d1f3d1693b6947723b8e05b7b6507d2c33b44d045866f703c84e16"
+    },
+    {
+      "layout_seed": 107,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13839653415789366,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20524714817777526,
+          -0.04685707708547893,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14740896339715873,
+          0.1558068994332848,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.23084099425476232,
+          -0.1506247200611081,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00107_green.npz",
+      "video": null,
+      "sha256": "cdb2f8b79f20bf376bf264540b7929eea4739457a7a192dec49a35f67a6374f7"
+    },
+    {
+      "layout_seed": 107,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383271225519137
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20524714817777526,
+          -0.04685707708547893,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.12992335330715216,
+          -0.14342605121179539,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1512580300433733,
+          0.15546045117027013,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00107_blue.npz",
+      "video": null,
+      "sha256": "81682008955584de2adbbc8e37fed8e690593af75c1c3a7c28b5ecd1ddee9c22"
+    },
+    {
+      "layout_seed": 108,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383581913252805,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15073212797061736,
+          0.15597306497407698,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.22503217311277188,
+          -0.14629629565042526,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1406986444039914,
+          -0.15418228478502483,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00108_red.npz",
+      "video": null,
+      "sha256": "2b2788c632e3df85ed80723001a7f3806ce4d944b10b6ca57d70cb8232079207"
+    },
+    {
+      "layout_seed": 108,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1383764443323084,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2122769510660856,
+          -0.04687660567762539,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14160631449454586,
+          0.16250228027461583,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.1406986444039914,
+          -0.15418228478502483,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00108_green.npz",
+      "video": null,
+      "sha256": "7ad555bca792433f3c895b5b9e89fd4f3054bcc3de0fa41736a2df2c98e504e9"
+    },
+    {
+      "layout_seed": 108,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13844143888998844
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2122769510660856,
+          -0.04687660567762539,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.22503217311277188,
+          -0.14629629565042526,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15352312578498353,
+          0.1561442387626404,
+          0.02539325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00108_blue.npz",
+      "video": null,
+      "sha256": "1851a015b0c68ae8cd749eaa7f1f318c7401e2135bc20f02776a907a935c6d86"
+    },
+    {
+      "layout_seed": 109,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13833957862867985,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14607203453322531,
+          0.15222414457952244,
+          0.025393255988701246
+        ],
+        "green": [
+          -0.1229978698828208,
+          -0.1547142080197021,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.20222091265576586,
+          -0.04355396535705236,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00109_red.npz",
+      "video": null,
+      "sha256": "b69b83d0d0d483112f2e277a90060b40f864faafc6abfe243129c834db02061d"
+    },
+    {
+      "layout_seed": 109,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1386918561859839,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2337752170227849,
+          -0.14044055232585234,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14357850228178481,
+          0.17246689915856206,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.20222091265576586,
+          -0.04355396535705236,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00109_green.npz",
+      "video": null,
+      "sha256": "121090b17c0fe66568bc21d2bc01d7d6d8242504cd7b2bca8994eecaabd21d45"
+    },
+    {
+      "layout_seed": 109,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13834503405954396
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2337752170227849,
+          -0.14044055232585234,
+          0.01739325598870132
+        ],
+        "green": [
+          -0.1229978698828208,
+          -0.1547142080197021,
+          0.01739325598870132
+        ],
+        "blue": [
+          -0.14958055141054652,
+          0.1545416632686149,
+          0.025393255988701246
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00109_blue.npz",
+      "video": null,
+      "sha256": "60818ea642315622dc80d9e6020f6335c527d10f95faaf423ee966263db346a3"
+    },
+    {
+      "layout_seed": 110,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1385003946763917,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13571229100462678,
+          0.14507664390893,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.2122841969790006,
+          -0.02446206895386351,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.12404934674537284,
+          -0.14993773275428837,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00110_red.npz",
+      "video": null,
+      "sha256": "4b76e38b8133837b678284a02e28ed15dc58f007ba0aac4c67ac86f6a2c71c79"
+    },
+    {
+      "layout_seed": 110,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13832510616833465,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22294620127568274,
+          -0.14965174212756502,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1546077475238754,
+          0.15672293045697291,
+          0.0253932559887012
+        ],
+        "blue": [
+          -0.12404934674537284,
+          -0.14993773275428837,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00110_green.npz",
+      "video": null,
+      "sha256": "87fa096ec49ac08fec789ec9c4c2f4e91b1c9db38a6b982de6282b01abe7a280"
+    },
+    {
+      "layout_seed": 110,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13833014568916868
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22294620127568274,
+          -0.14965174212756502,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2122841969790006,
+          -0.02446206895386351,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.14781354682493017,
+          0.15587215418333888,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00110_blue.npz",
+      "video": null,
+      "sha256": "1c6dd1a07cc81b637a69530528ce45f615b1e39d398a9fa5ac16d62425281410"
+    },
+    {
+      "layout_seed": 111,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13846090447197312,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1518664647319152,
+          0.1565536939223099,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.19750773544331943,
+          -0.04594163115133605,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.24469748202581623,
+          -0.15925950757113358,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00111_red.npz",
+      "video": null,
+      "sha256": "c0f4d60270e72f70ceab58ccc14b0614733f8c83521d472ced98ff7acec2da94"
+    },
+    {
+      "layout_seed": 111,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13826386395525547,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12983299919491353,
+          -0.14557267154535583,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1468367007007632,
+          0.15480845660190576,
+          0.025393255988701235
+        ],
+        "blue": [
+          -0.24469748202581623,
+          -0.15925950757113358,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00111_green.npz",
+      "video": null,
+      "sha256": "fd76c26f56c3a90e20aadaab7f8ff48a1fffd04def19c099c8a0265614796088"
+    },
+    {
+      "layout_seed": 111,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13837217271497448
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12983299919491353,
+          -0.14557267154535583,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19750773544331943,
+          -0.04594163115133605,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.14805300314954498,
+          0.15477553669692334,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00111_blue.npz",
+      "video": null,
+      "sha256": "68d819f9a59a6cddc479156710d54882d5168914f06eb28466e427c6a5bbfba3"
+    },
+    {
+      "layout_seed": 112,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13928465139112517,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14512087039121788,
+          0.15839390957712543,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.2168454918800805,
+          -0.03509922231763875,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.12163714411890962,
+          -0.1635128947697535,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00112_red.npz",
+      "video": null,
+      "sha256": "9cfe44a0b37dcaf5c9a51f175e278a8c3fb69df9845e0ee149d667cc82a43882"
+    },
+    {
+      "layout_seed": 112,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1383525595972751,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24573914763162275,
+          -0.14036369995438416,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15037901365962583,
+          0.15604473191983406,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.12163714411890962,
+          -0.1635128947697535,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00112_green.npz",
+      "video": null,
+      "sha256": "606628dfbbc167752436dc3ff13fa4480c609795c6669bb6e3ea037e8d70a4f8"
+    },
+    {
+      "layout_seed": 112,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1393769899450411
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24573914763162275,
+          -0.14036369995438416,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2168454918800805,
+          -0.03509922231763875,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14674944679976304,
+          0.15770663273962285,
+          0.025393255988701204
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00112_blue.npz",
+      "video": null,
+      "sha256": "af6ec3dca6caec49f3bf0a7a9de4bc0321f75f68734dc4cf9a1cfc94a0d89736"
+    },
+    {
+      "layout_seed": 113,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383642045657092,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1537609413444352,
+          0.15656862769412475,
+          0.0253932559887012
+        ],
+        "green": [
+          -0.20613306396958428,
+          -0.021032040125548518,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.13994664277824664,
+          -0.14690618565870434,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00113_red.npz",
+      "video": null,
+      "sha256": "2b700a55b9051171cc3bddaf4b320cbf62af66b7599599b080327da2ff168e9f"
+    },
+    {
+      "layout_seed": 113,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13837696848982012,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2470238130166297,
+          -0.1597756694052359,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15290223481514045,
+          0.15421816084160286,
+          0.025393255988701218
+        ],
+        "blue": [
+          -0.13994664277824664,
+          -0.14690618565870434,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00113_green.npz",
+      "video": null,
+      "sha256": "27c4fad91da806da63efaf5261e370b8630106405d7db7f61a29cb8d8a76dfa7"
+    },
+    {
+      "layout_seed": 113,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13844982167451741
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2470238130166297,
+          -0.1597756694052359,
+          0.01739325598870132
+        ],
+        "green": [
+          -0.20613306396958428,
+          -0.021032040125548518,
+          0.01739325598870132
+        ],
+        "blue": [
+          -0.15251105781353025,
+          0.15557733108188693,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00113_blue.npz",
+      "video": null,
+      "sha256": "55f9e3ac8612f81b4e46d07bdd0d510f9c5085f7a3c422db0f46ab7fc7ca8ea6"
+    },
+    {
+      "layout_seed": 114,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13819237082721741,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15356915524353704,
+          0.15388761980183724,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.22861912831575962,
+          -0.16001954472253024,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13186524167870073,
+          -0.14428485891910103,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00114_red.npz",
+      "video": null,
+      "sha256": "cd9306104fbcde67396fed5731900c23fbdbe11fc9410c9e0cbf6db5da6a67bc"
+    },
+    {
+      "layout_seed": 114,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13892854727103576,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20196746982527813,
+          -0.030931703941320464,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14729225259970055,
+          0.15908162919114113,
+          0.025393255988701218
+        ],
+        "blue": [
+          -0.13186524167870073,
+          -0.14428485891910103,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00114_green.npz",
+      "video": null,
+      "sha256": "74cec8a0722b52cd807cd06a6959d6c8fe60455784f338d63b359c527ee3ad80"
+    },
+    {
+      "layout_seed": 114,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1384435678749606
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20196746982527813,
+          -0.030931703941320464,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.22861912831575962,
+          -0.16001954472253024,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.150352636222297,
+          0.1536908703211793,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00114_blue.npz",
+      "video": null,
+      "sha256": "6c8145f98d5278d87bd3a55e9e6941b0ee4cae45acd28a268ad4e1a0aad28927"
+    },
+    {
+      "layout_seed": 115,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1384956383443548,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1518385022107106,
+          0.15642701310796395,
+          0.025393255988701242
+        ],
+        "green": [
+          -0.21897839009808953,
+          -0.0457011984623799,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.22933453532068607,
+          -0.14709614599694304,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00115_red.npz",
+      "video": null,
+      "sha256": "29eb6b8e2a8d50adbd277c17fc4fff5709e041a33453fdcbbc0cddf54004f293"
+    },
+    {
+      "layout_seed": 115,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13842101661831469,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1287632662943506,
+          -0.1410078777156867,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15276083391637565,
+          0.15464297456585513,
+          0.025393255988701235
+        ],
+        "blue": [
+          -0.22933453532068607,
+          -0.14709614599694304,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00115_green.npz",
+      "video": null,
+      "sha256": "e3434dc18245c4c821cb182dc6e1c341108a22a5bdfbe223f16c7dc29a6f1429"
+    },
+    {
+      "layout_seed": 115,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383491455731226
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1287632662943506,
+          -0.1410078777156867,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.21897839009808953,
+          -0.0457011984623799,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.1465320918981377,
+          0.15767464137669193,
+          0.025393255988701232
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00115_blue.npz",
+      "video": null,
+      "sha256": "2e692da449f5fb41438e29931ee7b6d25fd5d15aaef8956e808f02926dff09b1"
+    },
+    {
+      "layout_seed": 116,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13926229044380523,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14510330786950956,
+          0.15880532446831203,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.20478482388828448,
+          -0.03224676511829092,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.2441736465556019,
+          -0.1394461807882235,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00116_red.npz",
+      "video": null,
+      "sha256": "0da8b57ce4940030bfc19c28391303a361ac36f8577d515001f15be79318b457"
+    },
+    {
+      "layout_seed": 116,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13829364272810962,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.11719901153589211,
+          -0.1373759977719297,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15354066452209442,
+          0.15408352395400504,
+          0.025393255988701218
+        ],
+        "blue": [
+          -0.2441736465556019,
+          -0.1394461807882235,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00116_green.npz",
+      "video": null,
+      "sha256": "e7af8cb980b68d1de0103d9d955701f2eaf18a8f9102fe8c27427dd46c007540"
+    },
+    {
+      "layout_seed": 116,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1390470982388844
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.11719901153589211,
+          -0.1373759977719297,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20478482388828448,
+          -0.03224676511829092,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.14674239279623574,
+          0.15521320069468236,
+          0.02539325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00116_blue.npz",
+      "video": null,
+      "sha256": "20bf092bf6d4b271f646bf62d20b202da645699b7bfd1de772279d7f7ce659f7"
+    },
+    {
+      "layout_seed": 117,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13836841553986667,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1446504456498117,
+          0.15828902998115457,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.20462610488902985,
+          -0.040531510472466295,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.12708628807175062,
+          -0.15390694440629132,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00117_red.npz",
+      "video": null,
+      "sha256": "5fc11b9112b2808e13e723884e65f33c605fb20966063efed1bf39c257b50c6d"
+    },
+    {
+      "layout_seed": 117,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13833832037427352,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22449967071996355,
+          -0.1595793323981806,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.152731904070485,
+          0.15302854729464907,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.12708628807175062,
+          -0.15390694440629132,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00117_green.npz",
+      "video": null,
+      "sha256": "dcdaf3a39bdfe7fc234633a74a55810d34b101b6eefb53a5c2e2141219759acd"
+    },
+    {
+      "layout_seed": 117,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1382997120384188
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22449967071996355,
+          -0.1595793323981806,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20462610488902985,
+          -0.040531510472466295,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13331407294586609,
+          0.144856369989699,
+          0.025393255988701246
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00117_blue.npz",
+      "video": null,
+      "sha256": "b90b188ec43a936859fa33b1590184ee520f9a7fd6ee61afcfb13bf0a370cf80"
+    },
+    {
+      "layout_seed": 118,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13830603411501274,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15269659220916215,
+          0.15518218197838243,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.22294068994846358,
+          -0.13774826633159895,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.13622848158877557,
+          -0.1579667759923502,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00118_red.npz",
+      "video": null,
+      "sha256": "4346644c23365199fa82dba38ac569459e38fc3eebc9165a32704859e909337f"
+    },
+    {
+      "layout_seed": 118,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13882469307230005,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041492424495046,
+          -0.04797303876151364,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15213617076102184,
+          0.1633329179451536,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.13622848158877557,
+          -0.1579667759923502,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00118_green.npz",
+      "video": null,
+      "sha256": "398f6ef886ad76dfe776e7c8173117a47ad2cde54aa968dec6c7592dcf8be600"
+    },
+    {
+      "layout_seed": 118,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383178693332952
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041492424495046,
+          -0.04797303876151364,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.22294068994846358,
+          -0.13774826633159895,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14767349661142032,
+          0.1566510328675989,
+          0.025393255988701246
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00118_blue.npz",
+      "video": null,
+      "sha256": "f52dd5e88853549fe22bd55b877a83b2965518f8ac2dd9eb07b5bc41e3bc0f60"
+    },
+    {
+      "layout_seed": 119,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13842530879194304,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1508251146700514,
+          0.15554121637166735,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.22222526881547974,
+          -0.14350085805274398,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19781416447360664,
+          -0.048331486563479534,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00119_red.npz",
+      "video": null,
+      "sha256": "d68aa68bee1809d65dbe266b6be7dd05eea89d46a932639eb1761e36e1756ed3"
+    },
+    {
+      "layout_seed": 119,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13845961279708247,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1210675096969483,
+          -0.1599804792598766,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13341937445584154,
+          0.16375030571376986,
+          0.02539325598870122
+        ],
+        "blue": [
+          -0.19781416447360664,
+          -0.048331486563479534,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00119_green.npz",
+      "video": null,
+      "sha256": "811d3df69b59b34b80802a2d38d1d34c84991f75b3fdcf44c108d32133e2322f"
+    },
+    {
+      "layout_seed": 119,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13838838510082385
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1210675096969483,
+          -0.1599804792598766,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.22222526881547974,
+          -0.14350085805274398,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1478024959595912,
+          0.157731191462256,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00119_blue.npz",
+      "video": null,
+      "sha256": "ab21ea314760307a0ed29368a2f83018acaa16c2f4b9810bafd5b1ea78a0d0ff"
+    },
+    {
+      "layout_seed": 120,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13845151628558916,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15239330966011946,
+          0.15694951308860947,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.20282363042438237,
+          -0.03324703250315153,
+          0.01739325598870132
+        ],
+        "blue": [
+          -0.22509523633825196,
+          -0.16240204104975722,
+          0.017393255988701315
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00120_red.npz",
+      "video": null,
+      "sha256": "dc666b91cc8fa3c73fa2408ad161e23dfdf4c63bb3c80467d365bc750602a783"
+    },
+    {
+      "layout_seed": 120,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13837817934861668,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13696973711686342,
+          -0.1456872574247664,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.12424298264438641,
+          0.14091591240430862,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.22509523633825196,
+          -0.16240204104975722,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00120_green.npz",
+      "video": null,
+      "sha256": "7f180ec345e0d70c7e9d73330a6ad1af41171d6641497a9ccf6cf318b6a339de"
+    },
+    {
+      "layout_seed": 120,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383471448717673
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13696973711686342,
+          -0.1456872574247664,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20282363042438237,
+          -0.03324703250315153,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13794824584839166,
+          0.15899893949361207,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00120_blue.npz",
+      "video": null,
+      "sha256": "814b2978ea784a9ea58f7b8223ee50de8758bfb545ffe6b454845c86885cef15"
+    },
+    {
+      "layout_seed": 121,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383006423918383,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1509665963856736,
+          0.15424391931782663,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.20238027011975526,
+          -0.02679423056806484,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.12092071268767475,
+          -0.14773978692572726,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00121_red.npz",
+      "video": null,
+      "sha256": "4d0b3ae84d6b0dd4b2f8add84521ee626668ae23634ec402124135760305e004"
+    },
+    {
+      "layout_seed": 121,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.138368564112203,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.23128115735102012,
+          -0.15565873073565129,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.1492075522769147,
+          0.15609342923480052,
+          0.025393255988701242
+        ],
+        "blue": [
+          -0.12092071268767475,
+          -0.14773978692572726,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00121_green.npz",
+      "video": null,
+      "sha256": "ee3cb8de39cd0de25ec39377f8770cc727b15681b20cf145613bbe21a340aa92"
+    },
+    {
+      "layout_seed": 121,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13847829224813474
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.23128115735102012,
+          -0.15565873073565129,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20238027011975526,
+          -0.02679423056806484,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1452232953872005,
+          0.15539307847455097,
+          0.02539325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00121_blue.npz",
+      "video": null,
+      "sha256": "e01e6dc3c06c42aed9328d8a011bdf3ad9706aefeb23e1caa8f6811830856436"
+    },
+    {
+      "layout_seed": 122,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1382248843239739,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1479610217680637,
+          0.15641206207587235,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.2258901278461684,
+          -0.1590825279709507,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13342763531403745,
+          -0.15813925507076163,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00122_red.npz",
+      "video": null,
+      "sha256": "3c18b31cca2d39064152d60f485d44ad30b8e5782cd91be45f69b2d83a9366eb"
+    },
+    {
+      "layout_seed": 122,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13841397204045885,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.19596881911995565,
+          -0.034847574146467844,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1460043815935269,
+          0.15856051580633676,
+          0.025393255988701225
+        ],
+        "blue": [
+          -0.13342763531403745,
+          -0.15813925507076163,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00122_green.npz",
+      "video": null,
+      "sha256": "4931f051adda24519c76853ef22f4277cc9b3f91264312b8cc64e84c08618ff4"
+    },
+    {
+      "layout_seed": 122,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1392348254912799
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.19596881911995565,
+          -0.034847574146467844,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2258901278461684,
+          -0.1590825279709507,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14433367964631957,
+          0.15680954798211366,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00122_blue.npz",
+      "video": null,
+      "sha256": "74a3598731c06da7bdf460f3bdeff1891f4fcab411da8c2b806b83cac1a20478"
+    },
+    {
+      "layout_seed": 123,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13829972194871387,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14656237684623236,
+          0.15913069613631356,
+          0.025393255988701208
+        ],
+        "green": [
+          -0.13782992356325655,
+          -0.15883758930255681,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.22989414783107953,
+          -0.16249301147151082,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00123_red.npz",
+      "video": null,
+      "sha256": "c74fee251ddc43466fd9b6af500811fa9ae10847c69209f672f9fe209a7c0a5a"
+    },
+    {
+      "layout_seed": 123,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13857707770609234,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21407463476767866,
+          -0.026261353813639466,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15232537342798835,
+          0.15434613969208485,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.22989414783107953,
+          -0.16249301147151082,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00123_green.npz",
+      "video": null,
+      "sha256": "57974e3f7f786ab318ac5d9f63809c299e5befe1c3789e2c9f9a16a0f85100df"
+    },
+    {
+      "layout_seed": 123,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13834045207023316
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21407463476767866,
+          -0.026261353813639466,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13782992356325655,
+          -0.15883758930255681,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15460393216017768,
+          0.15421767087419413,
+          0.025393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00123_blue.npz",
+      "video": null,
+      "sha256": "fabc3b4188d6236d6369c365ab0af3a1128da8c010d0205ad2e6bd9c324ae7a7"
+    },
+    {
+      "layout_seed": 124,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13861773942803401,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.144713005498611,
+          0.15498340948937203,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.1168641915082219,
+          -0.143054326360661,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.22701291280894142,
+          -0.1419959379913187,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00124_red.npz",
+      "video": null,
+      "sha256": "1274e516209bb36ace0fb341a9b39fa4bb2f3ca49851c582e29557ed549902c3"
+    },
+    {
+      "layout_seed": 124,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1384430823870404,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20064457733984892,
+          -0.02271123276331865,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14930362701742916,
+          0.16219365608284841,
+          0.025393255988701246
+        ],
+        "blue": [
+          -0.22701291280894142,
+          -0.1419959379913187,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00124_green.npz",
+      "video": null,
+      "sha256": "ec0a3be16fa3131e3edbb439f75c5fa5ed4c6d9c2e82d9b9b6c75a483c74c70a"
+    },
+    {
+      "layout_seed": 124,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13829205952440143
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20064457733984892,
+          -0.02271123276331865,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1168641915082219,
+          -0.143054326360661,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14675253240374345,
+          0.15674618862515996,
+          0.025393255988701246
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00124_blue.npz",
+      "video": null,
+      "sha256": "a5dcc0a85e3e15f2a2757b7cee71e896fdc30183017820998d94f1624fc1f489"
+    },
+    {
+      "layout_seed": 125,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13835475839129807,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15198364336299508,
+          0.15293810093117458,
+          0.02539325598870124
+        ],
+        "green": [
+          -0.225151014461203,
+          -0.15017780069922235,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.21617910372962792,
+          -0.027153280148676417,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00125_red.npz",
+      "video": null,
+      "sha256": "3e1c16daa94c2e81e139bb06fc778a51d87c41b99f655a27663d4a159b5e6546"
+    },
+    {
+      "layout_seed": 125,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13848743800302643,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13307547026914288,
+          -0.15897098783952152,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14901686317883106,
+          0.15563135331313355,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.21617910372962792,
+          -0.027153280148676417,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00125_green.npz",
+      "video": null,
+      "sha256": "0667cb40511525beb5e1de723c979bc78449aa59d090ec0b2b2645ff78404296"
+    },
+    {
+      "layout_seed": 125,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13835426962132785
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13307547026914288,
+          -0.15897098783952152,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.225151014461203,
+          -0.15017780069922235,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1546261096578099,
+          0.15588872524618375,
+          0.02539325598870122
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00125_blue.npz",
+      "video": null,
+      "sha256": "f8a0f8ee99ff271d41b7074b6cf4f79edf528141acd0736cd5613b8b9c66841f"
+    },
+    {
+      "layout_seed": 126,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13847591014385935,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14794251714233958,
+          0.15845402628743338,
+          0.02539325598870121
+        ],
+        "green": [
+          -0.24882706986537448,
+          -0.13763077299035056,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2155547864313381,
+          -0.046124149153176114,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00126_red.npz",
+      "video": null,
+      "sha256": "07996946998085ea4bfec24d9fbb414201840b68ff0bf9af974caeb2aec89566"
+    },
+    {
+      "layout_seed": 126,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1383411187057122,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14214842067101977,
+          -0.1365867623205252,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14382952549775826,
+          0.1564256933115975,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.2155547864313381,
+          -0.046124149153176114,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00126_green.npz",
+      "video": null,
+      "sha256": "3031210d599668d7da24cb3b55c355ce8ec99c3e69ee91b2a5820fbaf84c6009"
+    },
+    {
+      "layout_seed": 126,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1382001169267843
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14214842067101977,
+          -0.1365867623205252,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.24882706986537448,
+          -0.13763077299035056,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15325115108370613,
+          0.15595651120337745,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00126_blue.npz",
+      "video": null,
+      "sha256": "8689cca587cad96cfa46425b2da7d77483ba989f391648398310fe140b1eb581"
+    },
+    {
+      "layout_seed": 127,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.138460590997511,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14727985094714,
+          0.15587090834960032,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.24725093610346555,
+          -0.15813028187554062,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.21013657472192201,
+          -0.032605315930452586,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00127_red.npz",
+      "video": null,
+      "sha256": "7d47033f822794e25af9f4b6cf8ea5b131056fb070c6927d7596a4cfb95a2821"
+    },
+    {
+      "layout_seed": 127,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.138358792441937,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13561869055964318,
+          -0.13851840390145392,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15269390786111953,
+          0.15504972732864258,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.21013657472192201,
+          -0.032605315930452586,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00127_green.npz",
+      "video": null,
+      "sha256": "b819eb5ab9d8b443a0dd568bf755873d7f5702f973acc8017ed78bdd114587f5"
+    },
+    {
+      "layout_seed": 127,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1385269360288346
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13561869055964318,
+          -0.13851840390145392,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.24725093610346555,
+          -0.15813028187554062,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14376741735430995,
+          0.15695624689485355,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00127_blue.npz",
+      "video": null,
+      "sha256": "635b9c375c4e51ba5afce3c4215439198ec5d6cb1b3cde924665eb73b9c40b2c"
+    },
+    {
+      "layout_seed": 128,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13826816679805187,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1531696841512626,
+          0.15261446930689082,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.13186012589421006,
+          -0.15268984982074962,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.23054297957183265,
+          -0.15078074495835722,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00128_red.npz",
+      "video": null,
+      "sha256": "1574936894b7144a18ff9c6cc525be35c8d01a4b10e14ab7c34846c237628c25"
+    },
+    {
+      "layout_seed": 128,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13836730276208858,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21676833476637716,
+          -0.03257807549851429,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15071632685843084,
+          0.15554256730468424,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.23054297957183265,
+          -0.15078074495835722,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00128_green.npz",
+      "video": null,
+      "sha256": "18747df6ca33e486b988d675909a1824cc2211dc66f0958667618abe2958568c"
+    },
+    {
+      "layout_seed": 128,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13833648053481795
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21676833476637716,
+          -0.03257807549851429,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13186012589421006,
+          -0.15268984982074962,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13492142632898899,
+          0.13864998974019396,
+          0.025393255988701256
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00128_blue.npz",
+      "video": null,
+      "sha256": "4973d0e7d3de31591275a510cad57593d026f2ec928eb8310131ed9dbfb06a7f"
+    },
+    {
+      "layout_seed": 129,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13925067293004667,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1450729975047277,
+          0.15822952594185788,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.19726676552697733,
+          -0.026807912421888937,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.11885242087579524,
+          -0.13900836617690182,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00129_red.npz",
+      "video": null,
+      "sha256": "b7a08e1d16cc15123ba973544f498439fd7c874804ed7b7b8613d48ba0e959df"
+    },
+    {
+      "layout_seed": 129,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13831724953456204,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2382391415797521,
+          -0.15745069140244652,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.15402737089718707,
+          0.15431000021696045,
+          0.02539325598870122
+        ],
+        "blue": [
+          -0.11885242087579524,
+          -0.13900836617690182,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00129_green.npz",
+      "video": null,
+      "sha256": "fc251f81880650efe2cac4c8bf2390301d5c80cfdf9c21dd55f0b2f63d6a5336"
+    },
+    {
+      "layout_seed": 129,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13834244186841388
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2382391415797521,
+          -0.15745069140244652,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19726676552697733,
+          -0.026807912421888937,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13918709736593507,
+          0.15903157585010846,
+          0.025393255988701256
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00129_blue.npz",
+      "video": null,
+      "sha256": "268a4e6c0e2d63441fae2dde40d8965c5e979fe88b3e1fcb32be6d568defcd62"
+    },
+    {
+      "layout_seed": 130,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1384159894656305,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15317571698225357,
+          0.15409848140081,
+          0.025393255988701242
+        ],
+        "green": [
+          -0.23630814890556456,
+          -0.16181505253288453,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19790690939684652,
+          -0.03622044326575271,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00130_red.npz",
+      "video": null,
+      "sha256": "9f540ccd91808e094f121343ea5b57b9ff01c8c20a58d9382e7da00762c4fe38"
+    },
+    {
+      "layout_seed": 130,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13832405342568838,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13543363765657326,
+          -0.15260238102197504,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.1528912098326398,
+          0.15471497750878455,
+          0.025393255988701242
+        ],
+        "blue": [
+          -0.19790690939684652,
+          -0.03622044326575271,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00130_green.npz",
+      "video": null,
+      "sha256": "3a25311f32b775ab6f96e733d987a80e172c292240a2305f334257c574a88491"
+    },
+    {
+      "layout_seed": 130,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13828501768198942
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13543363765657326,
+          -0.15260238102197504,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23630814890556456,
+          -0.16181505253288453,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1471093118831748,
+          0.15822502955038367,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00130_blue.npz",
+      "video": null,
+      "sha256": "07cdc800e0f3aabdca1e79b2eaf3e51911460584a76408fa33d65a4c1be22ffe"
+    },
+    {
+      "layout_seed": 131,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13814496707889246,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15136966904318402,
+          0.15566967328423145,
+          0.02539325598870121
+        ],
+        "green": [
+          -0.23089902115512417,
+          -0.14716783035372177,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1290946455620504,
+          -0.15982681413061228,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00131_red.npz",
+      "video": null,
+      "sha256": "768705a424c781a7a54661954fc6e573149159baa2856df97c4a35e9e5bf75ec"
+    },
+    {
+      "layout_seed": 131,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13906226277390155,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21670991924647529,
+          -0.021404673939075008,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1481827665202605,
+          0.1572868185087398,
+          0.025393255988701232
+        ],
+        "blue": [
+          -0.1290946455620504,
+          -0.15982681413061228,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00131_green.npz",
+      "video": null,
+      "sha256": "83ae407f0e7d51b4f3fa0159a44e477e4ecd5564529e3f72003afbb0352329af"
+    },
+    {
+      "layout_seed": 131,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13901207011568684
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.21670991924647529,
+          -0.021404673939075008,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23089902115512417,
+          -0.14716783035372177,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14736392199843862,
+          0.1549061244140356,
+          0.025393255988701232
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00131_blue.npz",
+      "video": null,
+      "sha256": "603a6ec0a252011d52b704b542d1fc0abf79de5eda9cd893e731f448b1eed6c1"
+    },
+    {
+      "layout_seed": 132,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1395506573973207,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1429610949570167,
+          0.15727443288023937,
+          0.025393255988701242
+        ],
+        "green": [
+          -0.19559144199929265,
+          -0.03192308259518988,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.12313484678202237,
+          -0.13929359620150003,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00132_red.npz",
+      "video": null,
+      "sha256": "fa48265dbef1e47709405ef845ce642c4b8f6023096d3174a05e02c7c3628848"
+    },
+    {
+      "layout_seed": 132,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13815209759843783,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24500716291138472,
+          -0.14146935647453052,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1531202568722245,
+          0.15394840893403502,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.12313484678202237,
+          -0.13929359620150003,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00132_green.npz",
+      "video": null,
+      "sha256": "63bc97e205faa422415e70b77f8d2961efcc1f2efe2c8bb68f344fc35d8925b1"
+    },
+    {
+      "layout_seed": 132,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13859998925838202
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24500716291138472,
+          -0.14146935647453052,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19559144199929265,
+          -0.03192308259518988,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14533545375619433,
+          0.15740923295451362,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00132_blue.npz",
+      "video": null,
+      "sha256": "b98310830a90b50e22794c933dbce4d98d6e290e3eb047e49e36323e5ca25217"
+    },
+    {
+      "layout_seed": 133,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13848907996379856,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14466019786838072,
+          0.15711054934746443,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.20225255500434694,
+          -0.04233759497602034,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.13389622570772575,
+          -0.14786554784461597,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00133_red.npz",
+      "video": null,
+      "sha256": "7173e17d69194a9f201e13492084674385d4d139802cd1853125912e188b14b2"
+    },
+    {
+      "layout_seed": 133,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1383459318645438,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22169576448868678,
+          -0.14965825113467465,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1518521611593304,
+          0.15621572284781057,
+          0.025393255988701204
+        ],
+        "blue": [
+          -0.13389622570772575,
+          -0.14786554784461597,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00133_green.npz",
+      "video": null,
+      "sha256": "c0840713d9e1846eca87981191380475d59f7f30c8ab528f70833f6da45f9538"
+    },
+    {
+      "layout_seed": 133,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13838356320509393
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.22169576448868678,
+          -0.14965825113467465,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20225255500434694,
+          -0.04233759497602034,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14477447768669102,
+          0.15652498725592226,
+          0.025393255988701232
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00133_blue.npz",
+      "video": null,
+      "sha256": "a526ca48536f2f6b46298402f4c12010b45c80450a35ec0d0f5e149987e61082"
+    },
+    {
+      "layout_seed": 134,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1386318148877384,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14854037331509606,
+          0.15553918834466846,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.12876280787018998,
+          -0.14215667671808854,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.21052714331664105,
+          -0.026688136602482666,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00134_red.npz",
+      "video": null,
+      "sha256": "c9e5e535ba176b3b546104f9fdf8eba86d76e3134dcc1d7b503361efed805b05"
+    },
+    {
+      "layout_seed": 134,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13839145084738252,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2218827704464479,
+          -0.14988063917813954,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15209712024452116,
+          0.1543355271069426,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.21052714331664105,
+          -0.026688136602482666,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00134_green.npz",
+      "video": null,
+      "sha256": "74c5bc53d1dad8ccb95fab3881b97b662e2da5f1656d75c675db27f9cfa23c03"
+    },
+    {
+      "layout_seed": 134,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13831957715928755
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2218827704464479,
+          -0.14988063917813954,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.12876280787018998,
+          -0.14215667671808854,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14746321549382585,
+          0.1575536667777809,
+          0.02539325598870122
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00134_blue.npz",
+      "video": null,
+      "sha256": "9cfee0b554c18fe4f69217f61c8247f4c76efce3eb9f87694c2058d859f965e2"
+    },
+    {
+      "layout_seed": 135,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13853428653807143,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15348410306347582,
+          0.15510552113898587,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.2336494926108063,
+          -0.15613902801847407,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2127444561247993,
+          -0.043837962330568726,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00135_red.npz",
+      "video": null,
+      "sha256": "50a394cb124bc8aee5d5201a935e3a16c2d1fc722cd0fa9e73719c846e8e58e2"
+    },
+    {
+      "layout_seed": 135,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13863036409984902,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.11877891788721685,
+          -0.13636065350305668,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.14485894828575432,
+          0.15982883119358662,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.2127444561247993,
+          -0.043837962330568726,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00135_green.npz",
+      "video": null,
+      "sha256": "a345c8c42e0a9af2e899ef9d7cd3f4082dc3fb2c69d078ba606f8c2076d86aaa"
+    },
+    {
+      "layout_seed": 135,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13853669975177252
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.11877891788721685,
+          -0.13636065350305668,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2336494926108063,
+          -0.15613902801847407,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1452750911483839,
+          0.15911724369773514,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00135_blue.npz",
+      "video": null,
+      "sha256": "34f72bfb04155248ab67811de8ee0a42336babe50537bc441aaebb67c51b2a62"
+    },
+    {
+      "layout_seed": 136,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383769690701283,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12550774204923706,
+          0.15980677431133772,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.2454316234100759,
+          -0.16203371560100846,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19559251990005017,
+          -0.034827237167770544,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00136_red.npz",
+      "video": null,
+      "sha256": "c5ecc52ad73674ee9e83c72790572b087b9a771c1112c6a6e5a20e518c579aba"
+    },
+    {
+      "layout_seed": 136,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13829246272576873,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1407385355548822,
+          -0.15359283974958565,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1470448867049018,
+          0.15461011613900952,
+          0.02539325598870121
+        ],
+        "blue": [
+          -0.19559251990005017,
+          -0.034827237167770544,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00136_green.npz",
+      "video": null,
+      "sha256": "3a000c905426862b1a0da575123b5f1881ed6912ce79c22f9cacc7d1cb05d1f5"
+    },
+    {
+      "layout_seed": 136,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13822672039930317
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1407385355548822,
+          -0.15359283974958565,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2454316234100759,
+          -0.16203371560100846,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.152858300299092,
+          0.15540336866440854,
+          0.025393255988701215
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00136_blue.npz",
+      "video": null,
+      "sha256": "eec39763cece32dfbf1905ee1c5a99027be825845a6ce15cc4e1135bdecbb253"
+    },
+    {
+      "layout_seed": 137,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13820207642729787,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14794369568186289,
+          0.1568453964220309,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.22497090255411334,
+          -0.15629871915390195,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1320453981506724,
+          -0.14649098497768162,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00137_red.npz",
+      "video": null,
+      "sha256": "cf13a52c074bc54a360e1cf5e5d4297344e1988a79209b0d0a3d8d7580d7498c"
+    },
+    {
+      "layout_seed": 137,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13837030901417657,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20591290146938812,
+          -0.03568461471568069,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14727919943054155,
+          0.15696113894270766,
+          0.0253932559887012
+        ],
+        "blue": [
+          -0.1320453981506724,
+          -0.14649098497768162,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00137_green.npz",
+      "video": null,
+      "sha256": "6d4fc9d8dc048250b690f1ab66530934a04367a9c137930cadee1edf356a5b1d"
+    },
+    {
+      "layout_seed": 137,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13905415520261855
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20591290146938812,
+          -0.03568461471568069,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.22497090255411334,
+          -0.15629871915390195,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14180533890070468,
+          0.15799849618488293,
+          0.02539325598870122
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00137_blue.npz",
+      "video": null,
+      "sha256": "026dfe7ebe1ed9b8685a2becdbd1489f1b06e0e2a6788bcd09ba8ba12b8ff580"
+    },
+    {
+      "layout_seed": 138,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383283948143602,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14667675378332706,
+          0.15615756008981588,
+          0.02539325598870124
+        ],
+        "green": [
+          -0.23295263483283551,
+          -0.14200822290792825,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.19481933851414748,
+          -0.03241563729161003,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00138_red.npz",
+      "video": null,
+      "sha256": "f2e546fc068690069afbd1b326d45e51dc48734ae7bb772378867c4ac87ab93d"
+    },
+    {
+      "layout_seed": 138,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13838260946039282,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12830663726935668,
+          -0.1377243112593021,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14162794107607396,
+          0.16241497900433055,
+          0.025393255988701232
+        ],
+        "blue": [
+          -0.19481933851414748,
+          -0.03241563729161003,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00138_green.npz",
+      "video": null,
+      "sha256": "2fb75193d63669a32f78a459d648a94d2bedb2a356d022bc70deb681b7a91f37"
+    },
+    {
+      "layout_seed": 138,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383390069902059
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12830663726935668,
+          -0.1377243112593021,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23295263483283551,
+          -0.14200822290792825,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14996481142688467,
+          0.1554133513183626,
+          0.02539325598870121
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00138_blue.npz",
+      "video": null,
+      "sha256": "df43394b77844fc89b60cee3faf6b63ba1c666941a5b98b88c7b97d4d8c3ac47"
+    },
+    {
+      "layout_seed": 139,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13848603955773503,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1459103799106247,
+          0.15640742572134814,
+          0.025393255988701235
+        ],
+        "green": [
+          -0.1400283861648487,
+          -0.16192525183169165,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1924061208944298,
+          -0.0465573091541094,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00139_red.npz",
+      "video": null,
+      "sha256": "5ccb5cc302139d17ebb0d86c9e1261b177a8d56701d17129e0f74c9c39605a6b"
+    },
+    {
+      "layout_seed": 139,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13897894992696674,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.23733064993548575,
+          -0.14781400317507543,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1496375283818581,
+          0.1536252653309039,
+          0.025393255988701225
+        ],
+        "blue": [
+          -0.1924061208944298,
+          -0.0465573091541094,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00139_green.npz",
+      "video": null,
+      "sha256": "5aa490bab3ba66a33732666157e5eeaaee3295fcc284b00d7798d23af52d692f"
+    },
+    {
+      "layout_seed": 139,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13832707399000982
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.23733064993548575,
+          -0.14781400317507543,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1400283861648487,
+          -0.16192525183169165,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15450938595723573,
+          0.15352491416013,
+          0.0253932559887012
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "train",
+      "file": "train/layout_00139_blue.npz",
+      "video": null,
+      "sha256": "1506f1e9a314533a3edb1c896317a143b3cbb9ca13cb91650a073dfb226356a9"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383939613965512,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15299281405351758,
+          0.15718651068015088,
+          0.025393255988701242
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01000_red.npz",
+      "video": "validation/layout_01000_red.mp4",
+      "sha256": "e8455beb9329a9f166060067d6176bc3c242c8b1896908faec0954ee807bc251"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13829870565138053,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.14569898462418543,
+          0.1553392519417093,
+          0.025393255988701235
+        ],
+        "blue": [
+          -0.1308136296758613,
+          -0.1583090576067348,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01000_green.npz",
+      "video": "validation/layout_01000_green.mp4",
+      "sha256": "1e5a731482bece091d74eeb6f04cd26b6cc0745d8a0a129468b2fa2e716730ec"
+    },
+    {
+      "layout_seed": 1000,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13842322706266214
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2041947472826385,
+          -0.04365098415773792,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.2344011993325295,
+          -0.1470924282818064,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13252916106738824,
+          0.1371465976260649,
+          0.02539325598870126
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01000_blue.npz",
+      "video": "validation/layout_01000_blue.mp4",
+      "sha256": "54d647be93524aa52e9da4c6d0b84953b04e9c8f130ac3a10e7069154bd9445e"
+    },
+    {
+      "layout_seed": 1001,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383463871717171,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14567844625567075,
+          0.15747305864168773,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.13874469184819577,
+          -0.1399790781948989,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.2318473419980133,
+          -0.16356038689900354,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01001_red.npz",
+      "video": null,
+      "sha256": "001f8f21e2fdbfb96c19aca7326e8d08fec65d64d4b82a4586c12cc85975f633"
+    },
+    {
+      "layout_seed": 1001,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.138283335601033,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.216866438242442,
+          -0.04336947315552922,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15340719266912245,
+          0.15273233832233302,
+          0.025393255988701235
+        ],
+        "blue": [
+          -0.2318473419980133,
+          -0.16356038689900354,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01001_green.npz",
+      "video": null,
+      "sha256": "f36970efffb038529734cf8e9404ab8e0e87b0fa30ed97b707a8d6206bfc702d"
+    },
+    {
+      "layout_seed": 1001,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1394502243448772
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.216866438242442,
+          -0.04336947315552922,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13874469184819577,
+          -0.1399790781948989,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14741562052770657,
+          0.15573874733551585,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01001_blue.npz",
+      "video": null,
+      "sha256": "10c921196a5c1364dda59cecee4f8239cdae41172ce641bf348f7e16d9aee717"
+    },
+    {
+      "layout_seed": 1002,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13835567179888586,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15061909597687673,
+          0.1552324020835197,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.23833700753031165,
+          -0.15399869854731654,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.20956032676768616,
+          -0.033462953173171606,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01002_red.npz",
+      "video": null,
+      "sha256": "fdd12d47137d2ae93b8919d1fc4c4fffa845acbcbd21e3a6ea81810c325bdd81"
+    },
+    {
+      "layout_seed": 1002,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1384960222417393,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12306685512209066,
+          -0.15309422626708605,
+          0.017393255988701315
+        ],
+        "green": [
+          -0.14858505726967472,
+          0.1571287149164285,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.20956032676768616,
+          -0.033462953173171606,
+          0.017393255988701315
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01002_green.npz",
+      "video": null,
+      "sha256": "0dbe28ba09a7f89c91af5b2622f705e84f4835e1efbb68ec23c7fb784e70a565"
+    },
+    {
+      "layout_seed": 1002,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13828047785143333
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12306685512209066,
+          -0.15309422626708605,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23833700753031165,
+          -0.15399869854731654,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15095009733713247,
+          0.1554077549440797,
+          0.025393255988701208
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01002_blue.npz",
+      "video": null,
+      "sha256": "47c361d97ea48aeb1a21f6654ae9d4b314060fb96690d3b14903b519ce1481ff"
+    },
+    {
+      "layout_seed": 1003,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1384029554537416,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14394831810204853,
+          0.15585083465162985,
+          0.025393255988701225
+        ],
+        "green": [
+          -0.13014897883960505,
+          -0.14549783638840863,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.19794083987306985,
+          -0.028753259692089056,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01003_red.npz",
+      "video": null,
+      "sha256": "1f0d27859663ab543894e4f96e330e28bc0695eb39db198929d51a847e6f3451"
+    },
+    {
+      "layout_seed": 1003,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13844208981274564,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24374279368847826,
+          -0.15681223731192515,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1394844341936202,
+          0.16062423539294762,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.19794083987306985,
+          -0.028753259692089056,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01003_green.npz",
+      "video": null,
+      "sha256": "6d4cfd7bcb514ed290193105b49d7636db9466158cda3c36bb3e91d2c505d9a4"
+    },
+    {
+      "layout_seed": 1003,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1382546682578366
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24374279368847826,
+          -0.15681223731192515,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13014897883960505,
+          -0.14549783638840863,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1523074131122322,
+          0.15745902174180315,
+          0.025393255988701225
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01003_blue.npz",
+      "video": null,
+      "sha256": "8f4e3b6ba1792e36a77b07535a1afe552b2056c255c6fbb05e9ac90b1f32b945"
+    },
+    {
+      "layout_seed": 1004,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1383074611362075,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15328165082673148,
+          0.15450399338135662,
+          0.025393255988701218
+        ],
+        "green": [
+          -0.24897534732325996,
+          -0.16035576325847942,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14012263377049844,
+          -0.1533416701676116,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01004_red.npz",
+      "video": null,
+      "sha256": "283b04ff5b078e612d3359043df06ab8f28008408c261329a03fc8e8c05155fd"
+    },
+    {
+      "layout_seed": 1004,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13883781649572313,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20162113346397634,
+          -0.02556140249835242,
+          0.01739325598870124
+        ],
+        "green": [
+          -0.14297740367214792,
+          0.15821798328960923,
+          0.0253932559887012
+        ],
+        "blue": [
+          -0.14012263377049844,
+          -0.1533416701676116,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01004_green.npz",
+      "video": null,
+      "sha256": "257268fd5a7abd108b740ec9a073ee29057f9b1dd193fb0800d3fb697d75261f"
+    },
+    {
+      "layout_seed": 1004,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.138412304892229
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20162113346397634,
+          -0.02556140249835242,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.24897534732325996,
+          -0.16035576325847942,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14856026193502767,
+          0.15673439952785378,
+          0.025393255988701208
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "validation",
+      "file": "validation/layout_01004_blue.npz",
+      "video": null,
+      "sha256": "6b790813088dfdf871404b49f29458cd9e78ab1a45e0480e44a8534b9f7cdbf5"
+    },
+    {
+      "layout_seed": 2000,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13823274626758347,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1278310375632684,
+          0.13613357322490277,
+          0.02539325598870126
+        ],
+        "green": [
+          -0.23289618307198617,
+          -0.1456201109418467,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14324294428970108,
+          -0.1498163976007226,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02000_red.npz",
+      "video": "test/layout_02000_red.mp4",
+      "sha256": "62799c8c3b8243e96ab21a9b08b3cb0aae751eb77f9eb5a942982de8af207130"
+    },
+    {
+      "layout_seed": 2000,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13827666843860087,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20087928267831995,
+          -0.04146658367868465,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14984536811781107,
+          0.15604568220439105,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.14324294428970108,
+          -0.1498163976007226,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02000_green.npz",
+      "video": "test/layout_02000_green.mp4",
+      "sha256": "d8ccd1fc96152762052edb47318750df60c19d98df80de05f405e78698a794c8"
+    },
+    {
+      "layout_seed": 2000,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13846627289393154
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20087928267831995,
+          -0.04146658367868465,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23289618307198617,
+          -0.1456201109418467,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1476157393343771,
+          0.15633237042884046,
+          0.025393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02000_blue.npz",
+      "video": "test/layout_02000_blue.mp4",
+      "sha256": "45e59cbb47f0fc1e2fc9eebff6bdcdd4a6e6bd3dabd4f9b92ac85b4f0c221b28"
+    },
+    {
+      "layout_seed": 2001,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13835084872203512,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15026398739014857,
+          0.1556281141606715,
+          0.02539325598870122
+        ],
+        "green": [
+          -0.23713724552261362,
+          -0.1582957136023303,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2069045896769539,
+          -0.03955316398736948,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02001_red.npz",
+      "video": null,
+      "sha256": "c5252f8af2aa8a94489b32577b152b15006acc8b761cf83b7de2097c09d89231"
+    },
+    {
+      "layout_seed": 2001,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13936446134811364,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1306971928547793,
+          -0.1370598433825447,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1463494049399482,
+          0.15875947876138785,
+          0.025393255988701218
+        ],
+        "blue": [
+          -0.2069045896769539,
+          -0.03955316398736948,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02001_green.npz",
+      "video": null,
+      "sha256": "0f51dea321d24338b09189349c69c3d06ff701af7027b0d1307b90bd28ed6af5"
+    },
+    {
+      "layout_seed": 2001,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13830749838543782
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1306971928547793,
+          -0.1370598433825447,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.23713724552261362,
+          -0.1582957136023303,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14743971042315962,
+          0.15705042571519975,
+          0.025393255988701208
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02001_blue.npz",
+      "video": null,
+      "sha256": "dce7e487e8a8cdee192acae30ebd7964e2b72899fdeb3824c9b91ad77d637973"
+    },
+    {
+      "layout_seed": 2002,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13830293214352485,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1505480224502556,
+          0.1556828100921817,
+          0.025393255988701218
+        ],
+        "green": [
+          -0.19960938364895622,
+          -0.04474057053702665,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.2241147379961472,
+          -0.13710008563119694,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02002_red.npz",
+      "video": null,
+      "sha256": "d3037c819374990a728d9eafb9ccdffd9bf2e4c868f65aa99057bd81d57f1ab4"
+    },
+    {
+      "layout_seed": 2002,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.138342756214206,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12557284688249984,
+          -0.1597648181226568,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.14945263148460436,
+          0.15430165528432196,
+          0.02539325598870123
+        ],
+        "blue": [
+          -0.2241147379961472,
+          -0.13710008563119694,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02002_green.npz",
+      "video": null,
+      "sha256": "a7d1b785e3e26665300370cc784458444a81a862a9d0f7f50375c43e760d1b0c"
+    },
+    {
+      "layout_seed": 2002,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383338291232502
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12557284688249984,
+          -0.1597648181226568,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.19960938364895622,
+          -0.04474057053702665,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14034251518587304,
+          0.1591066751275403,
+          0.02539325598870123
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02002_blue.npz",
+      "video": null,
+      "sha256": "47493dd63b74232945ae1b2af61190dc8d973102c6404e88ca2b617695b6dd7b"
+    },
+    {
+      "layout_seed": 2003,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13832602621502094,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14640060107950867,
+          0.15685732911380573,
+          0.025393255988701208
+        ],
+        "green": [
+          -0.191500436132868,
+          -0.04502462096040477,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.12576231807356952,
+          -0.13604439742573252,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02003_red.npz",
+      "video": null,
+      "sha256": "334f6fc09bebd81e2b6f503391087cb3b3e5a56d4d375b4382829cfc2b9ebe57"
+    },
+    {
+      "layout_seed": 2003,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13833240841341882,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24075036701226868,
+          -0.13932755018350262,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.13341683518597383,
+          0.1595327858521233,
+          0.025393255988701215
+        ],
+        "blue": [
+          -0.12576231807356952,
+          -0.13604439742573252,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02003_green.npz",
+      "video": null,
+      "sha256": "bf646d3a8b070030a834bc062e5d20d4ee4b957614492934a72fc693c7313422"
+    },
+    {
+      "layout_seed": 2003,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383286870051505
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24075036701226868,
+          -0.13932755018350262,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.191500436132868,
+          -0.04502462096040477,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14657742278663025,
+          0.15712080863141575,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02003_blue.npz",
+      "video": null,
+      "sha256": "adc4d8b3de0027229b11d32c36ecc703d3200b88c5b40d641869597ffd080e06"
+    },
+    {
+      "layout_seed": 2004,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13858041749518019,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1482203934049774,
+          0.1891555547487518,
+          0.025393255988701246
+        ],
+        "green": [
+          -0.11834435952983592,
+          -0.14544194886596462,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.23107431553975688,
+          -0.15585462418604512,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02004_red.npz",
+      "video": null,
+      "sha256": "f4c91a0b6f2d0ba209859f76d0e18d9c7098b1ca068c694b5b6c80617926bb9b"
+    },
+    {
+      "layout_seed": 2004,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1383874501553803,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20362543846494702,
+          -0.04752344789258426,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15239008850959984,
+          0.15557040599304228,
+          0.025393255988701246
+        ],
+        "blue": [
+          -0.23107431553975688,
+          -0.15585462418604512,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02004_green.npz",
+      "video": null,
+      "sha256": "f59c87a7816f3d961ec62b328f7427eb91d0c5a64b69ca50a84ac30ceac7ffcb"
+    },
+    {
+      "layout_seed": 2004,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13831704443057496
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.20362543846494702,
+          -0.04752344789258426,
+          0.017393255988701242
+        ],
+        "green": [
+          -0.11834435952983592,
+          -0.14544194886596462,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.15320086689093512,
+          0.15444351007902626,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02004_blue.npz",
+      "video": null,
+      "sha256": "37b5a0bf4d2328b3f9a05c8d590cff5772750b45f2b4c725979d45b59db8f6a5"
+    },
+    {
+      "layout_seed": 2005,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13850077681655082,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14566777383026577,
+          0.15829495425709722,
+          0.025393255988701208
+        ],
+        "green": [
+          -0.1214578449558312,
+          -0.13887662171446502,
+          0.017393255988701246
+        ],
+        "blue": [
+          -0.2185298841223909,
+          -0.03243263846816346,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02005_red.npz",
+      "video": null,
+      "sha256": "33f89d56c8745a04f740926227ca0c48fd997732d37738685176863c278cc2ab"
+    },
+    {
+      "layout_seed": 2005,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13833347140348606,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2289030839359825,
+          -0.15045161486359007,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15457552372455682,
+          0.1545530714131253,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.2185298841223909,
+          -0.03243263846816346,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02005_green.npz",
+      "video": null,
+      "sha256": "32ccba8457f02619055d0c5d72f5ea6828dd2420291ab1650a1c0a8e17705c46"
+    },
+    {
+      "layout_seed": 2005,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13861137719165018
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2289030839359825,
+          -0.15045161486359007,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1214578449558312,
+          -0.13887662171446502,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1510818965116681,
+          0.15509946009595488,
+          0.025393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02005_blue.npz",
+      "video": null,
+      "sha256": "d6e5a05c3f70affc01ea3e4169d9078c4b09032082dc75d57c7201ed16f9bbf6"
+    },
+    {
+      "layout_seed": 2006,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13884498554384406,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.14424190748135304,
+          0.1569842740784232,
+          0.025393255988701232
+        ],
+        "green": [
+          -0.22458466175455108,
+          -0.14834599460789036,
+          0.01739325598870124
+        ],
+        "blue": [
+          -0.21073550115211662,
+          -0.022126306263979243,
+          0.01739325598870124
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02006_red.npz",
+      "video": null,
+      "sha256": "7d03cf2373737350e7f97099721821ab44efb54f53ba1dfe61692c052f362ce1"
+    },
+    {
+      "layout_seed": 2006,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1384986964845487,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13552549797493016,
+          -0.15397046060150504,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.15194762809453338,
+          0.15546052128159174,
+          0.025393255988701235
+        ],
+        "blue": [
+          -0.21073550115211662,
+          -0.022126306263979243,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02006_green.npz",
+      "video": null,
+      "sha256": "4ae93d9e3ad466e2e5083a80d4e7937daf1f63413d7b690592db2f7c086f7986"
+    },
+    {
+      "layout_seed": 2006,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383425007699664
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.13552549797493016,
+          -0.15397046060150504,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.22458466175455108,
+          -0.14834599460789036,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.151709302759832,
+          0.1550440483175877,
+          0.025393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02006_blue.npz",
+      "video": null,
+      "sha256": "bb517215f41cfddf049ab9fada3f01fe08d4386a41de42472f2fe8753194e705"
+    },
+    {
+      "layout_seed": 2007,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13831576613416902,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.1526623201087494,
+          0.1541531663781758,
+          0.02539325598870123
+        ],
+        "green": [
+          -0.21082709964263507,
+          -0.03196473604994103,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.13793055650967878,
+          -0.1455089867711559,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02007_red.npz",
+      "video": null,
+      "sha256": "eec029a31a996976a2b74b3537410ba809ab3f7998cba3e7d7c311c3ca1ad472"
+    },
+    {
+      "layout_seed": 2007,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13822984024954205,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2277235873122008,
+          -0.15049575019179595,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1519067162764352,
+          0.15514583093607928,
+          0.02539325598870124
+        ],
+        "blue": [
+          -0.13793055650967878,
+          -0.1455089867711559,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02007_green.npz",
+      "video": null,
+      "sha256": "0316da794d9d7b8c917a817a2237aa8bb513d79544418750cde86ccd8f3e5ed9"
+    },
+    {
+      "layout_seed": 2007,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.13841698787815887
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.2277235873122008,
+          -0.15049575019179595,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.21082709964263507,
+          -0.03196473604994103,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.14484763376121956,
+          0.1591345844282248,
+          0.025393255988701204
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02007_blue.npz",
+      "video": null,
+      "sha256": "8ab7a7c24564001e9919bef1d0415f50d5d47bccf72e61f0ab195be9a1c1739a"
+    },
+    {
+      "layout_seed": 2008,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.1385498804376406,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15174655175166077,
+          0.15730458439903156,
+          0.025393255988701215
+        ],
+        "green": [
+          -0.22393558970848818,
+          -0.14479334319287765,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.21186903954267794,
+          -0.02745410267140364,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02008_red.npz",
+      "video": null,
+      "sha256": "e9fce987cd4ff9beace6c19b5ccd6e492a0956a9d8b4c2e7734355d2c100889a"
+    },
+    {
+      "layout_seed": 2008,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.1384866592742643,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12028881007357521,
+          -0.16359697539227866,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1454798250160456,
+          0.1590479366944793,
+          0.025393255988701208
+        ],
+        "blue": [
+          -0.21186903954267794,
+          -0.02745410267140364,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02008_green.npz",
+      "video": null,
+      "sha256": "31bb4823242bbfc33a9460bff019581f176e66f9fe88752af5f6481260954a0f"
+    },
+    {
+      "layout_seed": 2008,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1381978791787969
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.12028881007357521,
+          -0.16359697539227866,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.22393558970848818,
+          -0.14479334319287765,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.1475234529463821,
+          0.1562449673872526,
+          0.025393255988701218
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02008_blue.npz",
+      "video": null,
+      "sha256": "60d8d0185007424e4f60513c31e37c9df5f5dbbc8e7170f1aba23903b2e07e65"
+    },
+    {
+      "layout_seed": 2009,
+      "target": "red",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.13830720364141946,
+        "green": 0.0,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.15370099595564957,
+          0.15444679590058413,
+          0.025393255988701242
+        ],
+        "green": [
+          -0.20961598542432244,
+          -0.04388371970133802,
+          0.017393255988701242
+        ],
+        "blue": [
+          -0.1163972721309763,
+          -0.15203079617911947,
+          0.017393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02009_red.npz",
+      "video": null,
+      "sha256": "81daee632665eb765780be9c00be2e1535b727fbc7faa6b16f226b11f11ab02f"
+    },
+    {
+      "layout_seed": 2009,
+      "target": "green",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "blue": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.13821059780392536,
+        "blue": 0.0
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24306518283598047,
+          -0.1471592238658366,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.1470274276413588,
+          0.15699205855077084,
+          0.025393255988701208
+        ],
+        "blue": [
+          -0.1163972721309763,
+          -0.15203079617911947,
+          0.017393255988701235
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02009_green.npz",
+      "video": null,
+      "sha256": "cd6d66852bdd0abe49dce701327d0e6f9cf01eb8588c6374b036964caedb566b"
+    },
+    {
+      "layout_seed": 2009,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.1383441775267416
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24306518283598047,
+          -0.1471592238658366,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.20961598542432244,
+          -0.04388371970133802,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.15452159746498398,
+          0.15456317664293454,
+          0.025393255988701242
+        ]
+      },
+      "steps": 308,
+      "stable_2s": true,
+      "source": "scripted_ik_simulation_teacher",
+      "privileged_object_poses": true,
+      "hardware_execution": false,
+      "split": "test",
+      "file": "test/layout_02009_blue.npz",
+      "video": null,
+      "sha256": "b39a5f6cb9af8bd84ae9ffcee6a2bb5c5298d458436c237a1c9ad4bbe93fcf68"
+    }
+  ],
+  "elapsed_seconds": 254.03295723100018
+}

@@ -1,0 +1,19 @@
+{
+  "parent": {
+    "executable": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+    "prefix": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/piper",
+    "sdk": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/piper/lib/python3.11/site-packages/pyAgxArm/__init__.py",
+    "site_package_paths": [
+      "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/piper/lib/python3.11/site-packages"
+    ]
+  },
+  "spawn_child": {
+    "executable": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+    "prefix": "/home/fanyuan/miniconda3/envs/kaiwen-learn",
+    "sdk": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/piper/lib/python3.11/site-packages/pyAgxArm/__init__.py",
+    "site_package_paths": [
+      "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/piper/lib/python3.11/site-packages"
+    ]
+  },
+  "scope": "CPU_only_multiprocessing_spawn_sdk_import"
+}

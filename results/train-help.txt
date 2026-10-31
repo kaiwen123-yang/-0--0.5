@@ -1,0 +1,79 @@
+usage: train.py [-h]
+                {pi0_aloha,pi05_aloha,pi0_aloha_towel,pi0_aloha_tupperware,pi0
+_droid,pi0_fast_droid,pi05_droid,pi0_libero,pi0_libero_low_mem_finetune,pi0_fa
+st_libero,pi0_fast_libero_low_mem_finetune,pi05_libero,pi0_aloha_pen_uncap,pi0
+5_aloha_pen_uncap,pi0_fast_full_droid_finetune,pi05_full_droid_finetune,pi05_d
+roid_finetune,pi0_aloha_sim,debug,debug_restore,debug_pi05,paligemma_binning_d
+roid,paligemma_fast_droid,paligemma_fast_specialist_droid,paligemma_vq_droid,p
+aligemma_diffusion_droid,pi05_droid_jointpos_polaris,pi0_fast_droid_jointpos_p
+olaris,pi0_droid_jointpos_polaris,pi0_droid_jointpos_100k_polaris,paligemma_bi
+nning_droid_jointpos}
+
+╭─ options ──────────────────────────────────────────────────────────────────╮
+│ -h, --help        show this help message and exit                          │
+╰────────────────────────────────────────────────────────────────────────────╯
+╭─ subcommands ──────────────────────────────────────────────────────────────╮
+│ {pi0_aloha,pi05_aloha,pi0_aloha_towel,pi0_aloha_tupperware,pi0_droid,pi0_f │
+│ ast_droid,pi05_droid,pi0_libero,pi0_libero_low_mem_finetune,pi0_fast_liber │
+│ o,pi0_fast_libero_low_mem_finetune,pi05_libero,pi0_aloha_pen_uncap,pi05_al │
+│ oha_pen_uncap,pi0_fast_full_droid_finetune,pi05_full_droid_finetune,pi05_d │
+│ roid_finetune,pi0_aloha_sim,debug,debug_restore,debug_pi05,paligemma_binni │
+│ ng_droid,paligemma_fast_droid,paligemma_fast_specialist_droid,paligemma_vq │
+│ _droid,paligemma_diffusion_droid,pi05_droid_jointpos_polaris,pi0_fast_droi │
+│ d_jointpos_polaris,pi0_droid_jointpos_polaris,pi0_droid_jointpos_100k_pola │
+│ ris,paligemma_binning_droid_jointpos}                                      │
+│     pi0_aloha     pi0_aloha                                                │
+│     pi05_aloha    pi05_aloha                                               │
+│     pi0_aloha_towel                                                        │
+│                   pi0_aloha_towel                                          │
+│     pi0_aloha_tupperware                                                   │
+│                   pi0_aloha_tupperware                                     │
+│     pi0_droid     pi0_droid                                                │
+│     pi0_fast_droid                                                         │
+│                   pi0_fast_droid                                           │
+│     pi05_droid    pi05_droid                                               │
+│     pi0_libero    pi0_libero                                               │
+│     pi0_libero_low_mem_finetune                                            │
+│                   pi0_libero_low_mem_finetune                              │
+│     pi0_fast_libero                                                        │
+│                   pi0_fast_libero                                          │
+│     pi0_fast_libero_low_mem_finetune                                       │
+│                   pi0_fast_libero_low_mem_finetune                         │
+│     pi05_libero   pi05_libero                                              │
+│     pi0_aloha_pen_uncap                                                    │
+│                   pi0_aloha_pen_uncap                                      │
+│     pi05_aloha_pen_uncap                                                   │
+│                   pi05_aloha_pen_uncap                                     │
+│     pi0_fast_full_droid_finetune                                           │
+│                   pi0_fast_full_droid_finetune                             │
+│     pi05_full_droid_finetune                                               │
+│                   pi05_full_droid_finetune                                 │
+│     pi05_droid_finetune                                                    │
+│                   pi05_droid_finetune                                      │
+│     pi0_aloha_sim                                                          │
+│                   pi0_aloha_sim                                            │
+│     debug         debug                                                    │
+│     debug_restore                                                          │
+│                   debug_restore                                            │
+│     debug_pi05    debug_pi05                                               │
+│     paligemma_binning_droid                                                │
+│                   paligemma_binning_droid                                  │
+│     paligemma_fast_droid                                                   │
+│                   paligemma_fast_droid                                     │
+│     paligemma_fast_specialist_droid                                        │
+│                   paligemma_fast_specialist_droid                          │
+│     paligemma_vq_droid                                                     │
+│                   paligemma_vq_droid                                       │
+│     paligemma_diffusion_droid                                              │
+│                   paligemma_diffusion_droid                                │
+│     pi05_droid_jointpos_polaris                                            │
+│                   pi05_droid_jointpos_polaris                              │
+│     pi0_fast_droid_jointpos_polaris                                        │
+│                   pi0_fast_droid_jointpos_polaris                          │
+│     pi0_droid_jointpos_polaris                                             │
+│                   pi0_droid_jointpos_polaris                               │
+│     pi0_droid_jointpos_100k_polaris                                        │
+│                   pi0_droid_jointpos_100k_polaris                          │
+│     paligemma_binning_droid_jointpos                                       │
+│                   paligemma_binning_droid_jointpos                         │
+╰────────────────────────────────────────────────────────────────────────────╯

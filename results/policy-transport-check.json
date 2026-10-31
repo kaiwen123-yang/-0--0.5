@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "round_trips": 2,
+  "server_environment": "openpi",
+  "client_environment": "libero",
+  "action_shape": [
+    10,
+    7
+  ],
+  "synthetic_policy": true,
+  "weights_loaded": false,
+  "gpu_used": false,
+  "scope": "WebSocket and NumPy serialization only; not model inference"
+}

@@ -1,0 +1,156 @@
+{
+  "recorded_at_utc": "2026-10-31T10:54:15.696853+00:00",
+  "host": "autodl-d57",
+  "workspace": "/root/autodl-tmp/robot-repro/pi-reproduction",
+  "environments": {
+    "pi0": {
+      "python": "3.11.18",
+      "executable": "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/bin/python",
+      "prefix": "/root/autodl-tmp/robot-repro/pi0/openpi/.venv",
+      "base_prefix": "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu",
+      "user_site_enabled": false,
+      "sys_path": [
+        "",
+        "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python311.zip",
+        "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11",
+        "/root/autodl-tmp/tools/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/lib-dynload",
+        "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages",
+        "/root/autodl-tmp/robot-repro/pi0/openpi/src",
+        "/root/autodl-tmp/robot-repro/pi0/openpi/packages/openpi-client/src",
+        "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/rerun_sdk"
+      ],
+      "package_count": 203,
+      "versions": {
+        "pip": "26.2.2",
+        "torch": "2.7.1+cu128",
+        "torchvision": "0.22.1+cu128",
+        "jax": "0.5.3",
+        "jaxlib": "0.5.3",
+        "jax-cuda12-plugin": "0.5.3",
+        "flax": "0.10.2",
+        "transformers": "4.53.2",
+        "numpy": "1.26.4",
+        "lerobot": "0.1.0",
+        "mujoco": "2.3.7",
+        "openpi": "0.1.0",
+        "openpi-client": "0.1.0"
+      },
+      "activation": "/root/autodl-tmp/robot-repro/pi0/activate.sh",
+      "environment_real_path": "/root/robot-repro-envs/pi0",
+      "dependency_check": "passed",
+      "system_site_packages": false,
+      "inherits_mpc_rl_or_conda_packages": false,
+      "upstream": "https://github.com/Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "submodules": [
+        "d1dc83afd89ded4379851257fe5d85632d31d5ec third_party/aloha (d1dc83a)",
+        " f78abd68ee283de9f9be3c8f7e2a9ad60246e95c third_party/libero (f78abd6)"
+      ],
+      "local_changed_files": [
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "transformers_patch": {
+        "files": 5,
+        "all_match": true
+      },
+      "cpu_cli_help": {
+        "serve_policy.py": "passed",
+        "train.py": "passed",
+        "train_pytorch.py": "passed"
+      }
+    },
+    "pi05": {
+      "python": "3.11.18",
+      "executable": "/root/autodl-tmp/robot-repro/pi05/openpi/.venv/bin/python",
+      "prefix": "/root/autodl-tmp/robot-repro/pi05/openpi/.venv",
+      "base_prefix": "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu",
+      "user_site_enabled": false,
+      "sys_path": [
+        "",
+        "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python311.zip",
+        "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11",
+        "/root/autodl-tmp/tools/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/lib-dynload",
+        "/root/autodl-tmp/robot-repro/pi05/openpi/.venv/lib/python3.11/site-packages",
+        "/root/autodl-tmp/robot-repro/pi05/openpi/src",
+        "/root/autodl-tmp/robot-repro/pi05/openpi/packages/openpi-client/src",
+        "/root/autodl-tmp/robot-repro/pi05/openpi/.venv/lib/python3.11/site-packages/rerun_sdk"
+      ],
+      "package_count": 203,
+      "versions": {
+        "pip": "26.2.2",
+        "torch": "2.7.1+cu128",
+        "torchvision": "0.22.1+cu128",
+        "jax": "0.5.3",
+        "jaxlib": "0.5.3",
+        "jax-cuda12-plugin": "0.5.3",
+        "flax": "0.10.2",
+        "transformers": "4.53.2",
+        "numpy": "1.26.4",
+        "lerobot": "0.1.0",
+        "mujoco": "2.3.7",
+        "openpi": "0.1.0",
+        "openpi-client": "0.1.0"
+      },
+      "activation": "/root/autodl-tmp/robot-repro/pi05/activate.sh",
+      "environment_real_path": "/root/robot-repro-envs/pi05",
+      "dependency_check": "passed",
+      "system_site_packages": false,
+      "inherits_mpc_rl_or_conda_packages": false,
+      "upstream": "https://github.com/Physical-Intelligence/openpi",
+      "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "submodules": [
+        "d1dc83afd89ded4379851257fe5d85632d31d5ec third_party/aloha (d1dc83a)",
+        " f78abd68ee283de9f9be3c8f7e2a9ad60246e95c third_party/libero (f78abd6)"
+      ],
+      "local_changed_files": [
+        "pyproject.toml",
+        "uv.lock"
+      ],
+      "transformers_patch": {
+        "files": 5,
+        "all_match": true
+      },
+      "cpu_cli_help": {
+        "serve_policy.py": "passed",
+        "train.py": "passed",
+        "train_pytorch.py": "passed"
+      }
+    },
+    "piper-h": {
+      "python": "3.11.18",
+      "executable": "/root/autodl-tmp/robot-repro/piper-h/.venv/bin/python",
+      "prefix": "/root/autodl-tmp/robot-repro/piper-h/.venv",
+      "base_prefix": "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu",
+      "user_site_enabled": false,
+      "sys_path": [
+        "",
+        "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python311.zip",
+        "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11",
+        "/root/autodl-tmp/tools/python/cpython-3.11-linux-x86_64-gnu/lib/python3.11/lib-dynload",
+        "/root/autodl-tmp/robot-repro/piper-h/.venv/lib/python3.11/site-packages",
+        "/root/autodl-tmp/robot-repro/piper-h/openpi-client/src"
+      ],
+      "package_count": 14,
+      "versions": {
+        "pip": "26.2.2",
+        "numpy": "1.26.4",
+        "openpi-client": "0.1.0",
+        "pyagxarm": "1.0.0",
+        "python-can": "4.6.1"
+      },
+      "activation": "/root/autodl-tmp/robot-repro/piper-h/activate.sh",
+      "environment_real_path": "/root/autodl-tmp/robot-repro/piper-h/.venv",
+      "dependency_check": "passed",
+      "system_site_packages": false,
+      "inherits_mpc_rl_or_conda_packages": false,
+      "sdk_upstream": "https://github.com/agilexrobotics/pyAgxArm",
+      "sdk_commit": "d90e234ba8e408cfa964b38aa9120b3131fc9f85",
+      "client_source": "/root/autodl-tmp/robot-repro/piper-h/openpi-client",
+      "robot_adapter_implemented": false,
+      "firmware_selected": false
+    }
+  },
+  "legacy_simulation_environment_rebuilt": false,
+  "training_or_evaluation_run_by_publication": false
+}

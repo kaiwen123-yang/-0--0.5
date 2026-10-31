@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "status": "release_upload_in_progress",
+  "source": {
+    "host": "fy-5080",
+    "root": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction",
+    "selected_files": 6131,
+    "selected_bytes": 27197616706,
+    "file_manifest": "publication/fy5080-source-inventory.json"
+  },
+  "legacy": {
+    "commit": "65a6ab8cfd1360934ed8e47e94c56aa679d863fc",
+    "parts": 130,
+    "archive_bytes": 1075492106,
+    "source_files_reused": 2081,
+    "result_files_reused": 3002,
+    "original_status_file": "ARCHIVE_STATUS.json",
+    "original_scope": "source/config/logs/results/videos",
+    "verification": "Original file-count and size verification; not retroactively claimed as SHA256 verification."
+  },
+  "new_assets": {
+    "release_id": 429878605,
+    "tag": "fy5080-pi-artifacts-20261031",
+    "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/fy5080-pi-artifacts-20261031",
+    "files": 1048,
+    "source_bytes": 25785431808,
+    "groups": {
+      "dataset": {
+        "files": 1000,
+        "source_bytes": 16523947366,
+        "archive_bytes": 5324850141,
+        "archive_sha256": "a354cfc2373c919fb09e20f773e74863a5b39524a57e41e9761df1218bae096a",
+        "parts": [
+          "fy5080-dataset.tar.gz.part-000",
+          "fy5080-dataset.tar.gz.part-001",
+          "fy5080-dataset.tar.gz.part-002",
+          "fy5080-dataset.tar.gz.part-003",
+          "fy5080-dataset.tar.gz.part-004",
+          "fy5080-dataset.tar.gz.part-005",
+          "fy5080-dataset.tar.gz.part-006",
+          "fy5080-dataset.tar.gz.part-007",
+          "fy5080-dataset.tar.gz.part-008",
+          "fy5080-dataset.tar.gz.part-009"
+        ]
+      },
+      "checkpoints": {
+        "files": 28,
+        "source_bytes": 9243886728,
+        "archive_bytes": 9244495416,
+        "archive_sha256": "ce27f04be61ad90cc7cb8ff3e54f8a280d12c34c3e6705c18227514e01920548",
+        "parts": [
+          "fy5080-checkpoints.tar.gz.part-000",
+          "fy5080-checkpoints.tar.gz.part-001",
+          "fy5080-checkpoints.tar.gz.part-002",
+          "fy5080-checkpoints.tar.gz.part-003",
+          "fy5080-checkpoints.tar.gz.part-004",
+          "fy5080-checkpoints.tar.gz.part-005",
+          "fy5080-checkpoints.tar.gz.part-006",
+          "fy5080-checkpoints.tar.gz.part-007",
+          "fy5080-checkpoints.tar.gz.part-008",
+          "fy5080-checkpoints.tar.gz.part-009",
+          "fy5080-checkpoints.tar.gz.part-010",
+          "fy5080-checkpoints.tar.gz.part-011",
+          "fy5080-checkpoints.tar.gz.part-012",
+          "fy5080-checkpoints.tar.gz.part-013",
+          "fy5080-checkpoints.tar.gz.part-014",
+          "fy5080-checkpoints.tar.gz.part-015",
+          "fy5080-checkpoints.tar.gz.part-016",
+          "fy5080-checkpoints.tar.gz.part-017"
+        ]
+      },
+      "supplement": {
+        "files": 20,
+        "source_bytes": 17597714,
+        "archive_bytes": 16420481,
+        "archive_sha256": "7cd9241811cf61be03f3e9046c0b668c634a4d6eaca44d7100a363614acecdcf",
+        "parts": [
+          "fy5080-supplement.tar.gz.part-000"
+        ]
+      }
+    },
+    "expected_asset_count": 33,
+    "expected_asset_bytes": 14585786322,
+    "verified_asset_count": 17,
+    "asset_receipt": "publication/fy5080-release-assets.json",
+    "package_manifest": "publication/fy5080-package-manifest.json",
+    "is_draft": true
+  },
+  "migration": {
+    "target_host": "autodl-d57",
+    "workspace": "/root/autodl-tmp/robot-repro/pi-reproduction",
+    "selected_files_copied": 6131,
+    "transferred_file_bytes": 27197616706,
+    "stage_size_mismatches": [],
+    "source_files_retained": true,
+    "temporary_transfer_key_removed": true,
+    "model_environment_record": "deployment/d57/environment.json",
+    "paths": "deployment/d57/paths.json",
+    "official_base_checkpoints_reused": true,
+    "libero_task_checkpoints_migrated": false,
+    "legacy_simulator_environment_rebuilt": false
+  },
+  "scientific_results": {
+    "libero_pilot": {
+      "pi0": [
+        183,
+        200
+      ],
+      "pi05": [
+        196,
+        200
+      ],
+      "trials_per_task": 5
+    },
+    "piper_h_transfer": {
+      "pi0": [
+        32,
+        75
+      ],
+      "pi05": [
+        47,
+        75
+      ]
+    },
+    "piper_color_pi05": {
+      "synthetic_episodes": 165,
+      "frames": 44220,
+      "splits": [
+        120,
+        15,
+        30
+      ],
+      "lora_updates": 1500,
+      "lora_validation": [
+        0,
+        15
+      ],
+      "full_last_logged_update": 1456,
+      "full_last_cloud_saved_directory": "1000",
+      "local_checkpoints": {
+        "lora": {
+          "path": "results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499",
+          "params_files": 13,
+          "params_bytes": 6335864568,
+          "expected_cloud_params_files": 13,
+          "expected_cloud_params_bytes": 6335864568,
+          "params_complete_by_count_and_bytes": true,
+          "optimizer_present": false,
+          "model_restoration_run_this_task": false
+        },
+        "full": {
+          "path": "results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000",
+          "params_files": 11,
+          "params_bytes": 2908017574,
+          "expected_cloud_params_files": 17,
+          "expected_cloud_params_bytes": 12441709579,
+          "params_complete_by_count_and_bytes": false,
+          "optimizer_present": false,
+          "model_restoration_run_this_task": false
+        }
+      }
+    }
+  },
+  "excluded_from_new_binary_upload": [
+    "SSH keys and authentication configuration",
+    "installed environment package binaries",
+    "regenerable package caches",
+    "official upstream checkpoints (source/generation/checksum manifests retained)",
+    "duplicate copies of the already published source/results archive parts"
+  ],
+  "this_task_execution": {
+    "training_runs": 0,
+    "new_evaluations": 0,
+    "hardware_commands": 0,
+    "local_computer_large_file_archive": false
+  }
+}

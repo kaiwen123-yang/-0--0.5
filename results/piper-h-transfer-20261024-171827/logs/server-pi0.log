@@ -1,0 +1,19 @@
+INFO:datasets:PyTorch version 2.7.1+cu128 available.
+INFO:datasets:Polars version 1.30.0 available.
+INFO:datasets:JAX version 0.5.3 available.
+INFO:root:Loading model...
+INFO:absl:orbax-checkpoint version: 0.11.13
+INFO:absl:Created BasePyTreeCheckpointHandler: use_ocdbt=True, use_zarr3=False, pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=<orbax.checkpoint._src.metadata.array_metadata_store.Store object at 0x788527fcafd0>
+INFO:absl:Restoring checkpoint from /home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi0_libero/params.
+INFO:absl:[thread=MainThread] Failed to get flag value for EXPERIMENTAL_ORBAX_USE_DISTRIBUTED_PROCESS_ID.
+INFO:absl:[process=0][thread=MainThread] No metadata found for any process_index, checkpoint_dir=/home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi0_libero/params. time elapsed=0.00019693374633789062 seconds. If the checkpoint does not contain jax.Array then it is expected. If checkpoint contains jax.Array then it should lead to an error eventually; if no error is raised then it is a bug.
+INFO:absl:[process=0] /jax/checkpoint/read/bytes_per_sec: 1.4 GiB/s (total bytes: 6.0 GiB) (time elapsed: 4 seconds) (per-host)
+INFO:absl:Finished restoring checkpoint in 4.46 seconds from /home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi0_libero/params.
+INFO:root:Norm stats not found in /home/fanyuan/projects/kaiwen-learning/pi-reproduction/assets/pi0_libero/physical-intelligence/libero, skipping.
+INFO:root:Loaded norm stats from /home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi0_libero/assets/physical-intelligence/libero
+INFO:root:Ready: {"model": "pi0", "config": "pi0_libero", "run_id": "piper-h-transfer-20261024-171827", "checkpoint": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi0_libero", "backend": "jax", "precision": "bfloat16", "action_horizon": 50, "flow_steps": 10, "episode_seed_reset": true, "warmup_excluded_from_evaluation_rng": true}
+INFO:websockets.server:server listening on 127.0.0.1:42913
+INFO:websockets.server:connection rejected (200 OK)
+INFO:websockets.server:connection open
+INFO:openpi.serving.websocket_policy_server:Connection from ('127.0.0.1', 58556) opened
+INFO:openpi.serving.websocket_policy_server:Connection from ('127.0.0.1', 58556) closed

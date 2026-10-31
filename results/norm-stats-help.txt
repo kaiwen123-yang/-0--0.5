@@ -1,0 +1,8 @@
+usage: compute_norm_stats.py [-h] --config-name STR [--max-frames {None}|INT]
+
+╭─ options ───────────────────────────────────────────────╮
+│ -h, --help              show this help message and exit │
+│ --config-name STR       (required)                      │
+│ --max-frames {None}|INT                                 │
+│                         (default: None)                 │
+╰─────────────────────────────────────────────────────────╯

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "scope": "CPU_stdlib_checkpoint_preflight_only",
+  "checks": [
+    {
+      "check": "reject_incomplete_download",
+      "passed": true,
+      "message": "Checkpoint pi05_libero is not fully verified in checkpoints-status.json; finish download_checkpoints.py --checkpoint pi05_libero before serving."
+    },
+    {
+      "check": "accept_matching_verified_manifest_and_sizes",
+      "passed": true
+    },
+    {
+      "check": "reject_changed_size_after_verification",
+      "passed": true,
+      "message": "Verified checkpoint file is missing or has changed size: /home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/checkpoint-preflight-dmvazgtj/checkpoints/pi05_libero/params/_METADATA"
+    },
+    {
+      "check": "reject_jax_flag_on_pytorch_detected_directory",
+      "passed": true,
+      "message": "Checkpoint contains model.safetensors: select --backend pytorch or a JAX-only directory."
+    },
+    {
+      "check": "reject_missing_libero_normalization",
+      "passed": true,
+      "message": "Cannot read checkpoint metadata /home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/checkpoint-preflight-dmvazgtj/checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json: [Errno 2] No such file or directory: '/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/checkpoint-preflight-dmvazgtj/checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json'"
+    },
+    {
+      "check": "no_ml_runtime_imports",
+      "passed": true
+    },
+    {
+      "check": "current_partial_pi05_cli_rejected_before_model_load",
+      "passed": true,
+      "exit_code": 2
+    },
+    {
+      "check": "custom_checkpoint_check_only_reports_structure_not_integrity",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "backend": "jax",
+  "model_weights_loaded": false,
+  "training": false,
+  "version": "0.5.3",
+  "device": "cuda:0",
+  "device_kind": "NVIDIA GeForce RTX 5080",
+  "memory_stats": {
+    "num_allocs": 66,
+    "bytes_in_use": 16384,
+    "peak_bytes_in_use": 67141888,
+    "largest_alloc_size": 33554432,
+    "bytes_limit": 12439289856,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 69206016,
+    "peak_pool_bytes": 69206016
+  },
+  "checks": [
+    "bfloat16_jit_matmul"
+  ],
+  "status": "passed"
+}

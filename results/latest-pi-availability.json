@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-10-23",
+  "checked_at_utc": "2026-10-23T12:33:22.311043+00:00",
+  "purpose": "Official public π-family local reproduction availability, not a claim about private or future releases.",
+  "findings": {
+    "latest_named_research_model": {
+      "name": "π0.7",
+      "announced": "2026-04-16",
+      "official_url": "https://www.pi.website/blog/pi07",
+      "paper": "2604.15483v2",
+      "local_source_status": "not_found_in_checked_official_public_sources",
+      "local_checkpoint_status": "not_found_in_checked_official_public_sources",
+      "checkpoint_size_bytes": null,
+      "note": "Diverse context conditioning research model; no verified official downloadable π0.7 source/config/checkpoint found in this audit."
+    },
+    "pi06_and_recap": {
+      "base_model": "π0.6",
+      "rl_model": "π*0.6",
+      "method": "RECAP: RL with Experience and Corrections via Advantage-conditioned Policies",
+      "announced": "2025-11-17",
+      "official_url": "https://www.pi.website/blog/pistar06",
+      "model_card_url": "https://website.pi-asset.com/pi06star/PI06_model_card.pdf",
+      "paper": "2511.14759v2",
+      "architecture_note": "Official π0.6 model card: Gemma3 4B VLM backbone, about 860M-parameter action expert, images up to 448x448; this is not a pi05 config rename.",
+      "local_source_status": "not_found_in_checked_official_public_sources",
+      "local_checkpoint_status": "not_found_in_checked_official_public_sources",
+      "checkpoint_size_bytes": null
+    },
+    "latest_product_announcement": {
+      "name": "Pi API beta",
+      "announced": "2026-10-13",
+      "official_url": "https://www.pi.website/blog/api-beta",
+      "access_mode": "Hosted training/fine-tuning and cloud-hosted inference; beta participation via official contact form.",
+      "api_model_version": "not specified by announcement; do not equate the API latest model with a downloadable pi07 release",
+      "public_local_weights_release": false,
+      "local_api_setup_performed": false,
+      "application_submitted": false,
+      "user_data_uploaded": false
+    },
+    "latest_verified_official_openpi_family": "π0.5",
+    "openpi_supported_families": [
+      "π0",
+      "π0-FAST",
+      "π0.5"
+    ],
+    "pi05_openpi_head": "flow matching only per official README",
+    "preparation_scope": "Existing local OpenPI source/env covers released families; newest papers and availability evidence saved. No invented π0.6/π0.7 runtime or checkpoints."
+  },
+  "official_checks": {
+    "github_organization": {
+      "url": "https://github.com/Physical-Intelligence",
+      "method": "Connected GitHub search_repositories(org=Physical-Intelligence, query empty, per_page=100)",
+      "public_repositories_returned": [
+        "openpi",
+        "real-time-chunking-kinetix",
+        "aloha",
+        "openpi-basic-control",
+        "pi-data-sharing",
+        "augmax",
+        "rlds_dataset_builder",
+        "rules_layer_optimizer",
+        "mujoco",
+        "bazel-central-registry"
+      ],
+      "count": 10
+    },
+    "openpi": {
+      "url": "https://github.com/Physical-Intelligence/openpi",
+      "main_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+      "readme_url": "https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/README.md",
+      "config_url": "https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/training/config.py",
+      "models_url": "https://github.com/Physical-Intelligence/openpi/tree/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/models",
+      "branches_api": "https://api.github.com/repos/Physical-Intelligence/openpi/branches?per_page=100",
+      "branches": {
+        "02-05-default_to_us-west-1_when_downloading_from_s3__openpi-assets": "884a39ebb1478602e08082bd5a50baf7a70ab955",
+        "05-31-implement_training_on_droid": "d8fb6f17580a795dcd7ccbddd79ae7a1281895ad",
+        "arhan/real2simevals": "d536f68daf9ae70a4523edbe425437da95319a96",
+        "karl/droid_policies": "b84cc75031eb3a9cbcfb1d55ee85fbd7db81e8bb",
+        "kevin/pi05-support": "84ebae7f83cfa4f2b7850d102d960aba61081349",
+        "main": "215abfb217dbac7d5f1273282331b9b1866c0479"
+      },
+      "releases_api": "https://api.github.com/repos/Physical-Intelligence/openpi/releases?per_page=100",
+      "releases_returned": [],
+      "newer_model_code_search": {
+        "queries": [
+          "pi06",
+          "pi07"
+        ],
+        "scope": "Physical-Intelligence/openpi",
+        "results": []
+      },
+      "inspection": "README, all returned branch names, training/config.py, models directory inspected; supported configurations include pi05_libero, pi05_droid, pi05_aloha, pi0_fast_libero, pi0_fast_droid. No official pi06/pi07 configuration or advertised checkpoint found."
+    },
+    "huggingface_organization": {
+      "url": "https://huggingface.co/physical-intelligence/models",
+      "api": "https://huggingface.co/api/models?author=physical-intelligence&limit=100&full=true",
+      "public_models_returned": [
+        {
+          "id": "physical-intelligence/fast",
+          "sha": "ec4d7aa71691cac0b8bed6942be45684db2110f4",
+          "lastModified": "2025-01-16T16:33:50.000Z",
+          "role": "FAST action tokenizer, not VLA model checkpoint"
+        }
+      ],
+      "count": 1
+    },
+    "openpi_gcs_public_checkpoint_prefixes": {
+      "api": "https://storage.googleapis.com/storage/v1/b/openpi-assets/o?delimiter=%2F&prefix=checkpoints%2F&maxResults=1000",
+      "prefixes": [
+        "checkpoints/paligemma_binning_droid_jointpos/",
+        "checkpoints/pi05_base/",
+        "checkpoints/pi05_droid/",
+        "checkpoints/pi05_droid_jointpos/",
+        "checkpoints/pi05_libero/",
+        "checkpoints/pi0_aloha_pen_uncap/",
+        "checkpoints/pi0_aloha_sim/",
+        "checkpoints/pi0_aloha_towel/",
+        "checkpoints/pi0_aloha_tupperware/",
+        "checkpoints/pi0_base/",
+        "checkpoints/pi0_droid/",
+        "checkpoints/pi0_droid_jointpos/",
+        "checkpoints/pi0_droid_jointpos_100k/",
+        "checkpoints/pi0_fast_base/",
+        "checkpoints/pi0_fast_droid/",
+        "checkpoints/pi0_fast_droid_jointpos/",
+        "checkpoints/pi0_fast_libero/",
+        "checkpoints/pi0_libero/",
+        "checkpoints/polaris/",
+        "checkpoints/roboarena/"
+      ],
+      "next_page_token_returned": false,
+      "inspection": "No pi06/pi07 named prefix returned; arbitrary names such as polaris are not attributed to a model without official documentation."
+    },
+    "official_research_index": {
+      "url": "https://www.pi.website/blog",
+      "latest_named_pi_entry": "π0.7",
+      "latest_overall_entry": "Pi API beta 2026-10-13"
+    },
+    "openpi_basic_control": {
+      "url": "https://github.com/Physical-Intelligence/openpi-basic-control",
+      "role": "Low-level robot control library, not a newer π model or weights release",
+      "documented_hardware": [
+        "Yam",
+        "ARX_X5",
+        "FR3 with Robotiq"
+      ],
+      "piper_h_not_documented": true
+    }
+  },
+  "limitations": [
+    "This is a dated audit of publicly visible official GitHub/Hugging Face, published OpenPI README/config/model files, public checkpoint prefixes, and official announcements. Absence from these endpoints is not proof that no private, access-controlled, differently named or future model exists.",
+    "GitHub search index may lag; direct README/config/directory and branch/release inspections provide additional evidence but do not audit every file on every branch.",
+    "Public GCS top-level checkpoint names are not a complete model identity map; undocumented aliases were not inferred to be pi06/pi07.",
+    "Latest API model identity, downloadable weights, local SDK/runtime requirements and 5080 memory requirements are not established by the API beta announcement.",
+    "Community ports/reimplementations and LeRobot model conversions are not treated as official Physical Intelligence releases.",
+    "No API account application, service installation, user-data upload, model allocation, GPU use, training or robot connection occurred in this availability audit."
+  ],
+  "papers": [
+    {
+      "model": "pi07",
+      "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+      "arxiv_id": "2604.15483",
+      "version": "v2",
+      "version_date": "2026-04-24",
+      "official_page_url": "https://www.pi.website/blog/pi07",
+      "official_pdf_url": "https://www.pi.website/download/pi07.pdf",
+      "download_url": "https://arxiv.org/pdf/2604.15483v2",
+      "download_url_resolved": "https://arxiv.org/pdf/2604.15483v2",
+      "version_history_url": "https://arxiv.org/abs/2604.15483",
+      "path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/docs/papers/2604.15483v2-pi07.pdf",
+      "bytes": 15587236,
+      "sha256": "54843c88fbabf6bce53ab2ee94cafc9a55c3d5639f7b74c5e8ad24485fe6863b",
+      "pages": 25,
+      "validation": "PDF header, pdfinfo title/page count, first-page arXiv version/date checked",
+      "note": "Versioned author-uploaded arXiv PDF saved; official unversioned PDF URL recorded as provenance, not claimed byte-identical."
+    },
+    {
+      "model": "pistar06",
+      "title": "π*0.6: a VLA That Learns From Experience",
+      "arxiv_id": "2511.14759",
+      "version": "v2",
+      "version_date": "2025-11-19",
+      "official_page_url": "https://www.pi.website/blog/pistar06",
+      "official_pdf_url": "https://www.physicalintelligence.company/download/pistar06.pdf",
+      "download_url": "https://arxiv.org/pdf/2511.14759v2",
+      "download_url_resolved": "https://arxiv.org/pdf/2511.14759v2",
+      "version_history_url": "https://arxiv.org/abs/2511.14759",
+      "path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/docs/papers/2511.14759v2-pistar06.pdf",
+      "bytes": 25075375,
+      "sha256": "9f4f5a3070ad9549ea7687ea54baa19858820dbcc0834cc805212d68fd6c8cb3",
+      "pages": 18,
+      "validation": "PDF header, pdfinfo title/page count, first-page arXiv version/date checked",
+      "note": "Versioned author-uploaded arXiv PDF saved; official unversioned PDF URL recorded as provenance, not claimed byte-identical."
+    }
+  ],
+  "pi0_fast_static_readiness": {
+    "official_model_code": "repos/openpi/src/openpi/models/pi0_fast.py",
+    "official_configs": [
+      "pi0_fast_libero",
+      "pi0_fast_libero_low_mem_finetune",
+      "pi0_fast_droid",
+      "pi0_fast_full_droid_finetune"
+    ],
+    "tokenizer_code": "repos/openpi/src/openpi/models/tokenizer.py:51",
+    "tokenizer_repo": "https://huggingface.co/physical-intelligence/fast",
+    "tokenizer_revision": "ec4d7aa71691cac0b8bed6942be45684db2110f4",
+    "tokenizer_remote_code": "processing_action_tokenizer.py",
+    "upstream_loading": "AutoProcessor.from_pretrained(fast_tokenizer_path, trust_remote_code=True); default path does not pin revision. For reproducibility stage a reviewed, revision-pinned local snapshot and pass its path.",
+    "paligemma_tokenizer": "gs://big_vision/paligemma_tokenizer.model",
+    "installed_dependency_metadata": {
+      "transformers": "4.53.2",
+      "jax": "0.5.3",
+      "flax": "0.10.2",
+      "sentencepiece": "0.2.0",
+      "tokenizers": "0.21.1",
+      "numpy": "1.26.4",
+      "scipy": "1.15.3",
+      "huggingface_hub": "0.32.3"
+    },
+    "project_hf_cache_present_at_check": false,
+    "validation": "Static source and installed package metadata only; tokenizer/model not instantiated and no runtime/model-shape compatibility claim."
+  }
+}

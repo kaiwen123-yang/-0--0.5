@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-23T11:52:08.598645+00:00",
+  "name": "tokenizer",
+  "source": "gs://big_vision/paligemma_tokenizer.model",
+  "generation_pinned": true,
+  "total_bytes": 4264023,
+  "objects": [
+    {
+      "kind": "storage#object",
+      "id": "big_vision/paligemma_tokenizer.model/1711547605575873",
+      "selfLink": "https://www.googleapis.com/storage/v1/b/big_vision/o/paligemma_tokenizer.model",
+      "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/big_vision/o/paligemma_tokenizer.model?generation=1711547605575873&alt=media",
+      "name": "paligemma_tokenizer.model",
+      "bucket": "big_vision",
+      "generation": "1711547605575873",
+      "metageneration": "1",
+      "contentType": "application/octet-stream",
+      "storageClass": "STANDARD",
+      "size": "4264023",
+      "md5Hash": "FCCtyYVnIKVZ6KhyhLGV4g==",
+      "crc32c": "cKDEzw==",
+      "etag": "CMHRr9jLlIUDEAE=",
+      "timeCreated": "2024-03-27T13:53:25.598Z",
+      "updated": "2024-03-27T13:53:25.598Z",
+      "timeStorageClassUpdated": "2024-03-27T13:53:25.598Z",
+      "timeFinalized": "2024-03-27T13:53:25.598Z",
+      "local_path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/cache/openpi/big_vision/paligemma_tokenizer.model",
+      "download_url": "https://storage.googleapis.com/big_vision/paligemma_tokenizer.model?generation=1711547605575873"
+    }
+  ]
+}

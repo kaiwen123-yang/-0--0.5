@@ -1,0 +1,47 @@
+{
+  "stages": [
+    {
+      "stage": "v3_tool_pi0",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-181306",
+      "results": {
+        "pi0": {
+          "successes": 4,
+          "episodes": 6
+        }
+      }
+    },
+    {
+      "stage": "v3_tool_pi05",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-181449",
+      "results": {
+        "pi05": {
+          "successes": 6,
+          "episodes": 6
+        }
+      }
+    },
+    {
+      "stage": "v3_tool_and_gripper_pi0",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-181644",
+      "results": {
+        "pi0": {
+          "successes": 6,
+          "episodes": 6
+        }
+      }
+    },
+    {
+      "stage": "v3_tool_and_gripper_pi05",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-181843",
+      "results": {
+        "pi05": {
+          "successes": 6,
+          "episodes": 6
+        }
+      }
+    }
+  ],
+  "selected_config": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/models/piper_h/adapter_v3b.json",
+  "physical_geometry_unchanged": true,
+  "no_object_state_feedback_in_policy_adapter": true
+}

@@ -1,0 +1,17 @@
+[project]
+name = "piper-h-openpi-client"
+version = "0.0.0"
+description = "Piper H SDK and openpi client preparation; no hardware connection."
+requires-python = ">=3.11,<3.12"
+dependencies = ["pip==26.2.2","pyAgxArm", "openpi-client"]
+[tool.uv.sources]
+pyAgxArm = { path = "pyAgxArm", editable = true }
+openpi-client = { path = "openpi-client", editable = true }
+
+[[tool.uv.index]]
+name = "aliyun-pypi"
+url = "https://mirrors.aliyun.com/pypi/simple"
+default = true
+
+[tool.uv]
+link-mode = "clone"

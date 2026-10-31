@@ -1,0 +1,73 @@
+{
+  "layout_seed": 1001,
+  "target": "blue",
+  "correct_in_box": false,
+  "wrong_in_box": false,
+  "gripper_open": false,
+  "distractor_displacement_m": {
+    "red": 0.0,
+    "green": 0.0
+  },
+  "max_lift_m": {
+    "red": 0.0,
+    "green": 0.0,
+    "blue": 0.0
+  },
+  "max_joint_violation_rad": 0.020650675144630926,
+  "success": false,
+  "final_positions": {
+    "red": [
+      -0.216866438242442,
+      -0.04336947315552922,
+      0.017393255988701235
+    ],
+    "green": [
+      -0.13874469184819577,
+      -0.1399790781948989,
+      0.017393255988701235
+    ],
+    "blue": [
+      -0.2318473419980133,
+      -0.16356038689900354,
+      0.017393255988701235
+    ]
+  },
+  "steps": 117,
+  "stable_2s": false,
+  "error": "RuntimeError('Measured joint limit overshoot > 0.02 rad')",
+  "mode": "base",
+  "split": "validation",
+  "checkpoint": "/root/autodl-fs/pi05/models/openpi-assets/checkpoints/pi05_base",
+  "video": "/root/autodl-fs/pi05/piper-color-v1/evaluations/base_validation/layout_01001_blue.mp4",
+  "hardware_execution": false,
+  "privileged_policy_input": false,
+  "scripted_rescue": false,
+  "inference_seconds": [
+    0.05563648231327534,
+    0.05911640636622906,
+    0.05633681174367666,
+    0.05624211207032204,
+    0.0544481435790658,
+    0.05545047391206026,
+    0.055188861675560474,
+    0.0549426581710577,
+    0.05701786559075117,
+    0.05374035891145468,
+    0.05566500499844551,
+    0.053582497872412205,
+    0.05421493016183376,
+    0.05423389095813036,
+    0.054171372205019,
+    0.05402492359280586,
+    0.05376178398728371,
+    0.053619726561009884,
+    0.05279468186199665,
+    0.053521194495260715,
+    0.053839399479329586,
+    0.052786906249821186,
+    0.0529386755079031,
+    0.05378625635057688
+  ],
+  "inference_median_excluding_first": 0.054171372205019,
+  "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+}

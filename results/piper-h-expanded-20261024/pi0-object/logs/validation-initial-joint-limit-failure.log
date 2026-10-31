@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/isolated_python.py", line 31, in <module>
+    runpy.run_path(args[0], run_name="__main__")
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "scripts/report_piper_h_demo.py", line 102, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "scripts/report_piper_h_demo.py", line 59, in main
+    assert max_joint_violation<0.01,('Joint limit violation',max_joint_violation)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Joint limit violation', 0.01150531920216924)

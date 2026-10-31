@@ -1,0 +1,43 @@
+{
+  "checkpoint": "gs://openpi-assets/checkpoints/pi0_libero",
+  "configuration": "pi0_libero",
+  "advertising_note": "Official public checkpoint exists and config still exists, but current main README highlights pi05_libero rather than pi0_libero.",
+  "asset_id": "physical-intelligence/libero",
+  "asset_path_matches_config": true,
+  "normalization_dimensions": {
+    "state": {
+      "mean": 32,
+      "std": 32,
+      "q01": 32,
+      "q99": 32
+    },
+    "actions": {
+      "mean": 32,
+      "std": 32,
+      "q01": 32,
+      "q99": 32
+    }
+  },
+  "parameter_branch_presence": {
+    "state_proj": true,
+    "action_time_mlp_in": true,
+    "action_time_mlp_out": true,
+    "time_mlp_in": false,
+    "time_mlp_out": false
+  },
+  "config_reference": "repos/openpi/src/openpi/training/config.py:653",
+  "model_reference": "repos/openpi/src/openpi/models/pi0.py:99",
+  "limitations": [
+    "Full tensor values have not been restored; CPU metadata validation checks names and shapes only.",
+    "No GPU or policy rollout was executed by checkpoint preparation."
+  ],
+  "subsequent_cpu_shape_validation": {
+    "report": "results/checkpoint-shapes.json",
+    "parameter_arrays": 50,
+    "missing": [],
+    "extra": [],
+    "shape_mismatches": {},
+    "tensor_data_restored": false,
+    "status": "passed"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "backend": "torch",
+  "model_weights_loaded": false,
+  "training": false,
+  "version": "2.7.1+cu128",
+  "cuda_build": "12.8",
+  "device": "NVIDIA GeForce RTX 5080",
+  "cudnn": 90701,
+  "allocated_peak_bytes": 8589824,
+  "checks": [
+    "bfloat16_matmul",
+    "bfloat16_cudnn_convolution"
+  ],
+  "status": "passed"
+}

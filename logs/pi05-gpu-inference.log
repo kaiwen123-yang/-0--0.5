@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "model": "pi05_libero",
+  "backend": "jax",
+  "device": "NVIDIA GeForce RTX 5080",
+  "checkpoint": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi05_libero",
+  "full_checkpoint_loaded": true,
+  "batch_size": 1,
+  "flow_denoising_steps": 10,
+  "predictions": 2,
+  "action_shape": [
+    10,
+    7
+  ],
+  "actions_finite": true,
+  "load_seconds": 7.536850980017334,
+  "inference_wall_seconds": [
+    12.419033254991518,
+    0.09633694600779563
+  ],
+  "first_inference_includes_jit_compile": true,
+  "device_allocator_memory_stats": {
+    "num_allocs": 2756,
+    "bytes_in_use": 6900679680,
+    "peak_bytes_in_use": 7139166976,
+    "largest_alloc_size": 2415919104,
+    "bytes_limit": 12439289856,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 8600420352,
+    "peak_pool_bytes": 8600420352
+  },
+  "process_max_rss_kib": 13984796,
+  "input": "seeded official synthetic LIBERO example, not a task rollout",
+  "training": false,
+  "robot_connected": false,
+  "scope": "Full model compatibility only; no success-rate or control-latency benchmark"
+}

@@ -1,0 +1,62 @@
+{
+  "python_executable": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+  "prefix": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi",
+  "versions": {
+    "openpi": "0.1.0",
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "transformers": "4.53.2",
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "flax": "0.10.2",
+    "lerobot": "0.1.0",
+    "numpy": "1.26.4"
+  },
+  "torch_path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/torch/__init__.py",
+  "transformers_path": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/openpi/lib/python3.11/site-packages/transformers/__init__.py",
+  "cuda_build": "12.8",
+  "compiled_cuda_arches": "sm_75 sm_80 sm_86 sm_90 sm_100 sm_120 compute_120",
+  "jax_devices": [
+    "TFRT_CPU_0"
+  ],
+  "cuda_initialized": false,
+  "configs": {
+    "pi0_libero": {
+      "type": "ModelType.PI0",
+      "action_spec": [
+        1,
+        50,
+        32
+      ],
+      "max_token_len": 48,
+      "discrete_state_input": false,
+      "default_batch_size": 32,
+      "tokenizer_checked": true
+    },
+    "pi05_libero": {
+      "type": "ModelType.PI05",
+      "action_spec": [
+        1,
+        10,
+        32
+      ],
+      "max_token_len": 200,
+      "discrete_state_input": false,
+      "default_batch_size": 256,
+      "tokenizer_checked": true
+    },
+    "pi0_libero_low_mem_finetune": {
+      "type": "ModelType.PI0",
+      "action_spec": [
+        1,
+        50,
+        32
+      ],
+      "max_token_len": 48,
+      "discrete_state_input": false,
+      "default_batch_size": 32,
+      "tokenizer_checked": true
+    }
+  },
+  "status": "passed_cpu_only"
+}

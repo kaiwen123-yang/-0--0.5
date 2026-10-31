@@ -1,0 +1,21 @@
+{
+  "model": "pi05",
+  "config": "pi05_libero",
+  "run_id": "piper-h-transfer-20261024-173501",
+  "checkpoint": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi05_libero",
+  "backend": "jax",
+  "precision": "bfloat16",
+  "action_horizon": 10,
+  "flow_steps": 10,
+  "episode_seed_reset": true,
+  "warmup_excluded_from_evaluation_rng": true,
+  "load_seconds": 3.782001950999984,
+  "warmup_seconds": 11.257286719002877,
+  "device": "NVIDIA GeForce RTX 5080",
+  "versions": {
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "flax": "0.10.2",
+    "numpy": "1.26.4"
+  }
+}

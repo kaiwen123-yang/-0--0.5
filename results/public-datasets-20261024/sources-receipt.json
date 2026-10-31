@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "piper-action-labels",
+      "title": "公开 Piper 样本的动作标签需要怎样转换？",
+      "queries": [
+        {
+          "id": "ray0v0",
+          "source": {
+            "label": "Ray0v0/cl-piper-single-stack-bowls",
+            "links": [
+              {
+                "label": "Ray0v0/cl-piper-single-stack-bowls",
+                "href": "https://huggingface.co/datasets/Ray0v0/cl-piper-single-stack-bowls"
+              }
+            ],
+            "filters": [
+              "样本：episode 0",
+              "粒度：episode_index 与 frame_index"
+            ],
+            "caveats": [
+              "只检查一条示范，不代表全库质量；未确认 Piper H 型号兼容性。",
+              "数据仓库未标注数据许可。"
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "样本核查",
+                "detail": "状态和动作均为有限数值，没有发现重复 episode/frame 键，时间戳单调；非末帧动作与下一帧状态逐值相同。"
+              }
+            ]
+          },
+          "columns": [
+            "dataset",
+            "sample_rows",
+            "checked_transitions",
+            "action_equals_next_state"
+          ],
+          "rows": [
+            {
+              "dataset": "Ray0v0/cl-piper-single-stack-bowls",
+              "sample_rows": 382,
+              "checked_transitions": 381,
+              "action_equals_next_state": true
+            }
+          ],
+          "preview": {
+            "kind": "sample",
+            "note": "每个数据集仅 episode 0；未检查全库。"
+          },
+          "methods": [
+            {
+              "language": "python",
+              "code": "state = np.asarray(values['observation.state'])\naction = np.asarray(values['action'])\nnext_match = bool(np.array_equal(action[:-1], state[1:]))"
+            }
+          ]
+        },
+        {
+          "id": "aromanus",
+          "source": {
+            "label": "aromanus/openpi_PiPER_demo_train_2",
+            "links": [
+              {
+                "label": "aromanus/openpi_PiPER_demo_train_2",
+                "href": "https://huggingface.co/datasets/aromanus/openpi_PiPER_demo_train_2"
+              }
+            ],
+            "filters": [
+              "样本：episode 0",
+              "粒度：episode_index 与 frame_index"
+            ],
+            "caveats": [
+              "只检查一条示范，不代表全库质量；未确认 Piper H 型号兼容性。"
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "样本核查",
+                "detail": "状态和动作均为有限数值，没有发现重复 episode/frame 键，时间戳单调；非末帧动作与下一帧状态逐值相同。"
+              }
+            ]
+          },
+          "columns": [
+            "dataset",
+            "sample_rows",
+            "checked_transitions",
+            "action_equals_next_state"
+          ],
+          "rows": [
+            {
+              "dataset": "aromanus/openpi_PiPER_demo_train_2",
+              "sample_rows": 548,
+              "checked_transitions": 547,
+              "action_equals_next_state": true
+            }
+          ],
+          "preview": {
+            "kind": "sample",
+            "note": "每个数据集仅 episode 0；未检查全库。"
+          },
+          "methods": [
+            {
+              "language": "python",
+              "code": "state = np.asarray(values['observation.state'])\naction = np.asarray(values['action'])\nnext_match = bool(np.array_equal(action[:-1], state[1:]))"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

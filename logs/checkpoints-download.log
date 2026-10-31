@@ -1,0 +1,365 @@
+Traceback (most recent call last):
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/download_checkpoints.py", line 289, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/download_checkpoints.py", line 256, in main
+    manifests = [make_manifest(name, args) for name in ("tokenizer", *names)]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/download_checkpoints.py", line 256, in <listcomp>
+    manifests = [make_manifest(name, args) for name in ("tokenizer", *names)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/download_checkpoints.py", line 116, in make_manifest
+    listing = request_json(f"https://storage.googleapis.com/storage/v1/b/{bucket}/o?" + urllib.parse.urlencode(query), args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/download_checkpoints.py", line 95, in request_json
+    with urllib.request.urlopen(url, timeout=args.timeout) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/miniconda3/envs/kaiwen-learn/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/miniconda3/envs/kaiwen-learn/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/miniconda3/envs/kaiwen-learn/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/miniconda3/envs/kaiwen-learn/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/miniconda3/envs/kaiwen-learn/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/home/fanyuan/miniconda3/envs/kaiwen-learn/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 401: Unauthorized
+[2026-10-23T11:52:16.863950+00:00] starting tokenizer: 0.004 GiB
+[2026-10-23T11:52:21.865782+00:00] progress tokenizer: 0.00/0.00 GiB; 0/1 verified
+[2026-10-23T11:52:25.682119+00:00] verified paligemma_tokenizer.model (4.1 MiB)
+[2026-10-23T11:52:25.683231+00:00] starting pi05_libero: 11.585 GiB
+[2026-10-23T11:52:26.576629+00:00] verified checkpoints/pi05_libero/params/array_metadatas/process_0 (0.0 MiB)
+[2026-10-23T11:52:26.577873+00:00] progress pi05_libero: 0.00/11.58 GiB; 1/16 verified
+[2026-10-23T11:52:27.123621+00:00] verified checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json (0.0 MiB)
+[2026-10-23T11:52:28.052102+00:00] verified checkpoints/pi05_libero/params/_METADATA (0.0 MiB)
+[2026-10-23T11:52:28.455984+00:00] verified checkpoints/pi05_libero/params/manifest.ocdbt (0.0 MiB)
+[2026-10-23T11:52:28.563910+00:00] verified checkpoints/pi05_libero/params/_sharding (0.0 MiB)
+[2026-10-23T11:52:28.892891+00:00] verified checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979 (0.0 MiB)
+[2026-10-23T11:52:31.387394+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25 (0.0 MiB)
+[2026-10-23T11:53:01.396504+00:00] progress pi05_libero: 0.38/11.58 GiB; 7/16 verified
+[2026-10-23T11:53:31.404399+00:00] progress pi05_libero: 0.73/11.58 GiB; 7/16 verified
+[2026-10-23T11:54:01.411415+00:00] progress pi05_libero: 0.98/11.58 GiB; 7/16 verified
+[2026-10-23T11:54:31.418860+00:00] progress pi05_libero: 1.39/11.58 GiB; 7/16 verified
+[2026-10-23T11:55:01.426129+00:00] progress pi05_libero: 1.73/11.58 GiB; 7/16 verified
+[2026-10-23T11:55:31.433612+00:00] progress pi05_libero: 2.21/11.58 GiB; 7/16 verified
+[2026-10-23T11:56:01.441970+00:00] progress pi05_libero: 2.73/11.58 GiB; 7/16 verified
+[2026-10-23T11:56:31.449875+00:00] progress pi05_libero: 3.19/11.58 GiB; 7/16 verified
+[2026-10-23T11:57:01.457777+00:00] progress pi05_libero: 3.69/11.58 GiB; 7/16 verified
+[2026-10-23T11:57:35.045841+00:00] progress pi05_libero: 4.07/11.58 GiB; 7/16 verified
+[2026-10-23T11:57:35.046759+00:00] Download incomplete; re-run the same command to resume
+[2026-10-23T11:57:39.299228+00:00] starting tokenizer: 0.004 GiB
+[2026-10-23T11:57:39.304780+00:00] verified existing paligemma_tokenizer.model
+[2026-10-23T11:57:39.305284+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T11:57:39.305317+00:00] starting pi05_libero: 11.585 GiB
+[2026-10-23T11:57:39.305548+00:00] verified existing checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T11:57:39.305949+00:00] verified existing checkpoints/pi05_libero/params/_METADATA
+[2026-10-23T11:57:39.306101+00:00] verified existing checkpoints/pi05_libero/params/_sharding
+[2026-10-23T11:57:39.306873+00:00] verified existing checkpoints/pi05_libero/params/manifest.ocdbt
+[2026-10-23T11:57:39.307411+00:00] verified existing checkpoints/pi05_libero/params/array_metadatas/process_0
+[2026-10-23T11:57:39.307786+00:00] verified existing checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979
+[2026-10-23T11:57:39.308189+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25
+[2026-10-23T11:57:39.308886+00:00] progress pi05_libero: 4.07/11.58 GiB; 4/16 verified
+[2026-10-23T11:57:40.225194+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/bc613ff288a162563e622d01bb60622a (0.0 MiB)
+[2026-10-23T11:57:41.099089+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/manifest.ocdbt (0.0 MiB)
+[2026-10-23T11:57:45.932411+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/bda87d9791f23df771cd2d15293780cc (2.8 MiB)
+[2026-10-23T11:58:10.937213+00:00] progress pi05_libero: 4.62/11.58 GiB; 10/16 verified
+[2026-10-23T11:58:11.448828+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/155391c1cbf93a1be16266de052e5b48 (2201.0 MiB)
+[2026-10-23T11:58:41.453530+00:00] progress pi05_libero: 5.14/11.58 GiB; 11/16 verified
+[2026-10-23T11:59:11.457929+00:00] progress pi05_libero: 5.64/11.58 GiB; 11/16 verified
+[2026-10-23T11:59:41.462868+00:00] progress pi05_libero: 6.18/11.58 GiB; 11/16 verified
+[2026-10-23T12:00:11.467109+00:00] progress pi05_libero: 6.66/11.58 GiB; 11/16 verified
+[2026-10-23T12:00:23.817856+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/6c54da5a6f62c20a09c0f3f8c3329e00 (1533.9 MiB)
+[2026-10-23T12:00:43.821326+00:00] progress pi05_libero: 7.15/11.58 GiB; 12/16 verified
+[2026-10-23T12:01:13.825891+00:00] progress pi05_libero: 7.51/11.58 GiB; 12/16 verified
+[2026-10-23T12:01:43.569733+00:00] Download incomplete; re-run the same command to resume
+[2026-10-23T12:01:52.703079+00:00] queued tokenizer: 0.004 GiB
+[2026-10-23T12:01:52.703089+00:00] queued pi05_libero: 11.585 GiB
+[2026-10-23T12:01:52.703091+00:00] queued pi0_libero: 11.189 GiB
+[2026-10-23T12:01:52.703740+00:00] verified existing checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T12:01:52.704148+00:00] verified existing checkpoints/pi05_libero/params/_sharding
+[2026-10-23T12:01:52.704195+00:00] verified existing checkpoints/pi05_libero/params/_METADATA
+[2026-10-23T12:01:52.704379+00:00] verified existing checkpoints/pi05_libero/params/manifest.ocdbt
+[2026-10-23T12:01:52.705132+00:00] verified existing checkpoints/pi05_libero/params/array_metadatas/process_0
+[2026-10-23T12:01:52.705508+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25
+[2026-10-23T12:01:52.709145+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/bc613ff288a162563e622d01bb60622a
+[2026-10-23T12:01:52.711224+00:00] verified existing paligemma_tokenizer.model
+[2026-10-23T12:01:52.711291+00:00] verified existing checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979
+[2026-10-23T12:01:52.712001+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/manifest.ocdbt
+[2026-10-23T12:01:52.712079+00:00] verified existing checkpoints/pi0_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T12:01:52.712108+00:00] progress tokenizer: 0.00/0.00 GiB; 0/1 verified
+[2026-10-23T12:01:52.712127+00:00] progress pi05_libero: 7.59/11.58 GiB; 4/16 verified
+[2026-10-23T12:01:52.712478+00:00] progress pi0_libero: 0.00/11.19 GiB; 0/19 verified
+[2026-10-23T12:01:52.712793+00:00] verified existing checkpoints/pi0_libero/params/_METADATA
+[2026-10-23T12:01:52.713655+00:00] verified existing checkpoints/pi0_libero/params/_sharding
+[2026-10-23T12:01:52.713699+00:00] verified existing checkpoints/pi0_libero/params/d/5b6b2a896e0651f82a2c879b8a2a8ba8
+[2026-10-23T12:01:52.713732+00:00] verified existing checkpoints/pi0_libero/params/manifest.ocdbt
+[2026-10-23T12:01:52.714049+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/bda87d9791f23df771cd2d15293780cc
+[2026-10-23T12:01:52.714346+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/15ad1c4fa76e1c764766b9bc865e8d1d
+[2026-10-23T12:01:54.230700+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/6c54da5a6f62c20a09c0f3f8c3329e00
+[2026-10-23T12:01:54.905624+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/155391c1cbf93a1be16266de052e5b48
+[2026-10-23T12:02:24.911229+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:02:24.911240+00:00] progress pi05_libero: 7.91/11.58 GiB; 12/16 verified
+[2026-10-23T12:02:24.911243+00:00] progress pi0_libero: 0.25/11.19 GiB; 6/19 verified
+[2026-10-23T12:02:54.927370+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:02:54.927382+00:00] progress pi05_libero: 8.21/11.58 GiB; 12/16 verified
+[2026-10-23T12:02:54.927385+00:00] progress pi0_libero: 0.51/11.19 GiB; 6/19 verified
+[2026-10-23T12:03:24.931901+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:03:24.931915+00:00] progress pi05_libero: 8.51/11.58 GiB; 12/16 verified
+[2026-10-23T12:03:24.931919+00:00] progress pi0_libero: 0.80/11.19 GiB; 6/19 verified
+[2026-10-23T12:03:47.897324+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/0eaaecefaa9720d30a32cc56e65fd345 (2335.9 MiB)
+[2026-10-23T12:03:47.897668+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/680b47b37cc767ff45156e23565e2252
+[2026-10-23T12:03:57.900304+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:03:57.900316+00:00] progress pi05_libero: 8.78/11.58 GiB; 13/16 verified
+[2026-10-23T12:03:57.900319+00:00] progress pi0_libero: 1.14/11.19 GiB; 7/19 verified
+[2026-10-23T12:04:14.244067+00:00] verified checkpoints/pi0_libero/params/ocdbt.process_0/d/5b573f911a8101f0fcfdd62f73b218fb (580.6 MiB)
+[2026-10-23T12:04:29.248067+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:04:29.248079+00:00] progress pi05_libero: 9.04/11.58 GiB; 13/16 verified
+[2026-10-23T12:04:29.248083+00:00] progress pi0_libero: 1.45/11.19 GiB; 8/19 verified
+[2026-10-23T12:04:44.420168+00:00] verified checkpoints/pi0_libero/params/ocdbt.process_0/d/5c296f4f9a224be488612a6025ca58c6 (934.0 MiB)
+[2026-10-23T12:04:44.420331+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/a87389eb66cb14add95ad6441a413ee9
+[2026-10-23T12:04:59.424586+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:04:59.424599+00:00] progress pi05_libero: 9.31/11.58 GiB; 13/16 verified
+[2026-10-23T12:04:59.424602+00:00] progress pi0_libero: 1.63/11.19 GiB; 10/19 verified
+[2026-10-23T12:05:25.122932+00:00] verified checkpoints/pi0_libero/params/ocdbt.process_0/d/cae25c26b881cdb73257fea25bd132a2 (33.4 MiB)
+[2026-10-23T12:05:30.124855+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:05:30.124866+00:00] progress pi05_libero: 9.65/11.58 GiB; 13/16 verified
+[2026-10-23T12:05:30.124869+00:00] progress pi0_libero: 1.69/11.19 GiB; 11/19 verified
+[2026-10-23T12:05:30.739925+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/475fab3ee8821662585a8cde3eb32e22 (2050.6 MiB)
+[2026-10-23T12:05:55.750567+00:00] verified checkpoints/pi0_libero/params/ocdbt.process_0/d/f0bdaf7cbb943edbc868f15a685f9881 (25.0 MiB)
+[2026-10-23T12:06:00.752530+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:06:00.752541+00:00] progress pi05_libero: 9.94/11.58 GiB; 14/16 verified
+[2026-10-23T12:06:00.752544+00:00] progress pi0_libero: 1.80/11.19 GiB; 12/19 verified
+[2026-10-23T12:06:26.188961+00:00] verified checkpoints/pi05_libero/params/ocdbt.process_0/d/896bf93c5cf2e8ddd274a6ea0a2feec0 (2136.3 MiB)
+[2026-10-23T12:06:26.189184+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/manifest.ocdbt
+[2026-10-23T12:06:31.191066+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:06:31.191076+00:00] progress pi05_libero: 10.16/11.58 GiB; 15/16 verified
+[2026-10-23T12:06:31.191079+00:00] progress pi0_libero: 2.06/11.19 GiB; 13/19 verified
+[2026-10-23T12:07:01.195851+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:07:01.195863+00:00] progress pi05_libero: 10.16/11.58 GiB; 15/16 verified
+[2026-10-23T12:07:01.195866+00:00] progress pi0_libero: 2.38/11.19 GiB; 13/19 verified
+[2026-10-23T12:07:31.200224+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:07:31.200237+00:00] progress pi05_libero: 10.17/11.58 GiB; 15/16 verified
+[2026-10-23T12:07:31.200240+00:00] progress pi0_libero: 2.71/11.19 GiB; 13/19 verified
+[2026-10-23T12:08:01.204452+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:08:01.204463+00:00] progress pi05_libero: 10.18/11.58 GiB; 15/16 verified
+[2026-10-23T12:08:01.204466+00:00] progress pi0_libero: 3.07/11.19 GiB; 13/19 verified
+[2026-10-23T12:08:35.372513+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:08:35.372524+00:00] progress pi05_libero: 10.18/11.58 GiB; 15/16 verified
+[2026-10-23T12:08:35.372527+00:00] progress pi0_libero: 3.37/11.19 GiB; 13/19 verified
+[2026-10-23T12:08:41.457345+00:00] Download incomplete; re-run the same command to resume
+[2026-10-23T12:09:12.508392+00:00] queued tokenizer: 0.004 GiB
+[2026-10-23T12:09:12.508401+00:00] queued pi05_libero: 11.585 GiB
+[2026-10-23T12:09:12.508404+00:00] queued pi0_libero: 11.189 GiB
+[2026-10-23T12:09:12.509253+00:00] verified existing checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T12:09:12.509474+00:00] verified existing checkpoints/pi05_libero/params/_METADATA
+[2026-10-23T12:09:12.509722+00:00] verified existing checkpoints/pi05_libero/params/array_metadatas/process_0
+[2026-10-23T12:09:12.509865+00:00] verified existing checkpoints/pi05_libero/params/_sharding
+[2026-10-23T12:09:12.510106+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25
+[2026-10-23T12:09:12.510277+00:00] verified existing checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979
+[2026-10-23T12:09:12.510449+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/bc613ff288a162563e622d01bb60622a
+[2026-10-23T12:09:12.511716+00:00] progress tokenizer: 0.00/0.00 GiB; 0/1 verified
+[2026-10-23T12:09:12.511725+00:00] progress pi05_libero: 10.18/11.58 GiB; 4/16 verified
+[2026-10-23T12:09:12.511728+00:00] progress pi0_libero: 3.39/11.19 GiB; 0/19 verified
+[2026-10-23T12:09:12.512071+00:00] verified existing checkpoints/pi05_libero/params/manifest.ocdbt
+[2026-10-23T12:09:12.513834+00:00] verified existing paligemma_tokenizer.model
+[2026-10-23T12:09:12.513884+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/manifest.ocdbt
+[2026-10-23T12:09:12.513917+00:00] verified existing checkpoints/pi0_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T12:09:12.513960+00:00] verified existing checkpoints/pi0_libero/params/_METADATA
+[2026-10-23T12:09:12.513989+00:00] verified existing checkpoints/pi0_libero/params/_sharding
+[2026-10-23T12:09:12.514014+00:00] verified existing checkpoints/pi0_libero/params/d/5b6b2a896e0651f82a2c879b8a2a8ba8
+[2026-10-23T12:09:12.514031+00:00] verified existing checkpoints/pi0_libero/params/manifest.ocdbt
+[2026-10-23T12:09:12.518479+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/bda87d9791f23df771cd2d15293780cc
+[2026-10-23T12:09:12.519129+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/15ad1c4fa76e1c764766b9bc865e8d1d
+[2026-10-23T12:09:14.059888+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/6c54da5a6f62c20a09c0f3f8c3329e00
+[2026-10-23T12:09:14.571499+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/475fab3ee8821662585a8cde3eb32e22
+[2026-10-23T12:09:14.643425+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/5b573f911a8101f0fcfdd62f73b218fb
+[2026-10-23T12:09:14.643626+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/680b47b37cc767ff45156e23565e2252
+[2026-10-23T12:09:14.654393+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/896bf93c5cf2e8ddd274a6ea0a2feec0
+[2026-10-23T12:09:14.855307+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/155391c1cbf93a1be16266de052e5b48
+[2026-10-23T12:09:14.855523+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/a87389eb66cb14add95ad6441a413ee9
+[2026-10-23T12:09:14.888080+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/cae25c26b881cdb73257fea25bd132a2
+[2026-10-23T12:09:15.026896+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/0eaaecefaa9720d30a32cc56e65fd345
+[2026-10-23T12:09:15.052981+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/f0bdaf7cbb943edbc868f15a685f9881
+[2026-10-23T12:09:15.497847+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/5c296f4f9a224be488612a6025ca58c6
+[2026-10-23T12:09:15.497985+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/manifest.ocdbt
+[2026-10-23T12:09:22.012650+00:00] verified checkpoints/pi0_libero/params/ocdbt.process_0/d/a3bd463a29df7b76a4d71263d8c05704 (126.8 MiB)
+[2026-10-23T12:09:35.719733+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1503 MiB
+[2026-10-23T12:09:47.017362+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:09:47.017373+00:00] progress pi05_libero: 10.22/11.58 GiB; 15/16 verified
+[2026-10-23T12:09:47.017376+00:00] progress pi0_libero: 3.66/11.19 GiB; 14/19 verified
+[2026-10-23T12:09:53.381923+00:00] reconnect slow stream checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e at 206 MiB
+[2026-10-23T12:10:03.611151+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d at 154 MiB
+[2026-10-23T12:10:09.355432+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54 at 106 MiB
+[2026-10-23T12:10:12.778392+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1543 MiB
+[2026-10-23T12:10:17.022975+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:10:17.022985+00:00] progress pi05_libero: 10.24/11.58 GiB; 15/16 verified
+[2026-10-23T12:10:17.022988+00:00] progress pi0_libero: 3.83/11.19 GiB; 14/19 verified
+[2026-10-23T12:10:29.604998+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54 at 109 MiB
+[2026-10-23T12:10:34.940078+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d at 167 MiB
+[2026-10-23T12:10:47.027726+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:10:47.027737+00:00] progress pi05_libero: 10.28/11.58 GiB; 15/16 verified
+[2026-10-23T12:10:47.027740+00:00] progress pi0_libero: 4.01/11.19 GiB; 14/19 verified
+[2026-10-23T12:10:49.950296+00:00] reconnect slow stream checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e at 272 MiB
+[2026-10-23T12:10:50.546335+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54 at 143 MiB
+[2026-10-23T12:10:51.324998+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d at 169 MiB
+[2026-10-23T12:10:55.934816+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1576 MiB
+[2026-10-23T12:11:07.715012+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b at 246 MiB
+[2026-10-23T12:11:11.490125+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1582 MiB
+[2026-10-23T12:11:17.032693+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:11:17.032706+00:00] progress pi05_libero: 10.34/11.58 GiB; 15/16 verified
+[2026-10-23T12:11:17.032709+00:00] progress pi0_libero: 4.25/11.19 GiB; 14/19 verified
+[2026-10-23T12:11:33.980360+00:00] reconnect slow stream checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b at 316 MiB
+[2026-10-23T12:11:47.037734+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:11:47.037745+00:00] progress pi05_libero: 10.38/11.58 GiB; 15/16 verified
+[2026-10-23T12:11:47.037749+00:00] progress pi0_libero: 4.46/11.19 GiB; 14/19 verified
+[2026-10-23T12:11:50.163233+00:00] retry 1/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:12:01.802553+00:00] Download incomplete; re-run the same command to resume
+[2026-10-23T12:12:13.067331+00:00] queued tokenizer: 0.004 GiB
+[2026-10-23T12:12:13.067343+00:00] queued pi05_libero: 11.585 GiB
+[2026-10-23T12:12:13.067346+00:00] queued pi0_libero: 11.189 GiB
+[2026-10-23T12:12:13.068334+00:00] verified existing checkpoints/pi05_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T12:12:13.068520+00:00] verified existing checkpoints/pi05_libero/params/_METADATA
+[2026-10-23T12:12:13.068734+00:00] verified existing checkpoints/pi05_libero/params/_sharding
+[2026-10-23T12:12:13.068838+00:00] verified existing checkpoints/pi05_libero/params/manifest.ocdbt
+[2026-10-23T12:12:13.069262+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/2b6985f48e9da86f68627a7608c5bc25
+[2026-10-23T12:12:13.069354+00:00] verified existing checkpoints/pi05_libero/params/d/98a77a52a8eb845ae4830eb7fe983979
+[2026-10-23T12:12:13.069420+00:00] verified existing checkpoints/pi05_libero/params/array_metadatas/process_0
+[2026-10-23T12:12:13.069506+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/bc613ff288a162563e622d01bb60622a
+[2026-10-23T12:12:13.071334+00:00] progress tokenizer: 0.00/0.00 GiB; 0/1 verified
+[2026-10-23T12:12:13.071342+00:00] progress pi05_libero: 10.39/11.58 GiB; 4/16 verified
+[2026-10-23T12:12:13.071345+00:00] progress pi0_libero: 4.49/11.19 GiB; 0/19 verified
+[2026-10-23T12:12:13.072972+00:00] verified existing paligemma_tokenizer.model
+[2026-10-23T12:12:13.073036+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/manifest.ocdbt
+[2026-10-23T12:12:13.073201+00:00] verified existing checkpoints/pi0_libero/assets/physical-intelligence/libero/norm_stats.json
+[2026-10-23T12:12:13.073248+00:00] verified existing checkpoints/pi0_libero/params/_METADATA
+[2026-10-23T12:12:13.073279+00:00] verified existing checkpoints/pi0_libero/params/_sharding
+[2026-10-23T12:12:13.073299+00:00] verified existing checkpoints/pi0_libero/params/d/5b6b2a896e0651f82a2c879b8a2a8ba8
+[2026-10-23T12:12:13.073315+00:00] verified existing checkpoints/pi0_libero/params/manifest.ocdbt
+[2026-10-23T12:12:13.074218+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/bda87d9791f23df771cd2d15293780cc
+[2026-10-23T12:12:13.074263+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/15ad1c4fa76e1c764766b9bc865e8d1d
+[2026-10-23T12:12:14.609094+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/6c54da5a6f62c20a09c0f3f8c3329e00
+[2026-10-23T12:12:15.175718+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/475fab3ee8821662585a8cde3eb32e22
+[2026-10-23T12:12:15.200363+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/5b573f911a8101f0fcfdd62f73b218fb
+[2026-10-23T12:12:15.200643+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/680b47b37cc767ff45156e23565e2252
+[2026-10-23T12:12:15.212341+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/896bf93c5cf2e8ddd274a6ea0a2feec0
+[2026-10-23T12:12:15.290154+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/155391c1cbf93a1be16266de052e5b48
+[2026-10-23T12:12:15.290320+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/a87389eb66cb14add95ad6441a413ee9
+[2026-10-23T12:12:15.325480+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/cae25c26b881cdb73257fea25bd132a2
+[2026-10-23T12:12:15.338998+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/a3bd463a29df7b76a4d71263d8c05704
+[2026-10-23T12:12:15.364199+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/f0bdaf7cbb943edbc868f15a685f9881
+[2026-10-23T12:12:15.460532+00:00] verified existing checkpoints/pi05_libero/params/ocdbt.process_0/d/0eaaecefaa9720d30a32cc56e65fd345
+[2026-10-23T12:12:15.460754+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/manifest.ocdbt
+[2026-10-23T12:12:16.113925+00:00] verified existing checkpoints/pi0_libero/params/ocdbt.process_0/d/5c296f4f9a224be488612a6025ca58c6
+[2026-10-23T12:12:31.413386+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b at 335 MiB
+[2026-10-23T12:12:36.066589+00:00] retry 1/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:12:39.819479+00:00] retry 1/5 checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:12:46.090155+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d at 395 MiB
+[2026-10-23T12:12:46.119794+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:12:46.119801+00:00] progress pi05_libero: 10.40/11.58 GiB; 15/16 verified
+[2026-10-23T12:12:46.119803+00:00] progress pi0_libero: 4.57/11.19 GiB; 14/19 verified
+[2026-10-23T12:13:12.322224+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1720 MiB
+[2026-10-23T12:13:16.125268+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:13:16.125277+00:00] progress pi05_libero: 10.41/11.58 GiB; 15/16 verified
+[2026-10-23T12:13:16.125280+00:00] progress pi0_libero: 4.65/11.19 GiB; 14/19 verified
+[2026-10-23T12:13:24.379615+00:00] reconnect slow direct stream checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e at 403 MiB
+[2026-10-23T12:13:24.716346+00:00] retry 1/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:13:26.315861+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b at 354 MiB
+[2026-10-23T12:13:30.864285+00:00] retry 1/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:13:35.286946+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d at 299 MiB
+[2026-10-23T12:13:37.052981+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1730 MiB
+[2026-10-23T12:13:44.363623+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d at 421 MiB
+[2026-10-23T12:13:46.042720+00:00] reconnect slow proxy stream checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e at 406 MiB
+[2026-10-23T12:13:46.130170+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:13:46.130178+00:00] progress pi05_libero: 10.42/11.58 GiB; 15/16 verified
+[2026-10-23T12:13:46.130181+00:00] progress pi0_libero: 4.70/11.19 GiB; 14/19 verified
+[2026-10-23T12:13:52.442643+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 at 1732 MiB
+[2026-10-23T12:14:04.849256+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d at 307 MiB
+[2026-10-23T12:14:14.324759+00:00] reconnect slow direct stream checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54 at 300 MiB
+[2026-10-23T12:14:15.568891+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d at 445 MiB
+[2026-10-23T12:14:16.134824+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:14:16.134832+00:00] progress pi05_libero: 10.43/11.58 GiB; 15/16 verified
+[2026-10-23T12:14:16.134835+00:00] progress pi0_libero: 4.78/11.19 GiB; 14/19 verified
+[2026-10-23T12:14:21.541770+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d at 309 MiB
+[2026-10-23T12:14:41.226002+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54 at 312 MiB
+[2026-10-23T12:14:45.544625+00:00] reconnect slow proxy stream checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d at 315 MiB
+[2026-10-23T12:14:46.138933+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:14:46.138941+00:00] progress pi05_libero: 10.45/11.58 GiB; 15/16 verified
+[2026-10-23T12:14:46.138944+00:00] progress pi0_libero: 4.85/11.19 GiB; 14/19 verified
+[2026-10-23T12:14:47.840999+00:00] retry 2/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:14:55.882377+00:00] retry 2/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:15:00.519865+00:00] retry 3/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:15:00.524516+00:00] Download incomplete; re-run the same command to resume
+[2026-10-23T12:17:32.841067+00:00] queued tokenizer: 0.004 GiB
+[2026-10-23T12:17:32.841079+00:00] queued pi05_libero: 11.585 GiB
+[2026-10-23T12:17:32.841082+00:00] queued pi0_libero: 11.189 GiB
+[2026-10-23T12:17:44.552355+00:00] parallel ranges: 483 disjoint segments, at most 16 connections
+[2026-10-23T12:17:49.566007+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:17:49.566020+00:00] progress pi05_libero: 10.51/11.58 GiB; 15/16 verified
+[2026-10-23T12:17:49.566024+00:00] progress pi0_libero: 4.86/11.19 GiB; 14/19 verified
+[2026-10-23T12:18:20.991883+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:18:20.991896+00:00] progress pi05_libero: 10.99/11.58 GiB; 15/16 verified
+[2026-10-23T12:18:20.991900+00:00] progress pi0_libero: 4.86/11.19 GiB; 14/19 verified
+[2026-10-23T12:18:51.360230+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:18:51.360243+00:00] progress pi05_libero: 11.47/11.58 GiB; 15/16 verified
+[2026-10-23T12:18:51.360247+00:00] progress pi0_libero: 4.88/11.19 GiB; 14/19 verified
+[2026-10-23T12:19:22.961439+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:19:22.961454+00:00] progress pi05_libero: 11.58/11.58 GiB; 15/16 verified
+[2026-10-23T12:19:22.961459+00:00] progress pi0_libero: 5.29/11.19 GiB; 14/19 verified
+[2026-10-23T12:19:25.393494+00:00] verified segmented checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e (1602.3 MiB)
+[2026-10-23T12:19:54.571355+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:19:54.571370+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:19:54.571374+00:00] progress pi0_libero: 5.79/11.19 GiB; 14/19 verified
+[2026-10-23T12:20:19.535001+00:00] segment retry 1/5 checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d bytes 1358954496-1375731711: URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>
+[2026-10-23T12:20:25.718593+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:20:25.718606+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:20:25.718610+00:00] progress pi0_libero: 6.19/11.19 GiB; 14/19 verified
+[2026-10-23T12:20:28.810431+00:00] verified segmented checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d (1481.5 MiB)
+[2026-10-23T12:20:55.761712+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:20:55.761727+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:20:55.761731+00:00] progress pi0_libero: 6.69/11.19 GiB; 15/19 verified
+[2026-10-23T12:21:27.220167+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:21:27.220178+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:21:27.220182+00:00] progress pi0_libero: 7.20/11.19 GiB; 15/19 verified
+[2026-10-23T12:21:57.378671+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:21:57.378689+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:21:57.378692+00:00] progress pi0_libero: 7.63/11.19 GiB; 15/19 verified
+[2026-10-23T12:22:29.482440+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:22:29.482450+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:22:29.482453+00:00] progress pi0_libero: 8.15/11.19 GiB; 15/19 verified
+[2026-10-23T12:22:54.272094+00:00] verified segmented checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d (2136.4 MiB)
+[2026-10-23T12:22:59.774897+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:22:59.774907+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:22:59.774910+00:00] progress pi0_libero: 8.60/11.19 GiB; 16/19 verified
+[2026-10-23T12:23:29.923775+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:23:29.923785+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:23:29.923788+00:00] progress pi0_libero: 9.04/11.19 GiB; 16/19 verified
+[2026-10-23T12:24:01.302925+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:24:01.302941+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:24:01.302951+00:00] progress pi0_libero: 9.51/11.19 GiB; 16/19 verified
+[2026-10-23T12:24:33.242634+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:24:33.242645+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:24:33.242647+00:00] progress pi0_libero: 9.90/11.19 GiB; 16/19 verified
+[2026-10-23T12:24:39.106203+00:00] verified segmented checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54 (2136.4 MiB)
+[2026-10-23T12:25:03.291237+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:25:03.291250+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:25:03.291253+00:00] progress pi0_libero: 10.27/11.19 GiB; 17/19 verified
+[2026-10-23T12:25:34.877466+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:25:34.877477+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:25:34.877481+00:00] progress pi0_libero: 10.66/11.19 GiB; 17/19 verified
+[2026-10-23T12:26:06.031819+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:26:06.031830+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:26:06.031833+00:00] progress pi0_libero: 11.12/11.19 GiB; 17/19 verified
+[2026-10-23T12:26:27.522083+00:00] verified segmented checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50 (1866.8 MiB)
+[2026-10-23T12:26:37.525900+00:00] progress tokenizer: 0.00/0.00 GiB; 1/1 verified
+[2026-10-23T12:26:37.525910+00:00] progress pi05_libero: 11.58/11.58 GiB; 16/16 verified
+[2026-10-23T12:26:37.525913+00:00] progress pi0_libero: 11.19/11.19 GiB; 18/19 verified
+[2026-10-23T12:26:41.255161+00:00] verified segmented checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b (2136.5 MiB)
+[2026-10-23T12:26:41.276491+00:00] All requested objects verified

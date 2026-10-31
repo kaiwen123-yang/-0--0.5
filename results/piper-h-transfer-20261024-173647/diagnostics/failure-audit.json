@@ -1,0 +1,149 @@
+[
+  {
+    "model": "pi0",
+    "task_id": 0,
+    "target_initial_xyz": [
+      -0.0634743669788058,
+      0.20202566461895705,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.05341726860522414,
+      0.20518007059522494,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.04429693855574801,
+    "target_final_xyz": [
+      0.051820689210897435,
+      0.16411873587408432,
+      0.9109288896478979
+    ],
+    "target_plate_final_xy_m": 0.03692393279718055,
+    "bilateral_contact_frames": 39,
+    "one_finger_contact_frames": 40,
+    "nearest_eef_frame": 81,
+    "nearest_eef_distance_m": 0.06304127344837919,
+    "nearest_eef_xyz": [
+      -0.0444576959856568,
+      0.15498877634608058,
+      0.9379099396189366
+    ],
+    "gripper_width_at_nearest_m": 0.009408324540133059,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_scipy_rotvec_disagreement_frames": 225,
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      49
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "target_initial_xyz": [
+      -0.19484799124803148,
+      0.31522075594224097,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.06977817942846122,
+      0.18817272125318465,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.20164331869041185,
+    "target_final_xyz": [
+      0.06572703666535938,
+      0.1961763560152776,
+      0.913303513007903
+    ],
+    "target_plate_final_xy_m": 0.008818815289065045,
+    "bilateral_contact_frames": 72,
+    "one_finger_contact_frames": 72,
+    "nearest_eef_frame": 56,
+    "nearest_eef_distance_m": 0.05031901356489993,
+    "nearest_eef_xyz": [
+      -0.16004830871256517,
+      0.27248281475971337,
+      0.9195844808525641
+    ],
+    "gripper_width_at_nearest_m": 0.015655302716611683,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      18,
+      45
+    ],
+    "original_scipy_rotvec_disagreement_frames": 11,
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      65
+    ]
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "target_initial_xyz": [
+      -0.07499154926640153,
+      0.014961109880627824,
+      0.8984038856841015
+    ],
+    "plate_initial_xyz": [
+      0.07160355689736295,
+      0.20039042799571696,
+      0.9024995937037765
+    ],
+    "target_lift_m": 0.126041284486486,
+    "target_final_xyz": [
+      0.08158690029686727,
+      0.19654184901898925,
+      0.9116497318570247
+    ],
+    "target_plate_final_xy_m": 0.01068074763956569,
+    "bilateral_contact_frames": 66,
+    "one_finger_contact_frames": 67,
+    "nearest_eef_frame": 41,
+    "nearest_eef_distance_m": 0.06462768398706437,
+    "nearest_eef_xyz": [
+      -0.07519405342272067,
+      0.06888628514229657,
+      0.9398834807960715
+    ],
+    "gripper_width_at_nearest_m": 0.016408438462897596,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      40
+    ],
+    "original_scipy_rotvec_disagreement_frames": 67,
+    "action_clipped_by_axis": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      40
+    ]
+  }
+]

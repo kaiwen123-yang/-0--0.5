@@ -1,0 +1,102 @@
+{
+  "run_id": "libero-comparison-20261023-212017",
+  "created_at": "2026-10-23T21:20:17.324323+08:00",
+  "models": [
+    "pi0",
+    "pi05"
+  ],
+  "suites": [
+    "libero_spatial",
+    "libero_object",
+    "libero_goal",
+    "libero_10"
+  ],
+  "task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "trials_per_task": 5,
+  "expected_episodes": 400,
+  "scope": "pilot comparison; official default is 50 trials per task",
+  "seed": 7,
+  "initial_state_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "policy_seed_formula": "7 + suite_index * 10000 + task_id * 100 + trial_index; suite indices follow suites array",
+  "environment_seed_reset": "numpy and env seed reset to 7 at the start of every episode for reproducible resume",
+  "replan_steps": 5,
+  "num_steps_wait": 10,
+  "max_steps": {
+    "libero_spatial": 220,
+    "libero_object": 280,
+    "libero_goal": 300,
+    "libero_10": 520
+  },
+  "image_render_size": 256,
+  "image_model_size": 224,
+  "image_rotation_degrees": 180,
+  "render_backend": "NVIDIA EGL",
+  "egl_device": 0,
+  "video_fps": 20,
+  "video_views": [
+    "agentview",
+    "wrist"
+  ],
+  "flow_denoising_steps": 10,
+  "model_action_horizons": {
+    "pi0": 50,
+    "pi05": 10
+  },
+  "backend": "jax",
+  "precision": "bfloat16",
+  "error_handling": "record error separately and stop evaluator; no silent error-to-policy-failure conversion",
+  "source_commits": {
+    "openpi": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "libero": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c"
+  },
+  "checkpoint_manifests": {
+    "pi0": {
+      "path": "provenance/checkpoints-manifest-pi0_libero.json",
+      "sha256": "50f584947f5f4417d5befc5a9f7af9a2383f65d30499259650bd63ddf2dca3dc"
+    },
+    "pi05": {
+      "path": "provenance/checkpoints-manifest-pi05_libero.json",
+      "sha256": "855f0b148af996d2db037a7cf2cee9fee8bbfa42043c53681fe894338ecfa52b"
+    }
+  },
+  "environment_locks": {
+    "openpi-freeze.txt": {
+      "path": "provenance/openpi-freeze.txt",
+      "sha256": "bffbb44a95fe0a865d5c1825b4e71a188cd1e7ed922ff052ad42471d7341f790"
+    },
+    "libero-freeze.txt": {
+      "path": "provenance/libero-freeze.txt",
+      "sha256": "0414c19df3a5102fc6462408f20d24836105382f43c9766012b4c1911e6269bd"
+    },
+    "libero-requirements.lock": {
+      "path": "provenance/libero-requirements.lock",
+      "sha256": "205ed7f31a9df31d03990710669806bd4a5dd504d8a5edfc72cbc6213cc9563c"
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 5080, 580.178.04, 16303 MiB",
+  "python": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+  "control_frequency_hz": 20,
+  "render_vendor_validated": "NVIDIA Corporation; NVIDIA GeForce RTX 5080/PCIe/SSE2",
+  "environment_hard_reset": true,
+  "success_criterion": "done returned by LIBERO BDDLBaseDomain.step(), assigned from self._check_success(); no external reward threshold",
+  "comparison_scope": "two official LIBERO-adapted checkpoints; measured differences are not attributable solely to algorithm architecture or training method",
+  "paired_seed_limitation": "identical per-episode seed values; pi0 horizon 50 versus pi05 horizon 10 means the sampled Gaussian tensors are not identical",
+  "method_notes": "Each model keeps its official policy config, checkpoint normalization, and delta-action transform. The first five provided initial states are a pilot sample, not a random sample of all states."
+}

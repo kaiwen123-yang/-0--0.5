@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="piper_h">
+  <compiler angle="radian" autolimits="true" />
+  <asset>
+    <mesh name="piper_h_base_link_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/base_link.stl" scale="1 1 1" />
+    <mesh name="piper_h_link1_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/link1.stl" scale="1 1 1" />
+    <mesh name="piper_h_link2_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/link2.stl" scale="1 1 1" />
+    <mesh name="piper_h_link3_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/link3.stl" scale="1 1 1" />
+    <mesh name="piper_h_link4_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/link4.stl" scale="1 1 1" />
+    <mesh name="piper_h_link5_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/link5.stl" scale="1 1 1" />
+    <mesh name="piper_h_link6_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/link6.stl" scale="1 1 1" />
+    <mesh name="piper_h_flange_link_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/piper_h/meshes/flange.stl" scale="1 1 1" />
+  </asset>
+  <worldbody>
+    <body name="base_link" pos="0 0 0" quat="1 0 0 0">
+      <inertial pos="-0.00473641164191 2.5682913463e-05 0.041451518036" mass="1.02" fullinertia="0.00267433 0.00282612 0.00089624 -0.00000073 -0.00017389 0.0000004" />
+      <geom name="base_link_visual" type="mesh" mesh="piper_h_base_link_0" group="1" contype="0" conaffinity="0" rgba="0.08 0.1 0.13 1" pos="0 0 0" quat="1 0 0 0" />
+      <geom name="base_link_collision" type="mesh" mesh="piper_h_base_link_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+      <body name="link1" pos="0 0 0.123" quat="1 0 0 0">
+        <inertial pos="0.00032 -0.00041 -0.00348" mass="0.71" fullinertia="0.00050027 0.00040879 0.00045802 0.00000078 0.00000626 0.00000462" />
+        <geom name="link1_visual" type="mesh" mesh="piper_h_link1_0" group="1" contype="0" conaffinity="0" rgba="0.08 0.1 0.13 1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="link1_collision" type="mesh" mesh="piper_h_link1_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+        <joint name="joint1" type="hinge" axis="0 0 1" limited="true" range="-2.6179938 2.6179938" damping="0.2" armature="0.02" frictionloss="0.01" />
+        <body name="link2" pos="0 0 0" quat="0.0479709575834 -0.0479709210624 -0.705477694515 -0.705477710848">
+          <inertial pos="0.21852 -0.00861 0.00126" mass="1.16" fullinertia="0.00111915 0.06763251 0.067559 0.00182916 0.00019233 0.00000767" />
+          <geom name="link2_visual" type="mesh" mesh="piper_h_link2_0" group="1" contype="0" conaffinity="0" rgba="0.7 0.73 0.77 1" pos="0 0 0" quat="1 0 0 0" />
+          <geom name="link2_collision" type="mesh" mesh="piper_h_link2_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+          <joint name="joint2" type="hinge" axis="0 0 1" limited="true" range="0 3.1415926" damping="0.2" armature="0.02" frictionloss="0.01" />
+          <body name="link3" pos="0.28503 0 0" quat="0.624015990292 0 0 -0.781411571363">
+            <inertial pos="-0.01999 -0.14808 -0.00053" mass="0.5" fullinertia="0.01347608 0.00046377 0.01363321 0.00161034 0.00000066 0.00000162" />
+            <geom name="link3_visual" type="mesh" mesh="piper_h_link3_0" group="1" contype="0" conaffinity="0" rgba="0.7 0.73 0.77 1" pos="0 0 0" quat="1 0 0 0" />
+            <geom name="link3_collision" type="mesh" mesh="piper_h_link3_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+            <joint name="joint3" type="hinge" axis="0 0 1" limited="true" range="-2.9670597 0" damping="0.2" armature="0.02" frictionloss="0.01" />
+            <body name="link4" pos="-0.02198 -0.25575 0" quat="0.70710679066 0.707106771713 0 0">
+              <inertial pos="0.00013 -0.00076 -0.00394" mass="0.38" fullinertia="0.00017844 0.00018914 0.00014613 0.00000062 0.00000067 0.00000408" />
+              <geom name="link4_visual" type="mesh" mesh="piper_h_link4_0" group="1" contype="0" conaffinity="0" rgba="0.08 0.1 0.13 1" pos="0 0 0" quat="1 0 0 0" />
+              <geom name="link4_collision" type="mesh" mesh="piper_h_link4_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+              <joint name="joint4" type="hinge" axis="0 0 1" limited="true" range="-2.3561944 2.3561944" damping="0.2" armature="0.02" frictionloss="0.01" />
+              <body name="link5" pos="0 0 0" quat="0.70710679066 -0.707106771713 0 0">
+                <inertial pos="0.00018 -0.06104 -0.00227" mass="0.39" fullinertia="0.00172318 0.00017936 0.00171172 0.00000259 0.00000010 0.00000990" />
+                <geom name="link5_visual" type="mesh" mesh="piper_h_link5_0" group="1" contype="0" conaffinity="0" rgba="0.7 0.73 0.77 1" pos="0 0 0" quat="1 0 0 0" />
+                <geom name="link5_collision" type="mesh" mesh="piper_h_link5_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+                <joint name="joint5" type="hinge" axis="0 0 1" limited="true" range="-1.5620696 1.5620696" damping="0.2" armature="0.02" frictionloss="0.01" />
+                <body name="link6" pos="0 -0.0963 0" quat="0.70710679066 0.707106771713 0 0">
+                  <inertial pos="0.00134940815 0 -0.00344975303" mass="0.01655408133" fullinertia="1.52476803967e-6 1.51721319881e-6 2.84541364481e-6 0 1.0017156778e-7 0" />
+                  <geom name="link6_visual" type="mesh" mesh="piper_h_link6_0" group="1" contype="0" conaffinity="0" rgba="0.08 0.1 0.13 1" pos="0 0 0" quat="1 0 0 0" />
+                  <geom name="link6_collision" type="mesh" mesh="piper_h_link6_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+                  <joint name="joint6" type="hinge" axis="0 0 1" limited="true" range="-2.9670597 2.9670597" damping="0.2" armature="0.02" frictionloss="0.01" />
+                  <body name="flange_link" pos="0 0 0" quat="1 0 0 0">
+                    <inertial pos="0.001151691 0.000782428 0.004798051" mass="0.04" fullinertia="9.935389e-06 10.508003e-06 19.652873e-06 0.0 0.0 0.0" />
+                    <geom name="flange_link_visual" type="mesh" mesh="piper_h_flange_link_0" group="1" contype="0" conaffinity="0" rgba="0.7 0.73 0.77 1" pos="0 0 0" quat="1 0 0 0" />
+                    <geom name="flange_link_collision" type="mesh" mesh="piper_h_flange_link_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+                    <body name="right_hand" pos="0 0 0.0045" quat="1 0 0 0" />
+                    <camera name="eye_in_hand" pos="0.065 0 0.035" quat="0 0.707106781187 0.707106781187 0" fovy="75" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <camera name="panorama" pos="1.25 1.4 1.9" quat="0.31536193626 0.20155570309 0.499390091588 0.781365269342" fovy="52" />
+  </worldbody>
+  <actuator>
+    <motor name="torq_joint1" joint="joint1" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="torq_joint2" joint="joint2" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="torq_joint3" joint="joint3" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="torq_joint4" joint="joint4" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="torq_joint5" joint="joint5" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+    <motor name="torq_joint6" joint="joint6" gear="1" ctrllimited="true" ctrlrange="-100 100" />
+  </actuator>
+  <contact>
+    <exclude body1="link6" body2="flange_link" />
+    <exclude body1="link5" body2="link6" />
+    <exclude body1="link4" body2="link5" />
+    <exclude body1="link3" body2="link4" />
+    <exclude body1="link2" body2="link3" />
+    <exclude body1="link1" body2="link2" />
+    <exclude body1="base_link" body2="link1" />
+  </contact>
+</mujoco>

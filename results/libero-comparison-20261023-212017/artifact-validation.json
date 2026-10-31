@@ -1,0 +1,6012 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-23T13:56:39.031353+00:00",
+  "episodes": 400,
+  "videos": 400,
+  "action_arrays": 400,
+  "total_video_bytes": 181247896,
+  "paired_initial_conditions": "all state hashes, state indices, environment and policy seeds match",
+  "video_validation": "ffprobe headers/frame count/duration plus file SHA256; not full decode of every frame",
+  "artifacts": [
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_00/trial_000_success.mp4",
+      "video_bytes": 265628,
+      "video_sha256": "a146f50197e85a020c366274801c8f4343f6aae8e9b8a5012f0f400b3162e266",
+      "video_frames": 79,
+      "actions_shape": [
+        78,
+        7
+      ],
+      "actions_sha256": "39b16dac58abe8a9440b0c9cb93011f9bde9403ce6effac6025360aaa96f8ca9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_00/trial_001_success.mp4",
+      "video_bytes": 306075,
+      "video_sha256": "cb6118e3e4532d51b94fb7a0222c30a7bd82eda886feb30f2596296452d95050",
+      "video_frames": 88,
+      "actions_shape": [
+        87,
+        7
+      ],
+      "actions_sha256": "7d4ba58ba1fe162581558fde7236e3264bd2a80ec85d3e1687be04dd02f743fc"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_00/trial_002_success.mp4",
+      "video_bytes": 313832,
+      "video_sha256": "41e7572b01826e5b64bdbe5b19002467618996b4cf70bfb18bed1086a3d28ee9",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "60bb63e86ba402323a7f3d4559913dbf7689c21b9256295a3b0d2455f1d1f3ea"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_00/trial_003_success.mp4",
+      "video_bytes": 267047,
+      "video_sha256": "3694b812e423ff65ed1d52df3cd514f9cbb338dd3f6c16e1a6686f5385140e8d",
+      "video_frames": 77,
+      "actions_shape": [
+        76,
+        7
+      ],
+      "actions_sha256": "d661d94b9ee1ad7c60aacb77e2cb39681412f5b917abcd53295156c76fd8dd38"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_00/trial_004_success.mp4",
+      "video_bytes": 268621,
+      "video_sha256": "11fa9a54ab20f40cc0290615f0747c4aba094b6b756d42c0f7100819ec0fc628",
+      "video_frames": 75,
+      "actions_shape": [
+        74,
+        7
+      ],
+      "actions_sha256": "93638b0527ec702dd1f8828a295389cf14a3a11e6eb671721de82d7134ed41cb"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_01/trial_000_success.mp4",
+      "video_bytes": 292066,
+      "video_sha256": "1e65bf2690e2ad5d8804a6c42e008c0abcb2aa6223345d4df44d4f334b1c332b",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "6a398281e5f2288858647c1248a743fc9b972a274a9847b2e01701587f88d2d3"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_01/trial_001_success.mp4",
+      "video_bytes": 307085,
+      "video_sha256": "e01d6dbf8ef8b04df08b2a9cf3e9c84c7418d8f5c5d9c485ca26c1c2b909553a",
+      "video_frames": 104,
+      "actions_shape": [
+        103,
+        7
+      ],
+      "actions_sha256": "72b3845aee84c5ebd0f80aa403b65c056756d73a660f72a8dbf372b164eb35ae"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_01/trial_002_success.mp4",
+      "video_bytes": 285842,
+      "video_sha256": "5c2472a4732ad23942d16603f560709f50d17cdd69961de3326b8f834216f759",
+      "video_frames": 120,
+      "actions_shape": [
+        119,
+        7
+      ],
+      "actions_sha256": "e63ca10fb75c7cb94d43e475725743dadeb7b846e8917de2bc5a5738928bba4e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_01/trial_003_success.mp4",
+      "video_bytes": 324727,
+      "video_sha256": "1fd75b3ceba61e25a051c80ae4f6733c5b0d9ca10fd367279503df6310d92204",
+      "video_frames": 115,
+      "actions_shape": [
+        114,
+        7
+      ],
+      "actions_sha256": "d08c0bc46405f015a8c8e7cd8da0803b34e191af0fd821698bea5bae97022d17"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_01/trial_004_success.mp4",
+      "video_bytes": 292106,
+      "video_sha256": "9e65e86a241111513ce6863d9ddafb122c7dfc162dac5a135e74481ce812fe56",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "39d64da0d51843e989d7ec6f0462d21f254c73c63af0133b7f1aeb8cfeeca514"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_02/trial_000_success.mp4",
+      "video_bytes": 307388,
+      "video_sha256": "53ae04ad87c614f1255a4ef701eda075955e9cba755ad173001706451582d53a",
+      "video_frames": 101,
+      "actions_shape": [
+        100,
+        7
+      ],
+      "actions_sha256": "3564f702870d25f656cdd32441966e550b7119ce233d1a4e2017464ed89c0fe5"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_02/trial_001_success.mp4",
+      "video_bytes": 311930,
+      "video_sha256": "e3dac805e16840edae26fb88eb7b770c6e32ec6887541a7028d1d60a8dcb15cf",
+      "video_frames": 103,
+      "actions_shape": [
+        102,
+        7
+      ],
+      "actions_sha256": "d147e210dc8cb6a7f0bfc35e22c473a928dc3c6d0b6eefb462c88ca6f5dbb84b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_02/trial_002_success.mp4",
+      "video_bytes": 334200,
+      "video_sha256": "af8b72bae9035b6118b751e80ade6f3b64b48d023c54eb308b1ceab2b763fefd",
+      "video_frames": 103,
+      "actions_shape": [
+        102,
+        7
+      ],
+      "actions_sha256": "c68dcdab6ea45153ad5d3d7d3694a4a0c214ed697f2f09546fe395828c8ed34b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_02/trial_003_success.mp4",
+      "video_bytes": 309685,
+      "video_sha256": "3016da91dc415ea2bc27803e04f595e65afbeb75721e9157aba86aa62042daa0",
+      "video_frames": 93,
+      "actions_shape": [
+        92,
+        7
+      ],
+      "actions_sha256": "59f476a6c181d65fd8b733e095febc737e80856d3221222a2cae6fa0bbf02cda"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_02/trial_004_success.mp4",
+      "video_bytes": 330091,
+      "video_sha256": "213fa18126d4921f8df1547263d7c8d5a85d5d33d59ef74dfedc02e9942403bf",
+      "video_frames": 106,
+      "actions_shape": [
+        105,
+        7
+      ],
+      "actions_sha256": "d09a710f078cf7f2e84d80e67146509f2229ee822c6de69a7250098c618b7243"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_03/trial_000_success.mp4",
+      "video_bytes": 250483,
+      "video_sha256": "a185933798cc1496534f7d6bb6d7ccc69fb186cf85ab6c60f370fce0773c78ef",
+      "video_frames": 80,
+      "actions_shape": [
+        79,
+        7
+      ],
+      "actions_sha256": "7670249a0c9a816f0b31fa24e3144c112a8cd468669fc9bfc9b843edfd7fa5c8"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_03/trial_001_success.mp4",
+      "video_bytes": 263213,
+      "video_sha256": "338ecfb8ff051246ccd6013b7e253f8f4e4db7839da990e51ca5ba21e2a5c361",
+      "video_frames": 89,
+      "actions_shape": [
+        88,
+        7
+      ],
+      "actions_sha256": "3e566f8cca7e81ea95471bc2b6cea4a3bc5cd456d2dec1d4c7191898ced9b17b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_03/trial_002_success.mp4",
+      "video_bytes": 280896,
+      "video_sha256": "41759477c9b4065b9402dca4763914dd8abc638631a94d5b551ee5de541a9dc9",
+      "video_frames": 87,
+      "actions_shape": [
+        86,
+        7
+      ],
+      "actions_sha256": "6e66a47178f0ac02e0e4eebcfc941040f79b961a42a40895118da437768713e4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_03/trial_003_success.mp4",
+      "video_bytes": 268120,
+      "video_sha256": "977e12df503a84068911dbc571c9635afbee2de14e7605ddfdace0e249352138",
+      "video_frames": 82,
+      "actions_shape": [
+        81,
+        7
+      ],
+      "actions_sha256": "a9ddb4215a026753abd5d0a4f551bc9d60024a4e409311d0bc3379a1174872d1"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_03/trial_004_success.mp4",
+      "video_bytes": 275501,
+      "video_sha256": "44dfdac389cc80f4aa2bf575d81c1e72d7328c34349872b394a5af8dc4dfee8b",
+      "video_frames": 91,
+      "actions_shape": [
+        90,
+        7
+      ],
+      "actions_sha256": "50341a2c94a71f84020e8b29865dec7628e9da0b6242c8f10ccb42762a0ace0b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_04/trial_000_failure.mp4",
+      "video_bytes": 673333,
+      "video_sha256": "cc86b05cd5285b5e27055ef4179d0f685f3e9a1e3b6f66100fe108c8609c18c0",
+      "video_frames": 221,
+      "actions_shape": [
+        220,
+        7
+      ],
+      "actions_sha256": "7348da971cb3d8db38545e4226155469b3f56ec82ddd3193716ecc74d7b03cb0"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_04/trial_001_success.mp4",
+      "video_bytes": 391580,
+      "video_sha256": "9ed2ef298397443a60053ed74032de5a23a814deb418ccf6953736303dd449d9",
+      "video_frames": 130,
+      "actions_shape": [
+        129,
+        7
+      ],
+      "actions_sha256": "682cfb892982558418fc4a083414cde3ebb9207cc52c111dade2f971f7eb6361"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_04/trial_002_failure.mp4",
+      "video_bytes": 624329,
+      "video_sha256": "fb9fa2692352100ec05d3955010ba0c3cb3d1a5fd2fc515ac8f009657a56fa49",
+      "video_frames": 221,
+      "actions_shape": [
+        220,
+        7
+      ],
+      "actions_sha256": "f796211c4c16549993983daacc0a978820673323892a266dba72d6db57ca27c0"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_04/trial_003_failure.mp4",
+      "video_bytes": 637266,
+      "video_sha256": "d4ef50b1ad4424e284eb81eb569cacfaff5b64fc795e42db9ecf2bb5d9bc6ad1",
+      "video_frames": 221,
+      "actions_shape": [
+        220,
+        7
+      ],
+      "actions_sha256": "612af2d9ecbfb1d7a61a7fb8e9c09dedd2f828689e0c9afd83bf5f1385b6a85d"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_04/trial_004_success.mp4",
+      "video_bytes": 500637,
+      "video_sha256": "f8f5ccc1cac0c710b180953464b1a93f115e66ba053772ab6743c1e9fca6d40d",
+      "video_frames": 181,
+      "actions_shape": [
+        180,
+        7
+      ],
+      "actions_sha256": "3098ec1ef4474691c8b69f0f6a57a4eed8b92d355586587d745fef0fe9a38ac7"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_05/trial_000_success.mp4",
+      "video_bytes": 301454,
+      "video_sha256": "a6b2a0b943dd0667a2cc9e0ed602591ef0ae4b4ab02caacfd80b3bb3bdb1e316",
+      "video_frames": 96,
+      "actions_shape": [
+        95,
+        7
+      ],
+      "actions_sha256": "d442e6bd11583289d8285d7d07b9200e6d47271e2ddccee328b8c27c665fe83c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_05/trial_001_success.mp4",
+      "video_bytes": 290469,
+      "video_sha256": "14ca92945760f5ead24c4dcdab0d3e2eb862165d0abc67c43710b41e6bec1d4b",
+      "video_frames": 96,
+      "actions_shape": [
+        95,
+        7
+      ],
+      "actions_sha256": "f1e773b731a4c77cf43467e7538ed67c69443d7ba98bcf76b3b37e5f3764bd76"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_05/trial_002_success.mp4",
+      "video_bytes": 364117,
+      "video_sha256": "5bdccbc12c078a889a511fac0ccc6384c09e9fc216700f331f7cf37be99033be",
+      "video_frames": 103,
+      "actions_shape": [
+        102,
+        7
+      ],
+      "actions_sha256": "8c378d13adfaab15f08949000c347615fd12dbff1bb16d9f5949da224267519b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_05/trial_003_success.mp4",
+      "video_bytes": 273700,
+      "video_sha256": "3d9a48559ac48dc1ce4900b17df6f42ec9affa49d3d395df13f9c5db02e5549d",
+      "video_frames": 86,
+      "actions_shape": [
+        85,
+        7
+      ],
+      "actions_sha256": "3328d5f0ff46112115f888b48831ab447f68df9c178fc921ae517314956a5d32"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_05/trial_004_success.mp4",
+      "video_bytes": 291847,
+      "video_sha256": "74711744975469510259ccf25c325b45c3caedd0a61f3326b28610c3c2e4b90f",
+      "video_frames": 89,
+      "actions_shape": [
+        88,
+        7
+      ],
+      "actions_sha256": "54758a3250a7611fe539cb13b4f96cdcde6d121ec777c6d705753554386156d8"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_06/trial_000_success.mp4",
+      "video_bytes": 331752,
+      "video_sha256": "65f48019a55596c47588cdcb690493edc47839fdb01676295c378ee3dac5f96e",
+      "video_frames": 112,
+      "actions_shape": [
+        111,
+        7
+      ],
+      "actions_sha256": "f55b2014f478183daa4b99bbb1e1bc8e396a6aa83df85419d08b4113bc6fb30a"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_06/trial_001_success.mp4",
+      "video_bytes": 353522,
+      "video_sha256": "7cc28e4117f63e3672530b4a5e5cb03c4a65a091d1efde2139aa83440c3f35a9",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "ab983280c8d72a4cf19aa604d553781ff720c37205a9f779017f43e7ba145ee3"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_06/trial_002_success.mp4",
+      "video_bytes": 332215,
+      "video_sha256": "bf08d523f2b8dd20385eb0095cba01550519d13b5f929938c5ca163c88ab1a89",
+      "video_frames": 100,
+      "actions_shape": [
+        99,
+        7
+      ],
+      "actions_sha256": "4399ea6676b1bbd417397ccc1ed7eca0ed009ee94edae49d5bfaa2e63c3091fa"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_06/trial_003_success.mp4",
+      "video_bytes": 311549,
+      "video_sha256": "b8e2bce1aee1286e04b7320916ad48b7ae218f4e7824c03947d27f963ef2df62",
+      "video_frames": 105,
+      "actions_shape": [
+        104,
+        7
+      ],
+      "actions_sha256": "a52b77c570a583fcaa20cfba8ad38eec232bb341069ed571b1c9249427fe0515"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_06/trial_004_success.mp4",
+      "video_bytes": 301388,
+      "video_sha256": "21fbbf9a358437ad7eee8e4be4fa396168a6efa0b304c29bdc51874ffd6ea795",
+      "video_frames": 102,
+      "actions_shape": [
+        101,
+        7
+      ],
+      "actions_sha256": "7a22c3a5be46277224a7138817724f120cdd026fb4db629866f0d721b0f020bb"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_07/trial_000_success.mp4",
+      "video_bytes": 326897,
+      "video_sha256": "64d484113a437a0f9598219320af0b26172435774b900a0ca878e18648629600",
+      "video_frames": 111,
+      "actions_shape": [
+        110,
+        7
+      ],
+      "actions_sha256": "de82331232b4eb77acea47938d81fbe6df86faadb5f96bda27c4893be1416429"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_07/trial_001_success.mp4",
+      "video_bytes": 317576,
+      "video_sha256": "b96bc37c69b75ac7d9a29b964082ca9acae2e86ccadcc9401646af1ce2d98221",
+      "video_frames": 112,
+      "actions_shape": [
+        111,
+        7
+      ],
+      "actions_sha256": "7ad7183f15fb82f86b86b2b35d9a99ce7448bb2922d858b89c8d1c0cc20360cc"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_07/trial_002_success.mp4",
+      "video_bytes": 456410,
+      "video_sha256": "7ab36208648302f3b91daac0c1d7c2a0578af9a423cb15f5394d395a7179acc1",
+      "video_frames": 166,
+      "actions_shape": [
+        165,
+        7
+      ],
+      "actions_sha256": "6d05e57302297f56e86cd368ab74dd47c7f454c40274d88c9968f2144592be57"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_07/trial_003_success.mp4",
+      "video_bytes": 332868,
+      "video_sha256": "b08f8aedcc90722776ca9fb95f5dbe146e6ecb31ffd0af5a6a6f50992f0661ed",
+      "video_frames": 113,
+      "actions_shape": [
+        112,
+        7
+      ],
+      "actions_sha256": "0ce22972ed1e6bbe060c67e86e246dc48a2c8ddbb9fd98fb9bb9659e41fcdbf0"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_07/trial_004_success.mp4",
+      "video_bytes": 393174,
+      "video_sha256": "b5add1eb763411c8590f11ee5403b14ea0b1535254959e7b499d48a220eca8aa",
+      "video_frames": 136,
+      "actions_shape": [
+        135,
+        7
+      ],
+      "actions_sha256": "61a288a3d43f0deca1548f04ecb2eb5814ff702d9c01fa79f1b50091249f7085"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_08/trial_000_success.mp4",
+      "video_bytes": 355641,
+      "video_sha256": "e7b8ef78b0ceb4d5b264da985cd01f47ddfe9057e7247c5b4a70107c82fa2cbf",
+      "video_frames": 103,
+      "actions_shape": [
+        102,
+        7
+      ],
+      "actions_sha256": "a036acf90d3d2a7b0571d3e94d060f7ab2a105e1616bbdf21dbc6d2a71a53f44"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_08/trial_001_success.mp4",
+      "video_bytes": 629176,
+      "video_sha256": "697a177382ee45a285446110b445059ff08019c17ff85108aa157091e482390d",
+      "video_frames": 182,
+      "actions_shape": [
+        181,
+        7
+      ],
+      "actions_sha256": "c6e88e3758a341fe6e07daba6f37df28af100ecee06cd50e2ca4eee969bc8bb6"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_08/trial_002_success.mp4",
+      "video_bytes": 297237,
+      "video_sha256": "2efb5f9dc26c72724c32c1c22e641ac1521273a8e3b43331d19677c6a9e98ab0",
+      "video_frames": 91,
+      "actions_shape": [
+        90,
+        7
+      ],
+      "actions_sha256": "9b94a884ee033afa400e4e490bca5a23ac5255d1a3627c801271af3c5e4a4c9d"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_08/trial_003_success.mp4",
+      "video_bytes": 497520,
+      "video_sha256": "cb1ce0ff01e429761b8210f15099e03f846306663ffcb321eded0398fcd9101e",
+      "video_frames": 144,
+      "actions_shape": [
+        143,
+        7
+      ],
+      "actions_sha256": "607776da91e8aca6fb8f3d4da92159da8efa2dc0e09039b2f8df769e070c3678"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_08/trial_004_success.mp4",
+      "video_bytes": 282341,
+      "video_sha256": "1a0f9a328af38ca4a114303f5af119993810b4511b66d9ced3a9d95419147e5d",
+      "video_frames": 92,
+      "actions_shape": [
+        91,
+        7
+      ],
+      "actions_sha256": "7f1ca08db46e2cbb3b80b5d2647548cb97779cb3798d512ad59633c685b84588"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_spatial/task_09/trial_000_failure.mp4",
+      "video_bytes": 556120,
+      "video_sha256": "aba4f524602bd6fa17f93ae578a289cc4d7b3e7aa24ae4b333716a54535e4f57",
+      "video_frames": 221,
+      "actions_shape": [
+        220,
+        7
+      ],
+      "actions_sha256": "e6cc1609421e29365a6eeb6f821ce74b141be4aea1753b0772b6d4e36fba7041"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_spatial/task_09/trial_001_success.mp4",
+      "video_bytes": 362150,
+      "video_sha256": "65dc050fe7effd7a0964ba59fde971564eef789be712725e9e8c7393e9b21aac",
+      "video_frames": 135,
+      "actions_shape": [
+        134,
+        7
+      ],
+      "actions_sha256": "99038def0d3bafebe94a1716c3ac800ceb0829cd3475756d1e7b4222bf46bc4c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_spatial/task_09/trial_002_success.mp4",
+      "video_bytes": 328391,
+      "video_sha256": "e1ca5664c1c2e2aaeb49a19ae36a3090fab9ad35d775e1153beba7b09cecc9f4",
+      "video_frames": 121,
+      "actions_shape": [
+        120,
+        7
+      ],
+      "actions_sha256": "c1fc707591a84b886e90f6c1c5e1f0301d0f990a5b21024a2e70f7300fdd5a73"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_spatial/task_09/trial_003_success.mp4",
+      "video_bytes": 346348,
+      "video_sha256": "f1b6aee4f6b4714dcf7d001d6a557dca228cfca6856dcd0f679d669ac4f98dec",
+      "video_frames": 124,
+      "actions_shape": [
+        123,
+        7
+      ],
+      "actions_sha256": "a53e506629a7a862675bcbad300cb30dec5cb7d3f44ea2945961d8d71c10fb33"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_spatial/task_09/trial_004_failure.mp4",
+      "video_bytes": 722816,
+      "video_sha256": "d860211e6defbe6d66dc0cbdd86640b91b2717f24f77abfaee74b404272c4eea",
+      "video_frames": 221,
+      "actions_shape": [
+        220,
+        7
+      ],
+      "actions_sha256": "84c258ce5fc299689775797de47e7208c0e57c920a7cdfcf3bd456859a1af03b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_00/trial_000_success.mp4",
+      "video_bytes": 394950,
+      "video_sha256": "5c4e421eca434cf0266cd8083be228a52698d921dd0823697ad87c085dc3eeb3",
+      "video_frames": 140,
+      "actions_shape": [
+        139,
+        7
+      ],
+      "actions_sha256": "006e19b0787098522f5d708468f0f3c60eb252a5db1552ff50c1f1769b3a9da1"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_00/trial_001_success.mp4",
+      "video_bytes": 439078,
+      "video_sha256": "9f6aa3c8979cdd53cb5664f751f2d1fb4e3d0a24e968a140f85d5acbb4e24de8",
+      "video_frames": 152,
+      "actions_shape": [
+        151,
+        7
+      ],
+      "actions_sha256": "257384528fdf0ed00f79b0c32e3d3ff69ab05e8d42fd74503c2b81b6a542b791"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_00/trial_002_success.mp4",
+      "video_bytes": 424333,
+      "video_sha256": "4cb5df9748c2a9c57e34620f9747e789b0fa2ba10a4db78334d51f0fa3cf14cb",
+      "video_frames": 147,
+      "actions_shape": [
+        146,
+        7
+      ],
+      "actions_sha256": "ada060d8473d20a76dbcd1330ab946211ffe3adcb7ee88ac047db65dde65a3f4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_00/trial_003_success.mp4",
+      "video_bytes": 396639,
+      "video_sha256": "124e98fbb6306aca2a667cc46e28d701ae58705e17209b26290963a9ee272b1c",
+      "video_frames": 135,
+      "actions_shape": [
+        134,
+        7
+      ],
+      "actions_sha256": "b77d0f998764b2410781e376a606b62c33a9d68e4f9251eb8c6dfed2bceac65a"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_00/trial_004_success.mp4",
+      "video_bytes": 631383,
+      "video_sha256": "f3419db2919738134ce18bf8d626c41ebc454d271467fc3a74bd1420617dc32b",
+      "video_frames": 235,
+      "actions_shape": [
+        234,
+        7
+      ],
+      "actions_sha256": "94859e5a640ae5ce00d493ac9db93873b3d8c5d162cd6ad559e8ac7c2a8eb3b4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_01/trial_000_success.mp4",
+      "video_bytes": 415337,
+      "video_sha256": "aa24c269e68f09f48734aff1dc5adabb9208df29156a9028c96c1664bf7bd6f7",
+      "video_frames": 125,
+      "actions_shape": [
+        124,
+        7
+      ],
+      "actions_sha256": "f2051fbaf2bc1806b76338fc846d16767d56d88e9b12c1dd5558c88b55a74670"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_01/trial_001_success.mp4",
+      "video_bytes": 418268,
+      "video_sha256": "8c015e6c22835f7c56fd6d4ca717b1dd2ef06acc614d741212919088849618b6",
+      "video_frames": 134,
+      "actions_shape": [
+        133,
+        7
+      ],
+      "actions_sha256": "6bafdbd736a7d6a34387e17dcc4df799f5c0592243ebc29c6fe07a99a7156942"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_01/trial_002_success.mp4",
+      "video_bytes": 430547,
+      "video_sha256": "4e2b95d50668e8fc4c59d77ac4bd0a49a7526b8a5b8e73a1abcae6843644e359",
+      "video_frames": 132,
+      "actions_shape": [
+        131,
+        7
+      ],
+      "actions_sha256": "c7af38030d497710c6202f4fcc1491da2d334b08fbf0d334d0d4cbd6701635c4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_01/trial_003_success.mp4",
+      "video_bytes": 402914,
+      "video_sha256": "cafe8eb5ba010411f2c2fbe70ddb282f8abd900be2e14fe7e8dd042130010c42",
+      "video_frames": 129,
+      "actions_shape": [
+        128,
+        7
+      ],
+      "actions_sha256": "cc7db5e49ebb5852765e2c29c0e3305c741e2f306cb19c7764447637dde69bfa"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_01/trial_004_success.mp4",
+      "video_bytes": 397817,
+      "video_sha256": "2acd78d01d7844ef504ee053a096c83f69a1944243bb58e6c2160a28149710ae",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "bf1b87c47ea898c30490875e504e86a09c8fee5616cc46695dfb766af6a5f29e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_02/trial_000_success.mp4",
+      "video_bytes": 393142,
+      "video_sha256": "4d8fbaaa02eb28b0b18f9ebdcf8502a4f9e2e800d0853c80babbeb0d9f388dc9",
+      "video_frames": 123,
+      "actions_shape": [
+        122,
+        7
+      ],
+      "actions_sha256": "5d8f7e6e3041bf1ccaf2c67c8b7077c8092a384e07a89a5a01b23d5f48a3aa1c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_02/trial_001_success.mp4",
+      "video_bytes": 368501,
+      "video_sha256": "bfc4a4dd9e11c9170c5d2014e0eed6e35b62d3252ca8569af81e67623b38a4e8",
+      "video_frames": 118,
+      "actions_shape": [
+        117,
+        7
+      ],
+      "actions_sha256": "9ea57fd270ee5f1fbc983939749d87a867edbe37a35026116882bdf50504e03e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_02/trial_002_success.mp4",
+      "video_bytes": 353231,
+      "video_sha256": "0b1549b6311a48bb33dd8bbc90da32b126f180d6eb3684b377149fd93f5fb3fe",
+      "video_frames": 107,
+      "actions_shape": [
+        106,
+        7
+      ],
+      "actions_sha256": "29dff6c8291a6ab9a9e343d3d9f96d5345448d7d57f4b54bb15b305258f2dc88"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_02/trial_003_success.mp4",
+      "video_bytes": 371890,
+      "video_sha256": "ed0f1ccd6a95c8cfc235294616d97d571e1a20c8f71f4e7164de9ca857daf3ca",
+      "video_frames": 124,
+      "actions_shape": [
+        123,
+        7
+      ],
+      "actions_sha256": "d6bdcf622e9b708b840cfac3722a81583d99ccf7ae68ee5fe6750efea99dcf98"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_02/trial_004_success.mp4",
+      "video_bytes": 355130,
+      "video_sha256": "72bc09696680718274fcaec629fdfbe9a7e5d73115731ccdec8b03a10425d723",
+      "video_frames": 110,
+      "actions_shape": [
+        109,
+        7
+      ],
+      "actions_sha256": "4d26bf483e792517b4b30f5450e5bde1b20b65ae66eab6287bdd10a419f25cc3"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_03/trial_000_success.mp4",
+      "video_bytes": 374923,
+      "video_sha256": "471f039b9e34da65325ebd1cd760ab8e23b4dd9990488c6b223e698709478c79",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "933ad41b44060be4d0b05f47b1d984329d0e6c64ae99f31f747280a5695ba7e2"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_03/trial_001_success.mp4",
+      "video_bytes": 391717,
+      "video_sha256": "47e70bce63680d273b30afae2038430a8cdc671cb00eeb29fd3d5f18553eddb9",
+      "video_frames": 137,
+      "actions_shape": [
+        136,
+        7
+      ],
+      "actions_sha256": "96181ca4e304ac5cb048c1b550e09c4008b6e55270b9f023ec8ecf403643b490"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_03/trial_002_success.mp4",
+      "video_bytes": 372098,
+      "video_sha256": "35a2965c59b894d9ca8b9cb8e4aa95ec231dc54d4e55e6cb4001667880e93b9f",
+      "video_frames": 125,
+      "actions_shape": [
+        124,
+        7
+      ],
+      "actions_sha256": "64ba7fbe7c630968e68fc9a8726676d36d57c9c1e685c1a52a427dd8a54d4fe1"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_03/trial_003_success.mp4",
+      "video_bytes": 493047,
+      "video_sha256": "7f25efae9bb139d9a6b59ad42318f44d4d91d5d0ce5aebf4ee43004e92c242e5",
+      "video_frames": 180,
+      "actions_shape": [
+        179,
+        7
+      ],
+      "actions_sha256": "7b8d039acca52d6f3cabd7f924a1e1ae4ae6d8c1bad0ddd6bff2a3837a5a7906"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_03/trial_004_success.mp4",
+      "video_bytes": 392403,
+      "video_sha256": "ad6c15f4b74b3d0715d3f7d6b799dbef7ddbf2a7d5750cdc4eaa998b77d3cf9a",
+      "video_frames": 136,
+      "actions_shape": [
+        135,
+        7
+      ],
+      "actions_sha256": "3b03b7056bdeaa593f62c4fabce877ad36ecd156c65b11e802bb1928ffdd36a6"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_04/trial_000_success.mp4",
+      "video_bytes": 405668,
+      "video_sha256": "fe27f72d94e26c5b8bdc3064428defbb4d8df3775eff42b6eeafe1b8d207493f",
+      "video_frames": 146,
+      "actions_shape": [
+        145,
+        7
+      ],
+      "actions_sha256": "df9688a2ebc921ff7555d5331379f6b5f6ab4cf5ac23b389b49b6453b9f8294e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_04/trial_001_success.mp4",
+      "video_bytes": 410060,
+      "video_sha256": "d7de97da6b7b917e59b7f6babd78917f027e9c66426d6ca270215d6f8576d628",
+      "video_frames": 143,
+      "actions_shape": [
+        142,
+        7
+      ],
+      "actions_sha256": "9df65ad3e30050a49eb5234ed9cc2b8ec4ce4ec4744a1e44beba8b19a18c08bf"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_04/trial_002_success.mp4",
+      "video_bytes": 464418,
+      "video_sha256": "5ede316c8265092a2ce5288794ef769203fb7e8718507fc6444ae277ba964e06",
+      "video_frames": 170,
+      "actions_shape": [
+        169,
+        7
+      ],
+      "actions_sha256": "acdca5c1196bab54fd59bed219e3d1ff990ff239ef8d3a97e808d8e4d5d4b757"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_04/trial_003_success.mp4",
+      "video_bytes": 443794,
+      "video_sha256": "be401d2ec5af4ec67fd7632361dbb30a3a1a519de224014b1fc60facfa87219e",
+      "video_frames": 154,
+      "actions_shape": [
+        153,
+        7
+      ],
+      "actions_sha256": "a1ad7a33593d43e049a3bd86cc47f36bcb33f0f6a4841d9361f9122bc22a3320"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_04/trial_004_success.mp4",
+      "video_bytes": 383121,
+      "video_sha256": "3777620d6e0ae33337637a99662873a440b54322e06fa87a3594015886bfe037",
+      "video_frames": 132,
+      "actions_shape": [
+        131,
+        7
+      ],
+      "actions_sha256": "504b714d9a5ec8f4f8ed79a71ce24e8f960a0e522776012a1df275d7afb04ef6"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_05/trial_000_success.mp4",
+      "video_bytes": 480833,
+      "video_sha256": "bc50a19e7f8987039867d2ef607076bae5dad8e89e17e069a90c681dc42f7b45",
+      "video_frames": 175,
+      "actions_shape": [
+        174,
+        7
+      ],
+      "actions_sha256": "83e6cede07b5cac587ad9158113792cc8dfcddcfb745ead30d9996b223ebecdc"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_05/trial_001_success.mp4",
+      "video_bytes": 384782,
+      "video_sha256": "15c304dccf3ba7ba290430e9adaab6dc2641273618a983a41da0c4f945b8d06d",
+      "video_frames": 125,
+      "actions_shape": [
+        124,
+        7
+      ],
+      "actions_sha256": "5566d5d8653b84b98341084b3f20e0ddba891e7091456d7dbfe9e90f1fd25720"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_05/trial_002_success.mp4",
+      "video_bytes": 403399,
+      "video_sha256": "5d84825148fd9a0f91f1d999ae03e3bf4c426e2ee5ae299ba690e0e3522c0dc5",
+      "video_frames": 123,
+      "actions_shape": [
+        122,
+        7
+      ],
+      "actions_sha256": "08d9b1e56dc023bc0b47d2467938328592b7a17484e70d3abb6beb0efa5fd2a3"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_05/trial_003_failure.mp4",
+      "video_bytes": 520107,
+      "video_sha256": "5b0bff410800efb450d3d2126d84ee7e5502204d1adc5270a4dad291b5a3f333",
+      "video_frames": 281,
+      "actions_shape": [
+        280,
+        7
+      ],
+      "actions_sha256": "b633c09d367ac2a65f92738de34ecbea343c0f9628b752fccdc51b5d5be03a51"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_05/trial_004_success.mp4",
+      "video_bytes": 443142,
+      "video_sha256": "489fb8718cc20c52733b16db21a53fa81b08d316d64a8d70d10297aaaa080770",
+      "video_frames": 138,
+      "actions_shape": [
+        137,
+        7
+      ],
+      "actions_sha256": "1d634bf332192e24eca390802a18c4a78ed235dcab9327be40158cba2ebbeaf0"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_06/trial_000_success.mp4",
+      "video_bytes": 465205,
+      "video_sha256": "b647a3e9e0993065727cb0f8dbe2dc1cd4ef592ce288a420efebd21004b083af",
+      "video_frames": 159,
+      "actions_shape": [
+        158,
+        7
+      ],
+      "actions_sha256": "02bfe978b463f6b25e724d92865edc8133ab62aa77772fde59da3d252b5daf31"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_06/trial_001_success.mp4",
+      "video_bytes": 483050,
+      "video_sha256": "6831d3a7b2d68ddd8e1dcd921e5307a2c4fc2772815ed1fae4f2a098f8972bc7",
+      "video_frames": 160,
+      "actions_shape": [
+        159,
+        7
+      ],
+      "actions_sha256": "2f67c1ad6af9c7d2765b167435ee238266c051e68cb31d111b47faa7914b0cc9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_06/trial_002_success.mp4",
+      "video_bytes": 416661,
+      "video_sha256": "398a60c89f7f451d7876efa1d00a59344d499ac79cf47a18b2cfb4da7b85a420",
+      "video_frames": 153,
+      "actions_shape": [
+        152,
+        7
+      ],
+      "actions_sha256": "f78bf911c242fe1072e07bb3f63f2c105f38c8867a2e1a214ac840e59f2a94eb"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_06/trial_003_success.mp4",
+      "video_bytes": 458922,
+      "video_sha256": "ad60a3bfa08b20f4826e9a76764d277cb0263a3a9a51200a048dd8c0e2d983a4",
+      "video_frames": 156,
+      "actions_shape": [
+        155,
+        7
+      ],
+      "actions_sha256": "131475910e3726bcd108e403ee78dc923a71764794ea883c1b5d881253382f47"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_06/trial_004_success.mp4",
+      "video_bytes": 412248,
+      "video_sha256": "d3ba9240bb6ba0751a26cd05c7e9943b917aa2953fa8e4a795b57a27387721fb",
+      "video_frames": 144,
+      "actions_shape": [
+        143,
+        7
+      ],
+      "actions_sha256": "7c40838b1356c1f6e35dc81282b995c08a77ab397fc78e20b5d77627ee6bd435"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_07/trial_000_success.mp4",
+      "video_bytes": 414172,
+      "video_sha256": "a66383b5fe98450ec979774297cfb55dca63818d29e995d6f4239dcf233ad545",
+      "video_frames": 133,
+      "actions_shape": [
+        132,
+        7
+      ],
+      "actions_sha256": "be40f47aa834c0a16cff5a9fede9d92bcd0b21c0ea9dc125f9acc661a64a7704"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_07/trial_001_success.mp4",
+      "video_bytes": 403795,
+      "video_sha256": "460069f01525f9e96aa14185c0f8284164040f2002c76ecd205e731da4cd49f0",
+      "video_frames": 130,
+      "actions_shape": [
+        129,
+        7
+      ],
+      "actions_sha256": "ab4b2defadda4370105253764dc0fcf668808fdf04b7b99c88d072774718f2e7"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_07/trial_002_success.mp4",
+      "video_bytes": 468873,
+      "video_sha256": "14b3ec7feec7c109356083922239e20c7720ff6be9d637fa0a72c4718c7511be",
+      "video_frames": 157,
+      "actions_shape": [
+        156,
+        7
+      ],
+      "actions_sha256": "663bad4d1cb2f990904c459e58f3887629bfaef10a228db897d70feb444a680a"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_07/trial_003_success.mp4",
+      "video_bytes": 408862,
+      "video_sha256": "d2c22cbd2ed79807ae9a0218b0a7d3854bd1e82fcc8fbdf909ab29e2409c97f6",
+      "video_frames": 135,
+      "actions_shape": [
+        134,
+        7
+      ],
+      "actions_sha256": "b61dc4e4b2da7ec59885f20070acb6d280fdb6d12f26e67461b8a982e00df8fb"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_07/trial_004_success.mp4",
+      "video_bytes": 406695,
+      "video_sha256": "a0b4124e7a9db2c8ecd798b0bf8e43345b82d6b24142ae66d7187558253db09f",
+      "video_frames": 130,
+      "actions_shape": [
+        129,
+        7
+      ],
+      "actions_sha256": "0b35b23325d2e7445e3233efefd05a1513887baf56076dc353c11909092bc4b3"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_08/trial_000_success.mp4",
+      "video_bytes": 462193,
+      "video_sha256": "288e343fb53bfa1f5cbf48c8d99b0b8ba87aef5903b48c6d01516b7a85b3cea2",
+      "video_frames": 158,
+      "actions_shape": [
+        157,
+        7
+      ],
+      "actions_sha256": "a01b8a2f39a2384af3d1951536fc934b7c3e079d2c856ca0e73507d994c55192"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_08/trial_001_success.mp4",
+      "video_bytes": 461899,
+      "video_sha256": "feab7ab46f34ab25178ba592b94358456837607baa29e88c9ff8695db11749d0",
+      "video_frames": 152,
+      "actions_shape": [
+        151,
+        7
+      ],
+      "actions_sha256": "2bd4ae6a19dbae943235bbb88cbd57ed9555c508dd9ebb51502fcda26df557e5"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_08/trial_002_success.mp4",
+      "video_bytes": 457235,
+      "video_sha256": "5b3fd3f1cdfed64436ff04fa3989d446511e4e926852ab0d2a4367237756c908",
+      "video_frames": 161,
+      "actions_shape": [
+        160,
+        7
+      ],
+      "actions_sha256": "dbb855c91fdf49d03d79281b6872e328aaa513e4002c14f42d41cc9793109167"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_08/trial_003_success.mp4",
+      "video_bytes": 438897,
+      "video_sha256": "d58c6ec46e2e2070226cdfea71414d4996666b5bc4940b3d0e339a04d6f2369a",
+      "video_frames": 143,
+      "actions_shape": [
+        142,
+        7
+      ],
+      "actions_sha256": "0b830f5927378308800d10ac83f75ffeadb11cc76b5fa02a8854f5f9105f436a"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_08/trial_004_success.mp4",
+      "video_bytes": 480363,
+      "video_sha256": "9eecb699f739a4c61b85ac09881cc8c0eaec21abcc498710592d509abd64995a",
+      "video_frames": 152,
+      "actions_shape": [
+        151,
+        7
+      ],
+      "actions_sha256": "13f2aaa262c57b7f12027f088a703d03d2f802ebdb39afaf375667fee708da76"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_object/task_09/trial_000_success.mp4",
+      "video_bytes": 515559,
+      "video_sha256": "1501e7fcd1146bda81ac7626512bbe55cee30f4f101f6e55fa345b5b701ee8d8",
+      "video_frames": 178,
+      "actions_shape": [
+        177,
+        7
+      ],
+      "actions_sha256": "6ee0fa16822f8212c4f892ae63e6a9728b4b851e938782db9914100d484e6d91"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_object/task_09/trial_001_success.mp4",
+      "video_bytes": 376173,
+      "video_sha256": "e7370cfb99e3f33ed36c3750d26b4865dafb2eb779b7bbc67799d69753a0074e",
+      "video_frames": 125,
+      "actions_shape": [
+        124,
+        7
+      ],
+      "actions_sha256": "0b9cad99a203ffdd743a568b99b4f19cca327537ba125caadab207170cf3cdc9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_object/task_09/trial_002_success.mp4",
+      "video_bytes": 381938,
+      "video_sha256": "b152849c0f31545830f69d1250ad9e45cf620c04596d49a68b1eb535840c56ca",
+      "video_frames": 120,
+      "actions_shape": [
+        119,
+        7
+      ],
+      "actions_sha256": "5e886581b475a508b142e2fe3eb39335f7b816cb32a3848aaf03c90373a3cac1"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_object/task_09/trial_003_success.mp4",
+      "video_bytes": 384534,
+      "video_sha256": "3fd2102cbb3decfe34aadf38e720b0087740b90fb53656cbd05433abd293a3fe",
+      "video_frames": 121,
+      "actions_shape": [
+        120,
+        7
+      ],
+      "actions_sha256": "7dfc09ca4bf1a9827d066e3268404d48f2946f40b81e8ebd7e41860d437e8a59"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_object/task_09/trial_004_success.mp4",
+      "video_bytes": 399696,
+      "video_sha256": "934286f33f15ea14db0c6b52ae26ea54c1f744e9ab5790f365efe17b84c119ca",
+      "video_frames": 130,
+      "actions_shape": [
+        129,
+        7
+      ],
+      "actions_sha256": "8f81146698bb427b9a8a12b4edf9cf1174bd5399223b3d8f4ff515e661377951"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_00/trial_000_success.mp4",
+      "video_bytes": 375518,
+      "video_sha256": "2963664cb13e7b5d0ff46fa4f1c8e61c20b9e94a08c94b7f70c37c5c78888695",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "534f633cca30b13cbe6dd7b75885ae652d05499e7fe1032437e82f4425ac035d"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_00/trial_001_success.mp4",
+      "video_bytes": 363217,
+      "video_sha256": "92782b233c7326cf1a8fa667229da91a91ea02e14e6e9b4816a5a5b50a8cb408",
+      "video_frames": 124,
+      "actions_shape": [
+        123,
+        7
+      ],
+      "actions_sha256": "8f370c313af93287f801f9f47b850478c46663530bf35df53ccf813934915e79"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_00/trial_002_success.mp4",
+      "video_bytes": 354805,
+      "video_sha256": "5237448a09897e0522b3cec4c33a8b52fc2fbc4c5cd773b4fe76f21c9ad3452a",
+      "video_frames": 122,
+      "actions_shape": [
+        121,
+        7
+      ],
+      "actions_sha256": "d263ad071e3889d96618ac1d59ea7d99199a8c37d5059155552a8455d82e985c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_00/trial_003_success.mp4",
+      "video_bytes": 345669,
+      "video_sha256": "e5e3e5497f0630e297580ab027dff1e58d8066f628fb5b52df540b140bfe91ad",
+      "video_frames": 116,
+      "actions_shape": [
+        115,
+        7
+      ],
+      "actions_sha256": "6322836ff0c1d672828c19f16c1e13b0fae1ecc6729639ba02fc9a5add68230f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_00/trial_004_success.mp4",
+      "video_bytes": 376192,
+      "video_sha256": "164fd5585b08103b6f97f3e4422c7ee9a8f94fcdec6145e05691469eefccb577",
+      "video_frames": 120,
+      "actions_shape": [
+        119,
+        7
+      ],
+      "actions_sha256": "07182ad7fa7bc5d3e771510a581be7ffbabd7c27e9bd6fce479057aa426fb2a9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_01/trial_000_success.mp4",
+      "video_bytes": 347319,
+      "video_sha256": "21c235ef7184366038702ebefcec1c05d2e5e7cae0c8230b78b871d5a3c28e9e",
+      "video_frames": 96,
+      "actions_shape": [
+        95,
+        7
+      ],
+      "actions_sha256": "066ab9a2f9bb09c374eef23803dfa7c1202c045865205ffd374202dcd02a8214"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_01/trial_001_success.mp4",
+      "video_bytes": 304234,
+      "video_sha256": "04113065f1ace6c236d7815f4451cf12d99133fc03c574c6469126719d35caa4",
+      "video_frames": 85,
+      "actions_shape": [
+        84,
+        7
+      ],
+      "actions_sha256": "91e7a6f57e309e0f0a9bbf0c2f14e42226b2a8ea589cf52102c0d3184037b2ab"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_01/trial_002_success.mp4",
+      "video_bytes": 289960,
+      "video_sha256": "f755343e9810a8dd1960a4838227bd8481f21d1732b93618dd0b1c2bae34a3ea",
+      "video_frames": 85,
+      "actions_shape": [
+        84,
+        7
+      ],
+      "actions_sha256": "ad89f13cec7c19f3c84cbe769218f663cc2ed323f99598c43151f529ea8f70e4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_01/trial_003_success.mp4",
+      "video_bytes": 275562,
+      "video_sha256": "08d2ff3713c1d2c7ee058e1e7f11485b065807ade4323c8be0b72bc02d4cd23e",
+      "video_frames": 84,
+      "actions_shape": [
+        83,
+        7
+      ],
+      "actions_sha256": "69d6bb1d2f12090f00337840f383fa249914f1b7cc7b7c82d8e9e55cfe85d85c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_01/trial_004_success.mp4",
+      "video_bytes": 292182,
+      "video_sha256": "d46b76493dd2e0ef792899f62c4cc011719153e53aaeefc83606c31fc29a3071",
+      "video_frames": 92,
+      "actions_shape": [
+        91,
+        7
+      ],
+      "actions_sha256": "7215c0fca9af4c74c32b111a93a0ed9480527cd961ce640a0babc3be5a13461f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_02/trial_000_success.mp4",
+      "video_bytes": 243814,
+      "video_sha256": "81192f1c1a1e0db230528f52a54a7f1c53c3fd6469f0034ab40f04fd2d421e3d",
+      "video_frames": 78,
+      "actions_shape": [
+        77,
+        7
+      ],
+      "actions_sha256": "c4bf98fc47a3caf894c72ecb43d3eeda342a7f6d484908e7452a8598bb8775c7"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_02/trial_001_success.mp4",
+      "video_bytes": 294351,
+      "video_sha256": "e753f5fed7325d553e8aaa9d5d3e9025438d310d983fc1e2dd25ee946857275a",
+      "video_frames": 100,
+      "actions_shape": [
+        99,
+        7
+      ],
+      "actions_sha256": "9e6a7eb91f2a24ecb956c34f1f9476a00b4de4a2685bc8fbcf26e51463559778"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_02/trial_002_success.mp4",
+      "video_bytes": 315837,
+      "video_sha256": "c72c467f98676b6412d836041ec197b52da4da12a042c3ce6736ac3e7bed5d82",
+      "video_frames": 104,
+      "actions_shape": [
+        103,
+        7
+      ],
+      "actions_sha256": "47ec5d2fec6b4cc9fb7d4ac4ee3e4dc92f70ab06819b3db75492328801ac20a8"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_02/trial_003_success.mp4",
+      "video_bytes": 298721,
+      "video_sha256": "92f9b8b4af6b3de5b82e064092daea4562ab5b6f5f7c375bd9dfe503c67baca1",
+      "video_frames": 101,
+      "actions_shape": [
+        100,
+        7
+      ],
+      "actions_sha256": "e0bf282852478e75ad1c9ec7fd36e03237fb40ddc3c605eed263b5ea3d8e2504"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_02/trial_004_success.mp4",
+      "video_bytes": 273802,
+      "video_sha256": "f58dbbc43ad0a9a8fe7628359752caa6dab1444c01344af051eb44d3e721baee",
+      "video_frames": 89,
+      "actions_shape": [
+        88,
+        7
+      ],
+      "actions_sha256": "8994471b7987fc5fb125af0745da9c6e5ada676e4c17518ce636ce44ba35e2c5"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_03/trial_000_success.mp4",
+      "video_bytes": 476804,
+      "video_sha256": "d2d52ffd0771a3fd78bbc9b49e6dace7c70aab6211db2a5a265f93e5ce5a7b21",
+      "video_frames": 167,
+      "actions_shape": [
+        166,
+        7
+      ],
+      "actions_sha256": "e61eb1480401b88f5a1c83db0e410f2cac1c630955ef7711f119a2a0aa97c4f4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_03/trial_001_success.mp4",
+      "video_bytes": 522065,
+      "video_sha256": "80212a4f04fc4b4c51b5916cbb8a947ffea4b1bfe4ca749e7e795842480568e0",
+      "video_frames": 191,
+      "actions_shape": [
+        190,
+        7
+      ],
+      "actions_sha256": "329d1a1bb320df5a1e6de8fcd91052bdf8bc3f402fb2eb1bb993a71af5aa3218"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_03/trial_002_success.mp4",
+      "video_bytes": 545682,
+      "video_sha256": "652a6c1868d4c6ee2fae990782587702275580c4ba5cfdfdf5e67ac2f658cb0c",
+      "video_frames": 197,
+      "actions_shape": [
+        196,
+        7
+      ],
+      "actions_sha256": "a13739724914b3b4a5f668a2b155962009d59c729c1b16ff517471d9c70b0dc6"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_03/trial_003_success.mp4",
+      "video_bytes": 523856,
+      "video_sha256": "2aecafc3ce2bffcc0c4e0990b23536cad149ab0465bfefde6f07ffd8bdc844d2",
+      "video_frames": 187,
+      "actions_shape": [
+        186,
+        7
+      ],
+      "actions_sha256": "d48f74fa9c6c7b032b3c864129d83f16349a8953d48942cc50297e421d99a024"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_03/trial_004_success.mp4",
+      "video_bytes": 564171,
+      "video_sha256": "b7a879e0e9f34296377230a8f38fe3ef4f3e0cf100e45b4af0ae480143ed919d",
+      "video_frames": 195,
+      "actions_shape": [
+        194,
+        7
+      ],
+      "actions_sha256": "8e67b2bc5bde8be114d85d08e1312a4356a3e90204dbe32a214e6688b2445e91"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_04/trial_000_success.mp4",
+      "video_bytes": 355689,
+      "video_sha256": "5ad772313273c9478593fddb4aeab051aa4ecda795abc187f247756087ffa246",
+      "video_frames": 102,
+      "actions_shape": [
+        101,
+        7
+      ],
+      "actions_sha256": "4d19a479823857eba7809d870ab7792958a8ec0c93993e32908810a1d7acc29e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_04/trial_001_success.mp4",
+      "video_bytes": 336108,
+      "video_sha256": "5896a0e13c8184a60a85ca23530cf279a92d58ea70a189b46d833056d71a4a77",
+      "video_frames": 95,
+      "actions_shape": [
+        94,
+        7
+      ],
+      "actions_sha256": "2b9207ed83f70101c42f9a428efb8c83bbc3aaadb0b1acf11b939af7467abc0f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_04/trial_002_success.mp4",
+      "video_bytes": 296436,
+      "video_sha256": "1c389ecf6b46dced1eaca30b93968d78d554200f3bafeda8407a8a93f2bb2f9c",
+      "video_frames": 87,
+      "actions_shape": [
+        86,
+        7
+      ],
+      "actions_sha256": "cdd1b4b61bf34d84959f28b7b5494d64042345c96e084cae10b01ac45443d440"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_04/trial_003_success.mp4",
+      "video_bytes": 326396,
+      "video_sha256": "675adb0a70e260cc8030a84bc2cf5a0e1ddced79870936062676e124513debc4",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "691a871f85ff916bd8e53fceb8d7edf7d1fc5ba6b3dfaf2b1c769c37e7b8459e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_04/trial_004_success.mp4",
+      "video_bytes": 300635,
+      "video_sha256": "678f4932230051d35931a87d4eb377e858269d0a0004b9ce41d5c4caf80715ee",
+      "video_frames": 85,
+      "actions_shape": [
+        84,
+        7
+      ],
+      "actions_sha256": "0e821913ef81933fca3c89a80c4c0138689954986f20e03cedef5486fbe5cf26"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_05/trial_000_success.mp4",
+      "video_bytes": 290555,
+      "video_sha256": "af8b2618d6dd519c60191ade17697c7d5689c586b01fa95126273879fbedfa05",
+      "video_frames": 123,
+      "actions_shape": [
+        122,
+        7
+      ],
+      "actions_sha256": "512b5d2de1a2ffaa227fc07e04e0fd59f8259e4c34c396fde7e079da098bef1c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_05/trial_001_success.mp4",
+      "video_bytes": 338861,
+      "video_sha256": "8863caa09a742c367250f32dc47d5c8b762c3ee1e418b1835df82f4b07d7e349",
+      "video_frames": 155,
+      "actions_shape": [
+        154,
+        7
+      ],
+      "actions_sha256": "fa2a796a2b5e970a88cd7bc3f8411a2192c9f78342992f90200946443e462cc4"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_05/trial_002_success.mp4",
+      "video_bytes": 385859,
+      "video_sha256": "06d8a5e02c132d1d7cfd16be0983183b82d580a14ba4a5977ad78ebe02a59390",
+      "video_frames": 178,
+      "actions_shape": [
+        177,
+        7
+      ],
+      "actions_sha256": "1e7041ce97e493dd669f184f8611ef7168b129bb1f88a164af9b66f600ffc0a9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_05/trial_003_success.mp4",
+      "video_bytes": 361472,
+      "video_sha256": "f41186e56c92d9bb4b5e5f976aa494db80d12fd8d2e17231422f8d605ac87acf",
+      "video_frames": 164,
+      "actions_shape": [
+        163,
+        7
+      ],
+      "actions_sha256": "f19a6024b45af28fa5ad322f1f38b8c6dbe2be6abe0085a1df0bfd83a9d8f81f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_05/trial_004_success.mp4",
+      "video_bytes": 314221,
+      "video_sha256": "3a0db1c87b948fae26932c7ce2e99ac7cc5c319020018c9fed69c37036eef21f",
+      "video_frames": 136,
+      "actions_shape": [
+        135,
+        7
+      ],
+      "actions_sha256": "cacf138f4eb09d34b990386cf65d3e35027028454f5afef2b0182a642252e0fc"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_06/trial_000_success.mp4",
+      "video_bytes": 353121,
+      "video_sha256": "6b6a2ee68bbba28d86b889756c384dedf9a09704310ded665f11790ee8df5d13",
+      "video_frames": 132,
+      "actions_shape": [
+        131,
+        7
+      ],
+      "actions_sha256": "722e6c5982d98ed61b8383f9f4cca4b80fb74b1643b3bf886cd0900d88d0225f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_06/trial_001_success.mp4",
+      "video_bytes": 257896,
+      "video_sha256": "28b72adb1e51d40cc6b211ac527ae262391fa2b53370a134d041ffcaa0a6533c",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "d4c43c39d1279b370af8539c728f1c7b21f0112f998489180ca6c05b0a4e26b8"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_06/trial_002_success.mp4",
+      "video_bytes": 264144,
+      "video_sha256": "eb70e553a404c865dc971287108ec28815caa06e2f6ec64a38846a11abb70d5c",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "5636a0487511a3a4a73ebd843c34aa0a8e95afd52ba988efa14f41c3b2cd8d8b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_06/trial_003_success.mp4",
+      "video_bytes": 242648,
+      "video_sha256": "7801fa8924fd7339e2d7e288c7ac360960b2a104e45a9cbc192359f22e287d1e",
+      "video_frames": 89,
+      "actions_shape": [
+        88,
+        7
+      ],
+      "actions_sha256": "329126857f4ac5005cc51531a700f93429d8585aafcfdf1a824dd695b0d689ee"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_06/trial_004_success.mp4",
+      "video_bytes": 256718,
+      "video_sha256": "10809fb6d3bd399808ae64f8c6f99524566777c54153eadfdb63944729d4aa65",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "00c8cea059ae40f94126a700f5993be0f050df03d6e317cf85c8849fccb6a4fe"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_07/trial_000_success.mp4",
+      "video_bytes": 216817,
+      "video_sha256": "8415f0a310f4b1fcf94da5c7752ca3ca6a5016d3017165284c27f4dff259c2bb",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "1ccfaf0db93a9fa467db4b95458d5985225459ec42da526eb76691265070bf56"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_07/trial_001_success.mp4",
+      "video_bytes": 205933,
+      "video_sha256": "1e2114b9e64e62c1dd39d3390b0e56376375d0e50f64a2830efb50f57a1104df",
+      "video_frames": 76,
+      "actions_shape": [
+        75,
+        7
+      ],
+      "actions_sha256": "352d7efb929bb4502e06987cf81a8dba0e7b3e3f9b8a835dc237b5627e386ae3"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_07/trial_002_success.mp4",
+      "video_bytes": 195520,
+      "video_sha256": "5cbe10e2de8b0f79238b7b0be82083912147d015b3ddc6b13c9c21f2fec2100a",
+      "video_frames": 73,
+      "actions_shape": [
+        72,
+        7
+      ],
+      "actions_sha256": "3b03eb63c78e4a90c1923a83342069814f2c7260e84b37abbfac60644bc3a565"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_07/trial_003_success.mp4",
+      "video_bytes": 186962,
+      "video_sha256": "8086781fdeddd1f5449be7a9b74808f3265c7d070cadcbeae9854c87f6f76242",
+      "video_frames": 68,
+      "actions_shape": [
+        67,
+        7
+      ],
+      "actions_sha256": "22b6da2ba19e9bb54b2c1d4d6e3afd227fe608f43af4e8e40e67ef5998bb9664"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_07/trial_004_success.mp4",
+      "video_bytes": 201110,
+      "video_sha256": "3f9e9d6bf24feb98a76783f09fa408df392c4a16c5146025b9e7d23f1c596e7d",
+      "video_frames": 67,
+      "actions_shape": [
+        66,
+        7
+      ],
+      "actions_sha256": "6b625df5b6bc0766c924a5490f51442106897661cb2bac19e1278d6f97c9d57b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_08/trial_000_success.mp4",
+      "video_bytes": 324777,
+      "video_sha256": "8134f46ce7e71358599f1b4bc5e88ec189b8dc627de8e91e49742c13b28c2326",
+      "video_frames": 92,
+      "actions_shape": [
+        91,
+        7
+      ],
+      "actions_sha256": "466e740f806e1a58bc3428e5e3afd6a57f2e201f12bf5b2da8b0e71096e103cb"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_08/trial_001_success.mp4",
+      "video_bytes": 293231,
+      "video_sha256": "b7d5da8eef3c5473da8441169781fe11a48d2ef4b6d8ccfaee614d3427d2c357",
+      "video_frames": 84,
+      "actions_shape": [
+        83,
+        7
+      ],
+      "actions_sha256": "f5d059bd1f4913ff0f96dc70b2109a9db6e93c6a233bdb5b116406134ba129ab"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_08/trial_002_success.mp4",
+      "video_bytes": 307796,
+      "video_sha256": "5239da9f43c66f035bfba1fbb154f528445d6d4fb11083e5195d9602ba7001ac",
+      "video_frames": 91,
+      "actions_shape": [
+        90,
+        7
+      ],
+      "actions_sha256": "779da409af32bf937f9ec0c52101a41b39d8d1220c13112cbf9b38ed4256da7e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_08/trial_003_success.mp4",
+      "video_bytes": 271935,
+      "video_sha256": "bebfeef00626287dc815a78e717e370220bd045dc14d103ab4f8031843b2e1cd",
+      "video_frames": 81,
+      "actions_shape": [
+        80,
+        7
+      ],
+      "actions_sha256": "ae45b8276cddd423aed4b09370bd2ab7d0384eb007d75b957231baccd245c508"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_08/trial_004_success.mp4",
+      "video_bytes": 282272,
+      "video_sha256": "121e458b5c0f53992d3049f25903d610e711eb9e8af4e0a71173cb05c043209a",
+      "video_frames": 80,
+      "actions_shape": [
+        79,
+        7
+      ],
+      "actions_sha256": "4f0c91103d05ad80abb5f5d5fcc5155eb59f590e8d3f093953a07fd8f4d5387f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_goal/task_09/trial_000_failure.mp4",
+      "video_bytes": 820758,
+      "video_sha256": "c86ffac2ead27d77be80ba2805919d4599976840c086252efc61a9fccfb1f83d",
+      "video_frames": 301,
+      "actions_shape": [
+        300,
+        7
+      ],
+      "actions_sha256": "921612a75c80ab4ba9e05e66a2fa38a5d7bc75abc65336fbf98a181e588a94e5"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_goal/task_09/trial_001_success.mp4",
+      "video_bytes": 437425,
+      "video_sha256": "e68d5b534dd142f9f249b09108240fc8b0e582c135b2c422c1c9e2b6a4ae0604",
+      "video_frames": 147,
+      "actions_shape": [
+        146,
+        7
+      ],
+      "actions_sha256": "a5954023023fb1d337ab0323379268f46bd805f78f9272c7cdcdde90c7a2c695"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_goal/task_09/trial_002_success.mp4",
+      "video_bytes": 428848,
+      "video_sha256": "55b17d796a5392b3aff93b825deb242049f71a9210969abab8b1bea900f6fe68",
+      "video_frames": 137,
+      "actions_shape": [
+        136,
+        7
+      ],
+      "actions_sha256": "d181cad3c7f094c2302469fa36dfb9a6595bc133d4376dea0dedcfab6c0aad32"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_goal/task_09/trial_003_success.mp4",
+      "video_bytes": 400489,
+      "video_sha256": "b7be71277aacf8c4342ace05d9a0f656037b779db7b77fd6f486a1208d63e8b0",
+      "video_frames": 145,
+      "actions_shape": [
+        144,
+        7
+      ],
+      "actions_sha256": "c17713541b6885a0f16bfe9d158cf2bc63acbcd1ebbc6ae9fd75d64094525369"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_goal/task_09/trial_004_success.mp4",
+      "video_bytes": 409186,
+      "video_sha256": "d4d1f86e233620318d4cd5a76b131ccea282fb9ab75304374e7447cca2c495bf",
+      "video_frames": 138,
+      "actions_shape": [
+        137,
+        7
+      ],
+      "actions_sha256": "3b20134e05e6e4a9fd24cdfa7240408e27c58ec2bafe6f2199b22142c08f07a9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_00/trial_000_success.mp4",
+      "video_bytes": 771146,
+      "video_sha256": "eb401d37492ea2c05142762207da951b8bc8d082b4efb16bd2d45d1476a50c84",
+      "video_frames": 278,
+      "actions_shape": [
+        277,
+        7
+      ],
+      "actions_sha256": "1944a7a78dbee6ed5b134102b8aa1367757fc6dd4c42f105d8ae8206fd5626db"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_00/trial_001_success.mp4",
+      "video_bytes": 793309,
+      "video_sha256": "6d5cecef60ef1df8ae94f9b272f3ae54faec9f16b22efb894723fc69b1b13df5",
+      "video_frames": 275,
+      "actions_shape": [
+        274,
+        7
+      ],
+      "actions_sha256": "16e24be025b6f33d7bda270cedacdd3cf66d2080121e25d86f14b4e5677d4b60"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_00/trial_002_success.mp4",
+      "video_bytes": 759487,
+      "video_sha256": "fe8050e726369074a773e954c0606abd0f74cdaf486270008e6855284a5bac9d",
+      "video_frames": 261,
+      "actions_shape": [
+        260,
+        7
+      ],
+      "actions_sha256": "2504c137c875b858fa266d38765074260617cfff27d51110db488754f1cdbd9f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_00/trial_003_success.mp4",
+      "video_bytes": 779234,
+      "video_sha256": "1417af091ac8d31527896ea47f8f9338e4aabd77352eeaa5d7413f640d427713",
+      "video_frames": 283,
+      "actions_shape": [
+        282,
+        7
+      ],
+      "actions_sha256": "f011c56f1a6008addaacc927aafc27eea2b5e4825dc9e20d439a30815eeb70cf"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_00/trial_004_failure.mp4",
+      "video_bytes": 1045235,
+      "video_sha256": "3fc8b7a87fd8e9a82eae8895abc3b92ee285992ee6fdc3e319c1d72881d5243c",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "f64186779dc46f983bea6adcca12d815667c6732b2dcf7304f34a7309832dd90"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_01/trial_000_success.mp4",
+      "video_bytes": 776119,
+      "video_sha256": "39af664614b2c6505cb982a4f60046b1f9abfc708304de2a0f97a15a0cd3a770",
+      "video_frames": 265,
+      "actions_shape": [
+        264,
+        7
+      ],
+      "actions_sha256": "0f51c1bf8bd836714e84007278126f63c0f4c96c6d5f5a989b6eafba4a89d60b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_01/trial_001_success.mp4",
+      "video_bytes": 759175,
+      "video_sha256": "7f3fdcc9feb33b9cbdef5a7ad96b4d875c9b36f374edd0f5524e3c06f48a20ca",
+      "video_frames": 263,
+      "actions_shape": [
+        262,
+        7
+      ],
+      "actions_sha256": "00abb209984eac6c8530e34f97ff8ad46b65b3e7e59be3dc254c51586f2a76f1"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_01/trial_002_success.mp4",
+      "video_bytes": 738381,
+      "video_sha256": "13c124271fdef5f3cca5744a556c4333512b36cec9c637a5031b9839b663a85a",
+      "video_frames": 252,
+      "actions_shape": [
+        251,
+        7
+      ],
+      "actions_sha256": "e0b4ce65091233dbee966b0b86e4fa65cb644b3c34ea7da47ec447d957c0600c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_01/trial_003_success.mp4",
+      "video_bytes": 729774,
+      "video_sha256": "7ca3787bde21b4105ac10a148aba90ab8e5dd7d2fa7d13dea3e327a6f83f8fc4",
+      "video_frames": 259,
+      "actions_shape": [
+        258,
+        7
+      ],
+      "actions_sha256": "d1c258486164e2c1957dd678ffaabce5c03c9f6a5f0088887c24d43dae5266d9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_01/trial_004_success.mp4",
+      "video_bytes": 718035,
+      "video_sha256": "cb3a21aaaef47c8619f607ad88745b86f31f23f1f04c8d95f1e8a8e5a9070cf7",
+      "video_frames": 248,
+      "actions_shape": [
+        247,
+        7
+      ],
+      "actions_sha256": "aa50ffc3e5dbe6b7abe5b78ba14c35034ae43306b3425816a309c6fe2108e334"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_02/trial_000_success.mp4",
+      "video_bytes": 654477,
+      "video_sha256": "d89746e727b104fd6527a3be7badc2249b14a3d6a4d571ceae942f76545686a0",
+      "video_frames": 225,
+      "actions_shape": [
+        224,
+        7
+      ],
+      "actions_sha256": "c9047d9a0883ec5ad2e8cb53d3f7c1b3763ccb7176d7f0f19f7beaa350d6b1e7"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_02/trial_001_failure.mp4",
+      "video_bytes": 1305746,
+      "video_sha256": "d3f9c52c2ee6f7da37e31ed16a9c119ccfc387e7c327f26efd5d0255c2a263f8",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "7b921ccbcbfa2395bc102e8c755c25dcda74848004e5641fa07f2907d378fa02"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_02/trial_002_success.mp4",
+      "video_bytes": 747882,
+      "video_sha256": "710ab727bca4c20deb775f418aa258f240863fe3a0ca734e56eeef775815645b",
+      "video_frames": 268,
+      "actions_shape": [
+        267,
+        7
+      ],
+      "actions_sha256": "3b112facbdc4084e5853ac984409d26d7c08e2491285090c504734ca8016ed78"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_02/trial_003_success.mp4",
+      "video_bytes": 733771,
+      "video_sha256": "e45a5244088ec0b919205b2e5359dd29a63eaefa8b09ae8ed14110601e44ef9f",
+      "video_frames": 258,
+      "actions_shape": [
+        257,
+        7
+      ],
+      "actions_sha256": "7810e45b767f76648052a8e2ea4fbe0953b6cb4bd051808a1c3b1084daece448"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_02/trial_004_success.mp4",
+      "video_bytes": 682380,
+      "video_sha256": "151103ca2352a86b636b0c9ca2bae387d7bfb3575f32403250e3bbd23f5dadd2",
+      "video_frames": 232,
+      "actions_shape": [
+        231,
+        7
+      ],
+      "actions_sha256": "7d03c548a84632f4cc8103843343599ba8999dba98308601650109dac376e9e6"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_03/trial_000_success.mp4",
+      "video_bytes": 697606,
+      "video_sha256": "cdc0771db1644979c3a60dd6ff55a40e47ca9206d725bc1a58630ce488dbc95e",
+      "video_frames": 229,
+      "actions_shape": [
+        228,
+        7
+      ],
+      "actions_sha256": "d12d8dac3549d1ea4adfec1dd95acc2bf4443761c24c834419f3f7428c03a354"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_03/trial_001_success.mp4",
+      "video_bytes": 682142,
+      "video_sha256": "acac96dc39186078d52eca3d53e26328bb13a85a48e1f9e9cf3b16b8a195e90b",
+      "video_frames": 233,
+      "actions_shape": [
+        232,
+        7
+      ],
+      "actions_sha256": "9bbd3380869c0a5848fa53e1a80c2ded3a563e1a5bac020604c47212a320489e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_03/trial_002_failure.mp4",
+      "video_bytes": 1190313,
+      "video_sha256": "dbf19fa9e28f42679902f3f7e5eb0bc19d7ab82ee3793b703823987ff26a6822",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "cbb48dc22e09976e9939b9f3d7c75759f56a9c22bf17113f77e43dbd70396776"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_03/trial_003_failure.mp4",
+      "video_bytes": 1036941,
+      "video_sha256": "889886fc18766d5df7d8cc5f47f094d67963214ed2bdf96f3bd659ec4145208e",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "152bac4b4f87306048ffc7b6188fe432859155f6915e655e2cbfe6ae2f1b0659"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_03/trial_004_success.mp4",
+      "video_bytes": 668579,
+      "video_sha256": "df0cf89639321222b3b1d5e295e623c91d8f8a6f1b1c2dd65c86af8b6554d68e",
+      "video_frames": 229,
+      "actions_shape": [
+        228,
+        7
+      ],
+      "actions_sha256": "5d5020418c84a5fea57f92492aa1b357c3c8f280efa05bb230f966f22edcafed"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_04/trial_000_success.mp4",
+      "video_bytes": 535088,
+      "video_sha256": "0a2991cf7939365ca16acbea9e22ffc3929bddeff092bcdb988de49966f28c5b",
+      "video_frames": 244,
+      "actions_shape": [
+        243,
+        7
+      ],
+      "actions_sha256": "03362def47ce351552dc5922d10d41e357aa0372330a4007f0aee7715f5856e9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_04/trial_001_success.mp4",
+      "video_bytes": 530146,
+      "video_sha256": "815cfc65d20242f1d8894dfea8abfec9a87d237423d287a5eb2e9f8098e0455e",
+      "video_frames": 227,
+      "actions_shape": [
+        226,
+        7
+      ],
+      "actions_sha256": "857fb0e7c7f6b6447c357582d85df99e93a110c140e534cc1fc53cb62258f47e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_04/trial_002_success.mp4",
+      "video_bytes": 493142,
+      "video_sha256": "bdab562c87f07c14b64b6e72ee5e1d932de4d4ef782d7e4af88b659997f31cce",
+      "video_frames": 216,
+      "actions_shape": [
+        215,
+        7
+      ],
+      "actions_sha256": "3387fb42ae0f476277fab7ec966926c829aa78bc04749f214c5c6cb0e187451b"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_04/trial_003_success.mp4",
+      "video_bytes": 502860,
+      "video_sha256": "adb823bd42fa5f1e5ea66073a0f02de84acba6a7f19a71b96831c925082a41c2",
+      "video_frames": 221,
+      "actions_shape": [
+        220,
+        7
+      ],
+      "actions_sha256": "b0fc4b22058ca70a01ca678597955ceecb4d60caafe317a384028e1e91ebf5a9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_04/trial_004_success.mp4",
+      "video_bytes": 526378,
+      "video_sha256": "25d78a1a053e438cba4bdb45cb01197bf4e56f8e31e2f45bcfb06b5c2fe4a5de",
+      "video_frames": 237,
+      "actions_shape": [
+        236,
+        7
+      ],
+      "actions_sha256": "ebd08c5da69e5a9784bd299467f78a331fc63b70dca9dca3dc0849c9a2e027ff"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_05/trial_000_failure.mp4",
+      "video_bytes": 1069571,
+      "video_sha256": "a6be3127730bc1223c9e489dc9e78a7b1b7827b6090f6e162022089056b7d303",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "9df39b567b98945f526f834c6884cfab36c936aef70faac4f2d97432502b395e"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_05/trial_001_success.mp4",
+      "video_bytes": 350788,
+      "video_sha256": "d7b8f35b7b026d38aa812369bdc5787f3d7897a3c5b2a27dc018cf56281b3c81",
+      "video_frames": 169,
+      "actions_shape": [
+        168,
+        7
+      ],
+      "actions_sha256": "a638d156b7207011f33fb700b1c0936659e67f2e83f7d3214e9a93537ae5bb46"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_05/trial_002_success.mp4",
+      "video_bytes": 439378,
+      "video_sha256": "7e9ce56cc3c796a1155ad5ba5a7f7d00d1438166097c0a7cc7ad392d00fd2f2a",
+      "video_frames": 224,
+      "actions_shape": [
+        223,
+        7
+      ],
+      "actions_sha256": "8a51c7d0c1947b7a810fbfc5c4c95e94ca1af40eaeabea3db09251dd68254d57"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_05/trial_003_success.mp4",
+      "video_bytes": 374724,
+      "video_sha256": "bc0ed0db9df7827a35339bcc6cc4565b26fc7f03dead045aeac374ac96d03bc3",
+      "video_frames": 178,
+      "actions_shape": [
+        177,
+        7
+      ],
+      "actions_sha256": "1b6522119a9c2c0e702d192662d7faf24b2d52e5534ac96d02173370dc1755a2"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_05/trial_004_success.mp4",
+      "video_bytes": 350879,
+      "video_sha256": "84a8c2af91df3dbd80444c87bee59664ab735724e2fda739fef0ace9af868f92",
+      "video_frames": 168,
+      "actions_shape": [
+        167,
+        7
+      ],
+      "actions_sha256": "6db58842caa17952f22f5416e49cc96513fc10a0c860e10642fff34b0b8e4291"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_06/trial_000_success.mp4",
+      "video_bytes": 565757,
+      "video_sha256": "d09524db24add4057d07acda60a0d35fb7fecfd0ac1578d822445135d39ef6f1",
+      "video_frames": 223,
+      "actions_shape": [
+        222,
+        7
+      ],
+      "actions_sha256": "feac96d0949e47b1c535b2c2878e79a4dd6f4191c1bbdc031219467990d01957"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_06/trial_001_success.mp4",
+      "video_bytes": 598664,
+      "video_sha256": "5f6c7c7e4889e5890ad729e764846a5bebfb54aa3c239f826c99af1eb7abcb68",
+      "video_frames": 230,
+      "actions_shape": [
+        229,
+        7
+      ],
+      "actions_sha256": "c65b5d3c3a89df24c248b77bcaad40a05d4b9e96e21f6f31bcba7a07d2d374b5"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_06/trial_002_success.mp4",
+      "video_bytes": 564388,
+      "video_sha256": "00e793a346cb7c9a7928e387d3370deab6ae152590e75f33fc7ded321ec7c365",
+      "video_frames": 216,
+      "actions_shape": [
+        215,
+        7
+      ],
+      "actions_sha256": "50a4cf14783898cae1357eaae9794be4923dcf4431acf936cff68d8c967bc626"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_06/trial_003_success.mp4",
+      "video_bytes": 535093,
+      "video_sha256": "aadac35f3baa8c110d19b9b4edfdf8900aa93a02165a18872d0ae9c089194286",
+      "video_frames": 215,
+      "actions_shape": [
+        214,
+        7
+      ],
+      "actions_sha256": "6d67723a8b11f1b61ac6d9e86b4a1903169db9eeb423b1bca581b9ce87cfd677"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_06/trial_004_success.mp4",
+      "video_bytes": 762974,
+      "video_sha256": "5edc32fedd47669a2840b8434f39c5cbb59049a6079fd6507eb37f5a37c27f11",
+      "video_frames": 305,
+      "actions_shape": [
+        304,
+        7
+      ],
+      "actions_sha256": "caa797baa2c20cb60aee278fcfea8fc3d60099d0c975251f63e8deec972273e9"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_07/trial_000_success.mp4",
+      "video_bytes": 698984,
+      "video_sha256": "4352fc7972737c243a4a17ae9a6cd89299fc1e323fb089488d713846f9ce2761",
+      "video_frames": 266,
+      "actions_shape": [
+        265,
+        7
+      ],
+      "actions_sha256": "c0ae143194e2c6c19cf94eb1b41dc00c2c811357beb3889ddb5aba065c83ac0f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_07/trial_001_success.mp4",
+      "video_bytes": 728441,
+      "video_sha256": "77c47d750b5e06614e2d0319e56c0510f1165abc730df737dc3cce84fc716fbe",
+      "video_frames": 259,
+      "actions_shape": [
+        258,
+        7
+      ],
+      "actions_sha256": "e039868935c6791ef65c6252f4c59b7a6cb22d115f508f3604c27958907c503c"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_07/trial_002_success.mp4",
+      "video_bytes": 776439,
+      "video_sha256": "6061151311df3d8fdb84d332762efe9ffe00dfa91ac585cab8e1063bc3ed8ca9",
+      "video_frames": 302,
+      "actions_shape": [
+        301,
+        7
+      ],
+      "actions_sha256": "dc8488aa9c6b9342e5769504b5cf8e97c8c309b928f0090a761345d89eefdd19"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_07/trial_003_success.mp4",
+      "video_bytes": 637376,
+      "video_sha256": "70539027133b4d8573e478775920daa88c6705255684a559704e0fbe5970448e",
+      "video_frames": 245,
+      "actions_shape": [
+        244,
+        7
+      ],
+      "actions_sha256": "20447d2d95256a229ae31f1bdef772177db36f84df3717f0a1ba21fbdbd33233"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_07/trial_004_success.mp4",
+      "video_bytes": 809335,
+      "video_sha256": "d3809bf8202fcda75bf910b82803d7604575d2491a01a8b98b1b62bb0b449c41",
+      "video_frames": 325,
+      "actions_shape": [
+        324,
+        7
+      ],
+      "actions_sha256": "6907983c11042fed9ac919922245e9b34fd6a0355d34f04c55eafd3039c752ab"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_08/trial_000_failure.mp4",
+      "video_bytes": 1089443,
+      "video_sha256": "98f3f406d6b27a6929fe5f8624eef9e29c78c48f9e0407e710e2807b2bf911a4",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "d8e1d634b9c4ccf95f3bf1fb0c3082f449549d82ed8cedf752817561f8b6a374"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_08/trial_001_failure.mp4",
+      "video_bytes": 965197,
+      "video_sha256": "d40259c1e9036d2342fbf2158fe50e7d010a3230a39bdd64c386a24873e49b92",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "7a53f95db4ea21fb3a7a2adf9d5da97d70b7e4bf71369ef1662723344df168a8"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_08/trial_002_failure.mp4",
+      "video_bytes": 1080020,
+      "video_sha256": "f4ffc5cd5c8a5819c1863c1885c269a8de1b067b01cb6acdcce80c9d9bcb2d18",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "72120d6c2151bc93f8e6d476b896b2042616bdf05854704860aec86a0317228f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_08/trial_003_success.mp4",
+      "video_bytes": 996531,
+      "video_sha256": "ad46bb37d8f7c304d2e6785b0aa9778efd73fe8798ae3da73cf079ca305f5305",
+      "video_frames": 419,
+      "actions_shape": [
+        418,
+        7
+      ],
+      "actions_sha256": "4290de4d478b3644cebcd58145774f61a5e5a346c962f9054976b50554e1b371"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_08/trial_004_failure.mp4",
+      "video_bytes": 1047502,
+      "video_sha256": "6e9ece93f57ad125af9ad2668e8190b9b18607134c48732ba7c1bd9c7b22a043",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "c3890931dc684e21b5e93dad3a1660322321ec7fb362ef4938c82c4bd0ff1ef8"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi0/libero_10/task_09/trial_000_failure.mp4",
+      "video_bytes": 903708,
+      "video_sha256": "7674c7daa08af91eadfa48d297b2a1ceb9562d8f59a121beccaaf9832616998a",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "e18915a1eec6b9183a66fac0cc68d729ffc4cb0167cba333f36525cbebd03e0f"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi0/libero_10/task_09/trial_001_success.mp4",
+      "video_bytes": 591155,
+      "video_sha256": "18742ef567591385c4ee8d818f64a559aa72162588dbf73cc360d11311e1c739",
+      "video_frames": 252,
+      "actions_shape": [
+        251,
+        7
+      ],
+      "actions_sha256": "09a048f4b4fbb1fc8ec9cd85f8d31c5fab8cf451a8b3d1484e19dedbfa40217a"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi0/libero_10/task_09/trial_002_success.mp4",
+      "video_bytes": 659523,
+      "video_sha256": "d5aae926363c2976652203ab5040a138ac1455fcbf8745b237881791b007469e",
+      "video_frames": 282,
+      "actions_shape": [
+        281,
+        7
+      ],
+      "actions_sha256": "c990b81260ea82531fe3dc803bf766262abbe40eb68e454bf1ab003235bbcb23"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi0/libero_10/task_09/trial_003_success.mp4",
+      "video_bytes": 618536,
+      "video_sha256": "36690200e4707727457190ca09d4b95e421e4806b886a23d53b089f50651a2ba",
+      "video_frames": 270,
+      "actions_shape": [
+        269,
+        7
+      ],
+      "actions_sha256": "aa26f5fc84ff03e05dab72beacbadb210f11fad36edbdfbf6a180fc21a9e0b83"
+    },
+    {
+      "model": "pi0",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi0/libero_10/task_09/trial_004_success.mp4",
+      "video_bytes": 687477,
+      "video_sha256": "55398d3778cb556e77278d99505a31a9e70283d0491c249daa943ef7ac7714cc",
+      "video_frames": 302,
+      "actions_shape": [
+        301,
+        7
+      ],
+      "actions_sha256": "4e61719d5f537e3f5390f4ad8502005531b73a7a0c72f378c124fdda8e6291f4"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_00/trial_000_success.mp4",
+      "video_bytes": 268091,
+      "video_sha256": "26f648bc5bf90c572ee7c9ff33b6ff76391138c646d38668eb08b65805d682ea",
+      "video_frames": 81,
+      "actions_shape": [
+        80,
+        7
+      ],
+      "actions_sha256": "029c8f5f18c6c509e82ee79a45be960572731758613dab018d67a13c416bbfa5"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_00/trial_001_success.mp4",
+      "video_bytes": 265823,
+      "video_sha256": "e28f189aec6796e859b17d1827f07b6996176a12746426f4d5c324c1314a8fe8",
+      "video_frames": 81,
+      "actions_shape": [
+        80,
+        7
+      ],
+      "actions_sha256": "e6a288a3ffe7d787b74b398d45aa8e8080517b265bcb966f554d49733a2321f3"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_00/trial_002_success.mp4",
+      "video_bytes": 373051,
+      "video_sha256": "6c12bc87b0af4ccae6cb283f6df8e43171818a55dfc23f63f843c84eb5a0ab4c",
+      "video_frames": 108,
+      "actions_shape": [
+        107,
+        7
+      ],
+      "actions_sha256": "9746ab09031aff5f3783615de60570291161d66f5ab0af00bb944a36be28c829"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_00/trial_003_success.mp4",
+      "video_bytes": 265768,
+      "video_sha256": "ded9c9860385039b5846d317735feffa5f55b2cd04e205b64a18acf11261f252",
+      "video_frames": 76,
+      "actions_shape": [
+        75,
+        7
+      ],
+      "actions_sha256": "66d33bbe6e2c8bfdfe58668f8f1cd1631c12fce2948715e43cb00195f278dace"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_00/trial_004_success.mp4",
+      "video_bytes": 260676,
+      "video_sha256": "00b6cf66df6d7077eba7145a59383f7dcd1cc3492815ba1b265c9fd2f7bdced4",
+      "video_frames": 73,
+      "actions_shape": [
+        72,
+        7
+      ],
+      "actions_sha256": "ce1bbf6f322833226fc96b4f49aafcbc214a37fa5db69b491b3431031019505f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_01/trial_000_success.mp4",
+      "video_bytes": 270901,
+      "video_sha256": "7588b55755f5fa208ab2546bedf692b1274c5bba0d14265f1a406e79e19494e7",
+      "video_frames": 111,
+      "actions_shape": [
+        110,
+        7
+      ],
+      "actions_sha256": "52f70954f1ce54d9770e1c7bce37548154fd69efa4a9911a00c0753d6f6e7ea8"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_01/trial_001_success.mp4",
+      "video_bytes": 270680,
+      "video_sha256": "8e5c9a5374bc6921538b046f9e01d8abdcb2c8372fdd7f28b99c05534986b263",
+      "video_frames": 99,
+      "actions_shape": [
+        98,
+        7
+      ],
+      "actions_sha256": "bc96adda578b1290f35fe3dcd02b01166781ebc62f625b4305d5eeeffe2045a0"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_01/trial_002_success.mp4",
+      "video_bytes": 279363,
+      "video_sha256": "a64a3cb4e081099cf33150ab6aada56c6c7e9c1788fa7d38bd85f455ae30571a",
+      "video_frames": 112,
+      "actions_shape": [
+        111,
+        7
+      ],
+      "actions_sha256": "9ad04b04c4cd7047f590df534741ba9c797e089b6922bd25995f8e7f47023502"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_01/trial_003_success.mp4",
+      "video_bytes": 269763,
+      "video_sha256": "442106e2d7d6301d5162e7b852544b6631fa196bf1365bfd81770abe01976274",
+      "video_frames": 106,
+      "actions_shape": [
+        105,
+        7
+      ],
+      "actions_sha256": "7fc1689d527cc19bfb8660ce7aef9d8c3e3e2c77d38e7b21e3183a41f81adb73"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_01/trial_004_success.mp4",
+      "video_bytes": 271260,
+      "video_sha256": "9c055bb1ba350079a588484c83341559a175e4f2b9da767481c1cf265fb9b20c",
+      "video_frames": 110,
+      "actions_shape": [
+        109,
+        7
+      ],
+      "actions_sha256": "f2d6ac0e425c263ac2a90996aa1d96430928d8ee349971eed305e64c5dc72f9e"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_02/trial_000_success.mp4",
+      "video_bytes": 368090,
+      "video_sha256": "328b9178ea8015d178725e2414202a9f175f06dc06e5ec1a0862ed0a7dfca432",
+      "video_frames": 123,
+      "actions_shape": [
+        122,
+        7
+      ],
+      "actions_sha256": "aff58c9146f84a2aec449fd9d6f2880a161e49506845d56c05caceff449db04a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_02/trial_001_success.mp4",
+      "video_bytes": 332633,
+      "video_sha256": "9f017b4f49f1c31d1c8e20210f7803aa6610d2ef712d1ddaf8227d094064a642",
+      "video_frames": 117,
+      "actions_shape": [
+        116,
+        7
+      ],
+      "actions_sha256": "c339499cfdcf25323ba18dc61e90f0fe2f30c70f6b1be83307ed032951d91027"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_02/trial_002_success.mp4",
+      "video_bytes": 318824,
+      "video_sha256": "d9fcde1c93aa058ab18c897ba902e0fed954bc16139e62bc8ddb4db04ffc6398",
+      "video_frames": 99,
+      "actions_shape": [
+        98,
+        7
+      ],
+      "actions_sha256": "875047f6d774cfed0ba26da96ead7ea7a21b05c156a20359772382a10abf4a40"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_02/trial_003_success.mp4",
+      "video_bytes": 301460,
+      "video_sha256": "2deabdaeb5755b4599c9bd7ca270be22710521ab2d8bcbbfd3b1c178a928d28b",
+      "video_frames": 93,
+      "actions_shape": [
+        92,
+        7
+      ],
+      "actions_sha256": "237bce9b96c5fcecfcd0731e9b1b1be884dad4683946e6663b525d68b899a909"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_02/trial_004_success.mp4",
+      "video_bytes": 307441,
+      "video_sha256": "f0502966ab7bac3d444184ee8da563d9465e287fad8c6688613fa301a67292fd",
+      "video_frames": 100,
+      "actions_shape": [
+        99,
+        7
+      ],
+      "actions_sha256": "86a28adffbd2ff99d5ebfc0646f834c8bd49d78f69cdeb56b4867e956324c46f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_03/trial_000_success.mp4",
+      "video_bytes": 286488,
+      "video_sha256": "d9a15df48be4338af2a023886d766c7a71929e2d7516ac0ebd8a4e6e0212c800",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "7c471fdd474e25b8d059656df5765d24a8ea97ae7ea0c3c5e98ad5a0d732faf6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_03/trial_001_success.mp4",
+      "video_bytes": 265938,
+      "video_sha256": "f5183fa0ade830c79b65d7238a0bc65830de9cadc0fd27593137916d0a856884",
+      "video_frames": 82,
+      "actions_shape": [
+        81,
+        7
+      ],
+      "actions_sha256": "7436a3327e1c776a778539a1a4e8d7a2559c2069243cb87912bc04dab8d9a6a4"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_03/trial_002_success.mp4",
+      "video_bytes": 254694,
+      "video_sha256": "e17a2e52ab2177d74b0365ac3b7eea8aabef29e275207f5d33b2b743e5a6ce9a",
+      "video_frames": 81,
+      "actions_shape": [
+        80,
+        7
+      ],
+      "actions_sha256": "4c449ff7fe3939c7f59f09fb00dadbff6f7f8f7fb96c2f96e6f36da6e535fec6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_03/trial_003_success.mp4",
+      "video_bytes": 269311,
+      "video_sha256": "9c837bdc6af6d56dbde910c0b5b73fab48236718c58c5a35b0ece0ac20536a53",
+      "video_frames": 81,
+      "actions_shape": [
+        80,
+        7
+      ],
+      "actions_sha256": "10d321a1987874c06bed3143058bb0ed1ff1cc09ace3d697e5829e1999b6469c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_03/trial_004_success.mp4",
+      "video_bytes": 258880,
+      "video_sha256": "392cb5f0b5ef029b07190ad27be71d74eb0dce19a2acb88fc980d6e782127b35",
+      "video_frames": 88,
+      "actions_shape": [
+        87,
+        7
+      ],
+      "actions_sha256": "ec6fd0c792b7c2200bc219e4726fc6b9c192dd7800e8f221b6936154123a54cb"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_04/trial_000_success.mp4",
+      "video_bytes": 383821,
+      "video_sha256": "ad3c49bdfdf1395195ce9aee804fa8834f7f09681d2fbee2ab3ce597b3f9a63b",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "c8ef170256bf15cf53afb70534286c075554b72d5597f9bb9c80f2fb93621a33"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_04/trial_001_success.mp4",
+      "video_bytes": 377544,
+      "video_sha256": "299ad212943798f1328f259e8c03d3f8b8bf897977862f016163aa68cfa798b3",
+      "video_frames": 125,
+      "actions_shape": [
+        124,
+        7
+      ],
+      "actions_sha256": "5da91ee5cff6b12f13c4c9997e30852913816c21ae30b996485d00e744ee2f8b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_04/trial_002_success.mp4",
+      "video_bytes": 391315,
+      "video_sha256": "af038c1296f1682a9a2c2e94b1b4cb1b45e962b301183d5e558867e1bdb6afda",
+      "video_frames": 120,
+      "actions_shape": [
+        119,
+        7
+      ],
+      "actions_sha256": "0314636e13ac76792dce3b10751521588c5f99324cb65491f02354d053dee7ab"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_04/trial_003_success.mp4",
+      "video_bytes": 384468,
+      "video_sha256": "e4b2a17159b4a6ccaccdaaaf61d2db50c6f57f4f392b77e54cbcb2a32fc6bd7f",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "eb3da2b9bacc3afbd018786e13f69b79c30d996e41373f1869981ea708f3d08c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_04/trial_004_success.mp4",
+      "video_bytes": 391563,
+      "video_sha256": "24c4e3d8bb749098e5060b08f4d11aad47e371de51e999c02b48b3beb3aa1b3d",
+      "video_frames": 134,
+      "actions_shape": [
+        133,
+        7
+      ],
+      "actions_sha256": "46455efc42a871c3931101308e0a911b7f2cdf4ea9497c17bcb4d6e18358a920"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_05/trial_000_success.mp4",
+      "video_bytes": 272804,
+      "video_sha256": "92f9901b87adf2b998b3235ad2968c12ebbd682d72affa9b3ece3c99654b6748",
+      "video_frames": 93,
+      "actions_shape": [
+        92,
+        7
+      ],
+      "actions_sha256": "3ac5f4135af58003de2dd9c7626cc66bbd976b58dcf7c88ca854198f271e76bb"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_05/trial_001_success.mp4",
+      "video_bytes": 295358,
+      "video_sha256": "39adc5b7345b9ba341a6342b142e65c6dd905b4c67e0c86ee635736dd4319dee",
+      "video_frames": 102,
+      "actions_shape": [
+        101,
+        7
+      ],
+      "actions_sha256": "a44a439f5379e9300718ddccf320b07a44eb61b37d315f5fe5ffd87d3640e183"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_05/trial_002_success.mp4",
+      "video_bytes": 279121,
+      "video_sha256": "c127436c6662ae3125e3e17b6c751557f717bab12c43254512bd267d8b3b8cdd",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "46ac4610c6ad259ce6c41288dab98755776d32a4e7ac7ad74c3cc1870848c3a2"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_05/trial_003_success.mp4",
+      "video_bytes": 307383,
+      "video_sha256": "162d6c998574dfe283e8058d97cce8bbc9d2ade92818662ad9b5624955f1ea7f",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "1b3c4f25e3b3ba1de54118d370d12dfb1c9ba2f2888e73f3224b24f4780e481a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_05/trial_004_success.mp4",
+      "video_bytes": 281822,
+      "video_sha256": "ff0095b2e5197e6b5030127e09c8fb93398bd390a57c5381c48b4a2213627901",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "1189d59d11c8660bc7cefb1e17f7c7605ff2a22f35a04ad26c2187f69d97095d"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_06/trial_000_success.mp4",
+      "video_bytes": 312651,
+      "video_sha256": "299eef324da190a2657d7bb3f6e2402a67ee79a0717637640487d442a25872b9",
+      "video_frames": 110,
+      "actions_shape": [
+        109,
+        7
+      ],
+      "actions_sha256": "dec442dd827521ff5f86d78915250908537acd6c0f6763f65718bc3873a4c65a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_06/trial_001_success.mp4",
+      "video_bytes": 336850,
+      "video_sha256": "5b6dd3d076d54eef5932ca5ca6170958db83551253897b257364b3da9aee7ece",
+      "video_frames": 112,
+      "actions_shape": [
+        111,
+        7
+      ],
+      "actions_sha256": "92409247ac0b506634bed2f17fad8a4f99cfb4359532fd4b9e788a9e939a348e"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_06/trial_002_success.mp4",
+      "video_bytes": 316152,
+      "video_sha256": "3b534256cb1c8d320b7fd9ef1420dc82da3c00b5d8542cf6c9a595efe39b9058",
+      "video_frames": 98,
+      "actions_shape": [
+        97,
+        7
+      ],
+      "actions_sha256": "61a87a45b9272a0f8c1f1c0b0f32b0d6bfd1a9c3362d958837dbfe6c26329f4a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_06/trial_003_success.mp4",
+      "video_bytes": 301066,
+      "video_sha256": "1b09a16b7ed174896d6349e5406d6cbb1691faf7f9a5f2fe3f6052068745371e",
+      "video_frames": 107,
+      "actions_shape": [
+        106,
+        7
+      ],
+      "actions_sha256": "22b0a5b2ff4fef66f978710e49b69a1000270a4452756531eede377ab29ff179"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_06/trial_004_success.mp4",
+      "video_bytes": 325854,
+      "video_sha256": "420d6bcd30dc4c8aa4b084c4695f96e78f072ed62802be2b191adfee78b419df",
+      "video_frames": 102,
+      "actions_shape": [
+        101,
+        7
+      ],
+      "actions_sha256": "b878cd7ade5e94a98c94c6a332ef524e7f49bef05843c88d543280cab25f4555"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_07/trial_000_success.mp4",
+      "video_bytes": 372119,
+      "video_sha256": "fb798745e8b709edc0ee4b57229034ab7c9f1bfa39aabaf14d206611815e6da0",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "7ae4c358ece8ea07cace5ac27b6d0999b78a5df54911b6cadb79be467da99379"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_07/trial_001_success.mp4",
+      "video_bytes": 382062,
+      "video_sha256": "8fbd1c3963613b4ddf8676a1b75521cc146845f3ecc40955a330f775b5be5f38",
+      "video_frames": 121,
+      "actions_shape": [
+        120,
+        7
+      ],
+      "actions_sha256": "fc8fc456d26790f54a980dbb3152bf9d7e6201c74b4d9cbb2555c4ab948af1ed"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_07/trial_002_success.mp4",
+      "video_bytes": 357176,
+      "video_sha256": "a7498254915ebffb608f8de35b30927e59f2f2008bdbced9c9c846f6ab99c52d",
+      "video_frames": 118,
+      "actions_shape": [
+        117,
+        7
+      ],
+      "actions_sha256": "5b3ae101172fa4220a7e898feff55851a35cc50873f540f9dc0e36f06d5417c1"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_07/trial_003_success.mp4",
+      "video_bytes": 366402,
+      "video_sha256": "507bd625fddaaeb9381b250101e1b094827613545b44df94d1964485ee847261",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "13f33b3a4263b23bf7c567ca7dbd88c953976f29d5e20506e176b34d76993cfe"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_07/trial_004_success.mp4",
+      "video_bytes": 361039,
+      "video_sha256": "5fec290a6cc665bfcdfceaffc360c06cb97eb47cd731c1c1621de7ce4ba9c1db",
+      "video_frames": 122,
+      "actions_shape": [
+        121,
+        7
+      ],
+      "actions_sha256": "c3d9e77dd9cbdc9ddcdb08f0591bfd691948b3a2d0a8f19b6766289cca0eb8dc"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_08/trial_000_success.mp4",
+      "video_bytes": 308024,
+      "video_sha256": "eae45d219c5f82fcd1e89b9f19ea47a74d26a7365d7692b819ddb2e35877ead2",
+      "video_frames": 99,
+      "actions_shape": [
+        98,
+        7
+      ],
+      "actions_sha256": "f5a21725f6cfb5f508aecaf6d56af5b443264040112a4d4bc27c893bc194a3c5"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_08/trial_001_success.mp4",
+      "video_bytes": 329193,
+      "video_sha256": "49b62dac1f3e4af3913cd6cda7c42775962a92687a612d9c770b1e7b451fd122",
+      "video_frames": 100,
+      "actions_shape": [
+        99,
+        7
+      ],
+      "actions_sha256": "746364f7b1a6515eb29956f1cf5a5c3ac15cd524417740863348943182bdac41"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_08/trial_002_success.mp4",
+      "video_bytes": 316183,
+      "video_sha256": "41ff9d1566b925813325e3e87691244ae91ee7bcac143f50b3936c4cebc32a6a",
+      "video_frames": 95,
+      "actions_shape": [
+        94,
+        7
+      ],
+      "actions_sha256": "4b2d10e71f39f2e3c02b17e7c878b217ee432375e4b7cf44f5b4a0bde8cb8353"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_08/trial_003_success.mp4",
+      "video_bytes": 317594,
+      "video_sha256": "e60f7ab1eab74f548f55eb70a80c013285ead60ee62ab3916bad4671c48695e2",
+      "video_frames": 100,
+      "actions_shape": [
+        99,
+        7
+      ],
+      "actions_sha256": "8cb34b8bac5ee740e3024d063cd9afce943b4b8a21265bff6dd34780b7ec5303"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_08/trial_004_success.mp4",
+      "video_bytes": 297829,
+      "video_sha256": "7df2abfb4821842358f084fa57a578c86cc8d2283dece8fb215725124e29bdbe",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "c1b5f6be6d21cd36e8a9d9c808431d05ac219e0ad0864160e079b7e67f53718e"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_spatial/task_09/trial_000_success.mp4",
+      "video_bytes": 334184,
+      "video_sha256": "472e5eb55c188643f198bc50a911c0d4f62b174aa485c77fe401b9adce92e494",
+      "video_frames": 112,
+      "actions_shape": [
+        111,
+        7
+      ],
+      "actions_sha256": "b70123b6c4bea3dd254da568a19b01946be437edb8ead972b39d61c4dd23caf7"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_spatial/task_09/trial_001_success.mp4",
+      "video_bytes": 335467,
+      "video_sha256": "b82057ba8bfcf5af799c87f24ba3e6b5843681a4e642589846aaefea6978c1c7",
+      "video_frames": 127,
+      "actions_shape": [
+        126,
+        7
+      ],
+      "actions_sha256": "e7b95044aae8915f70760ce6f85f70e8967124ae24e068795d4b846a0588e796"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_spatial/task_09/trial_002_success.mp4",
+      "video_bytes": 316412,
+      "video_sha256": "0a28e9baf5cef8f53faea1dc8948b3100f7a725da8291c05c7a408bdc0d13776",
+      "video_frames": 118,
+      "actions_shape": [
+        117,
+        7
+      ],
+      "actions_sha256": "b00f77def079895bfe9236184e673f274cbcb167730947569cd742ced04c77f9"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_spatial/task_09/trial_003_success.mp4",
+      "video_bytes": 321713,
+      "video_sha256": "7a1a6b0580ffd1cd07a017f30c0092414158150be53a48657ec0b0a597163cc4",
+      "video_frames": 115,
+      "actions_shape": [
+        114,
+        7
+      ],
+      "actions_sha256": "b6d5d0e42d1a13a88f20b326ac4aef1171de2d03f8ead89c963c6c49bc3e13ab"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_spatial/task_09/trial_004_success.mp4",
+      "video_bytes": 340085,
+      "video_sha256": "82c91bcb088d6099cead2c516652c860f1db71f43dc20826055962ace09ea5fb",
+      "video_frames": 114,
+      "actions_shape": [
+        113,
+        7
+      ],
+      "actions_sha256": "e3e4937446e33876b9809827654d77f9989ba3a6f74b1bd0bc812713c0247dd5"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_00/trial_000_success.mp4",
+      "video_bytes": 422854,
+      "video_sha256": "5ce288da2073a755c3ad56c6c4bef1971b3bc2c8e99bf3b793141ee6c6e3cf5f",
+      "video_frames": 146,
+      "actions_shape": [
+        145,
+        7
+      ],
+      "actions_sha256": "71361093ff5720319bd548af3691b7edb1ad45a2a3b9927c304a3b42ae195bfe"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_00/trial_001_success.mp4",
+      "video_bytes": 404993,
+      "video_sha256": "2f68f1628c5cdf86d54ac388ecddd77dc8849cd4aee3d9239dcbc3e577135c3f",
+      "video_frames": 142,
+      "actions_shape": [
+        141,
+        7
+      ],
+      "actions_sha256": "3177a5ad1f2750515265d8bef20fa1c98061bea73ac8733544b1318906e2ad35"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_00/trial_002_success.mp4",
+      "video_bytes": 648335,
+      "video_sha256": "b9fdafb8ff4cef4ddcad3697fdd3d3bd580dd17d4ca8358a8b77d5683d226fe0",
+      "video_frames": 231,
+      "actions_shape": [
+        230,
+        7
+      ],
+      "actions_sha256": "6a6ee4d50b9b4f07f8119db61125a5494f3f3176e4c3bad82554cde3371027c9"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_00/trial_003_success.mp4",
+      "video_bytes": 390757,
+      "video_sha256": "13c44df04f7d51ef376c1e38365d21476cc4e8964784a90a0459826c731cdde9",
+      "video_frames": 144,
+      "actions_shape": [
+        143,
+        7
+      ],
+      "actions_sha256": "8109a31767a3ccffcabcaad31ab9405a63abbad162d111e46ec40e45319ecbfc"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_00/trial_004_success.mp4",
+      "video_bytes": 471254,
+      "video_sha256": "b598c7d7317ee375688c9906d510fc591596739e9b0d8a8511eebc0a1258cd64",
+      "video_frames": 164,
+      "actions_shape": [
+        163,
+        7
+      ],
+      "actions_sha256": "f8aedb39e05bbff7c5e860b25ee2ee75eb8167aa38df59623698cdc598665d49"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_01/trial_000_success.mp4",
+      "video_bytes": 384255,
+      "video_sha256": "a2a20a34cbb70495354f95e3c879ba9b8ba87d2a21877f21d408e4bfa2800165",
+      "video_frames": 123,
+      "actions_shape": [
+        122,
+        7
+      ],
+      "actions_sha256": "6e096f4d5b4d85aa2f4531ef6e37d876e82b3691a4ae0e78a54727cf6034798f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_01/trial_001_success.mp4",
+      "video_bytes": 400601,
+      "video_sha256": "ad024cafec00e73798b8de7a7fd7c75ce2414ddf1e16bb5e9091bb3422f3f224",
+      "video_frames": 122,
+      "actions_shape": [
+        121,
+        7
+      ],
+      "actions_sha256": "ec182b4ed970f1698a22792cf48689769e638175443c0743484af387bd03e9c6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_01/trial_002_success.mp4",
+      "video_bytes": 392896,
+      "video_sha256": "1d6761079a2f8332ad4a1f15e502712249e7d54a3d26f75049ae9d5e4d6735ee",
+      "video_frames": 122,
+      "actions_shape": [
+        121,
+        7
+      ],
+      "actions_sha256": "19b179c7976249278f69bc4132ec30a18e73ce33c13f35710a5243965766b678"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_01/trial_003_success.mp4",
+      "video_bytes": 475728,
+      "video_sha256": "0f6f29d68779f9c7e71a283396d9725881ba6ad2f6362b7bc2c5baba95656932",
+      "video_frames": 159,
+      "actions_shape": [
+        158,
+        7
+      ],
+      "actions_sha256": "7e8327c030cbbaf8dd32bc6893fa752b7a95ae95d64b489189e62b3a1db27b53"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_01/trial_004_success.mp4",
+      "video_bytes": 406371,
+      "video_sha256": "7105e50ba682d3af57838c16e79f1c59856068edadcfbea22a315ee2f8df99de",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "be9aa7c05f819af3fa551a50c100a16771aec8ba6822e082a5c6abb824ed62b1"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_02/trial_000_success.mp4",
+      "video_bytes": 358156,
+      "video_sha256": "ebc2e07cf6a59dcb7a77d583638c345ba77d7fae1cfaa7534958808c942402fb",
+      "video_frames": 114,
+      "actions_shape": [
+        113,
+        7
+      ],
+      "actions_sha256": "45a31c1120cacb44c7e31feaea58af17dd8b1ebf0a61bb5d7a692db8ffbfd504"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_02/trial_001_success.mp4",
+      "video_bytes": 389176,
+      "video_sha256": "8d9faa672e1365864bc9836e8dc490af739ee804739f7774b92db420d7af612c",
+      "video_frames": 127,
+      "actions_shape": [
+        126,
+        7
+      ],
+      "actions_sha256": "cecdceb54d9467f962f12fc0beebf3ae2a5227ff62899243e494b0bbd2b3f128"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_02/trial_002_success.mp4",
+      "video_bytes": 345070,
+      "video_sha256": "7889749cb8214712c3c3a89637be99808eb8a72a27c03fd4733d51cc52e0e915",
+      "video_frames": 108,
+      "actions_shape": [
+        107,
+        7
+      ],
+      "actions_sha256": "874ea83bcef52efa0cc86401f378e3f279474c673d53f63cc3d7c90bf3f759e0"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_02/trial_003_success.mp4",
+      "video_bytes": 495235,
+      "video_sha256": "69287a8747b07f9d07bd84250383d76f870134d3c6e040b6694a255d3795749f",
+      "video_frames": 159,
+      "actions_shape": [
+        158,
+        7
+      ],
+      "actions_sha256": "890ae13e4f073c80b770027435d4400de60bf84f0b4b1c0beb72f61c536ab7ff"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_02/trial_004_success.mp4",
+      "video_bytes": 336025,
+      "video_sha256": "109d15eaf3ed37760bb10166b6bddba0d2b333bcc68eebac39a82d0dce3c2b87",
+      "video_frames": 106,
+      "actions_shape": [
+        105,
+        7
+      ],
+      "actions_sha256": "541d280211d81be71e04eff167a829f217db2e3436c650a7ed43cdc9671a5758"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_03/trial_000_success.mp4",
+      "video_bytes": 359381,
+      "video_sha256": "f4b7c53a0e28d1d9438d50a94805b5ae4ac3c51e680fa0327649f23399a59718",
+      "video_frames": 127,
+      "actions_shape": [
+        126,
+        7
+      ],
+      "actions_sha256": "83387562790f9867af978c95ac0c10d28c3687d885acd0466220d230d0dde0da"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_03/trial_001_success.mp4",
+      "video_bytes": 388209,
+      "video_sha256": "6b367252bb747781d3aff5c28b2cb9dd54f906d3a63aed6ae64cb6668e6c36ec",
+      "video_frames": 136,
+      "actions_shape": [
+        135,
+        7
+      ],
+      "actions_sha256": "94694c1a56eeab2c2281a104ea57f15ef87e70708725267ec99220603d017ce1"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_03/trial_002_success.mp4",
+      "video_bytes": 366897,
+      "video_sha256": "6df35c422878a26309da7d61f7051c6c902b323d7109aea7cc5cfc0cc6cef870",
+      "video_frames": 123,
+      "actions_shape": [
+        122,
+        7
+      ],
+      "actions_sha256": "417a39a6885bbe2b2483f10af66f5cae814c98cb881ec050e7b729009c9cb8d4"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_03/trial_003_success.mp4",
+      "video_bytes": 506784,
+      "video_sha256": "d5d16b1adec381c392542f2efab4cc5cd7aa35dba40053bc6d5d5a6bfb809bc4",
+      "video_frames": 175,
+      "actions_shape": [
+        174,
+        7
+      ],
+      "actions_sha256": "1a1347929fb96cf396331c0a65023fef0756e5a6d3ed5ee92dd0725f46635208"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_03/trial_004_success.mp4",
+      "video_bytes": 390494,
+      "video_sha256": "5ba54f104f7a1c76974d3a091306696c193d4ad50de3b98a4d0e0559b2b456e5",
+      "video_frames": 130,
+      "actions_shape": [
+        129,
+        7
+      ],
+      "actions_sha256": "8d0c270da69657221e9177a72aa84effbc0ac08a1d75485f05c1b7e9c9f2d96b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_04/trial_000_success.mp4",
+      "video_bytes": 403029,
+      "video_sha256": "66a020c469a01c7501c56137908aef58c2b62809b2d2aeaba1021832b172c873",
+      "video_frames": 141,
+      "actions_shape": [
+        140,
+        7
+      ],
+      "actions_sha256": "753d5056f3c572031305c03ffff69123a7ee3ec8c26ad85d433632d85dec24c6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_04/trial_001_success.mp4",
+      "video_bytes": 410164,
+      "video_sha256": "31616c7e679786e3c2daecd9dfb101081ed0d481186f8d5324c65488bc7f5d44",
+      "video_frames": 143,
+      "actions_shape": [
+        142,
+        7
+      ],
+      "actions_sha256": "0ba04b60b531f7210c35854c3e7df9b8882f5c709d4f552bff391ffbc5b45ea7"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_04/trial_002_success.mp4",
+      "video_bytes": 394278,
+      "video_sha256": "029d7ae483fb63a4b148854510d21b34d713dc292fba1b7afe65efc655c5db11",
+      "video_frames": 142,
+      "actions_shape": [
+        141,
+        7
+      ],
+      "actions_sha256": "47d0329c79eb653b248fe486560c2f6d2054f5fd893770c90cd90e5cae1086a0"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_04/trial_003_success.mp4",
+      "video_bytes": 424137,
+      "video_sha256": "b78399c2e4e2eaa2adb8030c9211b2b7023a856652689ef54ee7cbcb09a16ff5",
+      "video_frames": 153,
+      "actions_shape": [
+        152,
+        7
+      ],
+      "actions_sha256": "120fafc1410557e8ffddbfe8e9f1c1e1ae716fe4cd1309b69b62881645179d7a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_04/trial_004_success.mp4",
+      "video_bytes": 399626,
+      "video_sha256": "695940e0879c800a2f143bc62348407bb85f0499e794b5a71e23e5cfba945e83",
+      "video_frames": 139,
+      "actions_shape": [
+        138,
+        7
+      ],
+      "actions_sha256": "e3817747e5fb37bdc2c3d7b19643562b83a30a940dd32b9b54924ae76b22d133"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_05/trial_000_success.mp4",
+      "video_bytes": 362673,
+      "video_sha256": "3236f1f2ac1ee441df1ff46dd590e8b76a3eedd7066d8a44f9cde51f0e7b724c",
+      "video_frames": 110,
+      "actions_shape": [
+        109,
+        7
+      ],
+      "actions_sha256": "2a93a6d65a8f1fbe551f7bf7dc062bb03f4c5ffcb8655e2ec89e337ac86fcb2b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_05/trial_001_success.mp4",
+      "video_bytes": 387074,
+      "video_sha256": "1a32dcead8044f5e101fe631e2bfaac1a053d09c2a273db3b9cba6e12ed59991",
+      "video_frames": 115,
+      "actions_shape": [
+        114,
+        7
+      ],
+      "actions_sha256": "90fb29e69a25a147b8878dc93a1ff1308526dd42b1b97d1417feec38556ed850"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_05/trial_002_success.mp4",
+      "video_bytes": 390912,
+      "video_sha256": "7c2bb15bf22f4440e332145b5bf8c3d9a464b5b29e25c4492bc9c7887b2ee621",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "5516edd6a27b7cab04cfcdd1db540a4a7be740b5c05ec52c17342c9c2ee6e658"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_05/trial_003_success.mp4",
+      "video_bytes": 445866,
+      "video_sha256": "1bfcd0d10a32ec8a3d9864213951210a0abc89e16e38b009a5c3d8d5bb9e1e36",
+      "video_frames": 135,
+      "actions_shape": [
+        134,
+        7
+      ],
+      "actions_sha256": "bd9d11339254490056bf0c3d0018275b9c8af06e3d3cb83c2e7f50de420dc931"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_05/trial_004_success.mp4",
+      "video_bytes": 388992,
+      "video_sha256": "04e57262a0689af8199bbc39e3ef0f5273a215e0039823c61d1ce313f0a3fb66",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "7f10a2136f16969d4bb4f60b21c9309c5691af77762140ad73fe216fd8251f95"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_06/trial_000_success.mp4",
+      "video_bytes": 452368,
+      "video_sha256": "8c34e88ae9966504ae5eea827afd215990b2d2c53317ab3fc703dbe308698daf",
+      "video_frames": 152,
+      "actions_shape": [
+        151,
+        7
+      ],
+      "actions_sha256": "42e0208881ddbb675e36e7d746c3b5268a6fe153c937e64a069365d6439b8817"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_06/trial_001_success.mp4",
+      "video_bytes": 459101,
+      "video_sha256": "c13b8b56dd3eb3ebc48fd6309c55cad6dae26a8af87985ad8801e0374cfe2313",
+      "video_frames": 148,
+      "actions_shape": [
+        147,
+        7
+      ],
+      "actions_sha256": "c333e28cf4225e6a5ddbdebef6430e53b82e8ea85f4d3c68a81573cbaf8ff08a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_06/trial_002_success.mp4",
+      "video_bytes": 438994,
+      "video_sha256": "bc4a957c762568855930c31ea5cd46005ce441125210fe8a0444072fec0b8493",
+      "video_frames": 154,
+      "actions_shape": [
+        153,
+        7
+      ],
+      "actions_sha256": "2b9954622bdb54ab2937ea738267789e3e0396637db5b288fe10f6a080698a5a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_06/trial_003_success.mp4",
+      "video_bytes": 552101,
+      "video_sha256": "590410d023262fa470598b90d4ba21702ce8e08a6b3c9d1a3c69fcbf247d999e",
+      "video_frames": 200,
+      "actions_shape": [
+        199,
+        7
+      ],
+      "actions_sha256": "dc829691700f72b80f23f128c2bf1e1c68d386aeeb6b15d3231cf4cbd941b52b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_06/trial_004_success.mp4",
+      "video_bytes": 460383,
+      "video_sha256": "8abc5875f06636c9f9415cd59ef2fa673baafeab93dcfd6f42e72a3213c4fd36",
+      "video_frames": 147,
+      "actions_shape": [
+        146,
+        7
+      ],
+      "actions_sha256": "872509f4e74dc42200f8deec250c3c5b5f8845859a6067bad9c6d0ac80f24b12"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_07/trial_000_success.mp4",
+      "video_bytes": 487473,
+      "video_sha256": "3f6e11ecf88e0a0c74a88c2188d634b12f6ef336c8930d34ed13dc0f113768f6",
+      "video_frames": 158,
+      "actions_shape": [
+        157,
+        7
+      ],
+      "actions_sha256": "75a401c3519dbadb01f012ac7948d3ca78d7e6cec99f839d07b5c1ed90f67005"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_07/trial_001_failure.mp4",
+      "video_bytes": 758222,
+      "video_sha256": "6c6d5cb8c07a8dc2940e8bf6f35e22198ecd58ea3cd6c31f7e064732ab40b79f",
+      "video_frames": 281,
+      "actions_shape": [
+        280,
+        7
+      ],
+      "actions_sha256": "84e101aaf8d7da32ed50c501a01a35dc33ca8728edaa3d570616cf27916131b0"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_07/trial_002_success.mp4",
+      "video_bytes": 429769,
+      "video_sha256": "f602933fc20d9a003f13352d4f8e074bcac410c3edbc5555695c6a1160565c0c",
+      "video_frames": 141,
+      "actions_shape": [
+        140,
+        7
+      ],
+      "actions_sha256": "cbd8c7d64d977b590fef20c4eeb3281aa8e2f8a7e7310b651ea5d5ca624ac5c5"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_07/trial_003_success.mp4",
+      "video_bytes": 372556,
+      "video_sha256": "9f02a71a22b0d586046aafbf62520e15e72f9bba79bdae92e8626e601b180f00",
+      "video_frames": 122,
+      "actions_shape": [
+        121,
+        7
+      ],
+      "actions_sha256": "0a043fe4f38cb9226708ec11206921f7e01956ac9257869540554e46b1e87f04"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_07/trial_004_success.mp4",
+      "video_bytes": 411027,
+      "video_sha256": "342300cd42dcab52317739da5ba1c32d74e9c2cb1312d430da7efdcc6a9055c5",
+      "video_frames": 131,
+      "actions_shape": [
+        130,
+        7
+      ],
+      "actions_sha256": "3fb2eeae947e78b76d7498af0014b3bbd9e79e268a6cf31cc2aefd238b05e93c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_08/trial_000_success.mp4",
+      "video_bytes": 448528,
+      "video_sha256": "9a896cbce9b566a47bdab6170baf8c01afa87de14d93daef1b2486a78d006766",
+      "video_frames": 144,
+      "actions_shape": [
+        143,
+        7
+      ],
+      "actions_sha256": "2bb84a76eaa2d28b207e0699d124c50980a4d577fe868d4692f4f9db3c1e5411"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_08/trial_001_success.mp4",
+      "video_bytes": 418800,
+      "video_sha256": "2807b909031e26fde20b713746adab36808eec60f31e4255c0de7864c66f4e70",
+      "video_frames": 144,
+      "actions_shape": [
+        143,
+        7
+      ],
+      "actions_sha256": "27d4549036208346b50d3cc3aa29e8d6e3db136e95a25bd704eb5766b67b65fe"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_08/trial_002_success.mp4",
+      "video_bytes": 456563,
+      "video_sha256": "b2ea776d904d0739207adbaddf8928e36e49e7fb0600797f64af4be6679edf2a",
+      "video_frames": 146,
+      "actions_shape": [
+        145,
+        7
+      ],
+      "actions_sha256": "12cbab75981d7339c228b8f7df7ae05c4c0f5d82fff756a4bc4b781b3fa85ef7"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_08/trial_003_success.mp4",
+      "video_bytes": 426918,
+      "video_sha256": "f32f49b7df64a07d6ec3c4b56efbbabc3471388fa661a763fa0e0b51e2465cab",
+      "video_frames": 141,
+      "actions_shape": [
+        140,
+        7
+      ],
+      "actions_sha256": "8fa81bfa25af12268c796af27f5eb733e2a59df4ed85673674233abc7dffb575"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_08/trial_004_success.mp4",
+      "video_bytes": 412957,
+      "video_sha256": "cc2c855d7f785ffa7c8feab3db628596da77311292c68ea1c65beb7961cf2d72",
+      "video_frames": 145,
+      "actions_shape": [
+        144,
+        7
+      ],
+      "actions_sha256": "299d0839b9abd5b0ee5f9626ad5ac16117bffcd3d82a155dd4732431c4ea525e"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_object/task_09/trial_000_success.mp4",
+      "video_bytes": 385225,
+      "video_sha256": "18b310418cab5b0bd1f042b5f34f6adf814806fec75a63cedae2dc975ef59115",
+      "video_frames": 126,
+      "actions_shape": [
+        125,
+        7
+      ],
+      "actions_sha256": "f756f0691fe710ca91e27d565256aa41b678d4d9e4c738e5b3b7becde97a5a16"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_object/task_09/trial_001_success.mp4",
+      "video_bytes": 362498,
+      "video_sha256": "30a180a76d6a3e7c0fd7d909d76ae6a4f925eb018c7794e711530cb791c074f4",
+      "video_frames": 121,
+      "actions_shape": [
+        120,
+        7
+      ],
+      "actions_sha256": "48dd0b9429035b122748e2b62de62193f4000aa11d77ddcbe4cd5a2d8e4c1eab"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_object/task_09/trial_002_success.mp4",
+      "video_bytes": 562809,
+      "video_sha256": "9f26c2941ab5ede29a2c53157b4b42891c03cbad33289a07608ce726e22a02bf",
+      "video_frames": 184,
+      "actions_shape": [
+        183,
+        7
+      ],
+      "actions_sha256": "20ddd82f9e3f454e59c219e69e763fe096729bd36cf8b2aed9127b137903400b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_object/task_09/trial_003_success.mp4",
+      "video_bytes": 390002,
+      "video_sha256": "3d3d4e7327400853f5c0073c0ea5d678aca2c63920ad116f5319525a2e13b4d6",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "28e6a0f039b374d5bf6a7d1f7cb5664e9b65c8d7a82abb7dc5549e0fdc3a6f42"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_object",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_object/task_09/trial_004_success.mp4",
+      "video_bytes": 380538,
+      "video_sha256": "04d3825c56effc3b4a7deb35614cbe614d9dc040bca80500d8943bcee77142ad",
+      "video_frames": 125,
+      "actions_shape": [
+        124,
+        7
+      ],
+      "actions_sha256": "166301c1e29f71612e833186334c539f2de21079dfd909266be045f3a4ec1492"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_00/trial_000_success.mp4",
+      "video_bytes": 345447,
+      "video_sha256": "672020e3f1d423604de511348333fec59b03f517850b0a66db484be5c64fb6ea",
+      "video_frames": 117,
+      "actions_shape": [
+        116,
+        7
+      ],
+      "actions_sha256": "445ed86d5395c6f88f538c2e6ab0706c84c1e124eb70cc2718b415a7773f046b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_00/trial_001_success.mp4",
+      "video_bytes": 366950,
+      "video_sha256": "52f2e186bd6e6701bcdb6e5239cd35ba782b1ca6eb4c273def9c1ed305542177",
+      "video_frames": 124,
+      "actions_shape": [
+        123,
+        7
+      ],
+      "actions_sha256": "eb65bffad1dfe331304321e8ec67edd05eca836216f4614bf4e3f34a8ffa04e2"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_00/trial_002_success.mp4",
+      "video_bytes": 346746,
+      "video_sha256": "13de230aaa6b5f58f66a56c47ffd64eacd40448e2f85390e95d74d8d3fa49cc7",
+      "video_frames": 127,
+      "actions_shape": [
+        126,
+        7
+      ],
+      "actions_sha256": "9595050b76cda3c5a3de128e9d5df50231cf2941a45503496a74bc207d665912"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_00/trial_003_success.mp4",
+      "video_bytes": 359571,
+      "video_sha256": "af22bef7d1a223d01ca21b224e32ae1b9b67a5e8e8ed20a2124243c0698bdc12",
+      "video_frames": 124,
+      "actions_shape": [
+        123,
+        7
+      ],
+      "actions_sha256": "beaa2a85b93cb6d3cfe317ad0f6b4cd31943599af78114ad4b4a1ce8d96d7b36"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_00/trial_004_success.mp4",
+      "video_bytes": 352737,
+      "video_sha256": "6bf3396b3951704094d85ab2ae35884a04746736034b8276abd749c26e4599e4",
+      "video_frames": 114,
+      "actions_shape": [
+        113,
+        7
+      ],
+      "actions_sha256": "1ecddfbe62581b6f78a5a7b86a94b69df12d154089faf22fa98a14ae13fc4279"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_01/trial_000_success.mp4",
+      "video_bytes": 280706,
+      "video_sha256": "6839b11962e0ba61ffa679f10e3a1044a0bd53bd45750dfd99afd8a0b63589bb",
+      "video_frames": 86,
+      "actions_shape": [
+        85,
+        7
+      ],
+      "actions_sha256": "51a05671d64f93189730993edd694f2397d12b71435f6af2ff8156973d7e72da"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_01/trial_001_success.mp4",
+      "video_bytes": 307873,
+      "video_sha256": "82c3cc67c3823948dc74905a03ff19650f86838f60cdd91ac90c9c662642530c",
+      "video_frames": 88,
+      "actions_shape": [
+        87,
+        7
+      ],
+      "actions_sha256": "02791243fa35333a5a450d7dc9266ae7ed58d6e64461beb935abd9db11bf111a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_01/trial_002_success.mp4",
+      "video_bytes": 431734,
+      "video_sha256": "c2edca6e7e71b266750d8437df6bc2ea9c9178c3a0995346f5677fec7addd1ef",
+      "video_frames": 120,
+      "actions_shape": [
+        119,
+        7
+      ],
+      "actions_sha256": "47e5feadfc39cd6c353f6a7eb6eeb7c83b06d5141cb8b155945e781ba623b297"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_01/trial_003_success.mp4",
+      "video_bytes": 290685,
+      "video_sha256": "4c2a23753b7003ee02ca4646302757a2b95bb2eb7ade861fb186f8b939a6a194",
+      "video_frames": 89,
+      "actions_shape": [
+        88,
+        7
+      ],
+      "actions_sha256": "f0f82085ee2c8719245ab9d0f1b678a71da396bc2011739d0175b283805c94b9"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_01/trial_004_success.mp4",
+      "video_bytes": 288894,
+      "video_sha256": "3713edae72c074410b3c1969754f4e7b60eb5ea2cef8c9acfc0d94942ec714fd",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "58341e909edce5f81cc49cba21a08c716f35588a54e50d22cc2c6bd42b3782e3"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_02/trial_000_success.mp4",
+      "video_bytes": 242367,
+      "video_sha256": "ac5f06727f51153076b4fdf31ba0e40ff391b2fdc3acd615756a015af55dc017",
+      "video_frames": 77,
+      "actions_shape": [
+        76,
+        7
+      ],
+      "actions_sha256": "25d9d95312db9b8ac8f5e89198ef4ac69927cda86ad2b24d0d3609e1eae3f0b1"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_02/trial_001_success.mp4",
+      "video_bytes": 270704,
+      "video_sha256": "41571b023d6a4ea5b85c0f2490b542f88d8dfc32ad1e517bb88002cef8e67720",
+      "video_frames": 86,
+      "actions_shape": [
+        85,
+        7
+      ],
+      "actions_sha256": "9fb784ba9b4a74d8086b4e372c6304d8ab6a81aa7fb54869fc37c7dd3b9829eb"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_02/trial_002_success.mp4",
+      "video_bytes": 304553,
+      "video_sha256": "d9045e75eb803a47c3511fdd7af684a685d8a262e8ce7ab99238ae8a1cb33ea1",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "34534e139949bd3e83fc692c8ae8e5102a1a10460736db349113800f5d81d601"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_02/trial_003_success.mp4",
+      "video_bytes": 265513,
+      "video_sha256": "b822ae3d9fbbae4a71e9edf4a2b98857fa473104d8a3e85bff4a0da581e912f5",
+      "video_frames": 85,
+      "actions_shape": [
+        84,
+        7
+      ],
+      "actions_sha256": "7a9906ec4a768278499ac1e0b856ca8614245eaadc63c152afbccdb188ac84e9"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_02/trial_004_success.mp4",
+      "video_bytes": 253077,
+      "video_sha256": "26653ad108c515e39ca8cae517bf3aa58d15864d57d3b6a5fe6bdd728f03824d",
+      "video_frames": 83,
+      "actions_shape": [
+        82,
+        7
+      ],
+      "actions_sha256": "9e1e31018fc7745a14046afc0a2d1a6bfd0937251e3c1648d000f8da43e92d7f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_03/trial_000_success.mp4",
+      "video_bytes": 561188,
+      "video_sha256": "56360ffc004d70e2502ac24b6eb409f383b6647510adc464568da550c1c6f1d9",
+      "video_frames": 203,
+      "actions_shape": [
+        202,
+        7
+      ],
+      "actions_sha256": "e9216ff3f38cf2244bd4f0d8a0f97095a626281c812c3efacb53e302de003d3b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_03/trial_001_success.mp4",
+      "video_bytes": 505105,
+      "video_sha256": "728c4fc0907e5cff2cad94a230e422d7b4bdb00523c8ceb9fb4b08a3b22119f0",
+      "video_frames": 180,
+      "actions_shape": [
+        179,
+        7
+      ],
+      "actions_sha256": "e0859081502156dc0b00c4f14964436df37343da55925a924a33cfb6f5d54b90"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_03/trial_002_success.mp4",
+      "video_bytes": 506840,
+      "video_sha256": "858e15cc39b7151b26a50ed19cabcc10998b3629eeb5836b8c8ccf8bd27c0057",
+      "video_frames": 179,
+      "actions_shape": [
+        178,
+        7
+      ],
+      "actions_sha256": "1024eefbd80fc7f456b26e0476733ea5d4b5d89ea552c6efdec8875b87bed061"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_03/trial_003_success.mp4",
+      "video_bytes": 474630,
+      "video_sha256": "b1f831941790726999a97d8c43fbc1483050a396586649ecb7d23a43bfca2f07",
+      "video_frames": 170,
+      "actions_shape": [
+        169,
+        7
+      ],
+      "actions_sha256": "603db3880e87b49c6fde0175200acb4a44c30044c2120c4a3f4c8aaad46bc263"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_03/trial_004_failure.mp4",
+      "video_bytes": 386497,
+      "video_sha256": "8fedbf0c09f8d05cb999a85c8bb6a642abe65badda0b21e569d72a50011c4323",
+      "video_frames": 301,
+      "actions_shape": [
+        300,
+        7
+      ],
+      "actions_sha256": "f0a05dbe2158fb120e77f4ec0b322d5505ba4cce4d84ff1fbfa502198e1037d0"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_04/trial_000_success.mp4",
+      "video_bytes": 288504,
+      "video_sha256": "e5851fb24d3fe71bf135c2ea5f7383aa33273cba840ab34a8490164bbb023ad5",
+      "video_frames": 87,
+      "actions_shape": [
+        86,
+        7
+      ],
+      "actions_sha256": "cf77254bb616bda49bc97db6e4ef61180023ce5557343983352984da35dbe6f4"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_04/trial_001_success.mp4",
+      "video_bytes": 282687,
+      "video_sha256": "2e9ab196933f6f7803d6fb7556e75c3fe272d0a4832969317a2b2684a262809a",
+      "video_frames": 87,
+      "actions_shape": [
+        86,
+        7
+      ],
+      "actions_sha256": "6b4be1ecaf38c3ef6ad002a7d7839d08b87107a86df084544eb68805f9e43e99"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_04/trial_002_success.mp4",
+      "video_bytes": 277824,
+      "video_sha256": "124667781f0974ab60c6b62bd009af5ae40bc83a5e3a181388054996f6cbef3e",
+      "video_frames": 77,
+      "actions_shape": [
+        76,
+        7
+      ],
+      "actions_sha256": "cfc0b3390dae6a993bb5918efe534ff404a9782961ff5b19d0e7eee58dab5910"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_04/trial_003_success.mp4",
+      "video_bytes": 325260,
+      "video_sha256": "a7b64d286941c27e2f469f8c4f9b258e53f56ca09d24d5c4deb0291b4201cdbe",
+      "video_frames": 97,
+      "actions_shape": [
+        96,
+        7
+      ],
+      "actions_sha256": "d5d9db96888dd77b0a15318271f14384403ae91d89d97a081e3d9ca9d44177e8"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_04/trial_004_success.mp4",
+      "video_bytes": 272881,
+      "video_sha256": "f33906378b44e8e28f1b748116f94f3a7b45d9bfa84cce4d62f83a2969c1d21a",
+      "video_frames": 83,
+      "actions_shape": [
+        82,
+        7
+      ],
+      "actions_sha256": "b4d568a6e267ac04f2616a24ffcceac6fcf890703c6b482b02a897611b812e8f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_05/trial_000_success.mp4",
+      "video_bytes": 304844,
+      "video_sha256": "bdd6b035e24f3c5a7346a6eb46c659d4831140be2f395c9e5a20bccda0510ed2",
+      "video_frames": 130,
+      "actions_shape": [
+        129,
+        7
+      ],
+      "actions_sha256": "4ec2bd90552601af1a7f94f41442fa98f7b347f6abf0b9ed276dde0194e496c1"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_05/trial_001_success.mp4",
+      "video_bytes": 332475,
+      "video_sha256": "4f7c0b88b9bb35f918227badac6c625647deed3e938502423d642418dc4d1104",
+      "video_frames": 149,
+      "actions_shape": [
+        148,
+        7
+      ],
+      "actions_sha256": "38628811c3d918b45e2f267f991775f46019d5738cbeb8e9ef5bbdd8f30a2531"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_05/trial_002_success.mp4",
+      "video_bytes": 274967,
+      "video_sha256": "e0f0c45e042b1d7ceaac5aeab6979c89e55dfcad2fc785e025b4d6d57544b15b",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "199f0ed9908adc0a2ad9a8485c1a0803f505c13f1deb2c02f14b31118eed2216"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_05/trial_003_success.mp4",
+      "video_bytes": 308221,
+      "video_sha256": "429cdd435708ec1ec63cca4d0183f64960db2ba22026de0d0e3da3b316d3f873",
+      "video_frames": 132,
+      "actions_shape": [
+        131,
+        7
+      ],
+      "actions_sha256": "89a3e5f36f1f4085b02727dae95e3a388342330f4700a81983a67ae06206e59d"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_05/trial_004_success.mp4",
+      "video_bytes": 289383,
+      "video_sha256": "6590bb80fdf8fa93e0d71b4d04828a0734ebb25b8bdc7e45897ac376fae66785",
+      "video_frames": 119,
+      "actions_shape": [
+        118,
+        7
+      ],
+      "actions_sha256": "57a5086444bb5eedddc2d1102fa379632dd2209cdb783a7ae83d3b98345cdb5c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_06/trial_000_success.mp4",
+      "video_bytes": 248421,
+      "video_sha256": "d382d256d797036033b826b787d918422717285e8492ef33ba3a566ac31cb4e3",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "2b6baffe908c23fb904109d05c7338212f94b02f3fd516be6d0fef18fe18847b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_06/trial_001_success.mp4",
+      "video_bytes": 247972,
+      "video_sha256": "3789fbefeeb2032d224eebd010e903fb1d2e696363f7befcf67c5c4dd28b81ff",
+      "video_frames": 94,
+      "actions_shape": [
+        93,
+        7
+      ],
+      "actions_sha256": "1cc936f53990429d43b5efeb2c02a9c9d62b3664c7b719b930cd56a6cf76dd9f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_06/trial_002_success.mp4",
+      "video_bytes": 262639,
+      "video_sha256": "85cdd8fe0dfb0faf14b21ef3495cc3bdf23e1539ff27a4275ffc7568ff330ae6",
+      "video_frames": 95,
+      "actions_shape": [
+        94,
+        7
+      ],
+      "actions_sha256": "568d8a3836a6d34b65d188b22fb1dae4454c70cac60cfa01f40333c43206f445"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_06/trial_003_success.mp4",
+      "video_bytes": 253444,
+      "video_sha256": "c89fe5a3e71431bfb5b38fb649598be286af33c41d7c04b33265036ee67c3a31",
+      "video_frames": 100,
+      "actions_shape": [
+        99,
+        7
+      ],
+      "actions_sha256": "6b2c81f6c05ce0cac0b6c483eec6ac1c1e0e71ebcf504b8320e2022eacf2fb09"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_06/trial_004_success.mp4",
+      "video_bytes": 230671,
+      "video_sha256": "aa1e2c4b168fee54b5efac0e8a0897e371103f0e62bdaa3c10781718f2dbccca",
+      "video_frames": 90,
+      "actions_shape": [
+        89,
+        7
+      ],
+      "actions_sha256": "098615064d1701eb8295e9a8154bd1295bd78e3d02c04e7791f21a2c246c9c60"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_07/trial_000_success.mp4",
+      "video_bytes": 236852,
+      "video_sha256": "4c410cb2db8ec4e0d6ed10ce5a23f14c41dd00642b6dbe702ccc1fa6243b3e6d",
+      "video_frames": 89,
+      "actions_shape": [
+        88,
+        7
+      ],
+      "actions_sha256": "f491a5f70e977de5e37cd963221c8db427b9b66bbb20dfd2f540ea0020227324"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_07/trial_001_success.mp4",
+      "video_bytes": 211443,
+      "video_sha256": "a1989692efb68d8e375352befdfdddc75cd43313f368a3ee05475b9d61d4076d",
+      "video_frames": 73,
+      "actions_shape": [
+        72,
+        7
+      ],
+      "actions_sha256": "cfe7c8b04260cc104949afde4edf4e890d0bbdede59cb2412f3ed172e7cd1163"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_07/trial_002_success.mp4",
+      "video_bytes": 207710,
+      "video_sha256": "1ba344a8d027a6c6c97b49efa6fb025e936d67f3c121111cb27d83d01c2d2c9e",
+      "video_frames": 77,
+      "actions_shape": [
+        76,
+        7
+      ],
+      "actions_sha256": "daee985acd3be79b7cc77cc90d3a48d19b7b84ac4a34487e3b2f2f8efbd3a490"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_07/trial_003_success.mp4",
+      "video_bytes": 199215,
+      "video_sha256": "49f6278ac6ba4eccf1e0b29ba3031e31260701edfbc855be704dcd3121495c43",
+      "video_frames": 76,
+      "actions_shape": [
+        75,
+        7
+      ],
+      "actions_sha256": "fa47c275381f941721e048a087d98c1dc5d588118937030d958b33107247594f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_07/trial_004_success.mp4",
+      "video_bytes": 207397,
+      "video_sha256": "f7867fea6cb4f974b0b26fcc19785938a437982e0f8d6e557a42f4664bf2dc6f",
+      "video_frames": 79,
+      "actions_shape": [
+        78,
+        7
+      ],
+      "actions_sha256": "bb8f77c01ee33ac7df5462ed774ade707418b9090d153b12f915140bb9c0015b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_08/trial_000_success.mp4",
+      "video_bytes": 285930,
+      "video_sha256": "b377ecae3b4ce2c61fec3bceaf313678f6ffe19be1b7aa73882a9bb1ed1c08a9",
+      "video_frames": 85,
+      "actions_shape": [
+        84,
+        7
+      ],
+      "actions_sha256": "08dd9c4f938f0d848822b5aa6cadb4125920981889080ef998981ab189e5664b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_08/trial_001_success.mp4",
+      "video_bytes": 269776,
+      "video_sha256": "ea58b938ec215c986f43f3f1f1c29ca29aaa427f2147c6fcae04d829becc226a",
+      "video_frames": 77,
+      "actions_shape": [
+        76,
+        7
+      ],
+      "actions_sha256": "688423db1f584014b53bbb99d3faf6a4e33c264b9e5cdbfc466fc3da0c5b1a30"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_08/trial_002_success.mp4",
+      "video_bytes": 283804,
+      "video_sha256": "bcaf76c6f5363059e0393129e21034b8a4d78ed2b9213acc615d44d40547dee8",
+      "video_frames": 81,
+      "actions_shape": [
+        80,
+        7
+      ],
+      "actions_sha256": "f9c659ca7348d1c5d21e3af403e10bb08f0608a083d68016413b8d2366a766fc"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_08/trial_003_success.mp4",
+      "video_bytes": 237758,
+      "video_sha256": "fb15b0b8ad7b41e4eb2ba039519c4408dea4190b213a3fb77f116ee0e3101edc",
+      "video_frames": 68,
+      "actions_shape": [
+        67,
+        7
+      ],
+      "actions_sha256": "74230f88792e08e31b58c0b0615dd6b9942029c5e699e1a05d7a9aa510d14868"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_08/trial_004_success.mp4",
+      "video_bytes": 272518,
+      "video_sha256": "ccc689f2c1734036428025ecb9a5d7da8c2afc4a453712a9bf7e9804cb099c7c",
+      "video_frames": 78,
+      "actions_shape": [
+        77,
+        7
+      ],
+      "actions_sha256": "ed44fac855f82e955c6dc77eed274d59b37600cd192572392346e6334c2237a9"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_goal/task_09/trial_000_success.mp4",
+      "video_bytes": 395836,
+      "video_sha256": "3af41fbfbd3ef573b6338dc211d280f01c6ac850942950a79121cce0639f5f09",
+      "video_frames": 131,
+      "actions_shape": [
+        130,
+        7
+      ],
+      "actions_sha256": "6bf86e781fcc3d88f9efde7a2094e1e57e3d52bf14e57b7f3d2a29e9a615f1f9"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_goal/task_09/trial_001_success.mp4",
+      "video_bytes": 408819,
+      "video_sha256": "5bbc0697a4c586698dee7906f938dd208b0f2898b0806e5a7331979dbdab9a11",
+      "video_frames": 141,
+      "actions_shape": [
+        140,
+        7
+      ],
+      "actions_sha256": "312cf6b8e8ebcce4af01eeb7f98ae3d77814f5d813b9a7921b213d1b7915eae5"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_goal/task_09/trial_002_success.mp4",
+      "video_bytes": 351012,
+      "video_sha256": "5af2f919131140453b69ad530e2cdc93440249c54960fa8ad0cb19cd9cc64da3",
+      "video_frames": 120,
+      "actions_shape": [
+        119,
+        7
+      ],
+      "actions_sha256": "864428ed38b885516c7de987a592cdf01fec8258c0fd470eca753c4205caeba6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_goal/task_09/trial_003_success.mp4",
+      "video_bytes": 424215,
+      "video_sha256": "cfa2ffb3944d9095503cadc5d801b632f1b45af757fe78a757a84d6b9588cd5b",
+      "video_frames": 149,
+      "actions_shape": [
+        148,
+        7
+      ],
+      "actions_sha256": "1125c9fddcdac6ec1db15a13941b398a0da18eac5dcae86f13635380a37998b2"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_goal",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_goal/task_09/trial_004_failure.mp4",
+      "video_bytes": 742399,
+      "video_sha256": "28d9f0201ff03ccfe1db24479fa1312dba69f34c2fdee4fe3ed02192e296f24d",
+      "video_frames": 301,
+      "actions_shape": [
+        300,
+        7
+      ],
+      "actions_sha256": "0bcf72e1934cb6f18e2bccc625718e30acd4b346afe65160c6cb47ebe870af91"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_00/trial_000_success.mp4",
+      "video_bytes": 814821,
+      "video_sha256": "468197cad65d2bd81036407e3bc0771677ce87379b3e3e68fc4b6f4ad720d555",
+      "video_frames": 303,
+      "actions_shape": [
+        302,
+        7
+      ],
+      "actions_sha256": "be60b9b16498115e449143875f01ab9d4496021fdf0c8abba5739ae50efc672f"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_00/trial_001_success.mp4",
+      "video_bytes": 805609,
+      "video_sha256": "4662b7be499d3a9b4c5ce96f87a33fbb9a96afeb47e9934c034266caa2b9fe37",
+      "video_frames": 285,
+      "actions_shape": [
+        284,
+        7
+      ],
+      "actions_sha256": "dc9b17da790c76514fb7b3a482fed92134c9e736c756870bfa6c71ffd7fd69ed"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_00/trial_002_success.mp4",
+      "video_bytes": 1488212,
+      "video_sha256": "27bd2b442d98715874fdcbf3be6e99f23a18e78ac2804293abb91a88bb7e4a34",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "bc2e6c00c8cd9c629df4523b6507fc92e7f743011458cbf47ea7708895a47719"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_00/trial_003_success.mp4",
+      "video_bytes": 747957,
+      "video_sha256": "1f04f3678e878dbecdba7993722c4c7bbf6b20b71a89b134ed8e6d82f40d0dc6",
+      "video_frames": 275,
+      "actions_shape": [
+        274,
+        7
+      ],
+      "actions_sha256": "9b7724a6e15f3fe55027df482046e9d212dde3852e325b236d2e70bafbe1685d"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 0,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_00/trial_004_success.mp4",
+      "video_bytes": 819301,
+      "video_sha256": "9d2c7dfb0fb4392f5181fd6fbcec43c94b811ae5b338feee5d75c49db4488c9f",
+      "video_frames": 301,
+      "actions_shape": [
+        300,
+        7
+      ],
+      "actions_sha256": "de64dfedb69947abcaf57d40c7439322d11fc9240f29b3bdeffe09b14bbea243"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_01/trial_000_success.mp4",
+      "video_bytes": 735560,
+      "video_sha256": "21b39806dc40c96036ef7230a73a99037c0fbceba02c3ed6273cf610f7012c79",
+      "video_frames": 250,
+      "actions_shape": [
+        249,
+        7
+      ],
+      "actions_sha256": "1a6e4a7fef8cfb1be041dfc590e830b6f612640f00a558847706e68d19f9079a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_01/trial_001_success.mp4",
+      "video_bytes": 732975,
+      "video_sha256": "465fae1ecaff1f0505309ff9c854f18c0b8568b62c6c576d06f4b694ca744d84",
+      "video_frames": 251,
+      "actions_shape": [
+        250,
+        7
+      ],
+      "actions_sha256": "3cadf64997ce9c309e29f3e99541bbf4a1219f3ef2e04b2ea69690cb6d5f010c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_01/trial_002_success.mp4",
+      "video_bytes": 757517,
+      "video_sha256": "2c38ace9423401d10b6033ecbd859de6b33988e5872367f88a8caab4a3a25164",
+      "video_frames": 271,
+      "actions_shape": [
+        270,
+        7
+      ],
+      "actions_sha256": "a1ef3da9553e6b056be9019202bbbfbcdf0654f090b177a55246064edc3495b2"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_01/trial_003_success.mp4",
+      "video_bytes": 687288,
+      "video_sha256": "92fc63c786aff5c5a46d74142b2cd12dbe33f407c68c782c35c3fa88e815e345",
+      "video_frames": 248,
+      "actions_shape": [
+        247,
+        7
+      ],
+      "actions_sha256": "6ab57935f3072f3077a4c4d15bde290326f11982df0eba4ae684a537af907db0"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 1,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_01/trial_004_success.mp4",
+      "video_bytes": 776243,
+      "video_sha256": "1e89c4887b538dfe3ddca299b6e5db1de2beb579aa6ebc482c27f4b55451b6fe",
+      "video_frames": 267,
+      "actions_shape": [
+        266,
+        7
+      ],
+      "actions_sha256": "c5df647defd21acdee0ece2fc36800a07bddaa1292ac79170cc472b83bf5292b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_02/trial_000_success.mp4",
+      "video_bytes": 600468,
+      "video_sha256": "7ac3b316029394c5e47840b7fc495c0842cf21df0da7d822f6ea1341dc4e7deb",
+      "video_frames": 206,
+      "actions_shape": [
+        205,
+        7
+      ],
+      "actions_sha256": "ee7adb04df61b428d10eb8527396be187ac5ff40ad1d26a7179b815992bf7d5e"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_02/trial_001_success.mp4",
+      "video_bytes": 804185,
+      "video_sha256": "70da6b7b7891b5ae69fcc743d8df004c564fb688cc6bf059aa0b3f139a5ab8d3",
+      "video_frames": 275,
+      "actions_shape": [
+        274,
+        7
+      ],
+      "actions_sha256": "38ce66bb8c45e398eeded004a2beffaef9b5115b9a3156f4cb2045361b67c532"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_02/trial_002_success.mp4",
+      "video_bytes": 676299,
+      "video_sha256": "0638400162ee06688c295a2b17acdab7259bfb6a11d525034bf1fb5d88afaeba",
+      "video_frames": 236,
+      "actions_shape": [
+        235,
+        7
+      ],
+      "actions_sha256": "bcaf3108d9a4548796e9d520911fcb96d9d40ac1b6438add383d605a26e77360"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_02/trial_003_success.mp4",
+      "video_bytes": 769164,
+      "video_sha256": "0395725427c8cda1040251a155f9d6ca9c8ff2638bb007df47ab84f603d5df69",
+      "video_frames": 285,
+      "actions_shape": [
+        284,
+        7
+      ],
+      "actions_sha256": "7af9577131844bf3be370c6043a5daee20df9c9350e85492f1291ef1f1f606cd"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 2,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_02/trial_004_success.mp4",
+      "video_bytes": 697095,
+      "video_sha256": "ce0311be328d6e56ffbc7f501d2fb21bd37e4367ea5602e40eabde64162e329d",
+      "video_frames": 226,
+      "actions_shape": [
+        225,
+        7
+      ],
+      "actions_sha256": "c62108d6b8cd03abc9f29c6dd6ae5ae64ac0cf323a757018dda088519ddc87eb"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_03/trial_000_success.mp4",
+      "video_bytes": 665847,
+      "video_sha256": "1eabe8fa3d65b84b422fafc1c6b770259ca0b182a409192d5e943d0b5405505a",
+      "video_frames": 240,
+      "actions_shape": [
+        239,
+        7
+      ],
+      "actions_sha256": "5e1bbe329855b111b389efd9ac15211bba61179c2fe44e58c4abcc7ab436d8af"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_03/trial_001_success.mp4",
+      "video_bytes": 661590,
+      "video_sha256": "3412a31ad04a03b1f4a69a3e66a4dae472755e9cd81f95a07839fe7a09a648a9",
+      "video_frames": 231,
+      "actions_shape": [
+        230,
+        7
+      ],
+      "actions_sha256": "59fd3c161338d4af6a6c7425a276a811ef82962cd79925ca53b9d31a8a64c349"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_03/trial_002_success.mp4",
+      "video_bytes": 708221,
+      "video_sha256": "9e6d73578e9c77ff3ec68cdd88f0eed4976dbf744cb10af2e17a228027013305",
+      "video_frames": 240,
+      "actions_shape": [
+        239,
+        7
+      ],
+      "actions_sha256": "2b7a9d74dc0cfa803cc2b95be8843b1c79b334c5a9a510ec727a6c2f4493270a"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_03/trial_003_success.mp4",
+      "video_bytes": 643968,
+      "video_sha256": "50eaa7ae2edcc7b47985a8b9cb00c476d7fc77d011aaf2620105f165036ee882",
+      "video_frames": 222,
+      "actions_shape": [
+        221,
+        7
+      ],
+      "actions_sha256": "3b94b4d76bdad7da203572acf1cfcb0514e4d1c45d0a9064d8288462d7342552"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 3,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_03/trial_004_success.mp4",
+      "video_bytes": 669487,
+      "video_sha256": "2042152ba64c18c40431cfe9d923c8971495fd75c6f97f58643913817c977aac",
+      "video_frames": 230,
+      "actions_shape": [
+        229,
+        7
+      ],
+      "actions_sha256": "12f86c8f967f68787f3caebc23ce3ff0cc559fb9c2380c17609dc6fe0d903342"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_04/trial_000_success.mp4",
+      "video_bytes": 518310,
+      "video_sha256": "76c19278c83fa5475cd771d25538879fbf2deacc9d2725aacbe440f9a359210f",
+      "video_frames": 231,
+      "actions_shape": [
+        230,
+        7
+      ],
+      "actions_sha256": "2091cb6a9c5dd6a8ea5013218cab81756ba9fd924c4aabb0857624735d67c6c6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_04/trial_001_success.mp4",
+      "video_bytes": 526247,
+      "video_sha256": "d06cf0d1c836725268d7bd1d289d7528d072485ca119e146954cdee697e252de",
+      "video_frames": 222,
+      "actions_shape": [
+        221,
+        7
+      ],
+      "actions_sha256": "aac386567e8e68a90c647b32b8c71197598805adcea9c4da132aaee3ec4ead24"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_04/trial_002_success.mp4",
+      "video_bytes": 549872,
+      "video_sha256": "830ab94e7c56b39154d2c7eb68ee8c5085c2c743bc35f7246703369df8aa2a07",
+      "video_frames": 247,
+      "actions_shape": [
+        246,
+        7
+      ],
+      "actions_sha256": "ede59314372cb8b4353de8d780482a7304dea39c9e89a9c603bc31ca9b0916d4"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_04/trial_003_success.mp4",
+      "video_bytes": 478307,
+      "video_sha256": "604f49009f1dece60764a7a8f00ee102ac98449a059d6f7ce4225d942cd26db0",
+      "video_frames": 214,
+      "actions_shape": [
+        213,
+        7
+      ],
+      "actions_sha256": "4601142d415dd66d463e0b426e62b2155d8096ab4b687270a74a4f76c210f43c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 4,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_04/trial_004_success.mp4",
+      "video_bytes": 515115,
+      "video_sha256": "63dd074b1a4423b05eb5b189dfd77dd2c9f9967abc7d91bebd5502a753eaeaee",
+      "video_frames": 231,
+      "actions_shape": [
+        230,
+        7
+      ],
+      "actions_sha256": "91b6c7214e4915293fa5384357dc4cbfec46368c3a9496d624916646e8b9b5e3"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_05/trial_000_success.mp4",
+      "video_bytes": 356825,
+      "video_sha256": "23a496e3709c5df33379477e43d2984257a2f3021ef787c7c27db7f6603b74a8",
+      "video_frames": 177,
+      "actions_shape": [
+        176,
+        7
+      ],
+      "actions_sha256": "0403e4433aafeb731162f4ad6d6a85c6efd4bdc159d09dd3cab4f082ea44c00c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_05/trial_001_success.mp4",
+      "video_bytes": 726579,
+      "video_sha256": "87bb9d0ed203b24431e8274ec7e5cad5cce72433846f99e211c83cf91431ea49",
+      "video_frames": 453,
+      "actions_shape": [
+        452,
+        7
+      ],
+      "actions_sha256": "17f150cf13cb79c16579c4afd9576a3ec050f8ffa42e24257114bcb37b92a087"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_05/trial_002_success.mp4",
+      "video_bytes": 329939,
+      "video_sha256": "247105dc8689a5e2e06d6a94b3c73315e3f00ccddd58addea6239f16147eb729",
+      "video_frames": 152,
+      "actions_shape": [
+        151,
+        7
+      ],
+      "actions_sha256": "d9233b5be244f7a51c0856ef4a3eed989b04c73bd4084fd1d33ccf16f0a59c99"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_05/trial_003_success.mp4",
+      "video_bytes": 329293,
+      "video_sha256": "195a4092cd634972ed602fbf35a8b4b05f6c454d02eec26db5d6956f57021ad3",
+      "video_frames": 171,
+      "actions_shape": [
+        170,
+        7
+      ],
+      "actions_sha256": "8d6b5a0a848efe7cec4edc4761f51fbd3f067b0adadf0589eda3d5f1b79c4f51"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 5,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_05/trial_004_success.mp4",
+      "video_bytes": 340917,
+      "video_sha256": "99eb0c998436b1caf476e9dc8c759da2383ac3f3fed1ec45c0740d77a6bb1ce4",
+      "video_frames": 163,
+      "actions_shape": [
+        162,
+        7
+      ],
+      "actions_sha256": "30457c2f07ae5b2bae6da834331c7bd3324448cb3d74c9c5c34f486e0d1003cb"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_06/trial_000_success.mp4",
+      "video_bytes": 551754,
+      "video_sha256": "b0d6052c7dffaee1b06701087545b80d6774fa5d2b54d54e21bb8303cea5d85a",
+      "video_frames": 210,
+      "actions_shape": [
+        209,
+        7
+      ],
+      "actions_sha256": "6bf93655911c62f6e19bf465883f5cd74ecefb314a9ec565e94728c06bec9928"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_06/trial_001_success.mp4",
+      "video_bytes": 571891,
+      "video_sha256": "10747bbd7c00c9c36c30469e2caf2b8c4f547360034b0362ca200ac7b1198edc",
+      "video_frames": 214,
+      "actions_shape": [
+        213,
+        7
+      ],
+      "actions_sha256": "feff37b82571d270773606dbb0265030a22ea573ae2a3a8fd64f6ffc1dc94f92"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_06/trial_002_success.mp4",
+      "video_bytes": 545468,
+      "video_sha256": "5eea652f58b79db215621899f73357b252b195ad5a06bcc5bb02fd281e569914",
+      "video_frames": 204,
+      "actions_shape": [
+        203,
+        7
+      ],
+      "actions_sha256": "7c16b6b3b67e71c7e6b4e74a2f7b57e30377ab05ef86e3880d23f09fd34feee6"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_06/trial_003_success.mp4",
+      "video_bytes": 793597,
+      "video_sha256": "416324e856a9e15a639a6078173ad98d69ad3fae1e2ccd6d6a4de23bd75b114e",
+      "video_frames": 326,
+      "actions_shape": [
+        325,
+        7
+      ],
+      "actions_sha256": "a3fa7a461ddb43b3f05cbc4f3e0def9e4d8ff89c919f11988b74436e2c63ca30"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 6,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_06/trial_004_success.mp4",
+      "video_bytes": 584001,
+      "video_sha256": "1dca86487111a83d4aa1b0733b5d66fdbcdcc055f0933e01cb5336b9e9284ff7",
+      "video_frames": 233,
+      "actions_shape": [
+        232,
+        7
+      ],
+      "actions_sha256": "38125d404f928d5072f5aa24ce18c9eb95cd8dbb79f43d01ad9019fd869d5c5b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_07/trial_000_success.mp4",
+      "video_bytes": 669442,
+      "video_sha256": "d8afd57319f10acae872b99ca61311cabc1764d8bad872d9685afbd92681115e",
+      "video_frames": 256,
+      "actions_shape": [
+        255,
+        7
+      ],
+      "actions_sha256": "6b680e4803b3111c841813ad1aacd4396fbf9f0ab9f236b4378c59e626361f23"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_07/trial_001_success.mp4",
+      "video_bytes": 691789,
+      "video_sha256": "372b388ee4a8d781a8ac6468ce28c260b7cc8ad905d0c984f738c1338d410f94",
+      "video_frames": 260,
+      "actions_shape": [
+        259,
+        7
+      ],
+      "actions_sha256": "37dee5a2704fb6c11e232cab4c18981377d64d7ffb9b6e97fa867c287aca42da"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_07/trial_002_success.mp4",
+      "video_bytes": 635644,
+      "video_sha256": "4dcacc7d82eed88d56955654de285e5ea5f42182d7c9592d3ff3452a23af8e95",
+      "video_frames": 240,
+      "actions_shape": [
+        239,
+        7
+      ],
+      "actions_sha256": "0cb99a87da1ae1cd7d74a6d2eaa55a54ddc08415468570c724b4046a6e39ced3"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_07/trial_003_success.mp4",
+      "video_bytes": 685541,
+      "video_sha256": "e68424a1ba19e1a83cfcf5bced1265281806ccc7b31fc6cef97027730e780670",
+      "video_frames": 253,
+      "actions_shape": [
+        252,
+        7
+      ],
+      "actions_sha256": "31942a3abf1edfe676c8c38aad742e5257a9e3195c5cb715e9b762f93b4a94d1"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 7,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_07/trial_004_success.mp4",
+      "video_bytes": 820742,
+      "video_sha256": "825039befba3ec3361ff904db30d9cc39f42be356530c659a44df80d17ad2933",
+      "video_frames": 314,
+      "actions_shape": [
+        313,
+        7
+      ],
+      "actions_sha256": "ee46e00294fa0a459f4a1bc5590fd2dbc75951971d2717ae6b0df3e59ea83beb"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_08/trial_000_success.mp4",
+      "video_bytes": 1006242,
+      "video_sha256": "366a5417fea27a41f851e029226a18657f65ac163ad3f18119f1c4c6afa005c4",
+      "video_frames": 466,
+      "actions_shape": [
+        465,
+        7
+      ],
+      "actions_sha256": "232dd8e618e4912b4634d846fa7a2106e823fceca7718795b08c3fcd1fc570f5"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_08/trial_001_success.mp4",
+      "video_bytes": 921619,
+      "video_sha256": "2de5360e9ba41b87fcc663103800545225cde2796d6dbefed66f75c73357b8c1",
+      "video_frames": 407,
+      "actions_shape": [
+        406,
+        7
+      ],
+      "actions_sha256": "c751b5f3a8c84de75de6cef27ad0d484cdafdac30fc25a007407014fe2db8cea"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_08/trial_002_success.mp4",
+      "video_bytes": 1090280,
+      "video_sha256": "dbc57d05155f473859b5c1a89425e42dac3b4547b84053d5c6e4f6b0d724caa5",
+      "video_frames": 481,
+      "actions_shape": [
+        480,
+        7
+      ],
+      "actions_sha256": "7230b2852d8c31d044348f59b3e34236480322175f95225069928da8acc77fcd"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_08/trial_003_success.mp4",
+      "video_bytes": 979750,
+      "video_sha256": "370cb34624a12afa7e77816280eb0d53e2da86f0808d2a10ac00dc31eb44675d",
+      "video_frames": 443,
+      "actions_shape": [
+        442,
+        7
+      ],
+      "actions_sha256": "8af3872de16982e3b4db572eb1b28613c699eddd5eac107e8a888c16c2799341"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 8,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_08/trial_004_failure.mp4",
+      "video_bytes": 1232999,
+      "video_sha256": "a0624139d5afe5f41f0a1d8d16b68aadffdfafe981f9f869160296b01309a32c",
+      "video_frames": 521,
+      "actions_shape": [
+        520,
+        7
+      ],
+      "actions_sha256": "aaf630745d12cf228ddd65ffaba0def3e6ad0df3e028d28a379480a940f53f33"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 0,
+      "video_path": "videos/pi05/libero_10/task_09/trial_000_success.mp4",
+      "video_bytes": 588728,
+      "video_sha256": "bd50910fc65a49d52e353c95be6968f3eb3286b6e44c5747653581fb283b91b1",
+      "video_frames": 251,
+      "actions_shape": [
+        250,
+        7
+      ],
+      "actions_sha256": "8d5a542015e8b89b47aa4a127714489c253b2bd828e19bbaaf40848fe68e2f49"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 1,
+      "video_path": "videos/pi05/libero_10/task_09/trial_001_success.mp4",
+      "video_bytes": 642846,
+      "video_sha256": "061f060a7f0bb859791235f00d598e58fa62af8250c47b23520f23062b8ed406",
+      "video_frames": 287,
+      "actions_shape": [
+        286,
+        7
+      ],
+      "actions_sha256": "e3541e33555fd50e9893ccd91954d828512680adf6d92964aaceb437b409ee72"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 2,
+      "video_path": "videos/pi05/libero_10/task_09/trial_002_success.mp4",
+      "video_bytes": 588471,
+      "video_sha256": "e432faa04bb976916b5924c84d87d9a22f1916a002c8ec84711289d2a5d7e003",
+      "video_frames": 258,
+      "actions_shape": [
+        257,
+        7
+      ],
+      "actions_sha256": "8f4852c7ec3ab0cfacfd3c7f6385e76e7fff99a9665ef3b3eaab664eee685b7c"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 3,
+      "video_path": "videos/pi05/libero_10/task_09/trial_003_success.mp4",
+      "video_bytes": 713584,
+      "video_sha256": "276e85fa3431e3c63b1cb51e9db4b5c73dafafd714f2e15bb3d5d790d74d7426",
+      "video_frames": 289,
+      "actions_shape": [
+        288,
+        7
+      ],
+      "actions_sha256": "11ebe95f12f76d9aff2bbc1ea19ba7440aa1bbcb1bdbee05208738692bef299b"
+    },
+    {
+      "model": "pi05",
+      "suite": "libero_10",
+      "task_id": 9,
+      "trial_index": 4,
+      "video_path": "videos/pi05/libero_10/task_09/trial_004_success.mp4",
+      "video_bytes": 645351,
+      "video_sha256": "bf0e71946c87db06f33fe4f410e4d12d8d6fff7224e2643771c3120bd67b4464",
+      "video_frames": 280,
+      "actions_shape": [
+        279,
+        7
+      ],
+      "actions_sha256": "e4eca7ade054b80241045ed46ac69fc78e76ce9c38f42a3e1913cce59eb4986f"
+    }
+  ]
+}

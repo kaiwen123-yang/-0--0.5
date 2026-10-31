@@ -1,0 +1,802 @@
+[
+  {
+    "model": "pi05",
+    "task_id": 0,
+    "trial_index": 0,
+    "task_name": "pick up the alphabet soup and place it in the basket",
+    "policy_success": true,
+    "target": "alphabet_soup_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 92,
+    "target_max_rise_m": 0.22711196296280828,
+    "target_initial_xyz": [
+      -0.1190942557447094,
+      -0.2397812173509954,
+      0.03839291037026633
+    ],
+    "target_final_xyz": [
+      -0.0073010093062929856,
+      0.2530589640397021,
+      0.10633591071458211
+    ],
+    "target_destination_final_xy_m": 0.022154654884402252,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      13,
+      0
+    ],
+    "goal_bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e"
+  },
+  {
+    "model": "pi05",
+    "task_id": 0,
+    "trial_index": 1,
+    "task_name": "pick up the alphabet soup and place it in the basket",
+    "policy_success": true,
+    "target": "alphabet_soup_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 91,
+    "target_max_rise_m": 0.2265729690749867,
+    "target_initial_xyz": [
+      -0.11909425574470939,
+      -0.2397812173509954,
+      0.03839291037026633
+    ],
+    "target_final_xyz": [
+      -0.010641658283340807,
+      0.25393682687708424,
+      0.10900826614763344
+    ],
+    "target_destination_final_xy_m": 0.025332900824596345,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      13,
+      0
+    ],
+    "goal_bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e"
+  },
+  {
+    "model": "pi05",
+    "task_id": 0,
+    "trial_index": 2,
+    "task_name": "pick up the alphabet soup and place it in the basket",
+    "policy_success": true,
+    "target": "alphabet_soup_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 82,
+    "target_max_rise_m": 0.23636493526674457,
+    "target_initial_xyz": [
+      -0.11909425574470939,
+      -0.23978121735099536,
+      0.03839291037026633
+    ],
+    "target_final_xyz": [
+      -0.015924832266832185,
+      0.25035006563982787,
+      0.12309471860897257
+    ],
+    "target_destination_final_xy_m": 0.02490268066398414,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      15,
+      0
+    ],
+    "goal_bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e"
+  },
+  {
+    "model": "pi05",
+    "task_id": 0,
+    "trial_index": 3,
+    "task_name": "pick up the alphabet soup and place it in the basket",
+    "policy_success": true,
+    "target": "alphabet_soup_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 95,
+    "target_max_rise_m": 0.24084193804598264,
+    "target_initial_xyz": [
+      -0.11909425574470939,
+      -0.23978121735099536,
+      0.03839291037026633
+    ],
+    "target_final_xyz": [
+      -0.008428982237205613,
+      0.24568617967895748,
+      0.10918466512594456
+    ],
+    "target_destination_final_xy_m": 0.02130479364653553,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      16,
+      0
+    ],
+    "goal_bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e"
+  },
+  {
+    "model": "pi05",
+    "task_id": 0,
+    "trial_index": 4,
+    "task_name": "pick up the alphabet soup and place it in the basket",
+    "policy_success": true,
+    "target": "alphabet_soup_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 91,
+    "target_max_rise_m": 0.2112137298910921,
+    "target_initial_xyz": [
+      -0.1190942557447094,
+      -0.2397812173509954,
+      0.03839291037026633
+    ],
+    "target_final_xyz": [
+      -0.03011342539698508,
+      0.2409554169480061,
+      0.12445527258065546
+    ],
+    "target_destination_final_xy_m": 0.023565121675866024,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      14,
+      0
+    ],
+    "goal_bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e"
+  },
+  {
+    "model": "pi05",
+    "task_id": 1,
+    "trial_index": 0,
+    "task_name": "pick up the cream cheese and place it in the basket",
+    "policy_success": false,
+    "target": "cream_cheese_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 38,
+    "target_max_rise_m": 0.1861920734838048,
+    "target_initial_xyz": [
+      0.04607199348123641,
+      -0.10264932772423524,
+      0.008921477418607906
+    ],
+    "target_final_xyz": [
+      -0.03081054689928346,
+      0.13027526125692046,
+      0.021321477418608122
+    ],
+    "target_destination_final_xy_m": 0.13873946782459318,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      66,
+      0
+    ],
+    "goal_bddl_sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 1,
+    "trial_index": 1,
+    "task_name": "pick up the cream cheese and place it in the basket",
+    "policy_success": false,
+    "target": "cream_cheese_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 29,
+    "target_max_rise_m": 0.17975848997869268,
+    "target_initial_xyz": [
+      0.054519157697060415,
+      -0.10286021768051089,
+      0.008921477418607906
+    ],
+    "target_final_xyz": [
+      -0.0598261790398889,
+      0.11835104848295712,
+      0.021321477418608115
+    ],
+    "target_destination_final_xy_m": 0.15810750677066465,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      141,
+      0
+    ],
+    "goal_bddl_sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 1,
+    "trial_index": 2,
+    "task_name": "pick up the cream cheese and place it in the basket",
+    "policy_success": true,
+    "target": "cream_cheese_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 59,
+    "target_max_rise_m": 0.20293182300254575,
+    "target_initial_xyz": [
+      0.05208605585281599,
+      -0.10132385159690716,
+      0.008921477418607906
+    ],
+    "target_final_xyz": [
+      -0.038598041991213965,
+      0.26687637492322824,
+      0.14509900747772544
+    ],
+    "target_destination_final_xy_m": 0.04626319024489892,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      19,
+      0
+    ],
+    "goal_bddl_sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 1,
+    "trial_index": 3,
+    "task_name": "pick up the cream cheese and place it in the basket",
+    "policy_success": true,
+    "target": "cream_cheese_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 70,
+    "target_max_rise_m": 0.19465954878291677,
+    "target_initial_xyz": [
+      0.053607840889344,
+      -0.10149700854647638,
+      0.008921477418607906
+    ],
+    "target_final_xyz": [
+      -0.0639858057563331,
+      0.2516962485785988,
+      0.15836079784878968
+    ],
+    "target_destination_final_xy_m": 0.05355971432685901,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "goal_bddl_sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 1,
+    "trial_index": 4,
+    "task_name": "pick up the cream cheese and place it in the basket",
+    "policy_success": true,
+    "target": "cream_cheese_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 84,
+    "target_max_rise_m": 0.21092262027806005,
+    "target_initial_xyz": [
+      0.04576834239050331,
+      -0.09630071904756879,
+      0.008921477418607906
+    ],
+    "target_final_xyz": [
+      -0.053777404591659146,
+      0.26462799185819885,
+      0.13213206419735085
+    ],
+    "target_destination_final_xy_m": 0.04897020786386243,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "goal_bddl_sha256": "7019f37ee158d67a21338a6df0c441dd8f84979b946b5e20bb49463ef0508ea2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 2,
+    "trial_index": 0,
+    "task_name": "pick up the salad dressing and place it in the basket",
+    "policy_success": false,
+    "target": "salad_dressing_1",
+    "diagnostic_category": "no_bilateral_target_contact",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 0,
+    "target_max_rise_m": 3.898115094602694e-09,
+    "target_initial_xyz": [
+      0.050000706165972096,
+      -0.09999129744190535,
+      0.07270544980088961
+    ],
+    "target_final_xyz": [
+      0.050002267344325654,
+      -0.09998864388746591,
+      0.07270545369900464
+    ],
+    "target_destination_final_xy_m": 0.37299980822741186,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      31,
+      0
+    ],
+    "goal_bddl_sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a"
+  },
+  {
+    "model": "pi05",
+    "task_id": 2,
+    "trial_index": 1,
+    "task_name": "pick up the salad dressing and place it in the basket",
+    "policy_success": false,
+    "target": "salad_dressing_1",
+    "diagnostic_category": "no_bilateral_target_contact",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 0,
+    "target_max_rise_m": 3.898115094602694e-09,
+    "target_initial_xyz": [
+      0.050000706165972096,
+      -0.09999129744190535,
+      0.07270544980088961
+    ],
+    "target_final_xyz": [
+      0.05000070616496107,
+      -0.09999129741353828,
+      0.0727054536990047
+    ],
+    "target_destination_final_xy_m": 0.3536956994902821,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      37,
+      0
+    ],
+    "goal_bddl_sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a"
+  },
+  {
+    "model": "pi05",
+    "task_id": 2,
+    "trial_index": 2,
+    "task_name": "pick up the salad dressing and place it in the basket",
+    "policy_success": false,
+    "target": "salad_dressing_1",
+    "diagnostic_category": "no_bilateral_target_contact",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 0,
+    "target_max_rise_m": 3.898115094602694e-09,
+    "target_initial_xyz": [
+      0.0500007061659721,
+      -0.09999129744190535,
+      0.07270544980088961
+    ],
+    "target_final_xyz": [
+      0.05000070616496108,
+      -0.09999129741353828,
+      0.0727054536990047
+    ],
+    "target_destination_final_xy_m": 0.3662584279220601,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "goal_bddl_sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a"
+  },
+  {
+    "model": "pi05",
+    "task_id": 2,
+    "trial_index": 3,
+    "task_name": "pick up the salad dressing and place it in the basket",
+    "policy_success": false,
+    "target": "salad_dressing_1",
+    "diagnostic_category": "no_bilateral_target_contact",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 0,
+    "target_max_rise_m": 3.898115094602694e-09,
+    "target_initial_xyz": [
+      0.05000070616597212,
+      -0.09999129744190535,
+      0.07270544980088961
+    ],
+    "target_final_xyz": [
+      0.050000706164961085,
+      -0.09999129741353827,
+      0.0727054536990047
+    ],
+    "target_destination_final_xy_m": 0.3617850534895939,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "goal_bddl_sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a"
+  },
+  {
+    "model": "pi05",
+    "task_id": 2,
+    "trial_index": 4,
+    "task_name": "pick up the salad dressing and place it in the basket",
+    "policy_success": false,
+    "target": "salad_dressing_1",
+    "diagnostic_category": "no_bilateral_target_contact",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 0,
+    "target_max_rise_m": 3.898115094602694e-09,
+    "target_initial_xyz": [
+      0.05000070616597212,
+      -0.09999129744190535,
+      0.07270544980088961
+    ],
+    "target_final_xyz": [
+      0.050000706164961085,
+      -0.09999129741353827,
+      0.0727054536990047
+    ],
+    "target_destination_final_xy_m": 0.36540346914418925,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      108,
+      0
+    ],
+    "goal_bddl_sha256": "024978e9e8f43a49b49d0965f4f426d364ce056307f0fcf5733dc4682fac437a"
+  },
+  {
+    "model": "pi05",
+    "task_id": 3,
+    "trial_index": 0,
+    "task_name": "pick up the bbq sauce and place it in the basket",
+    "policy_success": false,
+    "target": "bbq_sauce_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 24,
+    "target_max_rise_m": 0.09637424541793292,
+    "target_initial_xyz": [
+      0.04312957258175951,
+      -0.09009850396987874,
+      0.054625477418273796
+    ],
+    "target_final_xyz": [
+      0.0759825396412786,
+      -0.04008477042728608,
+      0.01450227212816162
+    ],
+    "target_destination_final_xy_m": 0.3052445007775509,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      56,
+      0
+    ],
+    "goal_bddl_sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 3,
+    "trial_index": 1,
+    "task_name": "pick up the bbq sauce and place it in the basket",
+    "policy_success": false,
+    "target": "bbq_sauce_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 18,
+    "target_max_rise_m": 0.07734432224689729,
+    "target_initial_xyz": [
+      0.04822007607489789,
+      -0.10557652813166277,
+      0.054625477418273796
+    ],
+    "target_final_xyz": [
+      0.061165757756813925,
+      -0.06579428157753832,
+      0.014502272128161612
+    ],
+    "target_destination_final_xy_m": 0.31872419783356437,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      50,
+      0
+    ],
+    "goal_bddl_sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 3,
+    "trial_index": 2,
+    "task_name": "pick up the bbq sauce and place it in the basket",
+    "policy_success": false,
+    "target": "bbq_sauce_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 28,
+    "target_max_rise_m": 0.10241082029890071,
+    "target_initial_xyz": [
+      0.040842594576873295,
+      -0.09950128103786961,
+      0.054625477418273796
+    ],
+    "target_final_xyz": [
+      0.058450332250476904,
+      0.018524281444072782,
+      0.014502272128161619
+    ],
+    "target_destination_final_xy_m": 0.23791947489474524,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      83,
+      0
+    ],
+    "goal_bddl_sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 3,
+    "trial_index": 3,
+    "task_name": "pick up the bbq sauce and place it in the basket",
+    "policy_success": false,
+    "target": "bbq_sauce_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 15,
+    "target_max_rise_m": 0.035148801901366516,
+    "target_initial_xyz": [
+      0.05333998784791568,
+      -0.10204214938910428,
+      0.054625477418273796
+    ],
+    "target_final_xyz": [
+      0.08238352224714669,
+      -0.02191599433809134,
+      0.014502272128161634
+    ],
+    "target_destination_final_xy_m": 0.2807396654901801,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      70,
+      0
+    ],
+    "goal_bddl_sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 3,
+    "trial_index": 4,
+    "task_name": "pick up the bbq sauce and place it in the basket",
+    "policy_success": false,
+    "target": "bbq_sauce_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 17,
+    "target_max_rise_m": 0.06789520312117492,
+    "target_initial_xyz": [
+      0.05730991673635795,
+      -0.09373060559774292,
+      0.054625477418273796
+    ],
+    "target_final_xyz": [
+      0.06508472987085034,
+      -0.11161141748619431,
+      0.014502272128161627
+    ],
+    "target_destination_final_xy_m": 0.3612628580689183,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      68,
+      0
+    ],
+    "goal_bddl_sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2"
+  },
+  {
+    "model": "pi05",
+    "task_id": 4,
+    "trial_index": 0,
+    "task_name": "pick up the ketchup and place it in the basket",
+    "policy_success": true,
+    "target": "ketchup_1",
+    "diagnostic_category": "policy_success",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 89,
+    "target_max_rise_m": 0.19528024015248124,
+    "target_initial_xyz": [
+      -0.11999706998666344,
+      -0.23999758536033342,
+      0.07240547317984354
+    ],
+    "target_final_xyz": [
+      0.017765893728381988,
+      0.27118013263286694,
+      0.132623763558723
+    ],
+    "target_destination_final_xy_m": 0.017658585594413696,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      15,
+      0
+    ],
+    "goal_bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319"
+  },
+  {
+    "model": "pi05",
+    "task_id": 4,
+    "trial_index": 1,
+    "task_name": "pick up the ketchup and place it in the basket",
+    "policy_success": false,
+    "target": "ketchup_1",
+    "diagnostic_category": "bilateral_contact_without_3cm_rise",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 5,
+    "target_max_rise_m": 0.02582159894499861,
+    "target_initial_xyz": [
+      -0.11999706998666344,
+      -0.23999758536033342,
+      0.07240547317984355
+    ],
+    "target_final_xyz": [
+      -0.13123289722623607,
+      -0.20360355704642843,
+      0.01925657493770728
+    ],
+    "target_destination_final_xy_m": 0.482935125898646,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "goal_bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319"
+  },
+  {
+    "model": "pi05",
+    "task_id": 4,
+    "trial_index": 2,
+    "task_name": "pick up the ketchup and place it in the basket",
+    "policy_success": false,
+    "target": "ketchup_1",
+    "diagnostic_category": "bilateral_contact_without_3cm_rise",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 4,
+    "target_max_rise_m": 0.006946133621142742,
+    "target_initial_xyz": [
+      -0.11999706998666344,
+      -0.23999758536033347,
+      0.07240547317984368
+    ],
+    "target_final_xyz": [
+      -0.032722001230650645,
+      -0.20604719675147953,
+      0.019256574937707292
+    ],
+    "target_destination_final_xy_m": 0.4721336040366669,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      9,
+      0
+    ],
+    "goal_bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319"
+  },
+  {
+    "model": "pi05",
+    "task_id": 4,
+    "trial_index": 3,
+    "task_name": "pick up the ketchup and place it in the basket",
+    "policy_success": false,
+    "target": "ketchup_1",
+    "diagnostic_category": "bilateral_contact_without_3cm_rise",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 4,
+    "target_max_rise_m": 0.01579341646799344,
+    "target_initial_xyz": [
+      -0.11999706998666347,
+      -0.23999758536033342,
+      0.07240547317984365
+    ],
+    "target_final_xyz": [
+      -0.05925674671166205,
+      -0.15281643392108488,
+      0.028529618301894277
+    ],
+    "target_destination_final_xy_m": 0.41997583945278066,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      54,
+      0
+    ],
+    "goal_bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319"
+  },
+  {
+    "model": "pi05",
+    "task_id": 4,
+    "trial_index": 4,
+    "task_name": "pick up the ketchup and place it in the basket",
+    "policy_success": false,
+    "target": "ketchup_1",
+    "diagnostic_category": "target_rose_3cm_but_goal_not_reached",
+    "category_note": "Descriptive contact/height thresholds only; not proof of grasp quality or failure cause.",
+    "bilateral_target_contact_frames": 64,
+    "target_max_rise_m": 0.19970613893848788,
+    "target_initial_xyz": [
+      -0.11999706998666348,
+      -0.23999758536033344,
+      0.07240547317984365
+    ],
+    "target_final_xyz": [
+      0.036251487518302886,
+      0.1225447642308915,
+      0.01925657493770729
+    ],
+    "target_destination_final_xy_m": 0.13725667231555178,
+    "joint_limit_frames_within_1_degree": [
+      0,
+      0,
+      0,
+      0,
+      69,
+      0
+    ],
+    "goal_bddl_sha256": "4a4e545483a3fe30cf0ef3dc05bfe5e6ad5e37c94b4376dfa73fe1b60e75b319"
+  }
+]

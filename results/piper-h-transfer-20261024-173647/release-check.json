@@ -1,0 +1,26 @@
+[
+  {
+    "model": "pi0",
+    "task_id": 1,
+    "trial_index": 0,
+    "policy_success": true,
+    "release_check_passed": true,
+    "last_2s_success_frames": 40,
+    "total_check_steps": 100,
+    "final_gripper_width_m": 0.09999982023967541,
+    "method": "restore final qpos/qvel, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require success throughout final 2 seconds",
+    "source_trajectory": "videos/pi0/libero_spatial/task_01/trial_000/trajectory.npz"
+  },
+  {
+    "model": "pi0",
+    "task_id": 2,
+    "trial_index": 0,
+    "policy_success": true,
+    "release_check_passed": true,
+    "last_2s_success_frames": 40,
+    "total_check_steps": 100,
+    "final_gripper_width_m": 0.09999894996028484,
+    "method": "restore final qpos/qvel, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require success throughout final 2 seconds",
+    "source_trajectory": "videos/pi0/libero_spatial/task_02/trial_000/trajectory.npz"
+  }
+]

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="agx_gripper">
+  <compiler angle="radian" autolimits="true" />
+  <asset>
+    <mesh name="agx_gripper_gripper_base_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/agx_gripper/meshes/gripper_base.stl" scale="1 1 1" />
+    <mesh name="agx_gripper_gripper_link1_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/agx_gripper/meshes/gripper_link1.stl" scale="1 1 1" />
+    <mesh name="agx_gripper_gripper_link2_0" file="/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/agx_arm_urdf/agx_gripper/meshes/gripper_link2.stl" scale="1 1 1" />
+  </asset>
+  <worldbody>
+    <body name="gripper_base" pos="0 0 0" quat="1 0 0 0">
+      <inertial pos="-0.000183807162236 8.05033155578e-05 0.0321436689909" mass="0.45" fullinertia="0.000466573035886 0.000208671755285 0.000443517627645 0 0 0" />
+      <geom name="gripper_base_visual" type="mesh" mesh="agx_gripper_gripper_base_0" group="1" contype="0" conaffinity="0" rgba="0.08 0.1 0.13 1" pos="0 0 0" quat="1 0 0 0" />
+      <geom name="gripper_base_collision" type="mesh" mesh="agx_gripper_gripper_base_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+      <body name="gripper_link1" pos="0 0 0.138" quat="0.70710679066 0.707106771713 0 0">
+        <inertial pos="0.00065123185042 -0.0491929869132 0.00972258769184" mass="0.025" fullinertia="1.0831334372e-05 5.43941050918e-06 1.41828415054e-05 3.32108655243e-07 -5.17776964242e-08 1.75746071559e-06" />
+        <geom name="gripper_link1_visual" type="mesh" mesh="agx_gripper_gripper_link1_0" group="1" contype="0" conaffinity="0" rgba="0.7 0.73 0.77 1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="gripper_link1_collision" type="mesh" mesh="agx_gripper_gripper_link1_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+        <joint name="gripper_joint1" type="slide" axis="0 0 1" limited="true" range="0 0.05" damping="8" armature="0.01" frictionloss="0.01" />
+      </body>
+      <body name="gripper_link2" pos="0 0 0.138" quat="1.89468533303e-08 1.89468528226e-08 -0.707106771713 -0.70710679066">
+        <inertial pos="0.00065123185042 -0.0491929869132 0.00972258769184" mass="0.025" fullinertia="1.0831334372e-05 5.43941050918e-06 1.41828415054e-05 3.32108655243e-07 -5.17776964242e-08 1.75746071559e-06" />
+        <geom name="gripper_link2_visual" type="mesh" mesh="agx_gripper_gripper_link2_0" group="1" contype="0" conaffinity="0" rgba="0.7 0.73 0.77 1" pos="0 0 0" quat="1 0 0 0" />
+        <geom name="gripper_link2_collision" type="mesh" mesh="agx_gripper_gripper_link2_0" group="0" contype="1" conaffinity="1" friction="1 0.01 0.001" solref="0.01 1" pos="0 0 0" quat="1 0 0 0" />
+        <joint name="gripper_joint2" type="slide" axis="0 0 -1" limited="true" range="-0.05 0" damping="8" armature="0.01" frictionloss="0.01" />
+      </body>
+      <site name="ft_frame" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+      <body name="eef" pos="0 0 0.125" quat="1 0 0 0">
+        <site name="grip_site" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+        <site name="grip_site_cylinder" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+        <site name="ee" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+        <site name="ee_x" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+        <site name="ee_y" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+        <site name="ee_z" pos="0 0 0" size="0.002" rgba="0 0 0 0" group="1" />
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position name="position_gripper_joint1" joint="gripper_joint1" kp="1000" ctrllimited="true" ctrlrange="0 0.05" forcelimited="true" forcerange="-10 10" />
+    <position name="position_gripper_joint2" joint="gripper_joint2" kp="1000" ctrllimited="true" ctrlrange="-0.05 0" forcelimited="true" forcerange="-10 10" />
+  </actuator>
+  <contact>
+    <exclude body1="gripper_base" body2="gripper_link1" />
+    <exclude body1="gripper_base" body2="gripper_link2" />
+  </contact>
+  <sensor>
+    <force name="force_ee" site="ft_frame" />
+    <torque name="torque_ee" site="ft_frame" />
+  </sensor>
+  <equality>
+    <joint joint1="gripper_joint2" joint2="gripper_joint1" polycoef="0 -1 0 0 0" solref="0.005 1" />
+  </equality>
+</mujoco>

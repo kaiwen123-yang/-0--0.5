@@ -1,0 +1,368 @@
+{
+  "status": "passed",
+  "video_integrity_status": "passed",
+  "joint_limit_check": {
+    "status": "passed",
+    "threshold_rad": 0.01,
+    "violations": []
+  },
+  "checked_at": "2026-10-24T10:48:32.144940+00:00",
+  "episodes": 25,
+  "video_files": 50,
+  "matched_scene_pairs": 0,
+  "full_video_decode": true,
+  "panorama_contains_entire_robot_in_all_saved_frames": true,
+  "projection_method": "Conservative camera-space visual mesh bounding spheres; all projected extents below 1",
+  "artifacts": [
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_000/panorama.mp4",
+      "frames": 155,
+      "sha256": "e771d44e988a214d85aa4ba471ffeb9afcc40009f93ad111ceffb331926e5217",
+      "max_robot_projected_extent": 0.5669114636045092,
+      "joint_limit_violation_rad": 0.0004898648421043372
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_000/multiview.mp4",
+      "frames": 155,
+      "sha256": "c1b499b5d40372e49e2d99f2419b3d2e5d727c72c4a8c14a1257cf92abd6b733",
+      "max_robot_projected_extent": 0.5669114636045092,
+      "joint_limit_violation_rad": 0.0004898648421043372
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_001/panorama.mp4",
+      "frames": 152,
+      "sha256": "ca32975a968945493effb77cf83e3500304a0b06f4327e7be5ea086dcb65358a",
+      "max_robot_projected_extent": 0.5713676864687826,
+      "joint_limit_violation_rad": 0.0007274924072417921
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_001/multiview.mp4",
+      "frames": 152,
+      "sha256": "58b44c26b6790c62ddb0c68adfd015867d3e31f72d31cdefa010abbae634881b",
+      "max_robot_projected_extent": 0.5713676864687826,
+      "joint_limit_violation_rad": 0.0007274924072417921
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_002/panorama.mp4",
+      "frames": 146,
+      "sha256": "48e1cb9bf17a625d1872b43c2457770112e6d69e6d34dbbeaab87c10ec97be06",
+      "max_robot_projected_extent": 0.5657912860467229,
+      "joint_limit_violation_rad": 0.0008016574099214413
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_002/multiview.mp4",
+      "frames": 146,
+      "sha256": "a232e6e75b45744a8ea529d42c928e0eee9a15297310495ab8f6c595eb29197f",
+      "max_robot_projected_extent": 0.5657912860467229,
+      "joint_limit_violation_rad": 0.0008016574099214413
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_003/panorama.mp4",
+      "frames": 161,
+      "sha256": "6eb6fff270e695a685dbe0f452f1d2a1498c354e3e54b35f97ff99b5b4e33099",
+      "max_robot_projected_extent": 0.5689976927052104,
+      "joint_limit_violation_rad": 0.001429528352142162
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_003/multiview.mp4",
+      "frames": 161,
+      "sha256": "c4b5441af0e62a109a6a7d46ba01e9fba37fab6d05ad3f46941636c63176121e",
+      "max_robot_projected_extent": 0.5689976927052104,
+      "joint_limit_violation_rad": 0.001429528352142162
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_004/panorama.mp4",
+      "frames": 152,
+      "sha256": "f14eb3b947a1eb18b713cfc633064c7945623eef5c9c1105a1f72f90fca2bc50",
+      "max_robot_projected_extent": 0.5665898652011851,
+      "joint_limit_violation_rad": 0.0016715073411182058
+    },
+    {
+      "video": "videos/pi05/libero_object/task_00/trial_004/multiview.mp4",
+      "frames": 152,
+      "sha256": "fab9f68c9c8a4c38eca6a72b4a16182ff346040417df01413803e0243ffd2b9e",
+      "max_robot_projected_extent": 0.5665898652011851,
+      "joint_limit_violation_rad": 0.0016715073411182058
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_000/panorama.mp4",
+      "frames": 291,
+      "sha256": "3cd958391118f944069162f44b15aed0e0558497343eb44b1800abb280761d9f",
+      "max_robot_projected_extent": 0.5379493994825633,
+      "joint_limit_violation_rad": 0.0013806634154942543
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_000/multiview.mp4",
+      "frames": 291,
+      "sha256": "7a5e0caba94b1f9694845daa125d8accb708dc638a2dbc83dbdf369ffb473670",
+      "max_robot_projected_extent": 0.5379493994825633,
+      "joint_limit_violation_rad": 0.0013806634154942543
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_001/panorama.mp4",
+      "frames": 291,
+      "sha256": "6d441deb99f164144f8e97b7fc1d7e0e0a294cdff2428f1800b6a1c75b13cabc",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0015221022717080146
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_001/multiview.mp4",
+      "frames": 291,
+      "sha256": "d946e08ce8ce7a978b9a804c1dfa20a13ac34823f9d95a625707a96abf09a371",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0015221022717080146
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_002/panorama.mp4",
+      "frames": 134,
+      "sha256": "0252896e47da9cefdecef46b6df37d331cdcad24ccf6d25803e2fc1cb0ae7bcf",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0003304380313056132
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_002/multiview.mp4",
+      "frames": 134,
+      "sha256": "6e5f55368ffe20fd60848ef40febc524f01173224e8e74d69a5c8baf4ccec2b0",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0003304380313056132
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_003/panorama.mp4",
+      "frames": 209,
+      "sha256": "0130f9586fcae08c423fd24c317aa9ab0654e95aab5b9027484c46c2b4492b35",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_003/multiview.mp4",
+      "frames": 209,
+      "sha256": "8e81eda82ef12813ee938df36b7c9a18f0962bc7a0f3d155cba42bd93be1fe6c",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_004/panorama.mp4",
+      "frames": 155,
+      "sha256": "b899b42059b33c4169a6aac03b3dbb968c9dd2ac67547fd7e65ca22832ab95b2",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0022189349430052907
+    },
+    {
+      "video": "videos/pi05/libero_object/task_01/trial_004/multiview.mp4",
+      "frames": 155,
+      "sha256": "03a25228592468f1e5e501529b04bd29881e0b6699897a5dcec041de222d406f",
+      "max_robot_projected_extent": 0.5379493994825634,
+      "joint_limit_violation_rad": 0.0022189349430052907
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_000/panorama.mp4",
+      "frames": 291,
+      "sha256": "557a01a89b98589066837cc4da88b75cb087375693edeea909ac429b7c8fd82a",
+      "max_robot_projected_extent": 0.5499147819516049,
+      "joint_limit_violation_rad": 0.00031698797092194475
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_000/multiview.mp4",
+      "frames": 291,
+      "sha256": "1857230377cbb5bc09b07cf34a9b480f9424d5830f53e6cfcafef8b4f0b92492",
+      "max_robot_projected_extent": 0.5499147819516049,
+      "joint_limit_violation_rad": 0.00031698797092194475
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_001/panorama.mp4",
+      "frames": 291,
+      "sha256": "ee32a1a2c6ad411cc961f8066c5707761d698ec7c134fde0f66bdb2dcb6e53fb",
+      "max_robot_projected_extent": 0.5481585363513615,
+      "joint_limit_violation_rad": 0.00040453551590191594
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_001/multiview.mp4",
+      "frames": 291,
+      "sha256": "a3e1616bc4cd026a21f818b310f3cb4de8121524c8f2a2d32c5089446d477caa",
+      "max_robot_projected_extent": 0.5481585363513615,
+      "joint_limit_violation_rad": 0.00040453551590191594
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_002/panorama.mp4",
+      "frames": 291,
+      "sha256": "5022f4c4df8c36353cc2fb6dcb803ed2abae88ee8565b1941f69652dbf759ed3",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_002/multiview.mp4",
+      "frames": 291,
+      "sha256": "92f81cf77e7e30ca2d0dd4d7bf83d369a4bb2e4dc7996d677a1da7b9d1f33524",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_003/panorama.mp4",
+      "frames": 291,
+      "sha256": "35cee852219c261827dcd8dda211ef6c9ea65ca3f206077c60dc7d7d152c33dd",
+      "max_robot_projected_extent": 0.5496415205421895,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_003/multiview.mp4",
+      "frames": 291,
+      "sha256": "93e15bff4a95f437608157f5f2a3bc6e9a5ca5ca797c7efe8103c41270d097a5",
+      "max_robot_projected_extent": 0.5496415205421895,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_004/panorama.mp4",
+      "frames": 291,
+      "sha256": "c33eaf3a0d8469cf7c503a018ec1ca11a9915f02e44e7970ead94c8fa8ca53aa",
+      "max_robot_projected_extent": 0.5444223572084366,
+      "joint_limit_violation_rad": 0.0010796790228004838
+    },
+    {
+      "video": "videos/pi05/libero_object/task_02/trial_004/multiview.mp4",
+      "frames": 291,
+      "sha256": "75c78490f97dbb0c1dff3111ad0e9f0b3b8fa62901fdbe2d19e879bf4345bafe",
+      "max_robot_projected_extent": 0.5444223572084366,
+      "joint_limit_violation_rad": 0.0010796790228004838
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_000/panorama.mp4",
+      "frames": 291,
+      "sha256": "5a04f87941f08a340b8a10a0a8c45294e4f52a03e865c8eff065e5e6fa8e9ba9",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0021342801774006936
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_000/multiview.mp4",
+      "frames": 291,
+      "sha256": "047905610b1db3cd8adddfbf1e750bdfccc76683e743af0d8d0ca5c4cf6fea5e",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0021342801774006936
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_001/panorama.mp4",
+      "frames": 291,
+      "sha256": "eda9db977db37991921cee150f53f0217c548631719f9ba32ee994b3f33d867e",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0008784295826849142
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_001/multiview.mp4",
+      "frames": 291,
+      "sha256": "b71f227e1e1fb70c5b195d557cd1ce78cabbe116cc2630a437022127441aaa3e",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0008784295826849142
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_002/panorama.mp4",
+      "frames": 291,
+      "sha256": "0877d21bdd5cd1b096fadf55da01797308cb3e7fbf9ea7370d0507cd99271492",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0020365607556021015
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_002/multiview.mp4",
+      "frames": 291,
+      "sha256": "2a488f1c89ed4589e7e68e7794e4d9024686ac382952b5a5f1e2fe650c18cdae",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0020365607556021015
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_003/panorama.mp4",
+      "frames": 291,
+      "sha256": "d775332cbb945908049043904f1ba9658886bff1fdee7804841dd9dc9d115247",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.002328688918492583
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_003/multiview.mp4",
+      "frames": 291,
+      "sha256": "614a655255bbd5dea1dd6fa6f45d0f0abb25e354254081da3b6b0e15882a454e",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.002328688918492583
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_004/panorama.mp4",
+      "frames": 291,
+      "sha256": "d22808f0d04bf48e79c78c03e731579fc740c585a9fb004c33201d783f7c204b",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0012591843770164424
+    },
+    {
+      "video": "videos/pi05/libero_object/task_03/trial_004/multiview.mp4",
+      "frames": 291,
+      "sha256": "03de7366fa3180626cdaa8c3934799ed8718cfbbd2d96fc95c3051b1cb22a0c8",
+      "max_robot_projected_extent": 0.537865045840849,
+      "joint_limit_violation_rad": 0.0012591843770164424
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_000/panorama.mp4",
+      "frames": 153,
+      "sha256": "c478e12947815e170cbe9ef75f33d967165b653fafc1bc4581087980812144d4",
+      "max_robot_projected_extent": 0.5843072799019748,
+      "joint_limit_violation_rad": 0.0006337807020719843
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_000/multiview.mp4",
+      "frames": 153,
+      "sha256": "def7ada15bb62b44f555bd5de30bc1c0e49f5667513d46718ae3c96417fefe9e",
+      "max_robot_projected_extent": 0.5843072799019748,
+      "joint_limit_violation_rad": 0.0006337807020719843
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_001/panorama.mp4",
+      "frames": 291,
+      "sha256": "824a64a2bb4a78cbc38951483a4154926b9d167bf8c85f173e98ae48a5721aaa",
+      "max_robot_projected_extent": 0.5430666725588873,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_001/multiview.mp4",
+      "frames": 291,
+      "sha256": "68c5f9a7d1f08982e9aaaf6db8619432f0ca7eb3628734952b4a699fc69ff677",
+      "max_robot_projected_extent": 0.5430666725588873,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_002/panorama.mp4",
+      "frames": 291,
+      "sha256": "e6ffce6ad1bc5c677ec347d7f09062d53217903e877893937324119b7630f8dc",
+      "max_robot_projected_extent": 0.5458134453923351,
+      "joint_limit_violation_rad": 0.002159716647650578
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_002/multiview.mp4",
+      "frames": 291,
+      "sha256": "e1ab09109dbffac6e2c4701b77d998416a4c17576aae5c45aba160533a48f935",
+      "max_robot_projected_extent": 0.5458134453923351,
+      "joint_limit_violation_rad": 0.002159716647650578
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_003/panorama.mp4",
+      "frames": 291,
+      "sha256": "c712535d0bdb9cebf6156dd957aef0903c55cfb4810e826e86c1ef749a6b232d",
+      "max_robot_projected_extent": 0.5525322415063452,
+      "joint_limit_violation_rad": 0.0012566343045485873
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_003/multiview.mp4",
+      "frames": 291,
+      "sha256": "7c754b45ef0541a7c9ee14bdd6f2021752a4d967c8c85b54a6bd353348cb6ff8",
+      "max_robot_projected_extent": 0.5525322415063452,
+      "joint_limit_violation_rad": 0.0012566343045485873
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_004/panorama.mp4",
+      "frames": 291,
+      "sha256": "ceab488a1d6a6d36c48cfd08eedc703de814d215cc0495056ace4cae9e728657",
+      "max_robot_projected_extent": 0.5855844198509644,
+      "joint_limit_violation_rad": 0.0011384378339922563
+    },
+    {
+      "video": "videos/pi05/libero_object/task_04/trial_004/multiview.mp4",
+      "frames": 291,
+      "sha256": "76296f4cd7883f6b509e89d2d77684966a4897521fa4448b6f7270b784fd3242",
+      "max_robot_projected_extent": 0.5855844198509644,
+      "joint_limit_violation_rad": 0.0011384378339922563
+    }
+  ]
+}

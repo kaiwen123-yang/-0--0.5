@@ -1,0 +1,101 @@
+{
+  "created_at": "2026-10-24T18:18:43.692317+08:00",
+  "robot": "Piper H",
+  "gripper": "AgileX official 100 mm model",
+  "models": [
+    "pi05"
+  ],
+  "suite": "libero_spatial",
+  "task_ids": [
+    0,
+    1,
+    2
+  ],
+  "trials": 2,
+  "trial_start": 0,
+  "expected_episodes": 6,
+  "adapter_version": "v3_symmetric_tool_frame_matched_gripper_rate",
+  "adapter": {
+    "version": "v3_symmetric_tool_frame_matched_gripper_rate",
+    "tool_frame_z_rad": 3.141592653589793,
+    "home_qpos": [
+      -1.1159036001750049e-08,
+      1.4466463733164918,
+      -1.2650348504201725,
+      -5.358037748824591e-08,
+      1.4764511809283598,
+      -0.3499999561488895
+    ],
+    "replan_steps": 5,
+    "gripper_state_scale": 0.8,
+    "notes": "180-degree symmetric parallel-gripper tool frame and corresponding virtual wrist-camera mount; physical URDF geometry/limits unchanged; no task-object feedback; match Panda normalized per-physics-step gripper command ramp (0.01 at 2 ms), not a measured hardware actuator response",
+    "gripper_command_speed": 0.01
+  },
+  "home_orientation_yaw_rad": 0.35,
+  "scope": "small-sample Piper H adapter validation with official Panda LIBERO checkpoints; not standard LIBERO benchmark or hardware-calibrated digital twin",
+  "robot_dof": 6,
+  "policy_action": "world-frame OSC_POSE deltas plus scalar gripper command",
+  "state_adapter": "TCP xyz + official OpenPI LIBERO _quat2axisangle(physical hand rotation * local Z tool offset, positive x quaternion hemisphere) + physical gripper qpos * configured scale",
+  "scene_initialization": "same official non-robot joint positions/velocities copied by name; Piper uses collision-checked reachable home instead of Panda state",
+  "base_position_m": [
+    -0.46,
+    0,
+    0.9
+  ],
+  "home_qpos": [
+    -1.1159036001750049e-08,
+    1.4466463733164918,
+    -1.2650348504201725,
+    -5.358037748824591e-08,
+    1.4764511809283598,
+    -0.3499999561488895
+  ],
+  "camera_policy": "original LIBERO agentview plus virtual Piper wrist; panorama is recording-only",
+  "video": {
+    "panorama": [
+      1280,
+      720
+    ],
+    "multiview": [
+      1280,
+      1008
+    ],
+    "fps": 20,
+    "includes_settling_and_final": true
+  },
+  "seed": 7,
+  "replan_steps": 5,
+  "flow_steps": 10,
+  "wait_steps": 10,
+  "max_steps": 220,
+  "model_horizons": {
+    "pi0": 50,
+    "pi05": 10
+  },
+  "action_range": [
+    -1,
+    1
+  ],
+  "source_commits": {
+    "openpi": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "libero": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+    "agx_arm_urdf": "680fa925cd00db7e2628563d2edc5540963045de"
+  },
+  "script_sha256": {
+    "build_piper_h_mjcf.py": "ff8b7115204a8018aed9f9657b6d71022a9efb36353083de30f34836ac47d3cb",
+    "piper_h_sim.py": "c839a9ab4c81861ae12479403e2b7dd635657da9364b9dbb625b650d46eeb5f5",
+    "piper_h_sim_check.py": "a878f078556d8d0333808990e8e3059ea49f4486a9c38e0147fe84d9ccbecc5b",
+    "piper_adapter.py": "b02f5236f95ff1024c9d9db40d3ed64317e18fd19f49e7602453e8f84a5bbf24",
+    "run_piper_h_trials.py": "a76ca43312f01f06bad702573589e25e337e722ffaafd967c51f32f13d3e0ce9",
+    "run_piper_h_demo.py": "a3b935772e8bb8bf5cf6aeaced1ff89ca9f53397fccbcf03a826e6ba07389637",
+    "serve_eval_policy.py": "5cff99eabff686fe8e1d46867c8b0cf11ccbfdcc51f96b8f1e5fd3880cf96259",
+    "serve_local.py": "8cc44df1c90e490dadd737e0038a0967fa0cf11f19293e17e2c6746e6f5fa656",
+    "run_libero_trials.py": "49ef9e32c9f5505f89ab9b56110e5ce7673adbfd2f81f008be961e80a68d5799",
+    "run_libero_comparison.py": "372275a19d3524b96251785aa19910a0c5873975c4d96e7fa51bfc41dbdb853b",
+    "libero_bootstrap.py": "c3841daf1b70f0d5b791a2f227b4b753d619fd5455be16531bba03341461c54c",
+    "run.sh": "2a80da985b562aaa1e43bef9de4919ab211d1fda3199ff6664f3dc799238bcc6",
+    "isolated_python.py": "bd353eee13db8e16a8f47e5af14a8a2148defaab2e1a2b5770c0840d00c45da7"
+  },
+  "real_hardware_connected": false,
+  "fine_tuning_performed": false
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "locked_packages": 76,
+  "installed_matches_lock": true,
+  "pip_check": "All installed packages are compatible",
+  "source_worktrees_clean": true,
+  "python_script_syntax": "passed",
+  "shell_script_syntax": "passed",
+  "evaluation_cli_help": "passed",
+  "cpu_physics_report": "results/libero_cpu_smoke.json",
+  "software_rgb_report": "results/libero_render_smoke.json",
+  "visual_inspection": "Both 256x256 camera PNGs contain robot/tabletop objects; not blank",
+  "gpu_rendering_tested": false,
+  "policy_inference_tested": false
+}

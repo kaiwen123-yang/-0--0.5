@@ -1,0 +1,117 @@
+{
+  "source_thread": {
+    "id": "01a16d34-479f-7911-9cd3-c44c5c8db349",
+    "title": "了解 AutoDL 租卡与企业套餐",
+    "url": "codex://threads/01a16d34-479f-7911-9cd3-c44c5c8db349",
+    "updated_at": "2026-10-24T12:07:43.000Z",
+    "evidence_command_id": "exec-7d960b96-ce65-44fd-98df-d828e779ec7c"
+  },
+  "verification": "Read the other conversation and its recorded remote command output; no new SSH session or remote mutation from fy-5080.",
+  "instance": {
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "nominal_vram_gb": 96,
+    "reported_hourly_price_cny": 6.98,
+    "local_data_disk_gb": 70,
+    "file_storage_gb": 200,
+    "user_requested_keep_running": true
+  },
+  "training_scope": {
+    "model": "pi0.5",
+    "base_checkpoint": "pi05_base",
+    "dataset": "physical-intelligence/libero",
+    "episodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "batch_size": 1,
+    "steps_per_mode": 20,
+    "action_horizon": 10,
+    "robot_data": "Panda LIBERO; not Piper H demonstrations",
+    "purpose": "training/save/reload/inference smoke test; not success-rate improvement or robot deployment validation"
+  },
+  "observed_results": {
+    "stage": "COMPLETE",
+    "lora_training": {
+      "training_completed": true,
+      "optimizer_step": 20,
+      "trainable_parameters": 466957072,
+      "total_parameters": 3403421456,
+      "sampled_parameter_max_change": 0.00009117648005485535,
+      "checkpoint_exists": true,
+      "wall_seconds_including_load_compile_save": 228.122,
+      "jax_peak_GiB": 16.058579444885254
+    },
+    "lora_inference": {
+      "actions_shape": [
+        10,
+        7
+      ],
+      "all_finite": true,
+      "first_call_seconds": 17.8756,
+      "second_call_seconds": 0.0655,
+      "hardware_execution": false
+    },
+    "lora_logged_steps": {
+      "count": 20,
+      "all_finite": true
+    },
+    "full_training": {
+      "training_completed": true,
+      "optimizer_step": 20,
+      "trainable_parameters": 3353433872,
+      "total_parameters": 3353433872,
+      "sampled_parameter_max_change": 0.00009164214134216309,
+      "checkpoint_exists": true,
+      "wall_seconds_including_load_compile_save": 408.111,
+      "jax_peak_GiB": 52.31146764755249
+    },
+    "full_inference": {
+      "actions_shape": [
+        10,
+        7
+      ],
+      "all_finite": true,
+      "first_call_seconds": 14.7804,
+      "second_call_seconds": 0.0596,
+      "hardware_execution": false
+    },
+    "full_logged_steps": {
+      "count": 20,
+      "all_finite": true
+    }
+  },
+  "remote_locations": {
+    "workspace": "/root/autodl-tmp/pi05",
+    "results": "/root/autodl-fs/pi05/results",
+    "checkpoints": "/root/autodl-fs/pi05/checkpoints"
+  },
+  "local_scope": {
+    "workspace": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction",
+    "robot": "Piper H",
+    "gripper": "AgileX official parallel gripper; 100 mm simulation default, actual stroke unconfirmed",
+    "hardware_connected": false,
+    "hardware_motion_authorized_this_turn": false,
+    "local_training_started": false
+  },
+  "next_focus": "Match real Piper H cameras, joint/gripper action semantics and task demonstrations before substantive fine-tuning.",
+  "pending_information": [
+    "Physical camera count, model and placement",
+    "First real-world manipulation task",
+    "Real hardware calibration and single-arm assumption confirmation"
+  ],
+  "memory_note": "JAX peak_bytes_in_use is allocator-reported live peak; it excludes some GPU memory and does not establish fit on the local 16 GB RTX 5080."
+}

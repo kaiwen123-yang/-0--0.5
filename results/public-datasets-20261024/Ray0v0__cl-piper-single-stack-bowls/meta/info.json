@@ -1,0 +1,292 @@
+{
+    "codebase_version": "v2.1",
+    "robot_type": "piper",
+    "total_episodes": 500,
+    "total_frames": 129612,
+    "total_tasks": 1,
+    "total_videos": 2000,
+    "total_chunks": 1,
+    "chunks_size": 1000,
+    "fps": 30,
+    "splits": {
+        "train": "0:500"
+    },
+    "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+    "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+    "timestamp_mode": "real_time",
+    "features": {
+        "action": {
+            "dtype": "float32",
+            "shape": [
+                14
+            ],
+            "names": [
+                "left_joint_1",
+                "left_joint_2",
+                "left_joint_3",
+                "left_joint_4",
+                "left_joint_5",
+                "left_joint_6",
+                "left_gripper",
+                "right_joint_1",
+                "right_joint_2",
+                "right_joint_3",
+                "right_joint_4",
+                "right_joint_5",
+                "right_joint_6",
+                "right_gripper"
+            ]
+        },
+        "observation.state": {
+            "dtype": "float32",
+            "shape": [
+                14
+            ],
+            "names": [
+                "left_joint_1",
+                "left_joint_2",
+                "left_joint_3",
+                "left_joint_4",
+                "left_joint_5",
+                "left_joint_6",
+                "left_gripper",
+                "right_joint_1",
+                "right_joint_2",
+                "right_joint_3",
+                "right_joint_4",
+                "right_joint_5",
+                "right_joint_6",
+                "right_gripper"
+            ]
+        },
+        "observation.ee_pose": {
+            "dtype": "float32",
+            "shape": [
+                12
+            ],
+            "names": [
+                "left_x_m",
+                "left_y_m",
+                "left_z_m",
+                "left_rx_rad",
+                "left_ry_rad",
+                "left_rz_rad",
+                "right_x_m",
+                "right_y_m",
+                "right_z_m",
+                "right_rx_rad",
+                "right_ry_rad",
+                "right_rz_rad"
+            ]
+        },
+        "action.ee_pose": {
+            "dtype": "float32",
+            "shape": [
+                12
+            ],
+            "names": [
+                "left_x_m",
+                "left_y_m",
+                "left_z_m",
+                "left_rx_rad",
+                "left_ry_rad",
+                "left_rz_rad",
+                "right_x_m",
+                "right_y_m",
+                "right_z_m",
+                "right_rx_rad",
+                "right_ry_rad",
+                "right_rz_rad"
+            ]
+        },
+        "real_observation_timestamp_s": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "real_action_timestamp_s": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "real_observation_wall_time_ns": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "real_action_wall_time_ns": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "real_transition_delta_s": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "real_transition_fps": {
+            "dtype": "float64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "observation.images.head": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.00098712925393,
+                "video.avg_fps": 30.00098712925393,
+                "video.nominal_fps": 30.0,
+                "video.duration_s": 18.599388,
+                "video.nb_frames": 558,
+                "video.time_base": "1/1000000",
+                "video.height": 480,
+                "video.width": 640,
+                "video.channels": 3,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.left_wrist": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.00098712925393,
+                "video.avg_fps": 30.00098712925393,
+                "video.nominal_fps": 30.0,
+                "video.duration_s": 18.599388,
+                "video.nb_frames": 558,
+                "video.time_base": "1/1000000",
+                "video.height": 480,
+                "video.width": 640,
+                "video.channels": 3,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.right_wrist": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.00098712925393,
+                "video.avg_fps": 30.00098712925393,
+                "video.nominal_fps": 30.0,
+                "video.duration_s": 18.599388,
+                "video.nb_frames": 558,
+                "video.time_base": "1/1000000",
+                "video.height": 480,
+                "video.width": 640,
+                "video.channels": 3,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "observation.images.front_view": {
+            "dtype": "video",
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.00098712925393,
+                "video.avg_fps": 30.00098712925393,
+                "video.nominal_fps": 30.0,
+                "video.duration_s": 18.599388,
+                "video.nb_frames": 558,
+                "video.time_base": "1/1000000",
+                "video.height": 480,
+                "video.width": 640,
+                "video.channels": 3,
+                "video.codec": "h264",
+                "video.pix_fmt": "yuv420p",
+                "video.is_depth_map": false,
+                "has_audio": false
+            }
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "code_root": "/root/autodl-tmp/robot-repro/pi-reproduction",
+  "dataset": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/dataset-v1",
+  "lora_inference_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499",
+  "lora_optimizer_available": false,
+  "full_partial_backup": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000",
+  "full_backup_restorable": false,
+  "pi0_base": "/root/autodl-tmp/robot-repro/assets/openpi-assets/checkpoints/pi0_base",
+  "pi05_base": "/root/autodl-tmp/robot-repro/assets/openpi-assets/checkpoints/pi05_base",
+  "new_run_output_parent": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs"
+}

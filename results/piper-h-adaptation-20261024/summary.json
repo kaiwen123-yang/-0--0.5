@@ -1,0 +1,285 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-24T09:52:57.249209+00:00",
+  "results": {
+    "pi0": {
+      "successes": 4,
+      "episodes": 6,
+      "success_rate": 0.6666666666666666,
+      "stable_after_release": 4,
+      "diagnosis_states": {
+        "successes": 2,
+        "episodes": 3
+      },
+      "additional_states": {
+        "successes": 2,
+        "episodes": 3
+      }
+    },
+    "pi05": {
+      "successes": 5,
+      "episodes": 6,
+      "success_rate": 0.8333333333333334,
+      "stable_after_release": 5,
+      "diagnosis_states": {
+        "successes": 3,
+        "episodes": 3
+      },
+      "additional_states": {
+        "successes": 2,
+        "episodes": 3
+      }
+    }
+  },
+  "matched_scene_pairs": 6,
+  "scope": "Piper H adapter v2, LIBERO-Spatial tasks 0/1/2, initial states 0/1; exploratory small sample, not standard Panda LIBERO benchmark",
+  "training": "none; unchanged official pi0_libero and pi05_libero checkpoints",
+  "real_hardware_connected": false,
+  "gripper": "Official AgileX default 100 mm; hardware stroke unconfirmed",
+  "post_policy_validation": "Separate fixed open/retreat/hold check after an already-successful policy; not included in policy success rate. Video appended with an explicit caption.",
+  "source_runs": {
+    "pi0": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+    "pi05": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003"
+  },
+  "episodes": [
+    {
+      "model": "pi0",
+      "task_id": 0,
+      "initial_state": 0,
+      "state_used_during_diagnosis": true,
+      "policy_success": false,
+      "steps": 220,
+      "release_check_passed": null,
+      "lift_m": 0.04429693855574801,
+      "final_plate_xy_error_m": 0.03692393279718055,
+      "bilateral_contact_frames": 39,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_00/trial_000/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_00/trial_000/multiview.mp4",
+      "panorama_with_release": null
+    },
+    {
+      "model": "pi0",
+      "task_id": 0,
+      "initial_state": 1,
+      "state_used_during_diagnosis": false,
+      "policy_success": true,
+      "steps": 156,
+      "release_check_passed": true,
+      "lift_m": 0.0768579962206879,
+      "final_plate_xy_error_m": 0.029987983445108,
+      "bilateral_contact_frames": 83,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_00/trial_001/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_00/trial_001/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_00/trial_001/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi0",
+      "task_id": 1,
+      "initial_state": 0,
+      "state_used_during_diagnosis": true,
+      "policy_success": true,
+      "steps": 117,
+      "release_check_passed": true,
+      "lift_m": 0.20164331869041185,
+      "final_plate_xy_error_m": 0.008818815289065045,
+      "bilateral_contact_frames": 72,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_01/trial_000/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_01/trial_000/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_01/trial_000/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi0",
+      "task_id": 1,
+      "initial_state": 1,
+      "state_used_during_diagnosis": false,
+      "policy_success": false,
+      "steps": 220,
+      "release_check_passed": null,
+      "lift_m": 0.007935334108809755,
+      "final_plate_xy_error_m": 0.24944088073306395,
+      "bilateral_contact_frames": 0,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_01/trial_001/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_01/trial_001/multiview.mp4",
+      "panorama_with_release": null
+    },
+    {
+      "model": "pi0",
+      "task_id": 2,
+      "initial_state": 0,
+      "state_used_during_diagnosis": true,
+      "policy_success": true,
+      "steps": 97,
+      "release_check_passed": true,
+      "lift_m": 0.126041284486486,
+      "final_plate_xy_error_m": 0.01068074763956569,
+      "bilateral_contact_frames": 66,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_000/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_000/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_000/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi0",
+      "task_id": 2,
+      "initial_state": 1,
+      "state_used_during_diagnosis": false,
+      "policy_success": true,
+      "steps": 81,
+      "release_check_passed": true,
+      "lift_m": 0.1314192641293277,
+      "final_plate_xy_error_m": 0.010466146510686957,
+      "bilateral_contact_frames": 54,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_001/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_001/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_001/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi05",
+      "task_id": 0,
+      "initial_state": 0,
+      "state_used_during_diagnosis": true,
+      "policy_success": true,
+      "steps": 63,
+      "release_check_passed": true,
+      "lift_m": 0.07033260705102473,
+      "final_plate_xy_error_m": 0.019466184113622387,
+      "bilateral_contact_frames": 34,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_00/trial_000/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_00/trial_000/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_00/trial_000/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi05",
+      "task_id": 0,
+      "initial_state": 1,
+      "state_used_during_diagnosis": false,
+      "policy_success": false,
+      "steps": 220,
+      "release_check_passed": null,
+      "lift_m": 0.06228983824111334,
+      "final_plate_xy_error_m": 0.040910627134489404,
+      "bilateral_contact_frames": 106,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_00/trial_001/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_00/trial_001/multiview.mp4",
+      "panorama_with_release": null
+    },
+    {
+      "model": "pi05",
+      "task_id": 1,
+      "initial_state": 0,
+      "state_used_during_diagnosis": true,
+      "policy_success": true,
+      "steps": 101,
+      "release_check_passed": true,
+      "lift_m": 0.16882554631332036,
+      "final_plate_xy_error_m": 0.018178353712542648,
+      "bilateral_contact_frames": 58,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_000/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_000/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_000/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi05",
+      "task_id": 1,
+      "initial_state": 1,
+      "state_used_during_diagnosis": false,
+      "policy_success": true,
+      "steps": 99,
+      "release_check_passed": true,
+      "lift_m": 0.16652609599656887,
+      "final_plate_xy_error_m": 0.02459323575130003,
+      "bilateral_contact_frames": 56,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_001/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_001/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_001/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi05",
+      "task_id": 2,
+      "initial_state": 0,
+      "state_used_during_diagnosis": true,
+      "policy_success": true,
+      "steps": 75,
+      "release_check_passed": true,
+      "lift_m": 0.12930388927365266,
+      "final_plate_xy_error_m": 0.01756638022164225,
+      "bilateral_contact_frames": 47,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_000/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_000/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_000/panorama-with-release.mp4"
+    },
+    {
+      "model": "pi05",
+      "task_id": 2,
+      "initial_state": 1,
+      "state_used_during_diagnosis": false,
+      "policy_success": true,
+      "steps": 117,
+      "release_check_passed": true,
+      "lift_m": 0.16708286718373078,
+      "final_plate_xy_error_m": 0.022530377025484122,
+      "bilateral_contact_frames": 67,
+      "run_directory": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003",
+      "panorama": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_001/panorama.mp4",
+      "multiview": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_001/multiview.mp4",
+      "panorama_with_release": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_001/panorama-with-release.mp4"
+    }
+  ],
+  "interrupted_run_excluded": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174356/execution-notes.json",
+  "diagnosis_runs_excluded_from_final_counts": [
+    {
+      "stage": "original",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-171827",
+      "results": {
+        "pi0": {
+          "successes": 0,
+          "episodes": 3
+        },
+        "pi05": {
+          "successes": 0,
+          "episodes": 3
+        }
+      }
+    },
+    {
+      "stage": "official_rotvec_only",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-173133",
+      "results": {
+        "pi05": {
+          "successes": 0,
+          "episodes": 3
+        }
+      }
+    },
+    {
+      "stage": "adapter_v2_pi05",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-173501",
+      "results": {
+        "pi05": {
+          "successes": 3,
+          "episodes": 3
+        }
+      }
+    },
+    {
+      "stage": "adapter_v2_pi0",
+      "run": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-173647",
+      "results": {
+        "pi0": {
+          "successes": 2,
+          "episodes": 3
+        }
+      }
+    }
+  ]
+}

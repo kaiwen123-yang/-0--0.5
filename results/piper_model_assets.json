@@ -1,0 +1,18 @@
+{
+  "scope": "XML_parse_and_referenced_mesh_include_files_only",
+  "status": "passed",
+  "checks": [
+    {
+      "file": "piper_h/urdf/piper_h_description.urdf",
+      "referenced_files": 14,
+      "missing_files": []
+    },
+    {
+      "file": "piper_h/urdf/piper_h_with_gripper_description.xacro",
+      "referenced_files": 9,
+      "missing_files": []
+    }
+  ],
+  "physics_validated": false,
+  "ros_build_validated": false
+}

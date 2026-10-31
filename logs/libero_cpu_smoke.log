@@ -1,0 +1,128 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/libero/lib/python3.11/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+{
+  "status": "passed",
+  "interpreter": "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+  "python": "3.11.16",
+  "torch": "2.7.1+cpu",
+  "torch_cuda_build": null,
+  "mujoco": "3.2.3",
+  "robosuite": "1.4.1",
+  "suites": {
+    "libero_spatial": 10,
+    "libero_object": 10,
+    "libero_goal": 10,
+    "libero_90": 90,
+    "libero_10": 10
+  },
+  "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+  "initial_states": 50,
+  "physics_steps": 10,
+  "rendering": false,
+  "model_inference": false,
+  "observations": {
+    "robot0_joint_pos": [
+      7
+    ],
+    "robot0_joint_pos_cos": [
+      7
+    ],
+    "robot0_joint_pos_sin": [
+      7
+    ],
+    "robot0_joint_vel": [
+      7
+    ],
+    "robot0_eef_pos": [
+      3
+    ],
+    "robot0_eef_quat": [
+      4
+    ],
+    "robot0_gripper_qpos": [
+      2
+    ],
+    "robot0_gripper_qvel": [
+      2
+    ],
+    "akita_black_bowl_1_pos": [
+      3
+    ],
+    "akita_black_bowl_1_quat": [
+      4
+    ],
+    "akita_black_bowl_1_to_robot0_eef_pos": [
+      3
+    ],
+    "akita_black_bowl_1_to_robot0_eef_quat": [
+      4
+    ],
+    "akita_black_bowl_2_pos": [
+      3
+    ],
+    "akita_black_bowl_2_quat": [
+      4
+    ],
+    "akita_black_bowl_2_to_robot0_eef_pos": [
+      3
+    ],
+    "akita_black_bowl_2_to_robot0_eef_quat": [
+      4
+    ],
+    "cookies_1_pos": [
+      3
+    ],
+    "cookies_1_quat": [
+      4
+    ],
+    "cookies_1_to_robot0_eef_pos": [
+      3
+    ],
+    "cookies_1_to_robot0_eef_quat": [
+      4
+    ],
+    "glazed_rim_porcelain_ramekin_1_pos": [
+      3
+    ],
+    "glazed_rim_porcelain_ramekin_1_quat": [
+      4
+    ],
+    "glazed_rim_porcelain_ramekin_1_to_robot0_eef_pos": [
+      3
+    ],
+    "glazed_rim_porcelain_ramekin_1_to_robot0_eef_quat": [
+      4
+    ],
+    "plate_1_pos": [
+      3
+    ],
+    "plate_1_quat": [
+      4
+    ],
+    "plate_1_to_robot0_eef_pos": [
+      3
+    ],
+    "plate_1_to_robot0_eef_quat": [
+      4
+    ],
+    "robot0_proprio-state": [
+      39
+    ],
+    "object-state": [
+      70
+    ]
+  },
+  "qpos_finite": true,
+  "qvel_finite": true,
+  "elapsed_seconds": 3.861,
+  "scope": "CPU physics preparation; not policy success-rate reproduction"
+}

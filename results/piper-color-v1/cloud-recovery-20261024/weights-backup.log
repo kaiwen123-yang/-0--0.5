@@ -1,0 +1,22 @@
+2026-10-24T23:22:04+08:00 pi05_piper_color_lora/v1/1499
+
+Number of files: 23 (reg: 15, dir: 8)
+Number of created files: 22 (reg: 15, dir: 7)
+Number of deleted files: 0
+Number of regular files transferred: 15
+Total file size: 6,335,866,861 bytes
+Total transferred file size: 6,335,866,861 bytes
+Literal data: 6,335,866,861 bytes
+Matched data: 0 bytes
+File list size: 870
+File list generation time: 0.017 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 379
+Total bytes received: 6,337,415,238
+
+sent 379 bytes  received 6,337,415,238 bytes  15,667,282.12 bytes/sec
+total size is 6,335,866,861  speedup is 1.00
+2026-10-24T23:28:48+08:00 pi05_piper_color_full/v1/1000
+rsync error: unexplained error (code 255) at rsync.c(716) [generator=3.2.7]
+rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at io.c(519) [receiver=3.2.7]
+rsync: [generator] write error: Broken pipe (32)

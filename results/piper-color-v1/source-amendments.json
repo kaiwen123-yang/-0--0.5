@@ -1,0 +1,10 @@
+[
+  {
+    "at": "2026-10-24T12:51:30.804692+00:00",
+    "file": "deployment_io.py",
+    "sha256": "7cd46b361e6b49af5968c3e49c210640acce53ab831faba304071d5371a65077",
+    "change": "Accept 1e-6 m floating-point rounding at gripper endpoints and clip proposal width to [0,0.1] m",
+    "affects_training_or_evaluation": false,
+    "hardware_execution": false
+  }
+]

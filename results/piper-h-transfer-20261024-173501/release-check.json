@@ -1,0 +1,47 @@
+[
+  {
+    "model": "pi05",
+    "task_id": 0,
+    "trial_index": 0,
+    "policy_success": true,
+    "release_check_passed": true,
+    "last_2s_success_frames": 40,
+    "total_check_steps": 100,
+    "final_gripper_width_m": 0.09999972571753357,
+    "method": "restore final qpos/qvel, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require success throughout final 2 seconds",
+    "source_trajectory": "videos/pi05/libero_spatial/task_00/trial_000/trajectory.npz",
+    "video": "videos/pi05/libero_spatial/task_00/trial_000/panorama-with-release.mp4",
+    "policy_video_frames": 74,
+    "release_video_frames": 101
+  },
+  {
+    "model": "pi05",
+    "task_id": 1,
+    "trial_index": 0,
+    "policy_success": true,
+    "release_check_passed": true,
+    "last_2s_success_frames": 40,
+    "total_check_steps": 100,
+    "final_gripper_width_m": 0.09999933924841875,
+    "method": "restore final qpos/qvel, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require success throughout final 2 seconds",
+    "source_trajectory": "videos/pi05/libero_spatial/task_01/trial_000/trajectory.npz",
+    "video": "videos/pi05/libero_spatial/task_01/trial_000/panorama-with-release.mp4",
+    "policy_video_frames": 116,
+    "release_video_frames": 101
+  },
+  {
+    "model": "pi05",
+    "task_id": 2,
+    "trial_index": 0,
+    "policy_success": true,
+    "release_check_passed": true,
+    "last_2s_success_frames": 40,
+    "total_check_steps": 100,
+    "final_gripper_width_m": 0.09999964922128338,
+    "method": "restore final qpos/qvel, 20 open steps, 15 small upward retreat steps, 65 hold-open steps; require success throughout final 2 seconds",
+    "source_trajectory": "videos/pi05/libero_spatial/task_02/trial_000/trajectory.npz",
+    "video": "videos/pi05/libero_spatial/task_02/trial_000/panorama-with-release.mp4",
+    "policy_video_frames": 89,
+    "release_video_frames": 101
+  }
+]

@@ -1,0 +1,215 @@
+{
+  "checked_at": "2026-10-24T10:23:21.269514+00:00",
+  "intended_use": "Piper/Piper H fine-tuning data selection",
+  "grain": "one recorded transition per (episode_index, frame_index)",
+  "reports": [
+    {
+      "dataset_id": "Ray0v0/cl-piper-single-stack-bowls",
+      "revision": "f81ff5e07c31053b39e64aa621882d6d17705d52",
+      "gated": false,
+      "dataset_card_license": null,
+      "metadata": {
+        "codebase_version": "v2.1",
+        "robot_type": "piper",
+        "total_episodes": 500,
+        "total_frames": 129612,
+        "total_tasks": 1,
+        "fps": 30
+      },
+      "sample_episode": 0,
+      "sample_rows": 382,
+      "sample_columns": [
+        "action",
+        "observation.state",
+        "observation.ee_pose",
+        "action.ee_pose",
+        "real_observation_timestamp_s",
+        "real_action_timestamp_s",
+        "real_observation_wall_time_ns",
+        "real_action_wall_time_ns",
+        "real_transition_delta_s",
+        "real_transition_fps",
+        "timestamp",
+        "frame_index",
+        "episode_index",
+        "index",
+        "task_index"
+      ],
+      "sample_sha256": "598f5b191368e36e683d097e0ad921e6611b8d4885031ba8ae616cb36df041ea",
+      "sample_null_cells": 0,
+      "duplicate_episode_frame_keys": 0,
+      "state_shape": [
+        382,
+        14
+      ],
+      "action_shape": [
+        382,
+        14
+      ],
+      "numeric_finite": true,
+      "monotonic_timestamps": true,
+      "timestamp_delta_s": {
+        "min": 0.03156566619873047,
+        "median": 0.0333251953125,
+        "max": 0.0347743034362793
+      },
+      "same_frame_action_state_mae": 0.0030577010790218255,
+      "action_equals_next_state_except_terminal": true,
+      "next_state_label_checked_transitions": 381,
+      "per_dimension_state_range": [
+        0.8568536937236786,
+        2.127507027471438,
+        1.994754752740846,
+        0.5227053239941597,
+        1.415773645043373,
+        0.5443887710571289,
+        0.10130000044591725,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gripper_state_range": {
+        "6": [
+          -0.0017999999690800905,
+          0.09950000047683716
+        ],
+        "13": [
+          -0.0007999999797903001,
+          -0.0007999999797903001
+        ]
+      },
+      "camera_keys": [
+        "observation.images.head",
+        "observation.images.left_wrist",
+        "observation.images.right_wrist",
+        "observation.images.front_view"
+      ],
+      "videos": [],
+      "interpretation": "The checked action labels are exactly the next recorded state, not evidence of logged commanded EEF deltas. Preserve temporal alignment and verify collection code before converting action semantics.",
+      "scope_limit": "Only episode 0 checked per dataset; not a full-corpus quality or hardware compatibility certification."
+    },
+    {
+      "dataset_id": "aromanus/openpi_PiPER_demo_train_2",
+      "revision": "e00910709205e98d515844659ef1fe8b4b847fc0",
+      "gated": false,
+      "dataset_card_license": "apache-2.0",
+      "metadata": {
+        "codebase_version": "v2.1",
+        "robot_type": "piper",
+        "total_episodes": 80,
+        "total_frames": 26990,
+        "total_tasks": 1,
+        "fps": 30
+      },
+      "sample_episode": 0,
+      "sample_rows": 548,
+      "sample_columns": [
+        "observation.state",
+        "observation.velocity",
+        "observation.effort",
+        "action",
+        "timestamp",
+        "frame_index",
+        "episode_index",
+        "index",
+        "task_index"
+      ],
+      "sample_sha256": "fd4f1075a9f0c446832ae5d25bb37a3bba6b5dc9f7a34aa13b3d51cb35ed1db8",
+      "sample_null_cells": 0,
+      "duplicate_episode_frame_keys": 0,
+      "state_shape": [
+        548,
+        14
+      ],
+      "action_shape": [
+        548,
+        14
+      ],
+      "numeric_finite": true,
+      "monotonic_timestamps": true,
+      "timestamp_delta_s": {
+        "min": 0.03333282470703125,
+        "median": 0.03333330154418945,
+        "max": 0.03333473205566406
+      },
+      "same_frame_action_state_mae": 0.00224678137262446,
+      "action_equals_next_state_except_terminal": true,
+      "next_state_label_checked_transitions": 547,
+      "per_dimension_state_range": [
+        0.898388909175992,
+        2.214118694886565,
+        1.8068431881256402,
+        0.06381177436560392,
+        1.0513068437576294,
+        0.35567477345466614,
+        0.5958750247955322,
+        0.23865744844079018,
+        0.03947677882388234,
+        0.27691310620866716,
+        0.14250366436317563,
+        0.11084200069308281,
+        0.21367700397968292,
+        0.0
+      ],
+      "gripper_state_range": {
+        "6": [
+          0.27649998664855957,
+          0.8723750114440918
+        ],
+        "13": [
+          0.5687500238418579,
+          0.5687500238418579
+        ]
+      },
+      "camera_keys": [
+        "observation.images.top_camera",
+        "observation.images.left_camera",
+        "observation.images.right_camera"
+      ],
+      "videos": [
+        {
+          "file": "aromanus__openpi_PiPER_demo_train_2/videos/chunk-000/observation.images.left_camera/episode_000000.mp4",
+          "stream": {
+            "codec_name": "av1",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "548"
+          },
+          "matches_sample_rows": true,
+          "full_decode": true
+        },
+        {
+          "file": "aromanus__openpi_PiPER_demo_train_2/videos/chunk-000/observation.images.right_camera/episode_000000.mp4",
+          "stream": {
+            "codec_name": "av1",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "548"
+          },
+          "matches_sample_rows": true,
+          "full_decode": true
+        },
+        {
+          "file": "aromanus__openpi_PiPER_demo_train_2/videos/chunk-000/observation.images.top_camera/episode_000000.mp4",
+          "stream": {
+            "codec_name": "av1",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "548"
+          },
+          "matches_sample_rows": true,
+          "full_decode": true
+        }
+      ],
+      "interpretation": "The checked action labels are exactly the next recorded state, not evidence of logged commanded EEF deltas. Preserve temporal alignment and verify collection code before converting action semantics.",
+      "scope_limit": "Only episode 0 checked per dataset; not a full-corpus quality or hardware compatibility certification."
+    }
+  ]
+}

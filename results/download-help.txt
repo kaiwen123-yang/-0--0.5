@@ -1,0 +1,31 @@
+usage: download_checkpoints.py [-h]
+                               [--checkpoint {pi05_libero,pi0_libero,pi05_base,pi0_base}]
+                               [--all]
+                               [--workers {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}]
+                               [--timeout TIMEOUT] [--attempts ATTEMPTS]
+                               [--chunk-mib CHUNK_MIB] [--prefer-direct]
+                               [--parallel-ranges] [--max-seconds MAX_SECONDS]
+                               [--manifest-only]
+
+Fetch generation-pinned official openpi weights, without importing ML
+runtimes. Uses the standard library and a local C helper for GCS CRC32C
+checksums. Nothing is installed into the Python environment. Re-run the same
+command to resume.
+
+options:
+  -h, --help            show this help message and exit
+  --checkpoint {pi05_libero,pi0_libero,pi05_base,pi0_base}
+  --all                 Download both LIBERO and both base checkpoints
+  --workers {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}
+  --timeout TIMEOUT     Per-request idle timeout in seconds
+  --attempts ATTEMPTS
+  --chunk-mib CHUNK_MIB
+                        Bound each HTTP Range request and reconnect slow
+                        streams
+  --prefer-direct       Try scoped proxy bypass first, falling back on
+                        slow/error responses
+  --parallel-ranges     Share workers across disjoint file segments; useful
+                        for slow large objects
+  --max-seconds MAX_SECONDS
+                        Bounded run; re-run to resume
+  --manifest-only

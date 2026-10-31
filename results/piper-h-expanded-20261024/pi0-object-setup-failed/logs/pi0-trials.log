@@ -1,0 +1,41 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/libero/lib/python3.11/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Traceback (most recent call last):
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/isolated_python.py", line 31, in <module>
+    runpy.run_path(args[0], run_name="__main__")
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/run_piper_h_trials.py", line 212, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/run_piper_h_trials.py", line 106, in main
+    env,task=make_env(render=True,task_id=task_id,suite=args.suite)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/piper_h_sim_check.py", line 25, in make_env
+    env=ControlEnv(bddl_file_name=str(Path(get_libero_path("bddl_files"))/task.problem_folder/task.bddl_file),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/third_party/libero/libero/libero/envs/env_wrapper.py", line 56, in __init__
+    self.env = TASK_MAPPING[self.problem_name](
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/third_party/libero/libero/libero/envs/problems/libero_floor_manipulation.py", line 37, in __init__
+    super().__init__(bddl_file_name, *args, **kwargs)
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/third_party/libero/libero/libero/envs/bddl_base_domain.py", line 135, in __init__
+    super().__init__(
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/libero/lib/python3.11/site-packages/robosuite/environments/manipulation/manipulation_env.py", line 162, in __init__
+    super().__init__(
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/libero/lib/python3.11/site-packages/robosuite/environments/robot_env.py", line 148, in __init__
+    self._check_robot_configuration(robots)
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/libero/lib/python3.11/site-packages/robosuite/environments/manipulation/single_arm_env.py", line 31, in _check_robot_configuration
+    super()._check_robot_configuration(robots)
+  File "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/envs/libero/lib/python3.11/site-packages/robosuite/environments/manipulation/manipulation_env.py", line 319, in _check_robot_configuration
+    ROBOT_CLASS_MAPPING[robot], Manipulator
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^
+KeyError: 'OnTheGroundPiperH'

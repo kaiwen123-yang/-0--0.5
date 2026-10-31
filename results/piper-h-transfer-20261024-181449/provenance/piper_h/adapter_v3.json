@@ -1,0 +1,15 @@
+{
+  "version": "v3_symmetric_tool_frame",
+  "tool_frame_z_rad": 3.141592653589793,
+  "home_qpos": [
+    -1.1159036001750049e-08,
+    1.4466463733164918,
+    -1.2650348504201725,
+    -5.358037748824591e-08,
+    1.4764511809283598,
+    -0.3499999561488895
+  ],
+  "replan_steps": 5,
+  "gripper_state_scale": 0.8,
+  "notes": "180-degree symmetric parallel-gripper tool frame and corresponding virtual wrist-camera mount; physical URDF geometry/limits unchanged; no task-object feedback"
+}

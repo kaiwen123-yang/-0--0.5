@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "renderer": "llvmpipe (LLVM 15.0.7, 256 bits)",
+  "EGL_vendor_file": "/usr/share/glvnd/egl_vendor.d/50_mesa.json",
+  "EGL_software_device_index": 2,
+  "CUDA_VISIBLE_DEVICES": "",
+  "render_resolution": [
+    256,
+    256
+  ],
+  "task": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+  "images": [
+    "agentview_image",
+    "robot0_eye_in_hand_image"
+  ],
+  "physics_steps": 1,
+  "model_inference": false,
+  "elapsed_seconds": 1.744,
+  "scope": "CPU software rendering; GPU EGL and policy evaluation not tested"
+}

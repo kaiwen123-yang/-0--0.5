@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-24T21:02:56.468846+08:00",
+  "scope": "Remaining initial pipeline only: pi05 LoRA 1500 steps + full 1500 steps, validation/test videos and inference export. Excludes future continued training and real-robot fine-tuning.",
+  "pipeline_start": "2026-10-24T20:46:52+08:00",
+  "current_stage": "train-lora",
+  "lora_observed": {
+    "completed_steps": 124,
+    "planned_steps": 1500,
+    "samples": 123,
+    "median_sec_per_step": 0.8245415687561035,
+    "mean_sec_per_step": 1.3096461141012548,
+    "last50_mean_sec_per_step": 0.9778205299377442,
+    "remaining_compute_minutes_last50": 22.424684153238935,
+    "remaining_compute_minutes_all": 30.034550883388775
+  },
+  "other_observed": {
+    "completed_base_validation_episodes": 15,
+    "base_validation_wall_seconds": 197,
+    "previous_lora_checkpoint_async_save_seconds": 100.63,
+    "previous_full_checkpoint_async_save_seconds": 342.72,
+    "full_current_batch4_speed_measured": false
+  },
+  "estimated_remaining_minutes": {
+    "lora_including_final_save": [
+      25,
+      40
+    ],
+    "full_including_load_compile_save": [
+      40,
+      70
+    ],
+    "validation_tests_and_export": [
+      25,
+      35
+    ]
+  },
+  "estimated_total_remaining_hours": [
+    1.5,
+    2.5
+  ],
+  "conservative_budget_hours": [
+    2,
+    3
+  ],
+  "hourly_price_assumed_cny": 6.98,
+  "price_basis": "Previously confirmed instance price in AutoDL conversation; not a live account invoice.",
+  "gpu_cost_for_2_to_3_hours_cny": [
+    13.96,
+    20.94
+  ],
+  "suggested_balance_buffer_cny": 30,
+  "idle_24h_gpu_cost_cny": 167.52,
+  "account_balance_read": false,
+  "storage_included": false,
+  "automatic_shutdown_enabled": "Correction at 23:10: task script has none; separate AutoDL 22:00 timer was reported in the other thread",
+  "billing_source": "https://www.autodl.com/docs/price/",
+  "estimate_limitation": "Early LoRA throughput; full batch4 throughput still projected, network storage jitter and retries can extend duration.",
+  "estimate_after_interruption": "No longer current; recompute after restoring access and reading checkpoints"
+}

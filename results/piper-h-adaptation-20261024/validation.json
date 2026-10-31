@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "matched_scene_pairs": 6,
+  "full_initial_qpos_qvel_equal": true,
+  "original_videos_validated": 24,
+  "release_videos": [
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_00/trial_001/panorama-with-release.mp4",
+      "frames": 268,
+      "sha256": "a229c44aa8fdb6d573c50c5d1f659f5a3b46cbd5de9d72f8aeb970a51514ce88",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.4135504857146975,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_01/trial_000/panorama-with-release.mp4",
+      "frames": 229,
+      "sha256": "e514a5c1ab749221082bc7023eeb40884aea78b5fdeba6d142fb7fae8388c887",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.37694435676711846,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_000/panorama-with-release.mp4",
+      "frames": 209,
+      "sha256": "9d05e010254e56ce59b9cc19f691eb40f3daa3d124889e0baf37495df5eaaaba",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.42274614466536153,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174527/videos/pi0/libero_spatial/task_02/trial_001/panorama-with-release.mp4",
+      "frames": 193,
+      "sha256": "949f707e5db0ebac3c873e94b96b5fc70e21f41857d7e70212e206a40929ec3a",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.4152994712048746,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_00/trial_000/panorama-with-release.mp4",
+      "frames": 175,
+      "sha256": "ec6ec6e35b296b84de00d7d61959963b1cac89109189bb4f7063297c59aa895e",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.4205295388852411,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_000/panorama-with-release.mp4",
+      "frames": 213,
+      "sha256": "00a088d3aeb24481205a66a5d163e09418c04f52aee3491bbff2e4f86429ed36",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.41861521408110247,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_01/trial_001/panorama-with-release.mp4",
+      "frames": 211,
+      "sha256": "e538622684e1d8434047a418b8f66a010fb0ec0d5ecaf41719a61bed8d29137e",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.4170769458530517,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_000/panorama-with-release.mp4",
+      "frames": 187,
+      "sha256": "5edf38b9b023d918dbafb23c21e4f65981699e9b68bdcfe829a8891a4a7bc4e3",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.41242518313214,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    },
+    {
+      "video": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/piper-h-transfer-20261024-174003/videos/pi05/libero_spatial/task_02/trial_001/panorama-with-release.mp4",
+      "frames": 229,
+      "sha256": "c45fbf1af26f5c4c91e745231bb24b182841a8dd431fb73b3d85a6942ab505e7",
+      "full_decode": true,
+      "max_robot_projected_extent": 0.40335121459439244,
+      "caption_does_not_cover_robot": true,
+      "robot_target_contact_frames_last_2s": 0
+    }
+  ],
+  "all_policy_and_release_frames_contain_entire_robot": true
+}

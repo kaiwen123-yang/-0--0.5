@@ -1,0 +1,34 @@
+{
+  "source_commit": "680fa925cd00db7e2628563d2edc5540963045de",
+  "source_url": "https://github.com/agilexrobotics/agx_arm_urdf",
+  "arm_dof": 6,
+  "physical_finger_joints": 2,
+  "gripper_command_dof": 1,
+  "nominal_max_opening_m": 0.1,
+  "gripper_tcp_in_base_m": [
+    0,
+    0,
+    0.125
+  ],
+  "retained": "official link transforms, joint axes/limits, link inertias and STL geometry",
+  "simulation_additions": "motors, position actuators, damping, armature, friction, TCP and wrist camera; not identified from hardware",
+  "visuals": "official STL shapes with neutral display colors; DAE materials not reproduced",
+  "contacts": "MuJoCo convex hull of each official collision mesh; not calibrated real gripper contact",
+  "mimic": "removed massless virtual driver; physical fingers coupled q_right=-q_left",
+  "files": {
+    "repos/agx_arm_urdf/piper_h/urdf/piper_h_description.urdf": "e4a25bf410c2ec9529abeeb11df7e2e95fccf6e52d3224bf318c6c5763a409a8",
+    "repos/agx_arm_urdf/piper_h/urdf/piper_h_with_gripper_description.xacro": "b8b6a18a99d0991c78164a6c587a59c22012354828107e1af1bdc42d684429ec",
+    "repos/agx_arm_urdf/agx_gripper/urdf/agx_gripper_description.urdf": "e8ca1a5dad852e4afc88a56430b3f9a005b719c1c4fe648203b2bee0cff3b4c5",
+    "repos/agx_arm_urdf/piper_h/meshes/base_link.stl": "11105df3b27e8ba50429f75334abae7d37eb13fc54d7a711ccd16968d2b05d42",
+    "repos/agx_arm_urdf/piper_h/meshes/link1.stl": "55ed2dc7e060800e510505c23f7dc5d1f3d6e7b21d70a689e471fb525add4b1f",
+    "repos/agx_arm_urdf/piper_h/meshes/link2.stl": "4b60473539386cd5d81090eee3dbc8c8a10b3d81798b73da1ca4aed97990c49e",
+    "repos/agx_arm_urdf/piper_h/meshes/link3.stl": "4ea19f971be435ede84f647c11408d9de6c230d3a9ac7e06582cbc8102bf3dc7",
+    "repos/agx_arm_urdf/piper_h/meshes/link4.stl": "2077c29f1f370aaaa922be19be1610ce6a0a2553e0953a75fcb703bdb3fc2c07",
+    "repos/agx_arm_urdf/piper_h/meshes/link5.stl": "964670daa2832688d2322d6d67029de555d8e626211fea30f68e90b96c6d0fe3",
+    "repos/agx_arm_urdf/piper_h/meshes/link6.stl": "9222c39f2291d7b9839b1254b06a22876b19c071608041462a69bf7b565704a3",
+    "repos/agx_arm_urdf/piper_h/meshes/flange.stl": "f9ce752f93a6598858a779e3d8755a09e466b588efcffc3a1c3953773753a22b",
+    "repos/agx_arm_urdf/agx_gripper/meshes/gripper_base.stl": "0b839dc0bcb7d94e3422c74f6396b54a0441ba4836448ab5586e7f372d1bdbf3",
+    "repos/agx_arm_urdf/agx_gripper/meshes/gripper_link1.stl": "475a7d8db056524d7659fadf5a2c307d62791047b6214d733dfc7846ed1c613d",
+    "repos/agx_arm_urdf/agx_gripper/meshes/gripper_link2.stl": "3f88d534a85e28a33ef7d2061adacbd1d25214aa9325f9e464aad0f9e4b74606"
+  }
+}

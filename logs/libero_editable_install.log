@@ -1,0 +1,29 @@
+Using Python 3.11.16 environment at: pi-reproduction/envs/libero
+Resolved 10 packages in 4.80s
+   Building libero @ file:///home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/third_party/libero
+   Building openpi-client @ file:///home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/packages/openpi-client
+      Built libero @ file:///home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/third_party/libero
+      Built openpi-client @ file:///home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/packages/openpi-client
+Prepared 6 packages in 6.33s
+Installed 6 packages in 0.58ms
+ + dm-tree==0.1.10
+ + libero==0.1.0 (from file:///home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/third_party/libero)
+ + msgpack==1.2.3
+ + openpi-client==0.1.0 (from file:///home/fanyuan/projects/kaiwen-learning/pi-reproduction/repos/openpi/packages/openpi-client)
+ + websockets==17.3
+ + wrapt==2.5.1
+Using Python 3.11.16 environment at: pi-reproduction/envs/libero
+Resolved 2 packages in 2.31s
+   Building future==0.18.3
+      Built future==0.18.3
+Prepared 2 packages in 254ms
+Uninstalled 1 package in 0.34ms
+Installed 2 packages in 1ms
+ + future==0.18.3
+ - websockets==17.3
+ + websockets==15.0.1
+Using Python 3.11.16 environment at: pi-reproduction/envs/libero
+Resolved 1 package in 3.31s
+Prepared 1 package in 705ms
+Installed 1 package in 0.51ms
+ + easydict==1.13

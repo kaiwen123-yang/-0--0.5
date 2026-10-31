@@ -1,0 +1,14 @@
+{
+  "syntax": "pass",
+  "crc32c_known_vector": "pass",
+  "crc32c_incremental": "pass",
+  "http_range_resume": "pass",
+  "existing_file_reverification": "pass",
+  "same_size_corruption_detection": "pass",
+  "bounded_multi_request_range_resume": "pass",
+  "parallel_out_of_order_segment_assembly": "pass",
+  "parallel_disjoint_intervals": "pass",
+  "parallel_preserves_contiguous_resume": "pass",
+  "parallel_full_object_checksum": "pass",
+  "parallel_local_reverification": "pass"
+}

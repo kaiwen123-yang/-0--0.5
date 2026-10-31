@@ -1,0 +1,121 @@
+{
+  "completed_at": "2026-10-23T13:02:48.846723+00:00",
+  "downloader_exit_code": 0,
+  "complete": true,
+  "checkpoint_summary": {
+    "tokenizer": {
+      "total_bytes": 4264023,
+      "verified_files": 1,
+      "total_files": 1,
+      "complete": true,
+      "crc32c_verified_files": 1,
+      "official_md5_verified_files": 1,
+      "source": "gs://big_vision/paligemma_tokenizer.model",
+      "generation_pinned": true
+    },
+    "pi05_libero": {
+      "total_bytes": 12439085481,
+      "verified_files": 16,
+      "total_files": 16,
+      "complete": true,
+      "crc32c_verified_files": 16,
+      "official_md5_verified_files": 10,
+      "source": "gs://openpi-assets/checkpoints/pi05_libero/",
+      "generation_pinned": true
+    },
+    "pi0_libero": {
+      "total_bytes": 12014131888,
+      "verified_files": 19,
+      "total_files": 19,
+      "complete": true,
+      "crc32c_verified_files": 19,
+      "official_md5_verified_files": 19,
+      "source": "gs://openpi-assets/checkpoints/pi0_libero/",
+      "generation_pinned": true
+    },
+    "pi0_base": {
+      "total_bytes": 12014440489,
+      "verified_files": 33,
+      "total_files": 33,
+      "complete": true,
+      "crc32c_verified_files": 33,
+      "official_md5_verified_files": 33,
+      "source": "gs://openpi-assets/checkpoints/pi0_base/",
+      "generation_pinned": true
+    },
+    "pi05_base": {
+      "total_bytes": 12441749581,
+      "verified_files": 29,
+      "total_files": 29,
+      "complete": true,
+      "crc32c_verified_files": 29,
+      "official_md5_verified_files": 23,
+      "source": "gs://openpi-assets/checkpoints/pi05_base/",
+      "generation_pinned": true
+    }
+  },
+  "serving_check_only": {
+    "pi0": {
+      "checkpoint": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi0_libero",
+      "backend": "jax",
+      "validation": "download_record_and_file_sizes"
+    },
+    "pi05": {
+      "checkpoint": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/checkpoints/pi05_libero",
+      "backend": "jax",
+      "validation": "download_record_and_file_sizes"
+    }
+  },
+  "removed_empty_range_directories": [
+    "checkpoints/pi05_libero/params/ocdbt.process_0/d/efbb46173882cb35ed41ffe0c2db8a5e.ranges",
+    "checkpoints/pi0_libero/params/ocdbt.process_0/d/0ca4bf816ec10acaec0f62490a41529d.ranges",
+    "checkpoints/pi0_libero/params/ocdbt.process_0/d/2e38713b6caa7bfde0385f0adced748d.ranges",
+    "checkpoints/pi0_libero/params/ocdbt.process_0/d/7a559626d53988daabd96a179a6bff54.ranges",
+    "checkpoints/pi0_libero/params/ocdbt.process_0/d/e98fbfe843f0b1a0938e2e174f5fe64b.ranges",
+    "checkpoints/pi0_libero/params/ocdbt.process_0/d/f251f0005f1667fe8e596da96c894e50.ranges"
+  ],
+  "remaining_partial_files": [],
+  "base_checkpoints": "Both pi0_base and pi05_base are fully downloaded and whole-file verified against their generation-pinned official GCS manifests; available for later fine-tuning.",
+  "model_execution": "No GPU allocation, model inference, full checkpoint tensor restoration, training or robot execution performed by checkpoint preparation.",
+  "remaining_invalid_or_corrupt_files": [],
+  "remaining_range_directories": [],
+  "base_download": {
+    "started_at": "2026-10-23T12:29:35.128542+00:00",
+    "finished_at": "2026-10-23T12:59:06.833444+00:00",
+    "exit_code": 0,
+    "command": [
+      "/home/fanyuan/miniconda3/envs/kaiwen-learn/bin/python",
+      "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/scripts/download_checkpoints.py",
+      "--checkpoint",
+      "pi0_base",
+      "--checkpoint",
+      "pi05_base",
+      "--parallel-ranges",
+      "--workers",
+      "16",
+      "--chunk-mib",
+      "16",
+      "--max-seconds",
+      "2400"
+    ],
+    "log": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/logs/checkpoints-base-download.log",
+    "checksum_policy": "Whole-file CRC32C for every object and MD5 where the official manifest provides it. Final inventory reconciles recorded hashes against pinned manifests and checks current local file sizes.",
+    "empty_object_fix": "Downloader now materializes zero-byte GCS commit markers in both serial and segmented paths before normal checksum verification. Both paths passed a CPU-only zero-byte regression check without network requests."
+  },
+  "fast_checkpoints_manifest_only": {
+    "pi0_fast_base": {
+      "manifest": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/checkpoints-manifest-pi0_fast_base.json",
+      "total_bytes": 10850405453,
+      "total_files": 35,
+      "generation_pinned": true,
+      "weights_downloaded": false
+    },
+    "pi0_fast_droid": {
+      "manifest": "/home/fanyuan/projects/kaiwen-learning/pi-reproduction/results/checkpoints-manifest-pi0_fast_droid.json",
+      "total_bytes": 10841351138,
+      "total_files": 20,
+      "generation_pinned": true,
+      "weights_downloaded": false
+    }
+  }
+}

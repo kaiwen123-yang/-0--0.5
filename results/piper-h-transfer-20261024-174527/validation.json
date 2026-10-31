@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-24T09:47:48.814921+00:00",
+  "episodes": 6,
+  "video_files": 12,
+  "matched_scene_pairs": 0,
+  "full_video_decode": true,
+  "panorama_contains_entire_robot_in_all_saved_frames": true,
+  "projection_method": "Conservative camera-space visual mesh bounding spheres; all projected extents below 1",
+  "artifacts": [
+    {
+      "video": "videos/pi0/libero_spatial/task_00/trial_000/panorama.mp4",
+      "frames": 231,
+      "sha256": "b789ad76a2d6a9126217d0f7a38d4024cbb6e98636df273fdd56708642c06c60",
+      "max_robot_projected_extent": 0.5386131091071921,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_00/trial_000/multiview.mp4",
+      "frames": 231,
+      "sha256": "f7bce975b203b12c298a1c4f2ced902a0f2b73b5089b47d7f4ee447fd9fbde75",
+      "max_robot_projected_extent": 0.5386131091071921,
+      "joint_limit_violation_rad": 0.0
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_00/trial_001/panorama.mp4",
+      "frames": 167,
+      "sha256": "d228093f46512b6738e75b4813c5660d97603366972cfffb71e971b4dc85d232",
+      "max_robot_projected_extent": 0.5418284929416642,
+      "joint_limit_violation_rad": 2.667558381830304e-05
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_00/trial_001/multiview.mp4",
+      "frames": 167,
+      "sha256": "1c81a6fd3c804163cc15ce30db645a12fc0677b2c5c500d4bc11e439759bfd36",
+      "max_robot_projected_extent": 0.5418284929416642,
+      "joint_limit_violation_rad": 2.667558381830304e-05
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_01/trial_000/panorama.mp4",
+      "frames": 128,
+      "sha256": "23ec4577371046e59e62e87985e7994f4b1871537884964c7904f9e474b950df",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0015180379182999637
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_01/trial_000/multiview.mp4",
+      "frames": 128,
+      "sha256": "98f4e0c47607873dd72111b66d8ecdd07b71f6a8b42d33e212a66876693a7f73",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0015180379182999637
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_01/trial_001/panorama.mp4",
+      "frames": 231,
+      "sha256": "536d79e7d0ce341ac6209d692054fc0f874d9d26eb6719a8e38e165841a671bd",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.002053376635532622
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_01/trial_001/multiview.mp4",
+      "frames": 231,
+      "sha256": "dbb492e23f0a8308c39c4015a723a07349d0424696b7697533076067b48e4ec3",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.002053376635532622
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_02/trial_000/panorama.mp4",
+      "frames": 108,
+      "sha256": "333efb940acb84233cebe5ee32fc43068e36e50daf146fdd5be7a93015d51925",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0007915269323044427
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_02/trial_000/multiview.mp4",
+      "frames": 108,
+      "sha256": "9daf59984ff42dcb2e0de4a9c60e4e6ad179ed7fe37285d2803e9e913823a680",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0007915269323044427
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_02/trial_001/panorama.mp4",
+      "frames": 92,
+      "sha256": "6b95c9f922cb6d7ad4966005f25b2cd239793aa3d63e084f639be42218bf7229",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0006480476274948188
+    },
+    {
+      "video": "videos/pi0/libero_spatial/task_02/trial_001/multiview.mp4",
+      "frames": 92,
+      "sha256": "a4a73e57ed75fbce2b41bcc466bb4703c1ca8314305aaf8ba5b23d202680b798",
+      "max_robot_projected_extent": 0.5378649970427803,
+      "joint_limit_violation_rad": 0.0006480476274948188
+    }
+  ]
+}

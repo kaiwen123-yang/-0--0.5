@@ -1,0 +1,1025 @@
+{
+  "_id": "69128fbd9792e8156b68ca4d",
+  "id": "aromanus/openpi_PiPER_demo_train_2",
+  "author": "aromanus",
+  "sha": "e00910709205e98d515844659ef1fe8b4b847fc0",
+  "lastModified": "2025-11-13T01:38:17.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:robotics",
+    "license:apache-2.0",
+    "size_categories:10K<n<100K",
+    "format:parquet",
+    "modality:tabular",
+    "modality:timeseries",
+    "modality:video",
+    "library:datasets",
+    "library:dask",
+    "library:mlcroissant",
+    "library:polars",
+    "region:us",
+    "LeRobot"
+  ],
+  "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.1\",\n    \"robot_type\": \"piper\",\n    \"total_episodes\": 80,\n    \"total_frames\": 26990,\n    \"total_tasks\": 1,\n    \"total_videos\": 240,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 30,\n    \"splits\": {\n        \"train\": \"0:80\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":\u2026 See the full description on the dataset page: https://huggingface.co/datasets/aromanus/openpi_PiPER_demo_train_2.",
+  "downloads": 109,
+  "likes": 0,
+  "cardData": {
+    "license": "apache-2.0",
+    "task_categories": [
+      "robotics"
+    ],
+    "tags": [
+      "LeRobot"
+    ],
+    "configs": [
+      {
+        "config_name": "default",
+        "data_files": "data/*/*.parquet"
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000000.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000001.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000002.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000003.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000004.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000005.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000006.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000007.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000008.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000009.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000010.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000011.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000012.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000013.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000014.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000015.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000016.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000017.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000018.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000019.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000020.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000021.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000022.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000023.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000024.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000025.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000026.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000027.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000028.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000029.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000030.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000031.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000032.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000033.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000034.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000035.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000036.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000037.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000038.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000039.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000040.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000041.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000042.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000043.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000044.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000045.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000046.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000047.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000048.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000049.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000050.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000051.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000052.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000053.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000054.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000055.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000056.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000057.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000058.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000059.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000060.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000061.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000062.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000063.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000064.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000065.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000066.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000067.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000068.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000069.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000070.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000071.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000072.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000073.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000074.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000075.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000076.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000077.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000078.parquet"
+    },
+    {
+      "rfilename": "data/chunk-000/episode_000079.parquet"
+    },
+    {
+      "rfilename": "meta/episodes.jsonl"
+    },
+    {
+      "rfilename": "meta/episodes_stats.jsonl"
+    },
+    {
+      "rfilename": "meta/info.json"
+    },
+    {
+      "rfilename": "meta/tasks.jsonl"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000000.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000001.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000002.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000003.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000004.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000005.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000006.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000007.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000008.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000009.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000010.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000011.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000012.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000013.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000014.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000015.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000016.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000017.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000018.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000019.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000020.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000021.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000022.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000023.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000024.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000025.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000026.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000027.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000028.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000029.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000030.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000031.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000032.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000033.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000034.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000035.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000036.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000037.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000038.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000039.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000040.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000041.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000042.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000043.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000044.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000045.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000046.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000047.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000048.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000049.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000050.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000051.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000052.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000053.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000054.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000055.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000056.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000057.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000058.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000059.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000060.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000061.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000062.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000063.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000064.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000065.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000066.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000067.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000068.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000069.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000070.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000071.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000072.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000073.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000074.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000075.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000076.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000077.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000078.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.left_camera/episode_000079.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000000.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000001.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000002.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000003.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000004.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000005.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000006.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000007.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000008.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000009.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000010.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000011.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000012.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000013.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000014.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000015.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000016.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000017.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000018.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000019.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000020.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000021.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000022.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000023.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000024.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000025.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000026.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000027.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000028.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000029.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000030.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000031.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000032.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000033.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000034.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000035.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000036.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000037.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000038.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000039.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000040.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000041.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000042.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000043.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000044.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000045.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000046.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000047.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000048.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000049.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000050.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000051.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000052.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000053.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000054.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000055.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000056.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000057.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000058.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000059.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000060.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000061.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000062.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000063.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000064.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000065.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000066.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000067.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000068.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000069.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000070.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000071.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000072.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000073.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000074.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000075.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000076.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000077.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000078.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.right_camera/episode_000079.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000000.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000001.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000002.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000003.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000004.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000005.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000006.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000007.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000008.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000009.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000010.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000011.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000012.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000013.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000014.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000015.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000016.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000017.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000018.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000019.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000020.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000021.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000022.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000023.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000024.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000025.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000026.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000027.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000028.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000029.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000030.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000031.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000032.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000033.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000034.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000035.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000036.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000037.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000038.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000039.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000040.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000041.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000042.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000043.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000044.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000045.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000046.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000047.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000048.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000049.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000050.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000051.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000052.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000053.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000054.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000055.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000056.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000057.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000058.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000059.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000060.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000061.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000062.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000063.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000064.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000065.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000066.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000067.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000068.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000069.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000070.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000071.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000072.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000073.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000074.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000075.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000076.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000077.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000078.mp4"
+    },
+    {
+      "rfilename": "videos/chunk-000/observation.images.top_camera/episode_000079.mp4"
+    }
+  ],
+  "createdAt": "2025-11-11T01:22:05.000Z",
+  "usedStorage": 556975959
+}
