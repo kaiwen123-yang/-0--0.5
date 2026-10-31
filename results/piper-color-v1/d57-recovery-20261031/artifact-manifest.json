@@ -1,0 +1,29 @@
+{
+  "repository": "kaiwen123-yang/-0--0.5",
+  "source_commit": "0f8fc4671a98be3edcf5285c9844c35dde2a9e25",
+  "tag": "piper-color-d57-recovery-20261031",
+  "archive_files": 193,
+  "archive_videos": 45,
+  "archive_trajectories_npz": 47,
+  "excluded": [
+    "private run.json containing unrelated process command lines"
+  ],
+  "assets": [
+    {
+      "name": "piper-color-d57-recovery-20261031.tar.gz",
+      "bytes": 36953347,
+      "sha256": "09417dd61f3f600663a5241db2afe45fe52a3a09d5dcfce1620963cf9547cdcd"
+    },
+    {
+      "name": "validation-failure-layout01000-blue.mp4",
+      "bytes": 691915,
+      "sha256": "b546536a395aa703ae1e85959b8c6ad5820a741dca86e75824b81e8ab22747be"
+    },
+    {
+      "name": "validation-success-layout01000-green.mp4",
+      "bytes": 475455,
+      "sha256": "a7fee5370891ca548249fafabbf26ce676d7be4cdd8c651627d7587c6fd54150"
+    }
+  ],
+  "note": "Two complete autonomous validation runs are 3/15 and 0/15. Teacher-prefix videos are interventions and not autonomous successes. No training or hardware execution."
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "status": "evaluation_and_diagnosis_complete_publication_pending",
+  "status": "evaluation_and_diagnosis_complete_assets_verified",
   "checkpoint": "historical pi05_piper_color_lora/v1/1499; inference parameters only",
   "historical_validation": {
     "successes": 0,
@@ -82,5 +82,7 @@
   },
   "next_plan": "docs/PI0_FIRST_PLAN.md",
   "release_tag": "piper-color-d57-recovery-20261031",
-  "release_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/piper-color-d57-recovery-20261031"
+  "release_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/piper-color-d57-recovery-20261031",
+  "publication_receipt": "publication.json",
+  "artifact_manifest": "artifact-manifest.json"
 }
