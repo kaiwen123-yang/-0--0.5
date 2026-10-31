@@ -98,3 +98,5 @@
 第一轮教师回放虽然任务成功，但未满足诊断程序最初设定的 1e-5 数值重合阈值。教师动作曾由 float64 保存成 float32，原状态与回放状态的差异保留；后续用原完整任务判据衡量教师可执行性，原策略完整精度命令的逐步重合要求保留。原始尝试记录在 `replay` 和 `logs/replay.log`。
 
 静态保持的三秒对照中，教师会从略高于 5 cm 回落到约 4.4 cm，但仍保持双侧接触；因此 `held_5cm_at_end` 不能当作“是否掉落”。最终报告采用实际双侧接触与离桌高度，并单列十秒实测结果。所有完整任务成功条件均未放宽。
+
+完整轨迹、视频、日志与源码快照已发布到 [诊断 Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi0-failure-diagnosis-20261101)，逐文件 SHA256 见 Release 中的 package-manifest.json，上传核验见 release_receipt.json。
