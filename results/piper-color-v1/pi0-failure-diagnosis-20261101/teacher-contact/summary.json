@@ -1,0 +1,268 @@
+{
+  "episodes": [
+    {
+      "layout": 100,
+      "target": "red",
+      "impratio": 10,
+      "teacher_replay": true,
+      "autonomous_policy_result": false,
+      "success": true,
+      "terminal": {
+        "layout_seed": 100,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14390620602030424,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14117451647883392,
+            0.15917646979515343,
+            0.025393255988701225
+          ],
+          "green": [
+            -0.22562051434796598,
+            -0.14729648724287664,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.19173767693702598,
+            -0.032298792286188725,
+            0.017393255988701235
+          ]
+        },
+        "steps": 308
+      }
+    },
+    {
+      "layout": 100,
+      "target": "green",
+      "impratio": 10,
+      "teacher_replay": true,
+      "autonomous_policy_result": false,
+      "success": true,
+      "terminal": {
+        "layout_seed": 100,
+        "target": "green",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.14365523339816266,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.13591182923154704,
+            -0.16279735601854017,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.14074495969741369,
+            0.15939484410038124,
+            0.025393255988701215
+          ],
+          "blue": [
+            -0.19173767693702598,
+            -0.032298792286188725,
+            0.017393255988701235
+          ]
+        },
+        "steps": 308
+      }
+    },
+    {
+      "layout": 100,
+      "target": "blue",
+      "impratio": 10,
+      "teacher_replay": true,
+      "autonomous_policy_result": false,
+      "success": true,
+      "terminal": {
+        "layout_seed": 100,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.14379984009451047
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.13591182923154704,
+            -0.16279735601854017,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.22562051434796598,
+            -0.14729648724287664,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.13838694374699562,
+            0.16023109605624147,
+            0.02539325598870123
+          ]
+        },
+        "steps": 308
+      }
+    },
+    {
+      "layout": 101,
+      "target": "red",
+      "impratio": 10,
+      "teacher_replay": true,
+      "autonomous_policy_result": false,
+      "success": true,
+      "terminal": {
+        "layout_seed": 101,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.1437655472360112,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.1390598434711335,
+            0.16155866685549708,
+            0.025393255988701232
+          ],
+          "green": [
+            -0.12202544846576255,
+            -0.14744421081155457,
+            0.017393255988701246
+          ],
+          "blue": [
+            -0.22258108984088218,
+            -0.15393621106847077,
+            0.017393255988701246
+          ]
+        },
+        "steps": 308
+      }
+    },
+    {
+      "layout": 101,
+      "target": "green",
+      "impratio": 10,
+      "teacher_replay": true,
+      "autonomous_policy_result": false,
+      "success": true,
+      "terminal": {
+        "layout_seed": 101,
+        "target": "green",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.14393709392586657,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.2107588002884965,
+            -0.02316368078015866,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.14116010495557016,
+            0.1591608663709118,
+            0.02539325598870122
+          ],
+          "blue": [
+            -0.22258108984088218,
+            -0.15393621106847077,
+            0.017393255988701235
+          ]
+        },
+        "steps": 308
+      }
+    },
+    {
+      "layout": 101,
+      "target": "blue",
+      "impratio": 10,
+      "teacher_replay": true,
+      "autonomous_policy_result": false,
+      "success": true,
+      "terminal": {
+        "layout_seed": 101,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.1436624355275758
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.2107588002884965,
+            -0.02316368078015866,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.12202544846576255,
+            -0.14744421081155457,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14058351052667753,
+            0.1576379605743666,
+            0.025393255988701232
+          ]
+        },
+        "steps": 308
+      }
+    }
+  ]
+}

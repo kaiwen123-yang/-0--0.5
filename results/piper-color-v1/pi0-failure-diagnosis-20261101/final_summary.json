@@ -1,0 +1,43 @@
+{
+  "completed_at_utc": "2026-10-31T17:02:17.283067+00:00",
+  "original_checkpoint": "pi0_piper_color_lora/six_demo_v1/2010",
+  "new_optimizer_updates": 0,
+  "hardware_commands": 0,
+  "original_autonomous_results": {
+    "seed42": "2/6",
+    "seed43": "2/6"
+  },
+  "teacher_original_full_replay": "6/6",
+  "policy_replay_count": 12,
+  "policy_qpos_replay_max_difference": 0,
+  "teacher_prefix_original_failure_successes": {
+    "60": "3/8",
+    "85": "6/8",
+    "115": "8/8"
+  },
+  "teacher_hold10_original": "0/6",
+  "teacher_hold10_impratio10": "6/6",
+  "teacher_hold10_noslip3": "6/6",
+  "teacher_hold10_friction2": "0/6",
+  "teacher_candidate_full_replay": "6/6",
+  "frozen_policy_impratio10": [
+    {
+      "base_seed": 42,
+      "successes": 4,
+      "total": 6,
+      "diagnostic_environment_intervention": true
+    },
+    {
+      "base_seed": 43,
+      "successes": 1,
+      "total": 6,
+      "diagnostic_environment_intervention": true
+    }
+  ],
+  "post_drop_regrasp_observed": "0/5",
+  "source_train_episodes": 120,
+  "source_train_starts": 32160,
+  "next_training_started": false,
+  "report": "REPORT_zh.md",
+  "next_plan": "docs/PI0_120_DEMO_NEXT_PLAN_20261101.md"
+}

@@ -1,0 +1,35 @@
+MODEL_LOADED {"model_family": "pi0", "robot": "Piper H", "action_units": "6 joint rad + opening m", "training_domain": "simulation", "state_input": "continuous", "normalization": "mean_std", "training_layouts": [100, 101], "hardware_validated": false, "cameras": "external RGB + wrist RGB; virtual uncalibrated geometry", "mode": "lora", "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010", "norm_stats": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/assets/piper_h_color_v1", "seed": 42, "reset_seed_supported": true, "action_horizon": 10, "flow_denoising_steps": 10}
+INFO:websockets.server:server listening on 127.0.0.1:18767
+INFO:websockets.server:connection open
+INFO:websockets.server:connection open
+INFO:websockets.server:server closing
+INFO:websockets.server:server closed
+Traceback (most recent call last):
+  File "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/src/openpi/serving/websocket_policy_server.py", line 46, in run
+    await server.serve_forever()
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/asyncio/server.py", line 540, in serve_forever
+    await self.server.serve_forever()
+  File "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/asyncio/base_events.py", line 370, in serve_forever
+    await self._serving_forever_fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/serve.py", line 63, in <module>
+    metadata=metadata).serve_forever()
+                       ^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/src/openpi/serving/websocket_policy_server.py", line 35, in serve_forever
+    asyncio.run(self.run())
+  File "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

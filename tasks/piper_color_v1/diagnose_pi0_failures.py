@@ -226,9 +226,35 @@ def physics_probes(replay_dir, out, modes=("recorded_motion", "hold_pose_3s", "d
                 env.close()
 
 
+def teacher_contact_replay(out):
+    out.mkdir(parents=True, exist_ok=False)
+    env = ColorEnv(render=False)
+    env.model.opt.impratio = 10
+    rows = []
+    try:
+        for layout in (100, 101):
+            for color in COLORS:
+                env.reset(layout, color)
+                with np.load(DATA / "train" / f"layout_{layout:05d}_{color}.npz", allow_pickle=False) as x:
+                    actions = x["action"].copy()
+                for action in actions:
+                    env.step(action)
+                stable = []
+                for _ in range(40):
+                    env.step(env.command)
+                    stable.append(env.result()["success"])
+                rows.append({"layout": layout, "target": color, "impratio": 10,
+                             "teacher_replay": True, "autonomous_policy_result": False,
+                             "success": bool(all(stable)), "terminal": env.result()})
+                save(out / "summary.json", {"episodes": rows})
+                print("TEACHER_CONTACT", layout, color, rows[-1]["success"], flush=True)
+    finally:
+        env.close()
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("stage", choices=["replay", "physics"])
+    p.add_argument("stage", choices=["replay", "physics", "teacher-contact"])
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--replay", type=Path)
     p.add_argument("--physics-modes", nargs="+", choices=["recorded_motion", "hold_pose_3s", "double_friction", "hold_pose_10s", "recenter_x_hold_10s", "hold_impratio10", "hold_noslip3", "hold_friction2"],
@@ -236,5 +262,7 @@ if __name__ == "__main__":
     a = p.parse_args()
     if a.stage == "replay":
         replay(a.output)
+    elif a.stage == "teacher-contact":
+        teacher_contact_replay(a.output)
     else:
         physics_probes(a.replay, a.output, a.physics_modes)
