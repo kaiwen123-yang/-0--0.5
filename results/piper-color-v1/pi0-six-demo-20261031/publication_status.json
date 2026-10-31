@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-31T14:18:06.863388+00:00",
-  "stage": "train-update-500",
+  "updated_at_utc": "2026-10-31T14:22:18.873174+00:00",
+  "stage": "train-update-1000",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031",
   "branch": "codex/pi0-six-demo-20261031",
   "tracked_files": [
@@ -28,6 +28,25 @@
       "resume": {
         "completed_updates": 500,
         "sample_offset": 2000,
+        "sample_order_sha256": "c44e94e122738d8b53877a0b871197789c9a48df5377be8a5253f6360bf0a89d",
+        "train_rng_key_data": [
+          1832780943,
+          270669613
+        ],
+        "rng_rule": "OpenPI folds train_rng with restored train_state.step",
+        "config_sha256": "eed6309de559a2a30f5a457139ce60c0d82b1612ad7290968b5e6b1e0bf70ad0",
+        "optimizer_saved_by": "OpenPI train_state item"
+      },
+      "uploaded": false
+    },
+    {
+      "updates": 1000,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000",
+      "file_count": 45,
+      "bytes": 9809470863,
+      "resume": {
+        "completed_updates": 1000,
+        "sample_offset": 4000,
         "sample_order_sha256": "c44e94e122738d8b53877a0b871197789c9a48df5377be8a5253f6360bf0a89d",
         "train_rng_key_data": [
           1832780943,
