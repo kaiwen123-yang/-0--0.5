@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-10-31T18:10:12.541647+00:00",
+  "metrics_snapshot_updates": 692,
+  "contiguous_from_1": true,
+  "all_metrics_finite": true,
+  "sampling_indices_and_counter_valid": true,
+  "latest_observed_loss": 0.27215008721426837,
+  "last_100_mean_compute_seconds": 0.29488153256475924,
+  "last_100_mean_data_wait_seconds": 0.018386769816279413,
+  "checkpoint_updates": 500,
+  "checkpoint_file_count": 50,
+  "checkpoint_bytes": 9807774157,
+  "checkpoint_items_present": [
+    "params",
+    "train_state",
+    "assets",
+    "resume.json",
+    "_CHECKPOINT_METADATA"
+  ],
+  "config_and_sampler_checksums_match": true,
+  "checkpoint_restore_not_yet_exercised": true,
+  "automatic_500_push_commit": "3d0ecc77f2286e51638c77af874a28c7b1c30282",
+  "remote_head_matches_receipt": true,
+  "training_pid": 48181,
+  "supervisor_pid": 46801,
+  "stage": "train_to_2010",
+  "hardware_execution": false,
+  "new_policy_closed_loop_evaluation": "pending first 2010-update checkpoint"
+}

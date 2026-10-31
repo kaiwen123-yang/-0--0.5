@@ -1,6 +1,6 @@
 {
-  "stage": "train-update-500",
-  "snapshot_at_utc": "2026-10-31T18:09:07.094044+00:00",
+  "stage": "stable-handoff-after-500",
+  "snapshot_at_utc": "2026-10-31T18:10:25.779293+00:00",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
   "branch": "codex/pi0-120-demo-v2-20261101",
   "tracked_files": [
@@ -48,6 +48,7 @@
     "evaluations/baseline_old2010_v2_validation_seed43/summary.json",
     "execution_events.jsonl",
     "generate.exit",
+    "handoff_verification.json",
     "logs/baseline_old2010_v2_validation_seed42.log",
     "logs/baseline_old2010_v2_validation_seed43.log",
     "logs/generate.log",
