@@ -11,6 +11,18 @@
       "bilateral_lift": 6,
       "over_box": 6,
       "observed_drops": 0
+    },
+    {
+      "evaluation": "baseline_old2010_v2_validation_seed43",
+      "split": "validation",
+      "successes": 6,
+      "total": 15,
+      "errors": 0,
+      "complete": true,
+      "lifted_5cm": 10,
+      "bilateral_lift": 10,
+      "over_box": 8,
+      "observed_drops": 0
     }
   ],
   "test_used": false,
