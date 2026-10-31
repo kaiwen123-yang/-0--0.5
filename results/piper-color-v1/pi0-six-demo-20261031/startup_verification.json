@@ -1,0 +1,13 @@
+{
+  "verified_at_utc": "2026-10-31T14:15:34.960828+00:00",
+  "completed_updates_at_snapshot": 214,
+  "all_updates_logged_contiguously": true,
+  "all_logged_metrics_finite": true,
+  "measured_update_wall_seconds_mean": 0.4562946892856212,
+  "measured_update_wall_seconds_median": 0.47185468673706055,
+  "first_compiled_update_seconds": 104.50856355205178,
+  "estimated_remaining_compute_minutes": 13.658421032616262,
+  "estimate_excludes": "checkpoint IO, GitHub publication, evaluation, future resource contention",
+  "gpu_processes": "pid, process_name, used_gpu_memory [MiB]\n3269, python, 754 MiB\n15983, python, 21872 MiB\n27953, python, 33384 MiB\n",
+  "other_jobs": "   PID     ELAPSED STAT\n  3269    03:57:31 Rl+\n 15983    02:00:25 Rl+\n"
+}

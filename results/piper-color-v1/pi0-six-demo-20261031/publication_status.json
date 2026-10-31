@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-10-31T14:12:49.865746+00:00",
-  "stage": "started",
+  "updated_at_utc": "2026-10-31T14:15:36.254216+00:00",
+  "stage": "stable-after-100-updates",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031",
   "branch": "codex/pi0-six-demo-20261031",
   "tracked_files": [
@@ -9,10 +9,15 @@
     "dataset/manifest.json",
     "logs/prepare.log",
     "logs/train.log",
+    "lora_metrics.jsonl",
     "lora_training.json",
     "normalization.json",
+    "publication_receipts.jsonl",
     "run.json",
-    "train_config.txt"
+    "startup_verification.json",
+    "train_config.txt",
+    "training_eta.json",
+    "training_progress.json"
   ],
   "local_checkpoints": [],
   "publication_scope": "source/config and all per-update logs; model parameters, optimizer, videos and NPZ remain on D57",
