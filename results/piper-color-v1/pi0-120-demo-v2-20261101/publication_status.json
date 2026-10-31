@@ -1,0 +1,21 @@
+{
+  "stage": "teacher-controls-and-data-progress",
+  "snapshot_at_utc": "2026-10-31T17:56:57.681536+00:00",
+  "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
+  "branch": "codex/pi0-120-demo-v2-20261101",
+  "tracked_files": [
+    "data_progress.json",
+    "dataset/manifest.json",
+    "logs/generate.log",
+    "logs/supervisor.log",
+    "resources.jsonl",
+    "run.json",
+    "scene/scene.xml",
+    "scene/version.json",
+    "teacher_controls.json"
+  ],
+  "local_checkpoints": [],
+  "publication_scope": "source, config, all per-update logs, teacher and evaluation JSON, scene and checksums",
+  "binary_location": "D57: regenerated RGB data, full checkpoints, videos and raw trajectories retained locally",
+  "success_criterion": "Complete closed-loop task under the frozen v2 environment"
+}
