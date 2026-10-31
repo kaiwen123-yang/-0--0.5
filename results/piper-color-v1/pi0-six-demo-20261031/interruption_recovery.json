@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-10-31T14:55:25.271679+00:00",
+  "interruption_update": 1000,
+  "observed_failure": "GitHub direct connection: GnuTLS TLS termination, HTTP2 framing error, and connection timeout; publisher exception stopped training",
+  "normal_push_500_commit": "f60773f0e39700b684fb4619710fc9e3b7a6005b",
+  "delayed_update_1000_commit": "a4c7a4a",
+  "backfilled_failure_head": "13631f5",
+  "backfilled": true,
+  "repair": "repository-scoped existing proxy, HTTP1.1, bounded delivery attempts and explicit pending status independent of computation",
+  "resume_planned_from": 1000,
+  "remaining_update_budget": 1010,
+  "training_or_evaluation_not_yet_completed": true
+}

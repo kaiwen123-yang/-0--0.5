@@ -1,12 +1,13 @@
 {
-  "updated_at_utc": "2026-10-31T14:23:52.114821+00:00",
-  "stage": "failed",
+  "updated_at_utc": "2026-10-31T14:55:26.314886+00:00",
+  "stage": "recovery-prepared",
   "run_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031",
   "branch": "codex/pi0-six-demo-20261031",
   "tracked_files": [
     "assets/piper_h_color_v1/norm_stats.json",
     "dataset/index.json",
     "dataset/manifest.json",
+    "interruption_recovery.json",
     "logs/prepare.log",
     "logs/train.log",
     "lora_metrics.jsonl",

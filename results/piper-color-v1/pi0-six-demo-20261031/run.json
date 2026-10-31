@@ -42,5 +42,6 @@
   "hardware_execution": false,
   "updated_at": "2026-10-31T14:11:30.394616+00:00",
   "error": "CalledProcessError(1, ['bash', '/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_six_d57.sh', 'train'])",
-  "finished_at": "2026-10-31T14:23:52.051649+00:00"
+  "finished_at": "2026-10-31T14:23:52.051649+00:00",
+  "failure_publication_error": "CalledProcessError(1, ['/root/miniconda3/bin/python', '/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py', '/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031', '--stage', 'failed'])"
 }
