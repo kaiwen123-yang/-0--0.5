@@ -1,0 +1,834 @@
+{
+  "model_family": "pi0",
+  "training": {
+    "model_family": "pi0",
+    "mode": "lora",
+    "requested_steps": 2010,
+    "batch_size": 4,
+    "seed": 42,
+    "trainable_parameters": 468039440,
+    "total_parameters": 3288036112,
+    "training_domain": "synthetic_piper_h",
+    "hardware_execution": false,
+    "completed": true,
+    "completed_updates": 2010,
+    "checkpoints": [
+      "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/500",
+      "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000",
+      "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1500",
+      "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000",
+      "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010"
+    ],
+    "resumed_from_update": 1000,
+    "prior_attempt_wall_seconds": 734.035357568413,
+    "initialization_seconds": 9.219351012259722,
+    "wall_seconds": 632.4939232412726,
+    "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+    "cumulative_train_process_wall_seconds": 1366.5292808096856,
+    "jax_memory_stats": {
+      "num_allocs": 36546,
+      "bytes_in_use": 12076578304,
+      "peak_bytes_in_use": 18902830080,
+      "largest_alloc_size": 6824325376,
+      "bytes_limit": 50987925504,
+      "bytes_reserved": 0,
+      "peak_bytes_reserved": 0,
+      "largest_free_block_bytes": 0,
+      "pool_bytes": 34361835520,
+      "peak_pool_bytes": 34361835520
+    }
+  },
+  "evaluations": [
+    {
+      "name": "eval_1000_seed42",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000",
+      "base_seed": 42,
+      "successes": 0,
+      "total": 6,
+      "complete": true,
+      "wall_seconds": 92.79346505366266,
+      "episodes": [
+        {
+          "layout_seed": 100,
+          "target": "red",
+          "episode_seed": 342,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00100_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00100_red.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "green",
+          "episode_seed": 343,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00100_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00100_green.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "blue",
+          "episode_seed": 344,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00100_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00100_blue.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "red",
+          "episode_seed": 345,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00101_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00101_red.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "green",
+          "episode_seed": 346,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00101_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00101_green.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "blue",
+          "episode_seed": 347,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00101_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1000_seed42/layout_00101_blue.npz"
+        }
+      ]
+    },
+    {
+      "name": "eval_1500_seed42",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1500",
+      "base_seed": 42,
+      "successes": 1,
+      "total": 6,
+      "complete": true,
+      "wall_seconds": 87.40023544616997,
+      "episodes": [
+        {
+          "layout_seed": 100,
+          "target": "red",
+          "episode_seed": 342,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.00020644296300614506,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00100_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00100_red.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "green",
+          "episode_seed": 343,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00100_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00100_green.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "blue",
+          "episode_seed": 344,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.04150099947581049
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00100_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00100_blue.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "red",
+          "episode_seed": 345,
+          "success": true,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": true,
+          "correct_in_box_final": true,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": true,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": null,
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00101_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00101_red.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "green",
+          "episode_seed": 346,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00101_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00101_green.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "blue",
+          "episode_seed": 347,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00101_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_1500_seed42/layout_00101_blue.npz"
+        }
+      ]
+    },
+    {
+      "name": "eval_2000_seed42",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000",
+      "base_seed": 42,
+      "successes": 1,
+      "total": 6,
+      "complete": true,
+      "wall_seconds": 86.0174094568938,
+      "episodes": [
+        {
+          "layout_seed": 100,
+          "target": "red",
+          "episode_seed": 342,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00100_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00100_red.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "green",
+          "episode_seed": 343,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0001540012924662309
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00100_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00100_green.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "blue",
+          "episode_seed": 344,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0012610486812670927
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00100_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00100_blue.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "red",
+          "episode_seed": 345,
+          "success": true,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": true,
+          "correct_in_box_final": true,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": true,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": null,
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00101_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00101_red.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "green",
+          "episode_seed": 346,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00101_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00101_green.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "blue",
+          "episode_seed": 347,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00101_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2000_seed42/layout_00101_blue.npz"
+        }
+      ]
+    },
+    {
+      "name": "eval_2010_seed42",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+      "base_seed": 42,
+      "successes": 2,
+      "total": 6,
+      "complete": true,
+      "wall_seconds": 80.32070045918226,
+      "episodes": [
+        {
+          "layout_seed": 100,
+          "target": "red",
+          "episode_seed": 342,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00100_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00100_red.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "green",
+          "episode_seed": 343,
+          "success": true,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": true,
+          "correct_in_box_final": true,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": true,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": null,
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00100_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00100_green.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "blue",
+          "episode_seed": 344,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00100_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00100_blue.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "red",
+          "episode_seed": 345,
+          "success": true,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": true,
+          "correct_in_box_final": true,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": true,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": null,
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_red.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "green",
+          "episode_seed": 346,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_green.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "blue",
+          "episode_seed": 347,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed42/layout_00101_blue.npz"
+        }
+      ]
+    },
+    {
+      "name": "eval_2010_seed43",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+      "base_seed": 43,
+      "successes": 2,
+      "total": 6,
+      "complete": true,
+      "wall_seconds": 83.88502870313823,
+      "episodes": [
+        {
+          "layout_seed": 100,
+          "target": "red",
+          "episode_seed": 343,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00100_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00100_red.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "green",
+          "episode_seed": 344,
+          "success": true,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": true,
+          "correct_in_box_final": true,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": true,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": null,
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00100_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00100_green.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "blue",
+          "episode_seed": 345,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00100_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00100_blue.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "red",
+          "episode_seed": 346,
+          "success": true,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": true,
+          "correct_in_box_final": true,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": true,
+          "distractor_displacement_m": {
+            "green": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": null,
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00101_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00101_red.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "green",
+          "episode_seed": 347,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.02612632197709161
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00101_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00101_green.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "blue",
+          "episode_seed": 348,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00101_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_2010_seed43/layout_00101_blue.npz"
+        }
+      ]
+    },
+    {
+      "name": "eval_500_seed42",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/500",
+      "base_seed": 42,
+      "successes": 0,
+      "total": 6,
+      "complete": true,
+      "wall_seconds": 121.9338959120214,
+      "episodes": [
+        {
+          "layout_seed": 100,
+          "target": "red",
+          "episode_seed": 342,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0504901359645428,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00100_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00100_red.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "green",
+          "episode_seed": 343,
+          "success": false,
+          "target_lifted_5cm": true,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "lifted_but_not_over_box",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00100_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00100_green.npz"
+        },
+        {
+          "layout_seed": 100,
+          "target": "blue",
+          "episode_seed": 344,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.019626042260424567,
+            "green": 0.03435034097818974
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00100_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00100_blue.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "red",
+          "episode_seed": 345,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "green": 0.0040852141800999334,
+            "blue": 0.035100807126690545
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00101_red.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00101_red.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "green",
+          "episode_seed": 346,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": true,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "blue": 0.003886870626385915
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00101_green.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00101_green.npz"
+        },
+        {
+          "layout_seed": 101,
+          "target": "blue",
+          "episode_seed": 347,
+          "success": false,
+          "target_lifted_5cm": false,
+          "target_ever_over_box": false,
+          "correct_in_box_final": false,
+          "wrong_in_box_final": false,
+          "gripper_open_final": false,
+          "stable_2s": false,
+          "distractor_displacement_m": {
+            "red": 0.0,
+            "green": 0.0
+          },
+          "max_joint_violation_rad": 0.0,
+          "failure_observation": "target_not_lifted_5cm",
+          "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00101_blue.mp4",
+          "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/evaluations/eval_500_seed42/layout_00101_blue.npz"
+        }
+      ]
+    }
+  ],
+  "development_gate_passed": false,
+  "scope": "Training-layout learning check; no held-out generalization or hardware evaluation",
+  "success_definition": "correct color in box, wrong colors excluded, gripper open, distractors and joints within original limits, all conditions held continuously for 2 seconds",
+  "physics_clock": "paused during inference",
+  "next_training_started": false
+}

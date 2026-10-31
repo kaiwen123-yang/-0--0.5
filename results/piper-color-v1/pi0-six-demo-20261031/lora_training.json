@@ -20,6 +20,19 @@
   "resumed_from_update": 1000,
   "prior_attempt_wall_seconds": 734.035357568413,
   "initialization_seconds": 9.219351012259722,
-  "wall_seconds": 629.2622009366751,
-  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010"
+  "wall_seconds": 632.4939232412726,
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+  "cumulative_train_process_wall_seconds": 1366.5292808096856,
+  "jax_memory_stats": {
+    "num_allocs": 36546,
+    "bytes_in_use": 12076578304,
+    "peak_bytes_in_use": 18902830080,
+    "largest_alloc_size": 6824325376,
+    "bytes_limit": 50987925504,
+    "bytes_reserved": 0,
+    "peak_bytes_reserved": 0,
+    "largest_free_block_bytes": 0,
+    "pool_bytes": 34361835520,
+    "peak_pool_bytes": 34361835520
+  }
 }

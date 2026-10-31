@@ -1,8 +1,8 @@
 {
   "started_at": "2026-10-31T14:11:22.715906+00:00",
   "pid": 33074,
-  "stage": "train_resume_20261031T145552Z",
-  "completed": false,
+  "stage": "completed",
+  "completed": true,
   "authorized_scope": "pi0 LoRA 6 demos, 2010 updates, 5 checkpoint evaluations and final seed-43 repeat",
   "source_commit": "1e3789faca1c8196545d0a4fb7c084ee4a9dcf7f",
   "upstream_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
@@ -44,5 +44,8 @@
   "original_source_commit": "eb5e39de1cfdc190164bcd8c5cc2bd3f01b9ec88",
   "resumed_from_update": 1000,
   "prior_failure_record": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/history/interruption-20261031T145552Z/run.json",
-  "updated_at": "2026-10-31T14:55:52.643634+00:00"
+  "updated_at": "2026-10-31T15:16:58.746750+00:00",
+  "finished_at": "2026-10-31T15:16:59.112290+00:00",
+  "report": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/summary.json",
+  "gpu_after": "pid, process_name, used_gpu_memory [MiB]\n3269, python, 754 MiB\n31344, python, 11548 MiB"
 }

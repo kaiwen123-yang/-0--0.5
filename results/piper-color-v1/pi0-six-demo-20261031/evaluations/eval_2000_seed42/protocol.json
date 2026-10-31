@@ -1,0 +1,50 @@
+{
+  "mode": "lora",
+  "split": "train",
+  "layout_seeds": [
+    100,
+    101
+  ],
+  "targets": [
+    "red",
+    "green",
+    "blue"
+  ],
+  "max_steps": 420,
+  "replan_steps": 5,
+  "seed": 42,
+  "seed_scope": "episode",
+  "episode_seed_formula": "base_seed + layout_seed * 3 + color_index",
+  "policy": {
+    "model_family": "pi0",
+    "robot": "Piper H",
+    "action_units": "6 joint rad + opening m",
+    "training_domain": "simulation",
+    "state_input": "continuous",
+    "normalization": "mean_std",
+    "training_layouts": [
+      100,
+      101
+    ],
+    "hardware_validated": false,
+    "cameras": "external RGB + wrist RGB; virtual uncalibrated geometry",
+    "mode": "lora",
+    "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000",
+    "norm_stats": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2000/assets/piper_h_color_v1",
+    "seed": 42,
+    "reset_seed_supported": true,
+    "action_horizon": 10,
+    "flow_denoising_steps": 10
+  },
+  "policy_transport": "websocket",
+  "dataset_manifest_sha256": "4dbd7dabe5e78c992cdb8bbbde8dd73a3c364eafe21e7bb261ed3f0d0798aede",
+  "source_sha256": {
+    "evaluate.py": "56b6391f4507dea85f42cdfa1ee93633739383c1af52c096414c7f5bfd2e7a97",
+    "sim.py": "2be8488d966e42146226eae634ab24bbe4283c21ffdea77dbab2345d46d949d3",
+    "policy_config.py": "cda90d6429a485adf30df3243ecfb3588f516de77ef547982bfe10600516ff35",
+    "serve.py": "79c9843a28715e213b81c8f0d3797a2cb127ddfc723079eef2a02ae052f74409",
+    "policy_client.py": "42aa52f811c4101a552dc7e0c14897771dc19207c07fed8f2ed6aaba56da5600"
+  },
+  "expected_episodes": 6,
+  "hardware_execution": false
+}
