@@ -1,7 +1,7 @@
 {
   "started_at": "2026-10-31T14:11:22.715906+00:00",
   "pid": 27932,
-  "stage": "train",
+  "stage": "failed",
   "completed": false,
   "authorized_scope": "pi0 LoRA 6 demos, 2010 updates, 5 checkpoint evaluations and final seed-43 repeat",
   "source_commit": "eb5e39de1cfdc190164bcd8c5cc2bd3f01b9ec88",
@@ -40,5 +40,7 @@
     2010
   ],
   "hardware_execution": false,
-  "updated_at": "2026-10-31T14:11:30.394616+00:00"
+  "updated_at": "2026-10-31T14:11:30.394616+00:00",
+  "error": "CalledProcessError(1, ['bash', '/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_six_d57.sh', 'train'])",
+  "finished_at": "2026-10-31T14:23:52.051649+00:00"
 }

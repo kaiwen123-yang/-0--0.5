@@ -105,3 +105,27 @@ UPDATE {"step": 980, "grad_norm": 0.8777143445221219, "loss": 0.0186306174734157
 UPDATE {"step": 990, "grad_norm": 0.8970131848047037, "loss": 0.029800085551323643, "param_norm": 1379.8195262056017, "wall_time": 1793456514.5477417, "compute_seconds": 0.4378418643027544, "sample_starts_seen": 3960, "equivalent_start_epochs": 2.462686567164179}
 UPDATE {"step": 1000, "grad_norm": 0.7093754333055621, "loss": 0.02778217271278967, "param_norm": 1379.820137962042, "wall_time": 1793456519.5301096, "compute_seconds": 0.42831421829760075, "sample_starts_seen": 4000, "equivalent_start_epochs": 2.487562189054726}
 CHECKPOINT_COMPLETE updates=1000 path=/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/1000
+fatal: unable to access 'https://github.com/kaiwen123-yang/-0--0.5.git/': GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py", line 65, in <module>
+    publish(args.run.resolve(strict=True), args.stage)
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py", line 52, in publish
+    git("push", "origin", f"HEAD:refs/heads/{BRANCH}")
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py", line 14, in git
+    return subprocess.check_output(["git", "-C", str(ROOT), *args], text=True, timeout=120).strip()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-C', '/root/autodl-tmp/robot-repro/pi-reproduction', 'push', 'origin', 'HEAD:refs/heads/codex/pi0-six-demo-20261031']' returned non-zero exit status 128.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/train_pi0_six.py", line 236, in <module>
+    prepare() if args.stage == "prepare" else train(args.resume)
+                                              ^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/train_pi0_six.py", line 215, in train
+    subprocess.run(["/root/miniconda3/bin/python", str(Path(__file__).with_name("publish_pi0_six.py")),
+  File "/root/autodl-tmp/tools/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/root/miniconda3/bin/python', '/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/publish_pi0_six.py', '/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031', '--stage', 'train-update-1000']' returned non-zero exit status 1.
