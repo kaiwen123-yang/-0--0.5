@@ -9,7 +9,10 @@
   "training_domain": "synthetic_piper_h",
   "hardware_execution": false,
   "completed": false,
-  "completed_updates": 0,
-  "checkpoints": [],
-  "initialization_seconds": 28.70883492939174
+  "completed_updates": 500,
+  "checkpoints": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/500"
+  ],
+  "initialization_seconds": 28.70883492939174,
+  "wall_seconds": 391.365270961076
 }
