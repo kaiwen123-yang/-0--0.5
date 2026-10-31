@@ -1,0 +1,200 @@
+{
+  "layout_seed": 1003,
+  "target": "blue",
+  "correct_in_box": true,
+  "wrong_in_box": false,
+  "gripper_open": true,
+  "distractor_displacement_m": {
+    "red": 0.0,
+    "green": 0.0
+  },
+  "max_lift_m": {
+    "red": 0.0,
+    "green": 0.0,
+    "blue": 0.14660688647785697
+  },
+  "max_joint_violation_rad": 0.0,
+  "success": true,
+  "final_positions": {
+    "red": [
+      -0.24374279368847826,
+      -0.15681223731186242,
+      0.017393255988701235
+    ],
+    "green": [
+      -0.130148978839634,
+      -0.1454978363884209,
+      0.017393255988701235
+    ],
+    "blue": [
+      -0.12816766565362223,
+      0.16584779654261034,
+      0.02539325598870121
+    ]
+  },
+  "steps": 178,
+  "stable_2s": true,
+  "error": null,
+  "mode": "lora",
+  "split": "validation",
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/4020",
+  "seed_scope": "episode",
+  "episode_seed": 3053,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/evaluations/update_4020_validation_seed42/layout_01003_blue.mp4",
+  "hardware_execution": false,
+  "privileged_policy_input": false,
+  "scripted_rescue": false,
+  "inference_seconds": [
+    0.08061923831701279,
+    0.07800363004207611,
+    0.07962514646351337,
+    0.07717902958393097,
+    0.07611510530114174,
+    0.07532982528209686,
+    0.07624663040041924,
+    0.07707023434340954,
+    0.07610517181456089,
+    0.07726681046187878,
+    0.07754733599722385,
+    0.07680751569569111,
+    0.07795031741261482,
+    0.07910226285457611,
+    0.07787265628576279,
+    0.0784207209944725,
+    0.07785547338426113,
+    0.0768262967467308,
+    0.07608948834240437,
+    0.0757312923669815,
+    0.0778792705386877,
+    0.07592356577515602,
+    0.07646443508565426,
+    0.0759534202516079,
+    0.07739939168095589,
+    0.0764277745038271,
+    0.0777185820043087,
+    0.08084063604474068,
+    0.07490423507988453,
+    0.08036544360220432,
+    0.07869751751422882,
+    0.07761801593005657,
+    0.07863611914217472,
+    0.0769828800112009,
+    0.07633703388273716,
+    0.07683898881077766
+  ],
+  "inference_median_excluding_first": 0.07717902958393097,
+  "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation",
+  "diagnostics": {
+    "success": true,
+    "max_lift_cm": 14.660688647785697,
+    "first_lifted_frame": 75,
+    "first_bilateral_lift_frame": 75,
+    "over_box_frames": 83,
+    "drop_frame": null,
+    "bilateral_contact_frames": 76,
+    "approach_reference_frame": 75,
+    "approach_xy_offset_mm": 1.7324518330325525,
+    "approach_object_in_tcp_mm": [
+      2.0480662214386633,
+      0.30503331173354664,
+      6.141773860003712
+    ],
+    "approach_orientation_error_deg": 3.3741220014071587,
+    "normal_force_at_reference_N": [
+      9.961105372000162,
+      8.766119793059758
+    ],
+    "gripper_width_at_reference_m": 0.037619102746248245,
+    "raw_to_executed_joint_mae_rad": 0.0004522111966564204,
+    "command_tracking_joint_mae_rad": 0.024131361927777123,
+    "gripper_open_command_frames_before_drop": null,
+    "open_low_reapproach_frames_after_drop": null,
+    "terminal": {
+      "layout_seed": 1003,
+      "target": "blue",
+      "correct_in_box": true,
+      "wrong_in_box": false,
+      "gripper_open": true,
+      "distractor_displacement_m": {
+        "red": 0.0,
+        "green": 0.0
+      },
+      "max_lift_m": {
+        "red": 0.0,
+        "green": 0.0,
+        "blue": 0.14660688647785697
+      },
+      "max_joint_violation_rad": 0.0,
+      "success": true,
+      "final_positions": {
+        "red": [
+          -0.24374279368847826,
+          -0.15681223731186242,
+          0.017393255988701235
+        ],
+        "green": [
+          -0.130148978839634,
+          -0.1454978363884209,
+          0.017393255988701235
+        ],
+        "blue": [
+          -0.12816766565362223,
+          0.16584779654261034,
+          0.02539325598870121
+        ]
+      },
+      "steps": 178,
+      "stable_2s": true,
+      "error": null,
+      "mode": "lora",
+      "split": "validation",
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/checkpoints/pi0_piper_color_lora/120_demo_contact_v2/4020",
+      "seed_scope": "episode",
+      "episode_seed": 3053,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/evaluations/update_4020_validation_seed42/layout_01003_blue.mp4",
+      "hardware_execution": false,
+      "privileged_policy_input": false,
+      "scripted_rescue": false,
+      "inference_seconds": [
+        0.08061923831701279,
+        0.07800363004207611,
+        0.07962514646351337,
+        0.07717902958393097,
+        0.07611510530114174,
+        0.07532982528209686,
+        0.07624663040041924,
+        0.07707023434340954,
+        0.07610517181456089,
+        0.07726681046187878,
+        0.07754733599722385,
+        0.07680751569569111,
+        0.07795031741261482,
+        0.07910226285457611,
+        0.07787265628576279,
+        0.0784207209944725,
+        0.07785547338426113,
+        0.0768262967467308,
+        0.07608948834240437,
+        0.0757312923669815,
+        0.0778792705386877,
+        0.07592356577515602,
+        0.07646443508565426,
+        0.0759534202516079,
+        0.07739939168095589,
+        0.0764277745038271,
+        0.0777185820043087,
+        0.08084063604474068,
+        0.07490423507988453,
+        0.08036544360220432,
+        0.07869751751422882,
+        0.07761801593005657,
+        0.07863611914217472,
+        0.0769828800112009,
+        0.07633703388273716,
+        0.07683898881077766
+      ],
+      "inference_median_excluding_first": 0.07717902958393097,
+      "physics_clock": "paused_while_policy_computes; not a wall-clock real-time validation"
+    }
+  }
+}
