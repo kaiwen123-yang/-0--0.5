@@ -6,3 +6,5 @@
 {"at_utc": "2026-11-01T14:26:27.734664+00:00", "event": "resume_after_recorded_interruption", "previous_error": "OSError(98, 'Address already in use')"}
 {"at_utc": "2026-11-01T14:26:44.557757+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "evaluate", "--label", "B_coverage", "--roster", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/phase1_roster.json", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010"], "label": "B_coverage"}
 {"at_utc": "2026-11-01T14:30:44.987919+00:00", "event": "end", "label": "B_coverage", "returncode": 0}
+{"at_utc": "2026-11-01T14:30:51.811280+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "coverage"], "label": "B_coverage_analysis"}
+{"at_utc": "2026-11-01T14:30:54.339702+00:00", "event": "end", "label": "B_coverage_analysis", "returncode": 0}

@@ -1,0 +1,962 @@
+{
+  "cases": [
+    {
+      "evaluation": "update_2010_train_seed42",
+      "split": "train",
+      "layout": 100,
+      "target": "blue",
+      "base_seed": 42,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.npz",
+      "sha256": "055bee25707e7635bbf3b4faf5b1c3437fb23683a894a42de674dc1f9885b102",
+      "first_close_frame": 173,
+      "first_low_frame": 83,
+      "close_time_s": 8.65,
+      "close_tcp_height_mm": 13.105894106377955,
+      "close_target_xy_mm": 41.56448314405606,
+      "close_nearest_color": "blue",
+      "close_nearest_xy_mm": 41.56448314405606,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.058435148596763624,
+      "close_object_local_mm": [
+        -33.5666997844478,
+        24.748209501657314,
+        -2.6058631939059653
+      ],
+      "close_orientation_error_deg": 2.830879203584499,
+      "close_xy_by_color_mm": [
+        113.73027256395737,
+        69.59804048685156,
+        41.56448314405606
+      ],
+      "low_target_xy_mm": 41.34804180002011,
+      "low_nearest_color": "blue",
+      "best_low_target_xy_mm": 36.22657961317463,
+      "approach30_target_xy_mm": 11.838095839765728,
+      "approach30_nearest_color": "blue",
+      "approach30_tcp": [
+        -0.20120863287845273,
+        -0.039401010718976615,
+        0.17390306973833547
+      ],
+      "target_lifted_5cm": false,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [],
+      "target_first_contact_frame": 110,
+      "target_first_bilateral_frame": null,
+      "target_bilateral_frames": 0,
+      "target_first_bilateral_lift_frame": null,
+      "target_peak_height_mm": 0.5265989001779874,
+      "joint_raw_to_executed_mae_rad": 0.0001577203516804034,
+      "joint_command_to_feedback_mae_rad": 0.013900538210314194,
+      "initial_object_positions": [
+        [
+          -0.13591182923154704,
+          -0.16279735601854017,
+          0.01739324489508867
+        ],
+        [
+          -0.22562051434796598,
+          -0.14729648724287664,
+          0.01739324489508867
+        ],
+        [
+          -0.19173767693702598,
+          -0.032298792286188725,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 7.734167844054155,
+      "failure_class": "target_grasp_or_approach_failure",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.npz",
+      "reused_from": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42",
+      "over_box_frames": 0,
+      "failure_stage": "approach_or_grasp"
+    },
+    {
+      "evaluation": "attempt000_seed43",
+      "split": "train",
+      "layout": 114,
+      "target": "red",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.npz",
+      "sha256": "0111a04120caded3b6042ac0940b9ae68576ffd7c806e57081211eb51ec9e05f",
+      "first_close_frame": null,
+      "first_low_frame": 64,
+      "close_time_s": null,
+      "close_tcp_height_mm": null,
+      "close_target_xy_mm": null,
+      "close_nearest_color": null,
+      "close_nearest_xy_mm": null,
+      "close_nearest_is_target": null,
+      "close_width_command_m": null,
+      "close_object_local_mm": null,
+      "close_orientation_error_deg": null,
+      "close_xy_by_color_mm": null,
+      "low_target_xy_mm": 21.58615462756717,
+      "low_nearest_color": "red",
+      "best_low_target_xy_mm": 21.58615462756717,
+      "approach30_target_xy_mm": 6.596840176353625,
+      "approach30_nearest_color": "red",
+      "approach30_tcp": [
+        -0.20647427242983574,
+        -0.03574907154156711,
+        0.17300101412868435
+      ],
+      "target_lifted_5cm": false,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [],
+      "target_first_contact_frame": null,
+      "target_first_bilateral_frame": null,
+      "target_bilateral_frames": 0,
+      "target_first_bilateral_lift_frame": null,
+      "target_peak_height_mm": 1.1093612566764888e-05,
+      "joint_raw_to_executed_mae_rad": 2.0104652359371966e-05,
+      "joint_command_to_feedback_mae_rad": 0.0229461104064146,
+      "initial_object_positions": [
+        [
+          -0.20196746982527813,
+          -0.030931703941320464,
+          0.01739324489508867
+        ],
+        [
+          -0.22861912831575107,
+          -0.16001954472244445,
+          0.01739324489508867
+        ],
+        [
+          -0.13186524167873945,
+          -0.1442848589190078,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "no_closure",
+      "correct_in_box": false,
+      "gripper_open": true,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "approach_no_closure"
+    },
+    {
+      "evaluation": "update_2010_train_seed43",
+      "split": "train",
+      "layout": 101,
+      "target": "green",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.npz",
+      "sha256": "2446a20b2e8b8407dc15160b0167399bad920c715fca126ec8035f8bd5ff0cfb",
+      "first_close_frame": 158,
+      "first_low_frame": 55,
+      "close_time_s": 7.9,
+      "close_tcp_height_mm": 13.65611642685656,
+      "close_target_xy_mm": 24.197380779603485,
+      "close_nearest_color": "green",
+      "close_nearest_xy_mm": 24.197380779603485,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05640655666589738,
+      "close_object_local_mm": [
+        -23.44125895186897,
+        6.651563052864159,
+        -2.3965676295539438
+      ],
+      "close_orientation_error_deg": 3.368255676277908,
+      "close_xy_by_color_mm": [
+        154.5082359131991,
+        24.197380779603485,
+        81.14765207802353
+      ],
+      "low_target_xy_mm": 23.420290682007344,
+      "low_nearest_color": "green",
+      "best_low_target_xy_mm": 20.38907114524593,
+      "approach30_target_xy_mm": 17.502486940428227,
+      "approach30_nearest_color": "green",
+      "approach30_tcp": [
+        -0.13843738353319027,
+        -0.15352577610696963,
+        0.1675740657566089
+      ],
+      "target_lifted_5cm": false,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [],
+      "target_first_contact_frame": 161,
+      "target_first_bilateral_frame": 161,
+      "target_bilateral_frames": 21,
+      "target_first_bilateral_lift_frame": null,
+      "target_peak_height_mm": 4.854577470299784,
+      "joint_raw_to_executed_mae_rad": 8.979963972454971e-05,
+      "joint_command_to_feedback_mae_rad": 0.013125669196826702,
+      "initial_object_positions": [
+        [
+          -0.2107588002884965,
+          -0.02316368078015866,
+          0.01739324489508867
+        ],
+        [
+          -0.12202544846576255,
+          -0.14744421081155457,
+          0.01739324489508867
+        ],
+        [
+          -0.22258108984088218,
+          -0.15393621106847077,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "target_grasp_or_approach_failure",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.npz",
+      "reused_from": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43",
+      "over_box_frames": 0,
+      "failure_stage": "approach_or_grasp"
+    },
+    {
+      "evaluation": "attempt000_seed42",
+      "split": "train",
+      "layout": 107,
+      "target": "blue",
+      "base_seed": 42,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+      "sha256": "4a8bf2a1792bb97ca7d15fc6e6128d34d757de5e20e88b9cca65dfbfa7fbbe49",
+      "first_close_frame": 77,
+      "first_low_frame": 56,
+      "close_time_s": 3.85,
+      "close_tcp_height_mm": 23.72750632059395,
+      "close_target_xy_mm": 1.945164923561758,
+      "close_nearest_color": "blue",
+      "close_nearest_xy_mm": 1.945164923561758,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05458124354481697,
+      "close_object_local_mm": [
+        -1.933195295284348,
+        -0.27573160761252885,
+        6.331912971432246
+      ],
+      "close_orientation_error_deg": 2.2316918162387487,
+      "close_xy_by_color_mm": [
+        107.80157495708521,
+        103.09037352740349,
+        1.945164923561758
+      ],
+      "low_target_xy_mm": 5.469793384215604,
+      "low_nearest_color": "blue",
+      "best_low_target_xy_mm": 1.577051782019256,
+      "approach30_target_xy_mm": 3.6101029361530985,
+      "approach30_nearest_color": "blue",
+      "approach30_tcp": [
+        -0.22873131137040217,
+        -0.1476952011010183,
+        0.17141655225024094
+      ],
+      "target_lifted_5cm": true,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [
+        "blue"
+      ],
+      "target_first_contact_frame": 80,
+      "target_first_bilateral_frame": 80,
+      "target_bilateral_frames": 340,
+      "target_first_bilateral_lift_frame": 360,
+      "target_peak_height_mm": 122.29833579169113,
+      "joint_raw_to_executed_mae_rad": 8.91925323577166e-06,
+      "joint_command_to_feedback_mae_rad": 0.00921660736410396,
+      "initial_object_positions": [
+        [
+          -0.20524714817777526,
+          -0.046857077085447695,
+          0.01739324489508867
+        ],
+        [
+          -0.129923353307183,
+          -0.14342605121170793,
+          0.01739324489508867
+        ],
+        [
+          -0.23084099425477045,
+          -0.15062472006102262,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "failure_after_target_lift",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "lift_or_transfer"
+    },
+    {
+      "evaluation": "attempt000_seed43",
+      "split": "train",
+      "layout": 105,
+      "target": "red",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+      "sha256": "6ef999c85f3172b51228a8319b851b724cdb9534bdc7d9eab54a2e3f0b95ac21",
+      "first_close_frame": 96,
+      "first_low_frame": 54,
+      "close_time_s": 4.8,
+      "close_tcp_height_mm": 13.544175394553868,
+      "close_target_xy_mm": 11.049775923586726,
+      "close_nearest_color": "red",
+      "close_nearest_xy_mm": 11.049775923586726,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05989585071802139,
+      "close_object_local_mm": [
+        -9.12752546890099,
+        -6.236567656460592,
+        -3.8349018322080086
+      ],
+      "close_orientation_error_deg": 0.990783220530561,
+      "close_xy_by_color_mm": [
+        11.049775923586726,
+        96.35869410393116,
+        133.76173082313574
+      ],
+      "low_target_xy_mm": 14.1474068903906,
+      "low_nearest_color": "red",
+      "best_low_target_xy_mm": 8.82883183538693,
+      "approach30_target_xy_mm": 5.35570602022561,
+      "approach30_nearest_color": "red",
+      "approach30_tcp": [
+        -0.20848539040627856,
+        -0.037907959692786035,
+        0.16641911228024686
+      ],
+      "target_lifted_5cm": true,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [
+        "red"
+      ],
+      "target_first_contact_frame": 98,
+      "target_first_bilateral_frame": 100,
+      "target_bilateral_frames": 319,
+      "target_first_bilateral_lift_frame": 164,
+      "target_peak_height_mm": 128.41307679711318,
+      "joint_raw_to_executed_mae_rad": 2.2854899603223324e-06,
+      "joint_command_to_feedback_mae_rad": 0.008425801803328593,
+      "initial_object_positions": [
+        [
+          -0.20789970935646668,
+          -0.043231545390694175,
+          0.01739324489508867
+        ],
+        [
+          -0.23113053065713446,
+          -0.13623912628450224,
+          0.01739324489508867
+        ],
+        [
+          -0.14129157524841646,
+          -0.14981227843248202,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "failure_after_target_lift",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+      "reused_from": null,
+      "over_box_frames": 16,
+      "failure_stage": "lower_or_release"
+    },
+    {
+      "evaluation": "attempt000_seed42",
+      "split": "train",
+      "layout": 123,
+      "target": "red",
+      "base_seed": 42,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+      "sha256": "93aa735addf6e9f5079f9359d3e04c59c55a07f7075db90eb96c2dfdd1cd5dc5",
+      "first_close_frame": 152,
+      "first_low_frame": 71,
+      "close_time_s": 7.6,
+      "close_tcp_height_mm": 13.625784809853366,
+      "close_target_xy_mm": 11.29259376279894,
+      "close_nearest_color": "red",
+      "close_nearest_xy_mm": 11.29259376279894,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05048707991838455,
+      "close_object_local_mm": [
+        -8.338216348723943,
+        7.614090649824698,
+        -3.554930146894794
+      ],
+      "close_orientation_error_deg": 0.2609966065119647,
+      "close_xy_by_color_mm": [
+        11.29259376279894,
+        133.54099338019918,
+        116.357149878009
+      ],
+      "low_target_xy_mm": 19.975175641831218,
+      "low_nearest_color": "red",
+      "best_low_target_xy_mm": 9.285743632856414,
+      "approach30_target_xy_mm": 13.887983777933755,
+      "approach30_nearest_color": "red",
+      "approach30_tcp": [
+        -0.20531280668485044,
+        -0.03703662467168861,
+        0.1744747489436223
+      ],
+      "target_lifted_5cm": true,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [
+        "red"
+      ],
+      "target_first_contact_frame": 140,
+      "target_first_bilateral_frame": 155,
+      "target_bilateral_frames": 237,
+      "target_first_bilateral_lift_frame": 197,
+      "target_peak_height_mm": 147.04440102438215,
+      "joint_raw_to_executed_mae_rad": 0.0,
+      "joint_command_to_feedback_mae_rad": 0.010701827090698796,
+      "initial_object_positions": [
+        [
+          -0.21407463476760857,
+          -0.026261353813638588,
+          0.01739324489508867
+        ],
+        [
+          -0.13782992356328883,
+          -0.1588375893024724,
+          0.01739324489508867
+        ],
+        [
+          -0.2298941478310742,
+          -0.16249301147151524,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "failure_after_target_lift",
+      "correct_in_box": true,
+      "gripper_open": true,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+      "reused_from": null,
+      "over_box_frames": 101,
+      "failure_stage": "stability_or_distractor"
+    },
+    {
+      "evaluation": "attempt000_seed43",
+      "split": "train",
+      "layout": 122,
+      "target": "red",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.npz",
+      "sha256": "31c158719d07df847539e708475061c3a787aad207313dfa1b2f543ed9e97255",
+      "first_close_frame": null,
+      "first_low_frame": 79,
+      "close_time_s": null,
+      "close_tcp_height_mm": null,
+      "close_target_xy_mm": null,
+      "close_nearest_color": null,
+      "close_nearest_xy_mm": null,
+      "close_nearest_is_target": null,
+      "close_width_command_m": null,
+      "close_object_local_mm": null,
+      "close_orientation_error_deg": null,
+      "close_xy_by_color_mm": null,
+      "low_target_xy_mm": 23.542481924299988,
+      "low_nearest_color": "red",
+      "best_low_target_xy_mm": 23.542481924299988,
+      "approach30_target_xy_mm": 8.156627798206468,
+      "approach30_nearest_color": "red",
+      "approach30_tcp": [
+        -0.203580104503867,
+        -0.031915184021820024,
+        0.1749436432620327
+      ],
+      "target_lifted_5cm": false,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [],
+      "target_first_contact_frame": null,
+      "target_first_bilateral_frame": null,
+      "target_bilateral_frames": 0,
+      "target_first_bilateral_lift_frame": null,
+      "target_peak_height_mm": 1.1093612570234335e-05,
+      "joint_raw_to_executed_mae_rad": 9.53327568750525e-06,
+      "joint_command_to_feedback_mae_rad": 0.02535926440728598,
+      "initial_object_positions": [
+        [
+          -0.19596881911995565,
+          -0.034847574146467844,
+          0.017393244895088665
+        ],
+        [
+          -0.22589012784615892,
+          -0.15908252797086375,
+          0.01739324489508867
+        ],
+        [
+          -0.13342763531406865,
+          -0.15813925507076845,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "no_closure",
+      "correct_in_box": false,
+      "gripper_open": true,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "approach_no_closure"
+    },
+    {
+      "evaluation": "attempt000_seed43",
+      "split": "train",
+      "layout": 102,
+      "target": "blue",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.npz",
+      "sha256": "22b53f3564415d8ecd953b32e8384835e598943a0d8bf094ac8a1a63255af0f3",
+      "first_close_frame": 231,
+      "first_low_frame": 79,
+      "close_time_s": 11.55,
+      "close_tcp_height_mm": 13.024486772624272,
+      "close_target_xy_mm": 29.671978288057726,
+      "close_nearest_color": "blue",
+      "close_nearest_xy_mm": 29.671978288057726,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.050790879428386684,
+      "close_object_local_mm": [
+        -27.788178712238143,
+        10.451158654426443,
+        -4.105256320002793
+      ],
+      "close_orientation_error_deg": 1.729164486389565,
+      "close_xy_by_color_mm": [
+        94.10550590839951,
+        141.48687507791269,
+        29.671978288057726
+      ],
+      "low_target_xy_mm": 27.312527684950346,
+      "low_nearest_color": "blue",
+      "best_low_target_xy_mm": 26.82394456857886,
+      "approach30_target_xy_mm": 3.511496676423077,
+      "approach30_nearest_color": "blue",
+      "approach30_tcp": [
+        -0.2021728653621466,
+        -0.03862043201904312,
+        0.17696457469951776
+      ],
+      "target_lifted_5cm": false,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [],
+      "target_first_contact_frame": 231,
+      "target_first_bilateral_frame": 236,
+      "target_bilateral_frames": 54,
+      "target_first_bilateral_lift_frame": null,
+      "target_peak_height_mm": 4.539500335738321,
+      "joint_raw_to_executed_mae_rad": 1.4744347050076375e-05,
+      "joint_command_to_feedback_mae_rad": 0.01309519259063418,
+      "initial_object_positions": [
+        [
+          -0.24452024793559238,
+          -0.14759358158245112,
+          0.01739324489508867
+        ],
+        [
+          -0.12093257023888031,
+          -0.1556767133727351,
+          0.01739324489508867
+        ],
+        [
+          -0.19982281339670352,
+          -0.03601124351143248,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "target_grasp_or_approach_failure",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "approach_or_grasp"
+    },
+    {
+      "evaluation": "attempt000_seed42",
+      "split": "train",
+      "layout": 109,
+      "target": "red",
+      "base_seed": 42,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.npz",
+      "sha256": "1cf78ae20894d7e61d4a7cbf4bd1eda7ad12cf660dec7c2b1bdd3ff42939dd93",
+      "first_close_frame": 103,
+      "first_low_frame": 59,
+      "close_time_s": 5.15,
+      "close_tcp_height_mm": 12.85778713457196,
+      "close_target_xy_mm": 18.30141146530379,
+      "close_nearest_color": "red",
+      "close_nearest_xy_mm": 18.30141146530379,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.057227082550525665,
+      "close_object_local_mm": [
+        -15.090966264570781,
+        -10.355556762456771,
+        -4.531812075787387
+      ],
+      "close_orientation_error_deg": 3.3128809851749312,
+      "close_xy_by_color_mm": [
+        18.30141146530379,
+        129.96081780010456,
+        105.68129273004647
+      ],
+      "low_target_xy_mm": 16.95684890021096,
+      "low_nearest_color": "red",
+      "best_low_target_xy_mm": 13.714325841822939,
+      "approach30_target_xy_mm": 8.651129404905193,
+      "approach30_nearest_color": "red",
+      "approach30_tcp": [
+        -0.23962998316777792,
+        -0.13407158432572844,
+        0.16211453146133215
+      ],
+      "target_lifted_5cm": true,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [
+        "red"
+      ],
+      "target_first_contact_frame": 104,
+      "target_first_bilateral_frame": 112,
+      "target_bilateral_frames": 308,
+      "target_first_bilateral_lift_frame": 133,
+      "target_peak_height_mm": 142.02219016264155,
+      "joint_raw_to_executed_mae_rad": 4.223681631542416e-06,
+      "joint_command_to_feedback_mae_rad": 0.008102085004917464,
+      "initial_object_positions": [
+        [
+          -0.23377521702399695,
+          -0.14044055232549507,
+          0.01739324489508867
+        ],
+        [
+          -0.12299786988268595,
+          -0.15471420801925317,
+          0.01739324489508867
+        ],
+        [
+          -0.20222091265576586,
+          -0.04355396535705236,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "failure_after_target_lift",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "lift_or_transfer"
+    },
+    {
+      "evaluation": "attempt000_seed43",
+      "split": "train",
+      "layout": 126,
+      "target": "blue",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.npz",
+      "sha256": "a1ee95d6b06dc03f73b2629ca57548da750f7dd74ce964edcd41d231d38c8183",
+      "first_close_frame": 109,
+      "first_low_frame": 70,
+      "close_time_s": 5.45,
+      "close_tcp_height_mm": 13.006181741749195,
+      "close_target_xy_mm": 13.21379807769865,
+      "close_nearest_color": "blue",
+      "close_nearest_xy_mm": 13.21379807769865,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05803140997886658,
+      "close_object_local_mm": [
+        -8.606014933958486,
+        10.017108027655581,
+        -4.4096410063886395
+      ],
+      "close_orientation_error_deg": 1.9632866108672526,
+      "close_xy_by_color_mm": [
+        110.01306576600777,
+        84.15807767959039,
+        13.21379807769865
+      ],
+      "low_target_xy_mm": 10.289148702539844,
+      "low_nearest_color": "blue",
+      "best_low_target_xy_mm": 9.849491392472828,
+      "approach30_target_xy_mm": 6.3637179042491505,
+      "approach30_nearest_color": "blue",
+      "approach30_tcp": [
+        -0.20921666041546694,
+        -0.045554005157702845,
+        0.1684757150174834
+      ],
+      "target_lifted_5cm": true,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [
+        "blue"
+      ],
+      "target_first_contact_frame": 110,
+      "target_first_bilateral_frame": 113,
+      "target_bilateral_frames": 307,
+      "target_first_bilateral_lift_frame": 139,
+      "target_peak_height_mm": 141.1415435812518,
+      "joint_raw_to_executed_mae_rad": 9.799117133730775e-07,
+      "joint_command_to_feedback_mae_rad": 0.008991545152666668,
+      "initial_object_positions": [
+        [
+          -0.14214842067125436,
+          -0.13658676232014086,
+          0.01739324489508867
+        ],
+        [
+          -0.24882706986657216,
+          -0.13763077299069915,
+          0.01739324489508867
+        ],
+        [
+          -0.21555478643104023,
+          -0.046124149153176114,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "failure_after_target_lift",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.npz",
+      "reused_from": null,
+      "over_box_frames": 29,
+      "failure_stage": "lower_or_release"
+    },
+    {
+      "evaluation": "attempt000_seed42",
+      "split": "train",
+      "layout": 103,
+      "target": "red",
+      "base_seed": 42,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00103_red_seed42/attempt000_seed42/layout_00103_red.npz",
+      "sha256": "03f861e3a1199f264339e32896fceb11c134002cece6a2d73bf4c53362832207",
+      "first_close_frame": 151,
+      "first_low_frame": 78,
+      "close_time_s": 7.55,
+      "close_tcp_height_mm": 13.219398918805247,
+      "close_target_xy_mm": 44.05022255234786,
+      "close_nearest_color": "red",
+      "close_nearest_xy_mm": 44.05022255234786,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05234125584363937,
+      "close_object_local_mm": [
+        -42.98583118710965,
+        -9.845343005178425,
+        -3.623634641488232
+      ],
+      "close_orientation_error_deg": 0.86223031649795,
+      "close_xy_by_color_mm": [
+        44.05022255234786,
+        133.28982146631145,
+        106.17231943603325
+      ],
+      "low_target_xy_mm": 32.9561283974233,
+      "low_nearest_color": "red",
+      "best_low_target_xy_mm": 24.393141606246143,
+      "approach30_target_xy_mm": 9.292493405927639,
+      "approach30_nearest_color": "red",
+      "approach30_tcp": [
+        -0.204267036873508,
+        -0.04558552297940467,
+        0.1735269218772607
+      ],
+      "target_lifted_5cm": false,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [],
+      "target_first_contact_frame": 168,
+      "target_first_bilateral_frame": null,
+      "target_bilateral_frames": 0,
+      "target_first_bilateral_lift_frame": null,
+      "target_peak_height_mm": 1.369628461918345,
+      "joint_raw_to_executed_mae_rad": 2.6554079755904213e-05,
+      "joint_command_to_feedback_mae_rad": 0.013665378089536986,
+      "initial_object_positions": [
+        [
+          -0.19498881032534965,
+          -0.04610025185974674,
+          0.01739324489508867
+        ],
+        [
+          -0.13890372761428127,
+          -0.13991499792136197,
+          0.01739324489508867
+        ],
+        [
+          -0.24024486947947035,
+          -0.15771908976444815,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "target_grasp_or_approach_failure",
+      "correct_in_box": false,
+      "gripper_open": true,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00103_red_seed42/attempt000_seed42/layout_00103_red.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00103_red_seed42/attempt000_seed42/layout_00103_red.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00103_red_seed42/attempt000_seed42/layout_00103_red.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "approach_or_grasp"
+    },
+    {
+      "evaluation": "attempt000_seed43",
+      "split": "train",
+      "layout": 110,
+      "target": "green",
+      "base_seed": 43,
+      "success": false,
+      "error": null,
+      "frames": 420,
+      "source": "outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.npz",
+      "sha256": "b446edb82b2f2d18fdf95bbc8bc3a57d0e0ad5bcd60adef3be29d42b7f04485b",
+      "first_close_frame": 349,
+      "first_low_frame": 80,
+      "close_time_s": 17.45,
+      "close_tcp_height_mm": 12.970286258880027,
+      "close_target_xy_mm": 16.73270938200072,
+      "close_nearest_color": "green",
+      "close_nearest_xy_mm": 16.73270938200072,
+      "close_nearest_is_target": true,
+      "close_width_command_m": 0.05819402635097504,
+      "close_object_local_mm": [
+        -12.148497632807596,
+        11.522285638968706,
+        -4.360715287847764
+      ],
+      "close_orientation_error_deg": 0.8834408075226923,
+      "close_xy_by_color_mm": [
+        97.57647012673667,
+        16.73270938200072,
+        129.57139118652358
+      ],
+      "low_target_xy_mm": 26.589152529274937,
+      "low_nearest_color": "green",
+      "best_low_target_xy_mm": 15.716965081759351,
+      "approach30_target_xy_mm": 9.759036292533088,
+      "approach30_nearest_color": "green",
+      "approach30_tcp": [
+        -0.2041195969091791,
+        -0.02980791734864274,
+        0.17651264435493647
+      ],
+      "target_lifted_5cm": true,
+      "non_target_lifted_5cm": false,
+      "lifted_colors": [
+        "green"
+      ],
+      "target_first_contact_frame": 89,
+      "target_first_bilateral_frame": 353,
+      "target_bilateral_frames": 67,
+      "target_first_bilateral_lift_frame": 378,
+      "target_peak_height_mm": 145.09360798544174,
+      "joint_raw_to_executed_mae_rad": 5.847410668456362e-06,
+      "joint_command_to_feedback_mae_rad": 0.018724542060749274,
+      "initial_object_positions": [
+        [
+          -0.22294620127568926,
+          -0.14965174212748106,
+          0.01739324489508867
+        ],
+        [
+          -0.21228419697893175,
+          -0.024462068953862628,
+          0.01739324489508867
+        ],
+        [
+          -0.12404934674537284,
+          -0.1499377327542176,
+          0.01739324489508867
+        ]
+      ],
+      "distractor_max_xy_displacement_mm": 0.0,
+      "failure_class": "failure_after_target_lift",
+      "correct_in_box": false,
+      "gripper_open": false,
+      "timeout": true,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.mp4",
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.json",
+      "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.npz",
+      "reused_from": null,
+      "over_box_frames": 0,
+      "failure_stage": "lift_or_transfer"
+    }
+  ],
+  "selection": "failure-stage round robin; unique layouts first; layout100 blue included; deterministic order",
+  "train_only": true
+}
