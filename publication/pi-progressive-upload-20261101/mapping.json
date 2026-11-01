@@ -577,8 +577,23 @@
       "part": 0,
       "parts": 1,
       "group": "six-checkpoint-2010",
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "apiUrl": "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/assets/698613797",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-11-01T14:48:21Z",
+        "digest": "sha256:eb86fb2339c40cb4262a13f9fe50a610f32b1d68d39af94a807a68d933a73587",
+        "downloadCount": 0,
+        "id": "RA_kwDOVV94X84ppAAl",
+        "label": "",
+        "name": "progressive-six-checkpoint-2010-fdddb4c5813bb09f-908d433a9df391c5f4571725ffa567e8",
+        "size": 1286231633,
+        "state": "uploaded",
+        "updatedAt": "2026-11-01T14:53:48Z",
+        "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-six-checkpoint-2010-fdddb4c5813bb09f-908d433a9df391c5f4571725ffa567e8"
+      }
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-records-45f4ab1c26f9cf70.tar",
@@ -776,8 +791,18 @@
       ],
       "source_bytes": 11860765,
       "group": "ab-a-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "bytes": 11919360,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 698627349,
+        "name": "progressive-ab-a-checkpoint-1000-records-45f4ab1c26f9cf70.tar",
+        "size": 11919360,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-ab-a-checkpoint-1000-records-45f4ab1c26f9cf70.tar"
+      },
+      "uploaded_at": "2026-11-01T14:54:33.520910+00:00"
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-003e3ef6c0e64ff4-7639a0a6b48c43f51a3510440cc488ba",
@@ -797,8 +822,16 @@
       "part": 0,
       "parts": 1,
       "group": "ab-a-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 698627491,
+        "name": "progressive-ab-a-checkpoint-1000-003e3ef6c0e64ff4-7639a0a6b48c43f51a3510440cc488ba",
+        "size": 72168886,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-ab-a-checkpoint-1000-003e3ef6c0e64ff4-7639a0a6b48c43f51a3510440cc488ba"
+      },
+      "uploaded_at": "2026-11-01T14:54:52.601332+00:00"
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-081038fe357cf699-cde8e18096fa6f3b2169ae9101720a82",
@@ -818,8 +851,8 @@
       "part": 0,
       "parts": 1,
       "group": "ab-a-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-0cdf0701f84cdb1b-66f9e7417a3ddf620a0b7de996dd9796",
