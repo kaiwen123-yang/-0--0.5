@@ -1,10 +1,31 @@
 {
-  "stage": "supervisor-started",
-  "snapshot_at_utc": "2026-11-01T02:21:54.373473+00:00",
+  "stage": "A-train-update-500",
+  "snapshot_at_utc": "2026-11-01T02:26:57.276576+00:00",
   "branch": "codex/pi0-ab-old2010-20261101",
   "campaign_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101",
-  "text_files": 18,
-  "full_checkpoints": [],
+  "text_files": 27,
+  "full_checkpoints": [
+    {
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/500",
+      "bytes": 9791349347,
+      "files": 55,
+      "resume": {
+        "local_updates": 500,
+        "optimizer_updates": 2510,
+        "sample_offset": 2000,
+        "sample_order_sha256": "3af63a7d1eb52298ad658c49aa5183403fb976e858e455b7868a9bc9b568bfcc",
+        "config_sha256": "1739ebbe72ba5e9c0ca6a30011531d34bb9534c58f562a49b728e54c11000119",
+        "train_rng_key_data": [
+          1832780943,
+          270669613
+        ],
+        "rng_rule": "same old train_rng; upstream folds with cumulative train_state.step (2010 + local step before update)",
+        "old_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+        "group": "A"
+      },
+      "uploaded": false
+    }
+  ],
   "scope": "source/config, exact text sampling tables, every update metric, raw process logs and evaluation/probe JSON",
   "large_artifacts": "full checkpoints, videos and raw arrays remain on D57; not uploaded by Git publisher"
 }
