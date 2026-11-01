@@ -1,12 +1,12 @@
 {
   "started_at": "2026-11-01T13:43:44.489578+00:00",
   "pid": 16150,
-  "stage": "starting",
+  "stage": "failed_requires_inspection",
   "completed": false,
   "base_optimizer_updates": 4020,
   "source_commit": "5d92174604ef77d563200c0aa75450b7698ea82d",
   "hardware_execution": false,
-  "updated_at": "2026-11-01T14:23:33.334751+00:00",
+  "updated_at": "2026-11-01T14:23:38.161594+00:00",
   "counts": {
     "new_autonomous_evaluations": 247,
     "reused_evaluations": 42,
@@ -23,5 +23,6 @@
   "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/serve_B_1793540627457097209.log",
   "active_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
   "child_pid": null,
-  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/B_coverage_1793540638466547040.log"
+  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/B_coverage_1793540638466547040.log",
+  "error": "OSError(98, 'Address already in use')"
 }

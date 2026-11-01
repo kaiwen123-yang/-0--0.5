@@ -2,3 +2,4 @@
 {"event": "controlled_network_transport_switch", "at_utc": "2026-11-01T14:22:44.238388+00:00", "reason": "User requests official academic acceleration to avoid personal VPN traffic", "previous_transport": "server VPN 127.0.0.1:7890", "new_transport": "source /etc/network_turbo in GitHub subprocesses only", "vpn_fallback": false, "completed_before_restart": 247}
 {"at_utc": "2026-11-01T14:22:45.101760+00:00", "event": "failure", "error": "KeyboardInterrupt()"}
 {"at_utc": "2026-11-01T14:23:33.334390+00:00", "event": "resume_after_recorded_interruption", "previous_error": "KeyboardInterrupt()"}
+{"at_utc": "2026-11-01T14:23:38.171480+00:00", "event": "failure", "error": "OSError(98, 'Address already in use')"}
