@@ -31,3 +31,5 @@
 {"at_utc": "2026-11-01T15:19:20.918362+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "node", "--label", "C_1000"], "label": "node_C_1000"}
 {"at_utc": "2026-11-01T15:19:21.305739+00:00", "event": "end", "label": "node_C_1000", "returncode": 0}
 {"at_utc": "2026-11-01T15:19:27.460724+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "train", "--until", "500"], "label": "train_D_500"}
+{"at_utc": "2026-11-01T15:23:47.743796+00:00", "event": "end", "label": "train_D_500", "returncode": 0}
+{"at_utc": "2026-11-01T15:23:58.882967+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "evaluate", "--label", "D_500", "--roster", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/node_roster.json", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/D/checkpoints/pi0_piper_color_lora/b_coverage_correction/500"], "label": "D_500"}
