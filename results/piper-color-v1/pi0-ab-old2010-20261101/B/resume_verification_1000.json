@@ -1,0 +1,25 @@
+{
+  "group": "B",
+  "local_updates": 1000,
+  "optimizer_updates": 3010,
+  "optimizer_scalar_counters": [
+    3010,
+    3010
+  ],
+  "optimizer_array_leaves": 108,
+  "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000",
+  "sample_offset": 4000,
+  "next_samples": [
+    20905,
+    3737,
+    22291,
+    30652
+  ],
+  "train_rng_key_data": [
+    1832780943,
+    270669613
+  ],
+  "config_sha256": "0779a93c9b0f794ed92fc7abc178fc0556a3cdb97da01c70832569b61b73286d",
+  "learning_rate": 3e-06,
+  "full_optimizer_restored": true
+}

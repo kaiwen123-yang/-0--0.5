@@ -1,9 +1,9 @@
 {
-  "stage": "B-node-1000-complete",
-  "snapshot_at_utc": "2026-11-01T03:36:39.159228+00:00",
+  "stage": "B-train-update-1500",
+  "snapshot_at_utc": "2026-11-01T03:41:17.825581+00:00",
   "branch": "codex/pi0-ab-old2010-20261101",
   "campaign_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101",
-  "text_files": 347,
+  "text_files": 349,
   "full_checkpoints": [
     {
       "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/1000",
@@ -86,13 +86,13 @@
       "uploaded": false
     },
     {
-      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/500",
-      "bytes": 9794552938,
-      "files": 53,
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1500",
+      "bytes": 9796133907,
+      "files": 61,
       "resume": {
-        "local_updates": 500,
-        "optimizer_updates": 2510,
-        "sample_offset": 2000,
+        "local_updates": 1500,
+        "optimizer_updates": 3510,
+        "sample_offset": 6000,
         "sample_order_sha256": "4ce145a27fa44628f4bfc553e28aa87dd108d239704d21c65f13cd93765df4f1",
         "config_sha256": "0779a93c9b0f794ed92fc7abc178fc0556a3cdb97da01c70832569b61b73286d",
         "train_rng_key_data": [
