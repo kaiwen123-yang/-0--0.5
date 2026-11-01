@@ -81,3 +81,4 @@
 {"at_utc": "2026-11-01T03:53:22.393259+00:00", "event": "process_end", "group": "B", "label": "update_2010_validation_seed43", "returncode": 0, "seconds": 147.44194856844842}
 {"at_utc": "2026-11-01T03:53:27.522629+00:00", "event": "process_start", "group": "B", "label": "probe_2010", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_ab_d57.sh", "probe", "--local-update", "2010", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010"]}
 {"at_utc": "2026-11-01T03:54:33.427142+00:00", "event": "process_end", "group": "B", "label": "probe_2010", "returncode": 0, "seconds": 65.9041760507971}
+{"at_utc": "2026-11-01T03:54:38.706138+00:00", "event": "service_stopped", "group": "B", "local_update": 2010, "returncode": -15}
