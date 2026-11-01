@@ -1,0 +1,6 @@
+{
+  "failure": "strict equality assertion on independently rendered wrist RGB",
+  "observed": "state and external RGB identical; a few wrist pixels differ by 1 of 255",
+  "repair": "all prompt interventions use one shared observation and RNG; archive difference measured, not suppressed",
+  "optimizer_updates": 0
+}

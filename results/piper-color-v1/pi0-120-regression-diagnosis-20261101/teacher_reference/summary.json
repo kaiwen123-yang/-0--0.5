@@ -1,0 +1,215 @@
+{
+  "episodes": [
+    {
+      "layout": 100,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_red.npz",
+      "source_sha256": "8adf18a3c7f361a4e6ebe2e348156e34ec6c6dae88008bdb9857da66f8b6e02c",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 100,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_green.npz",
+      "source_sha256": "a467632a99fa852a3c45bf4f75ec73cf1e68f16f5ba6467bfd3e476501801094",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 100,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_blue.npz",
+      "source_sha256": "7c4cf710dfc47f8f341d8f44bb8b4274676f53ca7b4036028d339844b1f76e79",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 101,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_red.npz",
+      "source_sha256": "55f1509d9b1e10e68c8e8617dd490931a7f3467162357a041271fa71c8478879",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 101,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_green.npz",
+      "source_sha256": "3146d4946155ec51bdd5efd05103e399b838aa7f416116b6b6eb5709ae85f6df",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 101,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_blue.npz",
+      "source_sha256": "6e5981e5aab9d13389b8225c8e4e4031df7d422f173bee3cf95ae7f3baa325cf",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1000,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_red.npz",
+      "source_sha256": "dc245051f8ea65e58d856ee6b6266396a13d717edaf50b27a5122a5cece14933",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1000,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_green.npz",
+      "source_sha256": "e0fcc776e13690544ea9e16040c142a562337db942b438d675b2c0a7b5d3ed24",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1000,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_blue.npz",
+      "source_sha256": "1a8e802e1ef72bf3fa08d050d17659c4ee9f98faa3c45ba199e08218178badff",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1001,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_red.npz",
+      "source_sha256": "47d2706e7e666f29f991181cefa8c29bf8a5421a87d8eac41c00a6cf9d96f6d3",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1001,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_green.npz",
+      "source_sha256": "f11f49cefb29fc6b762811c1f6f783c0c04b16c583d2f13ed82ebe91f7bce472",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1001,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_blue.npz",
+      "source_sha256": "45d82e38a517d52e436434ba5a5a98039b174a71169027c8ba99eb6bfa1bf4c8",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1002,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_red.npz",
+      "source_sha256": "7c788c7a4aaa52cb1dcda9dbb03fb48e52a4ac793d10d0b2ea9f84c8bf7213cc",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1002,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_green.npz",
+      "source_sha256": "c868f9918fc03573b758cdbf444b969ac95d26f75375eab59f12ef5bc656936a",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1002,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_blue.npz",
+      "source_sha256": "e8d06dff23f7ed6688ff1ce35bac7bb8f551eba9ecf90f402a90476665cf93d5",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1003,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_red.npz",
+      "source_sha256": "424ed9994f90bda0ad8a5ef9ffc30efa495063d9cade983959363d1841f57adc",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1003,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_green.npz",
+      "source_sha256": "e9b9bb7974ea56362c7d8d49ce4cdb2bf0d4ce7a105af1c021927bef4acacf5c",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1003,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_blue.npz",
+      "source_sha256": "80e7a7bcc04659848d5319b36a644a72b78781905bdf2bebc4c01e6fde33c3b6",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1004,
+      "target": "red",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_red.npz",
+      "source_sha256": "21e591313af335ad9b82a3cc4dba4cd0bc2c8ca51340527891e5cdc82c62c635",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1004,
+      "target": "green",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_green.npz",
+      "source_sha256": "5ea22909d7d8cae4c0dee25398b4cf6a6b158ee7892ac6080ef44a3652a305f8",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    },
+    {
+      "layout": 1004,
+      "target": "blue",
+      "success": true,
+      "max_replay_state_error": 0.0,
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_blue.npz",
+      "source_sha256": "b1f7f1243a69ca2c91f2912d7212798c06a93b7f2c7168dc1464536f1539acce",
+      "training_data_modified": false,
+      "used_for_normalization": false
+    }
+  ],
+  "diagnostic_reference_only": true
+}

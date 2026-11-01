@@ -1,0 +1,11 @@
+FIXED old2010 100 red 28
+FIXED old2010 100 green 56
+FIXED old2010 100 blue 84
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/probe_pi0_120_regression.py", line 229, in <module>
+    fixed(policy, a.label) if a.stage == "fixed" else prefixes(policy, a.label, a.prefix_lengths)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/probe_pi0_120_regression.py", line 128, in fixed
+    assert all(np.array_equal(demos["red"][key][0], demos[c][key][0]) for c in COLORS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

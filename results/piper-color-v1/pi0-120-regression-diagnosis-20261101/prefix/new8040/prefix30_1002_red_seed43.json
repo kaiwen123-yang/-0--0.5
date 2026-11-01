@@ -1,0 +1,76 @@
+{
+  "model": "new8040",
+  "prefix": 30,
+  "layout": 1002,
+  "target": "red",
+  "base_seed": 43,
+  "teacher_intervention": true,
+  "autonomous_success_rate_eligible": false,
+  "rng_advance_calls": 6,
+  "handoff_state_max_error": 0.0,
+  "handoff_xy_mm": 6.024453205825626,
+  "handoff_normal_forces_N": [
+    0.0,
+    0.0
+  ],
+  "success": true,
+  "max_lift_cm": 15.86805880191584,
+  "first_lifted_frame": 47,
+  "first_bilateral_lift_frame": 47,
+  "over_box_frames": 109,
+  "drop_frame": null,
+  "bilateral_contact_frames": 114,
+  "approach_reference_frame": 47,
+  "approach_xy_offset_mm": 0.8616912128352979,
+  "approach_object_in_tcp_mm": [
+    0.9786674569238665,
+    0.07456957116973827,
+    4.688829276835615
+  ],
+  "approach_orientation_error_deg": 2.234490597053357,
+  "normal_force_at_reference_N": [
+    9.4528524907929,
+    9.457405909446045
+  ],
+  "gripper_width_at_reference_m": 0.03469672426581383,
+  "raw_to_executed_joint_mae_rad": 0.00010487622059374877,
+  "command_tracking_joint_mae_rad": 0.021622046566177364,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 1002,
+    "target": "red",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.1586805880191584,
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.14198706891860496,
+        0.14849568998301135,
+        0.025393255988701208
+      ],
+      "green": [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.017393255988701315
+      ],
+      "blue": [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739325598870132
+      ]
+    },
+    "steps": 226
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "pid": 69987,
+  "started_at": "2026-11-01T01:32:56.455791+00:00",
+  "optimizer_updates": 0,
+  "test_layouts_used": false,
+  "completed": false,
+  "updated_at": "2026-11-01T01:34:23.357767+00:00",
+  "stage": "failed",
+  "error": "CalledProcessError(1, ['taskset', '-c', '0-3', 'nice', '-n', '10', '/root/autodl-tmp/robot-repro/pi-reproduction/runtime/d57-color-sim/bin/python', '-u', '/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/probe_pi0_120_regression.py', 'fixed', '--label', 'old2010', '--checkpoint', '/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010'])"
+}

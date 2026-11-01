@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/run_pi0_regression_probes.py", line 70, in <module>
+    execute("fixed", *args, label=f"fixed_{label}")
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/run_pi0_regression_probes.py", line 31, in execute
+    subprocess.run(["taskset", "-c", "0-3", "nice", "-n", "10", str(SIM), "-u", str(PROBE), stage, *args],
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['taskset', '-c', '0-3', 'nice', '-n', '10', '/root/autodl-tmp/robot-repro/pi-reproduction/runtime/d57-color-sim/bin/python', '-u', '/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/probe_pi0_120_regression.py', 'fixed', '--label', 'old2010', '--checkpoint', '/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010']' returned non-zero exit status 1.

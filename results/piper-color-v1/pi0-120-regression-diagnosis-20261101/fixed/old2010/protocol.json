@@ -1,0 +1,43 @@
+{
+  "policy": {
+    "model_family": "pi0",
+    "robot": "Piper H",
+    "action_units": "6 joint rad + opening m",
+    "training_domain": "simulation",
+    "state_input": "continuous",
+    "normalization": "mean_std",
+    "training_layouts": [
+      100,
+      101
+    ],
+    "hardware_validated": false,
+    "cameras": "external RGB + wrist RGB; virtual uncalibrated geometry",
+    "mode": "lora",
+    "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+    "norm_stats": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/assets/piper_h_color_v1",
+    "seed": 42,
+    "reset_seed_supported": true,
+    "action_horizon": 10,
+    "flow_denoising_steps": 10
+  },
+  "frames": [
+    0,
+    10,
+    20,
+    30,
+    45,
+    55,
+    65,
+    75,
+    90,
+    105,
+    130,
+    165,
+    190,
+    230
+  ],
+  "teacher_conditioned_only": true,
+  "task_success_rate_eligible": false,
+  "observation_count": 588,
+  "common_prompt_swap_groups": 14
+}
