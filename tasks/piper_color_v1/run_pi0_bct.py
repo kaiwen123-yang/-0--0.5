@@ -91,7 +91,10 @@ def main():
         update(); publish(CAMPAIGN,'supervisor-started')
         freeze_path=CAMPAIGN/'candidate_freeze.json'
         if not freeze_path.exists():
-            if not (CAMPAIGN/'coverage_summary.json').exists() or not (CAMPAIGN/'prefix_summary.json').exists():
+            prefix_pending=not (CAMPAIGN/'prefix_summary.json').exists()
+            if not prefix_pending and (CAMPAIGN/'failure_case_manifest.json').exists():
+                prefix_pending=read(CAMPAIGN/'prefix_summary.json')['total']<2*len(read(CAMPAIGN/'failure_case_manifest.json')['cases'])
+            if not (CAMPAIGN/'coverage_summary.json').exists() or prefix_pending:
                 with service(OLD,'B'):
                     if not (CAMPAIGN/'coverage_summary.json').exists():
                         evaluate('B_coverage',CAMPAIGN/'phase1_roster.json',OLD)
