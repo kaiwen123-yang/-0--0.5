@@ -1123,10 +1123,10 @@
     {
       "model": "new8040",
       "prefix": 60,
-      "n": 2,
-      "complete": false,
-      "successes": 2,
-      "target_lifted_5cm": 2,
+      "n": 10,
+      "complete": true,
+      "successes": 10,
+      "target_lifted_5cm": 10,
       "episodes": [
         {
           "layout": 1000,
@@ -1142,6 +1142,160 @@
           "base_seed": 42,
           "success": true,
           "max_lift_cm": 13.988377595943218,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1001,
+          "target": "blue",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 15.418914962749108,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1002,
+          "target": "blue",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 14.560156967568128,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1003,
+          "target": "blue",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 14.56951343810577,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1000,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.468840282358853,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1001,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 15.017146081049498,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1002,
+          "target": "blue",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.858547289658198,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1002,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 15.122851661615162,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1004,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.635207153213269,
+          "handoff_state_max_error": 0.0
+        }
+      ]
+    },
+    {
+      "model": "new8040",
+      "prefix": 85,
+      "n": 10,
+      "complete": true,
+      "successes": 10,
+      "target_lifted_5cm": 10,
+      "episodes": [
+        {
+          "layout": 1000,
+          "target": "green",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 14.364650029773351,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1000,
+          "target": "red",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 13.956194170407931,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1001,
+          "target": "blue",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 13.69159349965362,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1002,
+          "target": "blue",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 13.955744948527377,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1003,
+          "target": "blue",
+          "base_seed": 42,
+          "success": true,
+          "max_lift_cm": 14.36356988506856,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1000,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.269222053492648,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1001,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.752617852808447,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1002,
+          "target": "blue",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.235218528160381,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1002,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.47804841052428,
+          "handoff_state_max_error": 0.0
+        },
+        {
+          "layout": 1004,
+          "target": "red",
+          "base_seed": 43,
+          "success": true,
+          "max_lift_cm": 14.279483024321888,
           "handoff_state_max_error": 0.0
         }
       ]
