@@ -514,6 +514,9 @@ def run_backup():
         remove_staging(downloaded);remove_staging(restored)
         if archive_dir.exists():remove_staging(archive_dir)
     state.update(phase='all_groups_verified',current_group=None)
+    catalog.setdefault('recovery_tool_sha256',sha(Path(__file__)))
+    catalog.setdefault('backup_tool_commit',command(['git','-C',ROOT,'rev-parse','HEAD']).strip())
+    save(STAGE/'catalog-working.json',catalog)
     final=STAGE/'backup-catalog.json';save(final,catalog)
     state['catalog_sha256']=sha(final);save(STAGE/'state.json',state);write_index(catalog,state)
     upload_file(final)
@@ -547,41 +550,129 @@ def cleanup_sources():
                 for p in group['parts']:receipt(remote[p['name']],p)
     tracked=set(command(['git','-C',ROOT,'ls-files','-z']).split('\0'))
     rows=[r for g in catalog['groups'] for r in g['entries'] if r['cleanup']]
+    plan_path=STAGE/'cleanup-plan.json'
+    resuming=plan_path.exists()
+    if resuming:
+        plan=json.loads(plan_path.read_text())
+        if plan['catalog_sha256']!=state['catalog_sha256']:raise ValueError('Cleanup plan catalog differs')
+    def source_path(row):
+        p=WORKSPACE/row['path']
+        bases=[base for base in ALLOWED if p==base or p.is_relative_to(base)]
+        if not bases:raise ValueError(f'Outside allowlist: {p}')
+        base=bases[0]
+        if base.is_symlink():raise ValueError(f'Cleanup root changed to a symlink: {base}')
+        if p!=base and not p.parent.resolve().is_relative_to(base):
+            raise ValueError(f'Physical parent escaped frozen allowed root: {p}')
+        if p.is_relative_to(ROOT) and p.relative_to(ROOT).as_posix() in tracked:
+            raise ValueError(f'Tracked file: {p}')
+        return p
     # Verify every deletion target before deleting the first original file.
     for i,r in enumerate(rows):
-        p=WORKSPACE/r['path']
-        if not any(p==base or p.is_relative_to(base) for base in ALLOWED):raise ValueError(f'Outside allowlist: {p}')
-        if p.is_relative_to(ROOT) and p.relative_to(ROOT).as_posix() in tracked:raise ValueError(f'Tracked file: {p}')
-        if not any(p.parent.resolve()==base.resolve() or p.parent.resolve().is_relative_to(base.resolve())
-                   for base in ALLOWED if p!=base):
-            if p not in ALLOWED:raise ValueError(f'Physical parent escaped allowed roots: {p}')
-        st=p.lstat()
-        if st.st_ino!=r['inode'] or st.st_mtime_ns!=r['mtime_ns']:raise ValueError(f'Source changed: {p}')
+        p=source_path(r)
+        try:st=p.lstat()
+        except FileNotFoundError:
+            if resuming:continue
+            raise
+        if st.st_ino!=r['inode'] or (not(resuming and r['type']=='directory') and st.st_mtime_ns!=r['mtime_ns']):
+            raise ValueError(f'Source changed: {p}')
         if r['type']=='file' and (st.st_size!=r['bytes'] or sha(p)!=r['sha256']):raise ValueError(f'Source content changed: {p}')
         if r['type']=='symlink' and os.readlink(p)!=r['target']:raise ValueError(f'Source link changed: {p}')
         if i%100==0:record('cleanup_precheck',checked=i,total=len(rows))
-    state.update(phase='deleting_verified_sources',free_bytes_before=shutil.disk_usage(WORKSPACE).free)
+    if not resuming:
+        plan={'catalog_sha256':state['catalog_sha256'],'created_at_utc':now(),
+              'free_bytes_before':shutil.disk_usage(WORKSPACE).free,
+              'planned_files':[{'path':r['path'],'bytes':r.get('bytes',0),'sha256':r.get('sha256'),'type':r['type']}
+                               for r in rows if r['type']!='directory']}
+        save(plan_path,plan)
+    state.update(phase='deleting_verified_sources',free_bytes_before=plan['free_bytes_before'])
     save(STAGE/'state.json',state)
-    deleted=[]
+    journal=STAGE/'deletion-journal.jsonl'
     for r in rows:
         if r['type']=='directory':continue
-        p=WORKSPACE/r['path'];st=p.lstat()
+        p=source_path(r)
+        try:st=p.lstat()
+        except FileNotFoundError:
+            if resuming:continue
+            raise
         if st.st_ino!=r['inode'] or st.st_mtime_ns!=r['mtime_ns']:raise ValueError(f'Changed during cleanup: {p}')
-        p.unlink();deleted.append({'path':r['path'],'bytes':r.get('bytes',0),'sha256':r.get('sha256'),'type':r['type']})
+        p.unlink()
+        with journal.open('a') as f:f.write(json.dumps({'path':r['path'],'at_utc':now()})+'\n')
     for r in sorted((r for r in rows if r['type']=='directory'),key=lambda r:len(PurePosixPath(r['path']).parts),reverse=True):
         p=WORKSPACE/r['path']
         try:p.rmdir()
         except OSError:
             if not p.is_dir() or any(p.iterdir()):continue
             raise
-    cleanup={'completed_at_utc':now(),'files_and_links_deleted':len(deleted),'source_bytes_deleted':sum(r['bytes'] for r in deleted),
-        'free_bytes_before':state['free_bytes_before'],'free_bytes_after':shutil.disk_usage(WORKSPACE).free,
-        'allowed_roots':[str(p) for p in ALLOWED],'other_projects_touched':False,'deleted':deleted}
-    save(STAGE/'cleanup-receipt.json',cleanup);upload_file(STAGE/'cleanup-receipt.json')
+    receipt_path=STAGE/'cleanup-receipt.json'
+    if receipt_path.exists():cleanup=json.loads(receipt_path.read_text())
+    else:
+        removed=plan['planned_files']
+        cleanup={'completed_at_utc':now(),'files_and_links_deleted':len(removed),
+            'source_bytes_deleted':sum(r['bytes'] for r in removed),
+            'free_bytes_before':state['free_bytes_before'],'free_bytes_after':shutil.disk_usage(WORKSPACE).free,
+            'free_space_note':'filesystem-wide free space can also change due to unrelated concurrent jobs',
+            'allowed_roots':[str(p) for p in ALLOWED],'other_projects_touched':False,'deleted':removed,
+            'deletion_journal_sha256':sha(journal),'resumed_cleanup':resuming}
+        save(receipt_path,cleanup)
+    upload_file(receipt_path)
     state.update(phase='complete',source_deleted=True,cleanup={k:v for k,v in cleanup.items() if k!='deleted'})
     save(STAGE/'state.json',state);write_index(catalog,state)
     record('cleanup_complete',**state['cleanup'])
     publish_index('Record completed verified pi data cleanup')
+
+
+def finalize_documentation():
+    state=json.loads((STAGE/'state.json').read_text())
+    if state.get('phase')!='complete' or not state.get('source_deleted'):
+        raise RuntimeError('Cleanup has not completed; final documentation cannot claim completion')
+    done=PUB/'documentation-finalized.json'
+    if done.exists():
+        paths=['AGENTS.md','ARTIFACT_INDEX.json','README.md','docs/PI0_RELEASE_RESTORE_20261101.md',
+               'docs/PI0_STORAGE_BACKUP_STATUS_20261101.md',
+               'experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101.json',str(done.relative_to(ROOT))]
+        staged=command(['git','-C',ROOT,'diff','--cached','--name-only']).splitlines()
+        if any(p not in paths for p in staged):raise RuntimeError('Unrelated staged changes during documentation resume')
+        command(['git','-C',ROOT,'add','--',*paths])
+        if command(['git','-C',ROOT,'diff','--cached','--name-only']).strip():
+            command(['git','-C',ROOT,'commit','-m','Finish completed pi archive documentation'])
+        publish_index('Confirm final pi archive documentation delivery')
+        record('final_documentation_pushed',commit=command(['git','-C',ROOT,'rev-parse','HEAD']).strip())
+        return
+    index=json.loads((PUB/'index.json').read_text())
+    cleanup=state['cleanup'];gib=cleanup['source_bytes_deleted']/1024**3
+    meta=ROOT/'ARTIFACT_INDEX.json';data=json.loads(meta.read_text())
+    data['pi_complete_backup_20261101'].update(status='published_downloaded_restored_and_source_cleaned',source_deleted=True,
+        release_url=index['release_url'],source_file_count=index['source_file_count'],source_bytes=index['source_bytes'],
+        cleanup=cleanup,catalog_sha256=index['catalog_sha256'])
+    data['pi_b_coverage_restoration_required']=True
+    save(meta,data)
+    contract=ROOT/'experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101.json'
+    obj=json.loads(contract.read_text());obj['status']='ready_after_restore_not_started'
+    obj['restoration'].update(source_storage_state='archived_source_removed_restore_required',
+        release_url=index['release_url'],catalog_sha256=index['catalog_sha256'])
+    save(contract,obj)
+    doc=ROOT/'docs/PI0_RELEASE_RESTORE_20261101.md';text=doc.read_text()
+    marker='## 备份的含义\n'
+    text=text.replace(marker,f'**完成记录：** 全部 {len(index["groups"])} 组已通过远端大小/SHA256、全量回下载、解包逐文件校验；B 完整模型/优化器实际恢复到累计4020。原始数据已按白名单清理，涉及约 {gib:.2f} GiB 文件内容。详细回执在恢复索引和 Release 的 `cleanup-receipt.json`。新合并任务尚未执行，须先恢复数据。\n\n'+marker,1)
+    doc.write_text(text)
+    old=ROOT/'docs/PI0_STORAGE_BACKUP_STATUS_20261101.md';text=old.read_text();parts=text.split('\n',1)
+    old.write_text(parts[0]+'\n\n**后续更新：用户已授权完整备份后清理，现已完成。** 原核对记录保留在下文；最新状态和恢复方法见 [Release 恢复说明](PI0_RELEASE_RESTORE_20261101.md)。\n'+parts[1])
+    readme=ROOT/'README.md';text=readme.read_text()
+    original='**存储核对：** π 项目尚未全量备份至 GitHub，未执行用户所述条件性删除；完整检查点、v2 数据和原始视频/轨迹仍需保留。[备份缺口与占用](docs/PI0_STORAGE_BACKUP_STATUS_20261101.md)。'
+    updated=f'**存储归档已完成：** π 研究数据与两套基础权重已按清单上传/复用 Release，完成全量回下载和逐文件校验，B 完整状态恢复验证通过；已清理对应原始数据约 {gib:.2f} GiB。代码和环境保留，新任务执行前先恢复。[恢复步骤](docs/PI0_RELEASE_RESTORE_20261101.md) · [Release]({index["release_url"]})。'
+    if original not in text:raise ValueError('README storage paragraph changed; review required')
+    readme.write_text(text.replace(original,updated,1))
+    agents=ROOT/'AGENTS.md';agents.write_text(agents.read_text()+f'\n\n## 完整归档与清理已完成\n- `{TAG}` 已完成全量回下载/逐文件校验，B 模型与优化器恢复计数4020验证通过。按授权清理的来源数据已经移除，其他项目未处理。\n- 代码、Git、隔离环境与恢复工具保留；新任务必须先读 docs/PI0_RELEASE_RESTORE_20261101.md 并恢复最小 B 集合，依实际恢复回执绑定路径。原 source_anchor 是历史摘要，不代表旧路径仍存在。\n')
+    save(done,{'completed_at_utc':now(),'release_url':index['release_url'],'source_deleted':True,'new_task_started':False})
+    paths=['AGENTS.md','ARTIFACT_INDEX.json','README.md','docs/PI0_RELEASE_RESTORE_20261101.md',
+           'docs/PI0_STORAGE_BACKUP_STATUS_20261101.md',str(contract.relative_to(ROOT)),str(done.relative_to(ROOT))]
+    staged=command(['git','-C',ROOT,'diff','--cached','--name-only']).splitlines()
+    if any(p not in paths for p in staged):raise RuntimeError('Unrelated staged changes before final documentation')
+    command(['git','-C',ROOT,'add','--',*paths]);command(['git','-C',ROOT,'diff','--cached','--check'])
+    if command(['git','-C',ROOT,'diff','--cached','--name-only']).strip():
+        command(['git','-C',ROOT,'commit','-m','Document completed pi archive cleanup and required data restoration'])
+    publish_index('Record final pi archive documentation')
+    record('final_documentation_pushed',commit=command(['git','-C',ROOT,'rev-parse','HEAD']).strip())
 
 
 def restore_command(args):
@@ -619,7 +710,7 @@ def restore_command(args):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     sub=p.add_subparsers(dest='command',required=True)
-    sub.add_parser('backup');sub.add_parser('cleanup');sub.add_parser('all');sub.add_parser('status')
+    sub.add_parser('backup');sub.add_parser('cleanup');sub.add_parser('all');sub.add_parser('status');sub.add_parser('finalize')
     q=sub.add_parser('restore');q.add_argument('--workspace-root',type=Path,required=True)
     q.add_argument('--cache',type=Path,required=True);choice=q.add_mutually_exclusive_group()
     choice.add_argument('--minimal-b',action='store_true');choice.add_argument('--groups',nargs='+')
@@ -632,6 +723,7 @@ def main():
         try:
             if args.command in ('backup','all'):run_backup()
             if args.command in ('cleanup','all'):cleanup_sources()
+            if args.command in ('finalize','all'):finalize_documentation()
         except BaseException as exc:
             record('operation_failed',error=repr(exc));raise
 
