@@ -1,0 +1,33 @@
+MODEL_LOADED {"model_family": "pi0", "robot": "Piper H", "action_units": "6 joint rad + opening m", "training_domain": "simulation", "state_input": "continuous", "normalization": "mean_std", "training_layouts": [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139], "hardware_validated": false, "cameras": "external RGB + wrist RGB; virtual uncalibrated geometry", "environment_version": "piper_h_color_contact_v2_impratio10", "adaptation_group": "A", "mode": "lora", "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/500", "norm_stats": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/500/assets/piper_h_color_v1", "reset_seed_supported": true, "action_horizon": 10, "flow_denoising_steps": 10}
+INFO:websockets.server:server listening on 127.0.0.1:18768
+ERROR:websockets.server:opening handshake failed
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/lib/python3.11/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+INFO:websockets.server:connection open
