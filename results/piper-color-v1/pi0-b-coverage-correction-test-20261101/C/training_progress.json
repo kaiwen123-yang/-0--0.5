@@ -1,20 +1,20 @@
 {
   "group": "C",
-  "local_update": 500,
-  "optimizer_update": 4520,
-  "grad_norm": 0.48540574312210083,
-  "loss": 0.004503495525568724,
-  "param_norm": 1379.8399658203125,
-  "wall_time": 1793543979.9102657,
-  "compute_seconds": 0.2901379968971014,
-  "data_wait_seconds": 0.018950439989566803,
+  "local_update": 1000,
+  "optimizer_update": 5020,
+  "grad_norm": 1.3043067455291748,
+  "loss": 0.026073385030031204,
+  "param_norm": 1379.8408203125,
+  "wall_time": 1793545230.7385101,
+  "compute_seconds": 0.29001706279814243,
+  "data_wait_seconds": 0.019059836864471436,
   "learning_rate": 3.000000106112566e-06,
-  "sample_offset_before": 1996,
+  "sample_offset_before": 3996,
   "sample_indices": [
-    1341,
-    12596,
-    26288,
-    31627
+    17716,
+    29502,
+    14050,
+    23176
   ],
   "sample_components": [
     "original",
@@ -22,6 +22,6 @@
     "original",
     "original"
   ],
-  "rng_fold_in_step": 4519,
-  "segment_end_local": 500
+  "rng_fold_in_step": 5019,
+  "segment_end_local": 1000
 }

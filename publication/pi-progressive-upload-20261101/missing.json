@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-01T14:55:23.075505+00:00",
+  "at_utc": "2026-11-01T15:00:03.357138+00:00",
   "assets": [
     {
       "name": "progressive-six-checkpoint-2010-9df7cceca1cfa651-a558f844f903d4f11c5b1f19f879ea62",
@@ -10,10 +10,10 @@
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-000",
-      "status": "uploading",
+      "status": "pending",
       "source_bytes": 1073741824,
       "attempts": 1,
-      "reason": null
+      "reason": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-001",

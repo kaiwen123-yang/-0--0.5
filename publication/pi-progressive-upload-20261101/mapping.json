@@ -909,8 +909,9 @@
       "part": 0,
       "parts": 3,
       "group": "ab-a-checkpoint-1000",
-      "status": "uploading",
-      "attempts": 1
+      "status": "pending",
+      "attempts": 1,
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-001",

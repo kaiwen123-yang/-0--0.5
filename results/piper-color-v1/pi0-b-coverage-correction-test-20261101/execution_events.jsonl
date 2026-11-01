@@ -22,3 +22,4 @@
 {"at_utc": "2026-11-01T14:57:18.831920+00:00", "event": "end", "label": "fixed_C_500", "returncode": 0}
 {"at_utc": "2026-11-01T14:57:18.867336+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "node", "--label", "C_500"], "label": "node_C_500"}
 {"at_utc": "2026-11-01T14:57:19.300582+00:00", "event": "end", "label": "node_C_500", "returncode": 0}
+{"at_utc": "2026-11-01T14:57:23.419972+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "train", "--until", "1000", "--resume"], "label": "train_C_1000"}
