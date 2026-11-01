@@ -1,0 +1,29 @@
+{
+  "candidate": "D_1000",
+  "validation_counts": [
+    10,
+    9,
+    10,
+    9,
+    9
+  ],
+  "correct_close": 28,
+  "non_target_lifts": 1,
+  "prompt_matches": 30,
+  "gates": {
+    "prompt_match": true,
+    "correct_close": true,
+    "wrong_lifts": true,
+    "every_validation_seed_at_least_B": false
+  },
+  "eligible": false,
+  "score": [
+    9,
+    47,
+    10,
+    30
+  ],
+  "local_updates": 1000,
+  "optimizer_updates": 5020,
+  "test_used": false
+}

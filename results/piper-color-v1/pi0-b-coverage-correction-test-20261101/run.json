@@ -1,12 +1,12 @@
 {
   "started_at": "2026-11-01T13:43:44.489578+00:00",
   "pid": 16664,
-  "stage": "D_1000",
+  "stage": "node_D_1000",
   "completed": false,
   "base_optimizer_updates": 4020,
   "source_commit": "49d1e32249813b768583fc0f5bc6d27a735188c7",
   "hardware_execution": false,
-  "updated_at": "2026-11-01T16:06:17.740770+00:00",
+  "updated_at": "2026-11-01T16:07:22.670565+00:00",
   "counts": {
     "new_autonomous_evaluations": 661,
     "reused_evaluations": 42,
@@ -19,9 +19,9 @@
     "correction_attempts": 20,
     "accepted_corrections": 20
   },
-  "service_pid": 31896,
+  "service_pid": null,
   "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/serve_D_1000_1793548066842044825.log",
   "active_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/D/checkpoints/pi0_piper_color_lora/b_coverage_correction/1000",
   "child_pid": null,
-  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/D_1000_1793548077902052532.log"
+  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/node_D_1000_1793549241787569578.log"
 }
