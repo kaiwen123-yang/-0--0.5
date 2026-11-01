@@ -1,0 +1,33 @@
+{
+  "group": "B",
+  "local_update": 500,
+  "optimizer_update": 2510,
+  "grad_norm": 0.8661439471924155,
+  "loss": 0.019134895211148757,
+  "param_norm": 1379.8353149512786,
+  "wall_time": 1793502795.19082,
+  "compute_seconds": 0.46896178647875786,
+  "data_wait_seconds": 0.018785705789923668,
+  "learning_rate": 3e-06,
+  "sample_offset_before": 1996,
+  "sample_indices": [
+    1341,
+    12596,
+    26288,
+    31627
+  ],
+  "sample_frames": [
+    1,
+    0,
+    24,
+    3
+  ],
+  "sample_episode_indices": [
+    5,
+    47,
+    98,
+    118
+  ],
+  "rng_fold_in_step": 2509,
+  "segment_end_local": 500
+}

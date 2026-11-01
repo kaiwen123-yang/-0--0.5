@@ -1,7 +1,7 @@
 {
   "started_at": "2026-11-01T02:21:54.347541+00:00",
   "pid": 75652,
-  "stage": "A/probe_2010",
+  "stage": "B/train_to_500",
   "completed": false,
   "order": [
     "A",
@@ -61,7 +61,7 @@
       "completed_local_updates": 2010
     },
     "B": {
-      "state": "queued",
+      "state": "running",
       "completed_local_updates": 0
     }
   },
@@ -72,5 +72,6 @@
   ],
   "hardware_execution": false,
   "test_split_used": false,
-  "updated_at": "2026-11-01T03:07:36.856594+00:00"
+  "updated_at": "2026-11-01T03:08:51.904836+00:00",
+  "child_pid": 82422
 }
