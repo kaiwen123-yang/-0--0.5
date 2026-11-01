@@ -203,5 +203,22 @@
       "new_prefix85_success": 10
     },
     "test_split_used": false
+  },
+  "pi0_ab_old2010_20261101": {
+    "status": "authorized_preparing_detached_sequential_run",
+    "branch": "codex/pi0-ab-old2010-20261101",
+    "run_contract": "docs/PI0_AB_OLD2010_RUN_20261101.md",
+    "results": "results/piper-color-v1/pi0-ab-old2010-20261101",
+    "server_output": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101",
+    "groups": [
+      "A_uniform",
+      "B_front_weighted"
+    ],
+    "initial_optimizer_updates": 2010,
+    "new_update_budget_per_group": 2010,
+    "actual_status_source": "results run.json and per-update metrics",
+    "large_artifacts_uploaded": false,
+    "test_split_used": false,
+    "hardware_execution": false
   }
 }
