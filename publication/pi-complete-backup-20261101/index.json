@@ -297,32 +297,163 @@
       "tag": "pi-complete-backup-20261101",
       "source_bytes": 10850899853,
       "member_count": 857,
-      "parts": [],
-      "verification": null
+      "parts": [
+        {
+          "name": "v2-training-data.tar.zst.part-000",
+          "bytes": 536870912,
+          "sha256": "d18883ff3f674af1086b1a913b0dfdc38636506e39e2794480f373e2a40292e6"
+        },
+        {
+          "name": "v2-training-data.tar.zst.part-001",
+          "bytes": 536870912,
+          "sha256": "124091190413acf7df2a7b629383fd77440caa535d555b8fea8f4785afa00f5b"
+        },
+        {
+          "name": "v2-training-data.tar.zst.part-002",
+          "bytes": 536870912,
+          "sha256": "9e92d6ce58130e0176658cb7edef029478ecfb853ece2e642e5d02a6e818da6b"
+        },
+        {
+          "name": "v2-training-data.tar.zst.part-003",
+          "bytes": 133567557,
+          "sha256": "bd7fd4cf9bba2d6025bf1cf139cb3888465d25a4afc0214c4218947350aacb15"
+        }
+      ],
+      "verification": {
+        "members": 857,
+        "files": 735,
+        "bytes": 10850899853,
+        "every_file_sha256_matched": true,
+        "verified_at_utc": "2026-11-01T11:57:10.550520+00:00",
+        "remote_assets": [
+          {
+            "id": 698195091,
+            "name": "v2-training-data.tar.zst.part-000",
+            "size": 536870912,
+            "digest": "sha256:d18883ff3f674af1086b1a913b0dfdc38636506e39e2794480f373e2a40292e6",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/v2-training-data.tar.zst.part-000"
+          },
+          {
+            "id": 698195076,
+            "name": "v2-training-data.tar.zst.part-001",
+            "size": 536870912,
+            "digest": "sha256:124091190413acf7df2a7b629383fd77440caa535d555b8fea8f4785afa00f5b",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/v2-training-data.tar.zst.part-001"
+          },
+          {
+            "id": 698199959,
+            "name": "v2-training-data.tar.zst.part-002",
+            "size": 536870912,
+            "digest": "sha256:9e92d6ce58130e0176658cb7edef029478ecfb853ece2e642e5d02a6e818da6b",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/v2-training-data.tar.zst.part-002"
+          },
+          {
+            "id": 698202464,
+            "name": "v2-training-data.tar.zst.part-003",
+            "size": 133567557,
+            "digest": "sha256:bd7fd4cf9bba2d6025bf1cf139cb3888465d25a4afc0214c4218947350aacb15",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/v2-training-data.tar.zst.part-003"
+          }
+        ],
+        "source_files_unchanged": true
+      }
     },
     {
       "id": "ab-records",
       "tag": "pi-complete-backup-20261101",
       "source_bytes": 280275158,
       "member_count": 991,
-      "parts": [],
-      "verification": null
+      "parts": [
+        {
+          "name": "ab-records.tar.zst.part-000",
+          "bytes": 242165455,
+          "sha256": "3760f1322fceef55a0743755dc6a4f7c972a8373bfa6608dc9572da40764e9f4"
+        }
+      ],
+      "verification": {
+        "members": 991,
+        "files": 932,
+        "bytes": 280275158,
+        "every_file_sha256_matched": true,
+        "verified_at_utc": "2026-11-01T11:58:44.105791+00:00",
+        "remote_assets": [
+          {
+            "id": 698211465,
+            "name": "ab-records.tar.zst.part-000",
+            "size": 242165455,
+            "digest": "sha256:3760f1322fceef55a0743755dc6a4f7c972a8373bfa6608dc9572da40764e9f4",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-records.tar.zst.part-000"
+          }
+        ],
+        "source_files_unchanged": true
+      }
     },
     {
       "id": "v2-records",
       "tag": "pi-complete-backup-20261101",
       "source_bytes": 203527845,
       "member_count": 571,
-      "parts": [],
-      "verification": null
+      "parts": [
+        {
+          "name": "v2-records.tar.zst.part-000",
+          "bytes": 175397872,
+          "sha256": "a90efd9b4401ee5b3dec69b4455aa31c3323fd338347b667b229414c7287aaa3"
+        }
+      ],
+      "verification": {
+        "members": 571,
+        "files": 548,
+        "bytes": 203527845,
+        "every_file_sha256_matched": true,
+        "verified_at_utc": "2026-11-01T12:00:06.397510+00:00",
+        "remote_assets": [
+          {
+            "id": 698214916,
+            "name": "v2-records.tar.zst.part-000",
+            "size": 175397872,
+            "digest": "sha256:a90efd9b4401ee5b3dec69b4455aa31c3323fd338347b667b229414c7287aaa3",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/v2-records.tar.zst.part-000"
+          }
+        ],
+        "source_files_unchanged": true
+      }
     },
     {
       "id": "regression-records",
       "tag": "pi-complete-backup-20261101",
       "source_bytes": 170911695,
       "member_count": 224,
-      "parts": [],
-      "verification": null
+      "parts": [
+        {
+          "name": "regression-records.tar.zst.part-000",
+          "bytes": 167314737,
+          "sha256": "52f2bbf4fb37f5eb68dff6132e337645206e6582dc4994f4751fcf19c3d3e1b7"
+        }
+      ],
+      "verification": {
+        "members": 224,
+        "files": 209,
+        "bytes": 170911695,
+        "every_file_sha256_matched": true,
+        "verified_at_utc": "2026-11-01T12:01:15.066627+00:00",
+        "remote_assets": [
+          {
+            "id": 698218364,
+            "name": "regression-records.tar.zst.part-000",
+            "size": 167314737,
+            "digest": "sha256:52f2bbf4fb37f5eb68dff6132e337645206e6582dc4994f4751fcf19c3d3e1b7",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/regression-records.tar.zst.part-000"
+          }
+        ],
+        "source_files_unchanged": true
+      }
     },
     {
       "id": "official-pi0-base",
@@ -650,5 +781,5 @@
     }
   ],
   "catalog_sha256": null,
-  "updated_at_utc": "2026-11-01T11:49:34.131144+00:00"
+  "updated_at_utc": "2026-11-01T12:01:15.067137+00:00"
 }
