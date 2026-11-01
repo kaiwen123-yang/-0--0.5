@@ -2468,5 +2468,85 @@
     "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_red_seed45/attempt000_seed45/layout_01001_red.npz",
     "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_red_seed45/attempt000_seed45/layout_01001_red.mp4",
     "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1001,
+    "target": "green",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_green_seed45/attempt001_seed45/layout_01001_green.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_green_seed45/attempt001_seed45/layout_01001_green.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_green_seed45/attempt001_seed45/layout_01001_green.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1001,
+    "target": "blue",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_blue_seed45/attempt000_seed45/layout_01001_blue.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_blue_seed45/attempt000_seed45/layout_01001_blue.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01001_blue_seed45/attempt000_seed45/layout_01001_blue.mp4",
+    "success": false
+  },
+  {
+    "split": "validation",
+    "layout": 1002,
+    "target": "red",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_red_seed45/attempt000_seed45/layout_01002_red.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_red_seed45/attempt000_seed45/layout_01002_red.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_red_seed45/attempt000_seed45/layout_01002_red.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1002,
+    "target": "green",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_green_seed45/attempt000_seed45/layout_01002_green.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_green_seed45/attempt000_seed45/layout_01002_green.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_green_seed45/attempt000_seed45/layout_01002_green.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1002,
+    "target": "blue",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_blue_seed45/attempt000_seed45/layout_01002_blue.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_blue_seed45/attempt000_seed45/layout_01002_blue.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01002_blue_seed45/attempt000_seed45/layout_01002_blue.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1003,
+    "target": "red",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_red_seed45/attempt000_seed45/layout_01003_red.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_red_seed45/attempt000_seed45/layout_01003_red.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_red_seed45/attempt000_seed45/layout_01003_red.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1003,
+    "target": "green",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_green_seed45/attempt000_seed45/layout_01003_green.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_green_seed45/attempt000_seed45/layout_01003_green.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_green_seed45/attempt000_seed45/layout_01003_green.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1003,
+    "target": "blue",
+    "base_seed": 45,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_blue_seed45/attempt000_seed45/layout_01003_blue.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_blue_seed45/attempt000_seed45/layout_01003_blue.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/validation_01003_blue_seed45/attempt000_seed45/layout_01003_blue.mp4",
+    "success": true
   }
 ]
