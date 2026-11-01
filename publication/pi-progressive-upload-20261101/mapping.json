@@ -490,8 +490,16 @@
       "part": 0,
       "parts": 1,
       "group": "six-checkpoint-2010",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 698603102,
+        "name": "progressive-six-checkpoint-2010-bd8be5ba3f143314-1a1812968760898f6e1813f8b8c56eb6",
+        "size": 265938638,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-six-checkpoint-2010-bd8be5ba3f143314-1a1812968760898f6e1813f8b8c56eb6"
+      },
+      "uploaded_at": "2026-11-01T14:45:05.732683+00:00"
     },
     {
       "name": "progressive-six-checkpoint-2010-ca9239174632f95d-e629c8b0aadc1c5c3355e97ac2eac2c6",
@@ -511,8 +519,8 @@
       "part": 0,
       "parts": 1,
       "group": "six-checkpoint-2010",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-six-checkpoint-2010-dbd0842656ce1001-bfd709e948adca9e09105ebdaf215f2b",
