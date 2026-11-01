@@ -205,7 +205,7 @@
     "test_split_used": false
   },
   "pi0_ab_old2010_20261101": {
-    "status": "authorized_preparing_detached_sequential_run",
+    "status": "completed",
     "branch": "codex/pi0-ab-old2010-20261101",
     "run_contract": "docs/PI0_AB_OLD2010_RUN_20261101.md",
     "results": "results/piper-color-v1/pi0-ab-old2010-20261101",
@@ -219,6 +219,46 @@
     "actual_status_source": "results run.json and per-update metrics",
     "large_artifacts_uploaded": false,
     "test_split_used": false,
-    "hardware_execution": false
+    "hardware_execution": false,
+    "completed_at_utc": "2026-11-01T03:54:45.437114+00:00",
+    "completed_new_updates_per_group": 2010,
+    "final_optimizer_updates_per_group": 4020,
+    "final_validation_successes": {
+      "A": [
+        14,
+        14
+      ],
+      "B": [
+        15,
+        15
+      ]
+    },
+    "denominator_per_seed": 15,
+    "final_training_six_successes": {
+      "A": [
+        4,
+        2
+      ],
+      "B": [
+        3,
+        4
+      ]
+    },
+    "supervisor_exit": 0,
+    "comparison": "results/piper-color-v1/pi0-ab-old2010-20261101/comparison.json",
+    "final_result_commit": "14b6d006c0c946819aadbe95724629c150fbb07e"
+  },
+  "pi0_b_coverage_correction_test_20261101": {
+    "status": "ready_for_next_chat_not_started",
+    "task": "docs/PI0_B_COVERAGE_CORRECTION_TEST_TASK_20261101.md",
+    "contract": "experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101.json",
+    "branch": "codex/pi0-b-coverage-correction-test-20261101",
+    "source_anchor": "experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101/source_anchor.json",
+    "output_root": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
+    "packaging_execution_counts": {
+      "new_training_updates": 0,
+      "new_autonomous_evaluations": 0,
+      "new_teacher_diagnostics": 0
+    }
   }
 }

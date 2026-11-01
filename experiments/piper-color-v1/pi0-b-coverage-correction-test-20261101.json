@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "task_id": "pi0-b-coverage-correction-test-20261101",
+  "status": "ready_for_next_chat_not_started",
+  "documentation": "docs/PI0_B_COVERAGE_CORRECTION_TEST_TASK_20261101.md",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "branch": "codex/pi0-b-coverage-correction-test-20261101",
+  "host": "autodl-d57",
+  "repository_root": "/root/autodl-tmp/robot-repro/pi-reproduction",
+  "authorization": {
+    "this_chat": "prepare_and_push_handoff_only",
+    "execution_trigger": "user asks the next chat to execute this combined task",
+    "normal_stage_transitions_require_reconfirmation": false
+  },
+  "output_root": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
+  "result_root": "results/piper-color-v1/pi0-b-coverage-correction-test-20261101",
+  "tmux_session": "pi0-b-coverage-correction-test-20261101",
+  "lock": "runtime/pi0-b-coverage-correction-test-20261101.lock",
+  "policy_host": "127.0.0.1",
+  "policy_port": 18769,
+  "source_anchor": "experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101/source_anchor.json",
+  "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+  "source_optimizer_updates": 4020,
+  "source_previous_local_updates": 2010,
+  "dataset": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset",
+  "scene": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/scene/scene.xml",
+  "normalization": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010/assets/piper_h_color_v1/norm_stats.json",
+  "protocol": {
+    "model": "pi0",
+    "mode": "lora",
+    "environment": "piper_h_color_contact_v2_impratio10",
+    "control_hz": 20,
+    "horizon": 10,
+    "replan_steps": 5,
+    "max_steps": 420,
+    "success_hold_steps": 40,
+    "seed_scope": "episode",
+    "episode_seed_formula": "base_seed + layout_seed * 3 + color_index",
+    "colors": [
+      "red",
+      "green",
+      "blue"
+    ],
+    "train_layouts": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139
+    ],
+    "validation_layouts": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+    ],
+    "test_layouts": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009
+    ],
+    "physics_pauses_for_inference": true,
+    "hardware_execution": false
+  },
+  "phase1": {
+    "training_updates": 0,
+    "reuse_training_layouts": [
+      100,
+      101
+    ],
+    "new_training_layouts": [
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139
+    ],
+    "training_seeds": [
+      42,
+      43
+    ],
+    "new_training_episodes": 228,
+    "complete_training_episodes": 240,
+    "reuse_validation_seeds": [
+      42,
+      43
+    ],
+    "new_validation_seeds": [
+      44,
+      45,
+      46
+    ],
+    "new_validation_episodes": 45,
+    "complete_validation_episodes": 75,
+    "new_autonomous_episodes": 273,
+    "max_selected_training_failures": 12,
+    "selection_rule": "stratify failure type; round-robin distinct layout/color; deterministic layout,color,seed order; include layout100 blue if failed"
+  },
+  "phase2": {
+    "max_prefix_cases": 12,
+    "teacher_prefix_frames": [
+      60,
+      85
+    ],
+    "max_prefix_episodes": 24,
+    "prefix_stage_labels": "read actual demonstration stage array; layout100 blue: 60=descend,85=lift",
+    "correction_data": {
+      "split": "train_only",
+      "min_valid_episodes": 6,
+      "max_valid_episodes": 20,
+      "max_generation_attempts": 40,
+      "successful_full_task_required": true,
+      "replay_actual_commands_to_handoff": true,
+      "validation_or_test_training_data_allowed": false
+    },
+    "skip_training_outcomes": [
+      "correction_not_needed",
+      "correction_unavailable"
+    ],
+    "order": [
+      "C",
+      "D"
+    ],
+    "new_updates_per_group": 1000,
+    "total_new_update_cap": 2000,
+    "evaluation_nodes": [
+      500,
+      1000
+    ],
+    "training_seed": 42,
+    "learning_rate": 3e-06,
+    "warmup_steps": 0,
+    "batch_size": 4,
+    "source_optimizer_updates": 4020,
+    "final_optimizer_updates": 5020,
+    "new_sample_offset": 0,
+    "train_rng_key_data": [
+      1832780943,
+      270669613
+    ],
+    "rng_rule": "fold old train_rng with restored cumulative optimizer step",
+    "C": {
+      "original_B_sampler_fraction": 1.0,
+      "original_phase_probabilities": [
+        0.4,
+        0.3,
+        0.3
+      ]
+    },
+    "D": {
+      "original_B_sampler_fraction": 0.8,
+      "correction_fraction": 0.2,
+      "exact_correction_starts": 800,
+      "total_starts": 4000,
+      "sampling": "uniform correction episode then uniform start; retained original starts paired with C"
+    },
+    "node_validation_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "node_validation_episodes": 75,
+    "node_training_roster": "union of original 12 trials and frozen <=12 training failure trials",
+    "max_node_training_episodes": 24,
+    "max_node_autonomous_episodes": 99,
+    "max_all_node_autonomous_episodes": 396,
+    "fixed_input_protocol": "reuse original 588 observation queries and prompt swaps on development layouts",
+    "new_candidate_gates": {
+      "each_validation_seed_successes_at_least_phase1_B": true,
+      "prompt_matches_min_of30": 24,
+      "correct_close_min_of30": 24,
+      "wrong_lifts_max_of30": 2,
+      "complete_evaluations_without_errors": true
+    }
+  },
+  "selection": {
+    "candidates": [
+      "B",
+      "C+500",
+      "C+1000",
+      "D+500",
+      "D+1000"
+    ],
+    "score_descending": [
+      "minimum_validation_seed_successes",
+      "total_validation_successes_75",
+      "fixed_training_roster_successes",
+      "original_two_seed_prompt_matches"
+    ],
+    "tie_break": [
+      "prefer_original_B",
+      "fewer_new_updates",
+      "C_before_D"
+    ],
+    "require_strict_score_improvement_to_replace_B": true,
+    "max_final_candidate_training_completion_episodes": 228,
+    "reject_new_candidate_if": [
+      "full_training_240_successes_lower_than_B",
+      "original_training12_successes_lower_than_B"
+    ],
+    "rejection_outcome": "select original B without searching another candidate",
+    "test_results_used_for_selection": false
+  },
+  "phase3": {
+    "candidate_freeze_file": "candidate_freeze.json",
+    "freeze_must_precede_test_and_be_pushed": true,
+    "test_seeds": [
+      42,
+      43
+    ],
+    "test_tasks": 30,
+    "test_episodes": 60,
+    "candidate_count": 1,
+    "batches": 1,
+    "teacher_intervention": false,
+    "resume_only_incomplete_infrastructure_attempts": true,
+    "repeat_completed_model_failures": false,
+    "post_test_training_in_this_task": false
+  },
+  "budgets": {
+    "max_new_autonomous_evaluations": 957,
+    "max_teacher_prefix_episodes": 24,
+    "max_correction_generation_attempts": 40,
+    "max_new_optimizer_updates": 2000,
+    "new_full_checkpoint_cap_gib": 60,
+    "minimum_free_disk_gib": 20,
+    "recommended_initial_free_disk_gib": 65,
+    "estimated_runtime_without_correction_hours": [
+      1,
+      1.5
+    ],
+    "estimated_full_runtime_hours": [
+      3,
+      5
+    ],
+    "estimate_excludes": "implementation/adaptation work and unexpected contention"
+  },
+  "publication": {
+    "git_scope": [
+      "source",
+      "configuration",
+      "compact_results",
+      "all_update_logs",
+      "evaluation_json",
+      "indices"
+    ],
+    "training_update_interval": 500,
+    "evaluation_episode_interval": 15,
+    "publish_stage_boundaries": true,
+    "max_attempts_per_push": 3,
+    "timeout_seconds_per_push": 25,
+    "final_retry_rounds": 3,
+    "large_artifacts": "retain on D57 with real paths/sizes/checksums; no automatic Release upload"
+  },
+  "deliverables": [
+    "run.json",
+    "coverage_summary.json",
+    "failure_case_manifest.json",
+    "correction_manifest.json",
+    "candidate_comparison.json",
+    "candidate_freeze.json",
+    "test_summary.json",
+    "final_report_zh.md",
+    "index.json",
+    "publication_receipts.jsonl"
+  ],
+  "execution_counts_at_packaging": {
+    "new_training_updates": 0,
+    "new_autonomous_evaluations": 0,
+    "new_teacher_diagnostics": 0
+  },
+  "not_in_scope": [
+    "hardware",
+    "pi0.5",
+    "new_base_model",
+    "physics_or_success_rule_changes",
+    "unbounded_training",
+    "test_based_retuning"
+  ]
+}
