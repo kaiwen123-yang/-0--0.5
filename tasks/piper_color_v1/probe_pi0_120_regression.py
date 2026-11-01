@@ -124,8 +124,12 @@ def fixed(policy, label):
                 save(out / "observations.json", rows)
                 print("FIXED", label, layout, color, len(rows), flush=True)
             # Exactly common RGB/state and RNG; only prompt changes.
-            for key in ("state", "external_rgb", "wrist_rgb"):
-                assert all(np.array_equal(demos["red"][key][0], demos[c][key][0]) for c in COLORS)
+            # Separate renders can differ by a few one-LSB pixels. The intervention
+            # shares one actual array across every prompt, irrespective of archive equality.
+            initial_differences = {key: max(float(np.max(abs(demos["red"][key][0].astype(float) -
+                  demos[c][key][0].astype(float)))) for c in COLORS) for key in ("state", "external_rgb", "wrist_rgb")}
+            if initial_differences["state"] > 1e-6:
+                raise ValueError("Same-layout initial measured states differ")
             env.reset(layout, "red")
             common = {k: demos["red"][k][0].copy() for k in ("state", "external_rgb", "wrist_rgb")}
             for seed in (42, 43):
@@ -142,7 +146,9 @@ def fixed(policy, label):
                 prompt_rows.append({"model": label, "layout": layout, "base_seed": seed,
                     "common_noise_seed": seed + layout * 3, "prompt_endpoint_xy_spread_mm": spread(endpoints),
                     "teacher_endpoint_xy_spread_mm": spread(targets), "endpoints": endpoints.tolist(),
-                    "teacher_endpoints": targets.tolist(), "only_changed_input": "prompt"})
+                    "teacher_endpoints": targets.tolist(), "only_changed_input": "prompt",
+                    "archive_initial_max_difference": initial_differences,
+                    "common_observation_source": str(path_for(layout, "red"))})
             save(out / "prompt_swap.json", prompt_rows)
         np.savez_compressed(out / "predictions.npz", **prediction_arrays)
         save(out / "protocol.json", {"policy": policy.metadata, "frames": FRAMES,

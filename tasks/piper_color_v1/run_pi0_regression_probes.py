@@ -1,5 +1,6 @@
 """Sequential frozen-model probes in detached tmux; no training entry point."""
 import datetime
+import argparse
 import json
 import os
 from pathlib import Path
@@ -41,13 +42,21 @@ def stop(p):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reuse-teacher-reference", action="store_true")
+    args = parser.parse_args()
     (OUT / "logs").mkdir(exist_ok=True)
     status = {"pid": os.getpid(), "started_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "optimizer_updates": 0, "test_layouts_used": False, "completed": False}
     save_status(stage="preparing")
     with socket.socket() as probe: probe.bind(("127.0.0.1", 18767))
     try:
-        execute("prepare", label="teacher_reference")
+        if args.reuse_teacher_reference:
+            reference = json.loads((OUT / "teacher_reference/summary.json").read_text())
+            if len(reference["episodes"]) != 21 or not all(e["success"] and e["max_replay_state_error"] <= 1e-6 for e in reference["episodes"]):
+                raise ValueError("Cannot reuse an incomplete teacher reference")
+        else:
+            execute("prepare", label="teacher_reference")
         for label, checkpoint in [
             ("old2010", ROOT / "outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010"),
             *[(f"new{n}", RUN / "checkpoints/pi0_piper_color_lora/120_demo_contact_v2" / str(n)) for n in (2010, 4020, 8040)]]:
