@@ -266,5 +266,12 @@
     "report": "docs/PI0_STORAGE_BACKUP_STATUS_20261101.md",
     "receipt": "publication/pi0-storage-audit-20261101.json",
     "deletion_performed": false
+  },
+  "pi_complete_backup_20261101": {
+    "status": "preparing",
+    "index": "publication/pi-complete-backup-20261101/index.json",
+    "restore_guide": "docs/PI0_RELEASE_RESTORE_20261101.md",
+    "release_tag": "pi-complete-backup-20261101",
+    "source_deleted": false
   }
 }

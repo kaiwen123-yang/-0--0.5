@@ -354,5 +354,16 @@
     "physics_or_success_rule_changes",
     "unbounded_training",
     "test_based_retuning"
-  ]
+  ],
+  "restoration": {
+    "required_before_execution": true,
+    "source_storage_state": "archiving_for_release_then_cleanup",
+    "guide": "docs/PI0_RELEASE_RESTORE_20261101.md",
+    "index": "publication/pi-complete-backup-20261101/index.json",
+    "release_tag": "pi-complete-backup-20261101",
+    "command": "scripts/pi_release_backup.py restore --minimal-b --workspace-root <confirmed pi workspace root> --cache <dedicated restore cache>",
+    "receipt": "<restored workspace>/pi-restoration-receipt-20261101.json",
+    "alternate_volume": "bind actual restored paths from receipt; never replace them with hardcoded historical paths",
+    "expected_optimizer_updates": 4020
+  }
 }
