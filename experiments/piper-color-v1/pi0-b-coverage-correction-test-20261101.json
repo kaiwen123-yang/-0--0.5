@@ -1,15 +1,14 @@
 {
   "schema_version": 1,
   "task_id": "pi0-b-coverage-correction-test-20261101",
-  "status": "ready_for_next_chat_not_started",
+  "status": "authorized_implementation_and_execution",
   "documentation": "docs/PI0_B_COVERAGE_CORRECTION_TEST_TASK_20261101.md",
   "repository": "kaiwen123-yang/-0--0.5",
   "branch": "codex/pi0-b-coverage-correction-test-20261101",
   "host": "autodl-d57",
   "repository_root": "/root/autodl-tmp/robot-repro/pi-reproduction",
   "authorization": {
-    "this_chat": "prepare_and_push_handoff_only",
-    "execution_trigger": "user asks the next chat to execute this combined task",
+    "this_chat": "execute_three_stages_in_tmux_and_progressive_completed_artifact_upload",
     "normal_stage_transitions_require_reconfirmation": false
   },
   "output_root": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
@@ -328,7 +327,7 @@
     "max_attempts_per_push": 3,
     "timeout_seconds_per_push": 25,
     "final_retry_rounds": 3,
-    "large_artifacts": "retain on D57 with real paths/sizes/checksums; no automatic Release upload"
+    "large_artifacts": "Independent single-concurrency low-priority progressive Release queue; original files retained; metadata-only upload checks"
   },
   "deliverables": [
     "run.json",
@@ -353,18 +352,52 @@
     "new_base_model",
     "physics_or_success_rule_changes",
     "unbounded_training",
-    "test_based_retuning"
+    "test_based_retuning",
+    "whole-repository backup",
+    "Release redownload or restore verification",
+    "storage cleanup",
+    "environment reconstruction",
+    "old pi_release_backup.py pipeline"
   ],
   "restoration": {
-    "required_before_execution": true,
-    "source_storage_state": "archiving_for_release_then_cleanup",
-    "guide": "docs/PI0_RELEASE_RESTORE_20261101.md",
-    "index": "publication/pi-complete-backup-20261101/index.json",
-    "release_tag": "pi-complete-backup-20261101",
-    "command": "scripts/pi_release_backup.py restore --minimal-b --workspace-root <confirmed pi workspace root> --cache <dedicated restore cache>",
-    "receipt": "<restored workspace>/pi-restoration-receipt-20261101.json",
-    "alternate_volume": "bind actual restored paths from receipt; never replace them with hardcoded historical paths",
-    "expected_optimizer_updates": 4020,
-    "do_not_start_new_pi_experiments_until_backup_phase_complete": true
+    "required_before_execution": false,
+    "source_storage_state": "original_B_and_v2_present_old_backup_cancelled",
+    "old_backup_wait_required": false,
+    "old_backup_pipeline_prohibited": true
+  },
+  "scope_history": [
+    {
+      "status": "ready_for_next_chat_not_started",
+      "authorization": {
+        "this_chat": "prepare_and_push_handoff_only",
+        "execution_trigger": "user asks the next chat to execute this combined task",
+        "normal_stage_transitions_require_reconfirmation": false
+      },
+      "restoration": {
+        "required_before_execution": true,
+        "source_storage_state": "archiving_for_release_then_cleanup",
+        "guide": "docs/PI0_RELEASE_RESTORE_20261101.md",
+        "index": "publication/pi-complete-backup-20261101/index.json",
+        "release_tag": "pi-complete-backup-20261101",
+        "command": "scripts/pi_release_backup.py restore --minimal-b --workspace-root <confirmed pi workspace root> --cache <dedicated restore cache>",
+        "receipt": "<restored workspace>/pi-restoration-receipt-20261101.json",
+        "alternate_volume": "bind actual restored paths from receipt; never replace them with hardcoded historical paths",
+        "expected_optimizer_updates": 4020,
+        "do_not_start_new_pi_experiments_until_backup_phase_complete": true
+      },
+      "large_artifacts": "retain on D57 with real paths/sizes/checksums; no automatic Release upload"
+    }
+  ],
+  "progressive_upload": {
+    "proxy": "http://127.0.0.1:7890",
+    "proxy_scope": "GitHub transfer subprocesses only",
+    "concurrency": 1,
+    "priority": "compute first; nice19 ionice idle; 4MiB/s maximum; pause for disk/IO contention",
+    "reuse_existing_assets": true,
+    "download_or_restore": false,
+    "full_repository_archive": false,
+    "full_hash_scan": false,
+    "source_deletion": false,
+    "official_base_mirroring": false
   }
 }

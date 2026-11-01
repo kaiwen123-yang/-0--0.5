@@ -249,7 +249,7 @@
     "final_result_commit": "14b6d006c0c946819aadbe95724629c150fbb07e"
   },
   "pi0_b_coverage_correction_test_20261101": {
-    "status": "ready_for_next_chat_not_started",
+    "status": "authorized_running_state_in_run_json",
     "task": "docs/PI0_B_COVERAGE_CORRECTION_TEST_TASK_20261101.md",
     "contract": "experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101.json",
     "branch": "codex/pi0-b-coverage-correction-test-20261101",
@@ -268,10 +268,15 @@
     "deletion_performed": false
   },
   "pi_complete_backup_20261101": {
-    "status": "preparing",
+    "status": "cancelled_no_restart_no_cleanup",
     "index": "publication/pi-complete-backup-20261101/index.json",
     "restore_guide": "docs/PI0_RELEASE_RESTORE_20261101.md",
     "release_tag": "pi-complete-backup-20261101",
+    "source_deleted": false
+  },
+  "pi_progressive_upload_20261101": {
+    "status": "independent_queue",
+    "index": "publication/pi-progressive-upload-20261101/progress.json",
     "source_deleted": false
   }
 }

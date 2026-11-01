@@ -1,3 +1,5 @@
+**最新执行范围（2026-11-01）：** 三阶段 B 覆盖/纠偏/独立测试已获授权，直接使用现有 B（累计4020）与 v2；后台状态见 results/piper-color-v1/pi0-b-coverage-correction-test-20261101/run.json。另有独立渐进上传队列，旧备份/恢复/清理流水线保持取消。以下为历史状态记录。
+
 # π0 / π0.5：Piper H 仿真、微调与复现资料
 
 **2026-11-01 A/B 已完成，下一任务已整理：** 两组各新增 2010 次，最终验证 A 为 14/15、14/15，B 为 15/15、15/15；原六项训练诊断 B 仍为 3/6、4/6。下一任务将覆盖评测、条件纠偏 C/D 对照和冻结后一次独立测试合并执行，**等待新对话启动，本次仅发布任务**。[新对话任务入口](docs/PI0_B_COVERAGE_CORRECTION_TEST_TASK_20261101.md) · [机器可读合同](experiments/piper-color-v1/pi0-b-coverage-correction-test-20261101.json) · [已完成 A/B 结果](results/piper-color-v1/pi0-ab-old2010-20261101/comparison.json)。
