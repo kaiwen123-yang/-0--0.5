@@ -1,0 +1,3052 @@
+[
+  {
+    "evaluation": "update_1000_train_seed42",
+    "split": "train",
+    "layout": 100,
+    "target": "blue",
+    "base_seed": 42,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_blue.npz",
+    "sha256": "cbeb41649eb4c851de2152cc126cc2285895f506679f9534eef063ab775fa6c8",
+    "first_close_frame": 118,
+    "first_low_frame": 59,
+    "close_time_s": 5.9,
+    "close_tcp_height_mm": 13.295028811942805,
+    "close_target_xy_mm": 39.319933725168326,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 39.319933725168326,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05090528637170792,
+    "close_object_local_mm": [
+      -39.01295672086423,
+      -5.396675229881474,
+      -3.4231211639546952
+    ],
+    "close_orientation_error_deg": 1.1626123929994177,
+    "close_xy_by_color_mm": [
+      154.70842544035978,
+      107.21038853347676,
+      39.319933725168326
+    ],
+    "low_target_xy_mm": 33.33604425032864,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 31.379638601582258,
+    "approach30_target_xy_mm": 20.005126695083902,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.21085153721233255,
+      -0.03820348867655599,
+      0.17196102947072295
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": 121,
+    "target_first_bilateral_frame": 125,
+    "target_bilateral_frames": 35,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 2.231197554779709,
+    "joint_raw_to_executed_mae_rad": 2.360434759230835e-05,
+    "joint_command_to_feedback_mae_rad": 0.010206777615557652,
+    "initial_object_positions": [
+      [
+        -0.13591182923154704,
+        -0.16279735601854017,
+        0.01739324489508867
+      ],
+      [
+        -0.22562051434796598,
+        -0.14729648724287664,
+        0.01739324489508867
+      ],
+      [
+        -0.19173767693702598,
+        -0.032298792286188725,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_train_seed42",
+    "split": "train",
+    "layout": 100,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 263,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_green.npz",
+    "sha256": "41bf99c0cda01979d73c615c06d2bbb1abae41add347b8261c168ae0a5e5b00a",
+    "first_close_frame": 81,
+    "first_low_frame": 56,
+    "close_time_s": 4.05,
+    "close_tcp_height_mm": 13.009628517427652,
+    "close_target_xy_mm": 8.437587849177657,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 8.437587849177657,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05316510796546936,
+    "close_object_local_mm": [
+      -7.746319337918416,
+      -3.349070652813362,
+      -4.3803357173794835
+    ],
+    "close_orientation_error_deg": 2.7261362331166428,
+    "close_xy_by_color_mm": [
+      99.3787796361529,
+      8.437587849177657,
+      122.43775980978619
+    ],
+    "low_target_xy_mm": 8.068477081691919,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 6.557991200403224,
+    "approach30_target_xy_mm": 13.248672551025468,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.22918099861194496,
+      -0.13453520689291748,
+      0.16921080040984138
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 84,
+    "target_first_bilateral_frame": 84,
+    "target_bilateral_frames": 135,
+    "target_first_bilateral_lift_frame": 109,
+    "target_peak_height_mm": 155.09259325755863,
+    "joint_raw_to_executed_mae_rad": 9.863381421592445e-05,
+    "joint_command_to_feedback_mae_rad": 0.018437735579518635,
+    "initial_object_positions": [
+      [
+        -0.13591182923154704,
+        -0.16279735601854017,
+        0.01739324489508867
+      ],
+      [
+        -0.22562051434796598,
+        -0.14729648724287664,
+        0.01739324489508867
+      ],
+      [
+        -0.19173767693702598,
+        -0.032298792286188725,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_train_seed42",
+    "split": "train",
+    "layout": 100,
+    "target": "red",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 245,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_red.npz",
+    "sha256": "73c6419291a803d9b3cdbf01723ffc1679cd66cdf7ef26bbefcb7831c809b75d",
+    "first_close_frame": 83,
+    "first_low_frame": 66,
+    "close_time_s": 4.15,
+    "close_tcp_height_mm": 30.11250956512221,
+    "close_target_xy_mm": 11.619239555117018,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 11.619239555117018,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05469667166471481,
+    "close_object_local_mm": [
+      7.681110002672608,
+      -8.670179625407409,
+      12.690051495686076
+    ],
+    "close_orientation_error_deg": 0.815621331959539,
+    "close_xy_by_color_mm": [
+      11.619239555117018,
+      94.0171360460355,
+      133.7108184939869
+    ],
+    "low_target_xy_mm": 13.65199808398968,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 8.38396363153518,
+    "approach30_target_xy_mm": 20.811188907630502,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.12772100808924847,
+      -0.1436658105304214,
+      0.17028609685887403
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 83,
+    "target_first_bilateral_frame": 87,
+    "target_bilateral_frames": 113,
+    "target_first_bilateral_lift_frame": 119,
+    "target_peak_height_mm": 142.07589772640821,
+    "joint_raw_to_executed_mae_rad": 2.8368334735737555e-05,
+    "joint_command_to_feedback_mae_rad": 0.016997305422957038,
+    "initial_object_positions": [
+      [
+        -0.13591182923154704,
+        -0.16279735601854017,
+        0.01739324489508867
+      ],
+      [
+        -0.22562051434796598,
+        -0.14729648724287664,
+        0.01739324489508867
+      ],
+      [
+        -0.19173767693702598,
+        -0.032298792286188725,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_train_seed42",
+    "split": "train",
+    "layout": 101,
+    "target": "blue",
+    "base_seed": 42,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_blue.npz",
+    "sha256": "421cafecd2436c1998ee84734f1ea6553f82eeb5c3effff7152e9abea90499fc",
+    "first_close_frame": 100,
+    "first_low_frame": 59,
+    "close_time_s": 5.0,
+    "close_tcp_height_mm": 12.76608230848665,
+    "close_target_xy_mm": 29.17987324360766,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 29.17987324360766,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05833708122372627,
+    "close_object_local_mm": [
+      -27.288968643088765,
+      -10.322317477585758,
+      -4.651633161381426
+    ],
+    "close_orientation_error_deg": 3.312019432752672,
+    "close_xy_by_color_mm": [
+      138.3225969192101,
+      129.94101868672738,
+      29.17987324360766
+    ],
+    "low_target_xy_mm": 26.5703585413555,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 26.5703585413555,
+    "approach30_target_xy_mm": 14.95288065679554,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.23437140649603666,
+      -0.1447396316441654,
+      0.17021836208505003
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": 103,
+    "target_first_bilateral_frame": 105,
+    "target_bilateral_frames": 18,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 5.7543568056234795,
+    "joint_raw_to_executed_mae_rad": 0.004111294050610041,
+    "joint_command_to_feedback_mae_rad": 0.01908583771394176,
+    "initial_object_positions": [
+      [
+        -0.2107588002884965,
+        -0.02316368078015866,
+        0.01739324489508867
+      ],
+      [
+        -0.12202544846576255,
+        -0.14744421081155457,
+        0.01739324489508867
+      ],
+      [
+        -0.22258108984088218,
+        -0.15393621106847077,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_train_seed42",
+    "split": "train",
+    "layout": 101,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 234,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_green.npz",
+    "sha256": "95c019c522d9527d22187aab9232cbd3134e5a29233367f7aecc3b88bf9c6777",
+    "first_close_frame": 70,
+    "first_low_frame": 57,
+    "close_time_s": 3.5,
+    "close_tcp_height_mm": 26.182940878795552,
+    "close_target_xy_mm": 11.124262970545583,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 11.124262970545583,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05139995902776718,
+    "close_object_local_mm": [
+      10.783067974661883,
+      -2.687375839436836,
+      8.80404698172589
+    ],
+    "close_orientation_error_deg": 0.39675843268119754,
+    "close_xy_by_color_mm": [
+      153.47830766007144,
+      11.124262970545583,
+      110.54483395154269
+    ],
+    "low_target_xy_mm": 12.807550732086202,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 11.039067471306431,
+    "approach30_target_xy_mm": 14.683976764981313,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.11138321980099847,
+      -0.13732679302432324,
+      0.16533281407988776
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 72,
+    "target_first_bilateral_frame": 73,
+    "target_bilateral_frames": 116,
+    "target_first_bilateral_lift_frame": 93,
+    "target_peak_height_mm": 139.11687516487774,
+    "joint_raw_to_executed_mae_rad": 1.0062860287832566e-06,
+    "joint_command_to_feedback_mae_rad": 0.017100580321000078,
+    "initial_object_positions": [
+      [
+        -0.2107588002884965,
+        -0.02316368078015866,
+        0.01739324489508867
+      ],
+      [
+        -0.12202544846576255,
+        -0.14744421081155457,
+        0.01739324489508867
+      ],
+      [
+        -0.22258108984088218,
+        -0.15393621106847077,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_train_seed42",
+    "split": "train",
+    "layout": 101,
+    "target": "red",
+    "base_seed": 42,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_red.npz",
+    "sha256": "db1536173510bcc055e0776da0eaba8f9d72e6336d19e81bc1cc0b22633c509c",
+    "first_close_frame": 102,
+    "first_low_frame": 57,
+    "close_time_s": 5.1,
+    "close_tcp_height_mm": 13.202386898849575,
+    "close_target_xy_mm": 24.13572951620933,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 24.13572951620933,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05296779543161393,
+    "close_object_local_mm": [
+      -21.968220164937527,
+      10.244794763049171,
+      -3.5148901365078173
+    ],
+    "close_orientation_error_deg": 1.6323194848964653,
+    "close_xy_by_color_mm": [
+      24.13572951620933,
+      150.69141667037303,
+      113.83221305311815
+    ],
+    "low_target_xy_mm": 15.581586296747187,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 15.581586296747187,
+    "approach30_target_xy_mm": 5.463271557525839,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.2155964581643165,
+      -0.025702263531968726,
+      0.17075219612928016
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 102,
+    "target_first_bilateral_frame": 105,
+    "target_bilateral_frames": 128,
+    "target_first_bilateral_lift_frame": 147,
+    "target_peak_height_mm": 148.97249418217717,
+    "joint_raw_to_executed_mae_rad": 5.8159186726524654e-05,
+    "joint_command_to_feedback_mae_rad": 0.011636853405725948,
+    "initial_object_positions": [
+      [
+        -0.2107588002884965,
+        -0.02316368078015866,
+        0.01739324489508867
+      ],
+      [
+        -0.12202544846576255,
+        -0.14744421081155457,
+        0.01739324489508867
+      ],
+      [
+        -0.22258108984088218,
+        -0.15393621106847077,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "failure_after_target_lift"
+  },
+  {
+    "evaluation": "update_1000_train_seed43",
+    "split": "train",
+    "layout": 100,
+    "target": "blue",
+    "base_seed": 43,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_blue.npz",
+    "sha256": "971891c7805b507cb98ae8e96ddeaa12ccc79bdbf08928c617f6708e5c8963d2",
+    "first_close_frame": 110,
+    "first_low_frame": 55,
+    "close_time_s": 5.5,
+    "close_tcp_height_mm": 12.585321415580816,
+    "close_target_xy_mm": 37.85567716658266,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 37.85567716658266,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.054488977193832396,
+    "close_object_local_mm": [
+      -37.290647185360775,
+      -6.780778618698623,
+      -4.426872758627662
+    ],
+    "close_orientation_error_deg": 1.7475821494666812,
+    "close_xy_by_color_mm": [
+      154.1828046720422,
+      107.57256635365619,
+      37.85567716658266
+    ],
+    "low_target_xy_mm": 28.565182449820792,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 28.565182449820792,
+    "approach30_target_xy_mm": 20.77118514143572,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.21231280508471212,
+      -0.035145937151855655,
+      0.16987782124413908
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": 114,
+    "target_first_bilateral_frame": 116,
+    "target_bilateral_frames": 5,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 4.29539096490638,
+    "joint_raw_to_executed_mae_rad": 0.0034723418137890504,
+    "joint_command_to_feedback_mae_rad": 0.01670659615221042,
+    "initial_object_positions": [
+      [
+        -0.13591182923154704,
+        -0.16279735601854017,
+        0.01739324489508867
+      ],
+      [
+        -0.22562051434796598,
+        -0.14729648724287664,
+        0.01739324489508867
+      ],
+      [
+        -0.19173767693702598,
+        -0.032298792286188725,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 7.972325043423986,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_train_seed43",
+    "split": "train",
+    "layout": 100,
+    "target": "green",
+    "base_seed": 43,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_green.npz",
+    "sha256": "d7992cdd91f39b247db86efcd3bd1773808b8092375976a6c0f73413f90f7795",
+    "first_close_frame": 84,
+    "first_low_frame": 59,
+    "close_time_s": 4.2,
+    "close_tcp_height_mm": 12.988594361202907,
+    "close_target_xy_mm": 15.195849672686315,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 15.195849672686315,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.059621986001729965,
+    "close_object_local_mm": [
+      -15.072714939076482,
+      -2.066306408706015,
+      -4.342641306660969
+    ],
+    "close_orientation_error_deg": 0.9486211641545519,
+    "close_xy_by_color_mm": [
+      105.19373446152892,
+      15.195849672686315,
+      128.07726924818783
+    ],
+    "low_target_xy_mm": 16.10886674976079,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 15.059598277150245,
+    "approach30_target_xy_mm": 12.943127954406256,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.2326930319599327,
+      -0.13645655846670135,
+      0.17353137754568387
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 87,
+    "target_first_bilateral_frame": 87,
+    "target_bilateral_frames": 333,
+    "target_first_bilateral_lift_frame": 150,
+    "target_peak_height_mm": 138.76313148762813,
+    "joint_raw_to_executed_mae_rad": 3.244264447499836e-05,
+    "joint_command_to_feedback_mae_rad": 0.009046181707078545,
+    "initial_object_positions": [
+      [
+        -0.13591182923154704,
+        -0.16279735601854017,
+        0.01739324489508867
+      ],
+      [
+        -0.22562051434796598,
+        -0.14729648724287664,
+        0.01739324489508867
+      ],
+      [
+        -0.19173767693702598,
+        -0.032298792286188725,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "failure_after_target_lift"
+  },
+  {
+    "evaluation": "update_1000_train_seed43",
+    "split": "train",
+    "layout": 100,
+    "target": "red",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 249,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_red.npz",
+    "sha256": "886235056cb027cf1c75592b285823151ea641cf67592937a0e2a94803f0c66f",
+    "first_close_frame": 79,
+    "first_low_frame": 51,
+    "close_time_s": 3.95,
+    "close_tcp_height_mm": 13.24793963083122,
+    "close_target_xy_mm": 6.828515192284993,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 6.828515192284993,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.057616401463747025,
+    "close_object_local_mm": [
+      6.751316434906024,
+      0.7463214618723621,
+      -4.204164377068081
+    ],
+    "close_orientation_error_deg": 0.5318246890815749,
+    "close_xy_by_color_mm": [
+      6.828515192284993,
+      97.33228720995115,
+      143.20360032749707
+    ],
+    "low_target_xy_mm": 7.724506447123458,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 6.813755272303305,
+    "approach30_target_xy_mm": 8.407939416500248,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.13128351617082973,
+      -0.15577794269237594,
+      0.1691843903661029
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 81,
+    "target_first_bilateral_frame": 82,
+    "target_bilateral_frames": 121,
+    "target_first_bilateral_lift_frame": 101,
+    "target_peak_height_mm": 160.19089922833115,
+    "joint_raw_to_executed_mae_rad": 2.1915256558173302e-05,
+    "joint_command_to_feedback_mae_rad": 0.017802764332436573,
+    "initial_object_positions": [
+      [
+        -0.13591182923154704,
+        -0.16279735601854017,
+        0.01739324489508867
+      ],
+      [
+        -0.22562051434796598,
+        -0.14729648724287664,
+        0.01739324489508867
+      ],
+      [
+        -0.19173767693702598,
+        -0.032298792286188725,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_train_seed43",
+    "split": "train",
+    "layout": 101,
+    "target": "blue",
+    "base_seed": 43,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_blue.npz",
+    "sha256": "e491ac5828320decbcd4f99b42e15b237087f1ff9117165b59525f069d4c87bc",
+    "first_close_frame": 103,
+    "first_low_frame": 61,
+    "close_time_s": 5.15,
+    "close_tcp_height_mm": 14.155834940556291,
+    "close_target_xy_mm": 24.58326933421572,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 24.58326933421572,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05312027692794801,
+    "close_object_local_mm": [
+      -20.064160009452337,
+      -14.313097451027334,
+      -3.400004295775515
+    ],
+    "close_orientation_error_deg": 4.7142882409738265,
+    "close_xy_by_color_mm": [
+      129.98574152003667,
+      124.88564263416194,
+      24.58326933421572
+    ],
+    "low_target_xy_mm": 22.62860282804728,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 18.340852404928373,
+    "approach30_target_xy_mm": 12.999979621080772,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.22788262041475602,
+      -0.14206636508283152,
+      0.17114210420644171
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": 102,
+    "target_first_bilateral_frame": 139,
+    "target_bilateral_frames": 105,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 8.22207196696123,
+    "joint_raw_to_executed_mae_rad": 0.00017690213169488635,
+    "joint_command_to_feedback_mae_rad": 0.014020555433155677,
+    "initial_object_positions": [
+      [
+        -0.2107588002884965,
+        -0.02316368078015866,
+        0.01739324489508867
+      ],
+      [
+        -0.12202544846576255,
+        -0.14744421081155457,
+        0.01739324489508867
+      ],
+      [
+        -0.22258108984088218,
+        -0.15393621106847077,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_train_seed43",
+    "split": "train",
+    "layout": 101,
+    "target": "green",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 250,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_green.npz",
+    "sha256": "32f6044ea7c4d9fe8b855e8be3eab42123e8c7c13e8da939e7dd63c86a0ffc85",
+    "first_close_frame": 79,
+    "first_low_frame": 52,
+    "close_time_s": 3.95,
+    "close_tcp_height_mm": 13.116112017049,
+    "close_target_xy_mm": 20.044146189099802,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 20.044146189099802,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.059756629168987274,
+    "close_object_local_mm": [
+      -19.025044444829458,
+      6.320460321062529,
+      -4.261598550589119
+    ],
+    "close_orientation_error_deg": 0.12368061986365365,
+    "close_xy_by_color_mm": [
+      154.9833017138665,
+      20.044146189099802,
+      85.03812216949214
+    ],
+    "low_target_xy_mm": 18.860099123650684,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 18.860099123650684,
+    "approach30_target_xy_mm": 13.965042088531838,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.1356013707183264,
+      -0.15071785335874988,
+      0.1663518759137283
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 82,
+    "target_first_bilateral_frame": 83,
+    "target_bilateral_frames": 122,
+    "target_first_bilateral_lift_frame": 110,
+    "target_peak_height_mm": 147.26901403933104,
+    "joint_raw_to_executed_mae_rad": 2.9555226167043204e-05,
+    "joint_command_to_feedback_mae_rad": 0.01800484061215536,
+    "initial_object_positions": [
+      [
+        -0.2107588002884965,
+        -0.02316368078015866,
+        0.01739324489508867
+      ],
+      [
+        -0.12202544846576255,
+        -0.14744421081155457,
+        0.01739324489508867
+      ],
+      [
+        -0.22258108984088218,
+        -0.15393621106847077,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_train_seed43",
+    "split": "train",
+    "layout": 101,
+    "target": "red",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 228,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_red.npz",
+    "sha256": "bed92b7a1bba762a8f3d507a8a7885bc795f0705091e975255d49d3931b22b2a",
+    "first_close_frame": 70,
+    "first_low_frame": 57,
+    "close_time_s": 3.5,
+    "close_tcp_height_mm": 28.690843156668517,
+    "close_target_xy_mm": 9.757857398187605,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 9.757857398187605,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05822342425584793,
+    "close_object_local_mm": [
+      1.8020289180918372,
+      9.416729358118776,
+      11.442427923980503
+    ],
+    "close_orientation_error_deg": 1.3908376212816531,
+    "close_xy_by_color_mm": [
+      9.757857398187605,
+      142.9666286550809,
+      123.68732833242373
+    ],
+    "low_target_xy_mm": 8.779521269561,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 1.2607032254897388,
+    "approach30_target_xy_mm": 10.144994606496045,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.20260617724648766,
+      -0.029201532475980643,
+      0.17053314387553864
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 71,
+    "target_first_bilateral_frame": 73,
+    "target_bilateral_frames": 110,
+    "target_first_bilateral_lift_frame": 114,
+    "target_peak_height_mm": 137.49841550031223,
+    "joint_raw_to_executed_mae_rad": 0.00017950505366799455,
+    "joint_command_to_feedback_mae_rad": 0.015235338834060197,
+    "initial_object_positions": [
+      [
+        -0.2107588002884965,
+        -0.02316368078015866,
+        0.01739324489508867
+      ],
+      [
+        -0.12202544846576255,
+        -0.14744421081155457,
+        0.01739324489508867
+      ],
+      [
+        -0.22258108984088218,
+        -0.15393621106847077,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1000,
+    "target": "blue",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 241,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_blue.npz",
+    "sha256": "371851cdf9eaab1fd2220fe03f4c0e9c119309b0871cf2a1c566daa558a96449",
+    "first_close_frame": 81,
+    "first_low_frame": 63,
+    "close_time_s": 4.05,
+    "close_tcp_height_mm": 25.59583834051474,
+    "close_target_xy_mm": 13.276946768034229,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 13.276946768034229,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.0529465451836586,
+    "close_object_local_mm": [
+      13.076372875029266,
+      -2.779185753072671,
+      8.052594097718686
+    ],
+    "close_orientation_error_deg": 1.8029515211219385,
+    "close_xy_by_color_mm": [
+      136.45507498146088,
+      114.6564233751503,
+      13.276946768034229
+    ],
+    "low_target_xy_mm": 13.22818033585054,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 13.07877087420082,
+    "approach30_target_xy_mm": 18.53057412261571,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.12688242386301712,
+      -0.14020028077971522,
+      0.16441215432043518
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 83,
+    "target_first_bilateral_frame": 85,
+    "target_bilateral_frames": 111,
+    "target_first_bilateral_lift_frame": 110,
+    "target_peak_height_mm": 144.15868763776763,
+    "joint_raw_to_executed_mae_rad": 1.3288441288026095e-05,
+    "joint_command_to_feedback_mae_rad": 0.017075690528213054,
+    "initial_object_positions": [
+      [
+        -0.2041947472826385,
+        -0.04365098415773792,
+        0.01739324489508867
+      ],
+      [
+        -0.23440119933241113,
+        -0.14709242828180025,
+        0.01739324489508867
+      ],
+      [
+        -0.1308136296758987,
+        -0.15830905760672706,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1000,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 264,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_green.npz",
+    "sha256": "ccffaf035895be7ef230ffdfc8ada97c79e15cc06dc38db45370770c635f637e",
+    "first_close_frame": 81,
+    "first_low_frame": 55,
+    "close_time_s": 4.05,
+    "close_tcp_height_mm": 15.557952828656504,
+    "close_target_xy_mm": 5.255229582629669,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 5.255229582629669,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05782703310251236,
+    "close_object_local_mm": [
+      -2.248158507789644,
+      -4.725018543189377,
+      -1.8988835524554462
+    ],
+    "close_orientation_error_deg": 2.2080599391151594,
+    "close_xy_by_color_mm": [
+      105.55820338367953,
+      5.255229582629669,
+      108.48019930454147
+    ],
+    "low_target_xy_mm": 6.522890960721997,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 1.1172617077687594,
+    "approach30_target_xy_mm": 11.660818191708973,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.2282751478079665,
+      -0.1371704237655777,
+      0.16812413139348242
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 85,
+    "target_first_bilateral_frame": 87,
+    "target_bilateral_frames": 132,
+    "target_first_bilateral_lift_frame": 117,
+    "target_peak_height_mm": 156.02266418864687,
+    "joint_raw_to_executed_mae_rad": 0.00018590979833118187,
+    "joint_command_to_feedback_mae_rad": 0.017566684936616513,
+    "initial_object_positions": [
+      [
+        -0.2041947472826385,
+        -0.04365098415773792,
+        0.01739324489508867
+      ],
+      [
+        -0.23440119933241113,
+        -0.14709242828180025,
+        0.01739324489508867
+      ],
+      [
+        -0.1308136296758987,
+        -0.15830905760672706,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1000,
+    "target": "red",
+    "base_seed": 42,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_red.npz",
+    "sha256": "7fc57f4cb8d0bdca903dfc740b0439c83e295d04c70c425d56a0b25db3243d6d",
+    "first_close_frame": 141,
+    "first_low_frame": 56,
+    "close_time_s": 7.05,
+    "close_tcp_height_mm": 13.939907028588244,
+    "close_target_xy_mm": 33.05806704654718,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 33.05806704654718,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05418046146631241,
+    "close_object_local_mm": [
+      -27.276328995097316,
+      -18.78775794369159,
+      -3.3453017118924064
+    ],
+    "close_orientation_error_deg": 2.2239600447791408,
+    "close_xy_by_color_mm": [
+      33.05806704654718,
+      111.90278886183243,
+      162.36567472123238
+    ],
+    "low_target_xy_mm": 28.77244925471227,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 28.32539046851305,
+    "approach30_target_xy_mm": 17.187759187339694,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.2133799330851621,
+      -0.02912337500636345,
+      0.16355261378969468
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": 140,
+    "target_first_bilateral_frame": 145,
+    "target_bilateral_frames": 21,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 5.953054203850453,
+    "joint_raw_to_executed_mae_rad": 0.0030511636647761672,
+    "joint_command_to_feedback_mae_rad": 0.02209073572738913,
+    "initial_object_positions": [
+      [
+        -0.2041947472826385,
+        -0.04365098415773792,
+        0.01739324489508867
+      ],
+      [
+        -0.23440119933241113,
+        -0.14709242828180025,
+        0.01739324489508867
+      ],
+      [
+        -0.1308136296758987,
+        -0.15830905760672706,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 4.913592923075007,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1001,
+    "target": "blue",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 260,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_blue.npz",
+    "sha256": "ea22d791b7edc8c6aec27265bf4835d39849d5cc94c3f3dcc2cdcbdddcc77bc9",
+    "first_close_frame": 89,
+    "first_low_frame": 63,
+    "close_time_s": 4.45,
+    "close_tcp_height_mm": 14.189042294812618,
+    "close_target_xy_mm": 9.663152572624561,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 9.663152572624561,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.055288735777139664,
+    "close_object_local_mm": [
+      -5.914612234909058,
+      -7.770187338998633,
+      -2.931003344922273
+    ],
+    "close_orientation_error_deg": 5.288294910819808,
+    "close_xy_by_color_mm": [
+      115.56530233935358,
+      104.82992303550401,
+      9.663152572624561
+    ],
+    "low_target_xy_mm": 15.422370800559976,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 4.809748018965982,
+    "approach30_target_xy_mm": 13.165679936991994,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.2320391664374614,
+      -0.1503961044807468,
+      0.16713152488852007
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 85,
+    "target_first_bilateral_frame": 92,
+    "target_bilateral_frames": 123,
+    "target_first_bilateral_lift_frame": 109,
+    "target_peak_height_mm": 154.79314706625786,
+    "joint_raw_to_executed_mae_rad": 5.057385411017968e-05,
+    "joint_command_to_feedback_mae_rad": 0.019103753478129235,
+    "initial_object_positions": [
+      [
+        -0.21686643824251164,
+        -0.04336947315552834,
+        0.01739324489508867
+      ],
+      [
+        -0.13874469184822782,
+        -0.13997907819487385,
+        0.01739324489508867
+      ],
+      [
+        -0.23184734199801907,
+        -0.1635603868990082,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1001,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 259,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_green.npz",
+    "sha256": "68c85948dea7c16823ff70d622ff56d6572ea995166b9a254e7deba61740d1ba",
+    "first_close_frame": 90,
+    "first_low_frame": 50,
+    "close_time_s": 4.5,
+    "close_tcp_height_mm": 12.925492495519663,
+    "close_target_xy_mm": 7.737105072730097,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 7.737105072730097,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05521141529083252,
+    "close_object_local_mm": [
+      -6.502187361529173,
+      4.205745548368138,
+      -4.45611595848041
+    ],
+    "close_orientation_error_deg": 1.3932480990884821,
+    "close_xy_by_color_mm": [
+      126.51104671810778,
+      7.737105072730097,
+      90.26124181615724
+    ],
+    "low_target_xy_mm": 6.556176530974605,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 6.556176530974605,
+    "approach30_target_xy_mm": 2.056479128863796,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.14004137002150846,
+      -0.14157523987916212,
+      0.16446807542195585
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 91,
+    "target_first_bilateral_frame": 93,
+    "target_bilateral_frames": 120,
+    "target_first_bilateral_lift_frame": 113,
+    "target_peak_height_mm": 162.02195553667767,
+    "joint_raw_to_executed_mae_rad": 8.43707045379605e-06,
+    "joint_command_to_feedback_mae_rad": 0.015970650856033695,
+    "initial_object_positions": [
+      [
+        -0.21686643824251164,
+        -0.04336947315552834,
+        0.01739324489508867
+      ],
+      [
+        -0.13874469184822782,
+        -0.13997907819487385,
+        0.01739324489508867
+      ],
+      [
+        -0.23184734199801907,
+        -0.1635603868990082,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1001,
+    "target": "red",
+    "base_seed": 42,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_red.npz",
+    "sha256": "11b3de001d95f3b899b595e408162132208c926ee2afbe126ff20d0fd98db0e8",
+    "first_close_frame": 89,
+    "first_low_frame": 69,
+    "close_time_s": 4.45,
+    "close_tcp_height_mm": 13.197596892875529,
+    "close_target_xy_mm": 47.18331080590534,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 47.18331080590534,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05000000000000002,
+    "close_object_local_mm": [
+      -39.45915100878642,
+      -25.428699429225933,
+      -6.342319832594875
+    ],
+    "close_orientation_error_deg": 3.5531889123553553,
+    "close_xy_by_color_mm": [
+      47.18331080590534,
+      163.05596950241986,
+      132.64697753008195
+    ],
+    "low_target_xy_mm": 37.21584222060454,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 35.26254019652962,
+    "approach30_target_xy_mm": 21.951170469034164,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.213844969408004,
+      -0.02162724210527279,
+      0.17225333730132036
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": 90,
+    "target_first_bilateral_frame": null,
+    "target_bilateral_frames": 0,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 1.1093612566764888e-05,
+    "joint_raw_to_executed_mae_rad": 0.0001598916646085738,
+    "joint_command_to_feedback_mae_rad": 0.014305253264669865,
+    "initial_object_positions": [
+      [
+        -0.21686643824251164,
+        -0.04336947315552834,
+        0.01739324489508867
+      ],
+      [
+        -0.13874469184822782,
+        -0.13997907819487385,
+        0.01739324489508867
+      ],
+      [
+        -0.23184734199801907,
+        -0.1635603868990082,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1002,
+    "target": "blue",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 305,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_blue.npz",
+    "sha256": "3dffc724b04996bdcb083352485ba339260ea72b47a9a6f0e490cd02e6f2516f",
+    "first_close_frame": 95,
+    "first_low_frame": 64,
+    "close_time_s": 4.75,
+    "close_tcp_height_mm": 12.845854374752108,
+    "close_target_xy_mm": 7.527164624801088,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 7.527164624801088,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.0524399371445179,
+    "close_object_local_mm": [
+      -7.379829922993392,
+      1.5173730069620777,
+      -4.53572025072518
+    ],
+    "close_orientation_error_deg": 0.9203357888544087,
+    "close_xy_by_color_mm": [
+      148.23789455510277,
+      118.61738060364385,
+      7.527164624801088
+    ],
+    "low_target_xy_mm": 8.290074131852764,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 7.305226839653449,
+    "approach30_target_xy_mm": 7.1435024289016065,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.20516740646903608,
+      -0.027829847617425574,
+      0.17534457417574598
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 97,
+    "target_first_bilateral_frame": 97,
+    "target_bilateral_frames": 163,
+    "target_first_bilateral_lift_frame": 169,
+    "target_peak_height_mm": 153.97710463042864,
+    "joint_raw_to_executed_mae_rad": 4.3585543444410556e-05,
+    "joint_command_to_feedback_mae_rad": 0.01444013058720138,
+    "initial_object_positions": [
+      [
+        -0.12306685512209066,
+        -0.15309422626708585,
+        0.01739324489508867
+      ],
+      [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.01739324489508867
+      ],
+      [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1002,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 244,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_green.npz",
+    "sha256": "3ca140cbe82d8ebe0e4010eaac12e90f359435c55c39d39d964311874ec7dc66",
+    "first_close_frame": 73,
+    "first_low_frame": 58,
+    "close_time_s": 3.65,
+    "close_tcp_height_mm": 28.963850492432012,
+    "close_target_xy_mm": 2.7425010787971447,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 2.7425010787971447,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05722612515091896,
+    "close_object_local_mm": [
+      1.2751707333684827,
+      -2.3750380727018534,
+      11.581584653705455
+    ],
+    "close_orientation_error_deg": 1.604256732997389,
+    "close_xy_by_color_mm": [
+      115.02308626752775,
+      2.7425010787971447,
+      121.20769794999548
+    ],
+    "low_target_xy_mm": 5.873363813767744,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 1.7554837630160764,
+    "approach30_target_xy_mm": 13.125486942210511,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.2378352892223938,
+      -0.14088280413589513,
+      0.17144790831619228
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 75,
+    "target_first_bilateral_frame": 78,
+    "target_bilateral_frames": 121,
+    "target_first_bilateral_lift_frame": 106,
+    "target_peak_height_mm": 142.84802420613354,
+    "joint_raw_to_executed_mae_rad": 0.0003819008956057693,
+    "joint_command_to_feedback_mae_rad": 0.01877832086785256,
+    "initial_object_positions": [
+      [
+        -0.12306685512209066,
+        -0.15309422626708585,
+        0.01739324489508867
+      ],
+      [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.01739324489508867
+      ],
+      [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1002,
+    "target": "red",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 240,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_red.npz",
+    "sha256": "b1cfb384c55da8bbd01f5299dc69fe64480d46a48c7bb0b1df92efe120d5aafb",
+    "first_close_frame": 77,
+    "first_low_frame": 55,
+    "close_time_s": 3.85,
+    "close_tcp_height_mm": 13.083894600174908,
+    "close_target_xy_mm": 11.879451359126145,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 11.879451359126145,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05543060719966889,
+    "close_object_local_mm": [
+      -8.81089740179542,
+      -7.979691498179219,
+      -4.287723258290665
+    ],
+    "close_orientation_error_deg": 0.7885655165356484,
+    "close_xy_by_color_mm": [
+      11.879451359126145,
+      104.47671074211901,
+      137.59958911792762
+    ],
+    "low_target_xy_mm": 12.94767743592525,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 8.672342180676326,
+    "approach30_target_xy_mm": 11.292614003274073,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.1310810826332409,
+      -0.1451383926573084,
+      0.1706280086143186
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 78,
+    "target_first_bilateral_frame": 80,
+    "target_bilateral_frames": 114,
+    "target_first_bilateral_lift_frame": 97,
+    "target_peak_height_mm": 160.84966595296993,
+    "joint_raw_to_executed_mae_rad": 7.096304857016874e-05,
+    "joint_command_to_feedback_mae_rad": 0.01773366190619971,
+    "initial_object_positions": [
+      [
+        -0.12306685512209066,
+        -0.15309422626708585,
+        0.01739324489508867
+      ],
+      [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.01739324489508867
+      ],
+      [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1003,
+    "target": "blue",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 333,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_blue.npz",
+    "sha256": "906b52705f9b1df32d40a42991da8b52e03b25b615474c26d1b17b0f0f8b45c7",
+    "first_close_frame": 176,
+    "first_low_frame": 53,
+    "close_time_s": 8.8,
+    "close_tcp_height_mm": 13.037630580895257,
+    "close_target_xy_mm": 14.111164141192969,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 14.111164141192969,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05559880614280701,
+    "close_object_local_mm": [
+      -14.133918376517714,
+      0.4813159753902536,
+      -4.254070094695727
+    ],
+    "close_orientation_error_deg": 0.8772285234155309,
+    "close_xy_by_color_mm": [
+      126.89842248300296,
+      137.51444194911923,
+      14.111164141192969
+    ],
+    "low_target_xy_mm": 13.432909200723218,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 13.432909200723218,
+    "approach30_target_xy_mm": 7.988487627209594,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.20536430744226333,
+      -0.025802316822561875,
+      0.16386678380312764
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 178,
+    "target_first_bilateral_frame": 179,
+    "target_bilateral_frames": 108,
+    "target_first_bilateral_lift_frame": 194,
+    "target_peak_height_mm": 151.38512764976466,
+    "joint_raw_to_executed_mae_rad": 2.3251589354094242e-05,
+    "joint_command_to_feedback_mae_rad": 0.015550749643884197,
+    "initial_object_positions": [
+      [
+        -0.24374279368847826,
+        -0.15681223731186242,
+        0.01739324489508867
+      ],
+      [
+        -0.130148978839634,
+        -0.1454978363884209,
+        0.01739324489508867
+      ],
+      [
+        -0.19794083987306985,
+        -0.028753259692089056,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1003,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 237,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_green.npz",
+    "sha256": "bd70a806c07e5beeb4159fb6dd13c1b95fb8c04a99cba12f980be97051a6664d",
+    "first_close_frame": 74,
+    "first_low_frame": 57,
+    "close_time_s": 3.7,
+    "close_tcp_height_mm": 23.817192362480796,
+    "close_target_xy_mm": 7.404456150686139,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 7.404456150686139,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05912376940250397,
+    "close_object_local_mm": [
+      6.726785256288653,
+      -3.045577083363449,
+      6.447305620712503
+    ],
+    "close_orientation_error_deg": 0.6765527455181193,
+    "close_xy_by_color_mm": [
+      119.9986337565868,
+      7.404456150686139,
+      133.3298604881704
+    ],
+    "low_target_xy_mm": 8.517303431092456,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 7.013680339250319,
+    "approach30_target_xy_mm": 10.926330000567042,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.12329138411439698,
+      -0.13699148100754874,
+      0.17205253786032595
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 76,
+    "target_first_bilateral_frame": 77,
+    "target_bilateral_frames": 116,
+    "target_first_bilateral_lift_frame": 108,
+    "target_peak_height_mm": 143.07635780461698,
+    "joint_raw_to_executed_mae_rad": 0.00010349460082382785,
+    "joint_command_to_feedback_mae_rad": 0.017087872930057445,
+    "initial_object_positions": [
+      [
+        -0.24374279368847826,
+        -0.15681223731186242,
+        0.01739324489508867
+      ],
+      [
+        -0.130148978839634,
+        -0.1454978363884209,
+        0.01739324489508867
+      ],
+      [
+        -0.19794083987306985,
+        -0.028753259692089056,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1003,
+    "target": "red",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 266,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_red.npz",
+    "sha256": "1ae0cc5208fad19a882156f8cacb7f4085d98cf30420355028588d072afee5a5",
+    "first_close_frame": 73,
+    "first_low_frame": 56,
+    "close_time_s": 3.65,
+    "close_tcp_height_mm": 26.108412315520233,
+    "close_target_xy_mm": 4.209638975286208,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 4.209638975286208,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.058924052864313126,
+    "close_object_local_mm": [
+      4.240453281309117,
+      0.26051794901118114,
+      8.696303609604474
+    ],
+    "close_orientation_error_deg": 2.37426798767515,
+    "close_xy_by_color_mm": [
+      4.209638975286208,
+      110.08064127940864,
+      133.3585359509361
+    ],
+    "low_target_xy_mm": 8.534440752517556,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 4.050505892324742,
+    "approach30_target_xy_mm": 18.35622534495606,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.2365132719153481,
+      -0.13993962566319806,
+      0.16850200898544748
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 77,
+    "target_first_bilateral_frame": 77,
+    "target_bilateral_frames": 143,
+    "target_first_bilateral_lift_frame": 110,
+    "target_peak_height_mm": 146.72608178512607,
+    "joint_raw_to_executed_mae_rad": 0.00025030705405581214,
+    "joint_command_to_feedback_mae_rad": 0.018358263270942216,
+    "initial_object_positions": [
+      [
+        -0.24374279368847826,
+        -0.15681223731186242,
+        0.01739324489508867
+      ],
+      [
+        -0.130148978839634,
+        -0.1454978363884209,
+        0.01739324489508867
+      ],
+      [
+        -0.19794083987306985,
+        -0.028753259692089056,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1004,
+    "target": "blue",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 240,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_blue.npz",
+    "sha256": "268a890210a1e00a6a7dc3aa3319c606a7e8f4c78e090f235e5e7f94dd63a23c",
+    "first_close_frame": 69,
+    "first_low_frame": 51,
+    "close_time_s": 3.45,
+    "close_tcp_height_mm": 14.324134125662608,
+    "close_target_xy_mm": 11.023420988686393,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 11.023420988686393,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05803075060248375,
+    "close_object_local_mm": [
+      6.252274969039623,
+      8.975901829930443,
+      -3.3582083549067336
+    ],
+    "close_orientation_error_deg": 3.132807121562808,
+    "close_xy_by_color_mm": [
+      151.27120263833464,
+      118.17500807776389,
+      11.023420988686393
+    ],
+    "low_target_xy_mm": 13.980044595715915,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 4.916290846797956,
+    "approach30_target_xy_mm": 5.300466557735119,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.13482529810196853,
+      -0.15352382544233759,
+      0.17201568019839097
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 70,
+    "target_first_bilateral_frame": 72,
+    "target_bilateral_frames": 122,
+    "target_first_bilateral_lift_frame": 100,
+    "target_peak_height_mm": 162.13473074037643,
+    "joint_raw_to_executed_mae_rad": 8.217591305987722e-05,
+    "joint_command_to_feedback_mae_rad": 0.01866930539561488,
+    "initial_object_positions": [
+      [
+        -0.20162113346397634,
+        -0.02556140249835242,
+        0.01739324489508867
+      ],
+      [
+        -0.24897534732325996,
+        -0.16035576325841577,
+        0.01739324489508867
+      ],
+      [
+        -0.1401226337705402,
+        -0.1533416701675126,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1004,
+    "target": "green",
+    "base_seed": 42,
+    "success": true,
+    "error": null,
+    "frames": 271,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_green.npz",
+    "sha256": "f00e261b0bdc034a5fc6a098b450f4b547f944ed41fccc4bfb57b51ef35811a5",
+    "first_close_frame": 83,
+    "first_low_frame": 58,
+    "close_time_s": 4.15,
+    "close_tcp_height_mm": 27.91718711009798,
+    "close_target_xy_mm": 14.363056401503215,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 14.363056401503215,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05789705365896225,
+    "close_object_local_mm": [
+      14.543986256047296,
+      1.0248878217272532,
+      10.221183110454902
+    ],
+    "close_orientation_error_deg": 2.7313051898897567,
+    "close_xy_by_color_mm": [
+      134.42945331672584,
+      14.363056401503215,
+      95.30103556813492
+    ],
+    "low_target_xy_mm": 14.707416851838936,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 14.284806822092099,
+    "approach30_target_xy_mm": 19.674799626980626,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.23782979297802206,
+      -0.1441423626681884,
+      0.1669045386264889
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 87,
+    "target_first_bilateral_frame": 88,
+    "target_bilateral_frames": 137,
+    "target_first_bilateral_lift_frame": 114,
+    "target_peak_height_mm": 139.1335228668855,
+    "joint_raw_to_executed_mae_rad": 0.0002781028432947967,
+    "joint_command_to_feedback_mae_rad": 0.017263536812727694,
+    "initial_object_positions": [
+      [
+        -0.20162113346397634,
+        -0.02556140249835242,
+        0.01739324489508867
+      ],
+      [
+        -0.24897534732325996,
+        -0.16035576325841577,
+        0.01739324489508867
+      ],
+      [
+        -0.1401226337705402,
+        -0.1533416701675126,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed42",
+    "split": "validation",
+    "layout": 1004,
+    "target": "red",
+    "base_seed": 42,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_red.npz",
+    "sha256": "5fc869544fad386d4068aa8353eec58feda156dd2aa14be410a457f0513480e0",
+    "first_close_frame": null,
+    "first_low_frame": 58,
+    "close_time_s": null,
+    "close_tcp_height_mm": 12.348682737842259,
+    "close_target_xy_mm": 19.615096773259904,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 19.615096773259904,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.1,
+    "close_object_local_mm": [
+      -18.898074877252284,
+      -5.202128893961777,
+      -5.099054972444186
+    ],
+    "close_orientation_error_deg": 5.72031303590363,
+    "close_xy_by_color_mm": [
+      19.615096773259904,
+      134.22537245987525,
+      148.2037791138822
+    ],
+    "low_target_xy_mm": 16.18636557716575,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 16.18636557716575,
+    "approach30_target_xy_mm": 7.071122895126128,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.2082051578600259,
+      -0.022982371333321462,
+      0.17231260323679237
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": null,
+    "target_first_bilateral_frame": null,
+    "target_bilateral_frames": 0,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 1.1093612566764888e-05,
+    "joint_raw_to_executed_mae_rad": 3.238557160846765e-05,
+    "joint_command_to_feedback_mae_rad": 0.017714838120149824,
+    "initial_object_positions": [
+      [
+        -0.20162113346397634,
+        -0.02556140249835242,
+        0.01739324489508867
+      ],
+      [
+        -0.24897534732325996,
+        -0.16035576325841577,
+        0.01739324489508867
+      ],
+      [
+        -0.1401226337705402,
+        -0.1533416701675126,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1000,
+    "target": "blue",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 251,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_blue.npz",
+    "sha256": "367902f9595a18ee5c46c043b549c06e00ea2584bb772355c8efdd17e6d69ced",
+    "first_close_frame": 77,
+    "first_low_frame": 59,
+    "close_time_s": 3.85,
+    "close_tcp_height_mm": 28.844389514771475,
+    "close_target_xy_mm": 7.014696987797302,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 7.014696987797302,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05651387199759483,
+    "close_object_local_mm": [
+      7.047153634684316,
+      1.590092591589482,
+      11.32005583298203
+    ],
+    "close_orientation_error_deg": 1.5662333112981477,
+    "close_xy_by_color_mm": [
+      139.0415351461403,
+      110.96515145720106,
+      7.014696987797302
+    ],
+    "low_target_xy_mm": 7.359821900770586,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 6.5517252592290065,
+    "approach30_target_xy_mm": 17.21551384992218,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.13030081948239317,
+      -0.14110118316441725,
+      0.1742244087119536
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 80,
+    "target_first_bilateral_frame": 80,
+    "target_bilateral_frames": 127,
+    "target_first_bilateral_lift_frame": 104,
+    "target_peak_height_mm": 145.22524072850118,
+    "joint_raw_to_executed_mae_rad": 0.0001957734815954454,
+    "joint_command_to_feedback_mae_rad": 0.0164848958283946,
+    "initial_object_positions": [
+      [
+        -0.2041947472826385,
+        -0.04365098415773792,
+        0.01739324489508867
+      ],
+      [
+        -0.23440119933241113,
+        -0.14709242828180025,
+        0.01739324489508867
+      ],
+      [
+        -0.1308136296758987,
+        -0.15830905760672706,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1000,
+    "target": "green",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 283,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_green.npz",
+    "sha256": "2a79e0a92af85fdda1df8af87e54fe115fd8aebc63518600a0e39cf3fa1406f5",
+    "first_close_frame": 79,
+    "first_low_frame": 57,
+    "close_time_s": 3.95,
+    "close_tcp_height_mm": 15.891558642526643,
+    "close_target_xy_mm": 5.099308095967821,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 5.099308095967821,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05583469197154045,
+    "close_object_local_mm": [
+      -4.382422136059345,
+      -2.6623157160239574,
+      -1.4016023782441698
+    ],
+    "close_orientation_error_deg": 4.470692245716756,
+    "close_xy_by_color_mm": [
+      108.72085482075657,
+      5.099308095967821,
+      109.29213254949116
+    ],
+    "low_target_xy_mm": 8.1625482623352,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 4.091697697490708,
+    "approach30_target_xy_mm": 15.047133410475281,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.2378072053250659,
+      -0.13243584794904045,
+      0.16476900645021383
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 81,
+    "target_first_bilateral_frame": 82,
+    "target_bilateral_frames": 154,
+    "target_first_bilateral_lift_frame": 116,
+    "target_peak_height_mm": 152.6456065107564,
+    "joint_raw_to_executed_mae_rad": 3.2334935766929004e-05,
+    "joint_command_to_feedback_mae_rad": 0.016993630610929622,
+    "initial_object_positions": [
+      [
+        -0.2041947472826385,
+        -0.04365098415773792,
+        0.01739324489508867
+      ],
+      [
+        -0.23440119933241113,
+        -0.14709242828180025,
+        0.01739324489508867
+      ],
+      [
+        -0.1308136296758987,
+        -0.15830905760672706,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1000,
+    "target": "red",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 342,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_red.npz",
+    "sha256": "3bb0ae502f9ac15d98bfb6a85c2110c9bc83ce128d3aab69dbae04cbda1dee5e",
+    "first_close_frame": 116,
+    "first_low_frame": 56,
+    "close_time_s": 5.8,
+    "close_tcp_height_mm": 13.038936315710444,
+    "close_target_xy_mm": 20.212698412227383,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 20.212698412227383,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05085170596837997,
+    "close_object_local_mm": [
+      -18.85945222219271,
+      -7.380070777299523,
+      -4.167600522978958
+    ],
+    "close_orientation_error_deg": 2.305313871212682,
+    "close_xy_by_color_mm": [
+      20.212698412227383,
+      103.62028111600773,
+      147.7705207382082
+    ],
+    "low_target_xy_mm": 30.242090503232852,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 18.922741250390672,
+    "approach30_target_xy_mm": 14.617316689448677,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.21206137187332147,
+      -0.03133099370527015,
+      0.16425668652624253
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 118,
+    "target_first_bilateral_frame": 119,
+    "target_bilateral_frames": 176,
+    "target_first_bilateral_lift_frame": 134,
+    "target_peak_height_mm": 144.71953002246835,
+    "joint_raw_to_executed_mae_rad": 2.882759415383002e-05,
+    "joint_command_to_feedback_mae_rad": 0.012270807237902207,
+    "initial_object_positions": [
+      [
+        -0.2041947472826385,
+        -0.04365098415773792,
+        0.01739324489508867
+      ],
+      [
+        -0.23440119933241113,
+        -0.14709242828180025,
+        0.01739324489508867
+      ],
+      [
+        -0.1308136296758987,
+        -0.15830905760672706,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1001,
+    "target": "blue",
+    "base_seed": 43,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_blue.npz",
+    "sha256": "867a80a7df45983d3c7295624f40278d2e8caea8e26c6c8f5c39782cdd03a266",
+    "first_close_frame": 100,
+    "first_low_frame": 56,
+    "close_time_s": 5.0,
+    "close_tcp_height_mm": 13.964481411848473,
+    "close_target_xy_mm": 24.570702901872878,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 24.570702901872878,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05057261675596237,
+    "close_object_local_mm": [
+      -20.69190153009361,
+      -13.292928194393484,
+      -3.2862335628434645
+    ],
+    "close_orientation_error_deg": 1.962932856705419,
+    "close_xy_by_color_mm": [
+      121.9469124167982,
+      118.71660929805742,
+      24.570702901872878
+    ],
+    "low_target_xy_mm": 21.18844597323618,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 20.196023125601,
+    "approach30_target_xy_mm": 11.79301892664017,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.24177006972758114,
+      -0.1571874150797489,
+      0.17392726352196886
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 100,
+    "target_first_bilateral_frame": 103,
+    "target_bilateral_frames": 317,
+    "target_first_bilateral_lift_frame": 210,
+    "target_peak_height_mm": 77.46625684488757,
+    "joint_raw_to_executed_mae_rad": 1.7619030816214376e-05,
+    "joint_command_to_feedback_mae_rad": 0.008138263645501548,
+    "initial_object_positions": [
+      [
+        -0.21686643824251164,
+        -0.04336947315552834,
+        0.01739324489508867
+      ],
+      [
+        -0.13874469184822782,
+        -0.13997907819487385,
+        0.01739324489508867
+      ],
+      [
+        -0.23184734199801907,
+        -0.1635603868990082,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "failure_after_target_lift"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1001,
+    "target": "green",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 238,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_green.npz",
+    "sha256": "746ce60a2b8a7bf6d19ae3d28ace041a8add660dcafd758cb87db8cc5a34803e",
+    "first_close_frame": 80,
+    "first_low_frame": 53,
+    "close_time_s": 4.0,
+    "close_tcp_height_mm": 13.262934417686765,
+    "close_target_xy_mm": 13.62235212425044,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 13.62235212425044,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.059954387843608854,
+    "close_object_local_mm": [
+      12.98359163460268,
+      4.006382096096518,
+      -4.2430277447844595
+    ],
+    "close_orientation_error_deg": 1.3519984561733644,
+    "close_xy_by_color_mm": [
+      132.48241352160608,
+      13.62235212425044,
+      109.48332074759507
+    ],
+    "low_target_xy_mm": 16.475878697499784,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 12.501608261884419,
+    "approach30_target_xy_mm": 15.169626391240019,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.1237179041249429,
+      -0.1379022499474881,
+      0.16802613021289936
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 82,
+    "target_first_bilateral_frame": 83,
+    "target_bilateral_frames": 111,
+    "target_first_bilateral_lift_frame": 116,
+    "target_peak_height_mm": 157.91453062530732,
+    "joint_raw_to_executed_mae_rad": 0.00015672664604141914,
+    "joint_command_to_feedback_mae_rad": 0.01819111522857733,
+    "initial_object_positions": [
+      [
+        -0.21686643824251164,
+        -0.04336947315552834,
+        0.01739324489508867
+      ],
+      [
+        -0.13874469184822782,
+        -0.13997907819487385,
+        0.01739324489508867
+      ],
+      [
+        -0.23184734199801907,
+        -0.1635603868990082,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1001,
+    "target": "red",
+    "base_seed": 43,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_red.npz",
+    "sha256": "954c668174f99f21c383507df25492c78b7892a07d32c4f58413b3a569da2f07",
+    "first_close_frame": 147,
+    "first_low_frame": 49,
+    "close_time_s": 7.35,
+    "close_tcp_height_mm": 13.340109500204964,
+    "close_target_xy_mm": 26.725608965066915,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 26.725608965066915,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05196158707141876,
+    "close_object_local_mm": [
+      -23.357196444644156,
+      -13.131041589511213,
+      -3.5641677894992894
+    ],
+    "close_orientation_error_deg": 2.4334106378833615,
+    "close_xy_by_color_mm": [
+      26.725608965066915,
+      144.71673378863707,
+      124.09063201696775
+    ],
+    "low_target_xy_mm": 27.134737955877583,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 24.204328058061826,
+    "approach30_target_xy_mm": 13.108966064280219,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.22609670609928564,
+      -0.03406102824960258,
+      0.14967921838933462
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 148,
+    "target_first_bilateral_frame": 150,
+    "target_bilateral_frames": 90,
+    "target_first_bilateral_lift_frame": 168,
+    "target_peak_height_mm": 132.4289953290931,
+    "joint_raw_to_executed_mae_rad": 7.94984329314457e-06,
+    "joint_command_to_feedback_mae_rad": 0.010485843202897433,
+    "initial_object_positions": [
+      [
+        -0.21686643824251164,
+        -0.04336947315552834,
+        0.01739324489508867
+      ],
+      [
+        -0.13874469184822782,
+        -0.13997907819487385,
+        0.01739324489508867
+      ],
+      [
+        -0.23184734199801907,
+        -0.1635603868990082,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "failure_after_target_lift"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1002,
+    "target": "blue",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 276,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_blue.npz",
+    "sha256": "cd4fe382827f3b2040824402ed7a99591689b288cf415fd66b766503ed19cb25",
+    "first_close_frame": 101,
+    "first_low_frame": 53,
+    "close_time_s": 5.05,
+    "close_tcp_height_mm": 12.990344513057389,
+    "close_target_xy_mm": 9.548080527003744,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 9.548080527003744,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.058677542954683304,
+    "close_object_local_mm": [
+      -9.560392778987868,
+      0.22745951008694648,
+      -4.370197168921803
+    ],
+    "close_orientation_error_deg": 1.0924726098034725,
+    "close_xy_by_color_mm": [
+      150.1252670779191,
+      118.57884688101761,
+      9.548080527003744
+    ],
+    "low_target_xy_mm": 9.748407840212053,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 9.43258720652873,
+    "approach30_target_xy_mm": 3.15869041226046,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.20972786342088134,
+      -0.030308708954611543,
+      0.1709512880198312
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 103,
+    "target_first_bilateral_frame": 104,
+    "target_bilateral_frames": 126,
+    "target_first_bilateral_lift_frame": 125,
+    "target_peak_height_mm": 155.08770120124024,
+    "joint_raw_to_executed_mae_rad": 5.1546960637189766e-06,
+    "joint_command_to_feedback_mae_rad": 0.014494024883604066,
+    "initial_object_positions": [
+      [
+        -0.12306685512209066,
+        -0.15309422626708585,
+        0.01739324489508867
+      ],
+      [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.01739324489508867
+      ],
+      [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1002,
+    "target": "green",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 254,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_green.npz",
+    "sha256": "0b8edf6ff7faefe1f68852cd7a632c1ab6edaaf27b6bb31bf859191ecbcfad88",
+    "first_close_frame": 72,
+    "first_low_frame": 54,
+    "close_time_s": 3.6,
+    "close_tcp_height_mm": 18.882043956552298,
+    "close_target_xy_mm": 1.50453036884579,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 1.50453036884579,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.057518426328897476,
+    "close_object_local_mm": [
+      0.4949849624500493,
+      1.4149201029032197,
+      1.4943534499394768
+    ],
+    "close_orientation_error_deg": 0.9245504746418839,
+    "close_xy_by_color_mm": [
+      114.31417087964073,
+      1.50453036884579,
+      124.81790135926532
+    ],
+    "low_target_xy_mm": 1.564797843145351,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 0.4388025235404827,
+    "approach30_target_xy_mm": 7.337460390926734,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.23238599711027874,
+      -0.14970640312747832,
+      0.17435716915203492
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 75,
+    "target_first_bilateral_frame": 75,
+    "target_bilateral_frames": 134,
+    "target_first_bilateral_lift_frame": 103,
+    "target_peak_height_mm": 149.08079032904487,
+    "joint_raw_to_executed_mae_rad": 0.00022645246550401623,
+    "joint_command_to_feedback_mae_rad": 0.01862936754141592,
+    "initial_object_positions": [
+      [
+        -0.12306685512209066,
+        -0.15309422626708585,
+        0.01739324489508867
+      ],
+      [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.01739324489508867
+      ],
+      [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1002,
+    "target": "red",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 242,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_red.npz",
+    "sha256": "494df6aa1f181a6262969284c45f1beb5a8e557aa5c6ff998ed79a28776fa902",
+    "first_close_frame": 89,
+    "first_low_frame": 73,
+    "close_time_s": 4.45,
+    "close_tcp_height_mm": 32.962621924925315,
+    "close_target_xy_mm": 16.653377783963894,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 16.653377783963894,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05864578276872635,
+    "close_object_local_mm": [
+      15.999765044794334,
+      -5.2610420877758575,
+      15.364540407493683
+    ],
+    "close_orientation_error_deg": 1.6782438015734202,
+    "close_xy_by_color_mm": [
+      16.653377783963894,
+      128.78561388531307,
+      147.7766588232176
+    ],
+    "low_target_xy_mm": 16.021557750788105,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 15.746059296396115,
+    "approach30_target_xy_mm": 20.49202271991541,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.11527136848192601,
+      -0.1341428837500887,
+      0.164551183245638
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 91,
+    "target_first_bilateral_frame": 93,
+    "target_bilateral_frames": 105,
+    "target_first_bilateral_lift_frame": 114,
+    "target_peak_height_mm": 140.11328798983791,
+    "joint_raw_to_executed_mae_rad": 0.0002664345302734494,
+    "joint_command_to_feedback_mae_rad": 0.016453623499717344,
+    "initial_object_positions": [
+      [
+        -0.12306685512209066,
+        -0.15309422626708585,
+        0.01739324489508867
+      ],
+      [
+        -0.23833700753018564,
+        -0.1539986985472483,
+        0.01739324489508867
+      ],
+      [
+        -0.2095603267676024,
+        -0.03346295317317076,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1003,
+    "target": "blue",
+    "base_seed": 43,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_blue.npz",
+    "sha256": "d0a32e536340ad485c8973815eecabfb7693c5eb6b0f068d357628c49eb3e5ce",
+    "first_close_frame": null,
+    "first_low_frame": 58,
+    "close_time_s": null,
+    "close_tcp_height_mm": 12.184530008724757,
+    "close_target_xy_mm": 22.567493675545098,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 22.567493675545098,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.09978045523166656,
+    "close_object_local_mm": [
+      -22.056658633083664,
+      -4.656488618854935,
+      -5.314463361087429
+    ],
+    "close_orientation_error_deg": 4.501617276871492,
+    "close_xy_by_color_mm": [
+      125.40543799579568,
+      143.42054944708454,
+      22.567493675545098
+    ],
+    "low_target_xy_mm": 15.202911824067805,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 15.202911824067805,
+    "approach30_target_xy_mm": 7.949892457328519,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.20574898978435835,
+      -0.030247778024507305,
+      0.17212812079786077
+    ],
+    "target_lifted_5cm": false,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [],
+    "target_first_contact_frame": null,
+    "target_first_bilateral_frame": null,
+    "target_bilateral_frames": 0,
+    "target_first_bilateral_lift_frame": null,
+    "target_peak_height_mm": 1.1093613225959809e-05,
+    "joint_raw_to_executed_mae_rad": 1.860833641082515e-05,
+    "joint_command_to_feedback_mae_rad": 0.0199419578207764,
+    "initial_object_positions": [
+      [
+        -0.24374279368847826,
+        -0.15681223731186242,
+        0.01739324489508867
+      ],
+      [
+        -0.130148978839634,
+        -0.1454978363884209,
+        0.01739324489508867
+      ],
+      [
+        -0.19794083987306985,
+        -0.028753259692089056,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "target_grasp_or_approach_failure"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1003,
+    "target": "green",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 238,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_green.npz",
+    "sha256": "1670906b529a8d050c8d5c45565da8df93ffbf7bcbfe15895de805ffcf1ba97e",
+    "first_close_frame": 70,
+    "first_low_frame": 54,
+    "close_time_s": 3.5,
+    "close_tcp_height_mm": 29.815050071727008,
+    "close_target_xy_mm": 11.283439514644396,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 11.283439514644396,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05934962257742882,
+    "close_object_local_mm": [
+      10.911647716186629,
+      3.5935903735997776,
+      12.232703211733016
+    ],
+    "close_orientation_error_deg": 1.0881328103826111,
+    "close_xy_by_color_mm": [
+      125.41981224512816,
+      11.283439514644396,
+      140.64887059888005
+    ],
+    "low_target_xy_mm": 13.352229079159143,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 11.097479133743667,
+    "approach30_target_xy_mm": 12.026309460095266,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.1185797879695128,
+      -0.1422136406207053,
+      0.16666323543154254
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 74,
+    "target_first_bilateral_frame": 74,
+    "target_bilateral_frames": 120,
+    "target_first_bilateral_lift_frame": 95,
+    "target_peak_height_mm": 140.965798929215,
+    "joint_raw_to_executed_mae_rad": 1.549024740103585e-05,
+    "joint_command_to_feedback_mae_rad": 0.015455489251299703,
+    "initial_object_positions": [
+      [
+        -0.24374279368847826,
+        -0.15681223731186242,
+        0.01739324489508867
+      ],
+      [
+        -0.130148978839634,
+        -0.1454978363884209,
+        0.01739324489508867
+      ],
+      [
+        -0.19794083987306985,
+        -0.028753259692089056,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1003,
+    "target": "red",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 262,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_red.npz",
+    "sha256": "ad58a888b5ddb4f77b2002f6877500212785d92949f701123f22d04d5a9b5028",
+    "first_close_frame": 78,
+    "first_low_frame": 60,
+    "close_time_s": 3.9,
+    "close_tcp_height_mm": 28.706785941739852,
+    "close_target_xy_mm": 13.13273230387811,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 13.13273230387811,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.05946114659309387,
+    "close_object_local_mm": [
+      13.012185486417849,
+      -1.2394460694166873,
+      11.384701141079207
+    ],
+    "close_orientation_error_deg": 2.650680261162958,
+    "close_xy_by_color_mm": [
+      13.13273230387811,
+      102.1107970007821,
+      126.63197245994284
+    ],
+    "low_target_xy_mm": 13.78615089563558,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 12.980611946124531,
+    "approach30_target_xy_mm": 23.208607109591725,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.22608729303543715,
+      -0.14174828229806022,
+      0.17238558928494205
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 82,
+    "target_first_bilateral_frame": 83,
+    "target_bilateral_frames": 135,
+    "target_first_bilateral_lift_frame": 117,
+    "target_peak_height_mm": 139.89022520392072,
+    "joint_raw_to_executed_mae_rad": 0.0005727588947099315,
+    "joint_command_to_feedback_mae_rad": 0.017665878007763283,
+    "initial_object_positions": [
+      [
+        -0.24374279368847826,
+        -0.15681223731186242,
+        0.01739324489508867
+      ],
+      [
+        -0.130148978839634,
+        -0.1454978363884209,
+        0.01739324489508867
+      ],
+      [
+        -0.19794083987306985,
+        -0.028753259692089056,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1004,
+    "target": "blue",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 230,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_blue.npz",
+    "sha256": "d338c94169f376865de1fb707a6b27026761cb81bdfb774c396090a93dce656d",
+    "first_close_frame": 71,
+    "first_low_frame": 51,
+    "close_time_s": 3.55,
+    "close_tcp_height_mm": 13.300385607197637,
+    "close_target_xy_mm": 6.534820210914857,
+    "close_nearest_color": "blue",
+    "close_nearest_xy_mm": 6.534820210914857,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.055172715336084366,
+    "close_object_local_mm": [
+      3.570874988716864,
+      5.449721226550012,
+      -4.123694158957154
+    ],
+    "close_orientation_error_deg": 1.4843134868501766,
+    "close_xy_by_color_mm": [
+      147.55643465374058,
+      114.23494740940191,
+      6.534820210914857
+    ],
+    "low_target_xy_mm": 6.628577563194304,
+    "low_nearest_color": "blue",
+    "best_low_target_xy_mm": 1.4638455640940764,
+    "approach30_target_xy_mm": 4.170024426466172,
+    "approach30_nearest_color": "blue",
+    "approach30_tcp": [
+      -0.1366673538279639,
+      -0.15100711576982673,
+      0.16649852313588842
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "blue"
+    ],
+    "target_first_contact_frame": 72,
+    "target_first_bilateral_frame": 74,
+    "target_bilateral_frames": 112,
+    "target_first_bilateral_lift_frame": 89,
+    "target_peak_height_mm": 161.62104042189625,
+    "joint_raw_to_executed_mae_rad": 3.928903382325533e-05,
+    "joint_command_to_feedback_mae_rad": 0.01889425135665927,
+    "initial_object_positions": [
+      [
+        -0.20162113346397634,
+        -0.02556140249835242,
+        0.01739324489508867
+      ],
+      [
+        -0.24897534732325996,
+        -0.16035576325841577,
+        0.01739324489508867
+      ],
+      [
+        -0.1401226337705402,
+        -0.1533416701675126,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1004,
+    "target": "green",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 327,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_green.npz",
+    "sha256": "1e09fbffd2715c4c3fa39acd346123caa94c512d6c6ea2b4c2d8e28d9e722748",
+    "first_close_frame": 74,
+    "first_low_frame": 57,
+    "close_time_s": 3.7,
+    "close_tcp_height_mm": 30.548831002155122,
+    "close_target_xy_mm": 14.100026632081212,
+    "close_nearest_color": "green",
+    "close_nearest_xy_mm": 14.100026632081212,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.057211361825466156,
+    "close_object_local_mm": [
+      14.211558793695092,
+      -0.772159996838523,
+      13.012120140570575
+    ],
+    "close_orientation_error_deg": 3.7751418688650538,
+    "close_xy_by_color_mm": [
+      132.8702901720759,
+      14.100026632081212,
+      96.38620081214307
+    ],
+    "low_target_xy_mm": 16.039561874989097,
+    "low_nearest_color": "green",
+    "best_low_target_xy_mm": 14.097893665902772,
+    "approach30_target_xy_mm": 22.767844675645613,
+    "approach30_nearest_color": "green",
+    "approach30_tcp": [
+      -0.23473847466839565,
+      -0.14258820270037909,
+      0.17149849283980778
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "green"
+    ],
+    "target_first_contact_frame": 78,
+    "target_first_bilateral_frame": 79,
+    "target_bilateral_frames": 204,
+    "target_first_bilateral_lift_frame": 119,
+    "target_peak_height_mm": 143.21111358355418,
+    "joint_raw_to_executed_mae_rad": 0.0001544097289974659,
+    "joint_command_to_feedback_mae_rad": 0.014750044912747489,
+    "initial_object_positions": [
+      [
+        -0.20162113346397634,
+        -0.02556140249835242,
+        0.01739324489508867
+      ],
+      [
+        -0.24897534732325996,
+        -0.16035576325841577,
+        0.01739324489508867
+      ],
+      [
+        -0.1401226337705402,
+        -0.1533416701675126,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  },
+  {
+    "evaluation": "update_1000_validation_seed43",
+    "split": "validation",
+    "layout": 1004,
+    "target": "red",
+    "base_seed": 43,
+    "success": true,
+    "error": null,
+    "frames": 232,
+    "source": "outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_red.npz",
+    "sha256": "30da9e30c837f45b077cb89baf304b3b3ae34bed377c872a1854bd27cd4b5105",
+    "first_close_frame": 60,
+    "first_low_frame": 45,
+    "close_time_s": 3.0,
+    "close_tcp_height_mm": 20.77499236664053,
+    "close_target_xy_mm": 4.100073559513595,
+    "close_nearest_color": "red",
+    "close_nearest_xy_mm": 4.100073559513595,
+    "close_nearest_is_target": true,
+    "close_width_command_m": 0.053485220074653624,
+    "close_object_local_mm": [
+      -4.055856766369873,
+      -0.3514660179451159,
+      3.4166125990843605
+    ],
+    "close_orientation_error_deg": 0.6308750361901477,
+    "close_xy_by_color_mm": [
+      4.100073559513595,
+      140.6218263130877,
+      142.65597330770393
+    ],
+    "low_target_xy_mm": 8.555060587212548,
+    "low_nearest_color": "red",
+    "best_low_target_xy_mm": 3.9765230686734747,
+    "approach30_target_xy_mm": 9.208842403145667,
+    "approach30_nearest_color": "red",
+    "approach30_tcp": [
+      -0.2108005329054194,
+      -0.026297204306184246,
+      0.14976835465523136
+    ],
+    "target_lifted_5cm": true,
+    "non_target_lifted_5cm": false,
+    "lifted_colors": [
+      "red"
+    ],
+    "target_first_contact_frame": 62,
+    "target_first_bilateral_frame": 62,
+    "target_bilateral_frames": 124,
+    "target_first_bilateral_lift_frame": 100,
+    "target_peak_height_mm": 151.86330153668797,
+    "joint_raw_to_executed_mae_rad": 0.00020598995402969136,
+    "joint_command_to_feedback_mae_rad": 0.015503014728049627,
+    "initial_object_positions": [
+      [
+        -0.20162113346397634,
+        -0.02556140249835242,
+        0.01739324489508867
+      ],
+      [
+        -0.24897534732325996,
+        -0.16035576325841577,
+        0.01739324489508867
+      ],
+      [
+        -0.1401226337705402,
+        -0.1533416701675126,
+        0.01739324489508867
+      ]
+    ],
+    "distractor_max_xy_displacement_mm": 0.0,
+    "failure_class": "success"
+  }
+]
