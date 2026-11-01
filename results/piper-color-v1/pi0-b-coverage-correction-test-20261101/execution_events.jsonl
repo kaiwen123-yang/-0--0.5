@@ -25,3 +25,4 @@
 {"at_utc": "2026-11-01T14:57:23.419972+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "train", "--until", "1000", "--resume"], "label": "train_C_1000"}
 {"at_utc": "2026-11-01T15:00:57.724308+00:00", "event": "end", "label": "train_C_1000", "returncode": 0}
 {"at_utc": "2026-11-01T15:01:08.880048+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "evaluate", "--label", "C_1000", "--roster", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/node_roster.json", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/C/checkpoints/pi0_piper_color_lora/b_coverage_correction/1000"], "label": "C_1000"}
+{"at_utc": "2026-11-01T15:18:22.551826+00:00", "event": "end", "label": "C_1000", "returncode": 0}
