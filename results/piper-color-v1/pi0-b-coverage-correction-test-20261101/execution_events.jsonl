@@ -34,3 +34,7 @@
 {"at_utc": "2026-11-01T15:23:47.743796+00:00", "event": "end", "label": "train_D_500", "returncode": 0}
 {"at_utc": "2026-11-01T15:23:58.882967+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "evaluate", "--label", "D_500", "--roster", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/node_roster.json", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/D/checkpoints/pi0_piper_color_lora/b_coverage_correction/500"], "label": "D_500"}
 {"at_utc": "2026-11-01T15:42:19.000236+00:00", "event": "end", "label": "D_500", "returncode": 0}
+{"at_utc": "2026-11-01T15:42:24.009948+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "fixed", "--label", "D_500", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/D/checkpoints/pi0_piper_color_lora/b_coverage_correction/500"], "label": "fixed_D_500"}
+{"at_utc": "2026-11-01T15:43:18.268530+00:00", "event": "end", "label": "fixed_D_500", "returncode": 0}
+{"at_utc": "2026-11-01T15:43:18.322162+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "node", "--label", "D_500"], "label": "node_D_500"}
+{"at_utc": "2026-11-01T15:43:18.708962+00:00", "event": "end", "label": "node_D_500", "returncode": 0}
