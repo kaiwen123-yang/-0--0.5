@@ -1,6 +1,6 @@
 {
-  "stage": "A-train-update-1500",
-  "snapshot_at_utc": "2026-11-01T02:55:27.639729+00:00",
+  "stage": "A-train-update-2000",
+  "snapshot_at_utc": "2026-11-01T02:59:29.626574+00:00",
   "branch": "codex/pi0-ab-old2010-20261101",
   "campaign_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101",
   "text_files": 154,
@@ -33,6 +33,26 @@
         "local_updates": 1500,
         "optimizer_updates": 3510,
         "sample_offset": 6000,
+        "sample_order_sha256": "3af63a7d1eb52298ad658c49aa5183403fb976e858e455b7868a9bc9b568bfcc",
+        "config_sha256": "1739ebbe72ba5e9c0ca6a30011531d34bb9534c58f562a49b728e54c11000119",
+        "train_rng_key_data": [
+          1832780943,
+          270669613
+        ],
+        "rng_rule": "same old train_rng; upstream folds with cumulative train_state.step (2010 + local step before update)",
+        "old_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010",
+        "group": "A"
+      },
+      "uploaded": false
+    },
+    {
+      "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000",
+      "bytes": 9793555559,
+      "files": 41,
+      "resume": {
+        "local_updates": 2000,
+        "optimizer_updates": 4010,
+        "sample_offset": 8000,
         "sample_order_sha256": "3af63a7d1eb52298ad658c49aa5183403fb976e858e455b7868a9bc9b568bfcc",
         "config_sha256": "1739ebbe72ba5e9c0ca6a30011531d34bb9534c58f562a49b728e54c11000119",
         "train_rng_key_data": [
