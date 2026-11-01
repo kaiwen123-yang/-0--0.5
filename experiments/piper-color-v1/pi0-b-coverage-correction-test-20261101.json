@@ -364,6 +364,7 @@
     "command": "scripts/pi_release_backup.py restore --minimal-b --workspace-root <confirmed pi workspace root> --cache <dedicated restore cache>",
     "receipt": "<restored workspace>/pi-restoration-receipt-20261101.json",
     "alternate_volume": "bind actual restored paths from receipt; never replace them with hardcoded historical paths",
-    "expected_optimizer_updates": 4020
+    "expected_optimizer_updates": 4020,
+    "do_not_start_new_pi_experiments_until_backup_phase_complete": true
   }
 }
