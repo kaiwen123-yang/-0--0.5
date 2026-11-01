@@ -31,3 +31,4 @@ Traceback (most recent call last):
     raise self.protocol.handshake_exc
 websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
 INFO:websockets.server:connection open
+INFO:websockets.server:connection open
