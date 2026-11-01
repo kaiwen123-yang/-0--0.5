@@ -8,6 +8,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[2]
 RUN = ROOT / "outputs/pi0-120-demo-v2-20261101"
@@ -30,6 +31,7 @@ def finish(fig, name, vector, qa):
     if vector:
         fig.savefig(path / f"{name}.svg")
         fig.savefig(path / f"{name}.pdf")
+        Image.open(path / f"{name}.png").convert("L").save(path / f"{name}_gray.png", dpi=(300, 300))
     plt.close(fig)
 
 
@@ -121,11 +123,48 @@ def overview(vector, qa):
     finish(fig, "targeting_overview", vector, qa)
 
 
+def grounding(vector, qa):
+    data = json.loads((OUT / "evidence_summary.json").read_text())
+    fig, axes = plt.subplots(1, 3, figsize=(12, 4.3), layout="constrained")
+    labels = ("old", "2010", "4020", "8040")
+    ax = axes[0]
+    for i, row in enumerate(data["fixed"]):
+        by_layout = {}
+        for p in row["prompt_pairs"]:
+            by_layout.setdefault(p["layout"], []).append(p["spread_mm"])
+        yy = [np.mean(v) for v in by_layout.values()]
+        ax.scatter(i + np.linspace(-.12, .12, len(yy)), yy, s=32,
+                   color=("#0072B2", "#CC79A7", "#E69F00", "#D55E00")[i], marker=("o", "s", "^", "D")[i])
+    ax.set(xticks=range(4), xticklabels=labels, yscale="log", ylim=(.08, 100),
+           xlabel="Model / optimizer updates", ylabel="Prompt endpoint spread (mm, log scale)",
+           title="a  Same RGB/state/noise, different instruction")
+    ax.text(.02, .97, "Each point: one layout, mean of 2 seeds", transform=ax.transAxes, va="top", fontsize=8)
+    ax = axes[1]
+    counts = [r["prompt_matched_teacher_endpoint"] for r in data["fixed"]]
+    ax.bar(range(4), counts, color=("#0072B2", "#CC79A7", "#E69F00", "#D55E00"))
+    for i, v in enumerate(counts): ax.text(i, v + .5, f"{v}/30", ha="center", fontsize=9)
+    ax.set(xticks=range(4), xticklabels=labels, ylim=(0, 30), ylabel="Instruction-matched teacher endpoint", xlabel="Model / optimizer updates",
+           title="b  Initial predicted endpoint identity")
+    ax = axes[2]
+    values = [0] + [next(r["successes"] for r in data["prefix"] if r["model"] == "new8040" and r["prefix"] == n) for n in (30, 60, 85)]
+    values += [next(r["successes"] for r in data["prefix"] if r["model"] == "old2010" and r["prefix"] == 85)]
+    ax.bar(range(5), values, color=["#D55E00"] * 4 + ["#0072B2"], hatch=["", "//", "..", "xx", "xx"])
+    for i, v in enumerate(values): ax.text(i, v + .2, f"{v}/10", ha="center", fontsize=9)
+    ax.set(xticks=range(5), xticklabels=("New\nnone", "New\n1.5s", "New\n3.0s", "New\n4.25s", "Old\n4.25s"),
+           ylim=(0, 11.5), ylabel="Full success after teacher prefix", xlabel="Model and teacher-controlled prefix duration",
+           title="c  All 10 old-success/new-failure trials")
+    finish(fig, "conditioning_and_prefix_rescue", vector, qa)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(); parser.add_argument("--vector", action="store_true")
     args = parser.parse_args(); qa = {}
     overview(args.vector, qa)
     for case in ((1000, "red", 42), (1001, "blue", 42), (1003, "red", 42)):
         case_figure(*case, args.vector, qa)
+    if (OUT / "evidence_summary.json").exists():
+        evidence = json.loads((OUT / "evidence_summary.json").read_text())
+        if len(evidence["prefix"]) == 4 and all(r["complete"] for r in evidence["prefix"]):
+            grounding(args.vector, qa)
     (OUT / "figure_layout_checks.json").write_text(json.dumps(qa, indent=2, default=str))
     print(json.dumps(qa, default=str))
