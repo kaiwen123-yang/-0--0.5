@@ -1,0 +1,58 @@
+{
+  "attempt": 15,
+  "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.npz",
+  "source_case": {
+    "layout": 122,
+    "target": "red",
+    "split": "train",
+    "base_seed": 43
+  },
+  "intervention_frame": 59,
+  "environment_version": "piper_h_color_contact_v2_impratio10",
+  "teacher_version": "bct_reopen_retract_then_pose_ik_v1",
+  "success": true,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/correction_dataset/correction_015.mp4",
+  "max_replay_error": 0.0,
+  "terminal": {
+    "layout_seed": 122,
+    "target": "red",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.14379592579381445,
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.14169774459896275,
+        0.16117838921485492,
+        0.02539325598870121
+      ],
+      "green": [
+        -0.22589012784615892,
+        -0.15908252797086375,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.13342763531406865,
+        -0.15813925507076845,
+        0.017393255988701235
+      ]
+    },
+    "steps": 387
+  },
+  "frames": 328,
+  "stable_2s": true,
+  "action_semantics": "actual targets returned by env.step; observation captured before action",
+  "within_420_steps": true,
+  "file": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/correction_dataset/correction_015.npz",
+  "sha256": "718eca8c49287d55465cfc8d1a40824b63566c482e5d5d365e89793dfb0efcc5"
+}

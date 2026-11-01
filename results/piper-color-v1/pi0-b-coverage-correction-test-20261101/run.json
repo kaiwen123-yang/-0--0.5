@@ -1,12 +1,12 @@
 {
   "started_at": "2026-11-01T13:43:44.489578+00:00",
   "pid": 16664,
-  "stage": "B_teacher_prefix",
+  "stage": "correction_generation",
   "completed": false,
   "base_optimizer_updates": 4020,
   "source_commit": "49d1e32249813b768583fc0f5bc6d27a735188c7",
   "hardware_execution": false,
-  "updated_at": "2026-11-01T14:33:36.289436+00:00",
+  "updated_at": "2026-11-01T14:35:44.084394+00:00",
   "counts": {
     "new_autonomous_evaluations": 273,
     "reused_evaluations": 42,
@@ -16,12 +16,12 @@
       "D": 0
     },
     "teacher_prefix_evaluations": 24,
-    "correction_attempts": 0,
-    "accepted_corrections": 0
+    "correction_attempts": 20,
+    "accepted_corrections": 20
   },
-  "service_pid": 16743,
+  "service_pid": null,
   "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/serve_B_1793543192529368381.log",
   "active_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
   "child_pid": null,
-  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/B_teacher_prefix_1793543459563676302.log"
+  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/correction_generation_1793543623145382606.log"
 }
