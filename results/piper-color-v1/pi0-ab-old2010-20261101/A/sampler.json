@@ -1,0 +1,29 @@
+{
+  "group": "A",
+  "samples": 8040,
+  "seed": 42,
+  "implementation": "NumPy PCG64, SeedSequence(42).spawn(3): color, layout, inverse-CDF frame",
+  "color_probabilities": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "layout_probabilities": "1/40 conditional on color",
+  "frame_probabilities": "uniform 0..267",
+  "realized_color_counts": {
+    "red": 2679,
+    "green": 2701,
+    "blue": 2660
+  },
+  "realized_phase_counts": [
+    292,
+    1558,
+    6190
+  ],
+  "sample_order_sha256": "3af63a7d1eb52298ad658c49aa5183403fb976e858e455b7868a9bc9b568bfcc",
+  "new_sample_offset": 0,
+  "data_index_sha256": "89e99c1cf5f96af6c285e548db468e216bc738eb431287ca06250770c614fca7",
+  "normalization_sha256": "e702f9e79d439d0632d1ca15e1c8b29ce05881de373fa35a86f44c3d3470f288",
+  "sampler_with_replacement": true,
+  "new_demonstrations": 0
+}

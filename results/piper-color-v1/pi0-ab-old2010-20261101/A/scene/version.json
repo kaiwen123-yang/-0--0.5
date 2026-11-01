@@ -1,0 +1,32 @@
+{
+  "version": "piper_h_color_contact_v2_impratio10",
+  "scene_sha256": "e846d1ca50552e5a7686d48ecd1052dff711061c338a696399a1812711f9ba2d",
+  "mujoco_version": "3.2.3",
+  "contact": {
+    "cone": "elliptic",
+    "impratio": 10,
+    "noslip_iterations": 0
+  },
+  "source_sha256": {
+    "sim_v2.py": "34f951176d63fc925aff54f594a5136475d3a78601facb72b7ab6a572149d830",
+    "sim.py": "0e8e545bdf903290e72cb3d5fb50ad10dc0ce5c54d27314cebe5b7d768667851"
+  },
+  "assets_sha256": {
+    "gripper.xml": "1b9cc6f091349df1f49c1cae6a02fa9731409831eeebd664ad211578652ce5a2",
+    "meshes/agx_gripper/gripper_base.stl": "0b839dc0bcb7d94e3422c74f6396b54a0441ba4836448ab5586e7f372d1bdbf3",
+    "meshes/agx_gripper/gripper_link1.stl": "475a7d8db056524d7659fadf5a2c307d62791047b6214d733dfc7846ed1c613d",
+    "meshes/agx_gripper/gripper_link2.stl": "3f88d534a85e28a33ef7d2061adacbd1d25214aa9325f9e464aad0f9e4b74606",
+    "meshes/piper_h/base_link.stl": "11105df3b27e8ba50429f75334abae7d37eb13fc54d7a711ccd16968d2b05d42",
+    "meshes/piper_h/flange.stl": "f9ce752f93a6598858a779e3d8755a09e466b588efcffc3a1c3953773753a22b",
+    "meshes/piper_h/link1.stl": "55ed2dc7e060800e510505c23f7dc5d1f3d6e7b21d70a689e471fb525add4b1f",
+    "meshes/piper_h/link2.stl": "4b60473539386cd5d81090eee3dbc8c8a10b3d81798b73da1ca4aed97990c49e",
+    "meshes/piper_h/link3.stl": "4ea19f971be435ede84f647c11408d9de6c230d3a9ac7e06582cbc8102bf3dc7",
+    "meshes/piper_h/link4.stl": "2077c29f1f370aaaa922be19be1610ce6a0a2553e0953a75fcb703bdb3fc2c07",
+    "meshes/piper_h/link5.stl": "964670daa2832688d2322d6d67029de555d8e626211fea30f68e90b96c6d0fe3",
+    "meshes/piper_h/link6.stl": "9222c39f2291d7b9839b1254b06a22876b19c071608041462a69bf7b565704a3",
+    "provenance.json": "b9dc5b95d610b43b85b8326352e9235d9183c542886a667782577150e7d23e30",
+    "robot.xml": "a26546e8ba3b79f2fa30492c536b474a91240bcb738c40d8558dcb330fccb3c0"
+  },
+  "other_physics_and_success_conditions": "unchanged from v1",
+  "hardware_execution": false
+}
