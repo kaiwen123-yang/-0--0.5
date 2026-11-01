@@ -1,0 +1,34 @@
+{
+  "group": "D",
+  "local_updates": 500,
+  "optimizer_updates": 4520,
+  "optimizer_scalar_counters": [
+    4020,
+    4020
+  ],
+  "optimizer_array_leaves": 108,
+  "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+  "sample_offset": 0,
+  "next_samples": [
+    1877,
+    15076,
+    5897,
+    34675
+  ],
+  "train_rng_key_data": [
+    1832780943,
+    270669613
+  ],
+  "config_sha256": "186829a2ecfd77f50da87aeebf06a2e421c255cff97915ca5e4e1143586cafe6",
+  "learning_rate": 3.000000106112566e-06,
+  "full_optimizer_restored": true,
+  "segment_end_local": 500,
+  "segment_complete": true,
+  "trainable_parameters": 468039440,
+  "total_parameters": 3288036112,
+  "initialization_seconds": 9.517641052603722,
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/D/checkpoints/pi0_piper_color_lora/b_coverage_correction/500",
+  "retained_checkpoints": [
+    500
+  ]
+}
