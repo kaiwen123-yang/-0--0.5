@@ -68,7 +68,11 @@ def main():
         if shutil.disk_usage(CAMPAIGN).free<20*1024**3: raise RuntimeError('Less than 20 GiB free; no cleanup permitted')
         free=int(subprocess.check_output(['nvidia-smi','--query-gpu=memory.free','--format=csv,noheader,nounits'],text=True).splitlines()[0])
         if free<45000: raise RuntimeError('Shared GPU capacity unavailable')
-        with socket.socket() as sock: sock.bind(('127.0.0.1',PORT))
+        with socket.socket() as sock:
+            # Match the server's reuse setting: recently closed connections may be in TIME_WAIT.
+            # An active listener still fails this bind, so shared-port conflicts remain detected.
+            sock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
+            sock.bind(('127.0.0.1',PORT))
         log=CAMPAIGN/'logs'/f'serve_{label}_{time.time_ns()}.log'
         with log.open('x') as stream:
             proc=subprocess.Popen(['bash',str(ENTRY),'serve','--checkpoint',str(ckpt),'--norm-stats',str(OLD/f'assets/{ASSET}')],

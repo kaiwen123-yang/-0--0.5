@@ -57,6 +57,7 @@ def evaluate(label, roster_path, checkpoint_path):
     for task in tasks:
         unit=directory/trial_id(task)
         done=unit/'completed.json'
+        was_completed=done.exists()
         if done.exists():
             row=read(done)
             assert Path(read(row['result_json'])['checkpoint'])==checkpoint_path
@@ -91,6 +92,8 @@ def evaluate(label, roster_path, checkpoint_path):
                      'video':str(stem.with_suffix('.mp4')),'success':result['episodes'][0]['success']}
             save(done,row)
         rows.append(row)
+        if was_completed:
+            continue  # Resume only new work; do not republish every historical 15-trial boundary.
         save(directory/'trials.json',rows)
         save(CAMPAIGN/'evaluation_progress.json',dict(label=label,completed=len(rows),expected=len(tasks),at_utc=now(),last=task))
         if len(rows)%15==0: publish(CAMPAIGN,f'{label}-{len(rows)}-episodes')
