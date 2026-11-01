@@ -1,8 +1,8 @@
 {
   "started_at": "2026-11-01T02:21:54.347541+00:00",
   "pid": 75652,
-  "stage": "B/probe_2010",
-  "completed": false,
+  "stage": "finished_review_required",
+  "completed": true,
   "order": [
     "A",
     "B"
@@ -72,5 +72,8 @@
   ],
   "hardware_execution": false,
   "test_split_used": false,
-  "updated_at": "2026-11-01T03:53:27.521993+00:00"
+  "updated_at": "2026-11-01T03:53:27.521993+00:00",
+  "all_requested_updates_completed": true,
+  "finished_at": "2026-11-01T03:54:45.437114+00:00",
+  "next_action": "Review A/B full validation and targeting evidence; no automatic extension or test"
 }
