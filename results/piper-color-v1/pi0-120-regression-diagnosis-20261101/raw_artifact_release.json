@@ -1,0 +1,39 @@
+{
+  "tag": "pi0-120-regression-diagnosis-20261101",
+  "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi0-120-regression-diagnosis-20261101",
+  "release_id": 430307917,
+  "draft": false,
+  "verified_at_utc": "2026-11-01T02:05:39.098131+00:00",
+  "target_commit": "0b60df46aa9948ab99019be65b2909d20439832a",
+  "assets": [
+    {
+      "name": "pi0-120-regression-raw-evidence.tar.gz",
+      "bytes": 319029881,
+      "digest": "sha256:3fc8b727bf7af2cf1b4269f9e2df5cb83dd1e86b1989d520cdc7e56f847895d0",
+      "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi0-120-regression-diagnosis-20261101/pi0-120-regression-raw-evidence.tar.gz"
+    },
+    {
+      "name": "raw-evidence-manifest.json",
+      "bytes": 161264,
+      "digest": "sha256:10f2fb57ded53e37a0ce333653b9cf6c3b4c40815ef344cabbbac7cf6d9e0205",
+      "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi0-120-regression-diagnosis-20261101/raw-evidence-manifest.json"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 198,
+      "digest": "sha256:89d50329f86de4266f268579f98a3e5e522e52ef2928beb740133c5c1a9c37e0",
+      "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi0-120-regression-diagnosis-20261101/SHA256SUMS"
+    }
+  ],
+  "member_files": 496,
+  "source_bytes": 328609892,
+  "verification": "Archive member paths/sizes verified; every GitHub asset size and SHA256 digest equals its local file",
+  "upload_attempts": [
+    {
+      "attempt": 1,
+      "upload": "completed",
+      "verification_retry": "draft tag endpoint 404; queried owned draft by release list"
+    }
+  ],
+  "scope": "raw diagnosis evidence; model checkpoints and videos remain on D57"
+}

@@ -1,7 +1,7 @@
 {
-  "stage": "complete-prefix-controls-and-analysis",
-  "at_utc": "2026-11-01T02:01:31.805861+00:00",
-  "source_commit_before_snapshot": "aa3481f6c14f2697f9ffac684d415d87b7b642b0",
+  "stage": "final-report-plan-and-verified-raw-release",
+  "at_utc": "2026-11-01T02:06:39.162665+00:00",
+  "source_commit_before_snapshot": "55e1f7157313ef329c6e66272793268d531290ff",
   "files": [
     {
       "file": "data_profile.json",
@@ -124,6 +124,11 @@
       "sha256": "68a6678b9bc386fb852ed35e6d218f8f604426486cb1ace14fc252b6477ddd81"
     },
     {
+      "file": "final_verification.json",
+      "bytes": 762,
+      "sha256": "b6612ebb02109ff019e94a85a55c9cfb97a0793212ca52727555af9f4c09f507"
+    },
+    {
       "file": "fixed/new2010/observations.json",
       "bytes": 238598,
       "sha256": "b43a7a2fa977e4fe68899eb6b5340606679710033e2def4dc07d21d2fa577454"
@@ -214,6 +219,11 @@
       "sha256": "6fdf5a6133a5d1c2b5bce10d2977320c0529a9d65f6791d7dc325983ed806705"
     },
     {
+      "file": "history/raw_release_first_attempt.log",
+      "bytes": 1232,
+      "sha256": "1a32ba4a5a71ff6d34f21bfda02ffa1e5f1bfad07a01a54f161e18cba99ee2ed"
+    },
+    {
       "file": "logs/data_audit.log",
       "bytes": 18441,
       "sha256": "1f1680ebbbd1a4cd58563c6263ed68a29cd99da39de0de786192a5b266561e64"
@@ -252,6 +262,16 @@
       "file": "logs/prefix_old2010.log",
       "bytes": 359,
       "sha256": "41f934bc6fcf19779146348348aa769595ff8c6df6ad8e54b574afad9fc885c7"
+    },
+    {
+      "file": "logs/raw_release.log",
+      "bytes": 1232,
+      "sha256": "1a32ba4a5a71ff6d34f21bfda02ffa1e5f1bfad07a01a54f161e18cba99ee2ed"
+    },
+    {
+      "file": "logs/raw_release_finalize.log",
+      "bytes": 1793,
+      "sha256": "1a1942a5210601c25dcae53874092b4d2136e78633cec30828ed22d150d69407"
     },
     {
       "file": "logs/serve_new2010.log",
@@ -512,6 +532,16 @@
       "file": "prompt_conditioned_approach.json",
       "bytes": 13835,
       "sha256": "43a64d48565bc311a2132f5b09c07297b88ec1b2761f69ccbd8678d5d0665721"
+    },
+    {
+      "file": "raw_artifact_release.json",
+      "bytes": 1699,
+      "sha256": "bd2c844573f06755fea9e36753c0e2ee803ed7300a97dfee4b7ead96df764320"
+    },
+    {
+      "file": "raw_release_progress.json",
+      "bytes": 144,
+      "sha256": "2c69513b091c02731222b822fb36a01a307284111c211df40c90ad09aa976122"
     },
     {
       "file": "teacher_reference/layout_01000_blue.json",
