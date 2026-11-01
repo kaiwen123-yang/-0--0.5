@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-01T14:54:52.670794+00:00",
+  "at_utc": "2026-11-01T14:55:23.075505+00:00",
   "assets": [
     {
       "name": "progressive-six-checkpoint-2010-9df7cceca1cfa651-a558f844f903d4f11c5b1f19f879ea62",
@@ -9,24 +9,10 @@
       "reason": "RuntimeError('GitHub upload exit=1; see transport.log')"
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-081038fe357cf699-cde8e18096fa6f3b2169ae9101720a82",
-      "status": "uploading",
-      "source_bytes": 72168786,
-      "attempts": 1,
-      "reason": null
-    },
-    {
-      "name": "progressive-ab-a-checkpoint-1000-0cdf0701f84cdb1b-66f9e7417a3ddf620a0b7de996dd9796",
-      "status": "queued",
-      "source_bytes": 18044194,
-      "attempts": 0,
-      "reason": null
-    },
-    {
       "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-000",
-      "status": "queued",
+      "status": "uploading",
       "source_bytes": 1073741824,
-      "attempts": 0,
+      "attempts": 1,
       "reason": null
     },
     {

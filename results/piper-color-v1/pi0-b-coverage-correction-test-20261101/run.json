@@ -6,9 +6,9 @@
   "base_optimizer_updates": 4020,
   "source_commit": "49d1e32249813b768583fc0f5bc6d27a735188c7",
   "hardware_execution": false,
-  "updated_at": "2026-11-01T14:54:58.550792+00:00",
+  "updated_at": "2026-11-01T14:56:28.197752+00:00",
   "counts": {
-    "new_autonomous_evaluations": 362,
+    "new_autonomous_evaluations": 370,
     "reused_evaluations": 42,
     "new_optimizer_updates": 500,
     "updates_by_group": {
@@ -22,6 +22,6 @@
   "service_pid": 19421,
   "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/serve_C_500_1793544009137863792.log",
   "active_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/C/checkpoints/pi0_piper_color_lora/b_coverage_correction/500",
-  "child_pid": 19514,
+  "child_pid": null,
   "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/logs/C_500_1793544020169974035.log"
 }

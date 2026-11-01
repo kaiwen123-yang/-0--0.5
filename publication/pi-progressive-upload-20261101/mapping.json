@@ -851,8 +851,16 @@
       "part": 0,
       "parts": 1,
       "group": "ab-a-checkpoint-1000",
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 698628295,
+        "name": "progressive-ab-a-checkpoint-1000-081038fe357cf699-cde8e18096fa6f3b2169ae9101720a82",
+        "size": 72168786,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-ab-a-checkpoint-1000-081038fe357cf699-cde8e18096fa6f3b2169ae9101720a82"
+      },
+      "uploaded_at": "2026-11-01T14:55:12.712120+00:00"
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-0cdf0701f84cdb1b-66f9e7417a3ddf620a0b7de996dd9796",
@@ -872,8 +880,16 @@
       "part": 0,
       "parts": 1,
       "group": "ab-a-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 698628904,
+        "name": "progressive-ab-a-checkpoint-1000-0cdf0701f84cdb1b-66f9e7417a3ddf620a0b7de996dd9796",
+        "size": 18044194,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-ab-a-checkpoint-1000-0cdf0701f84cdb1b-66f9e7417a3ddf620a0b7de996dd9796"
+      },
+      "uploaded_at": "2026-11-01T14:55:23.004703+00:00"
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-000",
@@ -893,8 +909,8 @@
       "part": 0,
       "parts": 3,
       "group": "ab-a-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-001",
