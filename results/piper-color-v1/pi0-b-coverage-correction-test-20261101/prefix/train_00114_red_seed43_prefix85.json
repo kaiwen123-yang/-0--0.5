@@ -1,0 +1,77 @@
+{
+  "case": {
+    "layout": 114,
+    "target": "red",
+    "base_seed": 43,
+    "split": "train"
+  },
+  "prefix": 85,
+  "handoff_stage": "lift",
+  "last_teacher_stage": "lift",
+  "handoff_state_max_error": 0.0,
+  "rng_advance_calls": 17,
+  "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.npz",
+  "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00114_red.npz",
+  "autonomous_success_rate_eligible": false,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00114_red_seed43_prefix85.mp4",
+  "success": true,
+  "max_lift_cm": 14.525153120249534,
+  "first_lifted_frame": 13,
+  "first_bilateral_lift_frame": 13,
+  "over_box_frames": 86,
+  "drop_frame": null,
+  "bilateral_contact_frames": 93,
+  "approach_reference_frame": 13,
+  "approach_xy_offset_mm": 2.478182156190497,
+  "approach_object_in_tcp_mm": [
+    -2.3183736874234118,
+    -0.29995053545395856,
+    6.16939273112624
+  ],
+  "approach_orientation_error_deg": 1.3596546712516295,
+  "normal_force_at_reference_N": [
+    9.174200624900374,
+    9.503988691200426
+  ],
+  "gripper_width_at_reference_m": 0.03576502203941345,
+  "raw_to_executed_joint_mae_rad": 1.972539155515153e-05,
+  "command_tracking_joint_mae_rad": 0.023667030385235495,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 114,
+    "target": "red",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.14525153120249534,
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.14145159163279142,
+        0.1640952396725968,
+        0.02539325598870122
+      ],
+      "green": [
+        -0.22861912831575107,
+        -0.16001954472244445,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.13186524167873945,
+        -0.1442848589190078,
+        0.017393255988701235
+      ]
+    },
+    "steps": 222
+  }
+}

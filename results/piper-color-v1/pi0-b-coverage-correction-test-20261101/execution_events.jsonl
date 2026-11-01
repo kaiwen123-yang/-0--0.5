@@ -8,3 +8,5 @@
 {"at_utc": "2026-11-01T14:30:44.987919+00:00", "event": "end", "label": "B_coverage", "returncode": 0}
 {"at_utc": "2026-11-01T14:30:51.811280+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "coverage"], "label": "B_coverage_analysis"}
 {"at_utc": "2026-11-01T14:30:54.339702+00:00", "event": "end", "label": "B_coverage_analysis", "returncode": 0}
+{"at_utc": "2026-11-01T14:30:59.563698+00:00", "event": "start", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_bct_d57.sh", "worker", "prefix"], "label": "B_teacher_prefix"}
+{"at_utc": "2026-11-01T14:33:36.288976+00:00", "event": "end", "label": "B_teacher_prefix", "returncode": 0}

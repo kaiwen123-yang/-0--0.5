@@ -1,0 +1,1855 @@
+{
+  "episodes": [
+    {
+      "case": {
+        "layout": 100,
+        "target": "blue",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00100_blue_seed42_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 14.00003181016593,
+      "first_lifted_frame": 38,
+      "first_bilateral_lift_frame": 38,
+      "over_box_frames": 93,
+      "drop_frame": null,
+      "bilateral_contact_frames": 119,
+      "approach_reference_frame": 38,
+      "approach_xy_offset_mm": 0.3913556691480371,
+      "approach_object_in_tcp_mm": [
+        0.4880685530746902,
+        0.058123983243107614,
+        5.796715448934747
+      ],
+      "approach_orientation_error_deg": 1.3590247351602056,
+      "normal_force_at_reference_N": [
+        9.209649180659877,
+        9.211237068341042
+      ],
+      "gripper_width_at_reference_m": 0.0357222743332386,
+      "raw_to_executed_joint_mae_rad": 0.0,
+      "command_tracking_joint_mae_rad": 0.01853883935271217,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 100,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.1400003181016593
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.13591182923154704,
+            -0.16279735601854017,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.22562051434796598,
+            -0.14729648724287664,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14457177263399978,
+            0.16028074901184733,
+            0.025393255988701232
+          ]
+        },
+        "steps": 238
+      }
+    },
+    {
+      "case": {
+        "layout": 100,
+        "target": "blue",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00100_blue_seed42_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 13.970155154151792,
+      "first_lifted_frame": 11,
+      "first_bilateral_lift_frame": 11,
+      "over_box_frames": 96,
+      "drop_frame": null,
+      "bilateral_contact_frames": 100,
+      "approach_reference_frame": 11,
+      "approach_xy_offset_mm": 2.394353607738966,
+      "approach_object_in_tcp_mm": [
+        -2.268927634022801,
+        -0.30985520963527546,
+        6.129148440374996
+      ],
+      "approach_orientation_error_deg": 1.0121393785037782,
+      "normal_force_at_reference_N": [
+        9.010909148131589,
+        10.328555527433224
+      ],
+      "gripper_width_at_reference_m": 0.0364680252969265,
+      "raw_to_executed_joint_mae_rad": 0.0,
+      "command_tracking_joint_mae_rad": 0.022307265650351966,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 100,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.13970155154151792
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.13591182923154704,
+            -0.16279735601854017,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.22562051434796598,
+            -0.14729648724287664,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.1425930491532864,
+            0.16313821436615603,
+            0.025393255988701208
+          ]
+        },
+        "steps": 230
+      }
+    },
+    {
+      "case": {
+        "layout": 114,
+        "target": "red",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00114_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00114_red_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 14.193801238910009,
+      "first_lifted_frame": 39,
+      "first_bilateral_lift_frame": 39,
+      "over_box_frames": 86,
+      "drop_frame": null,
+      "bilateral_contact_frames": 97,
+      "approach_reference_frame": 39,
+      "approach_xy_offset_mm": 2.882308600438518,
+      "approach_object_in_tcp_mm": [
+        -2.6789820717131505,
+        -0.3372995715341774,
+        6.741473982261129
+      ],
+      "approach_orientation_error_deg": 1.678553629772359,
+      "normal_force_at_reference_N": [
+        9.141401776027346,
+        10.242927180558208
+      ],
+      "gripper_width_at_reference_m": 0.03590627387166023,
+      "raw_to_executed_joint_mae_rad": 4.431562284660193e-05,
+      "command_tracking_joint_mae_rad": 0.021247042285989493,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 114,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.1419380123891001,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14008554407647314,
+            0.1611346286555607,
+            0.02539325598870122
+          ],
+          "green": [
+            -0.22861912831575107,
+            -0.16001954472244445,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.13186524167873945,
+            -0.1442848589190078,
+            0.017393255988701235
+          ]
+        },
+        "steps": 217
+      }
+    },
+    {
+      "case": {
+        "layout": 114,
+        "target": "red",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00114_red_seed43/attempt000_seed43/layout_00114_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00114_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00114_red_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.525153120249534,
+      "first_lifted_frame": 13,
+      "first_bilateral_lift_frame": 13,
+      "over_box_frames": 86,
+      "drop_frame": null,
+      "bilateral_contact_frames": 93,
+      "approach_reference_frame": 13,
+      "approach_xy_offset_mm": 2.478182156190497,
+      "approach_object_in_tcp_mm": [
+        -2.3183736874234118,
+        -0.29995053545395856,
+        6.16939273112624
+      ],
+      "approach_orientation_error_deg": 1.3596546712516295,
+      "normal_force_at_reference_N": [
+        9.174200624900374,
+        9.503988691200426
+      ],
+      "gripper_width_at_reference_m": 0.03576502203941345,
+      "raw_to_executed_joint_mae_rad": 1.972539155515153e-05,
+      "command_tracking_joint_mae_rad": 0.023667030385235495,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 114,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14525153120249534,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14145159163279142,
+            0.1640952396725968,
+            0.02539325598870122
+          ],
+          "green": [
+            -0.22861912831575107,
+            -0.16001954472244445,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.13186524167873945,
+            -0.1442848589190078,
+            0.017393255988701235
+          ]
+        },
+        "steps": 222
+      }
+    },
+    {
+      "case": {
+        "layout": 101,
+        "target": "green",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_green.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00101_green_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 13.680049454044024,
+      "first_lifted_frame": 39,
+      "first_bilateral_lift_frame": 39,
+      "over_box_frames": 82,
+      "drop_frame": null,
+      "bilateral_contact_frames": 128,
+      "approach_reference_frame": 39,
+      "approach_xy_offset_mm": 2.872700257348757,
+      "approach_object_in_tcp_mm": [
+        -2.8729363830080383,
+        -0.2461985552303634,
+        5.013127465579843
+      ],
+      "approach_orientation_error_deg": 1.220883091189883,
+      "normal_force_at_reference_N": [
+        9.395593490080458,
+        9.448847611559788
+      ],
+      "gripper_width_at_reference_m": 0.03484724462032318,
+      "raw_to_executed_joint_mae_rad": 0.0,
+      "command_tracking_joint_mae_rad": 0.018468254623107576,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 101,
+        "target": "green",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.13680049454044024,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.2107588002884965,
+            -0.02316368078015866,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.13873381150993247,
+            0.16195850626479755,
+            0.025393255988701225
+          ],
+          "blue": [
+            -0.22258108984088218,
+            -0.15393621106847077,
+            0.017393255988701235
+          ]
+        },
+        "steps": 250
+      }
+    },
+    {
+      "case": {
+        "layout": 101,
+        "target": "green",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_green.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00101_green_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.298252076039613,
+      "first_lifted_frame": 12,
+      "first_bilateral_lift_frame": 12,
+      "over_box_frames": 81,
+      "drop_frame": null,
+      "bilateral_contact_frames": 96,
+      "approach_reference_frame": 12,
+      "approach_xy_offset_mm": 1.808600348300074,
+      "approach_object_in_tcp_mm": [
+        -1.7703167235341355,
+        -0.257650990808146,
+        6.062767647412874
+      ],
+      "approach_orientation_error_deg": 0.2234521209638079,
+      "normal_force_at_reference_N": [
+        9.067986128548643,
+        9.377984633348483
+      ],
+      "gripper_width_at_reference_m": 0.03619401901960373,
+      "raw_to_executed_joint_mae_rad": 7.300201548047749e-06,
+      "command_tracking_joint_mae_rad": 0.0234544081437405,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 101,
+        "target": "green",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.14298252076039614,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.2107588002884965,
+            -0.02316368078015866,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.1397567451998299,
+            0.15915895985352474,
+            0.025393255988701225
+          ],
+          "blue": [
+            -0.22258108984088218,
+            -0.15393621106847077,
+            0.017393255988701235
+          ]
+        },
+        "steps": 226
+      }
+    },
+    {
+      "case": {
+        "layout": 107,
+        "target": "blue",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00107_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00107_blue_seed42_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 13.701389849060991,
+      "first_lifted_frame": 37,
+      "first_bilateral_lift_frame": 37,
+      "over_box_frames": 100,
+      "drop_frame": null,
+      "bilateral_contact_frames": 132,
+      "approach_reference_frame": 37,
+      "approach_xy_offset_mm": 1.3521712280918197,
+      "approach_object_in_tcp_mm": [
+        -1.2645693918478584,
+        -0.2019716596058335,
+        7.8439114668435
+      ],
+      "approach_orientation_error_deg": 0.7003210208087747,
+      "normal_force_at_reference_N": [
+        9.018894384419596,
+        9.17931531593691
+      ],
+      "gripper_width_at_reference_m": 0.0363692007958889,
+      "raw_to_executed_joint_mae_rad": 5.4543098308029004e-05,
+      "command_tracking_joint_mae_rad": 0.021109888975754578,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 107,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.1370138984906099
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.20524714817777526,
+            -0.046857077085447695,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.129923353307183,
+            -0.14342605121170793,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14581183491786104,
+            0.16167205151075684,
+            0.025393255988701235
+          ]
+        },
+        "steps": 251
+      }
+    },
+    {
+      "case": {
+        "layout": 107,
+        "target": "blue",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00107_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00107_blue_seed42_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.158856160671762,
+      "first_lifted_frame": 14,
+      "first_bilateral_lift_frame": 14,
+      "over_box_frames": 100,
+      "drop_frame": null,
+      "bilateral_contact_frames": 119,
+      "approach_reference_frame": 14,
+      "approach_xy_offset_mm": 1.7701314222095723,
+      "approach_object_in_tcp_mm": [
+        -1.7037735382680936,
+        -0.18253150446630634,
+        6.23865311420839
+      ],
+      "approach_orientation_error_deg": 0.6948830401838506,
+      "normal_force_at_reference_N": [
+        9.348426484251766,
+        9.354670786884123
+      ],
+      "gripper_width_at_reference_m": 0.03512436896562576,
+      "raw_to_executed_joint_mae_rad": 0.00015414717380048313,
+      "command_tracking_joint_mae_rad": 0.024213179873648884,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 107,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.14158856160671762
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.20524714817777526,
+            -0.046857077085447695,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.129923353307183,
+            -0.14342605121170793,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14430202012527474,
+            0.1612633924768916,
+            0.025393255988701232
+          ]
+        },
+        "steps": 249
+      }
+    },
+    {
+      "case": {
+        "layout": 105,
+        "target": "red",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00105_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00105_red_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 13.876447658535868,
+      "first_lifted_frame": 36,
+      "first_bilateral_lift_frame": 36,
+      "over_box_frames": 92,
+      "drop_frame": null,
+      "bilateral_contact_frames": 153,
+      "approach_reference_frame": 36,
+      "approach_xy_offset_mm": 2.291730051960245,
+      "approach_object_in_tcp_mm": [
+        -2.169612236421039,
+        -0.30658213572968107,
+        7.488942366044617
+      ],
+      "approach_orientation_error_deg": 0.8825934516054572,
+      "normal_force_at_reference_N": [
+        9.162355103177573,
+        9.448866422376845
+      ],
+      "gripper_width_at_reference_m": 0.035804785788059235,
+      "raw_to_executed_joint_mae_rad": 0.0,
+      "command_tracking_joint_mae_rad": 0.016335253470210233,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 105,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.13876447658535868,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14382461807575783,
+            0.16752813952378817,
+            0.025393255988701232
+          ],
+          "green": [
+            -0.23113053065713446,
+            -0.13623912628450224,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14129157524841646,
+            -0.14981227843248202,
+            0.017393255988701235
+          ]
+        },
+        "steps": 272
+      }
+    },
+    {
+      "case": {
+        "layout": 105,
+        "target": "red",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00105_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00105_red_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.540311206515206,
+      "first_lifted_frame": 13,
+      "first_bilateral_lift_frame": 13,
+      "over_box_frames": 87,
+      "drop_frame": null,
+      "bilateral_contact_frames": 104,
+      "approach_reference_frame": 13,
+      "approach_xy_offset_mm": 2.403751386356563,
+      "approach_object_in_tcp_mm": [
+        -2.2633725495543304,
+        -0.2911291160077298,
+        6.164818404952951
+      ],
+      "approach_orientation_error_deg": 1.2095230732391673,
+      "normal_force_at_reference_N": [
+        9.181248640020659,
+        9.490009354421739
+      ],
+      "gripper_width_at_reference_m": 0.03572482615709305,
+      "raw_to_executed_joint_mae_rad": 2.9936525556776653e-05,
+      "command_tracking_joint_mae_rad": 0.02235126242490576,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 105,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14540311206515205,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14308891199168677,
+            0.15781817933945125,
+            0.025393255988701225
+          ],
+          "green": [
+            -0.23113053065713446,
+            -0.13623912628450224,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14129157524841646,
+            -0.14981227843248202,
+            0.017393255988701235
+          ]
+        },
+        "steps": 235
+      }
+    },
+    {
+      "case": {
+        "layout": 123,
+        "target": "red",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00123_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00123_red_seed42_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 14.905335059442477,
+      "first_lifted_frame": 41,
+      "first_bilateral_lift_frame": 41,
+      "over_box_frames": 94,
+      "drop_frame": null,
+      "bilateral_contact_frames": 111,
+      "approach_reference_frame": 41,
+      "approach_xy_offset_mm": 0.3418026593402801,
+      "approach_object_in_tcp_mm": [
+        -0.3097437776711919,
+        -0.047387789304663065,
+        3.546776444573646
+      ],
+      "approach_orientation_error_deg": 0.7288998605965741,
+      "normal_force_at_reference_N": [
+        8.88669431030247,
+        8.997059713911534
+      ],
+      "gripper_width_at_reference_m": 0.036865197122097015,
+      "raw_to_executed_joint_mae_rad": 5.1211272877764955e-05,
+      "command_tracking_joint_mae_rad": 0.020200347844780146,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 123,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14905335059442476,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14516355530176894,
+            0.16092646200789326,
+            0.02539325598870123
+          ],
+          "green": [
+            -0.13782992356328883,
+            -0.1588375893024724,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.2298941478310742,
+            -0.16249301147151524,
+            0.017393255988701235
+          ]
+        },
+        "steps": 233
+      }
+    },
+    {
+      "case": {
+        "layout": 123,
+        "target": "red",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00123_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00123_red_seed42_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.748565922998203,
+      "first_lifted_frame": 11,
+      "first_bilateral_lift_frame": 11,
+      "over_box_frames": 104,
+      "drop_frame": null,
+      "bilateral_contact_frames": 113,
+      "approach_reference_frame": 11,
+      "approach_xy_offset_mm": 2.429266730141983,
+      "approach_object_in_tcp_mm": [
+        -2.3432053117982172,
+        -0.3236472915752929,
+        6.1503873141278245
+      ],
+      "approach_orientation_error_deg": 0.6052042967731566,
+      "normal_force_at_reference_N": [
+        9.022501604608083,
+        10.02332241634107
+      ],
+      "gripper_width_at_reference_m": 0.03644383326172829,
+      "raw_to_executed_joint_mae_rad": 9.464908494058528e-06,
+      "command_tracking_joint_mae_rad": 0.021683921224553312,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 123,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14748565922998202,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14498821905697354,
+            0.16477160378819833,
+            0.025393255988701215
+          ],
+          "green": [
+            -0.13782992356328883,
+            -0.1588375893024724,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.2298941478310742,
+            -0.16249301147151524,
+            0.017393255988701235
+          ]
+        },
+        "steps": 242
+      }
+    },
+    {
+      "case": {
+        "layout": 122,
+        "target": "red",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00122_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00122_red_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 13.89977628754082,
+      "first_lifted_frame": 80,
+      "first_bilateral_lift_frame": 80,
+      "over_box_frames": 88,
+      "drop_frame": null,
+      "bilateral_contact_frames": 181,
+      "approach_reference_frame": 80,
+      "approach_xy_offset_mm": 3.758035121169491,
+      "approach_object_in_tcp_mm": [
+        -3.888195062365262,
+        -0.0035295423478804576,
+        2.6816790776654797
+      ],
+      "approach_orientation_error_deg": 3.0298717180131085,
+      "normal_force_at_reference_N": [
+        10.009887782315847,
+        9.991393034044446
+      ],
+      "gripper_width_at_reference_m": 0.032665129750967026,
+      "raw_to_executed_joint_mae_rad": 7.655251240499424e-06,
+      "command_tracking_joint_mae_rad": 0.014844494238432076,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 122,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.13899776287540822,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14297652078857923,
+            0.16938836670222857,
+            0.025393255988701215
+          ],
+          "green": [
+            -0.22589012784615892,
+            -0.15908252797086375,
+            0.01739325598870131
+          ],
+          "blue": [
+            -0.13342763531406865,
+            -0.15813925507076845,
+            0.017393255988701315
+          ]
+        },
+        "steps": 301
+      }
+    },
+    {
+      "case": {
+        "layout": 122,
+        "target": "red",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00122_red_seed43/attempt000_seed43/layout_00122_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00122_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00122_red_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.286158635467016,
+      "first_lifted_frame": 14,
+      "first_bilateral_lift_frame": 14,
+      "over_box_frames": 83,
+      "drop_frame": null,
+      "bilateral_contact_frames": 97,
+      "approach_reference_frame": 14,
+      "approach_xy_offset_mm": 2.4238238760685014,
+      "approach_object_in_tcp_mm": [
+        -2.2680043442004822,
+        -0.26535360878931247,
+        6.17317746602099
+      ],
+      "approach_orientation_error_deg": 1.373152573709983,
+      "normal_force_at_reference_N": [
+        9.253799217056569,
+        9.441843758519388
+      ],
+      "gripper_width_at_reference_m": 0.035394519567489624,
+      "raw_to_executed_joint_mae_rad": 0.0,
+      "command_tracking_joint_mae_rad": 0.022694621766721518,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 122,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14286158635467017,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14146482461448348,
+            0.15844464970407562,
+            0.025393255988701215
+          ],
+          "green": [
+            -0.22589012784615892,
+            -0.15908252797086375,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.13342763531406865,
+            -0.15813925507076845,
+            0.017393255988701235
+          ]
+        },
+        "steps": 225
+      }
+    },
+    {
+      "case": {
+        "layout": 102,
+        "target": "blue",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00102_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00102_blue_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 15.294456859693002,
+      "first_lifted_frame": 60,
+      "first_bilateral_lift_frame": 60,
+      "over_box_frames": 99,
+      "drop_frame": null,
+      "bilateral_contact_frames": 132,
+      "approach_reference_frame": 60,
+      "approach_xy_offset_mm": 4.87430911817107,
+      "approach_object_in_tcp_mm": [
+        -4.873856562897002,
+        -0.002210888161781928,
+        -1.2339163518058955
+      ],
+      "approach_orientation_error_deg": 2.6916891654309705,
+      "normal_force_at_reference_N": [
+        10.005534373480119,
+        10.491371867979362
+      ],
+      "gripper_width_at_reference_m": 0.03261618688702583,
+      "raw_to_executed_joint_mae_rad": 4.2619247014832033e-07,
+      "command_tracking_joint_mae_rad": 0.019008406105169885,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 102,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.15294456859693
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.24452024793559238,
+            -0.14759358158245112,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.12093257023888031,
+            -0.1556767133727351,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.13943298171131377,
+            0.16592456779928466,
+            0.02539325598870123
+          ]
+        },
+        "steps": 256
+      }
+    },
+    {
+      "case": {
+        "layout": 102,
+        "target": "blue",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00102_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00102_blue_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.11754807790106,
+      "first_lifted_frame": 12,
+      "first_bilateral_lift_frame": 12,
+      "over_box_frames": 94,
+      "drop_frame": null,
+      "bilateral_contact_frames": 99,
+      "approach_reference_frame": 12,
+      "approach_xy_offset_mm": 2.4987010675519357,
+      "approach_object_in_tcp_mm": [
+        -2.3081679897405203,
+        -0.31967370598598066,
+        6.155295017347533
+      ],
+      "approach_orientation_error_deg": 1.646182346186379,
+      "normal_force_at_reference_N": [
+        9.103557649717715,
+        9.52607710000287
+      ],
+      "gripper_width_at_reference_m": 0.03610009327530861,
+      "raw_to_executed_joint_mae_rad": 2.010372501832492e-05,
+      "command_tracking_joint_mae_rad": 0.02252825386758049,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 102,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.1411754807790106
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.24452024793559238,
+            -0.14759358158245112,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.12093257023888031,
+            -0.1556767133727351,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.1426901434468171,
+            0.1638875879680227,
+            0.02539325598870123
+          ]
+        },
+        "steps": 229
+      }
+    },
+    {
+      "case": {
+        "layout": 109,
+        "target": "red",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00109_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00109_red_seed42_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 14.714517566558522,
+      "first_lifted_frame": 44,
+      "first_bilateral_lift_frame": 44,
+      "over_box_frames": 85,
+      "drop_frame": null,
+      "bilateral_contact_frames": 111,
+      "approach_reference_frame": 44,
+      "approach_xy_offset_mm": 0.5232606394450808,
+      "approach_object_in_tcp_mm": [
+        -0.5028669282332493,
+        -0.06761292950042978,
+        0.8751585111568284
+      ],
+      "approach_orientation_error_deg": 1.3818244658876606,
+      "normal_force_at_reference_N": [
+        8.9064425460662,
+        9.025049036882507
+      ],
+      "gripper_width_at_reference_m": 0.03679278865456581,
+      "raw_to_executed_joint_mae_rad": 0.0002627238950685063,
+      "command_tracking_joint_mae_rad": 0.023308637688579225,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 109,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14714517566558521,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.1456641945362619,
+            0.1611392519852861,
+            0.02539325598870121
+          ],
+          "green": [
+            -0.12299786988268595,
+            -0.15471420801925317,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.20222091265576586,
+            -0.04355396535705236,
+            0.017393255988701235
+          ]
+        },
+        "steps": 236
+      }
+    },
+    {
+      "case": {
+        "layout": 109,
+        "target": "red",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00109_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00109_red_seed42_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.257325170124096,
+      "first_lifted_frame": 11,
+      "first_bilateral_lift_frame": 11,
+      "over_box_frames": 84,
+      "drop_frame": null,
+      "bilateral_contact_frames": 96,
+      "approach_reference_frame": 11,
+      "approach_xy_offset_mm": 1.8306491827147786,
+      "approach_object_in_tcp_mm": [
+        -1.6794172424517881,
+        -0.26292144230672115,
+        6.199372000680233
+      ],
+      "approach_orientation_error_deg": 1.594018200754278,
+      "normal_force_at_reference_N": [
+        9.000252137496854,
+        9.413140537637178
+      ],
+      "gripper_width_at_reference_m": 0.036471862345933914,
+      "raw_to_executed_joint_mae_rad": 4.6278842758121305e-05,
+      "command_tracking_joint_mae_rad": 0.027890681302485256,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 109,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14257325170124097,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14336822827673226,
+            0.15993562643289003,
+            0.02539325598870123
+          ],
+          "green": [
+            -0.12299786988268595,
+            -0.15471420801925317,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.20222091265576586,
+            -0.04355396535705236,
+            0.017393255988701235
+          ]
+        },
+        "steps": 225
+      }
+    },
+    {
+      "case": {
+        "layout": 126,
+        "target": "blue",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00126_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00126_blue_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 13.983921133340843,
+      "first_lifted_frame": 44,
+      "first_bilateral_lift_frame": 44,
+      "over_box_frames": 91,
+      "drop_frame": null,
+      "bilateral_contact_frames": 192,
+      "approach_reference_frame": 44,
+      "approach_xy_offset_mm": 1.0338420257069332,
+      "approach_object_in_tcp_mm": [
+        -0.9838767334368987,
+        -0.11768593532110033,
+        4.2827288179003595
+      ],
+      "approach_orientation_error_deg": 0.8301508192603367,
+      "normal_force_at_reference_N": [
+        9.120329716003365,
+        9.127614216321742
+      ],
+      "gripper_width_at_reference_m": 0.03609682619571686,
+      "raw_to_executed_joint_mae_rad": 4.406706677645891e-06,
+      "command_tracking_joint_mae_rad": 0.01408216801019218,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 126,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.13983921133340843
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14214842067125436,
+            -0.13658676232014086,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.24882706986657216,
+            -0.13763077299069915,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14720727351925994,
+            0.1690699941100174,
+            0.02539325598870122
+          ]
+        },
+        "steps": 317
+      }
+    },
+    {
+      "case": {
+        "layout": 126,
+        "target": "blue",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00126_blue.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00126_blue_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.154427100713207,
+      "first_lifted_frame": 12,
+      "first_bilateral_lift_frame": 12,
+      "over_box_frames": 91,
+      "drop_frame": null,
+      "bilateral_contact_frames": 125,
+      "approach_reference_frame": 12,
+      "approach_xy_offset_mm": 2.414558536019998,
+      "approach_object_in_tcp_mm": [
+        -2.283080365546509,
+        -0.31518173706744235,
+        6.152555494591508
+      ],
+      "approach_orientation_error_deg": 1.0787843263620243,
+      "normal_force_at_reference_N": [
+        9.112649127677063,
+        9.530441051169285
+      ],
+      "gripper_width_at_reference_m": 0.0360497310757637,
+      "raw_to_executed_joint_mae_rad": 2.4574350784806814e-06,
+      "command_tracking_joint_mae_rad": 0.020701211930817493,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 126,
+        "target": "blue",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.0,
+          "blue": 0.14154427100713207
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14214842067125436,
+            -0.13658676232014086,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.24882706986657216,
+            -0.13763077299069915,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.14324456483663411,
+            0.16416272311558494,
+            0.025393255988701232
+          ]
+        },
+        "steps": 255
+      }
+    },
+    {
+      "case": {
+        "layout": 103,
+        "target": "red",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00103_red_seed42/attempt000_seed42/layout_00103_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00103_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00103_red_seed42_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 14.767925182358644,
+      "first_lifted_frame": 45,
+      "first_bilateral_lift_frame": 45,
+      "over_box_frames": 97,
+      "drop_frame": null,
+      "bilateral_contact_frames": 114,
+      "approach_reference_frame": 45,
+      "approach_xy_offset_mm": 4.647635371356655,
+      "approach_object_in_tcp_mm": [
+        -4.596255439462574,
+        -0.24438890243717887,
+        1.8305726476861712
+      ],
+      "approach_orientation_error_deg": 1.6849031729147483,
+      "normal_force_at_reference_N": [
+        9.448682251921594,
+        9.94635268373262
+      ],
+      "gripper_width_at_reference_m": 0.034677378833293915,
+      "raw_to_executed_joint_mae_rad": 1.0249644066348182e-05,
+      "command_tracking_joint_mae_rad": 0.01988183098463019,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 103,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.14767925182358643,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14588405178239444,
+            0.16154315593853816,
+            0.025393255988701232
+          ],
+          "green": [
+            -0.13890372761428127,
+            -0.13991499792136197,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.24024486947947035,
+            -0.15771908976444815,
+            0.017393255988701235
+          ]
+        },
+        "steps": 236
+      }
+    },
+    {
+      "case": {
+        "layout": 103,
+        "target": "red",
+        "base_seed": 42,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00103_red_seed42/attempt000_seed42/layout_00103_red.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00103_red.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00103_red_seed42_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.205397718324159,
+      "first_lifted_frame": 13,
+      "first_bilateral_lift_frame": 13,
+      "over_box_frames": 84,
+      "drop_frame": null,
+      "bilateral_contact_frames": 92,
+      "approach_reference_frame": 13,
+      "approach_xy_offset_mm": 2.3970688349407197,
+      "approach_object_in_tcp_mm": [
+        -2.2146214705252665,
+        -0.2870997491282993,
+        6.158083313698422
+      ],
+      "approach_orientation_error_deg": 1.621285404995778,
+      "normal_force_at_reference_N": [
+        9.173482350568143,
+        9.46608023501029
+      ],
+      "gripper_width_at_reference_m": 0.03575753793120384,
+      "raw_to_executed_joint_mae_rad": 2.2528551372827443e-05,
+      "command_tracking_joint_mae_rad": 0.02359789418846982,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 103,
+        "target": "red",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.1420539771832416,
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.14273675437016475,
+            0.15973858473639402,
+            0.025393255988701232
+          ],
+          "green": [
+            -0.13890372761428127,
+            -0.13991499792136197,
+            0.017393255988701235
+          ],
+          "blue": [
+            -0.24024486947947035,
+            -0.15771908976444815,
+            0.017393255988701235
+          ]
+        },
+        "steps": 221
+      }
+    },
+    {
+      "case": {
+        "layout": 110,
+        "target": "green",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 60,
+      "handoff_stage": "descend",
+      "last_teacher_stage": "descend",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 12,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00110_green.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00110_green_seed43_prefix60.mp4",
+      "success": true,
+      "max_lift_cm": 14.410530253226867,
+      "first_lifted_frame": 39,
+      "first_bilateral_lift_frame": 39,
+      "over_box_frames": 82,
+      "drop_frame": null,
+      "bilateral_contact_frames": 104,
+      "approach_reference_frame": 39,
+      "approach_xy_offset_mm": 1.387185750253597,
+      "approach_object_in_tcp_mm": [
+        -1.3630831918065844,
+        -0.13780000576133827,
+        5.855248414877094
+      ],
+      "approach_orientation_error_deg": 0.4672020629743661,
+      "normal_force_at_reference_N": [
+        9.3523780445825,
+        9.352621928988228
+      ],
+      "gripper_width_at_reference_m": 0.03512081503868103,
+      "raw_to_executed_joint_mae_rad": 1.0467618703841746e-06,
+      "command_tracking_joint_mae_rad": 0.020605945026703956,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 110,
+        "target": "green",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.14410530253226866,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.22294620127568926,
+            -0.14965174212748106,
+            0.017393255988701235
+          ],
+          "green": [
+            -0.14049678627362344,
+            0.15928218925302667,
+            0.0253932559887012
+          ],
+          "blue": [
+            -0.12404934674537284,
+            -0.1499377327542176,
+            0.017393255988701235
+          ]
+        },
+        "steps": 220
+      }
+    },
+    {
+      "case": {
+        "layout": 110,
+        "target": "green",
+        "base_seed": 43,
+        "split": "train"
+      },
+      "prefix": 85,
+      "handoff_stage": "lift",
+      "last_teacher_stage": "lift",
+      "handoff_state_max_error": 0.0,
+      "rng_advance_calls": 17,
+      "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.npz",
+      "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00110_green.npz",
+      "autonomous_success_rate_eligible": false,
+      "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00110_green_seed43_prefix85.mp4",
+      "success": true,
+      "max_lift_cm": 14.269772933567953,
+      "first_lifted_frame": 12,
+      "first_bilateral_lift_frame": 12,
+      "over_box_frames": 85,
+      "drop_frame": null,
+      "bilateral_contact_frames": 98,
+      "approach_reference_frame": 12,
+      "approach_xy_offset_mm": 2.472116840241149,
+      "approach_object_in_tcp_mm": [
+        -2.39603305371557,
+        -0.32391815791257084,
+        6.156421217774348
+      ],
+      "approach_orientation_error_deg": 0.5286654114056545,
+      "normal_force_at_reference_N": [
+        9.115358109757196,
+        9.546814167060704
+      ],
+      "gripper_width_at_reference_m": 0.036062780767679214,
+      "raw_to_executed_joint_mae_rad": 2.375383891969765e-05,
+      "command_tracking_joint_mae_rad": 0.022685127817678424,
+      "gripper_open_command_frames_before_drop": null,
+      "open_low_reapproach_frames_after_drop": null,
+      "terminal": {
+        "layout_seed": 110,
+        "target": "green",
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_lift_m": {
+          "red": 0.0,
+          "green": 0.14269772933567954,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "success": true,
+        "final_positions": {
+          "red": [
+            -0.22294620127568926,
+            -0.14965174212748106,
+            0.017393255988701246
+          ],
+          "green": [
+            -0.14025131289845744,
+            0.16217406146941074,
+            0.025393255988701215
+          ],
+          "blue": [
+            -0.12404934674537284,
+            -0.1499377327542176,
+            0.017393255988701246
+          ]
+        },
+        "steps": 227
+      }
+    }
+  ],
+  "total": 24,
+  "successes": 24,
+  "intervention_only": true
+}

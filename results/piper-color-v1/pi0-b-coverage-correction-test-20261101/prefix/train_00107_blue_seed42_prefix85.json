@@ -1,0 +1,77 @@
+{
+  "case": {
+    "layout": 107,
+    "target": "blue",
+    "base_seed": 42,
+    "split": "train"
+  },
+  "prefix": 85,
+  "handoff_stage": "lift",
+  "last_teacher_stage": "lift",
+  "handoff_state_max_error": 0.0,
+  "rng_advance_calls": 17,
+  "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+  "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00107_blue.npz",
+  "autonomous_success_rate_eligible": false,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00107_blue_seed42_prefix85.mp4",
+  "success": true,
+  "max_lift_cm": 14.158856160671762,
+  "first_lifted_frame": 14,
+  "first_bilateral_lift_frame": 14,
+  "over_box_frames": 100,
+  "drop_frame": null,
+  "bilateral_contact_frames": 119,
+  "approach_reference_frame": 14,
+  "approach_xy_offset_mm": 1.7701314222095723,
+  "approach_object_in_tcp_mm": [
+    -1.7037735382680936,
+    -0.18253150446630634,
+    6.23865311420839
+  ],
+  "approach_orientation_error_deg": 0.6948830401838506,
+  "normal_force_at_reference_N": [
+    9.348426484251766,
+    9.354670786884123
+  ],
+  "gripper_width_at_reference_m": 0.03512436896562576,
+  "raw_to_executed_joint_mae_rad": 0.00015414717380048313,
+  "command_tracking_joint_mae_rad": 0.024213179873648884,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 107,
+    "target": "blue",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "green": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.0,
+      "blue": 0.14158856160671762
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.20524714817777526,
+        -0.046857077085447695,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.129923353307183,
+        -0.14342605121170793,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.14430202012527474,
+        0.1612633924768916,
+        0.025393255988701232
+      ]
+    },
+    "steps": 249
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "case": {
+    "layout": 110,
+    "target": "green",
+    "base_seed": 43,
+    "split": "train"
+  },
+  "prefix": 60,
+  "handoff_stage": "descend",
+  "last_teacher_stage": "descend",
+  "handoff_state_max_error": 0.0,
+  "rng_advance_calls": 12,
+  "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00110_green_seed43/attempt000_seed43/layout_00110_green.npz",
+  "teacher_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00110_green.npz",
+  "autonomous_success_rate_eligible": false,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/prefix/train_00110_green_seed43_prefix60.mp4",
+  "success": true,
+  "max_lift_cm": 14.410530253226867,
+  "first_lifted_frame": 39,
+  "first_bilateral_lift_frame": 39,
+  "over_box_frames": 82,
+  "drop_frame": null,
+  "bilateral_contact_frames": 104,
+  "approach_reference_frame": 39,
+  "approach_xy_offset_mm": 1.387185750253597,
+  "approach_object_in_tcp_mm": [
+    -1.3630831918065844,
+    -0.13780000576133827,
+    5.855248414877094
+  ],
+  "approach_orientation_error_deg": 0.4672020629743661,
+  "normal_force_at_reference_N": [
+    9.3523780445825,
+    9.352621928988228
+  ],
+  "gripper_width_at_reference_m": 0.03512081503868103,
+  "raw_to_executed_joint_mae_rad": 1.0467618703841746e-06,
+  "command_tracking_joint_mae_rad": 0.020605945026703956,
+  "gripper_open_command_frames_before_drop": null,
+  "open_low_reapproach_frames_after_drop": null,
+  "terminal": {
+    "layout_seed": 110,
+    "target": "green",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "red": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.0,
+      "green": 0.14410530253226866,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.22294620127568926,
+        -0.14965174212748106,
+        0.017393255988701235
+      ],
+      "green": [
+        -0.14049678627362344,
+        0.15928218925302667,
+        0.0253932559887012
+      ],
+      "blue": [
+        -0.12404934674537284,
+        -0.1499377327542176,
+        0.017393255988701235
+      ]
+    },
+    "steps": 220
+  }
+}
