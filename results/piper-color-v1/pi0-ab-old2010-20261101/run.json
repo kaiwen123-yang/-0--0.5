@@ -1,7 +1,7 @@
 {
   "started_at": "2026-11-01T02:21:54.347541+00:00",
   "pid": 75652,
-  "stage": "A/train_to_1000",
+  "stage": "A/update_1000_train_seed42",
   "completed": false,
   "order": [
     "A",
@@ -58,7 +58,7 @@
   "groups": {
     "A": {
       "state": "running",
-      "completed_local_updates": 500
+      "completed_local_updates": 1000
     },
     "B": {
       "state": "queued",
@@ -72,6 +72,6 @@
   ],
   "hardware_execution": false,
   "test_split_used": false,
-  "updated_at": "2026-11-01T02:36:59.010109+00:00",
-  "child_pid": 77824
+  "updated_at": "2026-11-01T02:41:38.940503+00:00",
+  "service_pid": 78246
 }
