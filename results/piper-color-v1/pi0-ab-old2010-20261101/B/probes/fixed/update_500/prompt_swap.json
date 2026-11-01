@@ -1,0 +1,688 @@
+[
+  {
+    "model": "update_500",
+    "layout": 100,
+    "base_seed": 42,
+    "common_noise_seed": 342,
+    "prompt_endpoint_xy_spread_mm": 34.73765602447702,
+    "teacher_endpoint_xy_spread_mm": 30.494193111065556,
+    "endpoints": [
+      [
+        -0.18702540246213864,
+        -0.038044937150100794,
+        0.1706732292442657
+      ],
+      [
+        -0.21191615174617578,
+        -0.05280501460779973,
+        0.17112097420325606
+      ],
+      [
+        -0.20218416432694408,
+        -0.010270813770110132,
+        0.17450180536362458
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.18338455972777665,
+        -0.04220670792983392,
+        0.17740741260788134
+      ],
+      [
+        -0.2066423493029016,
+        -0.03818796830541507,
+        0.17740739857583301
+      ],
+      [
+        -0.1978579002770063,
+        -0.00837375055309317,
+        0.17740738926751654
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 100,
+    "base_seed": 43,
+    "common_noise_seed": 343,
+    "prompt_endpoint_xy_spread_mm": 34.006510313584364,
+    "teacher_endpoint_xy_spread_mm": 30.494193111065556,
+    "endpoints": [
+      [
+        -0.1889953801701828,
+        -0.04167009091594979,
+        0.17364621998126378
+      ],
+      [
+        -0.2127799625315614,
+        -0.05876422426027118,
+        0.1743342786630157
+      ],
+      [
+        -0.20283519966612887,
+        -0.01618302551416812,
+        0.17678394896111996
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.18338455972777665,
+        -0.04220670792983392,
+        0.17740741260788134
+      ],
+      [
+        -0.2066423493029016,
+        -0.03818796830541507,
+        0.17740739857583301
+      ],
+      [
+        -0.1978579002770063,
+        -0.00837375055309317,
+        0.17740738926751654
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00100_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 101,
+    "base_seed": 42,
+    "common_noise_seed": 345,
+    "prompt_endpoint_xy_spread_mm": 26.700638561028665,
+    "teacher_endpoint_xy_spread_mm": 33.25235764805789,
+    "endpoints": [
+      [
+        -0.2000508680411197,
+        -0.0029841752071757014,
+        0.18205493628357738
+      ],
+      [
+        -0.18181242171063192,
+        -0.026621598207190105,
+        0.18464327418557536
+      ],
+      [
+        -0.2030685236541283,
+        -0.031304204186125374,
+        0.1848714015750521
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.20278933219223502,
+        -0.0060053871948304105,
+        0.1774073835750379
+      ],
+      [
+        -0.17978438325653956,
+        -0.038226266503105295,
+        0.17740736886562541
+      ],
+      [
+        -0.20585436528576168,
+        -0.039909376374750546,
+        0.1774073675367276
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 101,
+    "base_seed": 43,
+    "common_noise_seed": 346,
+    "prompt_endpoint_xy_spread_mm": 31.646931099654253,
+    "teacher_endpoint_xy_spread_mm": 33.25235764805789,
+    "endpoints": [
+      [
+        -0.20203244178254773,
+        -0.011128283325700754,
+        0.17706576744792632
+      ],
+      [
+        -0.18320202978903635,
+        -0.03820389792199542,
+        0.17482512208364046
+      ],
+      [
+        -0.20886864858906146,
+        -0.045684858392130684,
+        0.1763070230218914
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.20278933219223502,
+        -0.0060053871948304105,
+        0.1774073835750379
+      ],
+      [
+        -0.17978438325653956,
+        -0.038226266503105295,
+        0.17740736886562541
+      ],
+      [
+        -0.20585436528576168,
+        -0.039909376374750546,
+        0.1774073675367276
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset/train/layout_00101_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1000,
+    "base_seed": 42,
+    "common_noise_seed": 3042,
+    "prompt_endpoint_xy_spread_mm": 30.10251835201197,
+    "teacher_endpoint_xy_spread_mm": 30.08135566865406,
+    "endpoints": [
+      [
+        -0.2038468370902508,
+        -0.010337050652350905,
+        0.17286307135752027
+      ],
+      [
+        -0.21021390458102518,
+        -0.0412202521895019,
+        0.17445204592588365
+      ],
+      [
+        -0.18545017977865882,
+        -0.038803336830675224,
+        0.17403384675940808
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.2010875306791538,
+        -0.011316911028452378,
+        0.1774073894651172
+      ],
+      [
+        -0.20891885134332966,
+        -0.03813506140536567,
+        0.17740738382177101
+      ],
+      [
+        -0.1820628077183207,
+        -0.04104307448824822,
+        0.17740737432176978
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01000_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1000,
+    "base_seed": 43,
+    "common_noise_seed": 3043,
+    "prompt_endpoint_xy_spread_mm": 41.05583090351568,
+    "teacher_endpoint_xy_spread_mm": 30.08135566865406,
+    "endpoints": [
+      [
+        -0.19833537269767593,
+        -0.013892020832845303,
+        0.1800627913944941
+      ],
+      [
+        -0.2027369987508017,
+        -0.04791370278521716,
+        0.18023645693256374
+      ],
+      [
+        -0.1647484939047179,
+        -0.05183376935637171,
+        0.18101354728862373
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.2010875306791538,
+        -0.011316911028452378,
+        0.1774073894651172
+      ],
+      [
+        -0.20891885134332966,
+        -0.03813506140536567,
+        0.17740738382177101
+      ],
+      [
+        -0.1820628077183207,
+        -0.04104307448824822,
+        0.17740737432176978
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01000_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1001,
+    "base_seed": 42,
+    "common_noise_seed": 3045,
+    "prompt_endpoint_xy_spread_mm": 16.79982279386192,
+    "teacher_endpoint_xy_spread_mm": 29.504303715490654,
+    "endpoints": [
+      [
+        -0.2009038420820069,
+        -0.0019201853096648717,
+        0.1786362280729934
+      ],
+      [
+        -0.1882119384258722,
+        -0.01876603657630413,
+        0.17898645573256822
+      ],
+      [
+        -0.20256675289498324,
+        -0.01661961880959441,
+        0.1795888485396
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.20437279198503944,
+        -0.011243926337411161,
+        0.17740740565764923
+      ],
+      [
+        -0.18411900039710946,
+        -0.036290862188413445,
+        0.1774074102385272
+      ],
+      [
+        -0.2082567177940167,
+        -0.04240453530738915,
+        0.17740739202975397
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01001_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1001,
+    "base_seed": 43,
+    "common_noise_seed": 3046,
+    "prompt_endpoint_xy_spread_mm": 27.62478846990909,
+    "teacher_endpoint_xy_spread_mm": 29.504303715490654,
+    "endpoints": [
+      [
+        -0.20328395919575143,
+        -0.01192913073941746,
+        0.17251405868294456
+      ],
+      [
+        -0.1865531753089437,
+        -0.036682168673524716,
+        0.17372204443815295
+      ],
+      [
+        -0.20953303611414614,
+        -0.04089698289740732,
+        0.17109367203236386
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.20437279198503944,
+        -0.011243926337411161,
+        0.17740740565764923
+      ],
+      [
+        -0.18411900039710946,
+        -0.036290862188413445,
+        0.1774074102385272
+      ],
+      [
+        -0.2082567177940167,
+        -0.04240453530738915,
+        0.17740739202975397
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01001_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1002,
+    "base_seed": 42,
+    "common_noise_seed": 3048,
+    "prompt_endpoint_xy_spread_mm": 33.71155992447725,
+    "teacher_endpoint_xy_spread_mm": 33.42894416379986,
+    "endpoints": [
+      [
+        -0.1756641417795754,
+        -0.031446039409114265,
+        0.18074381311717608
+      ],
+      [
+        -0.20268323153369996,
+        -0.039813737385917806,
+        0.18208725957655236
+      ],
+      [
+        -0.19921646152139166,
+        -0.0036002778591994484,
+        0.18074873853162468
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.18005436517137885,
+        -0.039691084052329524,
+        0.17740740107060637
+      ],
+      [
+        -0.20993921785834663,
+        -0.039925577568595744,
+        0.17740739599244493
+      ],
+      [
+        -0.2024786087874692,
+        -0.00867556929078861,
+        0.1774073941893196
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01002_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1002,
+    "base_seed": 43,
+    "common_noise_seed": 3049,
+    "prompt_endpoint_xy_spread_mm": 23.814368300364183,
+    "teacher_endpoint_xy_spread_mm": 33.42894416379986,
+    "endpoints": [
+      [
+        -0.18365144730236593,
+        -0.02164782558543273,
+        0.17359018769503487
+      ],
+      [
+        -0.20354712630846417,
+        -0.025824115170867242,
+        0.17594813924964264
+      ],
+      [
+        -0.19981694693622915,
+        -0.0011195107702134325,
+        0.17756144609835323
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.18005436517137885,
+        -0.039691084052329524,
+        0.17740740107060637
+      ],
+      [
+        -0.20993921785834663,
+        -0.039925577568595744,
+        0.17740739599244493
+      ],
+      [
+        -0.2024786087874692,
+        -0.00867556929078861,
+        0.1774073941893196
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01002_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1003,
+    "base_seed": 42,
+    "common_noise_seed": 3051,
+    "prompt_endpoint_xy_spread_mm": 35.28219091594894,
+    "teacher_endpoint_xy_spread_mm": 33.285374763399375,
+    "endpoints": [
+      [
+        -0.20498334420621497,
+        -0.04318470640901625,
+        0.1824238779011656
+      ],
+      [
+        -0.1757367238543143,
+        -0.041461773908566354,
+        0.18219242614158015
+      ],
+      [
+        -0.1999352561705995,
+        -0.008161456524292544,
+        0.18098422494894426
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.21134070718986211,
+        -0.04065501642939409,
+        0.17740738811968096
+      ],
+      [
+        -0.18189047245433287,
+        -0.03772164970287418,
+        0.1774074070798229
+      ],
+      [
+        -0.19946612669745353,
+        -0.007454538549317895,
+        0.17740738392373542
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01003_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1003,
+    "base_seed": 43,
+    "common_noise_seed": 3052,
+    "prompt_endpoint_xy_spread_mm": 28.642730130183413,
+    "teacher_endpoint_xy_spread_mm": 33.285374763399375,
+    "endpoints": [
+      [
+        -0.2115169302400522,
+        -0.043883103098211564,
+        0.18103263469697267
+      ],
+      [
+        -0.19123780255245382,
+        -0.03512835826761219,
+        0.18000525844558612
+      ],
+      [
+        -0.20355402906370207,
+        -0.009439929009706733,
+        0.18006278563949119
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.21134070718986211,
+        -0.04065501642939409,
+        0.17740738811968096
+      ],
+      [
+        -0.18189047245433287,
+        -0.03772164970287418,
+        0.1774074070798229
+      ],
+      [
+        -0.19946612669745353,
+        -0.007454538549317895,
+        0.17740738392373542
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01003_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1004,
+    "base_seed": 42,
+    "common_noise_seed": 3054,
+    "prompt_endpoint_xy_spread_mm": 37.659337121049354,
+    "teacher_endpoint_xy_spread_mm": 34.028464560981696,
+    "endpoints": [
+      [
+        -0.20466007144463877,
+        -0.008944658117965552,
+        0.17137697053440076
+      ],
+      [
+        -0.21687178696751044,
+        -0.047929911291552954,
+        0.16894266067796693
+      ],
+      [
+        -0.1848224272910117,
+        -0.04339855186150972,
+        0.17021240290086587
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.2004202898535791,
+        -0.006627019557391803,
+        0.17740739155221924
+      ],
+      [
+        -0.21269729610088678,
+        -0.0415737072679376,
+        0.17740742049773223
+      ],
+      [
+        -0.1844762454506233,
+        -0.039755234513863306,
+        0.17740737708324325
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01004_red.npz"
+  },
+  {
+    "model": "update_500",
+    "layout": 1004,
+    "base_seed": 43,
+    "common_noise_seed": 3055,
+    "prompt_endpoint_xy_spread_mm": 38.02714271455886,
+    "teacher_endpoint_xy_spread_mm": 34.028464560981696,
+    "endpoints": [
+      [
+        -0.2008306443389728,
+        -0.010540151547445486,
+        0.1795051547160153
+      ],
+      [
+        -0.20903573958594235,
+        -0.05014813317837393,
+        0.18240117740090872
+      ],
+      [
+        -0.17830040254229118,
+        -0.046834911300036045,
+        0.18199311440195787
+      ]
+    ],
+    "teacher_endpoints": [
+      [
+        -0.2004202898535791,
+        -0.006627019557391803,
+        0.17740739155221924
+      ],
+      [
+        -0.21269729610088678,
+        -0.0415737072679376,
+        0.17740742049773223
+      ],
+      [
+        -0.1844762454506233,
+        -0.039755234513863306,
+        0.17740737708324325
+      ]
+    ],
+    "only_changed_input": "prompt",
+    "archive_initial_max_difference": {
+      "state": 0.0,
+      "external_rgb": 0.0,
+      "wrist_rgb": 1.0
+    },
+    "common_observation_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/teacher_reference/layout_01004_red.npz"
+  }
+]
