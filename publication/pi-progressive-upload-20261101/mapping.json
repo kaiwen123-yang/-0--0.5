@@ -16336,8 +16336,18 @@
       ],
       "source_bytes": 195124,
       "group": "six-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 245760,
+      "receipt": {
+        "id": 698546714,
+        "name": "progressive-six-checkpoint-1000-records-143d65320b6a2670.tar",
+        "size": 245760,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-six-checkpoint-1000-records-143d65320b6a2670.tar"
+      },
+      "uploaded_at": "2026-11-01T14:20:16.871018+00:00",
+      "transport": "autodl_academic_only"
     },
     {
       "name": "progressive-six-checkpoint-1000-062d2ef3666e2f9c-76c2c4eee1567b30ce79d84e2eac427c",
