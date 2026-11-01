@@ -1,7 +1,7 @@
 {
   "group": "B",
-  "local_updates": 2000,
-  "optimizer_updates": 4010,
+  "local_updates": 2010,
+  "optimizer_updates": 4020,
   "optimizer_scalar_counters": [
     3010,
     3010
@@ -23,14 +23,14 @@
   "learning_rate": 3e-06,
   "full_optimizer_restored": true,
   "segment_end_local": 2010,
-  "segment_complete": false,
+  "segment_complete": true,
   "trainable_parameters": 468039440,
   "total_parameters": 3288036112,
   "initialization_seconds": 9.296995412558317,
-  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2000",
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
   "retained_checkpoints": [
     1000,
-    1500,
-    2000
+    2000,
+    2010
   ]
 }
