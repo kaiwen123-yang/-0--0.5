@@ -112,3 +112,4 @@ CHECKPOINT_COMPLETE group=A local=2000 optimizer=4010
 GITHUB_PUSHED {"stage": "A-train-update-2000", "commit": "9cc36100af492b8d9d144855f2582b0331b43d00", "pushed_at_utc": "2026-11-01T02:59:35.847088+00:00"}
 UPDATE {"group": "A", "local_update": 2010, "optimizer_update": 4020, "grad_norm": 0.5256271470587232, "loss": 0.00968966210523596, "param_norm": 1379.8387446139418, "wall_time": 1793501979.9885147, "compute_seconds": 0.41210022009909153, "data_wait_seconds": 0.019356124103069305, "learning_rate": 3e-06, "sample_offset_before": 8036, "sample_indices": [13980, 11710, 17809, 11661], "sample_frames": [44, 186, 121, 137], "sample_episode_indices": [52, 43, 66, 43], "rng_fold_in_step": 4019}
 CHECKPOINT_COMPLETE group=A local=2010 optimizer=4020
+GITHUB_PUSHED {"stage": "A-train-update-2010", "commit": "6430922fa31066dd9495002ea5103ecd1107b025", "pushed_at_utc": "2026-11-01T03:00:03.870856+00:00"}
