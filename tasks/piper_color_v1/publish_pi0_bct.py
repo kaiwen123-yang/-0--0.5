@@ -30,7 +30,7 @@ def publish(campaign, stage):
             upload_dest=ROOT/'publication/pi-progressive-upload-20261101'
             if TRANSFER.exists():
                 upload_dest.mkdir(parents=True,exist_ok=True)
-                for name in ('progress.json','missing.json','mapping.json','reused_groups.json','excluded.json'):
+                for name in ('progress.json','missing.json','mapping.json','reused_groups.json','excluded.json','academic_probe.json','academic_upload_probe.json','transport_change.json'):
                     if (TRANSFER/name).exists(): shutil.copyfile(TRANSFER/name,upload_dest/name)
             save(destination/'publication_status.json',dict(stage=stage,at_utc=now(),text_files=count,
                 large_files='Server originals retained; separate progressive upload queue',source_deleted=False))
@@ -41,8 +41,9 @@ def publish(campaign, stage):
             commit=git('rev-parse','HEAD')
             for attempt in range(1,4):
                 try:
-                    result=subprocess.run(['git','-C',str(ROOT),'-c','http.proxy=http://127.0.0.1:7890','-c','http.version=HTTP/1.1',
-                        'push','origin',f'HEAD:refs/heads/{BRANCH}'],env=gh_env(),text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=25)
+                    transport_env=gh_env()
+                    result=subprocess.run(['git','-C',str(ROOT),'-c','http.proxy='+transport_env['https_proxy'],'-c','http.version=HTTP/1.1',
+                        'push','origin',f'HEAD:refs/heads/{BRANCH}'],env=transport_env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=25)
                     record=dict(stage=stage,at_utc=now(),attempt=attempt,commit=commit,returncode=result.returncode,output=result.stdout[-2500:])
                 except subprocess.TimeoutExpired:
                     record=dict(stage=stage,at_utc=now(),attempt=attempt,commit=commit,returncode=124,output='25 second transport timeout')

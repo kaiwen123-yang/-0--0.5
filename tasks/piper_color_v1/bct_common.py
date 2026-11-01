@@ -46,7 +46,22 @@ def sha(path):
 def gh_env():
     env = dict(os.environ)
     for key in ('http_proxy', 'https_proxy', 'all_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY'):
-        env[key] = 'http://127.0.0.1:7890'
+        env.pop(key, None)
+    # Latest user preference: official AutoDL academic proxy only, never VPN fallback.
+    raw = subprocess.check_output(['bash', '-c', 'source /etc/network_turbo >/dev/null; env -0'], env=env, timeout=10)
+    selected = {}
+    for item in raw.split(b'\0'):
+        if b'=' not in item: continue
+        key, value = item.split(b'=', 1)
+        key, value = key.decode(), value.decode()
+        if key in ('http_proxy', 'https_proxy', 'REQUESTS_CA_BUNDLE', 'SSL_CERT_FILE'):
+            selected[key] = value
+    if not selected.get('https_proxy') or '127.0.0.1:7890' in selected['https_proxy']:
+        raise RuntimeError('Official academic proxy unavailable; VPN fallback prohibited')
+    env.update(selected)
+    env['HTTP_PROXY'] = env['http_proxy']
+    env['HTTPS_PROXY'] = env['https_proxy']
+    env['ALL_PROXY'] = env['all_proxy'] = env['http_proxy']
     env['NO_PROXY'] = env['no_proxy'] = 'localhost,127.0.0.1'
     return env
 

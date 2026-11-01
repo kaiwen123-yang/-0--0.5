@@ -3,6 +3,7 @@ set -uo pipefail
 ROOT=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 RUN="$ROOT/outputs/pi0-b-coverage-correction-test-20261101"
 cd "$ROOT"
+if [[ -f "$ROOT/outputs/pi0-b-coverage-correction-test-20261101/supervisor.exit" ]]; then mv -- "$ROOT/outputs/pi0-b-coverage-correction-test-20261101/supervisor.exit" "$ROOT/outputs/pi0-b-coverage-correction-test-20261101/supervisor.exit.previous-$(date +%s)"; fi
 unset HTTP_PROXY HTTPS_PROXY ALL_PROXY http_proxy https_proxy all_proxy
 /root/miniconda3/bin/python -u tasks/piper_color_v1/run_pi0_bct.py >> "$RUN/logs/supervisor.log" 2>&1
 rc=$?

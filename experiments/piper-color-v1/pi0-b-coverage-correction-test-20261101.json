@@ -386,10 +386,25 @@
         "do_not_start_new_pi_experiments_until_backup_phase_complete": true
       },
       "large_artifacts": "retain on D57 with real paths/sizes/checksums; no automatic Release upload"
+    },
+    {
+      "at_utc": "2026-11-01T14:22:44.238388+00:00",
+      "progressive_upload": {
+        "proxy": "http://127.0.0.1:7890",
+        "proxy_scope": "GitHub transfer subprocesses only",
+        "concurrency": 1,
+        "priority": "compute first; nice19 ionice idle; 4MiB/s maximum; pause for disk/IO contention",
+        "reuse_existing_assets": true,
+        "download_or_restore": false,
+        "full_repository_archive": false,
+        "full_hash_scan": false,
+        "source_deletion": false,
+        "official_base_mirroring": false
+      }
     }
   ],
   "progressive_upload": {
-    "proxy": "http://127.0.0.1:7890",
+    "proxy": "AutoDL official /etc/network_turbo",
     "proxy_scope": "GitHub transfer subprocesses only",
     "concurrency": 1,
     "priority": "compute first; nice19 ionice idle; 4MiB/s maximum; pause for disk/IO contention",
@@ -398,6 +413,8 @@
     "full_repository_archive": false,
     "full_hash_scan": false,
     "source_deletion": false,
-    "official_base_mirroring": false
+    "official_base_mirroring": false,
+    "transport": "autodl_academic_only",
+    "vpn_fallback": false
   }
 }

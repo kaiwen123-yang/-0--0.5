@@ -37,6 +37,8 @@ def main():
     if previous.get('completed'): print('EXPERIMENT_ALREADY_COMPLETE',flush=True); return
     status={**previous,'started_at':previous.get('started_at',now()),'pid':os.getpid(),'stage':'starting',
             'completed':False,'base_optimizer_updates':BASE,'source_commit':git('rev-parse','HEAD'),'hardware_execution':False}
+    if 'error' in status:
+        append(CAMPAIGN/'execution_events.jsonl',dict(at_utc=now(),event='resume_after_recorded_interruption',previous_error=status.pop('error')))
     status_lock=threading.RLock(); stopping=threading.Event()
     def update(**kwargs):
         with status_lock:
