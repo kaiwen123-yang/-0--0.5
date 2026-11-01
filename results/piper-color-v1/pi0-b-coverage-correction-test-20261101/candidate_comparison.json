@@ -1,0 +1,135 @@
+{
+  "candidates": [
+    {
+      "candidate": "B",
+      "score": [
+        13,
+        72,
+        7,
+        30
+      ],
+      "eligible": true,
+      "local_updates": 0
+    },
+    {
+      "candidate": "C_500",
+      "validation_counts": [
+        11,
+        11,
+        13,
+        13,
+        13
+      ],
+      "correct_close": 30,
+      "non_target_lifts": 0,
+      "prompt_matches": 29,
+      "gates": {
+        "prompt_match": true,
+        "correct_close": true,
+        "wrong_lifts": true,
+        "every_validation_seed_at_least_B": false
+      },
+      "eligible": false,
+      "score": [
+        11,
+        61,
+        15,
+        29
+      ],
+      "local_updates": 500,
+      "optimizer_updates": 4520,
+      "test_used": false
+    },
+    {
+      "candidate": "C_1000",
+      "validation_counts": [
+        11,
+        12,
+        12,
+        12,
+        12
+      ],
+      "correct_close": 30,
+      "non_target_lifts": 0,
+      "prompt_matches": 30,
+      "gates": {
+        "prompt_match": true,
+        "correct_close": true,
+        "wrong_lifts": true,
+        "every_validation_seed_at_least_B": false
+      },
+      "eligible": false,
+      "score": [
+        11,
+        59,
+        11,
+        30
+      ],
+      "local_updates": 1000,
+      "optimizer_updates": 5020,
+      "test_used": false
+    },
+    {
+      "candidate": "D_500",
+      "validation_counts": [
+        10,
+        11,
+        12,
+        9,
+        10
+      ],
+      "correct_close": 24,
+      "non_target_lifts": 5,
+      "prompt_matches": 29,
+      "gates": {
+        "prompt_match": true,
+        "correct_close": true,
+        "wrong_lifts": false,
+        "every_validation_seed_at_least_B": false
+      },
+      "eligible": false,
+      "score": [
+        9,
+        52,
+        14,
+        29
+      ],
+      "local_updates": 500,
+      "optimizer_updates": 4520,
+      "test_used": false
+    },
+    {
+      "candidate": "D_1000",
+      "validation_counts": [
+        10,
+        9,
+        10,
+        9,
+        9
+      ],
+      "correct_close": 28,
+      "non_target_lifts": 1,
+      "prompt_matches": 30,
+      "gates": {
+        "prompt_match": true,
+        "correct_close": true,
+        "wrong_lifts": true,
+        "every_validation_seed_at_least_B": false
+      },
+      "eligible": false,
+      "score": [
+        9,
+        47,
+        10,
+        30
+      ],
+      "local_updates": 1000,
+      "optimizer_updates": 5020,
+      "test_used": false
+    }
+  ],
+  "selected_before_coverage": "B",
+  "selection_uses": "development only",
+  "correction_outcome": "qualified",
+  "selected": "B"
+}
