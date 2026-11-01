@@ -1,8 +1,654 @@
 {
   "tag": "pi-complete-backup-20261101",
-  "phase": "preparing",
+  "release_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-complete-backup-20261101",
+  "phase": "backing_up",
+  "source_file_count": 6548,
+  "source_bytes": 209711432547,
   "source_deleted": false,
+  "minimal_B_groups": [
+    "ab-b-checkpoint-2010",
+    "ab-records",
+    "v2-training-data",
+    "v2-records",
+    "regression-records",
+    "official-pi0-base"
+  ],
+  "groups": [
+    {
+      "id": "ab-b-checkpoint-2010",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9795141094,
+      "member_count": 48,
+      "parts": [
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-000",
+          "bytes": 536870912,
+          "sha256": "dd1a5af9a10ddcac7b656f3a6a1ad329367e8e892e69198c5877611e92440e38"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-001",
+          "bytes": 536870912,
+          "sha256": "b2d2d579a8d207b069d8f43b0e2bcf4a1dcd1871858ea31c26b6b310c51d43fa"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-002",
+          "bytes": 536870912,
+          "sha256": "7526c785427537c1d4e5bbeb1734427b623c84f3c9fecac256b4ad665d81c1aa"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-003",
+          "bytes": 536870912,
+          "sha256": "1c7368ae4bae8331512920993f2f34aae65ad4b998fae69b3e7558f406076cb8"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-004",
+          "bytes": 536870912,
+          "sha256": "f3848272cabfda57bec5d52406978d5e485087f6b3c2627e7b9cc0f12b7d0689"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-005",
+          "bytes": 536870912,
+          "sha256": "db45bdc554c6760c4df1cf9ac924e13ae2460e9aaeeef6b6279c728bf387327c"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-006",
+          "bytes": 536870912,
+          "sha256": "2ca0fa3d15ca009a0d7877bcc68291b555c3e84e37549daecd7ca20ae81142d7"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-007",
+          "bytes": 536870912,
+          "sha256": "b70033f4c02f62adfde60d10444c518ecb3906f30ab9d46a327c64f930c5945c"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-008",
+          "bytes": 536870912,
+          "sha256": "5c1be2da4ab617ccd38972bc6e17d25965147433e73ab4c30e8efdc26c1e600a"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-009",
+          "bytes": 536870912,
+          "sha256": "9a5cc5d72280b6ada0d6ba7fa072c3502e031eb351f8bc6e3cf8698fcfdbf0e2"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-010",
+          "bytes": 536870912,
+          "sha256": "53f6b9b272f082dfbf2fc440eaeb64b9eb2811b626f9ca9f5c3486a2f4a6f8a2"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-011",
+          "bytes": 536870912,
+          "sha256": "e156587c460e62f8cac2af3d098849e36235b5cd8e7b85b922cb4cff2619c4ab"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-012",
+          "bytes": 536870912,
+          "sha256": "75ab4238729842f47c1f3c314761b20144107ff2216e1dc44ed5b8b441c1f68b"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-013",
+          "bytes": 536870912,
+          "sha256": "f8c93509621a82414d89e2510476e9665781686c669bfb6d6d83bf42aa26b3f3"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-014",
+          "bytes": 536870912,
+          "sha256": "e40d2f91a032024811ab38df5b10980b0cc717f7cce73429a728c6ae3df15a8c"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-015",
+          "bytes": 536870912,
+          "sha256": "d1c5a3fb9702f737049a471aeb2d6fb2a728f375c30717bc70f4624134ccaabc"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-016",
+          "bytes": 536870912,
+          "sha256": "8da2ffc19c427cca0b3e5e339e38a88ddc0313cc4a9f928e24b35f6c76683169"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-017",
+          "bytes": 536870912,
+          "sha256": "2495ba712d21081cb76719c1cbdf10b17d16afb2b1bcf6510451a136e855bc1a"
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-018",
+          "bytes": 131531267,
+          "sha256": "7e73982543348969c8c2c88e0b1b69bb3cfaacb19b9722ed9839900d6e1b6761"
+        }
+      ],
+      "verification": {
+        "members": 48,
+        "files": 35,
+        "bytes": 9795141094,
+        "every_file_sha256_matched": true,
+        "verified_at_utc": "2026-11-01T11:49:17.969682+00:00",
+        "model_optimizer_restore": {
+          "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi-complete-backup-20261101/restore-verification/ab-b-checkpoint-2010/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+          "model_and_optimizer_restored": true,
+          "optimizer_updates": 4020,
+          "optimizer_scalar_counters": [
+            4020,
+            4020
+          ],
+          "optimizer_array_leaves": 108,
+          "new_optimizer_updates": 0,
+          "new_evaluation_episodes": 0,
+          "seconds": 9.466369643807411
+        },
+        "remote_assets": [
+          {
+            "id": 698103837,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-000",
+            "size": 536870912,
+            "digest": "sha256:dd1a5af9a10ddcac7b656f3a6a1ad329367e8e892e69198c5877611e92440e38",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-000"
+          },
+          {
+            "id": 698103847,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-001",
+            "size": 536870912,
+            "digest": "sha256:b2d2d579a8d207b069d8f43b0e2bcf4a1dcd1871858ea31c26b6b310c51d43fa",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-001"
+          },
+          {
+            "id": 698109421,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-002",
+            "size": 536870912,
+            "digest": "sha256:7526c785427537c1d4e5bbeb1734427b623c84f3c9fecac256b4ad665d81c1aa",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-002"
+          },
+          {
+            "id": 698109450,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-003",
+            "size": 536870912,
+            "digest": "sha256:1c7368ae4bae8331512920993f2f34aae65ad4b998fae69b3e7558f406076cb8",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-003"
+          },
+          {
+            "id": 698114214,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-004",
+            "size": 536870912,
+            "digest": "sha256:f3848272cabfda57bec5d52406978d5e485087f6b3c2627e7b9cc0f12b7d0689",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-004"
+          },
+          {
+            "id": 698118114,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-005",
+            "size": 536870912,
+            "digest": "sha256:db45bdc554c6760c4df1cf9ac924e13ae2460e9aaeeef6b6279c728bf387327c",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-005"
+          },
+          {
+            "id": 698120861,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-006",
+            "size": 536870912,
+            "digest": "sha256:2ca0fa3d15ca009a0d7877bcc68291b555c3e84e37549daecd7ca20ae81142d7",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-006"
+          },
+          {
+            "id": 698123161,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-007",
+            "size": 536870912,
+            "digest": "sha256:b70033f4c02f62adfde60d10444c518ecb3906f30ab9d46a327c64f930c5945c",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-007"
+          },
+          {
+            "id": 698125219,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-008",
+            "size": 536870912,
+            "digest": "sha256:5c1be2da4ab617ccd38972bc6e17d25965147433e73ab4c30e8efdc26c1e600a",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-008"
+          },
+          {
+            "id": 698128266,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-009",
+            "size": 536870912,
+            "digest": "sha256:9a5cc5d72280b6ada0d6ba7fa072c3502e031eb351f8bc6e3cf8698fcfdbf0e2",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-009"
+          },
+          {
+            "id": 698129237,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-010",
+            "size": 536870912,
+            "digest": "sha256:53f6b9b272f082dfbf2fc440eaeb64b9eb2811b626f9ca9f5c3486a2f4a6f8a2",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-010"
+          },
+          {
+            "id": 698132674,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-011",
+            "size": 536870912,
+            "digest": "sha256:e156587c460e62f8cac2af3d098849e36235b5cd8e7b85b922cb4cff2619c4ab",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-011"
+          },
+          {
+            "id": 698135204,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-012",
+            "size": 536870912,
+            "digest": "sha256:75ab4238729842f47c1f3c314761b20144107ff2216e1dc44ed5b8b441c1f68b",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-012"
+          },
+          {
+            "id": 698139324,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-013",
+            "size": 536870912,
+            "digest": "sha256:f8c93509621a82414d89e2510476e9665781686c669bfb6d6d83bf42aa26b3f3",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-013"
+          },
+          {
+            "id": 698140281,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-014",
+            "size": 536870912,
+            "digest": "sha256:e40d2f91a032024811ab38df5b10980b0cc717f7cce73429a728c6ae3df15a8c",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-014"
+          },
+          {
+            "id": 698144751,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-015",
+            "size": 536870912,
+            "digest": "sha256:d1c5a3fb9702f737049a471aeb2d6fb2a728f375c30717bc70f4624134ccaabc",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-015"
+          },
+          {
+            "id": 698145982,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-016",
+            "size": 536870912,
+            "digest": "sha256:8da2ffc19c427cca0b3e5e339e38a88ddc0313cc4a9f928e24b35f6c76683169",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-016"
+          },
+          {
+            "id": 698154973,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-017",
+            "size": 536870912,
+            "digest": "sha256:2495ba712d21081cb76719c1cbdf10b17d16afb2b1bcf6510451a136e855bc1a",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-017"
+          },
+          {
+            "id": 698154975,
+            "name": "ab-b-checkpoint-2010.tar.zst.part-018",
+            "size": 131531267,
+            "digest": "sha256:7e73982543348969c8c2c88e0b1b69bb3cfaacb19b9722ed9839900d6e1b6761",
+            "state": "uploaded",
+            "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-018"
+          }
+        ],
+        "source_files_unchanged": true
+      }
+    },
+    {
+      "id": "v2-training-data",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 10850899853,
+      "member_count": 857,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "ab-records",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 280275158,
+      "member_count": 991,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "v2-records",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 203527845,
+      "member_count": 571,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "regression-records",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 170911695,
+      "member_count": 224,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "official-pi0-base",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 12014440489,
+      "member_count": 48,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "six-checkpoint-2010",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9795954756,
+      "member_count": 53,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "ab-a-checkpoint-1000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9792628299,
+      "member_count": 63,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "ab-a-checkpoint-2000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9793555559,
+      "member_count": 54,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "ab-a-checkpoint-2010",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9793568360,
+      "member_count": 47,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "ab-b-checkpoint-1000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9792611474,
+      "member_count": 63,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "ab-b-checkpoint-2000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9797059388,
+      "member_count": 58,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "existing-fy5080-checkpoints",
+      "tag": "fy5080-pi-artifacts-20261031",
+      "source_bytes": 9243886728,
+      "member_count": 28,
+      "parts": [
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-000",
+          "bytes": 536870912,
+          "sha256": "380b26ac0e8d868087b8a23d395fadc2795e2fa25a6122db7579ae6895c6fb50"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-001",
+          "bytes": 536870912,
+          "sha256": "5952bd6bc2ffc3f80533fb444fc60bc280e71aeadb52a368def85b7ef0bd30a6"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-002",
+          "bytes": 536870912,
+          "sha256": "767b9f4e7bae871db00670a2983020c1edb54ab21884fa195e05c2364b01d315"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-003",
+          "bytes": 536870912,
+          "sha256": "930ec440034572abb6ad9f5ccf9b28231fbd7b7ec3a7cd901a0a995c1b92f6a9"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-004",
+          "bytes": 536870912,
+          "sha256": "0897f5d2d44b086080da9e70577d78866e06216c2dcdf233d865a58a9983e156"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-005",
+          "bytes": 536870912,
+          "sha256": "2a491b061eda4aba3f6393b6d562059ae7798f2c16d45b7cd15a89aee095a0f6"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-006",
+          "bytes": 536870912,
+          "sha256": "74404fff6a71829c00391b3ccd68110f495f0c4fe0eb4039e90fbff5c46b2df6"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-007",
+          "bytes": 536870912,
+          "sha256": "5c4f50f80fde5d4a24362bf95676bfe870a792516bbb40c50d8c32d06333af74"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-008",
+          "bytes": 536870912,
+          "sha256": "37c169682cb27402f5d37170f9064573229b5a6530cd03fd7ea6260f506eb137"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-009",
+          "bytes": 536870912,
+          "sha256": "86c9b556a4e80e894af96046d14de818e29e8c73d696269a2a08974b360cff07"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-010",
+          "bytes": 536870912,
+          "sha256": "27ee73f32774d2d23454bc2041d4bf8a111f19f226b7ac6c015b75198c909a50"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-011",
+          "bytes": 536870912,
+          "sha256": "dd0d826c9c0bedb7b4968d700c9751df16ad785b5df22621944fa85e3a21c01e"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-012",
+          "bytes": 536870912,
+          "sha256": "6719ff0dd695463b00dcf055f5b067b0a71592ab0d6b31047b522fcca7d81920"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-013",
+          "bytes": 536870912,
+          "sha256": "346384a4c7db75ee0f51061cb487189f8f66737dbad493eb501aaf09843ec2a8"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-014",
+          "bytes": 536870912,
+          "sha256": "875fbaf9c31aa6cc517d6127389c177d69ac3de03805c0c2069bd0b1e34ae944"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-015",
+          "bytes": 536870912,
+          "sha256": "844a338980058597a036ca1bf739a9857cf6508722ba1a20c5e492ae805b1d47"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-016",
+          "bytes": 536870912,
+          "sha256": "ad02affeace5718099688e46f953b784c2665b67ba7d0dee4ad8a2436ec09061"
+        },
+        {
+          "name": "fy5080-checkpoints.tar.gz.part-017",
+          "bytes": 117689912,
+          "sha256": "0dda9d19874f99fd10d2b5479039b562eab9d08cd1a80e3fa164a6361bf9865e"
+        }
+      ],
+      "verification": null
+    },
+    {
+      "id": "existing-fy5080-dataset",
+      "tag": "fy5080-pi-artifacts-20261031",
+      "source_bytes": 16523947366,
+      "member_count": 1000,
+      "parts": [
+        {
+          "name": "fy5080-dataset.tar.gz.part-000",
+          "bytes": 536870912,
+          "sha256": "b3d2782466fe718b6f96cfbaa0d67cf8b355ffea07400aef96b96dd2118bdc59"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-001",
+          "bytes": 536870912,
+          "sha256": "87f8225103a8320b91edc273d7677f46b07aea81b80ceef4221a33e664e02d01"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-002",
+          "bytes": 536870912,
+          "sha256": "8cb3a5daa2983c572f70cf191d35159f9370f605f1556ea923fe1df44c1e2a18"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-003",
+          "bytes": 536870912,
+          "sha256": "359b65a1283b0f7a51be9ded9b285e88f729f0b8a8fc4a1f9040eae35d5ada73"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-004",
+          "bytes": 536870912,
+          "sha256": "f6beafb7e31e475a3f7b8f0c80e491f8fc8dde79ac1081c0e250b7986f70221e"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-005",
+          "bytes": 536870912,
+          "sha256": "badda3a75ea2b5313d54a8eaeddfea2ab167e530b09e1f6062021b8c524114de"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-006",
+          "bytes": 536870912,
+          "sha256": "ee31643af09c3c707be019c40a02e79d02e9dcbd745a8706ebd9fd5b975905ec"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-007",
+          "bytes": 536870912,
+          "sha256": "561329456ca19d1776c7ffc0f370f6c6024b56751a772781481a79ae42bf31f9"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-008",
+          "bytes": 536870912,
+          "sha256": "0252db68e653bf5c063a2a620c542e4c415b9702968b20a60656610bb23b13d2"
+        },
+        {
+          "name": "fy5080-dataset.tar.gz.part-009",
+          "bytes": 493011933,
+          "sha256": "21476396e42915fb58024f9d135f38887844078179ab0fe291793686aaa61f0a"
+        }
+      ],
+      "verification": null
+    },
+    {
+      "id": "existing-fy5080-supplement",
+      "tag": "fy5080-pi-artifacts-20261031",
+      "source_bytes": 17597065,
+      "member_count": 19,
+      "parts": [
+        {
+          "name": "fy5080-supplement.tar.gz.part-000",
+          "bytes": 16420481,
+          "sha256": "7cd9241811cf61be03f3e9046c0b668c634a4d6eaca44d7100a363614acecdcf"
+        }
+      ],
+      "verification": null
+    },
+    {
+      "id": "official-pi05-base",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 12441749581,
+      "member_count": 45,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "remaining-results",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 627443602,
+      "member_count": 2688,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "six-checkpoint-1000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9809470863,
+      "member_count": 58,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "six-checkpoint-1500",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9805504155,
+      "member_count": 65,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "six-checkpoint-2000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9795541644,
+      "member_count": 60,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "six-checkpoint-500",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9803697998,
+      "member_count": 70,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "six-records",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 31787044,
+      "member_count": 190,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "support-and-other-records",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 205569537,
+      "member_count": 484,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "v2-checkpoint-2010",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9820374947,
+      "member_count": 54,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "v2-checkpoint-4020",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9825395529,
+      "member_count": 59,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "v2-checkpoint-8000",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9841219254,
+      "member_count": 51,
+      "parts": [],
+      "verification": null
+    },
+    {
+      "id": "v2-checkpoint-8040",
+      "tag": "pi-complete-backup-20261101",
+      "source_bytes": 9837673264,
+      "member_count": 53,
+      "parts": [],
+      "verification": null
+    }
+  ],
   "catalog_sha256": null,
-  "groups": [],
-  "scope": "user-authorized pi data only; no other projects"
+  "updated_at_utc": "2026-11-01T11:49:34.131144+00:00"
 }

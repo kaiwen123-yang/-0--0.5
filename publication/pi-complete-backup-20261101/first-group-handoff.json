@@ -1,0 +1,188 @@
+{
+  "at_utc": "2026-11-01T11:52:04.307005+00:00",
+  "user_requested_handoff_after_first_full_group": true,
+  "first_verified_group": "ab-b-checkpoint-2010",
+  "verification": {
+    "members": 48,
+    "files": 35,
+    "bytes": 9795141094,
+    "every_file_sha256_matched": true,
+    "verified_at_utc": "2026-11-01T11:49:17.969682+00:00",
+    "model_optimizer_restore": {
+      "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi-complete-backup-20261101/restore-verification/ab-b-checkpoint-2010/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+      "model_and_optimizer_restored": true,
+      "optimizer_updates": 4020,
+      "optimizer_scalar_counters": [
+        4020,
+        4020
+      ],
+      "optimizer_array_leaves": 108,
+      "new_optimizer_updates": 0,
+      "new_evaluation_episodes": 0,
+      "seconds": 9.466369643807411
+    },
+    "remote_assets": [
+      {
+        "id": 698103837,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-000",
+        "size": 536870912,
+        "digest": "sha256:dd1a5af9a10ddcac7b656f3a6a1ad329367e8e892e69198c5877611e92440e38",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-000"
+      },
+      {
+        "id": 698103847,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-001",
+        "size": 536870912,
+        "digest": "sha256:b2d2d579a8d207b069d8f43b0e2bcf4a1dcd1871858ea31c26b6b310c51d43fa",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-001"
+      },
+      {
+        "id": 698109421,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-002",
+        "size": 536870912,
+        "digest": "sha256:7526c785427537c1d4e5bbeb1734427b623c84f3c9fecac256b4ad665d81c1aa",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-002"
+      },
+      {
+        "id": 698109450,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-003",
+        "size": 536870912,
+        "digest": "sha256:1c7368ae4bae8331512920993f2f34aae65ad4b998fae69b3e7558f406076cb8",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-003"
+      },
+      {
+        "id": 698114214,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-004",
+        "size": 536870912,
+        "digest": "sha256:f3848272cabfda57bec5d52406978d5e485087f6b3c2627e7b9cc0f12b7d0689",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-004"
+      },
+      {
+        "id": 698118114,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-005",
+        "size": 536870912,
+        "digest": "sha256:db45bdc554c6760c4df1cf9ac924e13ae2460e9aaeeef6b6279c728bf387327c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-005"
+      },
+      {
+        "id": 698120861,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-006",
+        "size": 536870912,
+        "digest": "sha256:2ca0fa3d15ca009a0d7877bcc68291b555c3e84e37549daecd7ca20ae81142d7",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-006"
+      },
+      {
+        "id": 698123161,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-007",
+        "size": 536870912,
+        "digest": "sha256:b70033f4c02f62adfde60d10444c518ecb3906f30ab9d46a327c64f930c5945c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-007"
+      },
+      {
+        "id": 698125219,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-008",
+        "size": 536870912,
+        "digest": "sha256:5c1be2da4ab617ccd38972bc6e17d25965147433e73ab4c30e8efdc26c1e600a",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-008"
+      },
+      {
+        "id": 698128266,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-009",
+        "size": 536870912,
+        "digest": "sha256:9a5cc5d72280b6ada0d6ba7fa072c3502e031eb351f8bc6e3cf8698fcfdbf0e2",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-009"
+      },
+      {
+        "id": 698129237,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-010",
+        "size": 536870912,
+        "digest": "sha256:53f6b9b272f082dfbf2fc440eaeb64b9eb2811b626f9ca9f5c3486a2f4a6f8a2",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-010"
+      },
+      {
+        "id": 698132674,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-011",
+        "size": 536870912,
+        "digest": "sha256:e156587c460e62f8cac2af3d098849e36235b5cd8e7b85b922cb4cff2619c4ab",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-011"
+      },
+      {
+        "id": 698135204,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-012",
+        "size": 536870912,
+        "digest": "sha256:75ab4238729842f47c1f3c314761b20144107ff2216e1dc44ed5b8b441c1f68b",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-012"
+      },
+      {
+        "id": 698139324,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-013",
+        "size": 536870912,
+        "digest": "sha256:f8c93509621a82414d89e2510476e9665781686c669bfb6d6d83bf42aa26b3f3",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-013"
+      },
+      {
+        "id": 698140281,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-014",
+        "size": 536870912,
+        "digest": "sha256:e40d2f91a032024811ab38df5b10980b0cc717f7cce73429a728c6ae3df15a8c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-014"
+      },
+      {
+        "id": 698144751,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-015",
+        "size": 536870912,
+        "digest": "sha256:d1c5a3fb9702f737049a471aeb2d6fb2a728f375c30717bc70f4624134ccaabc",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-015"
+      },
+      {
+        "id": 698145982,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-016",
+        "size": 536870912,
+        "digest": "sha256:8da2ffc19c427cca0b3e5e339e38a88ddc0313cc4a9f928e24b35f6c76683169",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-016"
+      },
+      {
+        "id": 698154973,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-017",
+        "size": 536870912,
+        "digest": "sha256:2495ba712d21081cb76719c1cbdf10b17d16afb2b1bcf6510451a136e855bc1a",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-017"
+      },
+      {
+        "id": 698154975,
+        "name": "ab-b-checkpoint-2010.tar.zst.part-018",
+        "size": 131531267,
+        "digest": "sha256:7e73982543348969c8c2c88e0b1b69bb3cfaacb19b9722ed9839900d6e1b6761",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/ab-b-checkpoint-2010.tar.zst.part-018"
+      }
+    ],
+    "source_files_unchanged": true
+  },
+  "current_group_at_handoff": "v2-training-data",
+  "verified_group_count_at_handoff": 1,
+  "total_groups": 27,
+  "source_data_deleted_at_handoff": false,
+  "background_tmux": "pi-complete-backup-20261101",
+  "remaining_work": "continue all groups; publish verified recovery index; remove only verified source files; publish final cleanup and restoration documentation",
+  "restore_guide": "docs/PI0_RELEASE_RESTORE_20261101.md",
+  "no_other_project_mutations": true
+}
