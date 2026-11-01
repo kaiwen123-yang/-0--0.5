@@ -34,3 +34,4 @@ Traceback (most recent call last):
     with socket.socket() as sock: sock.bind(('127.0.0.1',PORT))
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 OSError: [Errno 98] Address already in use
+GITHUB_PUSHED ad0fae23169e9d91c1aa7fd1b7a70afb90ada1f1 supervisor-exit-1
