@@ -432,7 +432,7 @@
       "part": 0,
       "parts": 1,
       "group": "six-checkpoint-2010",
-      "status": "uploading",
+      "status": "pending",
       "attempts": 3,
       "error": "RuntimeError('GitHub upload exit=1; see transport.log')"
     },
@@ -454,8 +454,8 @@
       "part": 0,
       "parts": 1,
       "group": "six-checkpoint-2010",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-six-checkpoint-2010-bd8be5ba3f143314-1a1812968760898f6e1813f8b8c56eb6",
