@@ -11,3 +11,5 @@
 {"at_utc": "2026-11-01T02:35:50.390188+00:00", "event": "process_end", "group": "A", "label": "update_500_validation_seed43", "returncode": 0, "seconds": 166.45694588124752}
 {"at_utc": "2026-11-01T02:35:53.487767+00:00", "event": "process_start", "group": "A", "label": "probe_500", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_ab_d57.sh", "probe", "--local-update", "500", "--checkpoint", "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/500"]}
 {"at_utc": "2026-11-01T02:36:55.236838+00:00", "event": "process_end", "group": "A", "label": "probe_500", "returncode": 0, "seconds": 61.74874793365598}
+{"at_utc": "2026-11-01T02:36:58.918781+00:00", "event": "service_stopped", "group": "A", "local_update": 500, "returncode": -15}
+{"at_utc": "2026-11-01T02:36:59.010838+00:00", "event": "process_start", "group": "A", "label": "train_to_1000", "command": ["bash", "/root/autodl-tmp/robot-repro/pi-reproduction/scripts/run_pi0_ab_d57.sh", "train", "--until", "1000", "--resume"]}
