@@ -1,9 +1,9 @@
 {
-  "stage": "frozen-contract-and-sampling",
-  "snapshot_at_utc": "2026-11-01T02:21:44.972650+00:00",
+  "stage": "supervisor-started",
+  "snapshot_at_utc": "2026-11-01T02:21:54.373473+00:00",
   "branch": "codex/pi0-ab-old2010-20261101",
   "campaign_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101",
-  "text_files": 13,
+  "text_files": 18,
   "full_checkpoints": [],
   "scope": "source/config, exact text sampling tables, every update metric, raw process logs and evaluation/probe JSON",
   "large_artifacts": "full checkpoints, videos and raw arrays remain on D57; not uploaded by Git publisher"

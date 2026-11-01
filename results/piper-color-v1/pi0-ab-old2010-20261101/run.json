@@ -1,0 +1,75 @@
+{
+  "started_at": "2026-11-01T02:21:54.347541+00:00",
+  "pid": 75652,
+  "stage": "initializing",
+  "completed": false,
+  "order": [
+    "A",
+    "B"
+  ],
+  "base_optimizer_updates": 2010,
+  "new_updates_per_group": 2010,
+  "source_commit": "afcce4b52b21a99c2d4c9ccc8b978db65c94e3cb",
+  "upstream_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "source_sha256": {
+    "scripts/run_pi0_ab_d57.sh": "b42ab1f21b9d109cabfe162bfb0aa928b51f9c4bdbb84b58bba77fc261f8f68a",
+    "tasks/piper_color_v1/analyze_pi0_120_regression.py": "444cebdddc52f97a2616088b99feddaba08d33d1563bcbfce18a11d457985a7d",
+    "tasks/piper_color_v1/audit_pi0_model_inputs.py": "e54bdc0a35de1d1360fd1a5a8380e2352ba7d3ff2d4722741f4167d782356548",
+    "tasks/piper_color_v1/audit_pi0_regression_data.py": "cd4ada010829cc797d1dd4698bda5743cf10e0f453dd8ef30e9f73c6a7c29716",
+    "tasks/piper_color_v1/audit_policy_offline.py": "22dd344e63f2133035d37c0afffadc7e15898fce284a6fa4c423b78982f4d728",
+    "tasks/piper_color_v1/dataset.py": "7dd781019a7ff26352576b109eaafbc73b8816b36cd969afa67712d9fd896e34",
+    "tasks/piper_color_v1/deployment_io.py": "7cd46b361e6b49af5968c3e49c210640acce53ab831faba304071d5371a65077",
+    "tasks/piper_color_v1/diagnose_d57.py": "90b71d4a9eaa5389eaa85eb5e2a598108e35ea3ad98e3074e7850347294b04c2",
+    "tasks/piper_color_v1/diagnose_pi0_failures.py": "5cc80850ec7140ff97c1226faacc46e6e44716d6510ab2a5457602cb9405be08",
+    "tasks/piper_color_v1/evaluate.py": "56b6391f4507dea85f42cdfa1ee93633739383c1af52c096414c7f5bfd2e7a97",
+    "tasks/piper_color_v1/evaluate_pi0_120.py": "782345de6064b6ff40a6435b12ec5cce6b36273678492c1a2eb3ba88e0e4c904",
+    "tasks/piper_color_v1/evaluate_pi0_contact_probe.py": "a9cae9d581b69cd618a6e76b7447607f1716dc2ca344ff989f68dea77cd6399b",
+    "tasks/piper_color_v1/generate.py": "3b707d8db9e069eecc535d94a49cd027bc41701899608547ccec78806791ec50",
+    "tasks/piper_color_v1/package_assets.py": "ed36383e093f4726c6555128df1bd24bcdf5fbc59052de7d9d22131311fa0957",
+    "tasks/piper_color_v1/plot_pi0_120_regression.py": "6ed692c5faa5c161783771f620953f57c44cf4954f397bd8188d196c251b04d0",
+    "tasks/piper_color_v1/policy_client.py": "42aa52f811c4101a552dc7e0c14897771dc19207c07fed8f2ed6aaba56da5600",
+    "tasks/piper_color_v1/policy_config.py": "cda90d6429a485adf30df3243ecfb3588f516de77ef547982bfe10600516ff35",
+    "tasks/piper_color_v1/prepare_pi0_120.py": "a3c1d541c9725b8855f4978e19dfb59976e3eead50a7d8b16168fafbd7501cbc",
+    "tasks/piper_color_v1/prepare_pi0_ab.py": "0735ae3be182bbe7c5267b9a7785e2671af5cfb097a30ef23711c58d375bd306",
+    "tasks/piper_color_v1/probe_pi0_120_regression.py": "9e8b64f4d0aabb7b11a28410f761793be3aac82a3d37a3294c7419307794d279",
+    "tasks/piper_color_v1/probe_pi0_ab.py": "1656bf1d07f1b73195686aba58b3ab08acb29dd0cc9a6aa55124296287188b88",
+    "tasks/piper_color_v1/probe_pi0_policy.py": "c0b9ee948bc3cc2936efc3a398789a221ab7850b7377f1de22e2d061558b00ee",
+    "tasks/piper_color_v1/publish_pi0_120.py": "84fc45b55e093c62ad33b55fc9bc956099b39b8d63535714a2e3f36123047ed1",
+    "tasks/piper_color_v1/publish_pi0_ab.py": "5212697be81f5f898a72509d5f214d2e2475038dd895a04649355529fd2fda89",
+    "tasks/piper_color_v1/publish_pi0_regression.py": "356249607c96856b1fa81b47801b359a26a57636c0aeaad57c472301f7f09ff0",
+    "tasks/piper_color_v1/publish_pi0_six.py": "e30dc67d91a2b7f322cfe105d36158dc5eb0e73a0309c9153b8f855b8082572c",
+    "tasks/piper_color_v1/release_pi0_regression.py": "595a5e476fef77b42a43618b8ce8735c4bd6feaa76ef5d6037e2d9075ffef4bf",
+    "tasks/piper_color_v1/report.py": "e95a099c4e7849c6d26d3e4dda204ba59a2d2344389ada1f442d14c91a586ece",
+    "tasks/piper_color_v1/run_pi0_120.py": "5affa67b53bc153852b753e11143e17b25f64a57b41e7fa500061fae27cbb0ce",
+    "tasks/piper_color_v1/run_pi0_ab.py": "0cf05f78cfafc52e3b540135f2f78b40cb10a1f427f2dc3cf32f76bcec8b76ed",
+    "tasks/piper_color_v1/run_pi0_regression_probes.py": "31db0c54019bdf3f09607a0755a50b7ef3108235a2060baa43875dd64fa61d63",
+    "tasks/piper_color_v1/run_pi0_six.py": "6b7faef01373957e35b280e07fe9875115fbb5fcb2895a8bb49460e06bedc1ce",
+    "tasks/piper_color_v1/serve.py": "e65eb07189c3469e5ee1185618c2121033a78220fa6141c5928b87b38f29a807",
+    "tasks/piper_color_v1/serve_pi0_ab.py": "c5c47786486ee50bfca6158e9edf4e552ffb1d94f9012f2af7f394d15d1ca374",
+    "tasks/piper_color_v1/sim.py": "0e8e545bdf903290e72cb3d5fb50ad10dc0ce5c54d27314cebe5b7d768667851",
+    "tasks/piper_color_v1/sim_v2.py": "34f951176d63fc925aff54f594a5136475d3a78601facb72b7ab6a572149d830",
+    "tasks/piper_color_v1/summarize_pi0_regression.py": "755a92255183bb344e57bd9f5fb684694facbf38640d512497bb4267be06337c",
+    "tasks/piper_color_v1/summarize_pi0_six.py": "ab0017813daa9c679a1dcb7128d3d69c0fd41820066bec7a1358406b02f522e1",
+    "tasks/piper_color_v1/train_pi0_120.py": "9ec2565daf0911b97d4b48c946e089914bedbf24e9cf5f3428e8785bf5c9531b",
+    "tasks/piper_color_v1/train_pi0_ab.py": "3ed36529930fc3264fe3b99d88226fd6b7bcd69dcec2dc306eaed99a651bdc20",
+    "tasks/piper_color_v1/train_pi0_six.py": "51c42e0948d6e75ee35869ea7e12fbaf06077a99aadcb02f6a76ff9ca4d8df3d",
+    "tasks/piper_color_v1/train_task.py": "3e57a7fdf571e332c247ef716b2fae519100e869b442c3a02d8915ea8a57c609"
+  },
+  "groups": {
+    "A": {
+      "state": "queued",
+      "completed_local_updates": 0
+    },
+    "B": {
+      "state": "queued",
+      "completed_local_updates": 0
+    }
+  },
+  "evaluation_nodes_local": [
+    500,
+    1000,
+    2010
+  ],
+  "hardware_execution": false,
+  "test_split_used": false
+}
