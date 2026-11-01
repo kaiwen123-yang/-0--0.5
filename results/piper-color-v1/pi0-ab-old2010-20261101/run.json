@@ -1,7 +1,7 @@
 {
   "started_at": "2026-11-01T02:21:54.347541+00:00",
   "pid": 75652,
-  "stage": "B/probe_500",
+  "stage": "B/train_to_1000",
   "completed": false,
   "order": [
     "A",
@@ -72,6 +72,6 @@
   ],
   "hardware_execution": false,
   "test_split_used": false,
-  "updated_at": "2026-11-01T03:22:06.989749+00:00",
-  "service_pid": 83020
+  "updated_at": "2026-11-01T03:23:12.548468+00:00",
+  "child_pid": 84439
 }
