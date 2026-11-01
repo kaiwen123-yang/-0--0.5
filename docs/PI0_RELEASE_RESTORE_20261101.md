@@ -25,6 +25,8 @@ Release：`pi-complete-backup-20261101`，仓库 `kaiwen123-yang/-0--0.5`。本�
 
 需要已认证 `gh`、Python 和 `zstandard`。D57 的 `/root/miniconda3/bin/python` 已具备 `zstandard`，可直接使用；新机器若缺依赖，在独立工具环境中安装，不修改其他研究项目环境。恢复程序会核对已提交索引中的 catalog SHA256、远端 asset 摘要、下载文件和解包后的所有文件。
 
+`PI_BACKUP_DOWNLOAD_PROXY` 只作用于资产下载。D57 使用现有 `127.0.0.1:7890` 服务；换到没有该服务的机器时取消此变量，使用该机器已验证可用的 GitHub 下载路径。上传与其他项目配置不变。
+
 下面的 `PI_RESTORE_ROOT` 是**工作区根目录**，不是仓库目录。恢复后会得到 `PI_RESTORE_ROOT/pi-reproduction/outputs/...` 和 `PI_RESTORE_ROOT/assets/openpi-assets/checkpoints/...`。
 
 ## 只恢复下一合并任务所需的数据
@@ -35,6 +37,8 @@ Release：`pi-complete-backup-20261101`，仓库 `kaiwen123-yang/-0--0.5`。本�
 cd /root/autodl-tmp/robot-repro/pi-reproduction
 git pull --ff-only origin codex/pi0-b-coverage-correction-test-20261101
 gh auth status
+# D57 已有本机下载代理；只影响本恢复进程，不修改其他项目或服务配置。
+export PI_BACKUP_DOWNLOAD_PROXY=http://127.0.0.1:7890
 PI_RESTORE_ROOT=/root/autodl-tmp/robot-repro
 PI_RESTORE_CACHE=/root/autodl-tmp/pi-restore-download-20261101
 /root/miniconda3/bin/python scripts/pi_release_backup.py restore \

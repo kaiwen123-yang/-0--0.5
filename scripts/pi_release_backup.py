@@ -57,9 +57,9 @@ def record(event, **values):
     print(json.dumps(row, ensure_ascii=False), flush=True)
 
 
-def command(args, timeout=120):
+def command(args, timeout=120, env=None):
     p = subprocess.run(list(map(str, args)), text=True, stdout=subprocess.PIPE,
-                       stderr=subprocess.STDOUT, timeout=timeout)
+                       stderr=subprocess.STDOUT, timeout=timeout, env=env)
     if p.returncode:
         raise RuntimeError(f'Command exit {p.returncode}: {args[:4]}: {p.stdout[-3000:]}')
     return p.stdout
@@ -136,8 +136,12 @@ def download_file(tag, item, directory):
     for attempt in range(1, 4):
         t0 = time.monotonic()
         try:
+            download_env=None
+            proxy=os.environ.get('PI_BACKUP_DOWNLOAD_PROXY')
+            if proxy:
+                download_env=dict(os.environ,HTTPS_PROXY=proxy,HTTP_PROXY=proxy,https_proxy=proxy,http_proxy=proxy)
             command(['gh','release','download',tag,'--repo',REPO,'--pattern',item['name'],
-                     '--dir',directory], timeout=900)
+                     '--dir',directory], timeout=900, env=download_env)
             if path.stat().st_size != item['bytes'] or sha(path) != item['sha256']:
                 raise ValueError(f'Downloaded size/SHA256 mismatch: {path.name}')
             record('downloaded_verified', tag=tag, name=path.name, bytes=item['bytes'],
@@ -494,7 +498,7 @@ def run_backup():
         remote=assets(group['tag'])
         receipts=[receipt(remote[p['name']],p) for p in group['parts']]
         downloaded=STAGE/'download'/gid
-        with futures.ThreadPoolExecutor(max_workers=2) as pool:
+        with futures.ThreadPoolExecutor(max_workers=4) as pool:
             list(pool.map(lambda part:download_file(group['tag'],part,downloaded),group['parts']))
         restored=STAGE/'restore-verification'/gid
         if restored.exists():remove_staging(restored)
