@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-01T14:39:24.091193+00:00",
+  "at_utc": "2026-11-01T14:43:48.851773+00:00",
   "assets": [
     {
       "name": "progressive-six-checkpoint-2010-9df7cceca1cfa651-a558f844f903d4f11c5b1f19f879ea62",
@@ -10,10 +10,10 @@
     },
     {
       "name": "progressive-six-checkpoint-2010-bbef1f2d291b7787-0d3c0c619291cb42a58f3c9a8328de48",
-      "status": "uploading",
+      "status": "pending",
       "source_bytes": 993816096,
-      "attempts": 1,
-      "reason": null
+      "attempts": 2,
+      "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
       "name": "progressive-six-checkpoint-2010-bd8be5ba3f143314-1a1812968760898f6e1813f8b8c56eb6",

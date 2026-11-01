@@ -454,8 +454,23 @@
       "part": 0,
       "parts": 1,
       "group": "six-checkpoint-2010",
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "apiUrl": "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/assets/698592949",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-11-01T14:39:30Z",
+        "digest": "sha256:16945abac8842b72aca6a67a9be5518a784ae39eb6299e92d4d35df9d98197c0",
+        "downloadCount": 0,
+        "id": "RA_kwDOVV94X84po661",
+        "label": "",
+        "name": "progressive-six-checkpoint-2010-bbef1f2d291b7787-0d3c0c619291cb42a58f3c9a8328de48",
+        "size": 993816096,
+        "state": "uploaded",
+        "updatedAt": "2026-11-01T14:43:39Z",
+        "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-six-checkpoint-2010-bbef1f2d291b7787-0d3c0c619291cb42a58f3c9a8328de48"
+      }
     },
     {
       "name": "progressive-six-checkpoint-2010-bd8be5ba3f143314-1a1812968760898f6e1813f8b8c56eb6",

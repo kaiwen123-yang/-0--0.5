@@ -148,5 +148,55 @@
     "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01004_blue_seed42/attempt000_seed42/layout_01004_blue.npz",
     "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01004_blue_seed42/attempt000_seed42/layout_01004_blue.mp4",
     "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1000,
+    "target": "red",
+    "base_seed": 43,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_red_seed43/attempt000_seed43/layout_01000_red.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_red_seed43/attempt000_seed43/layout_01000_red.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_red_seed43/attempt000_seed43/layout_01000_red.mp4",
+    "success": false
+  },
+  {
+    "split": "validation",
+    "layout": 1000,
+    "target": "green",
+    "base_seed": 43,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_green_seed43/attempt000_seed43/layout_01000_green.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_green_seed43/attempt000_seed43/layout_01000_green.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_green_seed43/attempt000_seed43/layout_01000_green.mp4",
+    "success": false
+  },
+  {
+    "split": "validation",
+    "layout": 1000,
+    "target": "blue",
+    "base_seed": 43,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_blue_seed43/attempt000_seed43/layout_01000_blue.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_blue_seed43/attempt000_seed43/layout_01000_blue.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01000_blue_seed43/attempt000_seed43/layout_01000_blue.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1001,
+    "target": "red",
+    "base_seed": 43,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01001_red_seed43/attempt000_seed43/layout_01001_red.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01001_red_seed43/attempt000_seed43/layout_01001_red.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01001_red_seed43/attempt000_seed43/layout_01001_red.mp4",
+    "success": true
+  },
+  {
+    "split": "validation",
+    "layout": 1001,
+    "target": "green",
+    "base_seed": 43,
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01001_green_seed43/attempt000_seed43/layout_01001_green.json",
+    "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01001_green_seed43/attempt000_seed43/layout_01001_green.npz",
+    "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/C_500/validation_01001_green_seed43/attempt000_seed43/layout_01001_green.mp4",
+    "success": false
   }
 ]
