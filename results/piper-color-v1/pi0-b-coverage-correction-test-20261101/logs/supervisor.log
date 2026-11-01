@@ -1,1 +1,21 @@
 GITHUB_PUSHED 1664ac1f426c202527b727c4f9fa181a52f28fbb supervisor-started
+GITHUB_PUSHED 0eae41bc6c4e54609c27505018420227ac0831f8 execution-interrupted
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/run_pi0_bct.py", line 210, in <module>
+    update(stage='failed_requires_inspection',error=repr(exc),completed=False)
+                     ^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/run_pi0_bct.py", line 97, in main
+    if not prefix_pending and (CAMPAIGN/'failure_case_manifest.json').exists():
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/run_pi0_bct.py", line 88, in evaluate
+    finally: stop(proc); update(service_pid=None)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/run_pi0_bct.py", line 60, in execute
+    update(child_pid=proc.pid,child_log=str(log))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 2047, in _wait
+    time.sleep(delay)
+KeyboardInterrupt
