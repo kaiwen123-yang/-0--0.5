@@ -1,0 +1,112 @@
+[
+  {
+    "layout": 1000,
+    "target": "green",
+    "base_seed": 42,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 14.466887745159484,
+    "new_close_target_mm": 104.28454779245305,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "blue"
+  },
+  {
+    "layout": 1000,
+    "target": "red",
+    "base_seed": 42,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 9.225550148394312,
+    "new_close_target_mm": 120.51669061394047,
+    "new_failure_class": "wrong_object_lifted",
+    "new_nearest_color": "green"
+  },
+  {
+    "layout": 1001,
+    "target": "blue",
+    "base_seed": 42,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 14.968988308756458,
+    "new_close_target_mm": 83.50663653111883,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "blue"
+  },
+  {
+    "layout": 1002,
+    "target": "blue",
+    "base_seed": 42,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 9.532446142263762,
+    "new_close_target_mm": 152.59614404354124,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "green"
+  },
+  {
+    "layout": 1003,
+    "target": "blue",
+    "base_seed": 42,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 12.520050937090025,
+    "new_close_target_mm": 38.44614674086531,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "blue"
+  },
+  {
+    "layout": 1000,
+    "target": "red",
+    "base_seed": 43,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 6.093658574012839,
+    "new_close_target_mm": 180.25682013273328,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "blue"
+  },
+  {
+    "layout": 1001,
+    "target": "red",
+    "base_seed": 43,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 4.8292299242893595,
+    "new_close_target_mm": 128.52911171639596,
+    "new_failure_class": "wrong_object_lifted",
+    "new_nearest_color": "blue"
+  },
+  {
+    "layout": 1002,
+    "target": "blue",
+    "base_seed": 43,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 2.414647820391494,
+    "new_close_target_mm": 120.92968056085616,
+    "new_failure_class": "wrong_object_lifted",
+    "new_nearest_color": "green"
+  },
+  {
+    "layout": 1002,
+    "target": "red",
+    "base_seed": 43,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 5.692418439436633,
+    "new_close_target_mm": 97.36051268977639,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "blue"
+  },
+  {
+    "layout": 1004,
+    "target": "red",
+    "base_seed": 43,
+    "old_success": true,
+    "new_success": false,
+    "old_close_target_mm": 9.483314994318587,
+    "new_close_target_mm": 212.36963247574639,
+    "new_failure_class": "target_grasp_or_approach_failure",
+    "new_nearest_color": "green"
+  }
+]

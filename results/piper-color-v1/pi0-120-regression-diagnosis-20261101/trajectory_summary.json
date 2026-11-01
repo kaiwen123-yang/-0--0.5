@@ -1,0 +1,279 @@
+{
+  "groups": [
+    {
+      "evaluation": "baseline_old2010_v2_validation_seed42",
+      "n": 15,
+      "successes": 5,
+      "close_nearest_is_target": 14,
+      "target_lifted": 6,
+      "wrong_object_lifted": 0,
+      "median_approach30_target_xy_mm": 25.947854627879927,
+      "median_close_target_xy_mm": 21.820163284860012,
+      "median_close_nearest_xy_mm": 21.820163284860012,
+      "median_close_orientation_deg": 1.8432162968608166,
+      "median_joint_tracking_mae_rad": 0.012692018380146514,
+      "failure_classes": {
+        "failure_after_target_lift": 1,
+        "success": 5,
+        "target_grasp_or_approach_failure": 9
+      }
+    },
+    {
+      "evaluation": "baseline_old2010_v2_validation_seed43",
+      "n": 15,
+      "successes": 6,
+      "close_nearest_is_target": 13,
+      "target_lifted": 10,
+      "wrong_object_lifted": 0,
+      "median_approach30_target_xy_mm": 14.466656984235334,
+      "median_close_target_xy_mm": 15.558078677442081,
+      "median_close_nearest_xy_mm": 15.558078677442081,
+      "median_close_orientation_deg": 1.168009075344786,
+      "median_joint_tracking_mae_rad": 0.011769050122480952,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 1,
+        "failure_after_target_lift": 4,
+        "success": 6,
+        "target_grasp_or_approach_failure": 4
+      }
+    },
+    {
+      "evaluation": "update_2010_train_seed42",
+      "n": 6,
+      "successes": 1,
+      "close_nearest_is_target": 3,
+      "target_lifted": 1,
+      "wrong_object_lifted": 1,
+      "median_approach30_target_xy_mm": 124.74204528438653,
+      "median_close_target_xy_mm": 78.67110708724198,
+      "median_close_nearest_xy_mm": 32.36779302917533,
+      "median_close_orientation_deg": 3.884754117219427,
+      "median_joint_tracking_mae_rad": 0.010990935975881582,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 1,
+        "success": 1,
+        "target_grasp_or_approach_failure": 3,
+        "wrong_object_lifted": 1
+      }
+    },
+    {
+      "evaluation": "update_2010_train_seed43",
+      "n": 6,
+      "successes": 0,
+      "close_nearest_is_target": 1,
+      "target_lifted": 0,
+      "wrong_object_lifted": 2,
+      "median_approach30_target_xy_mm": 126.85100741686016,
+      "median_close_target_xy_mm": 128.53199525091696,
+      "median_close_nearest_xy_mm": 28.11218017754363,
+      "median_close_orientation_deg": 3.6585152074551965,
+      "median_joint_tracking_mae_rad": 0.010453378268702528,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 2,
+        "target_grasp_or_approach_failure": 2,
+        "wrong_object_lifted": 2
+      }
+    },
+    {
+      "evaluation": "update_2010_validation_seed42",
+      "n": 15,
+      "successes": 2,
+      "close_nearest_is_target": 5,
+      "target_lifted": 3,
+      "wrong_object_lifted": 6,
+      "median_approach30_target_xy_mm": 125.97349321573276,
+      "median_close_target_xy_mm": 114.72927864354759,
+      "median_close_nearest_xy_mm": 18.873801320245505,
+      "median_close_orientation_deg": 4.652415848041,
+      "median_joint_tracking_mae_rad": 0.010424768646872825,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 1,
+        "failure_after_target_lift": 1,
+        "success": 2,
+        "target_grasp_or_approach_failure": 5,
+        "wrong_object_lifted": 6
+      }
+    },
+    {
+      "evaluation": "update_2010_validation_seed43",
+      "n": 15,
+      "successes": 2,
+      "close_nearest_is_target": 5,
+      "target_lifted": 2,
+      "wrong_object_lifted": 5,
+      "median_approach30_target_xy_mm": 133.30211146285694,
+      "median_close_target_xy_mm": 122.41886085987079,
+      "median_close_nearest_xy_mm": 25.21177673647938,
+      "median_close_orientation_deg": 4.488882470565924,
+      "median_joint_tracking_mae_rad": 0.009361027490006899,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 3,
+        "success": 2,
+        "target_grasp_or_approach_failure": 5,
+        "wrong_object_lifted": 5
+      }
+    },
+    {
+      "evaluation": "update_4020_train_seed42",
+      "n": 6,
+      "successes": 1,
+      "close_nearest_is_target": 2,
+      "target_lifted": 1,
+      "wrong_object_lifted": 3,
+      "median_approach30_target_xy_mm": 70.78659206164677,
+      "median_close_target_xy_mm": 86.32559284184025,
+      "median_close_nearest_xy_mm": 16.779272178503973,
+      "median_close_orientation_deg": 2.8642624513753843,
+      "median_joint_tracking_mae_rad": 0.012257030841570104,
+      "failure_classes": {
+        "success": 1,
+        "target_grasp_or_approach_failure": 2,
+        "wrong_object_lifted": 3
+      }
+    },
+    {
+      "evaluation": "update_4020_train_seed43",
+      "n": 6,
+      "successes": 2,
+      "close_nearest_is_target": 2,
+      "target_lifted": 2,
+      "wrong_object_lifted": 3,
+      "median_approach30_target_xy_mm": 119.36165629352857,
+      "median_close_target_xy_mm": 109.12625495286937,
+      "median_close_nearest_xy_mm": 18.583604376780944,
+      "median_close_orientation_deg": 3.4891883662091767,
+      "median_joint_tracking_mae_rad": 0.012877041902888853,
+      "failure_classes": {
+        "success": 2,
+        "target_grasp_or_approach_failure": 1,
+        "wrong_object_lifted": 3
+      }
+    },
+    {
+      "evaluation": "update_4020_validation_seed42",
+      "n": 15,
+      "successes": 4,
+      "close_nearest_is_target": 7,
+      "target_lifted": 4,
+      "wrong_object_lifted": 6,
+      "median_approach30_target_xy_mm": 85.6151635367952,
+      "median_close_target_xy_mm": 79.46759811197799,
+      "median_close_nearest_xy_mm": 22.613983534563186,
+      "median_close_orientation_deg": 1.5059398757953726,
+      "median_joint_tracking_mae_rad": 0.011440829050370456,
+      "failure_classes": {
+        "success": 4,
+        "target_grasp_or_approach_failure": 5,
+        "wrong_object_lifted": 6
+      }
+    },
+    {
+      "evaluation": "update_4020_validation_seed43",
+      "n": 15,
+      "successes": 1,
+      "close_nearest_is_target": 3,
+      "target_lifted": 2,
+      "wrong_object_lifted": 8,
+      "median_approach30_target_xy_mm": 110.15608330082554,
+      "median_close_target_xy_mm": 101.97733703732543,
+      "median_close_nearest_xy_mm": 22.24132438354582,
+      "median_close_orientation_deg": 1.682005470438806,
+      "median_joint_tracking_mae_rad": 0.011053249568494464,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 2,
+        "failure_after_target_lift": 1,
+        "success": 1,
+        "target_grasp_or_approach_failure": 3,
+        "wrong_object_lifted": 8
+      }
+    },
+    {
+      "evaluation": "update_8040_train_seed42",
+      "n": 6,
+      "successes": 1,
+      "close_nearest_is_target": 2,
+      "target_lifted": 2,
+      "wrong_object_lifted": 3,
+      "median_approach30_target_xy_mm": 66.54528838901273,
+      "median_close_target_xy_mm": 77.32644746997323,
+      "median_close_nearest_xy_mm": 19.01764113263146,
+      "median_close_orientation_deg": 1.3844834694480894,
+      "median_joint_tracking_mae_rad": 0.011707898688366856,
+      "failure_classes": {
+        "failure_after_target_lift": 1,
+        "success": 1,
+        "target_grasp_or_approach_failure": 1,
+        "wrong_object_lifted": 3
+      }
+    },
+    {
+      "evaluation": "update_8040_train_seed43",
+      "n": 6,
+      "successes": 1,
+      "close_nearest_is_target": 2,
+      "target_lifted": 1,
+      "wrong_object_lifted": 1,
+      "median_approach30_target_xy_mm": 103.20577287539632,
+      "median_close_target_xy_mm": 108.15897551198867,
+      "median_close_nearest_xy_mm": 31.590537493957118,
+      "median_close_orientation_deg": 1.9868375247441192,
+      "median_joint_tracking_mae_rad": 0.011703539696308694,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 2,
+        "success": 1,
+        "target_grasp_or_approach_failure": 2,
+        "wrong_object_lifted": 1
+      }
+    },
+    {
+      "evaluation": "update_8040_validation_seed42",
+      "n": 15,
+      "successes": 1,
+      "close_nearest_is_target": 4,
+      "target_lifted": 1,
+      "wrong_object_lifted": 4,
+      "median_approach30_target_xy_mm": 93.5089932403475,
+      "median_close_target_xy_mm": 103.47934317884476,
+      "median_close_nearest_xy_mm": 41.346618733100826,
+      "median_close_orientation_deg": 1.6429404432318107,
+      "median_joint_tracking_mae_rad": 0.01135221542497245,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 1,
+        "success": 1,
+        "target_grasp_or_approach_failure": 9,
+        "wrong_object_lifted": 4
+      }
+    },
+    {
+      "evaluation": "update_8040_validation_seed43",
+      "n": 15,
+      "successes": 1,
+      "close_nearest_is_target": 4,
+      "target_lifted": 2,
+      "wrong_object_lifted": 4,
+      "median_approach30_target_xy_mm": 98.10537481705188,
+      "median_close_target_xy_mm": 99.35174180730013,
+      "median_close_nearest_xy_mm": 31.213231650049515,
+      "median_close_orientation_deg": 1.590406412481853,
+      "median_joint_tracking_mae_rad": 0.011160533714173856,
+      "failure_classes": {
+        "closed_near_wrong_object_without_lift": 3,
+        "failure_after_target_lift": 1,
+        "success": 1,
+        "target_grasp_or_approach_failure": 6,
+        "wrong_object_lifted": 4
+      }
+    }
+  ],
+  "validation_pairs": 30,
+  "old_success_new_failure": 10,
+  "old_failure_new_success": 1,
+  "same_initial_layout_verified": true,
+  "definitions": {
+    "close": "first executed opening command <0.06m",
+    "low": "first TCP z <0.06m",
+    "wrong_object_lift": "any non-target rises >0.05m above its initial center",
+    "bilateral_contact": "target normal force >0.05N on both fingers",
+    "failure_priority": "success, non-target lift, wrong-object closure, pre-lift failure, post-lift failure"
+  }
+}

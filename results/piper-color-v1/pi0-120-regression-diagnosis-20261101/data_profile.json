@@ -1,0 +1,188 @@
+{
+  "rows": 156,
+  "groups": 14,
+  "columns": {
+    "evaluation": {
+      "type": "str",
+      "missing": 0,
+      "unique": 14
+    },
+    "split": {
+      "type": "str",
+      "missing": 0,
+      "unique": 2
+    },
+    "layout": {
+      "type": "int",
+      "missing": 0,
+      "unique": 7
+    },
+    "target": {
+      "type": "str",
+      "missing": 0,
+      "unique": 3
+    },
+    "base_seed": {
+      "type": "int",
+      "missing": 0,
+      "unique": 2
+    },
+    "success": {
+      "type": "bool",
+      "missing": 0,
+      "unique": 2
+    },
+    "error": {
+      "type": "NoneType",
+      "missing": 156,
+      "unique": 1
+    },
+    "frames": {
+      "type": "int",
+      "missing": 0,
+      "unique": 26
+    },
+    "source": {
+      "type": "str",
+      "missing": 0,
+      "unique": 156
+    },
+    "sha256": {
+      "type": "str",
+      "missing": 0,
+      "unique": 156
+    },
+    "first_close_frame": {
+      "type": "int",
+      "missing": 0,
+      "unique": 54
+    },
+    "first_low_frame": {
+      "type": "int",
+      "missing": 0,
+      "unique": 38
+    },
+    "close_time_s": {
+      "type": "float",
+      "missing": 0,
+      "unique": 54
+    },
+    "close_tcp_height_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "close_target_xy_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "close_nearest_color": {
+      "type": "str",
+      "missing": 0,
+      "unique": 3
+    },
+    "close_nearest_xy_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "close_nearest_is_target": {
+      "type": "bool",
+      "missing": 0,
+      "unique": 2
+    },
+    "close_width_command_m": {
+      "type": "float",
+      "missing": 0,
+      "unique": 154
+    },
+    "close_orientation_error_deg": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "low_target_xy_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "low_nearest_color": {
+      "type": "str",
+      "missing": 0,
+      "unique": 3
+    },
+    "best_low_target_xy_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "approach30_target_xy_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "approach30_nearest_color": {
+      "type": "str",
+      "missing": 0,
+      "unique": 3
+    },
+    "target_lifted_5cm": {
+      "type": "bool",
+      "missing": 0,
+      "unique": 2
+    },
+    "non_target_lifted_5cm": {
+      "type": "bool",
+      "missing": 0,
+      "unique": 2
+    },
+    "target_first_contact_frame": {
+      "type": "NoneType",
+      "missing": 92,
+      "unique": 41
+    },
+    "target_first_bilateral_frame": {
+      "type": "NoneType",
+      "missing": 104,
+      "unique": 37
+    },
+    "target_bilateral_frames": {
+      "type": "int",
+      "missing": 0,
+      "unique": 50
+    },
+    "target_first_bilateral_lift_frame": {
+      "type": "NoneType",
+      "missing": 119,
+      "unique": 30
+    },
+    "target_peak_height_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 77
+    },
+    "joint_raw_to_executed_mae_rad": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "joint_command_to_feedback_mae_rad": {
+      "type": "float",
+      "missing": 0,
+      "unique": 156
+    },
+    "distractor_max_xy_displacement_mm": {
+      "type": "float",
+      "missing": 0,
+      "unique": 88
+    },
+    "failure_class": {
+      "type": "str",
+      "missing": 0,
+      "unique": 5
+    }
+  },
+  "unit": "episode; colors and seeds within a layout are correlated; no significance tests",
+  "figures": "paired case traces, per-case targeting errors and explicit count tables"
+}
