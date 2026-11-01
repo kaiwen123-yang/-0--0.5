@@ -1,0 +1,357 @@
+[
+  {
+    "group": "ab-b-checkpoint-2010",
+    "tag": "pi-complete-backup-20261101",
+    "source_files": 35,
+    "source_bytes": 9795141094,
+    "parts": [
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-000",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-001",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-002",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-003",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-004",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-005",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-006",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-007",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-008",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-009",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-010",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-011",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-012",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-013",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-014",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-015",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-016",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-017",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "ab-b-checkpoint-2010.tar.zst.part-018",
+        "bytes": 131531267,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "v2-training-data",
+    "tag": "pi-complete-backup-20261101",
+    "source_files": 735,
+    "source_bytes": 10850899853,
+    "parts": [
+      {
+        "name": "v2-training-data.tar.zst.part-000",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "v2-training-data.tar.zst.part-001",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "v2-training-data.tar.zst.part-002",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "v2-training-data.tar.zst.part-003",
+        "bytes": 133567557,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "ab-records",
+    "tag": "pi-complete-backup-20261101",
+    "source_files": 932,
+    "source_bytes": 280275158,
+    "parts": [
+      {
+        "name": "ab-records.tar.zst.part-000",
+        "bytes": 242165455,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "v2-records",
+    "tag": "pi-complete-backup-20261101",
+    "source_files": 548,
+    "source_bytes": 203527845,
+    "parts": [
+      {
+        "name": "v2-records.tar.zst.part-000",
+        "bytes": 175397872,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "regression-records",
+    "tag": "pi-complete-backup-20261101",
+    "source_files": 209,
+    "source_bytes": 170911695,
+    "parts": [
+      {
+        "name": "regression-records.tar.zst.part-000",
+        "bytes": 167314737,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "existing-fy5080-checkpoints",
+    "tag": "fy5080-pi-artifacts-20261031",
+    "source_files": 28,
+    "source_bytes": 9243886728,
+    "parts": [
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-000",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-001",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-002",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-003",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-004",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-005",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-006",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-007",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-008",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-009",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-010",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-011",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-012",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-013",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-014",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-015",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-016",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-checkpoints.tar.gz.part-017",
+        "bytes": 117689912,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "existing-fy5080-dataset",
+    "tag": "fy5080-pi-artifacts-20261031",
+    "source_files": 1000,
+    "source_bytes": 16523947366,
+    "parts": [
+      {
+        "name": "fy5080-dataset.tar.gz.part-000",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-001",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-002",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-003",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-004",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-005",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-006",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-007",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-008",
+        "bytes": 536870912,
+        "state": "uploaded"
+      },
+      {
+        "name": "fy5080-dataset.tar.gz.part-009",
+        "bytes": 493011933,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  },
+  {
+    "group": "existing-fy5080-supplement",
+    "tag": "fy5080-pi-artifacts-20261031",
+    "source_files": 6,
+    "source_bytes": 15670839,
+    "parts": [
+      {
+        "name": "fy5080-supplement.tar.gz.part-000",
+        "bytes": 16420481,
+        "state": "uploaded"
+      }
+    ],
+    "source_mapping": "runtime/pi-complete-backup-20261101/catalog-working.json",
+    "payload_reread": false
+  }
+]
