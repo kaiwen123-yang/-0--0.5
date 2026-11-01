@@ -1,5 +1,6 @@
 """Archive raw diagnostic evidence on D57 and verify a dedicated GitHub release."""
 import datetime
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -28,9 +29,53 @@ def save(path, value):
     temp.write_text(json.dumps(value, indent=2)); temp.replace(path)
 
 
-def main():
+def get_release():
+    # Draft releases can have an untagged URL and return 404 from /releases/tags.
+    releases = json.loads(subprocess.check_output(["gh", "api", f"repos/{REPO}/releases?per_page=100"], text=True, timeout=120))
+    matches = [r for r in releases if r["tag_name"] == TAG]
+    if len(matches) != 1: raise ValueError("Expected exactly the owned diagnostic release")
+    return matches[0]
+
+
+def verify_and_publish(local, records, target, attempts):
+    release = get_release()
+    def receipts_for(release):
+        receipts = []
+        for a in release["assets"]:
+            if a["name"] in local:
+                ref = local[a["name"]]
+                assert a["state"] == "uploaded" and a["size"] == ref["size"]
+                assert a["digest"] == "sha256:" + ref["sha256"]
+                receipts.append({"name": a["name"], "bytes": a["size"], "digest": a["digest"], "url": a["browser_download_url"]})
+        assert len(receipts) == 3
+        return receipts
+    receipts_for(release)
+    if release["draft"]:
+        subprocess.run(["gh", "release", "edit", TAG, "--repo", REPO, "--draft=false"], check=True, timeout=120)
+    release = get_release()
+    assert not release["draft"]
+    receipts = receipts_for(release)
+    record = {"tag": TAG, "url": release["html_url"], "release_id": release["id"], "draft": release["draft"],
+        "verified_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "target_commit": target,
+        "assets": receipts, "member_files": len(records), "source_bytes": sum(r["bytes"] for r in records),
+        "verification": "Archive member paths/sizes verified; every GitHub asset size and SHA256 digest equals its local file", "upload_attempts": attempts,
+        "scope": "raw diagnosis evidence; model checkpoints and videos remain on D57"}
+    save(OUT / "raw_artifact_release.json", record)
+    save(OUT / "raw_release_progress.json", {"stage": "published_and_verified", "url": release["html_url"]})
+    print(json.dumps(record, indent=2), flush=True)
+
+
+def main(finalize_existing=False):
     status = json.loads((OUT / "probe_status.json").read_text())
     assert status["completed"] and status["optimizer_updates"] == 0
+    if finalize_existing:
+        manifest = json.loads((STAGE / "raw-evidence-manifest.json").read_text())
+        files = [STAGE / name for name in ("pi0-120-regression-raw-evidence.tar.gz", "raw-evidence-manifest.json", "SHA256SUMS")]
+        local = {p.name: {"size": p.stat().st_size, "sha256": sha(p)} for p in files}
+        release = get_release()
+        verify_and_publish(local, manifest["files"], release["target_commitish"],
+                           [{"attempt": 1, "upload": "completed", "verification_retry": "draft tag endpoint 404; queried owned draft by release list"}])
+        return
     STAGE.mkdir(parents=True, exist_ok=False)
     members = []
     for p in sorted((RUN / "evaluations").glob("*/*")):
@@ -91,26 +136,9 @@ Next plan: docs/PI0_120_REGRESSION_NEXT_PLAN_20261101.md
     else:
         save(OUT / "raw_release_progress.json", {"stage": "upload_failed", "attempts": attempts, "assets": local})
         raise RuntimeError("Raw release upload failed after three attempts; draft retained")
-    release = json.loads(subprocess.check_output(["gh", "api", f"repos/{REPO}/releases/tags/{TAG}"], text=True, timeout=120))
-    receipts = []
-    for a in release["assets"]:
-        if a["name"] in local:
-            ref = local[a["name"]]
-            assert a["state"] == "uploaded" and a["size"] == ref["size"]
-            assert a["digest"] == "sha256:" + ref["sha256"]
-            receipts.append({"name": a["name"], "bytes": a["size"], "digest": a["digest"], "url": a["browser_download_url"]})
-    assert len(receipts) == 3
-    subprocess.run(["gh", "release", "edit", TAG, "--repo", REPO, "--draft=false"], check=True, timeout=120)
-    release = json.loads(subprocess.check_output(["gh", "api", f"repos/{REPO}/releases/tags/{TAG}"], text=True, timeout=120))
-    assert not release["draft"]
-    record = {"tag": TAG, "url": release["html_url"], "release_id": release["id"], "draft": release["draft"],
-        "verified_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "target_commit": target,
-        "assets": receipts, "member_files": len(records), "source_bytes": sum(r["bytes"] for r in records),
-        "verification": "Archive member paths/sizes verified; every GitHub asset size and SHA256 digest equals its local file", "upload_attempts": attempts,
-        "scope": "raw diagnosis evidence; model checkpoints and videos remain on D57"}
-    save(OUT / "raw_artifact_release.json", record)
-    save(OUT / "raw_release_progress.json", {"stage": "published_and_verified", "url": release["html_url"]})
-    print(json.dumps(record, indent=2), flush=True)
+    verify_and_publish(local, records, target, attempts)
 
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(); parser.add_argument("--finalize-existing", action="store_true")
+    main(parser.parse_args().finalize_existing)

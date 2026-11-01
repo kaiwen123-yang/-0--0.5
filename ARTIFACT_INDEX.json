@@ -177,5 +177,31 @@
     "new_evaluations": 0,
     "hardware_commands": 0,
     "local_computer_large_file_archive": false
+  },
+  "pi0_120_regression_diagnosis_20261101": {
+    "status": "diagnosis_complete_next_training_proposed_not_started",
+    "analysis_report": "docs/PI0_120_REGRESSION_ANALYSIS_20261101.md",
+    "next_plan": "docs/PI0_120_REGRESSION_NEXT_PLAN_20261101.md",
+    "results": "results/piper-color-v1/pi0-120-regression-diagnosis-20261101",
+    "raw_release": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi0-120-regression-diagnosis-20261101",
+    "raw_asset_receipt": "results/piper-color-v1/pi0-120-regression-diagnosis-20261101/raw_artifact_release.json",
+    "optimizer_updates_in_diagnosis": 0,
+    "original_training_final_updates": 8040,
+    "old_validation": [
+      5,
+      6
+    ],
+    "new8040_validation": [
+      1,
+      1
+    ],
+    "denominator_per_seed": 15,
+    "prefix_diagnostic_only": {
+      "selected_old_success_new_failure_trials": 10,
+      "new_prefix30_success": 8,
+      "new_prefix60_success": 10,
+      "new_prefix85_success": 10
+    },
+    "test_split_used": false
   }
 }
