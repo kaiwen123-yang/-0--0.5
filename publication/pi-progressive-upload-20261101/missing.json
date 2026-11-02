@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-02T15:46:44.676901+00:00",
+  "at_utc": "2026-11-02T15:46:50.153117+00:00",
   "assets": [
     {
       "name": "ef-F-checkpoint-500-file-0006-part-000",
@@ -16,17 +16,10 @@
       "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
-      "name": "ef-local-corrections-file-0020-part-000",
-      "status": "uploading",
-      "source_bytes": 9326625,
-      "attempts": 1,
-      "reason": null
-    },
-    {
       "name": "ef-local-corrections-file-0021-part-000",
-      "status": "queued",
+      "status": "uploading",
       "source_bytes": 9170879,
-      "attempts": 0,
+      "attempts": 1,
       "reason": null
     },
     {
