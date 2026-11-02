@@ -4518,8 +4518,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702278541,
+        "name": "ef-local-corrections-file-0037-part-000",
+        "size": 29955200,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0037-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:50:46.178110+00:00"
     },
     {
       "name": "ef-local-corrections-file-0038-part-000",
@@ -4538,8 +4546,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702279068,
+        "name": "ef-local-corrections-file-0038-part-000",
+        "size": 32213120,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0038-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:50:55.782460+00:00"
     },
     {
       "name": "ef-local-corrections-file-0039-part-000",
@@ -4558,8 +4574,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702279679,
+        "name": "ef-local-corrections-file-0039-part-000",
+        "size": 32213120,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0039-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:51:05.208561+00:00"
     },
     {
       "name": "ef-local-corrections-file-0040-part-000",
@@ -4578,8 +4602,9 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "pending",
+      "attempts": 1,
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "ef-local-corrections-file-0041-part-000",
