@@ -667,8 +667,16 @@
       "offset": 2147483648,
       "part": 2,
       "parts": 3,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702242563,
+        "name": "ef-F-checkpoint-500-file-0020-part-002",
+        "size": 574479037,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0020-part-002"
+      },
+      "uploaded_at": "2026-11-02T15:42:03.114140+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0021-part-000",
@@ -687,8 +695,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 702251677,
+        "name": "ef-F-checkpoint-500-file-0021-part-000",
+        "size": 29653404,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0021-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:42:43.615157+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0022-part-000",
@@ -707,8 +724,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 702253428,
+        "name": "ef-F-checkpoint-500-file-0022-part-000",
+        "size": 59053939,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0022-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:43:25.787176+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-records-0023.tar",
@@ -849,8 +875,17 @@
         }
       ],
       "source_bytes": 198019,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 245760,
+      "receipt": {
+        "id": 702254354,
+        "name": "ef-F-checkpoint-500-records-0023.tar",
+        "size": 245760,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-records-0023.tar"
+      },
+      "uploaded_at": "2026-11-02T15:43:29.130405+00:00"
     },
     {
       "name": "ef-evaluation-E_500-records-0001.tar",
@@ -1627,8 +1662,17 @@
         }
       ],
       "source_bytes": 67069367,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 67307520,
+      "receipt": {
+        "id": 702254897,
+        "name": "ef-evaluation-E_500-records-0001.tar",
+        "size": 67307520,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-evaluation-E_500-records-0001.tar"
+      },
+      "uploaded_at": "2026-11-02T15:44:19.796081+00:00"
     },
     {
       "name": "ef-evaluation-E_500-records-0002.tar",
@@ -1889,8 +1933,18 @@
         }
       ],
       "source_bytes": 20480167,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "bytes": 20561920,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 702258999,
+        "name": "ef-evaluation-E_500-records-0002.tar",
+        "size": 20561920,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-evaluation-E_500-records-0002.tar"
+      },
+      "uploaded_at": "2026-11-02T15:44:56.719304+00:00"
     },
     {
       "name": "ef-evaluation-F_500-records-0000.tar",
@@ -2685,8 +2739,17 @@
         }
       ],
       "source_bytes": 66884928,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 67123200,
+      "receipt": {
+        "id": 702259597,
+        "name": "ef-evaluation-F_500-records-0000.tar",
+        "size": 67123200,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-evaluation-F_500-records-0000.tar"
+      },
+      "uploaded_at": "2026-11-02T15:45:16.123916+00:00"
     },
     {
       "name": "ef-evaluation-F_500-records-0001.tar",
@@ -3385,8 +3448,17 @@
         }
       ],
       "source_bytes": 60315158,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 60528640,
+      "receipt": {
+        "id": 702260631,
+        "name": "ef-evaluation-F_500-records-0001.tar",
+        "size": 60528640,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-evaluation-F_500-records-0001.tar"
+      },
+      "uploaded_at": "2026-11-02T15:45:38.256206+00:00"
     },
     {
       "name": "ef-local-corrections-file-0000-part-000",
@@ -3827,9 +3899,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "pending",
-      "attempts": 1,
-      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])",
+      "receipt": {
+        "id": 702261952,
+        "name": "ef-local-corrections-file-0015-part-000",
+        "size": 9113762,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0015-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:45:42.611069+00:00"
     },
     {
       "name": "ef-local-corrections-file-0016-part-000",
@@ -3848,8 +3928,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702262284,
+        "name": "ef-local-corrections-file-0016-part-000",
+        "size": 9263349,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0016-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:45:48.607110+00:00"
     },
     {
       "name": "ef-local-corrections-file-0017-part-000",

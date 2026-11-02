@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-02T15:39:27.959575+00:00",
+  "at_utc": "2026-11-02T15:45:42.724462+00:00",
   "assets": [
     {
       "name": "ef-F-checkpoint-500-file-0006-part-000",
@@ -16,73 +16,10 @@
       "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
-      "name": "ef-F-checkpoint-500-file-0020-part-002",
-      "status": "queued",
-      "source_bytes": 574479037,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0021-part-000",
-      "status": "queued",
-      "source_bytes": 29653404,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0022-part-000",
-      "status": "queued",
-      "source_bytes": 59053939,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-records-0023.tar",
-      "status": "queued",
-      "source_bytes": 198019,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-evaluation-E_500-records-0001.tar",
-      "status": "queued",
-      "source_bytes": 67069367,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-evaluation-E_500-records-0002.tar",
-      "status": "queued",
-      "source_bytes": 20480167,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-evaluation-F_500-records-0000.tar",
-      "status": "queued",
-      "source_bytes": 66884928,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-evaluation-F_500-records-0001.tar",
-      "status": "queued",
-      "source_bytes": 60315158,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-local-corrections-file-0015-part-000",
-      "status": "pending",
-      "source_bytes": 9113762,
-      "attempts": 1,
-      "reason": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
-    },
-    {
       "name": "ef-local-corrections-file-0016-part-000",
-      "status": "queued",
+      "status": "uploading",
       "source_bytes": 9263349,
-      "attempts": 0,
+      "attempts": 1,
       "reason": null
     },
     {
