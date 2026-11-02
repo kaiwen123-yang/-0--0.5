@@ -20,9 +20,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "pending",
-      "attempts": 1,
-      "error": "BrokenPipeError(32, 'Broken pipe')"
+      "status": "uploaded",
+      "attempts": 3,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 701673825,
+        "name": "ef-local-corrections-file-0000-part-000",
+        "size": 9030345,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0000-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:25:17.910340+00:00"
     },
     {
       "name": "ef-local-corrections-file-0001-part-000",
@@ -41,8 +49,8 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "ef-local-corrections-file-0002-part-000",

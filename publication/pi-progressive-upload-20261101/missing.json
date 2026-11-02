@@ -1,18 +1,11 @@
 {
-  "at_utc": "2026-11-02T12:24:29.473913+00:00",
+  "at_utc": "2026-11-02T12:25:18.008225+00:00",
   "assets": [
     {
-      "name": "ef-local-corrections-file-0000-part-000",
-      "status": "pending",
-      "source_bytes": 9030345,
-      "attempts": 1,
-      "reason": "BrokenPipeError(32, 'Broken pipe')"
-    },
-    {
       "name": "ef-local-corrections-file-0001-part-000",
-      "status": "queued",
+      "status": "uploading",
       "source_bytes": 9005907,
-      "attempts": 0,
+      "attempts": 1,
       "reason": null
     },
     {
