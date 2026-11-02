@@ -17409,9 +17409,17 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "uploading",
+      "status": "uploaded",
       "attempts": 2,
-      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])",
+      "receipt": {
+        "id": 702484397,
+        "name": "progressive-bct-new-845fcb24fb1ae871-wrist_rgb.npy",
+        "size": 49373312,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-845fcb24fb1ae871-wrist_rgb.npy"
+      },
+      "uploaded_at": "2026-11-02T16:56:21.277397+00:00"
     },
     {
       "name": "progressive-bct-new-d823dbaff2b61f94-external_rgb.npy",
@@ -17430,8 +17438,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702485142,
+        "name": "progressive-bct-new-d823dbaff2b61f94-external_rgb.npy",
+        "size": 49373312,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-d823dbaff2b61f94-external_rgb.npy"
+      },
+      "uploaded_at": "2026-11-02T16:56:35.634830+00:00"
     },
     {
       "name": "progressive-bct-new-307c415c9cbc59ee-wrist_rgb.npy",
@@ -17450,8 +17466,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702485846,
+        "name": "progressive-bct-new-307c415c9cbc59ee-wrist_rgb.npy",
+        "size": 49373312,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-307c415c9cbc59ee-wrist_rgb.npy"
+      },
+      "uploaded_at": "2026-11-02T16:56:49.339955+00:00"
     },
     {
       "name": "progressive-bct-new-891b725ce2efa64b-external_rgb.npy",
@@ -17470,8 +17494,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702486459,
+        "name": "progressive-bct-new-891b725ce2efa64b-external_rgb.npy",
+        "size": 49373312,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-891b725ce2efa64b-external_rgb.npy"
+      },
+      "uploaded_at": "2026-11-02T16:57:03.455889+00:00"
     },
     {
       "name": "progressive-bct-new-622433144fe6f9a3-wrist_rgb.npy",
@@ -17490,8 +17522,8 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-bct-new-7432e9fc119511ec-external_rgb.npy",
