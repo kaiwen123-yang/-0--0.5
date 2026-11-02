@@ -337,8 +337,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702164239,
+        "name": "ef-F-checkpoint-500-file-0011-part-000",
+        "size": 32383400,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0011-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:14:40.239572+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0012-part-000",
@@ -357,8 +365,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702164839,
+        "name": "ef-F-checkpoint-500-file-0012-part-000",
+        "size": 34938600,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0012-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:14:54.277309+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0013-part-000",
@@ -377,8 +393,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702165287,
+        "name": "ef-F-checkpoint-500-file-0013-part-000",
+        "size": 17470561,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0013-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:15:00.333989+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0014-part-000",
@@ -397,8 +421,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 702166690,
+        "name": "ef-F-checkpoint-500-file-0014-part-000",
+        "size": 10181056,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0014-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:15:31.486240+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0015-part-000",
@@ -417,8 +450,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702167152,
+        "name": "ef-F-checkpoint-500-file-0015-part-000",
+        "size": 29601616,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0015-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:15:40.497504+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0016-part-000",
@@ -437,8 +478,23 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "apiUrl": "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/assets/702167746",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-11-02T15:15:46Z",
+        "digest": "sha256:a93120c76709eb152d9b2fd299b6bcf63624b72bd01cfb40a6d6fb7f97c5ab97",
+        "downloadCount": 0,
+        "id": "RA_kwDOVV94X84p2jrC",
+        "label": "",
+        "name": "ef-F-checkpoint-500-file-0016-part-000",
+        "size": 946032456,
+        "state": "uploaded",
+        "updatedAt": "2026-11-02T15:19:43Z",
+        "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0016-part-000"
+      }
     },
     {
       "name": "ef-F-checkpoint-500-file-0017-part-000",
@@ -457,8 +513,23 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "apiUrl": "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/assets/702181663",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-11-02T15:20:08Z",
+        "digest": "sha256:8d9fb229ad3e85bc83422e27921b174c88b1c6a9491a702ab97f4d80fa4fd40f",
+        "downloadCount": 0,
+        "id": "RA_kwDOVV94X84p2nEf",
+        "label": "",
+        "name": "ef-F-checkpoint-500-file-0017-part-000",
+        "size": 767633209,
+        "state": "uploaded",
+        "updatedAt": "2026-11-02T15:23:36Z",
+        "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0017-part-000"
+      }
     },
     {
       "name": "ef-F-checkpoint-500-file-0018-part-000",
@@ -477,8 +548,23 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "apiUrl": "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/assets/702193944",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-11-02T15:23:52Z",
+        "digest": "sha256:4d9a0e87e23ad67676cb05315695c74cea25f99e7e98e8dc04d420567d2ea6f4",
+        "downloadCount": 0,
+        "id": "RA_kwDOVV94X84p2qEY",
+        "label": "",
+        "name": "ef-F-checkpoint-500-file-0018-part-000",
+        "size": 1229926288,
+        "state": "uploaded",
+        "updatedAt": "2026-11-02T15:29:21Z",
+        "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0018-part-000"
+      }
     },
     {
       "name": "ef-F-checkpoint-500-file-0019-part-000",
@@ -497,8 +583,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702213728,
+        "name": "ef-F-checkpoint-500-file-0019-part-000",
+        "size": 17487932,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0019-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:29:35.534499+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0020-part-000",
@@ -517,8 +611,23 @@
       "offset": 0,
       "part": 0,
       "parts": 3,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "apiUrl": "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/assets/702214080",
+        "contentType": "application/octet-stream",
+        "createdAt": "2026-11-02T15:29:37Z",
+        "digest": "sha256:0c0714062f849ebffb8dfdb5e854e7806257e05a6c007e51e50b3a1dd4427b24",
+        "downloadCount": 0,
+        "id": "RA_kwDOVV94X84p2u_A",
+        "label": "",
+        "name": "ef-F-checkpoint-500-file-0020-part-000",
+        "size": 1073741824,
+        "state": "uploaded",
+        "updatedAt": "2026-11-02T15:34:15Z",
+        "url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0020-part-000"
+      }
     },
     {
       "name": "ef-F-checkpoint-500-file-0020-part-001",
