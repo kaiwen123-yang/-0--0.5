@@ -6163,8 +6163,9 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "uploading",
-      "attempts": 1
+      "status": "pending",
+      "attempts": 1,
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "ef-E-checkpoint-500-file-0001-part-000",
