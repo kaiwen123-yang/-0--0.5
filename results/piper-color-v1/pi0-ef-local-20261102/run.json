@@ -1,8 +1,8 @@
 {
   "started_at": "2026-11-02T12:13:19.886195+00:00",
-  "completed": false,
-  "stage": "F_500",
-  "at_utc": "2026-11-02T13:05:27.131908+00:00",
+  "completed": true,
+  "stage": "experiment_complete",
+  "at_utc": "2026-11-02T13:05:34.316761+00:00",
   "counts": {
     "updates": {
       "E": 500,
@@ -14,5 +14,7 @@
   "child_pid": null,
   "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/F_500_1793623423619867259.log",
   "service_pid": null,
-  "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/serve_F_500_1793623410608172693.log"
+  "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/serve_F_500_1793623410608172693.log",
+  "selected_candidate": "B",
+  "finished_at": "2026-11-02T13:05:34.316735+00:00"
 }
