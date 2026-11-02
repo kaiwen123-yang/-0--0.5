@@ -301,8 +301,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701678579,
+        "name": "ef-local-corrections-file-0010-part-000",
+        "size": 8923999,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0010-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:26:51.587435+00:00"
     },
     {
       "name": "ef-local-corrections-file-0011-part-000",
@@ -321,8 +329,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701678809,
+        "name": "ef-local-corrections-file-0011-part-000",
+        "size": 10273363,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0011-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:26:57.067318+00:00"
     },
     {
       "name": "ef-local-corrections-file-0012-part-000",
@@ -341,8 +357,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "receipt": {
+        "id": 701680385,
+        "name": "ef-local-corrections-file-0012-part-000",
+        "size": 8832047,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0012-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:27:31.631177+00:00"
     },
     {
       "name": "ef-local-corrections-file-0013-part-000",
@@ -361,8 +386,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701680919,
+        "name": "ef-local-corrections-file-0013-part-000",
+        "size": 8852265,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0013-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:27:42.812627+00:00"
     },
     {
       "name": "ef-local-corrections-file-0014-part-000",
@@ -381,8 +414,8 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "ef-local-corrections-file-0015-part-000",
