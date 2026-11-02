@@ -1,0 +1,3622 @@
+{
+  "group": "F",
+  "samples": 4000,
+  "source_optimizer_updates": 4020,
+  "correction_starts": 400,
+  "replacement_indices": [
+    5,
+    6,
+    11,
+    28,
+    30,
+    40,
+    42,
+    52,
+    53,
+    59,
+    63,
+    91,
+    95,
+    110,
+    130,
+    134,
+    149,
+    152,
+    153,
+    177,
+    183,
+    191,
+    195,
+    199,
+    200,
+    201,
+    231,
+    246,
+    247,
+    257,
+    265,
+    275,
+    280,
+    303,
+    304,
+    334,
+    341,
+    352,
+    389,
+    390,
+    392,
+    402,
+    403,
+    407,
+    408,
+    411,
+    413,
+    415,
+    418,
+    425,
+    430,
+    443,
+    446,
+    456,
+    457,
+    458,
+    463,
+    533,
+    572,
+    592,
+    594,
+    595,
+    596,
+    608,
+    620,
+    640,
+    643,
+    668,
+    669,
+    674,
+    699,
+    713,
+    720,
+    766,
+    774,
+    778,
+    779,
+    794,
+    795,
+    813,
+    836,
+    840,
+    844,
+    847,
+    851,
+    867,
+    879,
+    892,
+    896,
+    899,
+    913,
+    920,
+    931,
+    954,
+    977,
+    986,
+    989,
+    1011,
+    1022,
+    1026,
+    1039,
+    1045,
+    1074,
+    1077,
+    1099,
+    1109,
+    1132,
+    1164,
+    1165,
+    1167,
+    1183,
+    1189,
+    1196,
+    1207,
+    1210,
+    1214,
+    1223,
+    1234,
+    1247,
+    1261,
+    1279,
+    1298,
+    1301,
+    1317,
+    1324,
+    1328,
+    1335,
+    1341,
+    1352,
+    1354,
+    1365,
+    1370,
+    1408,
+    1425,
+    1432,
+    1450,
+    1452,
+    1454,
+    1479,
+    1497,
+    1501,
+    1502,
+    1506,
+    1515,
+    1518,
+    1527,
+    1530,
+    1553,
+    1558,
+    1571,
+    1576,
+    1580,
+    1588,
+    1607,
+    1628,
+    1629,
+    1642,
+    1677,
+    1699,
+    1701,
+    1715,
+    1717,
+    1719,
+    1726,
+    1729,
+    1731,
+    1746,
+    1747,
+    1759,
+    1785,
+    1787,
+    1790,
+    1800,
+    1809,
+    1810,
+    1816,
+    1819,
+    1829,
+    1839,
+    1855,
+    1862,
+    1875,
+    1882,
+    1889,
+    1895,
+    1896,
+    1903,
+    1923,
+    1930,
+    1932,
+    1936,
+    1947,
+    1949,
+    1951,
+    1954,
+    1958,
+    1959,
+    1960,
+    1963,
+    1997,
+    2002,
+    2003,
+    2015,
+    2016,
+    2021,
+    2050,
+    2062,
+    2069,
+    2071,
+    2073,
+    2082,
+    2092,
+    2102,
+    2126,
+    2129,
+    2153,
+    2177,
+    2195,
+    2205,
+    2207,
+    2210,
+    2219,
+    2226,
+    2244,
+    2245,
+    2252,
+    2289,
+    2313,
+    2314,
+    2335,
+    2337,
+    2364,
+    2380,
+    2384,
+    2390,
+    2391,
+    2396,
+    2398,
+    2401,
+    2410,
+    2420,
+    2423,
+    2430,
+    2432,
+    2457,
+    2459,
+    2460,
+    2461,
+    2462,
+    2468,
+    2475,
+    2477,
+    2490,
+    2491,
+    2501,
+    2506,
+    2508,
+    2511,
+    2526,
+    2542,
+    2554,
+    2570,
+    2579,
+    2591,
+    2595,
+    2598,
+    2599,
+    2622,
+    2629,
+    2642,
+    2651,
+    2658,
+    2665,
+    2671,
+    2682,
+    2718,
+    2721,
+    2747,
+    2758,
+    2764,
+    2777,
+    2785,
+    2786,
+    2792,
+    2800,
+    2810,
+    2816,
+    2822,
+    2843,
+    2875,
+    2891,
+    2897,
+    2921,
+    2949,
+    2956,
+    2971,
+    2979,
+    2982,
+    2997,
+    3003,
+    3016,
+    3017,
+    3034,
+    3035,
+    3039,
+    3063,
+    3064,
+    3068,
+    3089,
+    3095,
+    3097,
+    3105,
+    3107,
+    3150,
+    3158,
+    3162,
+    3177,
+    3181,
+    3182,
+    3187,
+    3198,
+    3209,
+    3218,
+    3228,
+    3249,
+    3256,
+    3257,
+    3261,
+    3277,
+    3284,
+    3291,
+    3295,
+    3302,
+    3307,
+    3310,
+    3335,
+    3343,
+    3346,
+    3352,
+    3362,
+    3379,
+    3399,
+    3409,
+    3414,
+    3441,
+    3443,
+    3458,
+    3477,
+    3502,
+    3516,
+    3569,
+    3602,
+    3605,
+    3621,
+    3623,
+    3624,
+    3625,
+    3636,
+    3640,
+    3645,
+    3659,
+    3668,
+    3670,
+    3673,
+    3692,
+    3694,
+    3696,
+    3706,
+    3711,
+    3718,
+    3724,
+    3731,
+    3735,
+    3745,
+    3765,
+    3779,
+    3785,
+    3787,
+    3797,
+    3798,
+    3813,
+    3822,
+    3828,
+    3830,
+    3833,
+    3840,
+    3863,
+    3874,
+    3877,
+    3885,
+    3888,
+    3890,
+    3891,
+    3903,
+    3959,
+    3962,
+    3969,
+    3976,
+    3987,
+    3990
+  ],
+  "correction_details": [
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 1,
+      "frame": 140,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 166,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 62,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 1,
+      "frame": 87,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 131,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 2,
+      "frame": 110,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 12,
+      "frame": 28,
+      "layout": 131
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 149,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 34,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 6,
+      "frame": 37,
+      "layout": 114
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 31,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 14,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 10,
+      "frame": 45,
+      "layout": 124
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 5,
+      "frame": 71,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 15,
+      "frame": 130,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 4,
+      "frame": 180,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 22,
+      "frame": 151,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 0,
+      "frame": 118,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 23,
+      "frame": 28,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 5,
+      "frame": 145,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 16,
+      "layout": 120
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 7,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 17,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 30,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 9,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 7,
+      "frame": 23,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 21,
+      "frame": 47,
+      "layout": 120
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 23,
+      "frame": 61,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 60,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 40,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 20,
+      "frame": 15,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 10,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 65,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 32,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 117,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 5,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 19,
+      "frame": 120,
+      "layout": 109
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 7,
+      "frame": 59,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 13,
+      "frame": 182,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 23,
+      "frame": 1,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 15,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 35,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 20,
+      "frame": 29,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 0,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 13,
+      "frame": 44,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 12,
+      "frame": 80,
+      "layout": 131
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 5,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 1,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 9,
+      "frame": 140,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 43,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 3,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 8,
+      "frame": 34,
+      "layout": 122
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 9,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 4,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 12,
+      "frame": 184,
+      "layout": 131
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 16,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 71,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 12,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 145,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 4,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 20,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 67,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 18,
+      "frame": 49,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 21,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 5,
+      "frame": 68,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 40,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 4,
+      "frame": 56,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 12,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 17,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 31,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 19,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 50,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 23,
+      "frame": 0,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 3,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 26,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 6,
+      "frame": 63,
+      "layout": 114
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 13,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 19,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 20,
+      "frame": 8,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 25,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 21,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 6,
+      "frame": 129,
+      "layout": 114
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 105,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 32,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 23,
+      "frame": 30,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 2,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 18,
+      "frame": 98,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 12,
+      "frame": 44,
+      "layout": 131
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 7,
+      "frame": 52,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 54,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 8,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 17,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 20,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 19,
+      "frame": 10,
+      "layout": 109
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 5,
+      "frame": 58,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 93,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 10,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 43,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 40,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 20,
+      "frame": 6,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 15,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 53,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 1,
+      "frame": 176,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 50,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 37,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 8,
+      "frame": 6,
+      "layout": 122
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 42,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 2,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 10,
+      "frame": 168,
+      "layout": 124
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 16,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 15,
+      "frame": 85,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 6,
+      "frame": 96,
+      "layout": 114
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 11,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 15,
+      "frame": 159,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 6,
+      "frame": 16,
+      "layout": 114
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 15,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 18,
+      "frame": 28,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 1,
+      "frame": 74,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 21,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 0,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 15,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 16,
+      "frame": 122,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 14,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 41,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 146,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 9,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 14,
+      "frame": 44,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 56,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 15,
+      "frame": 80,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 18,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 18,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 9,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 3,
+      "frame": 80,
+      "layout": 103
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 19,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 21,
+      "frame": 198,
+      "layout": 120
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 20,
+      "frame": 8,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 52,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 0,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 10,
+      "frame": 19,
+      "layout": 124
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 15,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 2,
+      "frame": 141,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 26,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 68,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 22,
+      "layout": 120
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 1,
+      "frame": 128,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 9,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 43,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 19,
+      "frame": 22,
+      "layout": 109
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 39,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 11,
+      "frame": 78,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 35,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 7,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 13,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 8,
+      "frame": 38,
+      "layout": 122
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 3,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 89,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 19,
+      "frame": 40,
+      "layout": 109
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 5,
+      "frame": 181,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 13,
+      "frame": 78,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 4,
+      "frame": 61,
+      "layout": 105
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 151,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 37,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 3,
+      "frame": 162,
+      "layout": 103
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 0,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 18,
+      "frame": 69,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 9,
+      "frame": 154,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 13,
+      "layout": 138
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 60,
+      "layout": 126
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 20,
+      "frame": 42,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 132,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 42,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 23,
+      "frame": 1,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 16,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 18,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 23,
+      "frame": 19,
+      "layout": 139
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 2,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 88,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "red",
+      "episode": 6,
+      "frame": 172,
+      "layout": 114
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 12,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 49,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 19,
+      "frame": 52,
+      "layout": 109
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 15,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 0,
+      "frame": 152,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 19,
+      "frame": 32,
+      "layout": 109
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 11,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 45,
+      "layout": 100
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 19,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 15,
+      "layout": 101
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 18,
+      "frame": 121,
+      "layout": 107
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 20,
+      "frame": 30,
+      "layout": 113
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 9,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 20,
+      "layout": 134
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 33,
+      "layout": 137
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 5,
+      "frame": 120,
+      "layout": 110
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "blue",
+      "episode": 21,
+      "frame": 189,
+      "layout": 120
+    },
+    {
+      "segment": 0,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 12,
+      "frame": 13,
+      "layout": 131
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 7,
+      "frame": 43,
+      "layout": 115
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 73,
+      "layout": 102
+    },
+    {
+      "segment": 0,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 9,
+      "frame": 69,
+      "layout": 123
+    },
+    {
+      "segment": 0,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 134,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 25,
+      "layout": 137
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 2,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 47,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 4,
+      "frame": 39,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 2,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 2,
+      "frame": 165,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 12,
+      "frame": 40,
+      "layout": 131
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 15,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 51,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 10,
+      "frame": 21,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 133,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 50,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 8,
+      "frame": 74,
+      "layout": 122
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 28,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 18,
+      "frame": 48,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 10,
+      "frame": 65,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 27,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 13,
+      "frame": 193,
+      "layout": 134
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 34,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 22,
+      "frame": 159,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 11,
+      "frame": 182,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 28,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 5,
+      "frame": 186,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 3,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 6,
+      "frame": 13,
+      "layout": 114
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 70,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 5,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 3,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 14,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 40,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 12,
+      "frame": 12,
+      "layout": 131
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 16,
+      "frame": 75,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 15,
+      "frame": 49,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 1,
+      "frame": 121,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 56,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 4,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 20,
+      "frame": 172,
+      "layout": 113
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 5,
+      "frame": 62,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 21,
+      "frame": 76,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 1,
+      "frame": 73,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 69,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 27,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 14,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 97,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 13,
+      "frame": 58,
+      "layout": 134
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 14,
+      "frame": 179,
+      "layout": 137
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 0,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 0,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 8,
+      "frame": 38,
+      "layout": 122
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 114,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 90,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 8,
+      "frame": 134,
+      "layout": 122
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 10,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 13,
+      "frame": 74,
+      "layout": 134
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 10,
+      "frame": 39,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 18,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 2,
+      "frame": 199,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 42,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 7,
+      "frame": 36,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 40,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 8,
+      "frame": 36,
+      "layout": 122
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 2,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 58,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 14,
+      "frame": 101,
+      "layout": 137
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 12,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 13,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 20,
+      "frame": 119,
+      "layout": 113
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 64,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 57,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 20,
+      "frame": 146,
+      "layout": 113
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 5,
+      "frame": 152,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 40,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 32,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 24,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 0,
+      "frame": 166,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 10,
+      "frame": 62,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 27,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 15,
+      "frame": 210,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 8,
+      "frame": 54,
+      "layout": 122
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 171,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 84,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 4,
+      "frame": 41,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 4,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 86,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 4,
+      "frame": 182,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 19,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 62,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 19,
+      "frame": 77,
+      "layout": 109
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 7,
+      "frame": 20,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 2,
+      "frame": 192,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 20,
+      "frame": 182,
+      "layout": 113
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 9,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 22,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 10,
+      "frame": 95,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 46,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 19,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 23,
+      "frame": 11,
+      "layout": 139
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 4,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 18,
+      "frame": 82,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 4,
+      "frame": 43,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 6,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 16,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 10,
+      "frame": 142,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 15,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 8,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 10,
+      "frame": 89,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 58,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 29,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 6,
+      "frame": 36,
+      "layout": 114
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 15,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 21,
+      "frame": 76,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 9,
+      "frame": 92,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 66,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 22,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 9,
+      "frame": 57,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 69,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 18,
+      "frame": 14,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 10,
+      "frame": 8,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 13,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 15,
+      "frame": 20,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 10,
+      "frame": 184,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 16,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 32,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 16,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 14,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 10,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 14,
+      "frame": 54,
+      "layout": 137
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 9,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 0,
+      "frame": 84,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 18,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 69,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 3,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 3,
+      "frame": 117,
+      "layout": 103
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 14,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 32,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 6,
+      "frame": 106,
+      "layout": 114
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 13,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "blue",
+      "episode": 11,
+      "frame": 163,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 10,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 17,
+      "frame": 6,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 20,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 10,
+      "frame": 147,
+      "layout": 124
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 15,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 2,
+      "frame": 78,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 9,
+      "layout": 137
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 17,
+      "frame": 184,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 31,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 8,
+      "frame": 68,
+      "layout": 122
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 43,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 8,
+      "layout": 134
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 12,
+      "frame": 39,
+      "layout": 131
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 14,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 30,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 14,
+      "frame": 2,
+      "layout": 137
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 7,
+      "frame": 132,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 11,
+      "frame": 31,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 6,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 14,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 15,
+      "frame": 46,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 12,
+      "frame": 93,
+      "layout": 131
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 5,
+      "frame": 99,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 18,
+      "frame": 54,
+      "layout": 107
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 20,
+      "frame": 49,
+      "layout": 113
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 22,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 13,
+      "frame": 9,
+      "layout": 134
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 4,
+      "frame": 4,
+      "layout": 105
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 15,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 11,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 9,
+      "frame": 83,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 16,
+      "frame": 61,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 13,
+      "frame": 52,
+      "layout": 134
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 23,
+      "frame": 6,
+      "layout": 139
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 5,
+      "frame": 4,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 8,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 43,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "green",
+      "episode": 22,
+      "frame": 78,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 5,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 3,
+      "frame": 55,
+      "layout": 103
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 22,
+      "frame": 66,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 21,
+      "frame": 66,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 12,
+      "frame": 195,
+      "layout": 131
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 0,
+      "layout": 115
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 2,
+      "frame": 41,
+      "layout": 102
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 1,
+      "frame": 21,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 5,
+      "frame": 78,
+      "layout": 110
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "blue",
+      "episode": 21,
+      "frame": 58,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 12,
+      "frame": 195,
+      "layout": 131
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 17,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 11,
+      "frame": 15,
+      "layout": 126
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "red",
+      "episode": 9,
+      "frame": 22,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "green",
+      "episode": 17,
+      "frame": 32,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 21,
+      "frame": 27,
+      "layout": 120
+    },
+    {
+      "segment": 1,
+      "category": "completion",
+      "color": "red",
+      "episode": 1,
+      "frame": 123,
+      "layout": 101
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 16,
+      "frame": 1,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 13,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 9,
+      "frame": 67,
+      "layout": 123
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 22,
+      "frame": 18,
+      "layout": 138
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "blue",
+      "episode": 0,
+      "frame": 3,
+      "layout": 100
+    },
+    {
+      "segment": 1,
+      "category": "grasp_lift",
+      "color": "red",
+      "episode": 23,
+      "frame": 58,
+      "layout": 139
+    },
+    {
+      "segment": 1,
+      "category": "align_descend",
+      "color": "green",
+      "episode": 7,
+      "frame": 15,
+      "layout": 115
+    }
+  ],
+  "paired_original_positions": true,
+  "original_frame_probabilities": [
+    0.4,
+    0.3,
+    0.3
+  ],
+  "correction_stage_probabilities": [
+    0.5,
+    0.3,
+    0.2
+  ],
+  "sampling_seed": 20261102
+}

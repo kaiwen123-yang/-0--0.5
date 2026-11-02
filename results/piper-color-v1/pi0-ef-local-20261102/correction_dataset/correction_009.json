@@ -1,0 +1,145 @@
+{
+  "attempt": 9,
+  "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+  "layout": 123,
+  "target": "red",
+  "slot": "back",
+  "intervention_frame": 25,
+  "reason": "sustained_xy_drift",
+  "success": true,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/correction_dataset/correction_009.mp4",
+  "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/correction_dataset/correction_009.npz",
+  "replay_qpos_max_error": 0.0,
+  "held_at_takeover": false,
+  "teacher_plan": [
+    {
+      "stage": "local_align",
+      "endpoint": [
+        -0.21407463476760857,
+        -0.026261353813638588,
+        0.17605676368541662
+      ],
+      "width": 0.1,
+      "steps": 10
+    },
+    {
+      "stage": "descend",
+      "endpoint": [
+        -0.21407463476760857,
+        -0.026261353813638588,
+        0.02
+      ],
+      "width": 0.1,
+      "steps": 34
+    },
+    {
+      "stage": "grasp",
+      "endpoint": [
+        -0.21407463476760857,
+        -0.026261353813638588,
+        0.02
+      ],
+      "width": 0.0,
+      "steps": 20
+    },
+    {
+      "stage": "lift",
+      "endpoint": [
+        -0.21407463476760857,
+        -0.026261353813638588,
+        0.17
+      ],
+      "width": 0.0,
+      "steps": 30
+    },
+    {
+      "stage": "transfer",
+      "endpoint": [
+        -0.14,
+        0.16,
+        0.17
+      ],
+      "width": 0.0,
+      "steps": 40
+    },
+    {
+      "stage": "lower",
+      "endpoint": [
+        -0.14,
+        0.16,
+        0.08
+      ],
+      "width": 0.0,
+      "steps": 26
+    },
+    {
+      "stage": "release",
+      "endpoint": [
+        -0.14,
+        0.16,
+        0.08
+      ],
+      "width": 0.1,
+      "steps": 20
+    },
+    {
+      "stage": "retreat",
+      "endpoint": [
+        -0.14,
+        0.16,
+        0.17
+      ],
+      "width": 0.1,
+      "steps": 30
+    },
+    {
+      "stage": "settle",
+      "endpoint": [
+        -0.14,
+        0.16,
+        0.17
+      ],
+      "width": 0.1,
+      "steps": 40
+    }
+  ],
+  "terminal": {
+    "layout_seed": 123,
+    "target": "red",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.14399856188796423,
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.13832197137814634,
+        0.16038801069082512,
+        0.025393255988701218
+      ],
+      "green": [
+        -0.13782992356328883,
+        -0.1588375893024724,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.2298941478310742,
+        -0.16249301147151524,
+        0.017393255988701235
+      ]
+    },
+    "steps": 239
+  },
+  "steps": 239,
+  "teacher_frames": 214,
+  "continuous_success_steps": 40
+}
