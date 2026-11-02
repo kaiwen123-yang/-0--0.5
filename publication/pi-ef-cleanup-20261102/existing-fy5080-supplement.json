@@ -1,6 +1,6 @@
 {
   "at_utc": "2026-11-02T12:26:23.833278+00:00",
-  "status": "verified_ready_to_delete",
+  "status": "deleted",
   "group": "existing-fy5080-supplement",
   "release_tag": "fy5080-pi-artifacts-20261031",
   "remote_assets": [
@@ -42,5 +42,14 @@
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102"
   ],
-  "freed_bytes": 0
+  "freed_bytes": 15670839,
+  "deleted_at": "2026-11-02T12:26:28.933422+00:00",
+  "deleted_paths": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/source-v1.tar.gz",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/public-datasets-20261024/Ray0v0__cl-piper-single-stack-bowls/data/chunk-000/episode_000000.parquet",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/public-datasets-20261024/aromanus__openpi_PiPER_demo_train_2/data/chunk-000/episode_000000.parquet",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/public-datasets-20261024/aromanus__openpi_PiPER_demo_train_2/videos/chunk-000/observation.images.left_camera/episode_000000.mp4",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/public-datasets-20261024/aromanus__openpi_PiPER_demo_train_2/videos/chunk-000/observation.images.right_camera/episode_000000.mp4",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/public-datasets-20261024/aromanus__openpi_PiPER_demo_train_2/videos/chunk-000/observation.images.top_camera/episode_000000.mp4"
+  ]
 }
