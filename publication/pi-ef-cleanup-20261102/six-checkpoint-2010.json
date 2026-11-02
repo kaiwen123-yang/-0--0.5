@@ -1,0 +1,247 @@
+{
+  "at_utc": "2026-11-02T12:26:36.278309+00:00",
+  "status": "verified_ready_to_delete",
+  "group": "six-checkpoint-2010",
+  "release_tag": "pi-complete-backup-20261101",
+  "remote_assets": [
+    {
+      "name": "progressive-six-checkpoint-2010-records-3d2056b6e0076b5c.tar",
+      "size": 1024000,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-0ecd940253a5b395-802e11448feeeb954260279ac9ff5952",
+      "size": 137902930,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-1163df638bd980ba-00263fd249130cfc6cc9c78bb4f4f317",
+      "size": 1801307622,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-229a907a60c19336-1ef5a3f00d24d3bfd18a8a332f6ba994",
+      "size": 534143300,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-493455885fc2ffa7-f6695727109d9546268fc5af1055310f",
+      "size": 1775930568,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-65527b98b570c9f1-ce18a55659d95f17ad3434ed0732499b",
+      "size": 117479446,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-7545121abfff5d62-66fc37a7fac2169b0fa471a2bb0734b6",
+      "size": 90829978,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-83f0a4e3ff3aa9d8-a21700667ed7cb1d60aea495874f2421",
+      "size": 177442810,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-9df7cceca1cfa651-a558f844f903d4f11c5b1f19f879ea62",
+      "size": 1892067785,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-bbef1f2d291b7787-0d3c0c619291cb42a58f3c9a8328de48",
+      "size": 993816096,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-bd8be5ba3f143314-1a1812968760898f6e1813f8b8c56eb6",
+      "size": 265938638,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-ca9239174632f95d-e629c8b0aadc1c5c3355e97ac2eac2c6",
+      "size": 369051470,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-dbd0842656ce1001-bfd709e948adca9e09105ebdaf215f2b",
+      "size": 352844879,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-six-checkpoint-2010-fdddb4c5813bb09f-908d433a9df391c5f4571725ffa567e8",
+      "size": 1286231633,
+      "state": "uploaded"
+    }
+  ],
+  "source_paths": [
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/_CHECKPOINT_METADATA",
+      "bytes": 426
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/assets/piper_h_color_v1/norm_stats.json",
+      "bytes": 1874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/_METADATA",
+      "bytes": 32125
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/_sharding",
+      "bytes": 17433
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/array_metadatas/process_0",
+      "bytes": 12618
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/d/8f6c7de3e988ecab9c94ef0623835335",
+      "bytes": 2633
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/manifest.ocdbt",
+      "bytes": 118
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/47f2e38d5cee7c0b7c5e3ed1f7d6ae89",
+      "bytes": 1374
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/5f5cc37985ad73229d099d0e360e4039",
+      "bytes": 519
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/798cc901554f81b88d4a1b7e126723aa",
+      "bytes": 212
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/9e039315e7ac5d24793974d02354b105",
+      "bytes": 761
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/d075f87a8172075e517eb33b2858f82f",
+      "bytes": 1041
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/def6f3123a926bdbad185789b27cc460",
+      "bytes": 5357
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/e0866c3e6be95dd36bede8c5ca51f10f",
+      "bytes": 866
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 140
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/resume.json",
+      "bytes": 419
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/_METADATA",
+      "bytes": 62029
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/_sharding",
+      "bytes": 28685
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/array_metadatas/process_0",
+      "bytes": 20601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/d/a9ec3a3ef3386f512dab1004850b1acd",
+      "bytes": 2796
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/manifest.ocdbt",
+      "bytes": 118
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/2c0f3c2e7a1c2d933f6336cf71c54b06",
+      "bytes": 771177
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/30c88e20e4ff3d0dae8e9d7789f966e5",
+      "bytes": 1245
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/7e0fffa6d955732effd2a812cb374e9c",
+      "bytes": 1231
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/b789b89dcbb51d7b226eea075a7b1158",
+      "bytes": 171
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/eb3a40e59861ba2dc3e4f97dd92f09a5",
+      "bytes": 1202
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 430
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/802e11448feeeb954260279ac9ff5952",
+      "bytes": 137902930
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/00263fd249130cfc6cc9c78bb4f4f317",
+      "bytes": 1801307622
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/1ef5a3f00d24d3bfd18a8a332f6ba994",
+      "bytes": 534143300
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/f6695727109d9546268fc5af1055310f",
+      "bytes": 1775930568
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/ce18a55659d95f17ad3434ed0732499b",
+      "bytes": 117479446
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/66fc37a7fac2169b0fa471a2bb0734b6",
+      "bytes": 90829978
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/a21700667ed7cb1d60aea495874f2421",
+      "bytes": 177442810
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/a558f844f903d4f11c5b1f19f879ea62",
+      "bytes": 1892067785
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/0d3c0c619291cb42a58f3c9a8328de48",
+      "bytes": 993816096
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/1a1812968760898f6e1813f8b8c56eb6",
+      "bytes": 265938638
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/params/ocdbt.process_0/d/e629c8b0aadc1c5c3355e97ac2eac2c6",
+      "bytes": 369051470
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/bfd709e948adca9e09105ebdaf215f2b",
+      "bytes": 352844879
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-six-demo-20261031/checkpoints/pi0_piper_color_lora/six_demo_v1/2010/train_state/ocdbt.process_0/d/908d433a9df391c5f4571725ffa567e8",
+      "bytes": 1286231633
+    }
+  ],
+  "active_dependencies_retained": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102"
+  ],
+  "freed_bytes": 0
+}
