@@ -20658,8 +20658,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702966953,
+        "name": "progressive-bct-new-2bbb502f84042c4d-f48e0fc74771908d41b932ec010e6a6f",
+        "size": 946037409,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-2bbb502f84042c4d-f48e0fc74771908d41b932ec010e6a6f"
+      },
+      "uploaded_at": "2026-11-02T19:51:23.616607+00:00"
     },
     {
       "name": "progressive-bct-new-5aefa2389f691742-ff47279d32aab0fa372cb50a4490844c",
@@ -20678,8 +20686,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702978716,
+        "name": "progressive-bct-new-5aefa2389f691742-ff47279d32aab0fa372cb50a4490844c",
+        "size": 59053834,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-5aefa2389f691742-ff47279d32aab0fa372cb50a4490844c"
+      },
+      "uploaded_at": "2026-11-02T19:51:39.852353+00:00"
     },
     {
       "name": "progressive-bct-new-records-da2a7a02f830c864.tar",
@@ -21984,8 +22000,17 @@
       ],
       "source_bytes": 42477006,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 42885120,
+      "receipt": {
+        "id": 702979469,
+        "name": "progressive-bct-new-records-da2a7a02f830c864.tar",
+        "size": 42885120,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-records-da2a7a02f830c864.tar"
+      },
+      "uploaded_at": "2026-11-02T19:51:52.436216+00:00"
     },
     {
       "name": "progressive-six-checkpoint-2010-records-3d2056b6e0076b5c.tar",
@@ -23142,8 +23167,8 @@
       "part": 0,
       "parts": 1,
       "group": "ab-a-checkpoint-1000",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-ab-a-checkpoint-1000-80f6b9da4c50fc98-8293f0ae54a71a97823c6701771227bb",
