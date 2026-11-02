@@ -4646,9 +4646,29 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "pending",
-      "attempts": 3,
-      "error": "BrokenPipeError(32, 'Broken pipe')"
+      "status": "uploaded",
+      "attempts": 1,
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "attempt_history": [
+        {
+          "at_utc": "2026-11-02T16:19:47.908937+00:00",
+          "event": "new_authorized_transport_batch",
+          "name": "ef-local-corrections-file-0040-part-000",
+          "previous_attempts": 3,
+          "previous_error": "BrokenPipeError(32, 'Broken pipe')",
+          "transport": "d57_server_clash",
+          "remote_name_absent": true,
+          "next_attempt_cap": 3
+        }
+      ],
+      "receipt": {
+        "id": 702371535,
+        "name": "ef-local-corrections-file-0040-part-000",
+        "size": 31460480,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0040-part-000"
+      },
+      "uploaded_at": "2026-11-02T16:19:59.157488+00:00"
     },
     {
       "name": "ef-local-corrections-file-0041-part-000",
@@ -6163,9 +6183,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "pending",
+      "status": "uploaded",
       "attempts": 1,
-      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])",
+      "receipt": {
+        "id": "RA_kwDOVV94X84p3RNG",
+        "name": "ef-E-checkpoint-500-file-0000-part-000",
+        "size": 1294764719,
+        "state": "uploaded"
+      },
+      "reconciled_at": "2026-11-02T16:19:47.819713+00:00",
+      "reused_on_resume": true
     },
     {
       "name": "ef-E-checkpoint-500-file-0001-part-000",
