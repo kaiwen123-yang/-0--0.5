@@ -1,0 +1,858 @@
+{
+  "at_utc": "2026-11-02T12:21:08.494746+00:00",
+  "status": "verified_ready_to_delete",
+  "group": "regression-records",
+  "release_tag": "pi-complete-backup-20261101",
+  "remote_assets": [
+    {
+      "name": "regression-records.tar.zst.part-000",
+      "size": 167314737,
+      "state": "uploaded"
+    }
+  ],
+  "source_paths": [
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/data_profile.json",
+      "bytes": 3695
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/eda_profile.json",
+      "bytes": 70615
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/evidence_summary.json",
+      "bytes": 39520
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figure_layout_checks.json",
+      "bytes": 161
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1000_red_seed42.pdf",
+      "bytes": 29213
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1000_red_seed42.png",
+      "bytes": 532682
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1000_red_seed42.svg",
+      "bytes": 68314
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1000_red_seed42_gray.png",
+      "bytes": 227934
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1001_blue_seed42.pdf",
+      "bytes": 29105
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1001_blue_seed42.png",
+      "bytes": 526496
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1001_blue_seed42.svg",
+      "bytes": 68987
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1001_blue_seed42_gray.png",
+      "bytes": 226372
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1003_red_seed42.pdf",
+      "bytes": 28211
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1003_red_seed42.png",
+      "bytes": 516539
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1003_red_seed42.svg",
+      "bytes": 66937
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/case_1003_red_seed42_gray.png",
+      "bytes": 220884
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/conditioning_and_prefix_rescue.pdf",
+      "bytes": 31140
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/conditioning_and_prefix_rescue.png",
+      "bytes": 270174
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/conditioning_and_prefix_rescue.svg",
+      "bytes": 101637
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/conditioning_and_prefix_rescue_gray.png",
+      "bytes": 123620
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/targeting_overview.pdf",
+      "bytes": 36186
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/targeting_overview.png",
+      "bytes": 349616
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/targeting_overview.svg",
+      "bytes": 122091
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/figures/targeting_overview_gray.png",
+      "bytes": 146198
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/final_verification.json",
+      "bytes": 762
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new2010/observations.json",
+      "bytes": 238598
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new2010/predictions.npz",
+      "bytes": 316519
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new2010/prompt_swap.json",
+      "bytes": 17067
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new2010/protocol.json",
+      "bytes": 1616
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new4020/observations.json",
+      "bytes": 238823
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new4020/predictions.npz",
+      "bytes": 316431
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new4020/prompt_swap.json",
+      "bytes": 17036
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new4020/protocol.json",
+      "bytes": 1616
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new8040/observations.json",
+      "bytes": 238928
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new8040/predictions.npz",
+      "bytes": 316571
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new8040/prompt_swap.json",
+      "bytes": 17038
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/new8040/protocol.json",
+      "bytes": 1616
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/old2010/observations.json",
+      "bytes": 238792
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/old2010/predictions.npz",
+      "bytes": 316306
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/old2010/prompt_swap.json",
+      "bytes": 17016
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/fixed/old2010/protocol.json",
+      "bytes": 1098
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/attempt1/fixed_old2010.log",
+      "bytes": 676
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/attempt1/old2010/observations.json",
+      "bytes": 33752
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/attempt1/probe_status.json",
+      "bytes": 662
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/attempt1/probes.tmux.log",
+      "bytes": 1048
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/attempt1/reason.json",
+      "bytes": 315
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/attempt1/serve_old2010.log",
+      "bytes": 836
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/history/raw_release_first_attempt.log",
+      "bytes": 1232
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/data_audit.log",
+      "bytes": 18441
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/figure_export_checks.log",
+      "bytes": 2064
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/fixed_new2010.log",
+      "bytes": 579
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/fixed_new4020.log",
+      "bytes": 579
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/fixed_new8040.log",
+      "bytes": 579
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/fixed_old2010.log",
+      "bytes": 579
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/prefix_new8040.log",
+      "bytes": 1070
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/prefix_old2010.log",
+      "bytes": 359
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/raw_release.log",
+      "bytes": 1232
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/raw_release_finalize.log",
+      "bytes": 1793
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/serve_new2010.log",
+      "bytes": 1122
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/serve_new4020.log",
+      "bytes": 1122
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/serve_new8040.log",
+      "bytes": 1161
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/serve_old2010.log",
+      "bytes": 875
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/logs/teacher_reference.log",
+      "bytes": 771
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/lost_success_cases.json",
+      "bytes": 3054
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/model_input_audit.json",
+      "bytes": 197223
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/paired_validation.json",
+      "bytes": 9154
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1000_green_seed42.json",
+      "bytes": 1899
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1000_green_seed42.npz",
+      "bytes": 277236
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1000_red_seed42.json",
+      "bytes": 1897
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1000_red_seed42.npz",
+      "bytes": 225172
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1000_red_seed43.json",
+      "bytes": 1905
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1000_red_seed43.npz",
+      "bytes": 496701
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1001_blue_seed42.json",
+      "bytes": 1900
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1001_blue_seed42.npz",
+      "bytes": 264947
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1001_red_seed43.json",
+      "bytes": 1901
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1001_red_seed43.npz",
+      "bytes": 380822
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1002_blue_seed42.json",
+      "bytes": 1900
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1002_blue_seed42.npz",
+      "bytes": 416005
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1002_blue_seed43.json",
+      "bytes": 1904
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1002_blue_seed43.npz",
+      "bytes": 356637
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1002_red_seed43.json",
+      "bytes": 1895
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1002_red_seed43.npz",
+      "bytes": 245917
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1003_blue_seed42.json",
+      "bytes": 1919
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1003_blue_seed42.npz",
+      "bytes": 491426
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1004_red_seed43.json",
+      "bytes": 1899
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix30_1004_red_seed43.npz",
+      "bytes": 267503
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1000_green_seed42.json",
+      "bytes": 1903
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1000_green_seed42.npz",
+      "bytes": 239739
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1000_red_seed42.json",
+      "bytes": 1898
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1000_red_seed42.npz",
+      "bytes": 219349
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1000_red_seed43.json",
+      "bytes": 1902
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1000_red_seed43.npz",
+      "bytes": 210137
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1001_blue_seed42.json",
+      "bytes": 1902
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1001_blue_seed42.npz",
+      "bytes": 226324
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1001_red_seed43.json",
+      "bytes": 1885
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1001_red_seed43.npz",
+      "bytes": 236398
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1002_blue_seed42.json",
+      "bytes": 1901
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1002_blue_seed42.npz",
+      "bytes": 228610
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1002_blue_seed43.json",
+      "bytes": 1903
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1002_blue_seed43.npz",
+      "bytes": 201679
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1002_red_seed43.json",
+      "bytes": 1896
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1002_red_seed43.npz",
+      "bytes": 273354
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1003_blue_seed42.json",
+      "bytes": 1896
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1003_blue_seed42.npz",
+      "bytes": 223697
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1004_red_seed43.json",
+      "bytes": 1899
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix60_1004_red_seed43.npz",
+      "bytes": 198197
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1000_green_seed42.json",
+      "bytes": 1933
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1000_green_seed42.npz",
+      "bytes": 236332
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1000_red_seed42.json",
+      "bytes": 1927
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1000_red_seed42.npz",
+      "bytes": 200752
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1000_red_seed43.json",
+      "bytes": 1914
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1000_red_seed43.npz",
+      "bytes": 257786
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1001_blue_seed42.json",
+      "bytes": 1930
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1001_blue_seed42.npz",
+      "bytes": 198719
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1001_red_seed43.json",
+      "bytes": 1913
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1001_red_seed43.npz",
+      "bytes": 209903
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1002_blue_seed42.json",
+      "bytes": 1931
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1002_blue_seed42.npz",
+      "bytes": 203689
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1002_blue_seed43.json",
+      "bytes": 1912
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1002_blue_seed43.npz",
+      "bytes": 200524
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1002_red_seed43.json",
+      "bytes": 1925
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1002_red_seed43.npz",
+      "bytes": 201393
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1003_blue_seed42.json",
+      "bytes": 1928
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1003_blue_seed42.npz",
+      "bytes": 203824
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1004_red_seed43.json",
+      "bytes": 1911
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/prefix85_1004_red_seed43.npz",
+      "bytes": 182988
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/new8040/summary.json",
+      "bytes": 66556
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1000_green_seed42.json",
+      "bytes": 1934
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1000_green_seed42.npz",
+      "bytes": 393321
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1000_red_seed42.json",
+      "bytes": 1933
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1000_red_seed42.npz",
+      "bytes": 342122
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1000_red_seed43.json",
+      "bytes": 1930
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1000_red_seed43.npz",
+      "bytes": 369448
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1001_blue_seed42.json",
+      "bytes": 1936
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1001_blue_seed42.npz",
+      "bytes": 432079
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1001_red_seed43.json",
+      "bytes": 1939
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1001_red_seed43.npz",
+      "bytes": 431495
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1002_blue_seed42.json",
+      "bytes": 1935
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1002_blue_seed42.npz",
+      "bytes": 340616
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1002_blue_seed43.json",
+      "bytes": 1936
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1002_blue_seed43.npz",
+      "bytes": 384166
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1002_red_seed43.json",
+      "bytes": 1932
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1002_red_seed43.npz",
+      "bytes": 306784
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1003_blue_seed42.json",
+      "bytes": 1936
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1003_blue_seed42.npz",
+      "bytes": 431495
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1004_red_seed43.json",
+      "bytes": 1934
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/prefix85_1004_red_seed43.npz",
+      "bytes": 330622
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prefix/old2010/summary.json",
+      "bytes": 22553
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/probe_status.json",
+      "bytes": 276
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/probes.tmux.log",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/prompt_conditioned_approach.json",
+      "bytes": 13835
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/raw_artifact_release.json",
+      "bytes": 1699
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/raw_release_progress.json",
+      "bytes": 144
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_blue.json",
+      "bytes": 818
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_blue.npz",
+      "bytes": 9591959
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_green.json",
+      "bytes": 817
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_green.npz",
+      "bytes": 9585238
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_red.json",
+      "bytes": 816
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01000_red.npz",
+      "bytes": 9922916
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_blue.json",
+      "bytes": 819
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_blue.npz",
+      "bytes": 9595175
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_green.json",
+      "bytes": 819
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_green.npz",
+      "bytes": 9626373
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_red.json",
+      "bytes": 817
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01001_red.npz",
+      "bytes": 9936365
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_blue.json",
+      "bytes": 814
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_blue.npz",
+      "bytes": 9927521
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_green.json",
+      "bytes": 815
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_green.npz",
+      "bytes": 9575676
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_red.json",
+      "bytes": 817
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01002_red.npz",
+      "bytes": 9593093
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_blue.json",
+      "bytes": 816
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_blue.npz",
+      "bytes": 9880389
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_green.json",
+      "bytes": 820
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_green.npz",
+      "bytes": 9638192
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_red.json",
+      "bytes": 815
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01003_red.npz",
+      "bytes": 9571630
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_blue.json",
+      "bytes": 820
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_blue.npz",
+      "bytes": 9582733
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_green.json",
+      "bytes": 817
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_green.npz",
+      "bytes": 9590565
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_red.json",
+      "bytes": 816
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/layout_01004_red.npz",
+      "bytes": 9854698
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/summary.json",
+      "bytes": 9128
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1000_blue.npz",
+      "bytes": 325634
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1000_green.npz",
+      "bytes": 325744
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1000_red.npz",
+      "bytes": 324458
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1001_blue.npz",
+      "bytes": 323951
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1001_green.npz",
+      "bytes": 323744
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1001_red.npz",
+      "bytes": 323760
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1002_blue.npz",
+      "bytes": 323617
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1002_green.npz",
+      "bytes": 324451
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1002_red.npz",
+      "bytes": 323842
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1003_blue.npz",
+      "bytes": 324370
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1003_green.npz",
+      "bytes": 325315
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1003_red.npz",
+      "bytes": 325484
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1004_blue.npz",
+      "bytes": 325438
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1004_green.npz",
+      "bytes": 325359
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_1004_red.npz",
+      "bytes": 323655
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_100_blue.npz",
+      "bytes": 323505
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_100_green.npz",
+      "bytes": 325015
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_100_red.npz",
+      "bytes": 324797
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_101_blue.npz",
+      "bytes": 324086
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_101_green.npz",
+      "bytes": 323941
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/teacher_reference/trace_101_red.npz",
+      "bytes": 323652
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/training_data_audit.json",
+      "bytes": 27850
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/trajectory_metrics.csv",
+      "bytes": 83113
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/trajectory_metrics.json",
+      "bytes": 351191
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-regression-diagnosis-20261101/trajectory_summary.json",
+      "bytes": 9834
+    }
+  ],
+  "active_dependencies_retained": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102"
+  ],
+  "freed_bytes": 0
+}
