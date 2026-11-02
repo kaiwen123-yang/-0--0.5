@@ -1,0 +1,3745 @@
+{
+  "at_utc": "2026-11-02T13:28:25.587630+00:00",
+  "status": "verified_ready_to_delete",
+  "group": "ab-records",
+  "release_tag": "pi-complete-backup-20261101",
+  "remote_assets": [
+    {
+      "name": "ab-records.tar.zst.part-000",
+      "size": 242165455,
+      "state": "uploaded"
+    }
+  ],
+  "source_paths": [
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/assets/piper_h_color_v1/norm_stats.json",
+      "bytes": 1874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoint_history.jsonl",
+      "bytes": 824
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_blue.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_blue.mp4",
+      "bytes": 688879
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_blue.npz",
+      "bytes": 685242
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_green.json",
+      "bytes": 6769
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_green.mp4",
+      "bytes": 491443
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_green.npz",
+      "bytes": 461714
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_red.json",
+      "bytes": 6592
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_red.mp4",
+      "bytes": 467731
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00100_red.npz",
+      "bytes": 436852
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_blue.json",
+      "bytes": 8347
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_blue.mp4",
+      "bytes": 729309
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_blue.npz",
+      "bytes": 687619
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_green.json",
+      "bytes": 6539
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_green.mp4",
+      "bytes": 414333
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_green.npz",
+      "bytes": 424809
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_red.json",
+      "bytes": 7086
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_red.mp4",
+      "bytes": 504302
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/layout_00101_red.npz",
+      "bytes": 516979
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed42/summary.json",
+      "bytes": 50117
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_blue.json",
+      "bytes": 8322
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_blue.mp4",
+      "bytes": 592510
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_blue.npz",
+      "bytes": 668059
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_green.json",
+      "bytes": 8385
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_green.mp4",
+      "bytes": 676412
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_green.npz",
+      "bytes": 732716
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_red.json",
+      "bytes": 6596
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_red.mp4",
+      "bytes": 455418
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00100_red.npz",
+      "bytes": 437102
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_blue.json",
+      "bytes": 8395
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_blue.mp4",
+      "bytes": 712230
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_blue.npz",
+      "bytes": 690099
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_green.json",
+      "bytes": 8339
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_green.mp4",
+      "bytes": 612781
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_green.npz",
+      "bytes": 665825
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_red.json",
+      "bytes": 8379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_red.mp4",
+      "bytes": 665140
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/layout_00101_red.npz",
+      "bytes": 733703
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_train_seed43/summary.json",
+      "bytes": 55554
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_blue.json",
+      "bytes": 6397
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_blue.mp4",
+      "bytes": 390777
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_blue.npz",
+      "bytes": 402592
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_green.json",
+      "bytes": 7270
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_green.mp4",
+      "bytes": 540635
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_green.npz",
+      "bytes": 542586
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_red.json",
+      "bytes": 8403
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_red.mp4",
+      "bytes": 634737
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01000_red.npz",
+      "bytes": 719596
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_blue.json",
+      "bytes": 6610
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_blue.mp4",
+      "bytes": 468015
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_blue.npz",
+      "bytes": 439099
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_green.json",
+      "bytes": 8185
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_green.mp4",
+      "bytes": 625103
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_green.npz",
+      "bytes": 653687
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_red.json",
+      "bytes": 8368
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_red.mp4",
+      "bytes": 644167
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01001_red.npz",
+      "bytes": 682870
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_blue.json",
+      "bytes": 7382
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_blue.mp4",
+      "bytes": 534873
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_blue.npz",
+      "bytes": 561407
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_green.json",
+      "bytes": 8396
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_green.mp4",
+      "bytes": 664910
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_green.npz",
+      "bytes": 670851
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_red.json",
+      "bytes": 6504
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_red.mp4",
+      "bytes": 404551
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01002_red.npz",
+      "bytes": 417641
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_blue.json",
+      "bytes": 8412
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_blue.mp4",
+      "bytes": 633469
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_blue.npz",
+      "bytes": 734157
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_green.json",
+      "bytes": 6293
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_green.mp4",
+      "bytes": 382469
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_green.npz",
+      "bytes": 388541
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_red.json",
+      "bytes": 6449
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_red.mp4",
+      "bytes": 412602
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01003_red.npz",
+      "bytes": 414736
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_blue.json",
+      "bytes": 6558
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_blue.mp4",
+      "bytes": 421304
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_blue.npz",
+      "bytes": 427729
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_green.json",
+      "bytes": 8367
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_green.mp4",
+      "bytes": 612425
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_green.npz",
+      "bytes": 670369
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_red.json",
+      "bytes": 8395
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_red.mp4",
+      "bytes": 596874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/layout_01004_red.npz",
+      "bytes": 689583
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed42/summary.json",
+      "bytes": 128008
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_blue.json",
+      "bytes": 6414
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_blue.mp4",
+      "bytes": 401245
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_blue.npz",
+      "bytes": 403961
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_green.json",
+      "bytes": 6722
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_green.mp4",
+      "bytes": 495092
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_green.npz",
+      "bytes": 454859
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_red.json",
+      "bytes": 8400
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_red.mp4",
+      "bytes": 617295
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01000_red.npz",
+      "bytes": 726792
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_blue.json",
+      "bytes": 8378
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_blue.mp4",
+      "bytes": 661525
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_blue.npz",
+      "bytes": 676794
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_green.json",
+      "bytes": 8486
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_green.mp4",
+      "bytes": 623850
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_green.npz",
+      "bytes": 751671
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_red.json",
+      "bytes": 8392
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_red.mp4",
+      "bytes": 640089
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01001_red.npz",
+      "bytes": 719862
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_blue.json",
+      "bytes": 6855
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_blue.mp4",
+      "bytes": 474812
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_blue.npz",
+      "bytes": 477505
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_green.json",
+      "bytes": 6299
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_green.mp4",
+      "bytes": 388267
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_green.npz",
+      "bytes": 382923
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_red.json",
+      "bytes": 7041
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_red.mp4",
+      "bytes": 526111
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01002_red.npz",
+      "bytes": 485744
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_blue.json",
+      "bytes": 7478
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_blue.mp4",
+      "bytes": 549599
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_blue.npz",
+      "bytes": 576689
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_green.json",
+      "bytes": 6199
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_green.mp4",
+      "bytes": 366493
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_green.npz",
+      "bytes": 365590
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_red.json",
+      "bytes": 6619
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_red.mp4",
+      "bytes": 472418
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01003_red.npz",
+      "bytes": 440551
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_blue.json",
+      "bytes": 7257
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_blue.mp4",
+      "bytes": 596951
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_blue.npz",
+      "bytes": 545939
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_green.json",
+      "bytes": 8369
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_green.mp4",
+      "bytes": 602211
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_green.npz",
+      "bytes": 668080
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_red.json",
+      "bytes": 7641
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_red.mp4",
+      "bytes": 586966
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/layout_01004_red.npz",
+      "bytes": 609065
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_1000_validation_seed43/summary.json",
+      "bytes": 126346
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_blue.json",
+      "bytes": 8379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_blue.mp4",
+      "bytes": 738207
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_blue.npz",
+      "bytes": 715564
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_green.json",
+      "bytes": 6493
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_green.mp4",
+      "bytes": 407079
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_green.npz",
+      "bytes": 418567
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_red.json",
+      "bytes": 6696
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_red.mp4",
+      "bytes": 497874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00100_red.npz",
+      "bytes": 454929
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_blue.json",
+      "bytes": 8342
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_blue.mp4",
+      "bytes": 723515
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_blue.npz",
+      "bytes": 688777
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_green.json",
+      "bytes": 6165
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_green.mp4",
+      "bytes": 376891
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_green.npz",
+      "bytes": 369983
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_red.json",
+      "bytes": 7303
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_red.mp4",
+      "bytes": 532792
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/layout_00101_red.npz",
+      "bytes": 540101
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed42/summary.json",
+      "bytes": 49763
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_blue.json",
+      "bytes": 8349
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_blue.mp4",
+      "bytes": 598016
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_blue.npz",
+      "bytes": 665273
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_green.json",
+      "bytes": 6976
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_green.mp4",
+      "bytes": 535872
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_green.npz",
+      "bytes": 498026
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_red.json",
+      "bytes": 6480
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_red.mp4",
+      "bytes": 402211
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00100_red.npz",
+      "bytes": 415492
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_blue.json",
+      "bytes": 8381
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_blue.mp4",
+      "bytes": 678813
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_blue.npz",
+      "bytes": 732098
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_green.json",
+      "bytes": 8361
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_green.mp4",
+      "bytes": 636302
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_green.npz",
+      "bytes": 672096
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_red.json",
+      "bytes": 8387
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_red.mp4",
+      "bytes": 622224
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/layout_00101_red.npz",
+      "bytes": 668190
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_train_seed43/summary.json",
+      "bytes": 53847
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_blue.json",
+      "bytes": 6122
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_blue.mp4",
+      "bytes": 374520
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_blue.npz",
+      "bytes": 362235
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_green.json",
+      "bytes": 6828
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_green.mp4",
+      "bytes": 496098
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_green.npz",
+      "bytes": 471976
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_red.json",
+      "bytes": 6300
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_red.mp4",
+      "bytes": 354628
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01000_red.npz",
+      "bytes": 384165
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_blue.json",
+      "bytes": 6873
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_blue.mp4",
+      "bytes": 516109
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_blue.npz",
+      "bytes": 476369
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_green.json",
+      "bytes": 6784
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_green.mp4",
+      "bytes": 476705
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_green.npz",
+      "bytes": 457316
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_red.json",
+      "bytes": 6625
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_red.mp4",
+      "bytes": 426789
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01001_red.npz",
+      "bytes": 431567
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_blue.json",
+      "bytes": 6726
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_blue.mp4",
+      "bytes": 447551
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_blue.npz",
+      "bytes": 446622
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_green.json",
+      "bytes": 6621
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_green.mp4",
+      "bytes": 457953
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_green.npz",
+      "bytes": 431000
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_red.json",
+      "bytes": 6451
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_red.mp4",
+      "bytes": 405789
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01002_red.npz",
+      "bytes": 409908
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_blue.json",
+      "bytes": 7096
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_blue.mp4",
+      "bytes": 511220
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_blue.npz",
+      "bytes": 520731
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_green.json",
+      "bytes": 7112
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_green.mp4",
+      "bytes": 551717
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_green.npz",
+      "bytes": 520507
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_red.json",
+      "bytes": 8383
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_red.mp4",
+      "bytes": 682090
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01003_red.npz",
+      "bytes": 736378
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_blue.json",
+      "bytes": 6619
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_blue.mp4",
+      "bytes": 464612
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_blue.npz",
+      "bytes": 437771
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_green.json",
+      "bytes": 6616
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_green.mp4",
+      "bytes": 470865
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_green.npz",
+      "bytes": 435216
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_red.json",
+      "bytes": 8077
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_red.mp4",
+      "bytes": 547823
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/layout_01004_red.npz",
+      "bytes": 649902
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed42/summary.json",
+      "bytes": 117949
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_blue.json",
+      "bytes": 6721
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_blue.mp4",
+      "bytes": 500205
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_blue.npz",
+      "bytes": 455587
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_green.json",
+      "bytes": 6355
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_green.mp4",
+      "bytes": 381418
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_green.npz",
+      "bytes": 392028
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_red.json",
+      "bytes": 6777
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_red.mp4",
+      "bytes": 461344
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01000_red.npz",
+      "bytes": 460538
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_blue.json",
+      "bytes": 8415
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_blue.mp4",
+      "bytes": 663329
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_blue.npz",
+      "bytes": 727717
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_green.json",
+      "bytes": 6242
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_green.mp4",
+      "bytes": 376768
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_green.npz",
+      "bytes": 373999
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_red.json",
+      "bytes": 6282
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_red.mp4",
+      "bytes": 356027
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01001_red.npz",
+      "bytes": 382572
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_blue.json",
+      "bytes": 6827
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_blue.mp4",
+      "bytes": 465938
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_blue.npz",
+      "bytes": 471051
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_green.json",
+      "bytes": 6295
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_green.mp4",
+      "bytes": 385359
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_green.npz",
+      "bytes": 379771
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_red.json",
+      "bytes": 6455
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_red.mp4",
+      "bytes": 414117
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01002_red.npz",
+      "bytes": 412305
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_blue.json",
+      "bytes": 8056
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_blue.mp4",
+      "bytes": 583132
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_blue.npz",
+      "bytes": 652993
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_green.json",
+      "bytes": 6451
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_green.mp4",
+      "bytes": 404121
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_green.npz",
+      "bytes": 412814
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_red.json",
+      "bytes": 6190
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_red.mp4",
+      "bytes": 381739
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01003_red.npz",
+      "bytes": 370306
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_blue.json",
+      "bytes": 6517
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_blue.mp4",
+      "bytes": 408157
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_blue.npz",
+      "bytes": 422780
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_green.json",
+      "bytes": 6554
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_green.mp4",
+      "bytes": 415229
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_green.npz",
+      "bytes": 430025
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_red.json",
+      "bytes": 6460
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_red.mp4",
+      "bytes": 370801
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/layout_01004_red.npz",
+      "bytes": 409060
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_2010_validation_seed43/summary.json",
+      "bytes": 114921
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_blue.json",
+      "bytes": 8347
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_blue.mp4",
+      "bytes": 606281
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_blue.npz",
+      "bytes": 671245
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_green.json",
+      "bytes": 6761
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_green.mp4",
+      "bytes": 496757
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_green.npz",
+      "bytes": 459103
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_red.json",
+      "bytes": 6691
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_red.mp4",
+      "bytes": 491275
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00100_red.npz",
+      "bytes": 456146
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_blue.json",
+      "bytes": 8379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_blue.mp4",
+      "bytes": 739220
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_blue.npz",
+      "bytes": 700535
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_green.json",
+      "bytes": 6316
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_green.mp4",
+      "bytes": 396251
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_green.npz",
+      "bytes": 391677
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_red.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_red.mp4",
+      "bytes": 672550
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/layout_00101_red.npz",
+      "bytes": 688194
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/protocol.json",
+      "bytes": 2506
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed42/summary.json",
+      "bytes": 51438
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_blue.json",
+      "bytes": 8326
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_blue.mp4",
+      "bytes": 617242
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_blue.npz",
+      "bytes": 670097
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_green.json",
+      "bytes": 6983
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_green.mp4",
+      "bytes": 546157
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_green.npz",
+      "bytes": 493770
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_red.json",
+      "bytes": 8385
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_red.mp4",
+      "bytes": 642487
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00100_red.npz",
+      "bytes": 677116
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_blue.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_blue.mp4",
+      "bytes": 711128
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_blue.npz",
+      "bytes": 676842
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_green.json",
+      "bytes": 8467
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_green.mp4",
+      "bytes": 688308
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_green.npz",
+      "bytes": 676065
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_red.json",
+      "bytes": 7070
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_red.mp4",
+      "bytes": 490908
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/layout_00101_red.npz",
+      "bytes": 516404
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/protocol.json",
+      "bytes": 2506
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_train_seed43/summary.json",
+      "bytes": 54583
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_blue.json",
+      "bytes": 6776
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_blue.mp4",
+      "bytes": 512262
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_blue.npz",
+      "bytes": 469393
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_green.json",
+      "bytes": 7479
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_green.mp4",
+      "bytes": 600689
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_green.npz",
+      "bytes": 580258
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_red.json",
+      "bytes": 8407
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_red.mp4",
+      "bytes": 623208
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01000_red.npz",
+      "bytes": 730283
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_blue.json",
+      "bytes": 7103
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_blue.mp4",
+      "bytes": 555939
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_blue.npz",
+      "bytes": 512829
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_green.json",
+      "bytes": 8377
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_green.mp4",
+      "bytes": 667976
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_green.npz",
+      "bytes": 672878
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_red.json",
+      "bytes": 8400
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_red.mp4",
+      "bytes": 664186
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01001_red.npz",
+      "bytes": 725062
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_blue.json",
+      "bytes": 8131
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_blue.mp4",
+      "bytes": 619081
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_blue.npz",
+      "bytes": 675433
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_green.json",
+      "bytes": 8342
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_green.mp4",
+      "bytes": 636352
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_green.npz",
+      "bytes": 665762
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_red.json",
+      "bytes": 8336
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_red.mp4",
+      "bytes": 597434
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01002_red.npz",
+      "bytes": 667290
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_blue.json",
+      "bytes": 8387
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_blue.mp4",
+      "bytes": 686456
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_blue.npz",
+      "bytes": 735588
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_green.json",
+      "bytes": 6720
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_green.mp4",
+      "bytes": 479924
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_green.npz",
+      "bytes": 454737
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_red.json",
+      "bytes": 6716
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_red.mp4",
+      "bytes": 495912
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01003_red.npz",
+      "bytes": 458084
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_blue.json",
+      "bytes": 6392
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_blue.mp4",
+      "bytes": 407986
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_blue.npz",
+      "bytes": 408247
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_green.json",
+      "bytes": 8378
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_green.mp4",
+      "bytes": 677637
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_green.npz",
+      "bytes": 673773
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_red.json",
+      "bytes": 8345
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_red.mp4",
+      "bytes": 444350
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/layout_01004_red.npz",
+      "bytes": 666759
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/protocol.json",
+      "bytes": 2544
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed42/summary.json",
+      "bytes": 132972
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_blue.json",
+      "bytes": 6898
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_blue.mp4",
+      "bytes": 516172
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_blue.npz",
+      "bytes": 479214
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_green.json",
+      "bytes": 8379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_green.mp4",
+      "bytes": 619152
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_green.npz",
+      "bytes": 675275
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_red.json",
+      "bytes": 8410
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_red.mp4",
+      "bytes": 648174
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01000_red.npz",
+      "bytes": 723045
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_blue.json",
+      "bytes": 8451
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_blue.mp4",
+      "bytes": 699940
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_blue.npz",
+      "bytes": 697089
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_green.json",
+      "bytes": 6302
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_green.mp4",
+      "bytes": 384357
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_green.npz",
+      "bytes": 386781
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_red.json",
+      "bytes": 8388
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_red.mp4",
+      "bytes": 639021
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01001_red.npz",
+      "bytes": 719270
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_blue.json",
+      "bytes": 6779
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_blue.mp4",
+      "bytes": 464842
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_blue.npz",
+      "bytes": 465419
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_green.json",
+      "bytes": 6611
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_green.mp4",
+      "bytes": 458288
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_green.npz",
+      "bytes": 433922
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_red.json",
+      "bytes": 8336
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_red.mp4",
+      "bytes": 604996
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01002_red.npz",
+      "bytes": 665642
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_blue.json",
+      "bytes": 8372
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_blue.mp4",
+      "bytes": 669889
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_blue.npz",
+      "bytes": 700242
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_green.json",
+      "bytes": 6245
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_green.mp4",
+      "bytes": 374787
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_green.npz",
+      "bytes": 379547
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_red.json",
+      "bytes": 8363
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_red.mp4",
+      "bytes": 656826
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01003_red.npz",
+      "bytes": 671342
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_blue.json",
+      "bytes": 6662
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_blue.mp4",
+      "bytes": 480036
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_blue.npz",
+      "bytes": 447729
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_green.json",
+      "bytes": 8361
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_green.mp4",
+      "bytes": 616026
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_green.npz",
+      "bytes": 670196
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_red.json",
+      "bytes": 7100
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_red.mp4",
+      "bytes": 497501
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/layout_01004_red.npz",
+      "bytes": 516584
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/protocol.json",
+      "bytes": 2544
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/evaluations/update_500_validation_seed43/summary.json",
+      "bytes": 129932
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/probe_1000.log",
+      "bytes": 5620
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/probe_2010.log",
+      "bytes": 5627
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/probe_500.log",
+      "bytes": 5597
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/serve_update_1000.log",
+      "bytes": 3165
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/serve_update_2010.log",
+      "bytes": 3165
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/serve_update_500.log",
+      "bytes": 3163
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/train_to_1000.log",
+      "bytes": 26531
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/train_to_2010.log",
+      "bytes": 52208
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/train_to_500.log",
+      "bytes": 27307
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_1000_train_seed42.log",
+      "bytes": 182
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_1000_train_seed43.log",
+      "bytes": 185
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_1000_validation_seed42.log",
+      "bytes": 545
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_1000_validation_seed43.log",
+      "bytes": 545
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_2010_train_seed42.log",
+      "bytes": 182
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_2010_train_seed43.log",
+      "bytes": 184
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_2010_validation_seed42.log",
+      "bytes": 541
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_2010_validation_seed43.log",
+      "bytes": 541
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_500_train_seed42.log",
+      "bytes": 183
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_500_train_seed43.log",
+      "bytes": 184
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_500_validation_seed42.log",
+      "bytes": 548
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/logs/update_500_validation_seed43.log",
+      "bytes": 548
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/lora_metrics.jsonl",
+      "bytes": 969434
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/lora_training.json",
+      "bytes": 1038
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/node_1000.json",
+      "bytes": 6533
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/node_2010.json",
+      "bytes": 6540
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/node_500.json",
+      "bytes": 6531
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_1000/observations.json",
+      "bytes": 241512
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_1000/predictions.npz",
+      "bytes": 316477
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_1000/prompt_swap.json",
+      "bytes": 17037
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_1000/protocol.json",
+      "bytes": 1601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_2010/observations.json",
+      "bytes": 241527
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_2010/predictions.npz",
+      "bytes": 316449
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_2010/prompt_swap.json",
+      "bytes": 17023
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_2010/protocol.json",
+      "bytes": 1601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_500/observations.json",
+      "bytes": 240736
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_500/predictions.npz",
+      "bytes": 316575
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_500/prompt_swap.json",
+      "bytes": 17039
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/probes/fixed/update_500/protocol.json",
+      "bytes": 1599
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/resume_verification_0.json",
+      "bytes": 606
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/resume_verification_1000.json",
+      "bytes": 617
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/resume_verification_500.json",
+      "bytes": 614
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/sample_order.json",
+      "bytes": 69619
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/sample_order.npy",
+      "bytes": 64448
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/sampler.json",
+      "bytes": 864
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/scene/scene.xml",
+      "bytes": 14322
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/scene/version.json",
+      "bytes": 1974
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/selected_candidate.json",
+      "bytes": 144
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/train_config.txt",
+      "bytes": 2065
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/training_progress.json",
+      "bytes": 605
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/trajectory_metrics_1000.json",
+      "bytes": 93738
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/trajectory_metrics_2010.json",
+      "bytes": 93634
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/trajectory_metrics_500.json",
+      "bytes": 93765
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/assets/piper_h_color_v1/norm_stats.json",
+      "bytes": 1874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoint_history.jsonl",
+      "bytes": 823
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_blue.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_blue.mp4",
+      "bytes": 676456
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_blue.npz",
+      "bytes": 685338
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_green.json",
+      "bytes": 6718
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_green.mp4",
+      "bytes": 486498
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_green.npz",
+      "bytes": 452665
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_red.json",
+      "bytes": 6468
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_red.mp4",
+      "bytes": 421279
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00100_red.npz",
+      "bytes": 421014
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_blue.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_blue.mp4",
+      "bytes": 723342
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_blue.npz",
+      "bytes": 689514
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_green.json",
+      "bytes": 6387
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_green.mp4",
+      "bytes": 404348
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_green.npz",
+      "bytes": 402911
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_red.json",
+      "bytes": 8389
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_red.mp4",
+      "bytes": 619902
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/layout_00101_red.npz",
+      "bytes": 711451
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed42/summary.json",
+      "bytes": 51226
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_blue.json",
+      "bytes": 8429
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_blue.mp4",
+      "bytes": 710179
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_blue.npz",
+      "bytes": 691163
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_green.json",
+      "bytes": 8379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_green.mp4",
+      "bytes": 664865
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_green.npz",
+      "bytes": 730912
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_red.json",
+      "bytes": 6538
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_red.mp4",
+      "bytes": 418044
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00100_red.npz",
+      "bytes": 428103
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_blue.json",
+      "bytes": 8337
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_blue.mp4",
+      "bytes": 654929
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_blue.npz",
+      "bytes": 696877
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_green.json",
+      "bytes": 6547
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_green.mp4",
+      "bytes": 424061
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_green.npz",
+      "bytes": 429642
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_red.json",
+      "bytes": 6337
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_red.mp4",
+      "bytes": 348085
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/layout_00101_red.npz",
+      "bytes": 391345
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_train_seed43/summary.json",
+      "bytes": 51103
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_blue.json",
+      "bytes": 6516
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_blue.mp4",
+      "bytes": 419553
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_blue.npz",
+      "bytes": 416060
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_green.json",
+      "bytes": 6735
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_green.mp4",
+      "bytes": 477740
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_green.npz",
+      "bytes": 454636
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_red.json",
+      "bytes": 8470
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_red.mp4",
+      "bytes": 691039
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01000_red.npz",
+      "bytes": 699749
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_blue.json",
+      "bytes": 6679
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_blue.mp4",
+      "bytes": 492364
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_blue.npz",
+      "bytes": 444773
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_green.json",
+      "bytes": 6674
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_green.mp4",
+      "bytes": 456745
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_green.npz",
+      "bytes": 441794
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_red.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_red.mp4",
+      "bytes": 616930
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01001_red.npz",
+      "bytes": 665220
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_blue.json",
+      "bytes": 7156
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_blue.mp4",
+      "bytes": 497178
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_blue.npz",
+      "bytes": 521648
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_green.json",
+      "bytes": 6517
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_green.mp4",
+      "bytes": 413483
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_green.npz",
+      "bytes": 419872
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_red.json",
+      "bytes": 6464
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_red.mp4",
+      "bytes": 423351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01002_red.npz",
+      "bytes": 411782
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_blue.json",
+      "bytes": 7468
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_blue.mp4",
+      "bytes": 489583
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_blue.npz",
+      "bytes": 557216
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_green.json",
+      "bytes": 6473
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_green.mp4",
+      "bytes": 404025
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_green.npz",
+      "bytes": 409117
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_red.json",
+      "bytes": 6775
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_red.mp4",
+      "bytes": 486640
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01003_red.npz",
+      "bytes": 459526
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_blue.json",
+      "bytes": 6463
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_blue.mp4",
+      "bytes": 398132
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_blue.npz",
+      "bytes": 413966
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_green.json",
+      "bytes": 6832
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_green.mp4",
+      "bytes": 508258
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_green.npz",
+      "bytes": 466682
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_red.json",
+      "bytes": 8343
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_red.mp4",
+      "bytes": 429521
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/layout_01004_red.npz",
+      "bytes": 663835
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed42/summary.json",
+      "bytes": 121009
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_blue.json",
+      "bytes": 6619
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_blue.mp4",
+      "bytes": 446479
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_blue.npz",
+      "bytes": 432368
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_green.json",
+      "bytes": 6936
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_green.mp4",
+      "bytes": 520441
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_green.npz",
+      "bytes": 488841
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_red.json",
+      "bytes": 7593
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_red.mp4",
+      "bytes": 561204
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01000_red.npz",
+      "bytes": 584425
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_blue.json",
+      "bytes": 8393
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_blue.mp4",
+      "bytes": 691128
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_blue.npz",
+      "bytes": 727080
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_green.json",
+      "bytes": 6460
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_green.mp4",
+      "bytes": 400765
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_green.npz",
+      "bytes": 407041
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_red.json",
+      "bytes": 8381
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_red.mp4",
+      "bytes": 636168
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01001_red.npz",
+      "bytes": 689954
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_blue.json",
+      "bytes": 6887
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_blue.mp4",
+      "bytes": 462422
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_blue.npz",
+      "bytes": 469691
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_green.json",
+      "bytes": 6624
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_green.mp4",
+      "bytes": 461777
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_green.npz",
+      "bytes": 437562
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_red.json",
+      "bytes": 6504
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_red.mp4",
+      "bytes": 413760
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01002_red.npz",
+      "bytes": 413026
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_blue.json",
+      "bytes": 8351
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_blue.mp4",
+      "bytes": 413681
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_blue.npz",
+      "bytes": 664854
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_green.json",
+      "bytes": 6464
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_green.mp4",
+      "bytes": 393035
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_green.npz",
+      "bytes": 410770
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_red.json",
+      "bytes": 6732
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_red.mp4",
+      "bytes": 496850
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01003_red.npz",
+      "bytes": 451815
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_blue.json",
+      "bytes": 6345
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_blue.mp4",
+      "bytes": 393206
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_blue.npz",
+      "bytes": 397123
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_green.json",
+      "bytes": 7422
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_green.mp4",
+      "bytes": 579214
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_green.npz",
+      "bytes": 567379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_red.json",
+      "bytes": 6405
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_red.mp4",
+      "bytes": 345329
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/layout_01004_red.npz",
+      "bytes": 400466
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_1000_validation_seed43/summary.json",
+      "bytes": 121249
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.json",
+      "bytes": 8447
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.mp4",
+      "bytes": 626580
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_blue.npz",
+      "bytes": 690982
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_green.json",
+      "bytes": 8353
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_green.mp4",
+      "bytes": 629378
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_green.npz",
+      "bytes": 731581
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_red.json",
+      "bytes": 6494
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_red.mp4",
+      "bytes": 422752
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00100_red.npz",
+      "bytes": 421449
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_blue.json",
+      "bytes": 7024
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_blue.mp4",
+      "bytes": 537462
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_blue.npz",
+      "bytes": 502216
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_green.json",
+      "bytes": 6476
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_green.mp4",
+      "bytes": 415863
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_green.npz",
+      "bytes": 417675
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_red.json",
+      "bytes": 8349
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_red.mp4",
+      "bytes": 625320
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/layout_00101_red.npz",
+      "bytes": 666185
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed42/summary.json",
+      "bytes": 51769
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_blue.json",
+      "bytes": 8394
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_blue.mp4",
+      "bytes": 589559
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_blue.npz",
+      "bytes": 667645
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_green.json",
+      "bytes": 7564
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_green.mp4",
+      "bytes": 600980
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_green.npz",
+      "bytes": 593485
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_red.json",
+      "bytes": 6766
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_red.mp4",
+      "bytes": 496322
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00100_red.npz",
+      "bytes": 463455
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_blue.json",
+      "bytes": 6975
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_blue.mp4",
+      "bytes": 532640
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_blue.npz",
+      "bytes": 495778
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.json",
+      "bytes": 8345
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.mp4",
+      "bytes": 619055
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_green.npz",
+      "bytes": 687553
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_red.json",
+      "bytes": 7300
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_red.mp4",
+      "bytes": 494096
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/layout_00101_red.npz",
+      "bytes": 534159
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/protocol.json",
+      "bytes": 2508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_train_seed43/summary.json",
+      "bytes": 52017
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_blue.json",
+      "bytes": 6450
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_blue.mp4",
+      "bytes": 420539
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_blue.npz",
+      "bytes": 413425
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_green.json",
+      "bytes": 6729
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_green.mp4",
+      "bytes": 491515
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_green.npz",
+      "bytes": 456106
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_red.json",
+      "bytes": 7134
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_red.mp4",
+      "bytes": 498660
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01000_red.npz",
+      "bytes": 520845
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_blue.json",
+      "bytes": 6724
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_blue.mp4",
+      "bytes": 494057
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_blue.npz",
+      "bytes": 448380
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_green.json",
+      "bytes": 6731
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_green.mp4",
+      "bytes": 475827
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_green.npz",
+      "bytes": 447907
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_red.json",
+      "bytes": 7978
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_red.mp4",
+      "bytes": 577452
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01001_red.npz",
+      "bytes": 642024
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_blue.json",
+      "bytes": 6674
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_blue.mp4",
+      "bytes": 437671
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_blue.npz",
+      "bytes": 435775
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_green.json",
+      "bytes": 6938
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_green.mp4",
+      "bytes": 526623
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_green.npz",
+      "bytes": 486596
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_red.json",
+      "bytes": 6724
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_red.mp4",
+      "bytes": 498747
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01002_red.npz",
+      "bytes": 455430
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_blue.json",
+      "bytes": 8322
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_blue.mp4",
+      "bytes": 564049
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_blue.npz",
+      "bytes": 684768
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_green.json",
+      "bytes": 6369
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_green.mp4",
+      "bytes": 399987
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_green.npz",
+      "bytes": 397012
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_red.json",
+      "bytes": 6713
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_red.mp4",
+      "bytes": 493805
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01003_red.npz",
+      "bytes": 457700
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_blue.json",
+      "bytes": 6437
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_blue.mp4",
+      "bytes": 419126
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_blue.npz",
+      "bytes": 411439
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_green.json",
+      "bytes": 6562
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_green.mp4",
+      "bytes": 427142
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_green.npz",
+      "bytes": 429182
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_red.json",
+      "bytes": 7520
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_red.mp4",
+      "bytes": 517075
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/layout_01004_red.npz",
+      "bytes": 568746
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed42/summary.json",
+      "bytes": 118826
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_blue.json",
+      "bytes": 6784
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_blue.mp4",
+      "bytes": 504112
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_blue.npz",
+      "bytes": 462308
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_green.json",
+      "bytes": 7112
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_green.mp4",
+      "bytes": 546700
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_green.npz",
+      "bytes": 517378
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_red.json",
+      "bytes": 7498
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_red.mp4",
+      "bytes": 564109
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01000_red.npz",
+      "bytes": 586941
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_blue.json",
+      "bytes": 7643
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_blue.mp4",
+      "bytes": 598729
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_blue.npz",
+      "bytes": 590532
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_green.json",
+      "bytes": 6406
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_green.mp4",
+      "bytes": 402669
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_green.npz",
+      "bytes": 402578
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_red.json",
+      "bytes": 7220
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_red.mp4",
+      "bytes": 516352
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01001_red.npz",
+      "bytes": 527363
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_blue.json",
+      "bytes": 7110
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_blue.mp4",
+      "bytes": 506321
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_blue.npz",
+      "bytes": 514814
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_green.json",
+      "bytes": 6629
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_green.mp4",
+      "bytes": 463283
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_green.npz",
+      "bytes": 434289
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_red.json",
+      "bytes": 6509
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_red.mp4",
+      "bytes": 413608
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01002_red.npz",
+      "bytes": 411676
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_blue.json",
+      "bytes": 8072
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_blue.mp4",
+      "bytes": 545506
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_blue.npz",
+      "bytes": 648858
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_green.json",
+      "bytes": 6194
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_green.mp4",
+      "bytes": 374615
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_green.npz",
+      "bytes": 363645
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_red.json",
+      "bytes": 6620
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_red.mp4",
+      "bytes": 468653
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01003_red.npz",
+      "bytes": 436386
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_blue.json",
+      "bytes": 6625
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_blue.mp4",
+      "bytes": 467013
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_blue.npz",
+      "bytes": 436614
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_green.json",
+      "bytes": 6411
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_green.mp4",
+      "bytes": 404146
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_green.npz",
+      "bytes": 399282
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_red.json",
+      "bytes": 6458
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_red.mp4",
+      "bytes": 361869
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/layout_01004_red.npz",
+      "bytes": 404583
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/protocol.json",
+      "bytes": 2546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_2010_validation_seed43/summary.json",
+      "bytes": 117992
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_blue.json",
+      "bytes": 8387
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_blue.mp4",
+      "bytes": 627071
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_blue.npz",
+      "bytes": 685335
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_green.json",
+      "bytes": 7146
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_green.mp4",
+      "bytes": 529037
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_green.npz",
+      "bytes": 520929
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_red.json",
+      "bytes": 6706
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_red.mp4",
+      "bytes": 505743
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00100_red.npz",
+      "bytes": 456467
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_blue.json",
+      "bytes": 8330
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_blue.mp4",
+      "bytes": 686980
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_blue.npz",
+      "bytes": 676701
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_green.json",
+      "bytes": 6313
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_green.mp4",
+      "bytes": 404372
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_green.npz",
+      "bytes": 393630
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_red.json",
+      "bytes": 7083
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_red.mp4",
+      "bytes": 487667
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/layout_00101_red.npz",
+      "bytes": 516850
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/protocol.json",
+      "bytes": 2506
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed42/summary.json",
+      "bytes": 50436
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_blue.json",
+      "bytes": 8323
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_blue.mp4",
+      "bytes": 640457
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_blue.npz",
+      "bytes": 670528
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_green.json",
+      "bytes": 7195
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_green.mp4",
+      "bytes": 555037
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_green.npz",
+      "bytes": 531012
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_red.json",
+      "bytes": 7411
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_red.mp4",
+      "bytes": 571348
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00100_red.npz",
+      "bytes": 566237
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_blue.json",
+      "bytes": 8371
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_blue.mp4",
+      "bytes": 665805
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_blue.npz",
+      "bytes": 727004
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_green.json",
+      "bytes": 8357
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_green.mp4",
+      "bytes": 694258
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_green.npz",
+      "bytes": 674867
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_red.json",
+      "bytes": 6810
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_red.mp4",
+      "bytes": 448896
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/layout_00101_red.npz",
+      "bytes": 466081
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/protocol.json",
+      "bytes": 2506
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_train_seed43/summary.json",
+      "bytes": 53300
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_blue.json",
+      "bytes": 6873
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_blue.mp4",
+      "bytes": 514106
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_blue.npz",
+      "bytes": 467630
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_green.json",
+      "bytes": 8394
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_green.mp4",
+      "bytes": 684240
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_green.npz",
+      "bytes": 734756
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_red.json",
+      "bytes": 8411
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_red.mp4",
+      "bytes": 639434
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01000_red.npz",
+      "bytes": 726877
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_blue.json",
+      "bytes": 7157
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_blue.mp4",
+      "bytes": 546176
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_blue.npz",
+      "bytes": 520943
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_green.json",
+      "bytes": 6888
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_green.mp4",
+      "bytes": 508158
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_green.npz",
+      "bytes": 477580
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_red.json",
+      "bytes": 8396
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_red.mp4",
+      "bytes": 615494
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01001_red.npz",
+      "bytes": 721715
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_blue.json",
+      "bytes": 7211
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_blue.mp4",
+      "bytes": 506229
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_blue.npz",
+      "bytes": 529894
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_green.json",
+      "bytes": 8381
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_green.mp4",
+      "bytes": 672201
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_green.npz",
+      "bytes": 677849
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_red.json",
+      "bytes": 6338
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_red.mp4",
+      "bytes": 395625
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01002_red.npz",
+      "bytes": 391924
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_blue.json",
+      "bytes": 8408
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_blue.mp4",
+      "bytes": 599098
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_blue.npz",
+      "bytes": 726038
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_green.json",
+      "bytes": 6848
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_green.mp4",
+      "bytes": 523062
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_green.npz",
+      "bytes": 477938
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_red.json",
+      "bytes": 6453
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_red.mp4",
+      "bytes": 408858
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01003_red.npz",
+      "bytes": 411076
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_blue.json",
+      "bytes": 6455
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_blue.mp4",
+      "bytes": 427375
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_blue.npz",
+      "bytes": 415518
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_green.json",
+      "bytes": 8366
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_green.mp4",
+      "bytes": 615282
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_green.npz",
+      "bytes": 669261
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_red.json",
+      "bytes": 7569
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_red.mp4",
+      "bytes": 503126
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/layout_01004_red.npz",
+      "bytes": 574314
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/protocol.json",
+      "bytes": 2544
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed42/summary.json",
+      "bytes": 128176
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_blue.json",
+      "bytes": 6778
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_blue.mp4",
+      "bytes": 505128
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_blue.npz",
+      "bytes": 462291
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_green.json",
+      "bytes": 6783
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_green.mp4",
+      "bytes": 490074
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_green.npz",
+      "bytes": 461066
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_red.json",
+      "bytes": 8399
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_red.mp4",
+      "bytes": 619012
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01000_red.npz",
+      "bytes": 716860
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_blue.json",
+      "bytes": 8409
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_blue.mp4",
+      "bytes": 666976
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_blue.npz",
+      "bytes": 727654
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_green.json",
+      "bytes": 7580
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_green.mp4",
+      "bytes": 585650
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_green.npz",
+      "bytes": 589008
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_red.json",
+      "bytes": 8401
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_red.mp4",
+      "bytes": 645532
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01001_red.npz",
+      "bytes": 720767
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_blue.json",
+      "bytes": 7000
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_blue.mp4",
+      "bytes": 481684
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_blue.npz",
+      "bytes": 499984
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_green.json",
+      "bytes": 6450
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_green.mp4",
+      "bytes": 410478
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_green.npz",
+      "bytes": 413242
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_red.json",
+      "bytes": 8349
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_red.mp4",
+      "bytes": 614602
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01002_red.npz",
+      "bytes": 665235
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_blue.json",
+      "bytes": 7245
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_blue.mp4",
+      "bytes": 508379
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_blue.npz",
+      "bytes": 538025
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_green.json",
+      "bytes": 6842
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_green.mp4",
+      "bytes": 505614
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_green.npz",
+      "bytes": 472636
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_red.json",
+      "bytes": 6764
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_red.mp4",
+      "bytes": 500211
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01003_red.npz",
+      "bytes": 460052
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_blue.json",
+      "bytes": 6508
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_blue.mp4",
+      "bytes": 421705
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_blue.npz",
+      "bytes": 418472
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_green.json",
+      "bytes": 8368
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_green.mp4",
+      "bytes": 662355
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_green.npz",
+      "bytes": 670683
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_red.json",
+      "bytes": 6503
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_red.mp4",
+      "bytes": 371071
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/layout_01004_red.npz",
+      "bytes": 421068
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/protocol.json",
+      "bytes": 2544
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/evaluations/update_500_validation_seed43/summary.json",
+      "bytes": 126167
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/probe_1000.log",
+      "bytes": 5628
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/probe_2010.log",
+      "bytes": 5622
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/probe_500.log",
+      "bytes": 5599
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/serve_update_1000.log",
+      "bytes": 3165
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/serve_update_2010.log",
+      "bytes": 3165
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/serve_update_500.log",
+      "bytes": 3163
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/train_to_1000.log",
+      "bytes": 26373
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/train_to_2010.log",
+      "bytes": 51928
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/train_to_500.log",
+      "bytes": 27149
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_1000_train_seed42.log",
+      "bytes": 183
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_1000_train_seed43.log",
+      "bytes": 183
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_1000_validation_seed42.log",
+      "bytes": 543
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_1000_validation_seed43.log",
+      "bytes": 543
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_2010_train_seed42.log",
+      "bytes": 183
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_2010_train_seed43.log",
+      "bytes": 182
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_2010_validation_seed42.log",
+      "bytes": 540
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_2010_validation_seed43.log",
+      "bytes": 540
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_500_train_seed42.log",
+      "bytes": 182
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_500_train_seed43.log",
+      "bytes": 183
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_500_validation_seed42.log",
+      "bytes": 546
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/logs/update_500_validation_seed43.log",
+      "bytes": 545
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/lora_metrics.jsonl",
+      "bytes": 963031
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/lora_training.json",
+      "bytes": 1038
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/node_1000.json",
+      "bytes": 6541
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/node_2010.json",
+      "bytes": 6535
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/node_500.json",
+      "bytes": 6533
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_1000/observations.json",
+      "bytes": 241476
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_1000/predictions.npz",
+      "bytes": 316488
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_1000/prompt_swap.json",
+      "bytes": 17058
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_1000/protocol.json",
+      "bytes": 1601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_2010/observations.json",
+      "bytes": 241568
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_2010/predictions.npz",
+      "bytes": 316454
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_2010/prompt_swap.json",
+      "bytes": 17040
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_2010/protocol.json",
+      "bytes": 1601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_500/observations.json",
+      "bytes": 240820
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_500/predictions.npz",
+      "bytes": 316564
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_500/prompt_swap.json",
+      "bytes": 17034
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/probes/fixed/update_500/protocol.json",
+      "bytes": 1599
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/resume_verification_0.json",
+      "bytes": 606
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/resume_verification_1000.json",
+      "bytes": 617
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/resume_verification_500.json",
+      "bytes": 614
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/sample_order.json",
+      "bytes": 69518
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/sample_order.npy",
+      "bytes": 64448
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/sampler.json",
+      "bytes": 906
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/scene/scene.xml",
+      "bytes": 14322
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/scene/version.json",
+      "bytes": 1974
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/selected_candidate.json",
+      "bytes": 144
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/train_config.txt",
+      "bytes": 2065
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/training_progress.json",
+      "bytes": 601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/trajectory_metrics_1000.json",
+      "bytes": 93735
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/trajectory_metrics_2010.json",
+      "bytes": 93580
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/trajectory_metrics_500.json",
+      "bytes": 93709
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/comparison.json",
+      "bytes": 46687
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/contract.json",
+      "bytes": 17587
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/execution_events.jsonl",
+      "bytes": 31523
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/logs/supervisor.log",
+      "bytes": 5609
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/publication.lock",
+      "bytes": 0
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/publication_attempts.jsonl",
+      "bytes": 13695
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/publication_delivery.json",
+      "bytes": 195
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/publication_receipts.jsonl",
+      "bytes": 6666
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/resources.jsonl",
+      "bytes": 50465
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/run.json",
+      "bytes": 5756
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/supervisor.exit",
+      "bytes": 2
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/teacher_reference_files.json",
+      "bytes": 3872
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/verified_training_arrays.json",
+      "bytes": 119522
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/AB_final_layout1001_blue_seed43.mp4",
+      "bytes": 246462
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/AB_final_layout1001_blue_seed43_frame.jpg",
+      "bytes": 35058
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/AB_final_layout1003_red_seed42.mp4",
+      "bytes": 245322
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/AB_final_layout1003_red_seed42_frame.jpg",
+      "bytes": 34718
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/B_final_train_layout100_blue_seed42.mp4",
+      "bytes": 257336
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/B_final_train_layout100_blue_seed42_frame.jpg",
+      "bytes": 26897
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/video_review_20261101/manifest.json",
+      "bytes": 3812
+    }
+  ],
+  "active_dependencies_retained": [],
+  "freed_bytes": 0
+}
