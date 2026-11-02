@@ -1,6 +1,6 @@
 {
   "at_utc": "2026-11-02T12:25:56.888413+00:00",
-  "status": "verified_ready_to_delete",
+  "status": "deleted",
   "group": "existing-fy5080-checkpoints",
   "release_tag": "fy5080-pi-artifacts-20261031",
   "remote_assets": [
@@ -215,5 +215,36 @@
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101",
     "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102"
   ],
-  "freed_bytes": 0
+  "freed_bytes": 9243886728,
+  "deleted_at": "2026-11-02T12:26:09.931857+00:00",
+  "deleted_paths": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/_CHECKPOINT_METADATA",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/assets/piper_h_color_v1/norm_stats.json",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/_METADATA",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/_sharding",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/array_metadatas/process_0",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/d/dc5fdfd260be3a1f24384bd7d88cf180",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/manifest.ocdbt",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/ocdbt.process_0/d/1125ed8db125368f8b3f88f873358376",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/ocdbt.process_0/d/1632b90d20f0eaff007b7d597e3cfbd1",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/ocdbt.process_0/d/181ffbba259e031ea1df94c255d3b688",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/ocdbt.process_0/d/1b4bfd038eee01affabc578d642d113f",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/ocdbt.process_0/d/376e4e74fba396ac76873b3825eb856c",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_full/v1/1000/params/ocdbt.process_0/manifest.ocdbt",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/_CHECKPOINT_METADATA",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/assets/piper_h_color_v1/norm_stats.json",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/_METADATA",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/_sharding",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/array_metadatas/process_0",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/d/b9ceea18f9f0cc675ac558669ad1ccc2",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/manifest.ocdbt",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/43dab9c7048590c4a39e04fb06359797",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/638e73b6d5a7d089e0cc0e15f2804019",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/8aacf4d12407e07c62c5e4e631390b78",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/9094dde17f00636579356687eb13fbbc",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/a871030b522f0813afd8fbb5710774b7",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/c69ec5421d76d5c2f5c95afce61658b6",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/d/f0d58a2c278b6e43cadd1c7636d3b6b8",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/cloud-recovery-20261024/checkpoints/pi05_piper_color_lora/v1/1499/params/ocdbt.process_0/manifest.ocdbt"
+  ]
 }
