@@ -1,16 +1,18 @@
 {
   "started_at": "2026-11-02T12:13:19.886195+00:00",
   "completed": false,
-  "stage": "train_E_500",
-  "at_utc": "2026-11-02T12:13:24.032071+00:00",
+  "stage": "E_500",
+  "at_utc": "2026-11-02T12:17:49.948938+00:00",
   "counts": {
     "updates": {
-      "E": 0,
+      "E": 500,
       "F": 0
     },
     "autonomous_tasks": 0,
     "baseline_reused": 123
   },
-  "child_pid": 79609,
-  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/train_E_500_1793621604031106840.log"
+  "child_pid": 80986,
+  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/E_500_1793621869947471846.log",
+  "service_pid": 80889,
+  "service_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/serve_E_500_1793621856940432706.log"
 }
