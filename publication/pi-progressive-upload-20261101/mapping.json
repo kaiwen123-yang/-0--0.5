@@ -161,8 +161,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701676626,
+        "name": "ef-local-corrections-file-0005-part-000",
+        "size": 9204916,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0005-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:26:13.252414+00:00"
     },
     {
       "name": "ef-local-corrections-file-0006-part-000",
@@ -181,8 +189,8 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "ef-local-corrections-file-0007-part-000",
