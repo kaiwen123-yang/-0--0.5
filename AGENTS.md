@@ -97,3 +97,9 @@
 ## 2026-11-01 22:20 后用户调整网络方案
 - 因用户 VPN 流量消耗，π 项目的 GitHub 传输改为仅使用官方 /etc/network_turbo 学术加速；已实测 API、git ls-remote 和实际 Release 上传。此条覆盖前文“只用 VPN、不用学术加速”的历史网络限制。
 - 仅为 GitHub 子进程设置代理，不改全局配置或其他项目；官方代理失败则有界重试后待传，禁止自动回退用户 VPN。实验协议、预算和结果保留规则不变。
+
+
+## 2026-11-02 latest network authorization
+- User now permits the existing D57 server-local VPN after another academic acceleration interruption. This overrides earlier academic-only/VPN-prohibited transfer instructions for this project.
+- Keep the current academic batch running. On its next transport failure, resume the existing queue using D57 Mihomo at 127.0.0.1:7890 in GitHub child processes only. Do not use the PC reverse tunnel or alter other projects/global proxy settings.
+- Preserve receipts and failed attempts, reconcile remote name/state/size, and keep bounded retries. No new experiments or training are authorized by this network change.

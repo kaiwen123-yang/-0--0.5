@@ -114,7 +114,7 @@ def write_status(mapping,status,current=None):
     missing=[dict(name=j['name'],status=j['status'],source_bytes=j['source_bytes'],attempts=j['attempts'],reason=j.get('error')) for j in jobs if j['status']!='uploaded']
     save(TRANSFER/'missing.json',dict(at_utc=now(),assets=missing,unresolved=mapping['unresolved']))
     progress=dict(at_utc=now(),status=status,current=current,pid=os.getpid(),concurrency=1,nice=19,ionice='idle',
-        transport='autodl_academic_only',vpn_fallback=False,
+        transport='d57_server_clash' if os.environ.get('PI_GITHUB_TRANSPORT')=='server_clash' else 'autodl_academic_only',vpn_fallback=os.environ.get('PI_GITHUB_TRANSPORT')=='server_clash',pc_vpn_used=False,
         rate_limit_mib_s=4,reused_groups=len(reused),reused_assets=sum(len(g['parts']) for g in reused),
         reused_source_files=sum(g['source_files'] for g in reused),reused_source_bytes=sum(g['source_bytes'] for g in reused),
         planned_new_assets=len(jobs),uploaded_new_assets=sum(j['status']=='uploaded' for j in jobs),
@@ -229,11 +229,11 @@ def main():
     TRANSFER.mkdir(parents=True,exist_ok=True)
     lock=(TRANSFER/'queue.lock').open('a'); fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     os.nice(19)
-    # No GitHub networking is attempted through a different route if this proxy is down.
+    # Route is selected by the authorized batch launcher; this worker retains bounded retries.
     for attempt in range(3):
         try: release_id,assets=release(TAG); break
         except Exception as exc:
-            save(TRANSFER/'progress.json',dict(status='paused_academic_proxy_unavailable',at_utc=now(),error=str(exc),attempt=attempt+1,source_deleted=False,transport='autodl_academic_only',vpn_fallback=False))
+            save(TRANSFER/'progress.json',dict(status=('paused_server_vpn_unavailable' if os.environ.get('PI_GITHUB_TRANSPORT')=='server_clash' else 'paused_academic_proxy_unavailable'),at_utc=now(),error=str(exc),attempt=attempt+1,source_deleted=False,transport='d57_server_clash' if os.environ.get('PI_GITHUB_TRANSPORT')=='server_clash' else 'autodl_academic_only',vpn_fallback=os.environ.get('PI_GITHUB_TRANSPORT')=='server_clash',pc_vpn_used=False))
             if attempt==2: return
             time.sleep(30)
     mapping=read(TRANSFER/'mapping.json') if (TRANSFER/'mapping.json').exists() else plan()
@@ -271,8 +271,8 @@ def main():
                         if old and old['size']==size and old['state']=='uploaded': job.update(status='uploaded',receipt=old); break
                         if old: job.update(attempts=3,error='Partial asset exists; no deletion or duplicate upload'); break
                     except Exception as network:
-                        job['error']='Official academic proxy/API unavailable; pending: '+repr(network)
-                        write_status(mapping,'paused_academic_proxy_unavailable',job['name']); return False
+                        job['error']='GitHub transport/API unavailable; pending: '+repr(network)
+                        write_status(mapping,('paused_server_vpn_unavailable' if os.environ.get('PI_GITHUB_TRANSPORT')=='server_clash' else 'paused_academic_proxy_unavailable'),job['name']); return False
                     if pause_reason():
                         write_status(mapping,'paused_'+pause_reason(),job['name']); return False
                     if attempt<2: time.sleep(10)
