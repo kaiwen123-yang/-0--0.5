@@ -252,9 +252,17 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "pending",
-      "attempts": 2,
-      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
+      "status": "uploaded",
+      "attempts": 3,
+      "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])",
+      "receipt": {
+        "id": 702161672,
+        "name": "ef-F-checkpoint-500-file-0008-part-000",
+        "size": 16647851,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0008-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:13:43.673376+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0009-part-000",
@@ -273,8 +281,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702162141,
+        "name": "ef-F-checkpoint-500-file-0009-part-000",
+        "size": 17469708,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0009-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:13:52.751845+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0010-part-000",
@@ -293,8 +309,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702162436,
+        "name": "ef-F-checkpoint-500-file-0010-part-000",
+        "size": 118273663,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-F-checkpoint-500-file-0010-part-000"
+      },
+      "uploaded_at": "2026-11-02T15:14:26.402087+00:00"
     },
     {
       "name": "ef-F-checkpoint-500-file-0011-part-000",

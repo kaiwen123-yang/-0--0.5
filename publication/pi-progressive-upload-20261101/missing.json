@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-02T13:54:28.333740+00:00",
+  "at_utc": "2026-11-02T15:13:52.850696+00:00",
   "assets": [
     {
       "name": "ef-F-checkpoint-500-file-0006-part-000",
@@ -9,24 +9,10 @@
       "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
-      "name": "ef-F-checkpoint-500-file-0008-part-000",
-      "status": "pending",
-      "source_bytes": 16647851,
-      "attempts": 2,
-      "reason": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0009-part-000",
-      "status": "queued",
-      "source_bytes": 17469708,
-      "attempts": 0,
-      "reason": null
-    },
-    {
       "name": "ef-F-checkpoint-500-file-0010-part-000",
-      "status": "queued",
+      "status": "uploading",
       "source_bytes": 118273663,
-      "attempts": 0,
+      "attempts": 1,
       "reason": null
     },
     {
