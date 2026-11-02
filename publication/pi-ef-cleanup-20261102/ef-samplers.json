@@ -1,6 +1,6 @@
 {
   "at_utc": "2026-11-02T16:14:29.554882+00:00",
-  "status": "verified_ready_to_delete",
+  "status": "deleted",
   "group": "ef-samplers",
   "release_tag": "pi-complete-backup-20261101",
   "remote_assets": [
@@ -21,5 +21,10 @@
     }
   ],
   "active_dependencies_retained": [],
-  "freed_bytes": 0
+  "freed_bytes": 64256,
+  "deleted_at": "2026-11-02T16:14:34.797150+00:00",
+  "deleted_paths": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/E/sample_order.npy",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/F/sample_order.npy"
+  ]
 }
