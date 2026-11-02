@@ -9911,8 +9911,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701665916,
+        "name": "progressive-bct-new-5c0d7063ac8f883d-external_rgb.npy",
+        "size": 49373312,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/untagged-37b88b96fa7563e10055/progressive-bct-new-5c0d7063ac8f883d-external_rgb.npy"
+      },
+      "uploaded_at": "2026-11-02T12:22:33.615940+00:00"
     },
     {
       "name": "progressive-bct-new-845fcb24fb1ae871-wrist_rgb.npy",
@@ -9931,8 +9939,9 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "pending",
+      "attempts": 1,
+      "error": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
       "name": "progressive-bct-new-d823dbaff2b61f94-external_rgb.npy",
