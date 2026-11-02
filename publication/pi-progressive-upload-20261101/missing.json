@@ -1,32 +1,18 @@
 {
-  "at_utc": "2026-11-02T15:51:25.652075+00:00",
+  "at_utc": "2026-11-02T16:06:09.996918+00:00",
   "assets": [
-    {
-      "name": "ef-F-checkpoint-500-file-0006-part-000",
-      "status": "pending",
-      "source_bytes": 34937715,
-      "attempts": 3,
-      "reason": "BrokenPipeError(32, 'Broken pipe')"
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0020-part-001",
-      "status": "pending",
-      "source_bytes": 1073741824,
-      "attempts": 3,
-      "reason": "BrokenPipeError(32, 'Broken pipe')"
-    },
     {
       "name": "ef-local-corrections-file-0040-part-000",
       "status": "pending",
       "source_bytes": 31460480,
-      "attempts": 1,
-      "reason": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
+      "attempts": 3,
+      "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
       "name": "ef-local-corrections-file-0041-part-000",
-      "status": "queued",
+      "status": "uploading",
       "source_bytes": 31460480,
-      "attempts": 0,
+      "attempts": 1,
       "reason": null
     },
     {
