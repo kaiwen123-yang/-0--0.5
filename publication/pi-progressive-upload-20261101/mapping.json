@@ -49,8 +49,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701674426,
+        "name": "ef-local-corrections-file-0001-part-000",
+        "size": 9005907,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0001-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:25:31.005946+00:00"
     },
     {
       "name": "ef-local-corrections-file-0002-part-000",
@@ -69,8 +77,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701674858,
+        "name": "ef-local-corrections-file-0002-part-000",
+        "size": 9543519,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0002-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:25:40.245935+00:00"
     },
     {
       "name": "ef-local-corrections-file-0003-part-000",
@@ -89,8 +105,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 701675445,
+        "name": "ef-local-corrections-file-0003-part-000",
+        "size": 9634329,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-local-corrections-file-0003-part-000"
+      },
+      "uploaded_at": "2026-11-02T12:25:49.381666+00:00"
     },
     {
       "name": "ef-local-corrections-file-0004-part-000",
@@ -109,8 +133,8 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "ef-local-corrections-file-0005-part-000",
