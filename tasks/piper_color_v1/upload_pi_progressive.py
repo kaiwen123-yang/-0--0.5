@@ -176,6 +176,55 @@ def stream_upload(release_id,job,path,offset,size):
             stop_watch.set()
             if proc.poll() is None: proc.kill(); proc.wait(timeout=10)
 
+def register_completed_campaign(mapping):
+    if mapping.get('campaign_registered') or not read(CAMPAIGN/'run.json').get('completed'):
+        return False
+    additions=[]; small=[]; total=0
+    def add_bundle():
+        nonlocal small,total
+        if not small: return
+        identity=hashlib.sha256(json.dumps([(m['source'],m['bytes']) for m in small]).encode()).hexdigest()[:16]
+        additions.append(dict(name=f'progressive-bct-new-records-{identity}.tar',kind='small_records_bundle',members=small,
+            source_bytes=total,group='bct-new-results',status='queued',attempts=0))
+        small=[]; total=0
+    for current,dirs,files in os.walk(CAMPAIGN,followlinks=False):
+        dirs[:]=[d for d in dirs if not (Path(current)/d).is_symlink()]
+        for name in sorted(files):
+            path=Path(current)/name
+            if 'checkpoints' not in path.parts and path.suffix not in ('.npz','.mp4','.npy'): continue
+            st=path.stat(); member=dict(source=str(path),archive_path=str(path.relative_to(ROOT.parent)),bytes=st.st_size,mtime_ns=st.st_mtime_ns)
+            if st.st_size<=8*1024**2:
+                if total+st.st_size>64*1024**2: add_bundle()
+                small.append(member); total+=st.st_size
+            else:
+                identity=hashlib.sha256(str(path).encode()).hexdigest()[:16]
+                parts=math.ceil(st.st_size/CHUNK) if st.st_size>=2*1024**3 else 1
+                for part in range(parts):
+                    offset=part*CHUNK if parts>1 else 0; size=min(CHUNK,st.st_size-offset) if parts>1 else st.st_size
+                    additions.append(dict(name=f'progressive-bct-new-{identity}-{name}'+(f'.part-{part:03d}' if parts>1 else ''),
+                        kind='raw_file_range',members=[member],source_bytes=size,bytes=size,offset=offset,part=part,parts=parts,
+                        group='bct-new-results',status='queued',attempts=0))
+    add_bundle(); mapping['jobs'].extend(additions); mapping['campaign_registered']=True
+    write_status(mapping,'new_experiment_artifacts_queued')
+    return True
+
+
+def reconcile_remote_receipts(mapping,assets):
+    reconciled=[]
+    for job in mapping['jobs']:
+        asset=assets.get(job['name'])
+        if asset and job.get('bytes') is not None and asset['size']==job['bytes'] and asset['state']=='uploaded':
+            if job['status']!='uploaded':
+                receipt={k:asset.get(k) for k in ('id','name','size','state')}
+                record=dict(at_utc=now(),name=job['name'],previous_status=job['status'],receipt=receipt,metadata_only=True)
+                reconciled.append(record)
+                append(TRANSFER/'receipts.jsonl',record)
+                job.update(status='uploaded',receipt=receipt,reconciled_at=now(),reused_on_resume=True)
+    save(TRANSFER/'last_reconciliation.json',dict(at_utc=now(),entries=reconciled,verification='name/size/uploaded only; no download/hash rescan'))
+    write_status(mapping,'ready_to_resume')
+    return reconciled
+
+
 def main():
     TRANSFER.mkdir(parents=True,exist_ok=True)
     lock=(TRANSFER/'queue.lock').open('a'); fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -188,6 +237,8 @@ def main():
             if attempt==2: return
             time.sleep(30)
     mapping=read(TRANSFER/'mapping.json') if (TRANSFER/'mapping.json').exists() else plan()
+    register_completed_campaign(mapping)
+    reconcile_remote_receipts(mapping,assets)
     for job in mapping['jobs']:
         if job['status']=='uploaded':
             old=assets.get(job['name'])
@@ -238,33 +289,7 @@ def main():
         while not read(CAMPAIGN/'run.json').get('completed'):
             write_status(mapping,'waiting_for_experiment_artifacts')
             time.sleep(30)
-        additions=[]; small=[]; total=0
-        def add_bundle():
-            nonlocal small,total
-            if not small: return
-            identity=hashlib.sha256(json.dumps([(m['source'],m['bytes']) for m in small]).encode()).hexdigest()[:16]
-            additions.append(dict(name=f'progressive-bct-new-records-{identity}.tar',kind='small_records_bundle',members=small,
-                source_bytes=total,group='bct-new-results',status='queued',attempts=0))
-            small=[]; total=0
-        for current,dirs,files in os.walk(CAMPAIGN,followlinks=False):
-            dirs[:]=[d for d in dirs if not (Path(current)/d).is_symlink()]
-            for name in sorted(files):
-                path=Path(current)/name
-                if 'checkpoints' not in path.parts and path.suffix not in ('.npz','.mp4','.npy'): continue
-                st=path.stat(); member=dict(source=str(path),archive_path=str(path.relative_to(ROOT.parent)),bytes=st.st_size,mtime_ns=st.st_mtime_ns)
-                if st.st_size<=8*1024**2:
-                    if total+st.st_size>64*1024**2: add_bundle()
-                    small.append(member); total+=st.st_size
-                else:
-                    identity=hashlib.sha256(str(path).encode()).hexdigest()[:16]
-                    parts=math.ceil(st.st_size/CHUNK) if st.st_size>=2*1024**3 else 1
-                    for part in range(parts):
-                        offset=part*CHUNK if parts>1 else 0; size=min(CHUNK,st.st_size-offset) if parts>1 else st.st_size
-                        additions.append(dict(name=f'progressive-bct-new-{identity}-{name}'+(f'.part-{part:03d}' if parts>1 else ''),
-                            kind='raw_file_range',members=[member],source_bytes=size,bytes=size,offset=offset,part=part,parts=parts,
-                            group='bct-new-results',status='queued',attempts=0))
-        add_bundle(); mapping['jobs'].extend(additions); mapping['campaign_registered']=True
-        write_status(mapping,'new_experiment_artifacts_queued')
+        register_completed_campaign(mapping)
         lock.close()
         return True
     complete=all(j['status']=='uploaded' for j in mapping['jobs']) and not mapping['unresolved']
