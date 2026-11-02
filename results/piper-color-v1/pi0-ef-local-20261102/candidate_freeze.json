@@ -1,0 +1,170 @@
+{
+  "at_utc": "2026-11-02T13:05:30.915148+00:00",
+  "candidate": "B",
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+  "optimizer_updates": 4020,
+  "selection": "development only",
+  "new_layouts": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006,
+    3007,
+    3008,
+    3009
+  ],
+  "new_seeds": [
+    42,
+    43
+  ],
+  "old_test_untouched": true,
+  "candidates": [
+    {
+      "label": "E_500",
+      "local_updates": 500,
+      "summary": {
+        "train": {
+          "total": 48,
+          "successes": 34,
+          "back_successes": 21,
+          "by_slot": {
+            "back": {
+              "total": 32,
+              "successes": 21
+            },
+            "front_left": {
+              "total": 8,
+              "successes": 5
+            },
+            "front_right": {
+              "total": 8,
+              "successes": 8
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 22,
+              "successes": 13
+            },
+            "green": {
+              "total": 16,
+              "successes": 15
+            },
+            "blue": {
+              "total": 10,
+              "successes": 6
+            }
+          }
+        },
+        "validation": {
+          "total": 75,
+          "successes": 67,
+          "back_successes": 22,
+          "by_slot": {
+            "back": {
+              "total": 25,
+              "successes": 22
+            },
+            "front_left": {
+              "total": 25,
+              "successes": 21
+            },
+            "front_right": {
+              "total": 25,
+              "successes": 24
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 25,
+              "successes": 21
+            },
+            "green": {
+              "total": 25,
+              "successes": 22
+            },
+            "blue": {
+              "total": 25,
+              "successes": 24
+            }
+          }
+        }
+      }
+    },
+    {
+      "label": "F_500",
+      "local_updates": 500,
+      "summary": {
+        "train": {
+          "total": 48,
+          "successes": 30,
+          "back_successes": 16,
+          "by_slot": {
+            "back": {
+              "total": 32,
+              "successes": 16
+            },
+            "front_left": {
+              "total": 8,
+              "successes": 7
+            },
+            "front_right": {
+              "total": 8,
+              "successes": 7
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 22,
+              "successes": 9
+            },
+            "green": {
+              "total": 16,
+              "successes": 14
+            },
+            "blue": {
+              "total": 10,
+              "successes": 7
+            }
+          }
+        },
+        "validation": {
+          "total": 75,
+          "successes": 65,
+          "back_successes": 18,
+          "by_slot": {
+            "back": {
+              "total": 25,
+              "successes": 18
+            },
+            "front_left": {
+              "total": 25,
+              "successes": 22
+            },
+            "front_right": {
+              "total": 25,
+              "successes": 25
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 25,
+              "successes": 18
+            },
+            "green": {
+              "total": 25,
+              "successes": 25
+            },
+            "blue": {
+              "total": 25,
+              "successes": 22
+            }
+          }
+        }
+      }
+    }
+  ]
+}
