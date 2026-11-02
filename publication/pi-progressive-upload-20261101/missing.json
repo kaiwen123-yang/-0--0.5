@@ -1,68 +1,19 @@
 {
-  "at_utc": "2026-11-02T13:27:48.686964+00:00",
+  "at_utc": "2026-11-02T13:54:28.333740+00:00",
   "assets": [
     {
-      "name": "ef-F-checkpoint-500-file-0000-part-000",
-      "status": "queued",
-      "source_bytes": 89341454,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0001-part-000",
-      "status": "queued",
-      "source_bytes": 380274201,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0002-part-000",
-      "status": "queued",
-      "source_bytes": 1721271238,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0003-part-000",
-      "status": "queued",
-      "source_bytes": 920767012,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0004-part-000",
-      "status": "queued",
-      "source_bytes": 13015019,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0005-part-000",
-      "status": "queued",
-      "source_bytes": 14747406,
-      "attempts": 0,
-      "reason": null
-    },
-    {
       "name": "ef-F-checkpoint-500-file-0006-part-000",
-      "status": "queued",
+      "status": "pending",
       "source_bytes": 34937715,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0007-part-000",
-      "status": "queued",
-      "source_bytes": 59004965,
-      "attempts": 0,
-      "reason": null
+      "attempts": 3,
+      "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
       "name": "ef-F-checkpoint-500-file-0008-part-000",
-      "status": "queued",
+      "status": "pending",
       "source_bytes": 16647851,
-      "attempts": 0,
-      "reason": null
+      "attempts": 2,
+      "reason": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "ef-F-checkpoint-500-file-0009-part-000",
