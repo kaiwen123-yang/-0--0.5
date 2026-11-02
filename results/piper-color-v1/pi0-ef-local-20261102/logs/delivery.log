@@ -3,3 +3,15 @@ GROUP_DELETED existing-fy5080-checkpoints 9243886728
 GROUP_DELETED existing-fy5080-dataset 16523947366
 GROUP_DELETED existing-fy5080-supplement 15670839
 GROUP_DELETED six-checkpoint-2010 9795954756
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/finalize_pi0_ef.py", line 4, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/deliver_pi0_ef.py", line 160, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/deliver_pi0_ef.py", line 133, in main
+    if r.returncode:raise RuntimeError('Result report failed; original outputs retained')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Result report failed; original outputs retained

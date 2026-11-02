@@ -1,0 +1,401 @@
+[
+  {
+    "candidate": "B",
+    "split": "train",
+    "slot": "all",
+    "n": 48,
+    "successes": 25,
+    "closure_events": 45,
+    "no_closure": 3,
+    "close_median_s": 4.8,
+    "close_xy_median_mm": 12.461361447081327,
+    "failure_stages": {
+      "approach_no_closure": 3,
+      "approach_or_grasp": 10,
+      "lift_or_transfer": 7,
+      "lower_or_release": 2,
+      "stability_or_distractor": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "train",
+    "slot": "back",
+    "n": 32,
+    "successes": 14,
+    "closure_events": 29,
+    "no_closure": 3,
+    "close_median_s": 7.15,
+    "close_xy_median_mm": 14.322702798643125,
+    "failure_stages": {
+      "approach_no_closure": 3,
+      "approach_or_grasp": 8,
+      "lift_or_transfer": 4,
+      "lower_or_release": 2,
+      "stability_or_distractor": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "train",
+    "slot": "front_left",
+    "n": 8,
+    "successes": 4,
+    "closure_events": 8,
+    "no_closure": 0,
+    "close_median_s": 4.025,
+    "close_xy_median_mm": 6.357885912792677,
+    "failure_stages": {
+      "approach_or_grasp": 1,
+      "lift_or_transfer": 3,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "train",
+    "slot": "front_right",
+    "n": 8,
+    "successes": 7,
+    "closure_events": 8,
+    "no_closure": 0,
+    "close_median_s": 4.175,
+    "close_xy_median_mm": 7.9170301021119505,
+    "failure_stages": {
+      "approach_or_grasp": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "validation",
+    "slot": "all",
+    "n": 75,
+    "successes": 72,
+    "closure_events": 75,
+    "no_closure": 0,
+    "close_median_s": 3.95,
+    "close_xy_median_mm": 8.32864272919409,
+    "failure_stages": {
+      "approach_or_grasp": 1,
+      "lift_or_transfer": 2,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "validation",
+    "slot": "back",
+    "n": 25,
+    "successes": 23,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 4.8,
+    "close_xy_median_mm": 9.639104431617822,
+    "failure_stages": {
+      "approach_or_grasp": 1,
+      "lift_or_transfer": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "validation",
+    "slot": "front_left",
+    "n": 25,
+    "successes": 24,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 3.85,
+    "close_xy_median_mm": 7.633901750823254,
+    "failure_stages": {
+      "lift_or_transfer": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "B",
+    "split": "validation",
+    "slot": "front_right",
+    "n": 25,
+    "successes": 25,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 3.85,
+    "close_xy_median_mm": 8.096633274158524,
+    "failure_stages": {
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "train",
+    "slot": "all",
+    "n": 48,
+    "successes": 34,
+    "closure_events": 47,
+    "no_closure": 1,
+    "close_median_s": 4.25,
+    "close_xy_median_mm": 10.630421449700146,
+    "failure_stages": {
+      "approach_no_closure": 1,
+      "approach_or_grasp": 5,
+      "lift_or_transfer": 2,
+      "lower_or_release": 3,
+      "release": 1,
+      "stability_or_distractor": 2,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "train",
+    "slot": "back",
+    "n": 32,
+    "successes": 21,
+    "closure_events": 31,
+    "no_closure": 1,
+    "close_median_s": 5.25,
+    "close_xy_median_mm": 12.904448444545542,
+    "failure_stages": {
+      "approach_no_closure": 1,
+      "approach_or_grasp": 3,
+      "lift_or_transfer": 2,
+      "lower_or_release": 2,
+      "release": 1,
+      "stability_or_distractor": 2,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "train",
+    "slot": "front_left",
+    "n": 8,
+    "successes": 5,
+    "closure_events": 8,
+    "no_closure": 0,
+    "close_median_s": 3.825,
+    "close_xy_median_mm": 6.642601546541416,
+    "failure_stages": {
+      "approach_or_grasp": 2,
+      "lower_or_release": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "train",
+    "slot": "front_right",
+    "n": 8,
+    "successes": 8,
+    "closure_events": 8,
+    "no_closure": 0,
+    "close_median_s": 3.95,
+    "close_xy_median_mm": 8.049135132002256,
+    "failure_stages": {
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "validation",
+    "slot": "all",
+    "n": 75,
+    "successes": 67,
+    "closure_events": 75,
+    "no_closure": 0,
+    "close_median_s": 3.8,
+    "close_xy_median_mm": 7.6773375606026,
+    "failure_stages": {
+      "approach_or_grasp": 4,
+      "lift_or_transfer": 3,
+      "lower_or_release": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "validation",
+    "slot": "back",
+    "n": 25,
+    "successes": 22,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 3.95,
+    "close_xy_median_mm": 7.142820323707963,
+    "failure_stages": {
+      "approach_or_grasp": 1,
+      "lift_or_transfer": 2,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "validation",
+    "slot": "front_left",
+    "n": 25,
+    "successes": 21,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 3.9,
+    "close_xy_median_mm": 7.300049663393119,
+    "failure_stages": {
+      "approach_or_grasp": 3,
+      "lower_or_release": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "E_500",
+    "split": "validation",
+    "slot": "front_right",
+    "n": 25,
+    "successes": 24,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 3.65,
+    "close_xy_median_mm": 7.95195512268956,
+    "failure_stages": {
+      "lift_or_transfer": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "train",
+    "slot": "all",
+    "n": 48,
+    "successes": 30,
+    "closure_events": 46,
+    "no_closure": 2,
+    "close_median_s": 4.5,
+    "close_xy_median_mm": 10.777940614746043,
+    "failure_stages": {
+      "approach_no_closure": 2,
+      "approach_or_grasp": 5,
+      "lift_or_transfer": 8,
+      "release": 1,
+      "stability_or_distractor": 2,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "train",
+    "slot": "back",
+    "n": 32,
+    "successes": 16,
+    "closure_events": 30,
+    "no_closure": 2,
+    "close_median_s": 5.425000000000001,
+    "close_xy_median_mm": 12.599191612733023,
+    "failure_stages": {
+      "approach_no_closure": 2,
+      "approach_or_grasp": 5,
+      "lift_or_transfer": 7,
+      "release": 1,
+      "stability_or_distractor": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "train",
+    "slot": "front_left",
+    "n": 8,
+    "successes": 7,
+    "closure_events": 8,
+    "no_closure": 0,
+    "close_median_s": 4.225,
+    "close_xy_median_mm": 5.0937934551199415,
+    "failure_stages": {
+      "lift_or_transfer": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "train",
+    "slot": "front_right",
+    "n": 8,
+    "successes": 7,
+    "closure_events": 8,
+    "no_closure": 0,
+    "close_median_s": 4.3,
+    "close_xy_median_mm": 8.806736223136626,
+    "failure_stages": {
+      "stability_or_distractor": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "validation",
+    "slot": "all",
+    "n": 75,
+    "successes": 65,
+    "closure_events": 75,
+    "no_closure": 0,
+    "close_median_s": 4.2,
+    "close_xy_median_mm": 8.769887755052222,
+    "failure_stages": {
+      "approach_or_grasp": 2,
+      "lift_or_transfer": 5,
+      "lower_or_release": 1,
+      "release": 1,
+      "stability_or_distractor": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "validation",
+    "slot": "back",
+    "n": 25,
+    "successes": 18,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 4.55,
+    "close_xy_median_mm": 10.380457604196636,
+    "failure_stages": {
+      "approach_or_grasp": 2,
+      "lift_or_transfer": 2,
+      "lower_or_release": 1,
+      "release": 1,
+      "stability_or_distractor": 1,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "validation",
+    "slot": "front_left",
+    "n": 25,
+    "successes": 22,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 4.45,
+    "close_xy_median_mm": 8.769887755052222,
+    "failure_stages": {
+      "lift_or_transfer": 3,
+      "success": 0
+    }
+  },
+  {
+    "candidate": "F_500",
+    "split": "validation",
+    "slot": "front_right",
+    "n": 25,
+    "successes": 25,
+    "closure_events": 25,
+    "no_closure": 0,
+    "close_median_s": 4.05,
+    "close_xy_median_mm": 7.598157932386252,
+    "failure_stages": {
+      "success": 0
+    }
+  }
+]
