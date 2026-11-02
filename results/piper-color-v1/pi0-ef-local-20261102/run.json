@@ -1,8 +1,8 @@
 {
   "started_at": "2026-11-02T12:13:19.886195+00:00",
   "completed": false,
-  "stage": "matched_samplers",
-  "at_utc": "2026-11-02T12:13:20.044031+00:00",
+  "stage": "train_E_500",
+  "at_utc": "2026-11-02T12:13:24.032071+00:00",
   "counts": {
     "updates": {
       "E": 0,
@@ -11,6 +11,6 @@
     "autonomous_tasks": 0,
     "baseline_reused": 123
   },
-  "child_pid": null,
-  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/matched_samplers_1793621599890841023.log"
+  "child_pid": 79609,
+  "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ef-local-20261102/logs/train_E_500_1793621604031106840.log"
 }
