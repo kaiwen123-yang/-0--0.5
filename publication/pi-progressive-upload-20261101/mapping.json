@@ -17522,8 +17522,16 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "uploading",
-      "attempts": 1
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702487069,
+        "name": "progressive-bct-new-622433144fe6f9a3-wrist_rgb.npy",
+        "size": 49373312,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-bct-new-622433144fe6f9a3-wrist_rgb.npy"
+      },
+      "uploaded_at": "2026-11-02T16:57:17.466730+00:00"
     },
     {
       "name": "progressive-bct-new-7432e9fc119511ec-external_rgb.npy",
@@ -17542,8 +17550,8 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1
     },
     {
       "name": "progressive-bct-new-074eaf48a0ceaf65-wrist_rgb.npy",
