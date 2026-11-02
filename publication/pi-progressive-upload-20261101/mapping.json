@@ -7461,9 +7461,17 @@
         }
       ],
       "source_bytes": 37734210,
-      "status": "uploading",
+      "status": "uploaded",
       "attempts": 1,
-      "bytes": 37877760
+      "bytes": 37877760,
+      "receipt": {
+        "id": 702483927,
+        "name": "ef-evaluation-E_500-records-0000.tar",
+        "size": 37877760,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-evaluation-E_500-records-0000.tar"
+      },
+      "uploaded_at": "2026-11-02T16:56:07.246174+00:00"
     },
     {
       "name": "progressive-bct-new-records-3e511536cbb13665.tar",
@@ -17401,8 +17409,8 @@
       "part": 0,
       "parts": 1,
       "group": "bct-new-results",
-      "status": "pending",
-      "attempts": 1,
+      "status": "uploading",
+      "attempts": 2,
       "error": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
