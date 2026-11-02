@@ -20,8 +20,9 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "uploading",
-      "attempts": 1
+      "status": "pending",
+      "attempts": 1,
+      "error": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
       "name": "ef-local-corrections-file-0001-part-000",
