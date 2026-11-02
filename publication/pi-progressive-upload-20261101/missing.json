@@ -1,52 +1,1158 @@
 {
-  "at_utc": "2026-11-02T11:21:31.116064+00:00",
+  "at_utc": "2026-11-02T12:09:51.875459+00:00",
   "assets": [
     {
-      "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-001",
+      "name": "progressive-bct-new-records-476e353bbfd59e07.tar",
+      "status": "uploading",
+      "source_bytes": 66701652,
+      "attempts": 1,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-1cec99b7aa2945c0.tar",
+      "status": "queued",
+      "source_bytes": 66766621,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-72e06d2f792da69c.tar",
+      "status": "queued",
+      "source_bytes": 66967440,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-13ecb303bf1fbd32.tar",
+      "status": "queued",
+      "source_bytes": 66992959,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-8f037c0cf0055199.tar",
+      "status": "queued",
+      "source_bytes": 67024041,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-142e87885c0ac47f.tar",
+      "status": "queued",
+      "source_bytes": 66963427,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-c65b8177e1194ef0.tar",
+      "status": "queued",
+      "source_bytes": 66784109,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-77542930a67d10f7.tar",
+      "status": "queued",
+      "source_bytes": 66711940,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-b591fa36e1cf3494.tar",
+      "status": "queued",
+      "source_bytes": 66849421,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-9a27274475911063-correction_000.npz",
+      "status": "queued",
+      "source_bytes": 12490998,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-d999e2db134fac94-correction_001.npz",
+      "status": "queued",
+      "source_bytes": 12566241,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-c600bece1cb13fb2-correction_002.npz",
+      "status": "queued",
+      "source_bytes": 12118312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f7ad4777cdad2c8f-correction_003.npz",
+      "status": "queued",
+      "source_bytes": 12038375,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-72eb8b923dc535ed-correction_004.npz",
+      "status": "queued",
+      "source_bytes": 12560549,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-4d1efa4bc4e9e457-correction_005.npz",
+      "status": "queued",
+      "source_bytes": 12521322,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ce2cb48243d91a1e-correction_006.npz",
+      "status": "queued",
+      "source_bytes": 12531171,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-3e8f1de87a5f0c54-correction_007.npz",
+      "status": "queued",
+      "source_bytes": 12560337,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-8ce0e91d27cd4c8c-correction_008.npz",
+      "status": "queued",
+      "source_bytes": 12035342,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-e693d107cb185d91-correction_009.npz",
+      "status": "queued",
+      "source_bytes": 12578995,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-af88a3288e95be41-correction_010.npz",
+      "status": "queued",
+      "source_bytes": 12520668,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-cb3241cd54b13e22-correction_011.npz",
+      "status": "queued",
+      "source_bytes": 12551914,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5ca8df8f1de1defd-correction_012.npz",
+      "status": "queued",
+      "source_bytes": 12555612,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-a6a297b6c05422f8-correction_013.npz",
+      "status": "queued",
+      "source_bytes": 12025741,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-d2a532d74561d207-correction_014.npz",
+      "status": "queued",
+      "source_bytes": 12562789,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-462b9e42191cd74e-correction_015.npz",
+      "status": "queued",
+      "source_bytes": 12557421,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-9266c02f9d987c96-correction_016.npz",
+      "status": "queued",
+      "source_bytes": 12036492,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-852572e620c9e4c7-correction_017.npz",
+      "status": "queued",
+      "source_bytes": 12550189,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-3fc14c3d5d293395-correction_018.npz",
+      "status": "queued",
+      "source_bytes": 12053749,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f996ccba91205f85-correction_019.npz",
+      "status": "queued",
+      "source_bytes": 12516894,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5a72c2fdd9a9c12d-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b49e7153fd8de2a4-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5e5f07c05d8ee76f-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b2013e2369489293-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-6bf3b1310271c6f9-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-fd695fc67aceaf9c-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-1866851d66194db9-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-17f367b837cf3f53-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-43cbc991c4ed2918-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-8cd07010396922a9-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-1433fdd7348c0016-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b3f3f6f6e8c23fe7-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-68e7ec82cf34ca3a-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-1e7774d601369c1d-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-4669f90fd8842082-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-edfa8346951bf7e1-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5c0d7063ac8f883d-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-845fcb24fb1ae871-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-d823dbaff2b61f94-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-307c415c9cbc59ee-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-891b725ce2efa64b-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-622433144fe6f9a3-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-7432e9fc119511ec-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-074eaf48a0ceaf65-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-2d2ce6140705ccc4-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-53629598e9abd068-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-52c9e2cda12b415a-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-e52ba4c6de7fbfa4-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-28855e25f0b3640b-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-70362e71e7f22ca9-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-891aa920c0e427d0-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-e7b68e77e9a2924c-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-4c96467bbb10efcd-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-53d79d906113f9f7-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ce935edf79c2281c-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-eb8d6ca57ebbf26a-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-4da7787580ef3e1b-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-40cf2feddc271b8a-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b03ed75bc7454341-external_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-3f99257d44b89d92-wrist_rgb.npy",
+      "status": "queued",
+      "source_bytes": 49373312,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-296dc39c80ca585b-141a8124381bf787931d6d5526da450d",
+      "status": "queued",
+      "source_bytes": 187594526,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-714a8180fdcfdab6-31729b4c96ae42d8f2abab56050a2043.part-000",
       "status": "queued",
       "source_bytes": 1073741824,
       "attempts": 0,
       "reason": null
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-275469e093061e7b-3166f94f0061adde97cba653806ddc22.part-002",
+      "name": "progressive-bct-new-714a8180fdcfdab6-31729b4c96ae42d8f2abab56050a2043.part-001",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-714a8180fdcfdab6-31729b4c96ae42d8f2abab56050a2043.part-002",
+      "status": "queued",
+      "source_bytes": 64430930,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f73dc7932125534b-7437aecc888ec909f468b5c799dd5336",
+      "status": "queued",
+      "source_bytes": 15445566,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-aa102deb63f13d5d-d033978df31dd5eacdb4bcd419f85518",
+      "status": "queued",
+      "source_bytes": 708957841,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-bcdf451b10e4f8d4-1c63c1bab24b750cf995409c6ca1ce65",
+      "status": "queued",
+      "source_bytes": 20156668,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-a8884cc099cbdf9f-2ef65911377c699d59a14cbdd42a8c86",
+      "status": "queued",
+      "source_bytes": 993813031,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5072fac6ff65be58-2f796f4b0effce7df78a98268a4898a3",
+      "status": "queued",
+      "source_bytes": 767827848,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ef6d7e59a8c03e8d-44fd055650f2a1fc5310f9f7a15c5822",
+      "status": "queued",
+      "source_bytes": 17470057,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f0dace71a4012d8b-54f39073b57e5022f3bc39ff8aa9f099",
+      "status": "queued",
+      "source_bytes": 16871680,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ade1935f6909258c-7f378cae5cbfc18568dbcdb32f769b69",
+      "status": "queued",
+      "source_bytes": 17469609,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-63ca8646aa1b6284-8dfdd9e009d69bc5c21a38abeb181b4c",
+      "status": "queued",
+      "source_bytes": 34937761,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b2a75fb401894252-972db68776213456280fdb2775a284bf",
+      "status": "queued",
+      "source_bytes": 22512133,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-e10a533d7d0c14f9-9e64ddc98f66183478ecc9f68fdfda3c",
+      "status": "queued",
+      "source_bytes": 59005009,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b6d8fbbe386301ca-a69635296aac5a8fd2ece8f35fd218ec.part-000",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b6d8fbbe386301ca-a69635296aac5a8fd2ece8f35fd218ec.part-001",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-b6d8fbbe386301ca-a69635296aac5a8fd2ece8f35fd218ec.part-002",
       "status": "queued",
       "source_bytes": 574474018,
       "attempts": 0,
       "reason": null
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-33025297e430ed29-543464a0acb76fb0223e033d2b1f9205",
+      "name": "progressive-bct-new-271378f8c4703216-b2b1220394ebe057c8a9d39545d27186",
       "status": "queued",
-      "source_bytes": 8755185,
+      "source_bytes": 17471294,
       "attempts": 0,
       "reason": null
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-439b5563c6f3fd92-eb882fdf2484cd0f2dc6061ba0f2421d",
+      "name": "progressive-bct-new-6ce6672f095db908-bf3c9c9e385c8df7fcc79f9414997896",
       "status": "queued",
-      "source_bytes": 181618584,
+      "source_bytes": 29653448,
       "attempts": 0,
       "reason": null
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-543282d0fa13ae17-6953a6d31f6929d4dd327961d344c96b",
+      "name": "progressive-bct-new-121fadeaacb1610e-c01dc6b7ea28eb6487193ab03730c212",
       "status": "queued",
-      "source_bytes": 72169481,
+      "source_bytes": 235749967,
       "attempts": 0,
       "reason": null
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-59127a7bef61f3b4-dea47f501f83d76a7c3dbf627a7f18c7",
+      "name": "progressive-bct-new-f262969af0bf25bc-d361f30807d59ad073dd5b89ae78c1be",
       "status": "queued",
-      "source_bytes": 235749982,
+      "source_bytes": 34957163,
       "attempts": 0,
       "reason": null
     },
     {
-      "name": "progressive-ab-a-checkpoint-1000-73f846660993cf4e-82497db0cfb7d110e4d5d070145fb3a4",
+      "name": "progressive-bct-new-1a8851573901aa2e-d8c555377dd824f42ec9fa9726449354",
       "status": "queued",
-      "source_bytes": 701917852,
+      "source_bytes": 17469930,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-0fefa6c61eecf9b3-ea0fdbd808004abf77e562ab4d214da8",
+      "status": "queued",
+      "source_bytes": 59053959,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5f132507763f6019-f21d0577ab0194b42e2be34ac0206bc8",
+      "status": "queued",
+      "source_bytes": 946037534,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-95e126078323f0e2-f89b1a06c12fe11651ee796ac8b2f379",
+      "status": "queued",
+      "source_bytes": 118440648,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-edb98d7427b33ef4-fe5e0989cb40983800a82e0ec1e66908",
+      "status": "queued",
+      "source_bytes": 17470033,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-e162a4368cc7d92e-2efbe882db338aab51a885bd2803d618",
+      "status": "queued",
+      "source_bytes": 105363126,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-962e482885f876d2-bd020227d533dce11c79961bb12ce8ec",
+      "status": "queued",
+      "source_bytes": 731210003,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-82951c8b857aa790-c5271438d79d6c718563e113617de009",
+      "status": "queued",
+      "source_bytes": 2079912028,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-bcd87539f7e26742-e8f98158c9601f5c37dd681f030606f7",
+      "status": "queued",
+      "source_bytes": 202017477,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-046d0e205401b1b5-077f08c23973e8fe1ef4317945fa8ee9",
+      "status": "queued",
+      "source_bytes": 117479611,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-94982d32cabf89f8-11ce860f18a75c81c808949ca025a952",
+      "status": "queued",
+      "source_bytes": 34699931,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-2ae37fff35783c1e-2f13af047503664526d0e03caf73c638",
+      "status": "queued",
+      "source_bytes": 946032444,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-2bb1d09d568121cb-3925bf896f2040dc067c6ba52a8e64e0",
+      "status": "queued",
+      "source_bytes": 649986490,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-d031a627864e817d-3e3d94f54e20ea16b71c33137ae432ad",
+      "status": "queued",
+      "source_bytes": 59004944,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-722490c5acfd5cb6-562f892d0c426e511ebfdb7792eb7746",
+      "status": "queued",
+      "source_bytes": 32215827,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-2b043e07a1b7b402-5a19542be843de278a3e44a9ad708ede",
+      "status": "queued",
+      "source_bytes": 41006932,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-723634ad9f1cfdf0-777eb9d572006c50a297de158615ee96",
+      "status": "queued",
+      "source_bytes": 17469501,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5b2e6d3aef04d65b-a8fb154e7a1930948cdd4b80004103e6",
+      "status": "queued",
+      "source_bytes": 17470407,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-183002a75b83c5b0-ad612ec8f4894d4d13dca9b53fbeb63b",
+      "status": "queued",
+      "source_bytes": 118441383,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-eb98fd8898143c9d-afec28574fe342cb5b3d8871e6773b53",
+      "status": "queued",
+      "source_bytes": 34937424,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-e68881ec2863169a-b27142cc9d4f83d8cef733d891d2daaa",
+      "status": "queued",
+      "source_bytes": 17470995,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-7bd71ef6908513bd-b703c33e202dc4c60e1ec503c675e32c",
+      "status": "queued",
+      "source_bytes": 1229926930,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-a775c736a754a8f2-be40226ca320824f5d72d179c359cac3",
+      "status": "queued",
+      "source_bytes": 30589656,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f1f1f1d1a9febc3d-c7ece238c27ffbfa136be72a0ef4931c.part-000",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f1f1f1d1a9febc3d-c7ece238c27ffbfa136be72a0ef4931c.part-001",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f1f1f1d1a9febc3d-c7ece238c27ffbfa136be72a0ef4931c.part-002",
+      "status": "queued",
+      "source_bytes": 574479037,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-1929e7fadfd4fca5-d6ee566a1fd78315b2cedaecd3aa5c77",
+      "status": "queued",
+      "source_bytes": 29653355,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-436d404920d3cb75-fb963dc48a7c0256432163106df1d564",
+      "status": "queued",
+      "source_bytes": 59053868,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-a69ab351abb55487-6397c0c4e20f4f68b24702fab12d0953",
+      "status": "queued",
+      "source_bytes": 279096174,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-d2dcc42e2c8a0dc6-78d4d8870eb7aa85a0dc1b9ea3058def",
+      "status": "queued",
+      "source_bytes": 1722238686,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-24b09e6f097ab453-a578748f0ddebbfcbb8658e66400c6f4",
+      "status": "queued",
+      "source_bytes": 12043561,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-a52b034a2d0791ba-c632c10919f6fdc1171070a318d7ce68",
+      "status": "queued",
+      "source_bytes": 186570203,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-dd1b7d2ae3e919d8-cda08dcc3af76160dbfc081f09917105",
+      "status": "queued",
+      "source_bytes": 925632634,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-3c04415f7945c879-11b9ff6c295121086404d6149fac18e4",
+      "status": "queued",
+      "source_bytes": 17470399,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-7aa9b2f6f2adb0c8-1960404b0c3f8cde5f735e6391b666fd",
+      "status": "queued",
+      "source_bytes": 767467645,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-145c53a70a9ae835-1d950d111813a136b0dfc53bd2e9768a",
+      "status": "queued",
+      "source_bytes": 118440567,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-de777640e63413b3-24428b5f6718693d78a6faaeeba54bc8.part-000",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-de777640e63413b3-24428b5f6718693d78a6faaeeba54bc8.part-001",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-de777640e63413b3-24428b5f6718693d78a6faaeeba54bc8.part-002",
+      "status": "queued",
+      "source_bytes": 574474018,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ac300902d6034c37-39a599e244e77955c5ec50eaaa5a4c6a",
+      "status": "queued",
+      "source_bytes": 17470469,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f0c37b161a04a5bd-5f22f491861f7efae17083a3192ecc11",
+      "status": "queued",
+      "source_bytes": 17470089,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ad49a8c92b469fdb-7725deaf5250d285520795112da27524",
+      "status": "queued",
+      "source_bytes": 32460291,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-52e770a9c302a3a9-b331eae8b0e6c9aec65bfd2743468d0b",
+      "status": "queued",
+      "source_bytes": 946037442,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ab2303eaa49d0c33-bc2fbf15130659fa281e0ab7a0270621",
+      "status": "queued",
+      "source_bytes": 64589174,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-99c0f11bd1f65ef1-d5e474f626b6a0ea6111e1d776e26795",
+      "status": "queued",
+      "source_bytes": 1229928830,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-bda380d728cf39d3-e5f0744551b6157f56222be8b0eb6a97",
+      "status": "queued",
+      "source_bytes": 34937370,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-3ca1078d278a7086-e601e8bf4b933b7476aa6a2305eed8dc",
+      "status": "queued",
+      "source_bytes": 118056301,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ba1124246e2dbefd-e7276a45df8785c888eea1393c221914",
+      "status": "queued",
+      "source_bytes": 17470353,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-45476456aca74c93-e9eb021811d29b812ac7f6a10922fa8c",
+      "status": "queued",
+      "source_bytes": 14747496,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-12c1c2d4a11d6567-f00072d41a56e4f682abe1e54985de7f",
+      "status": "queued",
+      "source_bytes": 37266705,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-57d86a087bf9511d-24e8e5786e94a1d83e56493296259bac.part-000",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-57d86a087bf9511d-24e8e5786e94a1d83e56493296259bac.part-001",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-57d86a087bf9511d-24e8e5786e94a1d83e56493296259bac.part-002",
+      "status": "queued",
+      "source_bytes": 241703787,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-00eca5d0cf81f340-8f19fab00e1f096c1e0cae7d6f6e5f3a",
+      "status": "queued",
+      "source_bytes": 14143143,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-7bb9b631ddc50904-9393464c13252effd3630220cd951995",
+      "status": "queued",
+      "source_bytes": 548622633,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-140f587c1d761039-e65a48ef52b930ce8b81fc468506f590",
+      "status": "queued",
+      "source_bytes": 175375304,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-9d73940e4836e434-10f0a6d5b50f62d12887eb4ac4e745c5",
+      "status": "queued",
+      "source_bytes": 34937372,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-ea3573c6db48da57-38cb34deeafb4247289eee9c8b3f8c0d",
+      "status": "queued",
+      "source_bytes": 59004880,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-75344026f754c07f-4318b22c48b5454484df3fec820a039d",
+      "status": "queued",
+      "source_bytes": 34937983,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-af175927bb479332-49d0c357a012ea05bd5c36be649038dd",
+      "status": "queued",
+      "source_bytes": 29653325,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-f7dfe68ebde74451-502320d3aea00173c0eb8d2c31ddaf08",
+      "status": "queued",
+      "source_bytes": 118440519,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-dd45bed238535df7-5ca408f042554b875ac21ac68deaa0d1",
+      "status": "queued",
+      "source_bytes": 61409929,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-02cfa994e3b90da3-652a1b9a9c2e23940ecf8984b220414f",
+      "status": "queued",
+      "source_bytes": 767466615,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5dd8ea4c2980d302-65fb20689a9c85834d2f8a3aedec5a07.part-000",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5dd8ea4c2980d302-65fb20689a9c85834d2f8a3aedec5a07.part-001",
+      "status": "queued",
+      "source_bytes": 1073741824,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5dd8ea4c2980d302-65fb20689a9c85834d2f8a3aedec5a07.part-002",
+      "status": "queued",
+      "source_bytes": 574474018,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-224ee58d25683766-6a1458da7fa2359e19cd093f46c87419",
+      "status": "queued",
+      "source_bytes": 14747430,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-fc08635edf8a93df-6de549ebe093f713ed7d309dbb1a66da",
+      "status": "queued",
+      "source_bytes": 17470306,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-972718e29397ae69-8202a77b683d4a95368cd108b3d16f90",
+      "status": "queued",
+      "source_bytes": 1229925113,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-1f5b10ecee90c1fe-832838b72bb9a806b6e11bec400f2ed3",
+      "status": "queued",
+      "source_bytes": 37120226,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-4ba63aeab57e648f-e4a38324688ac9fc895dcf86a35fe732",
+      "status": "queued",
+      "source_bytes": 25234636,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-2bbb502f84042c4d-f48e0fc74771908d41b932ec010e6a6f",
+      "status": "queued",
+      "source_bytes": 946037409,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-5aefa2389f691742-ff47279d32aab0fa372cb50a4490844c",
+      "status": "queued",
+      "source_bytes": 59053834,
+      "attempts": 0,
+      "reason": null
+    },
+    {
+      "name": "progressive-bct-new-records-da2a7a02f830c864.tar",
+      "status": "queued",
+      "source_bytes": 42477006,
       "attempts": 0,
       "reason": null
     },
@@ -2098,1175 +3204,6 @@
       "name": "progressive-v2-checkpoint-8040-f852bcecb8cab781-0a7d636753513997da3753e7ae54c92f",
       "status": "queued",
       "source_bytes": 265782788,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-3e511536cbb13665.tar",
-      "status": "queued",
-      "source_bytes": 67090653,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-47ef5a035399e90f.tar",
-      "status": "queued",
-      "source_bytes": 66726854,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-476e353bbfd59e07.tar",
-      "status": "queued",
-      "source_bytes": 66701652,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-1cec99b7aa2945c0.tar",
-      "status": "queued",
-      "source_bytes": 66766621,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-72e06d2f792da69c.tar",
-      "status": "queued",
-      "source_bytes": 66967440,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-13ecb303bf1fbd32.tar",
-      "status": "queued",
-      "source_bytes": 66992959,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-8f037c0cf0055199.tar",
-      "status": "queued",
-      "source_bytes": 67024041,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-142e87885c0ac47f.tar",
-      "status": "queued",
-      "source_bytes": 66963427,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-c65b8177e1194ef0.tar",
-      "status": "queued",
-      "source_bytes": 66784109,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-77542930a67d10f7.tar",
-      "status": "queued",
-      "source_bytes": 66711940,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-b591fa36e1cf3494.tar",
-      "status": "queued",
-      "source_bytes": 66849421,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-9a27274475911063-correction_000.npz",
-      "status": "queued",
-      "source_bytes": 12490998,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-d999e2db134fac94-correction_001.npz",
-      "status": "queued",
-      "source_bytes": 12566241,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-c600bece1cb13fb2-correction_002.npz",
-      "status": "queued",
-      "source_bytes": 12118312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f7ad4777cdad2c8f-correction_003.npz",
-      "status": "queued",
-      "source_bytes": 12038375,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-72eb8b923dc535ed-correction_004.npz",
-      "status": "queued",
-      "source_bytes": 12560549,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-4d1efa4bc4e9e457-correction_005.npz",
-      "status": "queued",
-      "source_bytes": 12521322,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ce2cb48243d91a1e-correction_006.npz",
-      "status": "queued",
-      "source_bytes": 12531171,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-3e8f1de87a5f0c54-correction_007.npz",
-      "status": "queued",
-      "source_bytes": 12560337,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-8ce0e91d27cd4c8c-correction_008.npz",
-      "status": "queued",
-      "source_bytes": 12035342,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-e693d107cb185d91-correction_009.npz",
-      "status": "queued",
-      "source_bytes": 12578995,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-af88a3288e95be41-correction_010.npz",
-      "status": "queued",
-      "source_bytes": 12520668,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-cb3241cd54b13e22-correction_011.npz",
-      "status": "queued",
-      "source_bytes": 12551914,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5ca8df8f1de1defd-correction_012.npz",
-      "status": "queued",
-      "source_bytes": 12555612,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-a6a297b6c05422f8-correction_013.npz",
-      "status": "queued",
-      "source_bytes": 12025741,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-d2a532d74561d207-correction_014.npz",
-      "status": "queued",
-      "source_bytes": 12562789,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-462b9e42191cd74e-correction_015.npz",
-      "status": "queued",
-      "source_bytes": 12557421,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-9266c02f9d987c96-correction_016.npz",
-      "status": "queued",
-      "source_bytes": 12036492,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-852572e620c9e4c7-correction_017.npz",
-      "status": "queued",
-      "source_bytes": 12550189,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-3fc14c3d5d293395-correction_018.npz",
-      "status": "queued",
-      "source_bytes": 12053749,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f996ccba91205f85-correction_019.npz",
-      "status": "queued",
-      "source_bytes": 12516894,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5a72c2fdd9a9c12d-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b49e7153fd8de2a4-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5e5f07c05d8ee76f-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b2013e2369489293-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-6bf3b1310271c6f9-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-fd695fc67aceaf9c-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-1866851d66194db9-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-17f367b837cf3f53-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-43cbc991c4ed2918-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-8cd07010396922a9-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-1433fdd7348c0016-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b3f3f6f6e8c23fe7-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-68e7ec82cf34ca3a-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-1e7774d601369c1d-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-4669f90fd8842082-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-edfa8346951bf7e1-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5c0d7063ac8f883d-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-845fcb24fb1ae871-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-d823dbaff2b61f94-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-307c415c9cbc59ee-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-891b725ce2efa64b-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-622433144fe6f9a3-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-7432e9fc119511ec-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-074eaf48a0ceaf65-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-2d2ce6140705ccc4-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-53629598e9abd068-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-52c9e2cda12b415a-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-e52ba4c6de7fbfa4-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-28855e25f0b3640b-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-70362e71e7f22ca9-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-891aa920c0e427d0-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-e7b68e77e9a2924c-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-4c96467bbb10efcd-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-53d79d906113f9f7-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ce935edf79c2281c-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-eb8d6ca57ebbf26a-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-4da7787580ef3e1b-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-40cf2feddc271b8a-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b03ed75bc7454341-external_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-3f99257d44b89d92-wrist_rgb.npy",
-      "status": "queued",
-      "source_bytes": 49373312,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-296dc39c80ca585b-141a8124381bf787931d6d5526da450d",
-      "status": "queued",
-      "source_bytes": 187594526,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-714a8180fdcfdab6-31729b4c96ae42d8f2abab56050a2043.part-000",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-714a8180fdcfdab6-31729b4c96ae42d8f2abab56050a2043.part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-714a8180fdcfdab6-31729b4c96ae42d8f2abab56050a2043.part-002",
-      "status": "queued",
-      "source_bytes": 64430930,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f73dc7932125534b-7437aecc888ec909f468b5c799dd5336",
-      "status": "queued",
-      "source_bytes": 15445566,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-aa102deb63f13d5d-d033978df31dd5eacdb4bcd419f85518",
-      "status": "queued",
-      "source_bytes": 708957841,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-bcdf451b10e4f8d4-1c63c1bab24b750cf995409c6ca1ce65",
-      "status": "queued",
-      "source_bytes": 20156668,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-a8884cc099cbdf9f-2ef65911377c699d59a14cbdd42a8c86",
-      "status": "queued",
-      "source_bytes": 993813031,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5072fac6ff65be58-2f796f4b0effce7df78a98268a4898a3",
-      "status": "queued",
-      "source_bytes": 767827848,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ef6d7e59a8c03e8d-44fd055650f2a1fc5310f9f7a15c5822",
-      "status": "queued",
-      "source_bytes": 17470057,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f0dace71a4012d8b-54f39073b57e5022f3bc39ff8aa9f099",
-      "status": "queued",
-      "source_bytes": 16871680,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ade1935f6909258c-7f378cae5cbfc18568dbcdb32f769b69",
-      "status": "queued",
-      "source_bytes": 17469609,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-63ca8646aa1b6284-8dfdd9e009d69bc5c21a38abeb181b4c",
-      "status": "queued",
-      "source_bytes": 34937761,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b2a75fb401894252-972db68776213456280fdb2775a284bf",
-      "status": "queued",
-      "source_bytes": 22512133,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-e10a533d7d0c14f9-9e64ddc98f66183478ecc9f68fdfda3c",
-      "status": "queued",
-      "source_bytes": 59005009,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b6d8fbbe386301ca-a69635296aac5a8fd2ece8f35fd218ec.part-000",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b6d8fbbe386301ca-a69635296aac5a8fd2ece8f35fd218ec.part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-b6d8fbbe386301ca-a69635296aac5a8fd2ece8f35fd218ec.part-002",
-      "status": "queued",
-      "source_bytes": 574474018,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-271378f8c4703216-b2b1220394ebe057c8a9d39545d27186",
-      "status": "queued",
-      "source_bytes": 17471294,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-6ce6672f095db908-bf3c9c9e385c8df7fcc79f9414997896",
-      "status": "queued",
-      "source_bytes": 29653448,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-121fadeaacb1610e-c01dc6b7ea28eb6487193ab03730c212",
-      "status": "queued",
-      "source_bytes": 235749967,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f262969af0bf25bc-d361f30807d59ad073dd5b89ae78c1be",
-      "status": "queued",
-      "source_bytes": 34957163,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-1a8851573901aa2e-d8c555377dd824f42ec9fa9726449354",
-      "status": "queued",
-      "source_bytes": 17469930,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-0fefa6c61eecf9b3-ea0fdbd808004abf77e562ab4d214da8",
-      "status": "queued",
-      "source_bytes": 59053959,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5f132507763f6019-f21d0577ab0194b42e2be34ac0206bc8",
-      "status": "queued",
-      "source_bytes": 946037534,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-95e126078323f0e2-f89b1a06c12fe11651ee796ac8b2f379",
-      "status": "queued",
-      "source_bytes": 118440648,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-edb98d7427b33ef4-fe5e0989cb40983800a82e0ec1e66908",
-      "status": "queued",
-      "source_bytes": 17470033,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-e162a4368cc7d92e-2efbe882db338aab51a885bd2803d618",
-      "status": "queued",
-      "source_bytes": 105363126,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-962e482885f876d2-bd020227d533dce11c79961bb12ce8ec",
-      "status": "queued",
-      "source_bytes": 731210003,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-82951c8b857aa790-c5271438d79d6c718563e113617de009",
-      "status": "queued",
-      "source_bytes": 2079912028,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-bcd87539f7e26742-e8f98158c9601f5c37dd681f030606f7",
-      "status": "queued",
-      "source_bytes": 202017477,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-046d0e205401b1b5-077f08c23973e8fe1ef4317945fa8ee9",
-      "status": "queued",
-      "source_bytes": 117479611,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-94982d32cabf89f8-11ce860f18a75c81c808949ca025a952",
-      "status": "queued",
-      "source_bytes": 34699931,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-2ae37fff35783c1e-2f13af047503664526d0e03caf73c638",
-      "status": "queued",
-      "source_bytes": 946032444,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-2bb1d09d568121cb-3925bf896f2040dc067c6ba52a8e64e0",
-      "status": "queued",
-      "source_bytes": 649986490,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-d031a627864e817d-3e3d94f54e20ea16b71c33137ae432ad",
-      "status": "queued",
-      "source_bytes": 59004944,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-722490c5acfd5cb6-562f892d0c426e511ebfdb7792eb7746",
-      "status": "queued",
-      "source_bytes": 32215827,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-2b043e07a1b7b402-5a19542be843de278a3e44a9ad708ede",
-      "status": "queued",
-      "source_bytes": 41006932,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-723634ad9f1cfdf0-777eb9d572006c50a297de158615ee96",
-      "status": "queued",
-      "source_bytes": 17469501,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5b2e6d3aef04d65b-a8fb154e7a1930948cdd4b80004103e6",
-      "status": "queued",
-      "source_bytes": 17470407,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-183002a75b83c5b0-ad612ec8f4894d4d13dca9b53fbeb63b",
-      "status": "queued",
-      "source_bytes": 118441383,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-eb98fd8898143c9d-afec28574fe342cb5b3d8871e6773b53",
-      "status": "queued",
-      "source_bytes": 34937424,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-e68881ec2863169a-b27142cc9d4f83d8cef733d891d2daaa",
-      "status": "queued",
-      "source_bytes": 17470995,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-7bd71ef6908513bd-b703c33e202dc4c60e1ec503c675e32c",
-      "status": "queued",
-      "source_bytes": 1229926930,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-a775c736a754a8f2-be40226ca320824f5d72d179c359cac3",
-      "status": "queued",
-      "source_bytes": 30589656,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f1f1f1d1a9febc3d-c7ece238c27ffbfa136be72a0ef4931c.part-000",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f1f1f1d1a9febc3d-c7ece238c27ffbfa136be72a0ef4931c.part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f1f1f1d1a9febc3d-c7ece238c27ffbfa136be72a0ef4931c.part-002",
-      "status": "queued",
-      "source_bytes": 574479037,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-1929e7fadfd4fca5-d6ee566a1fd78315b2cedaecd3aa5c77",
-      "status": "queued",
-      "source_bytes": 29653355,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-436d404920d3cb75-fb963dc48a7c0256432163106df1d564",
-      "status": "queued",
-      "source_bytes": 59053868,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-a69ab351abb55487-6397c0c4e20f4f68b24702fab12d0953",
-      "status": "queued",
-      "source_bytes": 279096174,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-d2dcc42e2c8a0dc6-78d4d8870eb7aa85a0dc1b9ea3058def",
-      "status": "queued",
-      "source_bytes": 1722238686,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-24b09e6f097ab453-a578748f0ddebbfcbb8658e66400c6f4",
-      "status": "queued",
-      "source_bytes": 12043561,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-a52b034a2d0791ba-c632c10919f6fdc1171070a318d7ce68",
-      "status": "queued",
-      "source_bytes": 186570203,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-dd1b7d2ae3e919d8-cda08dcc3af76160dbfc081f09917105",
-      "status": "queued",
-      "source_bytes": 925632634,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-3c04415f7945c879-11b9ff6c295121086404d6149fac18e4",
-      "status": "queued",
-      "source_bytes": 17470399,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-7aa9b2f6f2adb0c8-1960404b0c3f8cde5f735e6391b666fd",
-      "status": "queued",
-      "source_bytes": 767467645,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-145c53a70a9ae835-1d950d111813a136b0dfc53bd2e9768a",
-      "status": "queued",
-      "source_bytes": 118440567,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-de777640e63413b3-24428b5f6718693d78a6faaeeba54bc8.part-000",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-de777640e63413b3-24428b5f6718693d78a6faaeeba54bc8.part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-de777640e63413b3-24428b5f6718693d78a6faaeeba54bc8.part-002",
-      "status": "queued",
-      "source_bytes": 574474018,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ac300902d6034c37-39a599e244e77955c5ec50eaaa5a4c6a",
-      "status": "queued",
-      "source_bytes": 17470469,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f0c37b161a04a5bd-5f22f491861f7efae17083a3192ecc11",
-      "status": "queued",
-      "source_bytes": 17470089,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ad49a8c92b469fdb-7725deaf5250d285520795112da27524",
-      "status": "queued",
-      "source_bytes": 32460291,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-52e770a9c302a3a9-b331eae8b0e6c9aec65bfd2743468d0b",
-      "status": "queued",
-      "source_bytes": 946037442,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ab2303eaa49d0c33-bc2fbf15130659fa281e0ab7a0270621",
-      "status": "queued",
-      "source_bytes": 64589174,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-99c0f11bd1f65ef1-d5e474f626b6a0ea6111e1d776e26795",
-      "status": "queued",
-      "source_bytes": 1229928830,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-bda380d728cf39d3-e5f0744551b6157f56222be8b0eb6a97",
-      "status": "queued",
-      "source_bytes": 34937370,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-3ca1078d278a7086-e601e8bf4b933b7476aa6a2305eed8dc",
-      "status": "queued",
-      "source_bytes": 118056301,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ba1124246e2dbefd-e7276a45df8785c888eea1393c221914",
-      "status": "queued",
-      "source_bytes": 17470353,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-45476456aca74c93-e9eb021811d29b812ac7f6a10922fa8c",
-      "status": "queued",
-      "source_bytes": 14747496,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-12c1c2d4a11d6567-f00072d41a56e4f682abe1e54985de7f",
-      "status": "queued",
-      "source_bytes": 37266705,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-57d86a087bf9511d-24e8e5786e94a1d83e56493296259bac.part-000",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-57d86a087bf9511d-24e8e5786e94a1d83e56493296259bac.part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-57d86a087bf9511d-24e8e5786e94a1d83e56493296259bac.part-002",
-      "status": "queued",
-      "source_bytes": 241703787,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-00eca5d0cf81f340-8f19fab00e1f096c1e0cae7d6f6e5f3a",
-      "status": "queued",
-      "source_bytes": 14143143,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-7bb9b631ddc50904-9393464c13252effd3630220cd951995",
-      "status": "queued",
-      "source_bytes": 548622633,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-140f587c1d761039-e65a48ef52b930ce8b81fc468506f590",
-      "status": "queued",
-      "source_bytes": 175375304,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-9d73940e4836e434-10f0a6d5b50f62d12887eb4ac4e745c5",
-      "status": "queued",
-      "source_bytes": 34937372,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-ea3573c6db48da57-38cb34deeafb4247289eee9c8b3f8c0d",
-      "status": "queued",
-      "source_bytes": 59004880,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-75344026f754c07f-4318b22c48b5454484df3fec820a039d",
-      "status": "queued",
-      "source_bytes": 34937983,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-af175927bb479332-49d0c357a012ea05bd5c36be649038dd",
-      "status": "queued",
-      "source_bytes": 29653325,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-f7dfe68ebde74451-502320d3aea00173c0eb8d2c31ddaf08",
-      "status": "queued",
-      "source_bytes": 118440519,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-dd45bed238535df7-5ca408f042554b875ac21ac68deaa0d1",
-      "status": "queued",
-      "source_bytes": 61409929,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-02cfa994e3b90da3-652a1b9a9c2e23940ecf8984b220414f",
-      "status": "queued",
-      "source_bytes": 767466615,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5dd8ea4c2980d302-65fb20689a9c85834d2f8a3aedec5a07.part-000",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5dd8ea4c2980d302-65fb20689a9c85834d2f8a3aedec5a07.part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5dd8ea4c2980d302-65fb20689a9c85834d2f8a3aedec5a07.part-002",
-      "status": "queued",
-      "source_bytes": 574474018,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-224ee58d25683766-6a1458da7fa2359e19cd093f46c87419",
-      "status": "queued",
-      "source_bytes": 14747430,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-fc08635edf8a93df-6de549ebe093f713ed7d309dbb1a66da",
-      "status": "queued",
-      "source_bytes": 17470306,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-972718e29397ae69-8202a77b683d4a95368cd108b3d16f90",
-      "status": "queued",
-      "source_bytes": 1229925113,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-1f5b10ecee90c1fe-832838b72bb9a806b6e11bec400f2ed3",
-      "status": "queued",
-      "source_bytes": 37120226,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-4ba63aeab57e648f-e4a38324688ac9fc895dcf86a35fe732",
-      "status": "queued",
-      "source_bytes": 25234636,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-2bbb502f84042c4d-f48e0fc74771908d41b932ec010e6a6f",
-      "status": "queued",
-      "source_bytes": 946037409,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-5aefa2389f691742-ff47279d32aab0fa372cb50a4490844c",
-      "status": "queued",
-      "source_bytes": 59053834,
-      "attempts": 0,
-      "reason": null
-    },
-    {
-      "name": "progressive-bct-new-records-da2a7a02f830c864.tar",
-      "status": "queued",
-      "source_bytes": 42477006,
       "attempts": 0,
       "reason": null
     }
