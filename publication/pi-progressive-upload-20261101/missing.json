@@ -1,19 +1,12 @@
 {
-  "at_utc": "2026-11-02T12:27:42.912063+00:00",
+  "at_utc": "2026-11-02T12:28:11.946247+00:00",
   "assets": [
     {
-      "name": "ef-local-corrections-file-0014-part-000",
-      "status": "uploading",
-      "source_bytes": 9730176,
-      "attempts": 1,
-      "reason": null
-    },
-    {
       "name": "ef-local-corrections-file-0015-part-000",
-      "status": "queued",
+      "status": "pending",
       "source_bytes": 9113762,
-      "attempts": 0,
-      "reason": null
+      "attempts": 1,
+      "reason": "Official academic proxy/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "ef-local-corrections-file-0016-part-000",
