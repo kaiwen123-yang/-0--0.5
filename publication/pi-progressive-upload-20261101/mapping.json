@@ -6772,8 +6772,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702478988,
+        "name": "ef-E-checkpoint-500-file-0019-part-000",
+        "size": 398875020,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-E-checkpoint-500-file-0019-part-000"
+      },
+      "uploaded_at": "2026-11-02T16:55:48.168411+00:00"
     },
     {
       "name": "ef-E-checkpoint-500-file-0020-part-000",
@@ -6792,8 +6800,16 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 702483591,
+        "name": "ef-E-checkpoint-500-file-0020-part-000",
+        "size": 8755017,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-E-checkpoint-500-file-0020-part-000"
+      },
+      "uploaded_at": "2026-11-02T16:55:52.106133+00:00"
     },
     {
       "name": "ef-E-checkpoint-500-records-0021.tar",
@@ -6970,8 +6986,17 @@
         }
       ],
       "source_bytes": 12958683,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 13015040,
+      "receipt": {
+        "id": 702483766,
+        "name": "ef-E-checkpoint-500-records-0021.tar",
+        "size": 13015040,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/ef-E-checkpoint-500-records-0021.tar"
+      },
+      "uploaded_at": "2026-11-02T16:55:56.521645+00:00"
     },
     {
       "name": "ef-evaluation-E_500-records-0000.tar",
@@ -7436,8 +7461,9 @@
         }
       ],
       "source_bytes": 37734210,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploading",
+      "attempts": 1,
+      "bytes": 37877760
     },
     {
       "name": "progressive-bct-new-records-3e511536cbb13665.tar",
