@@ -134,7 +134,9 @@ def main():
             break
         if run.get('stage')=='failed_requires_inspection':
             save(state,dict(at_utc=now(),status='experiment_needs_inspection',run=run));return
-        try:cleanup()
+        try:
+            cleanup()
+            save(state,dict(at_utc=now(),status='watching_experiment',experiment_stage=run.get('stage')))
         except Exception as exc:save(state,dict(at_utc=now(),status='cleanup_pending',error=repr(exc)))
         time.sleep(60)
     stop_cleanup=threading.Event()
