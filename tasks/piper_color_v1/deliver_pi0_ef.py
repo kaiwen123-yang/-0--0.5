@@ -129,7 +129,7 @@ def main():
         run=read(CAMPAIGN/'run.json')
         if run.get('completed'):
             if not (CAMPAIGN/'report_complete.json').exists():
-                r=subprocess.run([str(ROOT/'runtime/d57-color-sim/bin/python'),str(ROOT/'tasks/piper_color_v1/finalize_pi0_ef.py')])
+                r=subprocess.run(['/root/miniconda3/bin/python',str(ROOT/'tasks/piper_color_v1/finalize_pi0_ef.py')])
                 if r.returncode:raise RuntimeError('Result report failed; original outputs retained')
             break
         if run.get('stage')=='failed_requires_inspection':
@@ -147,10 +147,12 @@ def main():
     threading.Thread(target=cleanup_monitor,daemon=True).start()
     save(state,dict(at_utc=now(),status='waiting_existing_single_upload_queue'))
     register_new() # Existing single-concurrency queue owns this lock until its current run ends.
-    cleanup()
+    try:cleanup()
+    except Exception as exc:print('CLEANUP_PENDING',repr(exc),flush=True)
     save(state,dict(at_utc=now(),status='uploading_ef_and_remaining'))
     upload.main()
-    cleanup()
+    try:cleanup()
+    except Exception as exc:print('CLEANUP_PENDING',repr(exc),flush=True)
     stop_cleanup.set()
     progress=read(TRANSFER/'progress.json')
     save(state,dict(at_utc=now(),status='complete' if progress.get('pending_assets')==0 else 'finished_with_pending',
