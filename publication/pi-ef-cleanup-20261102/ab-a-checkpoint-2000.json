@@ -1,0 +1,286 @@
+{
+  "at_utc": "2026-11-02T21:02:11.588871+00:00",
+  "status": "verified_ready_to_delete",
+  "group": "ab-a-checkpoint-2000",
+  "release_tag": "pi-complete-backup-20261101",
+  "remote_assets": [
+    {
+      "name": "progressive-ab-a-checkpoint-2000-records-911106afca5db427.tar",
+      "size": 1699840,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-16fae06035ba12f7-2038c61dc82ea4deaf54014b462b6874",
+      "size": 1229925090,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-17a016176abf0a76-7249b503b3fa515a5baa7015df1d6c79",
+      "size": 132846656,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-4d5aa46fd7c20de3-42be8768f0ec5a826ed9d794de6c04a0",
+      "size": 620639032,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-4f37893937853694-debe3545a8e34245a300f374de590819",
+      "size": 144336396,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-51c8b8b00fa25a34-3935971d852c9083fcbf392a6402e3a5",
+      "size": 52973496,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-553fa064ce89c734-41c29371c63d116339f87ab648f9e962",
+      "size": 29404952,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-649c42bcddbd5a5a-705639aefb83706ec67ab9b8f80ad6d7",
+      "size": 50562607,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-69a2ee473f12fdd5-08aa083161bde929520b6018bff6f0f8.part-000",
+      "size": 1073741824,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-69a2ee473f12fdd5-08aa083161bde929520b6018bff6f0f8.part-001",
+      "size": 1073741824,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-69a2ee473f12fdd5-08aa083161bde929520b6018bff6f0f8.part-002",
+      "size": 574474018,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-747fdf8f39bfbeec-778bb82d4f6a7b7b3bff08687d4fa1e8",
+      "size": 36086197,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-8a9f0d4447ff936d-287d0d65f523e5b166023cdce866e1cc",
+      "size": 65736490,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-8bb914a48d150ad7-1c48d9ab8e05ebf70a59a8979f0f68e9",
+      "size": 117479561,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-aa581298b4d99b80-f7df9165f677b662f3787b47ad95c08c",
+      "size": 635582685,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-ad1ff06793afa492-6e676b59aab6e11dbc8fdd9f555e272f.part-000",
+      "size": 1073741824,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-ad1ff06793afa492-6e676b59aab6e11dbc8fdd9f555e272f.part-001",
+      "size": 1073741824,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-ad1ff06793afa492-6e676b59aab6e11dbc8fdd9f555e272f.part-002",
+      "size": 428785878,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-bca161c3d20fd446-d2318f49f300631485aeb9dfd84159e0",
+      "size": 946037439,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-d7b4ee02bca76c59-2638fc698b100f86442e9ced8e957660",
+      "size": 241841132,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-dcdf626db570deb0-afdb60525d317e0edcb5c7c11398fa82",
+      "size": 59053839,
+      "state": "uploaded"
+    },
+    {
+      "name": "progressive-ab-a-checkpoint-2000-e9fb492d4fa51d47-eea764df0504c893419491b9667ebb65",
+      "size": 131170686,
+      "state": "uploaded"
+    }
+  ],
+  "source_paths": [
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/_CHECKPOINT_METADATA",
+      "bytes": 426
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/assets/piper_h_color_v1/norm_stats.json",
+      "bytes": 1874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/_METADATA",
+      "bytes": 32125
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/_sharding",
+      "bytes": 17433
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/array_metadatas/process_0",
+      "bytes": 12618
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/d/a11f7316bb9eba785e3d45a72cc24d10",
+      "bytes": 2774
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/manifest.ocdbt",
+      "bytes": 118
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/5a12edbf4d0156dd7c684b67474c7c36",
+      "bytes": 1411
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/b524894afbaca590dea82b50595d4ccd",
+      "bytes": 5675
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/da52ba731896a4721df094b67d5326d9",
+      "bytes": 1330513
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/df84a431cf19790cf0bb470e772695e2",
+      "bytes": 126240
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/e44f3c8b1c086395885b256d8aca7bf9",
+      "bytes": 213
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 202
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/resume.json",
+      "bytes": 605
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/_METADATA",
+      "bytes": 62029
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/_sharding",
+      "bytes": 28685
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/array_metadatas/process_0",
+      "bytes": 20601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/d/1a1a9f222e618a6c14c280604a2ea51d",
+      "bytes": 2751
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/manifest.ocdbt",
+      "bytes": 118
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/04810294122b0a2d089fc9cfeb7d0149",
+      "bytes": 2735
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/6da64d775e74761b09a3463609ae4ab2",
+      "bytes": 171
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/c331c4f902431e3c5e7fe21fd9567de0",
+      "bytes": 1202
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/cefa5bc7d8a205f1ad37a06bcf3fb738",
+      "bytes": 1231
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 359
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/2038c61dc82ea4deaf54014b462b6874",
+      "bytes": 1229925090
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/7249b503b3fa515a5baa7015df1d6c79",
+      "bytes": 132846656
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/42be8768f0ec5a826ed9d794de6c04a0",
+      "bytes": 620639032
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/debe3545a8e34245a300f374de590819",
+      "bytes": 144336396
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/3935971d852c9083fcbf392a6402e3a5",
+      "bytes": 52973496
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/41c29371c63d116339f87ab648f9e962",
+      "bytes": 29404952
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/705639aefb83706ec67ab9b8f80ad6d7",
+      "bytes": 50562607
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/08aa083161bde929520b6018bff6f0f8",
+      "bytes": 2721957666
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/778bb82d4f6a7b7b3bff08687d4fa1e8",
+      "bytes": 36086197
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/287d0d65f523e5b166023cdce866e1cc",
+      "bytes": 65736490
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/1c48d9ab8e05ebf70a59a8979f0f68e9",
+      "bytes": 117479561
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/f7df9165f677b662f3787b47ad95c08c",
+      "bytes": 635582685
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/6e676b59aab6e11dbc8fdd9f555e272f",
+      "bytes": 2576269526
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/d2318f49f300631485aeb9dfd84159e0",
+      "bytes": 946037439
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/train_state/ocdbt.process_0/d/2638fc698b100f86442e9ced8e957660",
+      "bytes": 241841132
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/afdb60525d317e0edcb5c7c11398fa82",
+      "bytes": 59053839
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2000/params/ocdbt.process_0/d/eea764df0504c893419491b9667ebb65",
+      "bytes": 131170686
+    }
+  ],
+  "active_dependencies_retained": [],
+  "freed_bytes": 0
+}
