@@ -24860,8 +24860,16 @@
       "part": 2,
       "parts": 3,
       "group": "ab-a-checkpoint-2010",
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 703246833,
+        "name": "progressive-ab-a-checkpoint-2010-da236e75859e4e1b-8ac3fc12b6894eb90971fa1e9aa463aa.part-002",
+        "size": 690668927,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/progressive-ab-a-checkpoint-2010-da236e75859e4e1b-8ac3fc12b6894eb90971fa1e9aa463aa.part-002"
+      },
+      "uploaded_at": "2026-11-02T21:34:40.474542+00:00"
     },
     {
       "name": "progressive-ab-a-checkpoint-2010-f134ef3a69509840-0b4f75520901a13d5673e1b0ca7d8bbd",
@@ -24881,8 +24889,9 @@
       "part": 0,
       "parts": 1,
       "group": "ab-a-checkpoint-2010",
-      "status": "queued",
-      "attempts": 0
+      "status": "pending",
+      "attempts": 1,
+      "error": "GitHub transport/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {
       "name": "progressive-ab-a-checkpoint-2010-f138e77283a09327-d057cd5e9d795fbf2c9fb49a3336f0e9",
