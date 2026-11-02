@@ -646,8 +646,9 @@
       "offset": 1073741824,
       "part": 1,
       "parts": 3,
-      "status": "queued",
-      "attempts": 0
+      "status": "pending",
+      "attempts": 3,
+      "error": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
       "name": "ef-F-checkpoint-500-file-0020-part-002",

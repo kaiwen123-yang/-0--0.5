@@ -1,5 +1,5 @@
 {
-  "at_utc": "2026-11-02T15:34:20.956280+00:00",
+  "at_utc": "2026-11-02T15:39:27.959575+00:00",
   "assets": [
     {
       "name": "ef-F-checkpoint-500-file-0006-part-000",
@@ -9,18 +9,11 @@
       "reason": "BrokenPipeError(32, 'Broken pipe')"
     },
     {
-      "name": "ef-F-checkpoint-500-file-0020-part-000",
+      "name": "ef-F-checkpoint-500-file-0020-part-001",
       "status": "pending",
       "source_bytes": 1073741824,
-      "attempts": 2,
+      "attempts": 3,
       "reason": "BrokenPipeError(32, 'Broken pipe')"
-    },
-    {
-      "name": "ef-F-checkpoint-500-file-0020-part-001",
-      "status": "queued",
-      "source_bytes": 1073741824,
-      "attempts": 0,
-      "reason": null
     },
     {
       "name": "ef-F-checkpoint-500-file-0020-part-002",
