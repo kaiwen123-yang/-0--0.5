@@ -1,0 +1,150 @@
+{
+  "continue_to_1000": false,
+  "criterion": "validation >= B and rear development success > B for at least one group",
+  "candidates": [
+    {
+      "label": "E_500",
+      "local_updates": 500,
+      "summary": {
+        "train": {
+          "total": 48,
+          "successes": 34,
+          "back_successes": 21,
+          "by_slot": {
+            "back": {
+              "total": 32,
+              "successes": 21
+            },
+            "front_left": {
+              "total": 8,
+              "successes": 5
+            },
+            "front_right": {
+              "total": 8,
+              "successes": 8
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 22,
+              "successes": 13
+            },
+            "green": {
+              "total": 16,
+              "successes": 15
+            },
+            "blue": {
+              "total": 10,
+              "successes": 6
+            }
+          }
+        },
+        "validation": {
+          "total": 75,
+          "successes": 67,
+          "back_successes": 22,
+          "by_slot": {
+            "back": {
+              "total": 25,
+              "successes": 22
+            },
+            "front_left": {
+              "total": 25,
+              "successes": 21
+            },
+            "front_right": {
+              "total": 25,
+              "successes": 24
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 25,
+              "successes": 21
+            },
+            "green": {
+              "total": 25,
+              "successes": 22
+            },
+            "blue": {
+              "total": 25,
+              "successes": 24
+            }
+          }
+        }
+      }
+    },
+    {
+      "label": "F_500",
+      "local_updates": 500,
+      "summary": {
+        "train": {
+          "total": 48,
+          "successes": 30,
+          "back_successes": 16,
+          "by_slot": {
+            "back": {
+              "total": 32,
+              "successes": 16
+            },
+            "front_left": {
+              "total": 8,
+              "successes": 7
+            },
+            "front_right": {
+              "total": 8,
+              "successes": 7
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 22,
+              "successes": 9
+            },
+            "green": {
+              "total": 16,
+              "successes": 14
+            },
+            "blue": {
+              "total": 10,
+              "successes": 7
+            }
+          }
+        },
+        "validation": {
+          "total": 75,
+          "successes": 65,
+          "back_successes": 18,
+          "by_slot": {
+            "back": {
+              "total": 25,
+              "successes": 18
+            },
+            "front_left": {
+              "total": 25,
+              "successes": 22
+            },
+            "front_right": {
+              "total": 25,
+              "successes": 25
+            }
+          },
+          "by_color": {
+            "red": {
+              "total": 25,
+              "successes": 18
+            },
+            "green": {
+              "total": 25,
+              "successes": 25
+            },
+            "blue": {
+              "total": 25,
+              "successes": 22
+            }
+          }
+        }
+      }
+    }
+  ]
+}
