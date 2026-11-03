@@ -1,145 +1,15 @@
 {
-  "at_utc": "2026-11-03T13:54:18.288974+00:00",
+  "at_utc": "2026-11-03T14:36:16.194937+00:00",
   "assets": [
     {
       "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-35029feb8cfd6555-87c028dca4b44408dd013779067eb0f2.part-002",
-      "status": "queued",
-      "bytes": 574479037,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/87c028dca4b44408dd013779067eb0f2"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-375e542a56581c67-3a8abbd1b7e592b176bfd0c20a2aae71",
-      "status": "queued",
-      "bytes": 36085888,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/3a8abbd1b7e592b176bfd0c20a2aae71"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-3c9280cac153932b-2602e28fb54f663ac27d4f7b04fe6275",
-      "status": "queued",
-      "bytes": 117479690,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/2602e28fb54f663ac27d4f7b04fe6275"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-4b2c92a55e279892-cf2547bdc028ad18c4643d9eb9d4fbd5",
-      "status": "queued",
-      "bytes": 36085803,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/cf2547bdc028ad18c4643d9eb9d4fbd5"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-4d79256acd76591d-da8878cd34a3ce012b515f46696b4a4b",
-      "status": "queued",
-      "bytes": 40580478,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/da8878cd34a3ce012b515f46696b4a4b"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-4ebc9d03ed971949-b5561c0d2d3db2abf56c52fb105918da",
-      "status": "queued",
-      "bytes": 14747420,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/b5561c0d2d3db2abf56c52fb105918da"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-524c79d0dfe0ddae-d2e9f6dab76e3945614239053601ac09",
-      "status": "queued",
-      "bytes": 72168853,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/d2e9f6dab76e3945614239053601ac09"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-5a8dc87ffb5ba15a-c6480b3a589d352d212d649565570b02",
-      "status": "queued",
-      "bytes": 72169351,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/c6480b3a589d352d212d649565570b02"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-75cbf0f336450e34-9b45f36cbe42c36f9f40e310254898a5",
-      "status": "queued",
-      "bytes": 946032534,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/9b45f36cbe42c36f9f40e310254898a5"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-76e8b92431fe7505-dd2a90230fe12bd897388b9bf84b3c52",
-      "status": "queued",
-      "bytes": 45106624,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/dd2a90230fe12bd897388b9bf84b3c52"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-8677ad5820a38a21-10f045031abb023d3a11aef33aefe651",
-      "status": "queued",
-      "bytes": 158095505,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/10f045031abb023d3a11aef33aefe651"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-9246d4d559d02fd2-a4108233b49efa1733da15cef5ef3889",
-      "status": "queued",
-      "bytes": 281274896,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/a4108233b49efa1733da15cef5ef3889"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-9fef3fd974feaf69-3962f9097db8dc07cfe5a191f787704c",
-      "status": "queued",
-      "bytes": 36085456,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/3962f9097db8dc07cfe5a191f787704c"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
       "name": "progressive-ab-b-checkpoint-1000-aa03b51fed0689a3-abfa5ee37010ad943921503038b377d3",
-      "status": "queued",
+      "status": "pending",
       "bytes": 1718004536,
       "source_paths": [
         "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/abfa5ee37010ad943921503038b377d3"
       ],
-      "error": null
+      "error": "Command '['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets']' returned non-zero exit status 1."
     },
     {
       "group": "ab-b-checkpoint-1000",
