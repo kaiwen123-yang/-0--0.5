@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-11-03T14:04:58.714017+00:00",
+  "source_branch": "codex/pi0-g-fixed-vision-20261103",
+  "initial_source_commit": "9f87d44",
+  "plan_main_commit": "6437904",
+  "plan": "docs/PI0_G_COMPLETED_NEXT_REVIEW_20261103.md",
+  "maximum_attempts": 8,
+  "train_layouts_only": true,
+  "teacher_suffix_only": true,
+  "total_task_steps": 420,
+  "consecutive_success_steps": 40,
+  "hz": 20,
+  "horizon": 10,
+  "replan": 5,
+  "reset_clock_at_takeover": false,
+  "teleport": false,
+  "regrasp": false,
+  "policy_inputs_unchanged": true,
+  "training_updates": 0,
+  "autonomous_evaluations": 0,
+  "selected_candidate": "B",
+  "retention": "Preserve all training/resumption/reproduction materials",
+  "cleanup": "Only inactive temporary input-transfer archives",
+  "transport": "autodl_academic_only",
+  "initial_live_state": {
+    "g_complete": true,
+    "g_assets_uploaded": 52,
+    "g_assets_total": 52,
+    "historical_uploaded": 382,
+    "historical_total": 616,
+    "pending_assets": 234,
+    "existing_uploader_pid": 170960,
+    "pi_training_or_inference_observed": false,
+    "initial_uncommitted": [
+      "publication/pi0-g-fixed-vision-20261103/delivery_status.json",
+      "publication/pi0-g-fixed-vision-20261103/pending.json"
+    ]
+  }
+}

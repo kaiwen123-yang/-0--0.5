@@ -1,0 +1,62 @@
+[
+  {
+    "directory": "recovery_00113_red_seed42",
+    "frames": 150,
+    "split": "train",
+    "layout_seed": 113,
+    "target": "red",
+    "slot": "front_left",
+    "prompt": "pick up the red block and place it in the box",
+    "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00113_red_seed42/attempt000_seed42/layout_00113_red.npz",
+    "intervention_frame": 140,
+    "stage_frames": {
+      "lift": 30,
+      "transfer": 40,
+      "lower": 26,
+      "release": 20,
+      "retreat": 30,
+      "settle": 4
+    },
+    "supervision": "teacher_suffix_only"
+  },
+  {
+    "directory": "recovery_00109_red_seed42",
+    "frames": 150,
+    "split": "train",
+    "layout_seed": 109,
+    "target": "red",
+    "slot": "front_left",
+    "prompt": "pick up the red block and place it in the box",
+    "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00109_red_seed42/attempt000_seed42/layout_00109_red.npz",
+    "intervention_frame": 160,
+    "stage_frames": {
+      "lift": 30,
+      "transfer": 40,
+      "lower": 26,
+      "release": 20,
+      "retreat": 30,
+      "settle": 4
+    },
+    "supervision": "teacher_suffix_only"
+  },
+  {
+    "directory": "recovery_00107_blue_seed42",
+    "frames": 150,
+    "split": "train",
+    "layout_seed": 107,
+    "target": "blue",
+    "slot": "front_left",
+    "prompt": "pick up the blue block and place it in the box",
+    "source_trial": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+    "intervention_frame": 110,
+    "stage_frames": {
+      "lift": 30,
+      "transfer": 40,
+      "lower": 26,
+      "release": 20,
+      "retreat": 30,
+      "settle": 4
+    },
+    "supervision": "teacher_suffix_only"
+  }
+]
