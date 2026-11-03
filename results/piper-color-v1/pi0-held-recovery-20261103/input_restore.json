@@ -1,7 +1,6 @@
 {
-  "at_utc": "2026-11-03T13:58:23.016005+00:00",
-  "status": "restoring_required_inputs",
-  "transport": "autodl_academic_only",
+  "at_utc": "2026-11-03T14:18:43.419881+00:00",
+  "status": "required_inputs_available",
   "roster": [
     {
       "layout": 113,
@@ -108,5 +107,14 @@
       "bytes": 726760
     }
   ],
-  "training_started": false
+  "restored_npz_count": 8,
+  "only_selected_members_extracted": true,
+  "transport": "autodl_academic_only",
+  "research_materials_retained": true,
+  "redundant_own_input_downloader_terminated": [
+    175758
+  ],
+  "existing_uploader_untouched": true,
+  "temporary_transfer_copies_retained_until_no_active_dependency": true,
+  "all_eight_npz_available": true
 }

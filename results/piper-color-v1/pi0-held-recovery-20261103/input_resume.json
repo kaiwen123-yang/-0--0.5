@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-11-03T14:18:16.978840+00:00",
+  "receipts": [
+    {
+      "asset": "progressive-bct-new-records-476e353bbfd59e07.tar",
+      "existing_transfer_bytes": 40009664,
+      "new_transfer_bytes": 26949696,
+      "members": [
+        "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00120_blue_seed43/attempt000_seed43/layout_00120_blue.npz",
+        "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00115_green_seed43/attempt000_seed43/layout_00115_green.npz",
+        "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.npz"
+      ],
+      "transport": "autodl_academic_only"
+    }
+  ],
+  "prior_transport_failure": "One API retry failed before bytes; gh release download timed out after 300s; existing partial bytes reused"
+}

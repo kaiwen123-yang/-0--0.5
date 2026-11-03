@@ -1,0 +1,39 @@
+{
+  "status": "proposed_not_started",
+  "initial_checkpoint": "B cumulative optimizer update 4020",
+  "full_optimizer_rng_norm_retained": true,
+  "policy_and_loss_unchanged": true,
+  "visual_freeze": false,
+  "inputs": [
+    "external_rgb",
+    "wrist_rgb",
+    "measured_state",
+    "language"
+  ],
+  "horizon": 10,
+  "replan": 5,
+  "hz": 20,
+  "batch": 4,
+  "proposed_first_segment_updates": 500,
+  "total_starts": 2000,
+  "proposed_new_teacher_starts": 68,
+  "proposed_original_starts": 1932,
+  "realized_new_fraction": 0.034,
+  "data_count_fraction": 0.033886085075702954,
+  "ratio_basis": "1128 complete new horizon-10 starts / (32160 original starts + 1128 new starts); rounded within 2000 samples",
+  "new_start_selection": "8-9 starts per successful suffix; at least one per lift, transfer, lower, release and retreat; distribute remainder by eligible stage length; exclude last nine padded-tail-only starts",
+  "original_start_selection": "Keep B 40/30/30 frame-range weights and all 120 original layout/color episodes; deterministic balanced replacement in the same 2000-start replay schedule used by E",
+  "learning_rate": 1e-06,
+  "learning_rate_basis": "Reuse E/F/G constant rate as a controlled data-content comparison; suffix statistics do not identify an optimal learning rate; no LR sweep authorized",
+  "new_warmup": 0,
+  "normalization": "B unchanged",
+  "evaluation_proposal": "After one segment, compare 48 train development and 75 validation full tasks to retained B records; do not rerun full B; candidate must retain >=72/75 validation and improve relevant held/lift progression on train development; no automatic continuation",
+  "limitations": [
+    "Seven above-5cm held starts and one bilateral table-level grasp",
+    "No takeover that starts over the box; cases 105/126 are late transfer states",
+    "No post-drop regrasp demonstration",
+    "Only one green recovery and no front-right recovery start",
+    "Teacher recoverability is not autonomous-policy success; earlier takeover also preserves more time"
+  ],
+  "training_started": false
+}

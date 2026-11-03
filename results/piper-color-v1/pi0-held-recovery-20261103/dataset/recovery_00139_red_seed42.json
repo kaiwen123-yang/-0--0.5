@@ -1,0 +1,358 @@
+{
+  "layout": 139,
+  "target": "red",
+  "base_seed": 42,
+  "split": "train",
+  "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-held-recovery-20261103/dataset/recovery_00139_red_seed42.npz",
+  "source_result": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00139_red_seed42/attempt000_seed42/layout_00139_red.json",
+  "input_source": "selective_release_member_restore",
+  "asset": "progressive-bct-new-records-47ef5a035399e90f.tar",
+  "asset_id": 701633726,
+  "archive_member": "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00139_red_seed42/attempt000_seed42/layout_00139_red.npz",
+  "bytes": 721630,
+  "intervention_frame": 180,
+  "slot": "front_left",
+  "problem_stage": "held_no_transfer",
+  "selection_reason": "Bilateral held state 27 frames after first lift",
+  "source_first_over_box_frame": null,
+  "source_contact_changes": [
+    130,
+    131,
+    132
+  ],
+  "source_takeover": {
+    "normal_force_N": [
+      9.69019040891581,
+      9.969187835718097
+    ],
+    "target_position": [
+      -0.23761969298576255,
+      -0.13329828462149157,
+      0.15430010091354732
+    ],
+    "tcp": [
+      -0.25296032522487344,
+      -0.13925337257589193,
+      0.15079148164905212
+    ],
+    "measured_width_m": 0.03383107855916023,
+    "executed_command": [
+      -0.5945805907249451,
+      1.4057807922363281,
+      -1.1201025247573853,
+      -0.00021169462706893682,
+      1.3597959280014038,
+      -1.003488302230835,
+      0.0020708623342216015
+    ],
+    "raw_prediction": [
+      -0.5945805907249451,
+      1.4057807922363281,
+      -1.1201025247573853,
+      -0.00021169462706893682,
+      1.3597959280014038,
+      -1.003488302230835,
+      0.0020708623342216015
+    ]
+  },
+  "source_stage_window": [
+    {
+      "frame": 170,
+      "normal_force_N": [
+        9.45569068601632,
+        9.98302293213898
+      ],
+      "target_position": [
+        -0.2366925834414435,
+        -0.13717555991982275,
+        0.1384581906687856
+      ],
+      "executed_command": [
+        -0.5990604162216187,
+        1.4218206405639648,
+        -1.118024230003357,
+        0.0001207503373734653,
+        1.3548264503479004,
+        -1.0036512613296509,
+        0.0026401104405522346
+      ],
+      "raw_prediction": [
+        -0.5990604162216187,
+        1.4218206405639648,
+        -1.118024230003357,
+        0.0001207503373734653,
+        1.3548264503479004,
+        -1.0036512613296509,
+        0.0026401104405522346
+      ]
+    },
+    {
+      "frame": 175,
+      "normal_force_N": [
+        9.572140130641609,
+        9.959794076212146
+      ],
+      "target_position": [
+        -0.23751992189477597,
+        -0.13571644351323894,
+        0.15055411002115227
+      ],
+      "executed_command": [
+        -0.5960133671760559,
+        1.4099400043487549,
+        -1.1263335943222046,
+        -1.2815481568395626e-05,
+        1.36691153049469,
+        -1.0012515783309937,
+        0.0031882391776889563
+      ],
+      "raw_prediction": [
+        -0.5960133671760559,
+        1.4099400043487549,
+        -1.1263335943222046,
+        -1.2815481568395626e-05,
+        1.36691153049469,
+        -1.0012515783309937,
+        0.0031882391776889563
+      ]
+    },
+    {
+      "frame": 180,
+      "normal_force_N": [
+        9.69019040891581,
+        9.969187835718097
+      ],
+      "target_position": [
+        -0.23761969298576255,
+        -0.13329828462149157,
+        0.15430010091354732
+      ],
+      "executed_command": [
+        -0.5945805907249451,
+        1.4057807922363281,
+        -1.1201025247573853,
+        -0.00021169462706893682,
+        1.3597959280014038,
+        -1.003488302230835,
+        0.0020708623342216015
+      ],
+      "raw_prediction": [
+        -0.5945805907249451,
+        1.4057807922363281,
+        -1.1201025247573853,
+        -0.00021169462706893682,
+        1.3597959280014038,
+        -1.003488302230835,
+        0.0020708623342216015
+      ]
+    },
+    {
+      "frame": 185,
+      "normal_force_N": [
+        9.85240151994602,
+        9.984049441195008
+      ],
+      "target_position": [
+        -0.23731102171011645,
+        -0.13005680976746742,
+        0.1536933645541561
+      ],
+      "executed_command": [
+        -0.5828253030776978,
+        1.3976173400878906,
+        -1.1298723220825195,
+        -9.690802107797936e-05,
+        1.3782857656478882,
+        -0.9989626407623291,
+        0.0018792359624058008
+      ],
+      "raw_prediction": [
+        -0.5828253030776978,
+        1.3976173400878906,
+        -1.1298723220825195,
+        -9.690802107797936e-05,
+        1.3782857656478882,
+        -0.9989626407623291,
+        0.0018792359624058008
+      ]
+    },
+    {
+      "frame": 190,
+      "normal_force_N": [
+        9.97836216177954,
+        9.982772772569016
+      ],
+      "target_position": [
+        -0.23796096360000576,
+        -0.12822634118758447,
+        0.15677452310605108
+      ],
+      "executed_command": [
+        -0.5747420191764832,
+        1.396682620048523,
+        -1.1237441301345825,
+        -7.057979382807389e-05,
+        1.3684526681900024,
+        -0.9945772886276245,
+        0.004842884372919798
+      ],
+      "raw_prediction": [
+        -0.5747420191764832,
+        1.396682620048523,
+        -1.1237441301345825,
+        -7.057979382807389e-05,
+        1.3684526681900024,
+        -0.9945772886276245,
+        0.004842884372919798
+      ]
+    }
+  ],
+  "name": "recovery_00139_red_seed42",
+  "attempted_at": "2026-11-03T14:19:30.971724+00:00",
+  "success": true,
+  "accepted": true,
+  "teacher_intervention": true,
+  "autonomous_success_eligible": false,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-held-recovery-20261103/dataset/recovery_00139_red_seed42.mp4",
+  "remaining_budget": 240,
+  "teacher_plan": [
+    {
+      "stage": "lift",
+      "start_frame": 180,
+      "endpoint": [
+        -0.25296032522487344,
+        -0.13925337257589193,
+        0.17
+      ],
+      "width": 0.0,
+      "planned_frames": 30
+    },
+    {
+      "stage": "transfer",
+      "start_frame": 210,
+      "endpoint": [
+        -0.1557017443131252,
+        0.1542169950722893,
+        0.17
+      ],
+      "width": 0.0,
+      "planned_frames": 40
+    },
+    {
+      "stage": "lower",
+      "start_frame": 250,
+      "endpoint": [
+        -0.15760556082122648,
+        0.15324703034334247,
+        0.08
+      ],
+      "width": 0.0,
+      "planned_frames": 26
+    },
+    {
+      "stage": "release",
+      "start_frame": 276,
+      "endpoint": [
+        -0.1600901500863263,
+        0.1519956936283907,
+        0.08312498629214658
+      ],
+      "width": 0.1,
+      "planned_frames": 20
+    },
+    {
+      "stage": "retreat",
+      "start_frame": 296,
+      "endpoint": [
+        -0.1605172377928955,
+        0.15197446935152265,
+        0.17
+      ],
+      "width": 0.1,
+      "planned_frames": 30
+    }
+  ],
+  "prefix_qpos_max_difference": 0.0,
+  "prefix_qvel_max_difference": 0.0,
+  "prefix_command_max_difference": 0.0,
+  "takeover": {
+    "tcp": [
+      -0.25296032522487344,
+      -0.13925337257589193,
+      0.15079148164905212
+    ],
+    "target_position": [
+      -0.23761969298576255,
+      -0.13329828462149157,
+      0.15430010091354732
+    ],
+    "target_lift_m": 0.13680010091354733,
+    "normal_force_N": [
+      9.69019040891581,
+      9.969187835718097
+    ],
+    "contact_count": [
+      1,
+      1
+    ],
+    "measured_width_m": 0.03383107855916023,
+    "commanded_width_m": 0.004258783999830484,
+    "object_in_tcp_m": [
+      -0.016450392534707026,
+      -0.0006430251955418177,
+      -0.0034755694836146496
+    ]
+  },
+  "takeover_clock_seconds": 8.999999999999675,
+  "takeover_steps": 180,
+  "held_at_takeover": true,
+  "bilateral_at_takeover": true,
+  "terminal": {
+    "layout_seed": 139,
+    "target": "red",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.152990324451232,
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.1489882951547899,
+        0.15599911039481593,
+        0.02539325598870122
+      ],
+      "green": [
+        -0.14002838616508168,
+        -0.16192525183123938,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.1924061208944298,
+        -0.046557309154243345,
+        0.017393255988701235
+      ]
+    },
+    "steps": 330
+  },
+  "steps": 330,
+  "continuous_success_steps": 40,
+  "outcome_reason": "Teacher suffix completed original task conditions for 40 consecutive steps within total 420",
+  "teacher_frames": 150,
+  "stage_frames": {
+    "lift": 30,
+    "transfer": 40,
+    "lower": 26,
+    "release": 20,
+    "retreat": 30,
+    "settle": 4
+  }
+}

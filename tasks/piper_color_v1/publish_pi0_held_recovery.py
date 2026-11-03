@@ -16,7 +16,7 @@ def publish(stage):
             if p.is_file() and p.suffix in (".json",".md",".log",".exit"):
                 dst=RESULTS/p.relative_to(RUN);dst.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copyfile(p,dst)
-        paths=[str(RESULTS.relative_to(ROOT))]
+        paths=["AGENTS.md",str(RESULTS.relative_to(ROOT))]
         paths += [str(p.relative_to(ROOT)) for p in (ROOT/"tasks/piper_color_v1").glob("*pi0_held_recovery.py")]
         paths += ["docs/PI0_G_COMPLETED_NEXT_REVIEW_20261103.md"]
         if LEDGER.exists():paths.append(str(LEDGER.relative_to(ROOT)))

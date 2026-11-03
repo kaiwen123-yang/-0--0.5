@@ -1,0 +1,27 @@
+{
+  "at_utc": "2026-11-03T14:18:43.415724+00:00",
+  "receipts": [
+    {
+      "layout": 139,
+      "target": "red",
+      "base_seed": 42,
+      "asset": "progressive-bct-new-records-47ef5a035399e90f.tar",
+      "member": "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00139_red_seed42/attempt000_seed42/layout_00139_red.npz",
+      "tar_member_start": 42162688,
+      "bytes": 721630,
+      "source": "selected_member_http_range",
+      "transport": "autodl_academic_only"
+    },
+    {
+      "layout": 105,
+      "target": "red",
+      "base_seed": 43,
+      "asset": "progressive-bct-new-records-47ef5a035399e90f.tar",
+      "member": "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+      "tar_member_start": 54870016,
+      "bytes": 728992,
+      "source": "selected_member_http_range",
+      "transport": "autodl_academic_only"
+    }
+  ]
+}

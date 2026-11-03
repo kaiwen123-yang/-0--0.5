@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-11-03T14:21:16.983091+00:00",
+  "attempts": 8,
+  "accepted": 8,
+  "failed": 0,
+  "expert_frames": 1200,
+  "expert_seconds": 60.0,
+  "full_recorded_frames": 2505,
+  "policy_prefix_frames": 1305,
+  "stage_frames": {
+    "lift": 240,
+    "transfer": 320,
+    "lower": 208,
+    "release": 160,
+    "retreat": 240,
+    "settle": 32
+  },
+  "by_color": {
+    "red": 4,
+    "blue": 3,
+    "green": 1
+  },
+  "by_slot": {
+    "front_left": 5,
+    "back": 3
+  },
+  "held_above_5cm_at_takeover": 7,
+  "bilateral_at_takeover": 8,
+  "prefix_qpos_max_difference": 0.0,
+  "prefix_qvel_max_difference": 0.0,
+  "full_horizon_10_starts": 1128,
+  "overlapping_windows_not_independent_demonstrations": true,
+  "original_demonstrations": 120,
+  "original_sampling_starts": 32160,
+  "unweighted_new_valid_start_fraction": 0.033886085075702954,
+  "source_npz_bytes": 5828469,
+  "training_updates_added": 0,
+  "autonomous_tasks_added": 0
+}

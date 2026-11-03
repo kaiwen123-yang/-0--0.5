@@ -178,7 +178,7 @@ def collect():
         expert_frames=sum(x["frames"] for x in entries),
         stage_frames=dict(sum((collections.Counter(x["stage_frames"]) for x in entries),collections.Counter())))
     save(RUN/"manifest.json",manifest)
-    print("RECOVERY_COMPLETE",manifest["attempted"],len(entries),manifest["expert_frames"],flush=True)
+    print("RECOVERY_BATCH_FINISHED",manifest["attempted"],len(entries),manifest["expert_frames"],"complete",manifest["complete"],flush=True)
 
 if __name__ == "__main__":
     collect()
