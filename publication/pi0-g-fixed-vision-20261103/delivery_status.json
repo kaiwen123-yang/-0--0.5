@@ -1,11 +1,11 @@
 {
-  "at_utc": "2026-11-03T12:22:36.191761+00:00",
+  "at_utc": "2026-11-03T12:23:19.954155+00:00",
   "experiment_complete": true,
   "experiment_stage": "experiment_complete",
   "transport": "autodl_academic_only",
   "g_assets": {
     "total": 52,
-    "uploaded": 1
+    "uploaded": 3
   },
   "historical_assets": {
     "total": 616,
@@ -17,9 +17,10 @@
   "prior_deletions_recorded_before_current_policy": true,
   "retained_groups": [
     "restored-inputs",
-    "g500-sampler"
+    "g500-sampler",
+    "g500-evaluation-G_500"
   ],
-  "pending_assets": 286,
+  "pending_assets": 284,
   "pending_manifest": "publication/pi0-g-fixed-vision-20261103/pending.json",
   "deleted_groups": [
     {

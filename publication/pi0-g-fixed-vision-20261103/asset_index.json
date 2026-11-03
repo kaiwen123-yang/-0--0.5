@@ -1934,8 +1934,17 @@
         }
       ],
       "source_bytes": 67079092,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 67317760,
+      "receipt": {
+        "id": 705515985,
+        "name": "g500-evaluation-G_500-records-0000.tar",
+        "size": 67317760,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-evaluation-G_500-records-0000.tar"
+      },
+      "uploaded_at": "2026-11-03T12:23:01.808118+00:00"
     },
     {
       "name": "g500-evaluation-G_500-records-0001.tar",
@@ -2646,8 +2655,17 @@
         }
       ],
       "source_bytes": 59468875,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 59688960,
+      "receipt": {
+        "id": 705517286,
+        "name": "g500-evaluation-G_500-records-0001.tar",
+        "size": 59688960,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-evaluation-G_500-records-0001.tar"
+      },
+      "uploaded_at": "2026-11-03T12:23:19.811109+00:00"
     }
   ]
 }
