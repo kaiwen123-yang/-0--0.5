@@ -1,6 +1,6 @@
 {
   "group": "ab-a-checkpoint-2010",
-  "status": "published_ready_to_delete",
+  "status": "deleted",
   "at_utc": "2026-11-03T10:24:51.155520+00:00",
   "release_tag": "pi-complete-backup-20261101",
   "assets": [
@@ -310,6 +310,144 @@
       "existing_sha256": "e20c6141e44fe252b4c70bc746919dbccdea75341376f90a180898a24eef31a1"
     }
   ],
-  "deleted_paths": [],
-  "freed_bytes": 0
+  "deleted_paths": [
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/_CHECKPOINT_METADATA",
+      "bytes": 426
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/assets/piper_h_color_v1/norm_stats.json",
+      "bytes": 1874
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/_METADATA",
+      "bytes": 32125
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/_sharding",
+      "bytes": 17433
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/array_metadatas/process_0",
+      "bytes": 12618
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/d/d44e9c77b97d2b9b7dcb18432bb503b8",
+      "bytes": 2554
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/manifest.ocdbt",
+      "bytes": 118
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/01522511536266f94af4615f780b2387",
+      "bytes": 2538
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/03dd556d6b87fb312d3fb8a42047a04c",
+      "bytes": 1024
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/272f3a6d8a318bde1997c81f7bf94c0f",
+      "bytes": 1221
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/8ed0aaea2b51d8a38d63d6d18f6be73a",
+      "bytes": 610
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/bc1957f617b1e506334b4d91c47ad42b",
+      "bytes": 464286
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/ca170c240b155b22d246bf18d1aff844",
+      "bytes": 1374
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/ff1382f151ee39c8b6dd0eaa2278c8c3",
+      "bytes": 213
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 602
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/resume.json",
+      "bytes": 605
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/_METADATA",
+      "bytes": 62029
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/_sharding",
+      "bytes": 28685
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/array_metadatas/process_0",
+      "bytes": 20601
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/d/1ef6483a098bbce47598cc3f9659c3a4",
+      "bytes": 2730
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/manifest.ocdbt",
+      "bytes": 118
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/d/0d085c370b231283ccde671240fff23a",
+      "bytes": 2714
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/d/3605732a7a6adb68916e421fd263f5f7",
+      "bytes": 171
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/d/3cc91bc4fc3ca6bed1c17b4dfa4ba8c3",
+      "bytes": 1202
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/d/5517741c012621931f9d09fc9b4defcf",
+      "bytes": 1230
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/manifest.ocdbt",
+      "bytes": 307
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/d/c9bb7adc778c512fa83993b3df3e3c2a",
+      "bytes": 1217040894
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/2f656e3f90da864d0b7364885e1a49c1",
+      "bytes": 619497597
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/cda46f61e9a8ed6b60cb0620bf0be6d8",
+      "bytes": 624509161
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/train_state/ocdbt.process_0/d/05138cf9912edc0160e71f8fa65049a3",
+      "bytes": 2221739854
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/8ac3fc12b6894eb90971fa1e9aa463aa",
+      "bytes": 2838152575
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/0b4f75520901a13d5673e1b0ca7d8bbd",
+      "bytes": 1823651596
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/d057cd5e9d795fbf2c9fb49a3336f0e9",
+      "bytes": 430524667
+    },
+    {
+      "path": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/2bee1102fca6f19d707f7c6c55fa9c2b",
+      "bytes": 17792608
+    }
+  ],
+  "freed_bytes": 9793568360,
+  "deleted_at": "2026-11-03T10:24:55.970642+00:00"
 }
