@@ -1,0 +1,24 @@
+{
+  "group": "g500-sampler",
+  "status": "retained_for_training_and_resumption",
+  "at_utc": "2026-11-03T12:22:36.181153+00:00",
+  "release_tag": "pi-complete-backup-20261101",
+  "members": [
+    {
+      "source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/sample_order.npy",
+      "archive_path": "pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/sample_order.npy",
+      "bytes": 16128,
+      "mtime_ns": 1793706902141352005
+    }
+  ],
+  "assets": [
+    {
+      "name": "g500-sampler-records-0000.tar",
+      "bytes": 20480,
+      "status": "uploaded"
+    }
+  ],
+  "policy": "retention_policy.json",
+  "deleted_paths": [],
+  "freed_bytes": 0
+}

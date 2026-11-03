@@ -1,24 +1,25 @@
 {
-  "at_utc": "2026-11-03T12:22:22.003301+00:00",
+  "at_utc": "2026-11-03T12:22:36.191761+00:00",
   "experiment_complete": true,
   "experiment_stage": "experiment_complete",
   "transport": "autodl_academic_only",
   "g_assets": {
     "total": 52,
-    "uploaded": 0
+    "uploaded": 1
   },
   "historical_assets": {
     "total": 616,
-    "uploaded": 380
+    "uploaded": 381
   },
   "retention_policy": "retention_policy.json",
   "automatic_research_product_deletion": false,
   "cleanup_scope": "inactive temporary transfer copies only; all training/resumption/reproduction products retained",
   "prior_deletions_recorded_before_current_policy": true,
   "retained_groups": [
-    "restored-inputs"
+    "restored-inputs",
+    "g500-sampler"
   ],
-  "pending_assets": 288,
+  "pending_assets": 286,
   "pending_manifest": "publication/pi0-g-fixed-vision-20261103/pending.json",
   "deleted_groups": [
     {

@@ -1141,8 +1141,17 @@
         }
       ],
       "source_bytes": 16128,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "bytes": 20480,
+      "receipt": {
+        "id": 705515728,
+        "name": "g500-sampler-records-0000.tar",
+        "size": 20480,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-sampler-records-0000.tar"
+      },
+      "uploaded_at": "2026-11-03T12:22:36.049949+00:00"
     },
     {
       "name": "g500-evaluation-G_500-records-0000.tar",
