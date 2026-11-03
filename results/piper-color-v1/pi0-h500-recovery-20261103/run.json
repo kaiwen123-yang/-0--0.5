@@ -1,13 +1,62 @@
 {
   "started_at": "2026-11-03T15:09:10.136435+00:00",
-  "completed": false,
-  "new_complete_tasks": 0,
-  "stage": "H500_saved_loading_two_services",
+  "completed": true,
+  "new_complete_tasks": 125,
+  "stage": "experiment_complete",
   "error": null,
-  "at_utc": "2026-11-03T15:13:20.516847+00:00",
+  "at_utc": "2026-11-03T15:26:10.251150+00:00",
   "training_pid": null,
   "training_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-h500-recovery-20261103/logs/train_H500.log",
   "training_exit": 0,
   "real_training_updates": 500,
-  "optimizer_updates": 4520
+  "optimizer_updates": 4520,
+  "service_pids": [
+    180773,
+    180774
+  ],
+  "evaluation_started_at": "2026-11-03T15:13:24.203861+00:00",
+  "lanes": [
+    {
+      "lane": 0,
+      "completed": 63,
+      "expected": 63,
+      "last": {
+        "split": "train",
+        "layout": 139,
+        "target": "red",
+        "base_seed": 42,
+        "report_group": "additional_sources",
+        "roster_index": 124,
+        "lane": 0
+      },
+      "started_at": "2026-11-03T15:13:39.478294+00:00",
+      "at_utc": "2026-11-03T15:25:59.595816+00:00",
+      "wall_seconds": 740.1175295766443
+    },
+    {
+      "lane": 1,
+      "completed": 62,
+      "expected": 62,
+      "last": {
+        "split": "train",
+        "layout": 120,
+        "target": "blue",
+        "base_seed": 43,
+        "report_group": "additional_sources",
+        "roster_index": 123,
+        "lane": 1
+      },
+      "started_at": "2026-11-03T15:13:39.512721+00:00",
+      "at_utc": "2026-11-03T15:26:05.083233+00:00",
+      "wall_seconds": 745.5705226678401
+    }
+  ],
+  "worker_pids": [
+    180951,
+    180952
+  ],
+  "finished_at": "2026-11-03T15:26:10.251136+00:00",
+  "retain_H_as_candidate": false,
+  "official_model": "B",
+  "large_artifacts": "server_retained_no_H_release_queue"
 }

@@ -1,0 +1,9 @@
+{
+  "retain_H_as_candidate": false,
+  "official_model": "B",
+  "H_source_successes": 5,
+  "criterion": "validation >=72/75 and (development complete successes >25/48 or recovery source autonomous successes >0/8); retain as candidate only, B remains official",
+  "reason": "这套68/2000恢复混合、500更新配方未达到保留候选条件，本轮结束并保留B。",
+  "automatic_continuation": false,
+  "new_independent_test_performed": false
+}
