@@ -1,83 +1,10 @@
 {
-  "at_utc": "2026-11-03T10:24:55.971886+00:00",
+  "at_utc": "2026-11-03T10:27:11.492801+00:00",
   "assets": [
     {
       "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-records-fd147ce3adcc1256.tar",
-      "status": "queued",
-      "bytes": 6344688,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/_CHECKPOINT_METADATA",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/assets/piper_h_color_v1/norm_stats.json",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/_METADATA",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/_sharding",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/array_metadatas/process_0",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/d/1690c0890b0f89c750be953328a6c2d7",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/manifest.ocdbt",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/6f86840b53732d1e246b983c164c4984",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/822715a0059f2677d1b1a6b8d3d4c47e",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/a93ab59947d10a87e52125b45523ea0d",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/cc777209497c6eec0f52750b1d5fe639",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/e90421d59b34ec263b00189d37953a5c",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/manifest.ocdbt",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/resume.json",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/_METADATA",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/_sharding",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/array_metadatas/process_0",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/d/7ae0687df555d2ccf830c9bcc729eb84",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/manifest.ocdbt",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/243f9a8dc29a0f3351dcd92616ba324a",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/28730dbcd10c347bf95d2344cbc362fb",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/2f1ec822ed8c1795d519bf297da0fbe5",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/d/806200c86d175c47fe5a08ae2cbf0187",
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/train_state/ocdbt.process_0/manifest.ocdbt"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-00b6c85e91c48a74-58333b63b4e912cde728adc899369e26",
-      "status": "queued",
-      "bytes": 59005010,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/58333b63b4e912cde728adc899369e26"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-0be7e96ad52070b3-5f23f772950a6bc65c14bbae3dd2fe8c",
-      "status": "queued",
-      "bytes": 118440705,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/5f23f772950a6bc65c14bbae3dd2fe8c"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-1b412bda8e97e5c0-fdd5872e7212538f3acf4125cc5e63a7",
-      "status": "queued",
-      "bytes": 8754653,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/fdd5872e7212538f3acf4125cc5e63a7"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-321122200d63594d-5ef15c2aa583be41f6ba25d372cdada7",
-      "status": "queued",
-      "bytes": 29654293,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/5ef15c2aa583be41f6ba25d372cdada7"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
       "name": "progressive-ab-b-checkpoint-1000-35029feb8cfd6555-87c028dca4b44408dd013779067eb0f2.part-000",
-      "status": "queued",
+      "status": "uploading",
       "bytes": 1073741824,
       "source_paths": [
         "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/87c028dca4b44408dd013779067eb0f2"
