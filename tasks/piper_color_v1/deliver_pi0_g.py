@@ -102,6 +102,8 @@ def cleanup_group(group,jobs,assets,mapping):
 
 def cleanup_restored(mapping):
     restore=read(CAMPAIGN/"input_restore.json")
+    restore["groups"]["g-norm-copy"] = dict(source_receipt=restore["groups"]["ab-b-checkpoint-2010"]["source_receipt"],
+        members=[dict(path=str(NORM/"norm_stats.json"),bytes=(NORM/"norm_stats.json").stat().st_size)] if (NORM/"norm_stats.json").exists() else [])
     for group,entry in restore["groups"].items():
         record=LEDGER/("cleanup-restored-"+group+".json")
         if record.exists() and read(record)["status"]=="deleted":
