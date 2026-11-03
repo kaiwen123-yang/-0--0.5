@@ -1,36 +1,6 @@
 {
-  "at_utc": "2026-11-03T10:22:44.882212+00:00",
+  "at_utc": "2026-11-03T10:24:51.157049+00:00",
   "assets": [
-    {
-      "group": "ab-a-checkpoint-2010",
-      "name": "progressive-ab-a-checkpoint-2010-f134ef3a69509840-0b4f75520901a13d5673e1b0ca7d8bbd",
-      "status": "pending",
-      "bytes": 1823651596,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/0b4f75520901a13d5673e1b0ca7d8bbd"
-      ],
-      "error": "GitHub transport/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
-    },
-    {
-      "group": "ab-a-checkpoint-2010",
-      "name": "progressive-ab-a-checkpoint-2010-f138e77283a09327-d057cd5e9d795fbf2c9fb49a3336f0e9",
-      "status": "queued",
-      "bytes": 430524667,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/d057cd5e9d795fbf2c9fb49a3336f0e9"
-      ],
-      "error": null
-    },
-    {
-      "group": "ab-a-checkpoint-2010",
-      "name": "progressive-ab-a-checkpoint-2010-f967c82b87dbb137-2bee1102fca6f19d707f7c6c55fa9c2b",
-      "status": "queued",
-      "bytes": 17792608,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/A/checkpoints/pi0_piper_color_lora/ab_old2010/2010/params/ocdbt.process_0/d/2bee1102fca6f19d707f7c6c55fa9c2b"
-      ],
-      "error": null
-    },
     {
       "group": "ab-b-checkpoint-1000",
       "name": "progressive-ab-b-checkpoint-1000-records-fd147ce3adcc1256.tar",
