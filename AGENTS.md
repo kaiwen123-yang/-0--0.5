@@ -1,3 +1,14 @@
+## 2026-11-03 H500 authorized execution (current scope)
+
+- Execute only `docs/PI0_H500_PLAN_20261103.md`, including section 6.1, under the current user's H500 instruction. Preserve the research branch and subsequent server work.
+- Entry: `tasks/piper_color_v1/run_pi0_h.py`; tmux/output task `pi0-h500-recovery-20261103`. Read its `outputs/pi0-h500-recovery-20261103/run.json` and live process state before any continuation. Do not duplicate an active or completed run.
+- B full model/optimizer/RNG/norm at cumulative 4020; E/upstream update path, 500 updates only, batch4, constant 1e-6, no warmup or visual update zeroing. Exactly 1932 unchanged E samples plus 68 fixed recovery suffix starts, all 120 original episodes retained; no F dataset.
+- H500 full save precedes 125 formal autonomous tasks, split 63/62 by original roster index parity. Independent services/RNG/ports/CPU sets/progress; no lane-dependent seed. Original 420/40, 20Hz, horizon10, replan5, batch1, flow10.
+- Original 48 development and 75 validation plus only 120/blue/43 and 139/red/42. Reuse B/E; extract eight source outcomes from these 125. No G/B/E/F rerun, new collection, 3000-3009, continuation, extra evaluation or recipe search.
+- One parent merges and publishes small records to `codex/pi0-h500-recovery-20261103`. Keep the current working branch; do not replace runtime code from main. Main documentation is the current plan.
+- Checkpoints, optimizer, videos and arrays remain on this server for user backup. No H large-file queue, local-PC archive, deletion, environment/shared OpenPI/base-weight/cache modification, or interruption of existing jobs.
+- Academic GitHub transport only. No hashes, smoke/import/shape/mock/unit tests, capacity trials, warmup episodes, redownload verification, recovery rehearsal, full refactor, or autonomous rule fallback.
+
 ## 2026-11-03 当前研究状态：8 条恢复完成，H 未启动
 
 - G500 已完成，验证 64/75，仍选 B（验证 72/75）；不重跑 G 或续 G1000。
