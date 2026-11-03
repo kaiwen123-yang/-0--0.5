@@ -1,11 +1,11 @@
 {
-  "at_utc": "2026-11-03T13:24:33.990640+00:00",
+  "at_utc": "2026-11-03T13:54:09.197873+00:00",
   "experiment_complete": true,
   "experiment_stage": "experiment_complete",
   "transport": "autodl_academic_only",
   "g_assets": {
     "total": 52,
-    "uploaded": 23
+    "uploaded": 52
   },
   "historical_assets": {
     "total": 616,
@@ -18,9 +18,10 @@
   "retained_groups": [
     "restored-inputs",
     "g500-sampler",
-    "g500-evaluation-G_500"
+    "g500-evaluation-G_500",
+    "g500-checkpoint"
   ],
-  "pending_assets": 264,
+  "pending_assets": 235,
   "pending_manifest": "publication/pi0-g-fixed-vision-20261103/pending.json",
   "deleted_groups": [
     {
