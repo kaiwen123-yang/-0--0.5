@@ -13,7 +13,7 @@ B自身已有“稳定抓持却未完成转运”的具体失败记录。下一�
 
 main本次只更新文档入口；运行代码仍以上述研究分支及服务器后续真实改动为准。不要用main旧代码覆盖工作区。[旧G提示词](docs/PI0_NEXT_STAGE_PROMPT_20261103.md)保留为已执行记录。
 
-**保留所有训练、续训及复现资料。上传完成不自动删除B/G、数据、optimizer、RNG、norm、轨迹或视频；只清理无活动依赖的传输临时副本。** 小结果先入Git，大产物后台交付，不在用户电脑归档，不让全量上传阻塞正常训练。
+**最新交付规则：GitHub只推代码、配置、逐回合紧凑结果与分析结论；大检查点、完整视频和原始数据不再自动上传。** 用户定期从服务器数据盘导出到自有存储盘备份，之后由用户统一删除。Codex保留研究产物和训练依赖，不代做本机归档、不自动删除研究资料；仅清理无活动依赖的传输临时副本。详见[发布与人工备份规则](docs/RESEARCH_PUBLISH_POLICY.md)。
 
 ## 已有结果与边界
 
@@ -32,16 +32,16 @@ main本次只更新文档入口；运行代码仍以上述研究分支及服务�
 
 历史E/F阶段曾按旧授权清理已发布副本；G启动时已完成所需B/v2输入恢复。当前保留政策覆盖旧自动删除安排，不再因为一轮结束就删除后续训练所需资料。个别原始轨迹如已在旧阶段清理，仅按具体需要恢复。
 
-[2026-11-03 13:24 UTC（北京时间21:24）状态](https://github.com/kaiwen123-yang/-0--0.5/blob/3cffdb05d8caed0696754b80ee7bfd7bc6a3f2c0/publication/pi0-g-fixed-vision-20261103/delivery_status.json)记录：G资产23/52、历史381/616已上传，共264项pending。核心G研究结果已可读取，不必等大产物传完才分析。这是Git快照，不是服务器实时状态。
+[2026-11-03 13:24 UTC（北京时间21:24）状态](https://github.com/kaiwen123-yang/-0--0.5/blob/3cffdb05d8caed0696754b80ee7bfd7bc6a3f2c0/publication/pi0-g-fixed-vision-20261103/delivery_status.json)记录：G资产23/52、历史381/616已上传，当时共264项pending。这是历史Git快照；按用户最新策略，剩余大文件不再继续排队上传，转由用户自行备份，不能记作已上传。本次只更新政策，服务器队列是否实际停止由服务器Codex落实。
 
-- [当前大文件Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-complete-backup-20261101)
+- [历史已上传大文件Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-complete-backup-20261101)
 - [逐组上传/删除回执](https://github.com/kaiwen123-yang/-0--0.5/tree/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102)
 - [B定向恢复成员](https://github.com/kaiwen123-yang/-0--0.5/blob/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102/ab-b-checkpoint-2010.json)
 - [v2定向恢复成员](https://github.com/kaiwen123-yang/-0--0.5/blob/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102/v2-training-data.json)
 
-只推GitHub，不在用户电脑下载或归档。所有训练、续训、复现资料保留，清理只限无活动依赖的传输暂存和重复临时副本。源码、Git、全部环境、共享基础权重与其他项目保留。禁止哈希、冒烟等防御性检查、回下载及恢复演练。
+关键小文件推GitHub；完整研究产物由用户自行备份和删除。Codex保留训练、续训资料，不因阶段结束或小文件发布而清理。源码、Git、全部环境、共享基础权重与其他项目保留。禁止哈希、冒烟等防御性检查、回下载及恢复演练。
 
-服务器GitHub传输仅用官方AutoDL学术加速，禁止服务器/电脑VPN和自动回退。网络失败记录pending，不能删除未发布原件。详细当前要求见[AGENTS.md](AGENTS.md)。
+服务器GitHub传输仅用官方AutoDL学术加速，禁止服务器/电脑VPN和自动回退。停止大文件传输只针对对应队列，不能牵连训练或小文件发布；服务器原件保留给用户备份。详细当前要求见[AGENTS.md](AGENTS.md)。
 
 ## 代码、环境与历史资料入口
 
