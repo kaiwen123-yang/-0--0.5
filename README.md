@@ -1,6 +1,6 @@
 # π0 / π0.5：Piper H仿真、微调与复现资料
 
-## 当前状态：G已完成，下一步回到真实持物状态（2026-11-03）
+## 当前状态：恢复示范已提交3/8，450专家帧，H尚未训练（2026-11-03）
 
 **正式最佳仍是B累计4020：训练211/240、验证72/75、旧独立测试53/60。G500已经执行，开发29/48、后排15/32、验证64/75，未超过B。停止视觉冻结续训路线，不重跑G或自动续至1000。**
 
@@ -9,7 +9,9 @@
 - [固定结果报告](https://github.com/kaiwen123-yang/-0--0.5/blob/3cffdb05d8caed0696754b80ee7bfd7bc6a3f2c0/results/piper-color-v1/pi0-g-fixed-vision-20261103/final_report_zh.md)
 - [E/F及论文、官方代码的历史审查](docs/PI0_REPRO_REVIEW_NEXT_PLAN_20261103.md)
 
-B自身已有“稳定抓持却未完成转运”的具体失败记录。下一步优先从实际训练失败状态生成完整恢复后缀，最多8个指定案例；先产出真实数据，再制定H训练配方，不继续凭猜测修改学习率、冻结范围或纠偏比例。新计划尚未执行。
+[最新恢复提交c04b06c](https://github.com/kaiwen123-yang/-0--0.5/commit/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8)已完成113/red/42、109/red/42、107/blue/42三次实际恢复，全部达到原420/40条件；每条150帧后缀，共450专家帧。两条从已持物未转运状态接管，一条从抓稳未抬起状态接管。它们属于教师介入数据，不增加B自主成功率；本轮训练更新仍为0。
+
+8例计划尚未完成，剩余5例包括全部3个后排案例。先依据现场最新记录完成尚未尝试的案例，不重跑前三例；对已在箱上的案例只做教师剩余阶段，随后根据实际后缀长度/覆盖制定H，不预设学习率和混合比例。[数据清单](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/results/piper-color-v1/pi0-held-recovery-20261103/manifest.json)、[实际数据索引](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/results/piper-color-v1/pi0-held-recovery-20261103/dataset/index.json)。
 
 main本次只更新文档入口；运行代码仍以上述研究分支及服务器后续真实改动为准。不要用main旧代码覆盖工作区。[旧G提示词](docs/PI0_NEXT_STAGE_PROMPT_20261103.md)保留为已执行记录。
 
@@ -32,7 +34,7 @@ main本次只更新文档入口；运行代码仍以上述研究分支及服务�
 
 历史E/F阶段曾按旧授权清理已发布副本；G启动时已完成所需B/v2输入恢复。当前保留政策覆盖旧自动删除安排，不再因为一轮结束就删除后续训练所需资料。个别原始轨迹如已在旧阶段清理，仅按具体需要恢复。
 
-[2026-11-03 13:24 UTC（北京时间21:24）状态](https://github.com/kaiwen123-yang/-0--0.5/blob/3cffdb05d8caed0696754b80ee7bfd7bc6a3f2c0/publication/pi0-g-fixed-vision-20261103/delivery_status.json)记录：G资产23/52、历史381/616已上传，当时共264项pending。这是历史Git快照；按用户最新策略，剩余大文件不再继续排队上传，转由用户自行备份，不能记作已上传。本次只更新政策，服务器队列是否实际停止由服务器Codex落实。
+[G交付快照（北京时间21:54）](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/publication/pi0-g-fixed-vision-20261103/delivery_status.json)已为52/52；[恢复任务contract（22:04）](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/results/piper-color-v1/pi0-held-recovery-20261103/contract.json)另记录历史382/616、234 pending。这些是已提交历史状态，不代表服务器此刻实时进度，也不要求为继续研究清空队列。本轮用户要求不停止任何现有上传、训练和推理任务，本次审查未连接服务器或操作队列。新大产物按人工备份规则保留，既有活动任务不因本次文档更新中断。
 
 - [历史已上传大文件Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-complete-backup-20261101)
 - [逐组上传/删除回执](https://github.com/kaiwen123-yang/-0--0.5/tree/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102)
@@ -41,7 +43,7 @@ main本次只更新文档入口；运行代码仍以上述研究分支及服务�
 
 关键小文件推GitHub；完整研究产物由用户自行备份和删除。Codex保留训练、续训资料，不因阶段结束或小文件发布而清理。源码、Git、全部环境、共享基础权重与其他项目保留。禁止哈希、冒烟等防御性检查、回下载及恢复演练。
 
-服务器GitHub传输仅用官方AutoDL学术加速，禁止服务器/电脑VPN和自动回退。停止大文件传输只针对对应队列，不能牵连训练或小文件发布；服务器原件保留给用户备份。详细当前要求见[AGENTS.md](AGENTS.md)。
+服务器GitHub传输仅用官方AutoDL学术加速，禁止服务器/电脑VPN和自动回退。本轮审查不停止现有传输或计算任务；服务器原件保留给用户备份。详细当前要求见[AGENTS.md](AGENTS.md)。
 
 ## 代码、环境与历史资料入口
 
