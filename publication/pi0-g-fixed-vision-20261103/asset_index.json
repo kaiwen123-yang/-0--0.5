@@ -468,9 +468,17 @@
       "offset": 0,
       "part": 0,
       "parts": 11,
-      "status": "pending",
-      "attempts": 1,
-      "error": "[Errno 32] Broken pipe"
+      "status": "uploaded",
+      "attempts": 2,
+      "error": "[Errno 32] Broken pipe",
+      "receipt": {
+        "id": 705683963,
+        "name": "g500-checkpoint-file-0011-part-000",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0011-part-000"
+      },
+      "uploaded_at": "2026-11-03T13:20:54.772863+00:00"
     },
     {
       "name": "g500-checkpoint-file-0011-part-001",
@@ -489,8 +497,16 @@
       "offset": 268435456,
       "part": 1,
       "parts": 11,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705687267,
+        "name": "g500-checkpoint-file-0011-part-001",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0011-part-001"
+      },
+      "uploaded_at": "2026-11-03T13:22:07.351723+00:00"
     },
     {
       "name": "g500-checkpoint-file-0011-part-002",
@@ -509,8 +525,16 @@
       "offset": 536870912,
       "part": 2,
       "parts": 11,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705690898,
+        "name": "g500-checkpoint-file-0011-part-002",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0011-part-002"
+      },
+      "uploaded_at": "2026-11-03T13:23:23.253242+00:00"
     },
     {
       "name": "g500-checkpoint-file-0011-part-003",
@@ -529,8 +553,16 @@
       "offset": 805306368,
       "part": 3,
       "parts": 11,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705694229,
+        "name": "g500-checkpoint-file-0011-part-003",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0011-part-003"
+      },
+      "uploaded_at": "2026-11-03T13:24:33.858783+00:00"
     },
     {
       "name": "g500-checkpoint-file-0011-part-004",
