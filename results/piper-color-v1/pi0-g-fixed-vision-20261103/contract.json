@@ -1,0 +1,47 @@
+{
+  "task": "pi0-g-fixed-vision-20261103",
+  "source_commit": "c912dc5efbbec7dce53361fe989bf71eac0b2351",
+  "implementation_commit": "af79b823fd8c8ca0e0b89432009dfb1d9911a7c9",
+  "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+  "source_cumulative_updates": 4020,
+  "max_new_updates": 500,
+  "final_cumulative_updates": 4520,
+  "batch": 4,
+  "learning_rate": 1e-06,
+  "schedule": {
+    "warmup_steps": 0,
+    "peak_lr": 1e-06,
+    "decay_lr": 1e-06,
+    "decay_steps": 5020
+  },
+  "train_rng_key_data": [
+    1832780943,
+    270669613
+  ],
+  "rng_fold_in_steps": [
+    4020,
+    4519
+  ],
+  "sampler_source": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-ef-local-20261102/E/sample_order.json",
+  "sampler_slice": [
+    0,
+    2000
+  ],
+  "sampler_operation": "ordered format conversion",
+  "dataset": "PiperDataset(v2, train, 10)",
+  "normalization_source": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010/assets/piper_h_color_v1/norm_stats.json",
+  "intervention": "PaliGemma/img/.* final updates zeroed after tx.update before apply_updates",
+  "visual_gradients_and_optimizer_buffers": "unchanged rule; retain full optimizer tree and original filter/dtype",
+  "horizon": 10,
+  "replan": 5,
+  "hz": 20,
+  "max_steps": 420,
+  "continuous_success_steps": 40,
+  "initial_tasks": 123,
+  "max_new_complete_tasks": 435,
+  "reused_results": {
+    "B": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-ef-local-20261102/node_B.json",
+    "E_500": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-ef-local-20261102/node_E_500.json",
+    "F_500": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-ef-local-20261102/node_F_500.json"
+  }
+}

@@ -1,21 +1,21 @@
 {
-  "at_utc": "2026-11-03T10:22:38.867252+00:00",
-  "status": "pending_official_academic_transport",
+  "at_utc": "2026-11-03T11:55:02.143717+00:00",
+  "status": "restored",
   "transport": "autodl_academic_only",
   "release_tag": "pi-complete-backup-20261101",
   "groups": [
     {
       "group": "ab-b-checkpoint-2010",
-      "complete_parts": 16,
+      "complete_parts": 19,
       "total_parts": 19,
-      "expanded": false,
+      "expanded": true,
       "assets": [
         {
           "name": "ab-b-checkpoint-2010.tar.zst.part-000",
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-000"
         },
         {
@@ -23,7 +23,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-001"
         },
         {
@@ -31,7 +31,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-002"
         },
         {
@@ -39,7 +39,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-003"
         },
         {
@@ -47,7 +47,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-004"
         },
         {
@@ -55,7 +55,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-005"
         },
         {
@@ -63,7 +63,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-006"
         },
         {
@@ -71,7 +71,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-007"
         },
         {
@@ -79,7 +79,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-008"
         },
         {
@@ -87,7 +87,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-009"
         },
         {
@@ -95,7 +95,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-010"
         },
         {
@@ -103,7 +103,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-011"
         },
         {
@@ -111,7 +111,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-012"
         },
         {
@@ -119,7 +119,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-013"
         },
         {
@@ -127,31 +127,31 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-014"
         },
         {
           "name": "ab-b-checkpoint-2010.tar.zst.part-015",
           "expected_bytes": 536870912,
-          "received_bytes": 415592448,
-          "missing_bytes": 121278464,
-          "status": "pending",
+          "received_bytes": 536870912,
+          "missing_bytes": 0,
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-015"
         },
         {
           "name": "ab-b-checkpoint-2010.tar.zst.part-016",
           "expected_bytes": 536870912,
-          "received_bytes": 536853810,
-          "missing_bytes": 17102,
-          "status": "pending",
+          "received_bytes": 536870912,
+          "missing_bytes": 0,
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-016"
         },
         {
           "name": "ab-b-checkpoint-2010.tar.zst.part-017",
           "expected_bytes": 536870912,
-          "received_bytes": 212729137,
-          "missing_bytes": 324141775,
-          "status": "pending",
+          "received_bytes": 536870912,
+          "missing_bytes": 0,
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-017"
         },
         {
@@ -159,31 +159,32 @@
           "expected_bytes": 131531267,
           "received_bytes": 131531267,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-018"
         }
-      ]
+      ],
+      "temporary_volumes_deleted": true
     },
     {
       "group": "v2-training-data",
-      "complete_parts": 2,
+      "complete_parts": 4,
       "total_parts": 4,
-      "expanded": false,
+      "expanded": true,
       "assets": [
         {
           "name": "v2-training-data.tar.zst.part-000",
           "expected_bytes": 536870912,
-          "received_bytes": 402947381,
-          "missing_bytes": 133923531,
-          "status": "pending",
+          "received_bytes": 536870912,
+          "missing_bytes": 0,
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/v2-training-data/v2-training-data.tar.zst.part-000"
         },
         {
           "name": "v2-training-data.tar.zst.part-001",
           "expected_bytes": 536870912,
-          "received_bytes": 328810496,
-          "missing_bytes": 208060416,
-          "status": "pending",
+          "received_bytes": 536870912,
+          "missing_bytes": 0,
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/v2-training-data/v2-training-data.tar.zst.part-001"
         },
         {
@@ -191,7 +192,7 @@
           "expected_bytes": 536870912,
           "received_bytes": 536870912,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/v2-training-data/v2-training-data.tar.zst.part-002"
         },
         {
@@ -199,14 +200,15 @@
           "expected_bytes": 133567557,
           "received_bytes": 133567557,
           "missing_bytes": 0,
-          "status": "downloaded",
+          "status": "restored_and_temporary_volume_removed",
           "server_path": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/v2-training-data/v2-training-data.tar.zst.part-003"
         }
-      ]
+      ],
+      "temporary_volumes_deleted": true
     }
   ],
-  "received_bytes": 10751966688,
-  "missing_bytes": 787421288,
+  "received_bytes": 11539387976,
+  "missing_bytes": 0,
   "observed_errors": [
     "TLS handshake timeout",
     "unexpected EOF",
@@ -214,10 +216,6 @@
     "no payload progress for 120 seconds"
   ],
   "downloaded_parts_retained": true,
-  "new_training_updates": 0,
-  "new_complete_tasks": 0,
-  "G_checkpoint_created": false,
-  "G_results_available": false,
-  "new_layout_test_performed": false,
-  "restored_input_deletions": 0
+  "restored_input_deletions": 0,
+  "temporary_volumes_deleted": true
 }
