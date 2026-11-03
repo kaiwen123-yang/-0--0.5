@@ -1,58 +1,58 @@
 # π0 / π0.5：Piper H仿真、微调与复现资料
 
-## 当前状态：恢复示范已提交3/8，450专家帧，H尚未训练（2026-11-03）
+## 当前状态：8条恢复数据已完成，下一轮只做H500
 
-**正式最佳仍是B累计4020：训练211/240、验证72/75、旧独立测试53/60。G500已经执行，开发29/48、后排15/32、验证64/75，未超过B。停止视觉冻结续训路线，不重跑G或自动续至1000。**
+**B累计4020仍是正式最佳。恢复任务已完成8/8，新增1200帧教师后缀；H尚未训练，没有新增自主成功率。**
 
-- [G完成后的详细审查、下一阶段和服务器Codex启动提示词](docs/PI0_G_COMPLETED_NEXT_REVIEW_20261103.md)
-- [最新G研究分支](https://github.com/kaiwen123-yang/-0--0.5/tree/codex/pi0-g-fixed-vision-20261103)
-- [固定结果报告](https://github.com/kaiwen123-yang/-0--0.5/blob/3cffdb05d8caed0696754b80ee7bfd7bc6a3f2c0/results/piper-color-v1/pi0-g-fixed-vision-20261103/final_report_zh.md)
-- [E/F及论文、官方代码的历史审查](docs/PI0_REPRO_REVIEW_NEXT_PLAN_20261103.md)
+- **唯一下一轮入口：[H500统一计划与启动提示词](docs/PI0_H500_PLAN_20261103.md)。**
+- [最终恢复报告](https://github.com/kaiwen123-yang/-0--0.5/blob/4852a9ba72516fad050a78c49a92c78376fb03fc/results/piper-color-v1/pi0-held-recovery-20261103/final_report_zh.md)、[逐条结果](https://github.com/kaiwen123-yang/-0--0.5/blob/4852a9ba72516fad050a78c49a92c78376fb03fc/results/piper-color-v1/pi0-held-recovery-20261103/manifest.json)、[数据统计](https://github.com/kaiwen123-yang/-0--0.5/blob/4852a9ba72516fad050a78c49a92c78376fb03fc/results/piper-color-v1/pi0-held-recovery-20261103/data_statistics.json)
+- [实际运行代码基线](https://github.com/kaiwen123-yang/-0--0.5/tree/4852a9ba72516fad050a78c49a92c78376fb03fc)：研究分支`codex/pi0-g-fixed-vision-20261103`，最终提交`4852a9b`（2026-11-03 22:24，北京时间）。
+- [AGENTS当前执行规则](AGENTS.md)、[发布与人工备份规则](docs/RESEARCH_PUBLISH_POLICY.md)
 
-[最新恢复提交c04b06c](https://github.com/kaiwen123-yang/-0--0.5/commit/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8)已完成113/red/42、109/red/42、107/blue/42三次实际恢复，全部达到原420/40条件；每条150帧后缀，共450专家帧。两条从已持物未转运状态接管，一条从抓稳未抬起状态接管。它们属于教师介入数据，不增加B自主成功率；本轮训练更新仍为0。
+上一阶段任务是从B真实失败轨迹生成恢复数据，已经全部结束；下一阶段是从B完整状态用这些数据训练一个H候选，不是继续G或重复采集。此前“3/8、继续剩余五例”的提示词已失效。
 
-8例计划尚未完成，剩余5例包括全部3个后排案例。先依据现场最新记录完成尚未尝试的案例，不重跑前三例；对已在箱上的案例只做教师剩余阶段，随后根据实际后缀长度/覆盖制定H，不预设学习率和混合比例。[数据清单](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/results/piper-color-v1/pi0-held-recovery-20261103/manifest.json)、[实际数据索引](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/results/piper-color-v1/pi0-held-recovery-20261103/dataset/index.json)。
+## 正式结果与下一步的关系
 
-main本次只更新文档入口；运行代码仍以上述研究分支及服务器后续真实改动为准。不要用main旧代码覆盖工作区。[旧G提示词](docs/PI0_NEXT_STAGE_PROMPT_20261103.md)保留为已执行记录。
-
-**最新交付规则：GitHub只推代码、配置、逐回合紧凑结果与分析结论；大检查点、完整视频和原始数据不再自动上传。** 用户定期从服务器数据盘导出到自有存储盘备份，之后由用户统一删除。Codex保留研究产物和训练依赖，不代做本机归档、不自动删除研究资料；仅清理无活动依赖的传输临时副本。详见[发布与人工备份规则](docs/RESEARCH_PUBLISH_POLICY.md)。
-
-## 已有结果与边界
-
-| 阶段 | π0 | π0.5 | 范围 |
+| 对象 | 同一48开发任务 | 验证75任务 | 状态 |
 |---|---:|---:|---|
-| 官方LIBERO/Panda pilot | 183/200 | 196/200 | 每任务5初态，不是默认50次完整规模 |
-| Piper H迁移仿真 | 32/75 | 47/75 | 新机器人与适配条件，不与Panda混为同一基准 |
-| 旧颜色入盒适配 | — | 1500更新后0/15，D57复评3/15与0/15 | 教师成功不等于策略成功 |
-| π0 B完整覆盖 | 211/240训练；72/75验证；53/60旧独立测试 | — | 当前正式基线 |
-| E/F | 验证67/75、65/75 | — | 未超过B |
-| 最新G500 | 验证64/75 | — | 未超过B，没有新独立测试成绩 |
+| B累计4020 | 25/48 | 72/75 | 正式最佳；全训练211/240，旧独立测试53/60 |
+| E500：原数据续训 | 34/48 | 67/75 | 已完成；H的数据作用比较对象 |
+| F500：早期纠偏混合 | 30/48 | 65/75 | 已完成 |
+| G500：固定视觉更新 | 29/48 | 64/75 | 已完成，不继续 |
+| 8条持物恢复数据 | 不属于自主评测 | 不属于自主评测 | 8/8教师恢复，1200专家帧 |
+| H500 | 尚未执行 | 尚未执行 | 唯一下一轮计划 |
 
-当前是公开预训练模型的自定义任务迁移与微调复现；尚未复现论文的大规模异构预训练、跨家庭泛化或实机闭环。同一模型的多推理种子不等于多次独立训练。
+H计划：B完整4020状态、原norm/optimizer/RNG、batch4、1e-6、500更新；2000起点中1932原数据＋68新恢复。保持原π0和可训练范围，不沿用G视觉置零。采样明确包含真实接管帧，不重新采集。
 
-## 当前交付与磁盘规则
+H评测125次自主完整任务：原48开发＋75验证＋120/blue/43、139/red/42两项来源任务。后两项不在原48中，单独报告，不改主分母。H/E判断新数据变化，H/B判断候选能力；复用已有B/E，不重跑基线。本轮不自动续训或使用3000–3009新测试。
 
-历史E/F阶段曾按旧授权清理已发布副本；G启动时已完成所需B/v2输入恢复。当前保留政策覆盖旧自动删除安排，不再因为一轮结束就删除后续训练所需资料。个别原始轨迹如已在旧阶段清理，仅按具体需要恢复。
+## 本次最终数据说明了什么
 
-[G交付快照（北京时间21:54）](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/publication/pi0-g-fixed-vision-20261103/delivery_status.json)已为52/52；[恢复任务contract（22:04）](https://github.com/kaiwen123-yang/-0--0.5/blob/c04b06cbf36e3ec38c3ca865973ac2cda78e98d8/results/piper-color-v1/pi0-held-recovery-20261103/contract.json)另记录历史382/616、234 pending。这些是已提交历史状态，不代表服务器此刻实时进度，也不要求为继续研究清空队列。本轮用户要求不停止任何现有上传、训练和推理任务，本次审查未连接服务器或操作队列。新大产物按人工备份规则保留，既有活动任务不因本次文档更新中断。
+7条从悬空持物接管，107/blue/42从桌面双侧抓稳接管；全部按原420总步/40连续完整成功完成。105/126原到箱过晚，本轮从更早持物状态恢复，不是箱上释放故障恢复。115在原错误开爪和接触丢失前接管，不是掉落后重抓。
 
-- [历史已上传大文件Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-complete-backup-20261101)
-- [逐组上传/删除回执](https://github.com/kaiwen123-yang/-0--0.5/tree/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102)
-- [B定向恢复成员](https://github.com/kaiwen123-yang/-0--0.5/blob/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102/ab-b-checkpoint-2010.json)
-- [v2定向恢复成员](https://github.com/kaiwen123-yang/-0--0.5/blob/c912dc5efbbec7dce53361fe989bf71eac0b2351/publication/pi-ef-cleanup-20261102/v2-training-data.json)
+数据覆盖前左5、后排3、红4/蓝3/绿1。原B前缀1305帧只作来源，专家监督只有1200教师帧。8/8说明这些状态可由教师恢复，尚不说明H能提高自主表现。
 
-关键小文件推GitHub；完整研究产物由用户自行备份和删除。Codex保留训练、续训资料，不因阶段结束或小文件发布而清理。源码、Git、全部环境、共享基础权重与其他项目保留。禁止哈希、冒烟等防御性检查、回下载及恢复演练。
+main本次仅发布最终审查和下一轮计划，没有连接服务器或启动H。运行代码保留研究分支及服务器最新改动，不用main旧代码覆盖工作区。
 
-服务器GitHub传输仅用官方AutoDL学术加速，禁止服务器/电脑VPN和自动回退。本轮审查不停止现有传输或计算任务；服务器原件保留给用户备份。详细当前要求见[AGENTS.md](AGENTS.md)。
+## 交付与保留
 
-## 代码、环境与历史资料入口
+服务器计算 → 推代码、实际配置、完整逐回合紧凑JSON与结论 → 继续研究。H不新增大检查点/视频/原始数组上传队列；大产物留服务器，由用户导出到自有存储盘并自行删除。Codex不在用户电脑下载或归档，不因上传完成删除研究资料。
 
-工作区：`/root/autodl-tmp/robot-repro/pi-reproduction`，现有π0、π0.5和仿真隔离环境继续使用。
+现有训练、推理、采集、上传任务不因本轮计划而停止。保留全部训练/续训依赖、环境、缓存、共享权重、Git及其他项目；只可处理无活动依赖的传输临时副本。禁止哈希、冒烟、shape/mock/单元测试、回下载验证、恢复演练和全库重构。服务器GitHub仅用官方AutoDL学术加速。
 
-- [D57部署说明](docs/AUTODL_D57.md)、[路径记录](deployment/d57/paths.json)
-- [原项目说明](docs/PROJECT_README.md)、[最初π0优先路线](docs/PI0_FIRST_PLAN.md)
-- [历史总索引](ARTIFACT_INDEX.json)、[上游来源](publication/upstream-provenance.json)
-- [LIBERO结果](results/libero-comparison-20261023-212017/summary.json)、[Piper迁移结果](results/piper-h-expanded-20261024/summary.json)
-- [旧fy5080资料Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/fy5080-pi-artifacts-20261031)
+## 历史复现与入口
 
-旧LoRA1499只有推理参数/元信息，无optimizer；旧全参1000备份残缺，均不能替代B完整状态继续训练。历史文件中的归档、哈希、全部保留或VPN规则只代表当时记录；后续行动以2026-11-03计划与当前用户指令为准。历史README内容保留在Git提交历史中。
+当前是公开预训练模型的Piper自定义任务适配与闭环仿真；未复现论文的大规模异构预训练、跨家庭泛化或实机闭环。多推理种子不等于独立训练重复。
+
+| 历史阶段 | π0 | π0.5 | 口径 |
+|---|---:|---:|---|
+| LIBERO/Panda pilot | 183/200 | 196/200 | 每任务5初态，不是默认50次完整规模 |
+| Piper H迁移仿真 | 32/75 | 47/75 | 新机器人与适配条件 |
+| 旧颜色入盒 | — | 1500更新后0/15，D57复评3/15与0/15 | 历史失败保留 |
+
+- [G/中途恢复审查（历史）](docs/PI0_G_COMPLETED_NEXT_REVIEW_20261103.md)、[E/F及论文/官方代码审查](docs/PI0_REPRO_REVIEW_NEXT_PLAN_20261103.md)
+- [D57部署](docs/AUTODL_D57.md)、[路径](deployment/d57/paths.json)、[原项目说明](docs/PROJECT_README.md)
+- [总索引](ARTIFACT_INDEX.json)、[上游来源](publication/upstream-provenance.json)
+- [历史Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-complete-backup-20261101)
+
+历史上传后删除政策已撤销；过去已发生的删除按原回执保留，不恢复无关全历史。旧LoRA1499缺optimizer、旧全参1000不完整，均不能替代B完整状态。
