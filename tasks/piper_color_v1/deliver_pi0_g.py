@@ -62,7 +62,7 @@ def sync_index(mapping):
              for j in mapping["jobs"] if j["status"]!="uploaded"]
     save(LEDGER/"pending.json",dict(at_utc=now(),assets=missing))
     receipts=[read(p) for p in LEDGER.glob("cleanup-*.json")]
-    save(LEDGER/"delivery_status.json",dict(at_utc=now(),experiment_complete=read(CAMPAIGN/"run.json").get("completed",False),transport="autodl_academic_only",
+    save(LEDGER/"delivery_status.json",dict(at_utc=now(),experiment_complete=read(CAMPAIGN/"run.json").get("completed",False),experiment_stage=read(CAMPAIGN/"run.json").get("stage"),transport="autodl_academic_only",
         g_assets=dict(total=len(g_jobs),uploaded=sum(j["status"]=="uploaded" for j in g_jobs)),
         historical_assets=dict(total=len(mapping["jobs"])-len(g_jobs),
             uploaded=sum(j["status"]=="uploaded" and not j["group"].startswith("g500-") for j in mapping["jobs"])),
@@ -129,6 +129,7 @@ def deliver(history_only=False):
     lock=(TRANSFER/"queue.lock").open("a")
     fcntl.flock(lock,fcntl.LOCK_EX)
     os.nice(19)
+    subprocess.run(["ionice","-c","3","-p",str(os.getpid())],check=True)
     mapping=read(TRANSFER/"mapping.json")
     if not history_only:
         register(mapping)

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ab-b-checkpoint-2010.tar.zst.part-015",
+    "received_before": 415592448,
+    "received_after": 415592448,
+    "expected_bytes": 536870912,
+    "returncode": 28,
+    "error": "curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 120 seconds\n",
+    "at_utc": "2026-11-03T10:11:54.095509+00:00",
+    "transport": "autodl_academic_only"
+  },
+  {
+    "name": "ab-b-checkpoint-2010.tar.zst.part-017",
+    "received_before": 212729137,
+    "received_after": 212729137,
+    "expected_bytes": 536870912,
+    "returncode": 28,
+    "error": "curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 120 seconds\n",
+    "at_utc": "2026-11-03T10:12:00.248373+00:00",
+    "transport": "autodl_academic_only"
+  }
+]

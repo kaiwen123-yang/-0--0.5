@@ -148,7 +148,7 @@
       ],
       "downloaded": [
         {
-          "name": "ab-b-checkpoint-2010.tar.zst.part-002",
+          "name": "ab-b-checkpoint-2010.tar.zst.part-000",
           "bytes": 536870912
         },
         {
@@ -156,15 +156,15 @@
           "bytes": 536870912
         },
         {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-002",
+          "bytes": 536870912
+        },
+        {
           "name": "ab-b-checkpoint-2010.tar.zst.part-003",
           "bytes": 536870912
         },
         {
-          "name": "ab-b-checkpoint-2010.tar.zst.part-000",
-          "bytes": 536870912
-        },
-        {
-          "name": "ab-b-checkpoint-2010.tar.zst.part-006",
+          "name": "ab-b-checkpoint-2010.tar.zst.part-004",
           "bytes": 536870912
         },
         {
@@ -172,7 +172,7 @@
           "bytes": 536870912
         },
         {
-          "name": "ab-b-checkpoint-2010.tar.zst.part-004",
+          "name": "ab-b-checkpoint-2010.tar.zst.part-006",
           "bytes": 536870912
         },
         {
@@ -182,10 +182,55 @@
         {
           "name": "ab-b-checkpoint-2010.tar.zst.part-008",
           "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-009",
+          "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-010",
+          "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-011",
+          "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-012",
+          "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-013",
+          "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-014",
+          "bytes": 536870912
+        },
+        {
+          "name": "ab-b-checkpoint-2010.tar.zst.part-018",
+          "bytes": 131531267
         }
       ],
-      "error": "Command '['gh', 'release', 'download', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--pattern', 'ab-b-checkpoint-2010.tar.zst.part-012', '--dir', '/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010', '--clobber']' returned non-zero exit status 1.",
+      "error": "Official academic transfer interrupted; keep complete volumes and partial payloads",
       "at_utc": "2026-11-03T09:40:34.948613+00:00"
+    },
+    "v2-training-data": {
+      "status": "pending",
+      "downloaded": [
+        {
+          "name": "v2-training-data.tar.zst.part-002",
+          "bytes": 536870912
+        },
+        {
+          "name": "v2-training-data.tar.zst.part-003",
+          "bytes": 133567557
+        }
+      ],
+      "error": "Official academic transfer interrupted; keep complete volumes and partial payloads"
     }
-  }
+  },
+  "status": "pending",
+  "at_utc": "2026-11-03T10:22:38.867252+00:00",
+  "pending_manifest": "publication/pi0-g-fixed-vision-20261103/input_pending.json"
 }

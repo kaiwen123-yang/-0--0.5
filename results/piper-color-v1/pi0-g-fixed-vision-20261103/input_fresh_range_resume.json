@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ab-b-checkpoint-2010.tar.zst.part-015",
+    "received_before": 415592448,
+    "received_after": 415592448,
+    "expected_bytes": 536870912,
+    "returncode": 28,
+    "error": "curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 120 seconds\n",
+    "at_utc": "2026-11-03T10:16:01.181953+00:00",
+    "transport": "autodl_academic_only"
+  },
+  {
+    "name": "ab-b-checkpoint-2010.tar.zst.part-016",
+    "received_before": 536853810,
+    "received_after": 536853810,
+    "expected_bytes": 536870912,
+    "returncode": 28,
+    "error": "curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 120 seconds\n",
+    "at_utc": "2026-11-03T10:16:00.361473+00:00",
+    "transport": "autodl_academic_only"
+  },
+  {
+    "name": "ab-b-checkpoint-2010.tar.zst.part-017",
+    "received_before": 212729137,
+    "received_after": 212729137,
+    "expected_bytes": 536870912,
+    "returncode": 28,
+    "error": "curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 120 seconds\n",
+    "at_utc": "2026-11-03T10:18:10.133467+00:00",
+    "transport": "autodl_academic_only"
+  },
+  {
+    "name": "v2-training-data.tar.zst.part-000",
+    "received_before": 402947381,
+    "received_after": 402947381,
+    "expected_bytes": 536870912,
+    "returncode": 28,
+    "error": "curl: (28) Operation too slow. Less than 1 bytes/sec transferred the last 120 seconds\n",
+    "at_utc": "2026-11-03T10:18:09.043736+00:00",
+    "transport": "autodl_academic_only"
+  }
+]

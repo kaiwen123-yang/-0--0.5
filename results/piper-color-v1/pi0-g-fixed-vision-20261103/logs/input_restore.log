@@ -51,3 +51,8 @@ Traceback (most recent call last):
   File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
     raise CalledProcessError(retcode, process.args,
 subprocess.CalledProcessError: Command '['gh', 'release', 'download', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--pattern', 'ab-b-checkpoint-2010.tar.zst.part-012', '--dir', '/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010', '--clobber']' returned non-zero exit status 1.
+unexpected EOF
+Get "https://api.github.com/repos/kaiwen123-yang/-0--0.5/releases/tags/pi-complete-backup-20261101": net/http: TLS handshake timeout
+unexpected EOF
+unexpected EOF
+unexpected EOF
