@@ -1,6 +1,795 @@
 {
-  "at_utc": "2026-11-03T12:11:45.552688+00:00",
+  "at_utc": "2026-11-03T12:22:21.999483+00:00",
   "assets": [
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0000-part-000",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0000-part-001",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0000-part-002",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0000-part-003",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0000-part-004",
+      "status": "queued",
+      "bytes": 156186927,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0001-part-000",
+      "status": "queued",
+      "bytes": 34938169,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0c479b5c16a3c2aa99f4f717720c1034"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0002-part-000",
+      "status": "queued",
+      "bytes": 26202457,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/31878160f126ef8419af079425d7f9cf"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0003-part-000",
+      "status": "queued",
+      "bytes": 29653352,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/47e609935334d0bccfd2e03494dc1c1e"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0004-part-000",
+      "status": "queued",
+      "bytes": 27263726,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/4f56a27fdc83e673018524dab1742bc2"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0005-part-000",
+      "status": "queued",
+      "bytes": 59005774,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/5548c6130e81836ab8eb5c11972c00df"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0006-part-000",
+      "status": "queued",
+      "bytes": 16020730,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/562ef24985f3c152cb8eeda1de07797a"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0007-part-000",
+      "status": "queued",
+      "bytes": 235749899,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/7cafda99649988a7be0f28bb2354c77d"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0008-part-000",
+      "status": "queued",
+      "bytes": 59053906,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/82caa22a4d51fe126f73ca3abe21f705"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0009-part-000",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/88ced62cdf7d03b53cee6b706558212f"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0009-part-001",
+      "status": "queued",
+      "bytes": 263282066,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/88ced62cdf7d03b53cee6b706558212f"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0010-part-000",
+      "status": "queued",
+      "bytes": 17470165,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/9753e91da9ce9a45db973dc44ad1aa55"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-000",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-001",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-002",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-003",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-004",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-005",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-006",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-007",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-008",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-009",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0011-part-010",
+      "status": "queued",
+      "bytes": 37608125,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/b9c48dc5d4c520655824fe169c046430"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0012-part-000",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/cb71a8e93466833bbe7edeb667f1774b"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0012-part-001",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/cb71a8e93466833bbe7edeb667f1774b"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0012-part-002",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/cb71a8e93466833bbe7edeb667f1774b"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0012-part-003",
+      "status": "queued",
+      "bytes": 140726079,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/cb71a8e93466833bbe7edeb667f1774b"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0013-part-000",
+      "status": "queued",
+      "bytes": 29712454,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/e2fa6648ae595118a33a0eb76b210d9d"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0014-part-000",
+      "status": "queued",
+      "bytes": 118440586,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/e4028187987aa893debf34c8b8b135e3"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0015-part-000",
+      "status": "queued",
+      "bytes": 34939808,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/e72b22d536308cacecf9b780009a14f8"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0016-part-000",
+      "status": "queued",
+      "bytes": 14747416,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/f49fabcbdeae0e41700b0005d920a065"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0017-part-000",
+      "status": "queued",
+      "bytes": 17469317,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/f8eea048b30aaf7a1268cfec7e09d6de"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-000",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-001",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-002",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-003",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-004",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-005",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-006",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-007",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0018-part-008",
+      "status": "queued",
+      "bytes": 262405835,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/206aec48e61ca3a4f51033d93b098afa"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0019-part-000",
+      "status": "queued",
+      "bytes": 203227535,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/9e60714e6633eab528f94042b3905f3c"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0020-part-000",
+      "status": "queued",
+      "bytes": 268435456,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/a08eb2890601dc50504525c2a8d7b908"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-file-0020-part-001",
+      "status": "queued",
+      "bytes": 239557307,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/a08eb2890601dc50504525c2a8d7b908"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-checkpoint",
+      "name": "g500-checkpoint-records-0021.tar",
+      "status": "queued",
+      "bytes": 9506707,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/_CHECKPOINT_METADATA",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/assets/piper_h_color_v1/norm_stats.json",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/_METADATA",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/_sharding",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/array_metadatas/process_0",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/d/ff4eb10af14bf46138adc5a750c34749",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/manifest.ocdbt",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/033bac4ced929557edfcd9b562702fb1",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/5b418165dc73fa3a585297650216c817",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/a33be932d5ab868440b31023a47c2825",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/bfa2185d999442c581c555aca6221a66",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/da64c1246dd53f4e2e8a85e385e27a0c",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/manifest.ocdbt",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/resume.json",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/_METADATA",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/_sharding",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/array_metadatas/process_0",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/d/c4446f161e2df8139b15d7bbecdd163f",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/manifest.ocdbt",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/223d387da4dc99f8d7f34f117d5fd0d0",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/42e26b04b050bbf9050178b38d7cccf0",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/45f1476a7c010361e7f8b52da04cd506",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/82d55437d4687ef23723dd3eec17da01",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/84a9bf771a9f24988dc65d045c14bc21",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/d/e2c8736e7e1723cdd782f22b0584b055",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/train_state/ocdbt.process_0/manifest.ocdbt"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-sampler",
+      "name": "g500-sampler-records-0000.tar",
+      "status": "queued",
+      "bytes": 16128,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/sample_order.npy"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-evaluation-G_500",
+      "name": "g500-evaluation-G_500-records-0000.tar",
+      "status": "queued",
+      "bytes": 67079092,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_blue_seed42/attempt000_seed42/layout_00100_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_blue_seed42/attempt000_seed42/layout_00100_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_blue_seed43/attempt000_seed43/layout_00100_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_blue_seed43/attempt000_seed43/layout_00100_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_green_seed42/attempt000_seed42/layout_00100_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_green_seed42/attempt000_seed42/layout_00100_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_green_seed43/attempt000_seed43/layout_00100_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_green_seed43/attempt000_seed43/layout_00100_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_red_seed42/attempt000_seed42/layout_00100_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_red_seed42/attempt000_seed42/layout_00100_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_red_seed43/attempt000_seed43/layout_00100_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00100_red_seed43/attempt000_seed43/layout_00100_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_green_seed42/attempt000_seed42/layout_00101_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_green_seed42/attempt000_seed42/layout_00101_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_green_seed43/attempt000_seed43/layout_00101_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_green_seed43/attempt000_seed43/layout_00101_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_red_seed42/attempt000_seed42/layout_00101_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_red_seed42/attempt000_seed42/layout_00101_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_red_seed43/attempt000_seed43/layout_00101_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00101_red_seed43/attempt000_seed43/layout_00101_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_blue_seed42/attempt000_seed42/layout_00102_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_blue_seed42/attempt000_seed42/layout_00102_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_blue_seed43/attempt000_seed43/layout_00102_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_green_seed42/attempt000_seed42/layout_00102_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_green_seed42/attempt000_seed42/layout_00102_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_green_seed43/attempt000_seed43/layout_00102_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00102_green_seed43/attempt000_seed43/layout_00102_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_green_seed42/attempt000_seed42/layout_00103_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_green_seed42/attempt000_seed42/layout_00103_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_green_seed43/attempt000_seed43/layout_00103_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_green_seed43/attempt000_seed43/layout_00103_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_red_seed42/attempt000_seed42/layout_00103_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_red_seed42/attempt000_seed42/layout_00103_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_red_seed43/attempt000_seed43/layout_00103_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00103_red_seed43/attempt000_seed43/layout_00103_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00104_green_seed42/attempt000_seed42/layout_00104_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00104_green_seed42/attempt000_seed42/layout_00104_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00104_green_seed43/attempt000_seed43/layout_00104_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00104_green_seed43/attempt000_seed43/layout_00104_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00105_red_seed42/attempt000_seed42/layout_00105_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00105_red_seed42/attempt000_seed42/layout_00105_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00105_red_seed43/attempt000_seed43/layout_00105_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00106_green_seed42/attempt000_seed42/layout_00106_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00106_green_seed42/attempt000_seed42/layout_00106_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00106_green_seed43/attempt000_seed43/layout_00106_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00106_green_seed43/attempt000_seed43/layout_00106_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00107_blue_seed43/attempt000_seed43/layout_00107_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00107_blue_seed43/attempt000_seed43/layout_00107_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00109_red_seed42/attempt000_seed42/layout_00109_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00109_red_seed42/attempt000_seed42/layout_00109_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00109_red_seed43/attempt000_seed43/layout_00109_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00109_red_seed43/attempt000_seed43/layout_00109_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00110_green_seed42/attempt000_seed42/layout_00110_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00110_green_seed42/attempt000_seed42/layout_00110_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00110_green_seed43/attempt000_seed43/layout_00110_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00110_green_seed43/attempt000_seed43/layout_00110_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00113_red_seed42/attempt000_seed42/layout_00113_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00113_red_seed42/attempt000_seed42/layout_00113_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00113_red_seed43/attempt000_seed43/layout_00113_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00113_red_seed43/attempt000_seed43/layout_00113_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00114_red_seed42/attempt000_seed42/layout_00114_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00114_red_seed42/attempt000_seed42/layout_00114_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00114_red_seed43/attempt000_seed43/layout_00114_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00114_red_seed43/attempt000_seed43/layout_00114_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00115_green_seed42/attempt000_seed42/layout_00115_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00115_green_seed42/attempt000_seed42/layout_00115_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00115_green_seed43/attempt000_seed43/layout_00115_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00115_green_seed43/attempt000_seed43/layout_00115_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00122_red_seed42/attempt000_seed42/layout_00122_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00122_red_seed42/attempt000_seed42/layout_00122_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00122_red_seed43/attempt000_seed43/layout_00122_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00122_red_seed43/attempt000_seed43/layout_00122_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed42/attempt000_seed42/layout_00123_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed43/attempt000_seed43/layout_00123_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed43/attempt000_seed43/layout_00123_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00124_red_seed42/attempt000_seed42/layout_00124_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00124_red_seed42/attempt000_seed42/layout_00124_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00124_red_seed43/attempt000_seed43/layout_00124_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00124_red_seed43/attempt000_seed43/layout_00124_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00126_blue_seed42/attempt000_seed42/layout_00126_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00126_blue_seed42/attempt000_seed42/layout_00126_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00131_red_seed42/attempt000_seed42/layout_00131_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00131_red_seed42/attempt000_seed42/layout_00131_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00131_red_seed43/attempt000_seed43/layout_00131_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00131_red_seed43/attempt000_seed43/layout_00131_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00134_blue_seed42/attempt000_seed42/layout_00134_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00134_blue_seed42/attempt000_seed42/layout_00134_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00134_blue_seed43/attempt000_seed43/layout_00134_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00134_blue_seed43/attempt000_seed43/layout_00134_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed42/attempt000_seed42/layout_01000_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed42/attempt000_seed42/layout_01000_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed43/attempt000_seed43/layout_01000_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed43/attempt000_seed43/layout_01000_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed44/attempt000_seed44/layout_01000_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed44/attempt000_seed44/layout_01000_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed45/attempt000_seed45/layout_01000_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed45/attempt000_seed45/layout_01000_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed46/attempt000_seed46/layout_01000_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed46/attempt000_seed46/layout_01000_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed42/attempt000_seed42/layout_01000_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed42/attempt000_seed42/layout_01000_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed43/attempt000_seed43/layout_01000_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed43/attempt000_seed43/layout_01000_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed44/attempt000_seed44/layout_01000_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed44/attempt000_seed44/layout_01000_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed45/attempt000_seed45/layout_01000_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed45/attempt000_seed45/layout_01000_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed46/attempt000_seed46/layout_01000_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_green_seed46/attempt000_seed46/layout_01000_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed42/attempt000_seed42/layout_01000_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed42/attempt000_seed42/layout_01000_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed43/attempt000_seed43/layout_01000_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed43/attempt000_seed43/layout_01000_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed44/attempt000_seed44/layout_01000_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed44/attempt000_seed44/layout_01000_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed45/attempt000_seed45/layout_01000_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed45/attempt000_seed45/layout_01000_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed46/attempt000_seed46/layout_01000_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_red_seed46/attempt000_seed46/layout_01000_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed42/attempt000_seed42/layout_01001_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed42/attempt000_seed42/layout_01001_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed43/attempt000_seed43/layout_01001_blue.mp4"
+      ],
+      "error": null
+    },
+    {
+      "group": "g500-evaluation-G_500",
+      "name": "g500-evaluation-G_500-records-0001.tar",
+      "status": "queued",
+      "bytes": 59468875,
+      "source_paths": [
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed43/attempt000_seed43/layout_01001_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed44/attempt000_seed44/layout_01001_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed44/attempt000_seed44/layout_01001_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed45/attempt000_seed45/layout_01001_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed45/attempt000_seed45/layout_01001_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed46/attempt000_seed46/layout_01001_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_blue_seed46/attempt000_seed46/layout_01001_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed42/attempt000_seed42/layout_01001_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed42/attempt000_seed42/layout_01001_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed43/attempt000_seed43/layout_01001_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed43/attempt000_seed43/layout_01001_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed44/attempt000_seed44/layout_01001_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed44/attempt000_seed44/layout_01001_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed45/attempt000_seed45/layout_01001_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed45/attempt000_seed45/layout_01001_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed46/attempt000_seed46/layout_01001_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_green_seed46/attempt000_seed46/layout_01001_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed42/attempt000_seed42/layout_01001_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed42/attempt000_seed42/layout_01001_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed43/attempt000_seed43/layout_01001_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed43/attempt000_seed43/layout_01001_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed44/attempt000_seed44/layout_01001_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed44/attempt000_seed44/layout_01001_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed45/attempt000_seed45/layout_01001_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed45/attempt000_seed45/layout_01001_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed46/attempt000_seed46/layout_01001_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01001_red_seed46/attempt000_seed46/layout_01001_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed42/attempt000_seed42/layout_01002_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed42/attempt000_seed42/layout_01002_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed43/attempt000_seed43/layout_01002_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed43/attempt000_seed43/layout_01002_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed44/attempt000_seed44/layout_01002_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed44/attempt000_seed44/layout_01002_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed45/attempt000_seed45/layout_01002_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed45/attempt000_seed45/layout_01002_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed46/attempt000_seed46/layout_01002_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_blue_seed46/attempt000_seed46/layout_01002_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed42/attempt000_seed42/layout_01002_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed42/attempt000_seed42/layout_01002_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed43/attempt000_seed43/layout_01002_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed43/attempt000_seed43/layout_01002_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed44/attempt000_seed44/layout_01002_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed44/attempt000_seed44/layout_01002_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed45/attempt000_seed45/layout_01002_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed45/attempt000_seed45/layout_01002_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed46/attempt000_seed46/layout_01002_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_green_seed46/attempt000_seed46/layout_01002_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed42/attempt000_seed42/layout_01002_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed42/attempt000_seed42/layout_01002_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed43/attempt000_seed43/layout_01002_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed43/attempt000_seed43/layout_01002_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed44/attempt000_seed44/layout_01002_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed44/attempt000_seed44/layout_01002_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed45/attempt000_seed45/layout_01002_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed45/attempt000_seed45/layout_01002_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed46/attempt000_seed46/layout_01002_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01002_red_seed46/attempt000_seed46/layout_01002_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed42/attempt000_seed42/layout_01003_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed42/attempt000_seed42/layout_01003_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed43/attempt000_seed43/layout_01003_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed43/attempt000_seed43/layout_01003_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed44/attempt000_seed44/layout_01003_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed44/attempt000_seed44/layout_01003_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed45/attempt000_seed45/layout_01003_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed45/attempt000_seed45/layout_01003_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed46/attempt000_seed46/layout_01003_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_blue_seed46/attempt000_seed46/layout_01003_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed42/attempt000_seed42/layout_01003_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed42/attempt000_seed42/layout_01003_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed43/attempt000_seed43/layout_01003_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed43/attempt000_seed43/layout_01003_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed44/attempt000_seed44/layout_01003_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed44/attempt000_seed44/layout_01003_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed45/attempt000_seed45/layout_01003_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed45/attempt000_seed45/layout_01003_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed46/attempt000_seed46/layout_01003_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_green_seed46/attempt000_seed46/layout_01003_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed42/attempt000_seed42/layout_01003_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed42/attempt000_seed42/layout_01003_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed43/attempt000_seed43/layout_01003_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed43/attempt000_seed43/layout_01003_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed44/attempt000_seed44/layout_01003_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed44/attempt000_seed44/layout_01003_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed45/attempt000_seed45/layout_01003_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed45/attempt000_seed45/layout_01003_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed46/attempt000_seed46/layout_01003_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01003_red_seed46/attempt000_seed46/layout_01003_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed42/attempt000_seed42/layout_01004_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed42/attempt000_seed42/layout_01004_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed43/attempt000_seed43/layout_01004_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed43/attempt000_seed43/layout_01004_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed44/attempt000_seed44/layout_01004_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed44/attempt000_seed44/layout_01004_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed45/attempt000_seed45/layout_01004_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed45/attempt000_seed45/layout_01004_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed46/attempt000_seed46/layout_01004_blue.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_blue_seed46/attempt000_seed46/layout_01004_blue.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed42/attempt000_seed42/layout_01004_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed42/attempt000_seed42/layout_01004_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed43/attempt000_seed43/layout_01004_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed43/attempt000_seed43/layout_01004_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed44/attempt000_seed44/layout_01004_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed44/attempt000_seed44/layout_01004_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed45/attempt000_seed45/layout_01004_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed45/attempt000_seed45/layout_01004_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed46/attempt000_seed46/layout_01004_green.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_green_seed46/attempt000_seed46/layout_01004_green.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed42/attempt000_seed42/layout_01004_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed42/attempt000_seed42/layout_01004_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed43/attempt000_seed43/layout_01004_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed43/attempt000_seed43/layout_01004_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed44/attempt000_seed44/layout_01004_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed44/attempt000_seed44/layout_01004_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed45/attempt000_seed45/layout_01004_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed45/attempt000_seed45/layout_01004_red.npz",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed46/attempt000_seed46/layout_01004_red.mp4",
+        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01004_red_seed46/attempt000_seed46/layout_01004_red.npz"
+      ],
+      "error": null
+    },
     {
       "group": "ab-b-checkpoint-1000",
       "name": "progressive-ab-b-checkpoint-1000-35029feb8cfd6555-87c028dca4b44408dd013779067eb0f2.part-001",
