@@ -1,11 +1,11 @@
 {
-  "at_utc": "2026-11-02T21:38:44.312508+00:00",
+  "at_utc": "2026-11-03T08:11:40.067132+00:00",
   "assets": [
     {
       "name": "progressive-ab-a-checkpoint-2010-f134ef3a69509840-0b4f75520901a13d5673e1b0ca7d8bbd",
       "status": "pending",
       "source_bytes": 1823651596,
-      "attempts": 1,
+      "attempts": 3,
       "reason": "GitHub transport/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
     },
     {

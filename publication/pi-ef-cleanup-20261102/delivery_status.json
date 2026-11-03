@@ -1,5 +1,30 @@
 {
-  "at_utc": "2026-11-03T08:00:20.533979+00:00",
-  "status": "switching_to_academic_only",
-  "vpn_allowed": false
+  "at_utc": "2026-11-03T08:11:40.285800+00:00",
+  "status": "finished_with_pending",
+  "upload": {
+    "at_utc": "2026-11-03T08:11:40.070943+00:00",
+    "status": "paused_academic_proxy_unavailable",
+    "current": "progressive-ab-a-checkpoint-2010-f134ef3a69509840-0b4f75520901a13d5673e1b0ca7d8bbd",
+    "pid": 146710,
+    "concurrency": 1,
+    "nice": 19,
+    "ionice": "idle",
+    "transport": "autodl_academic_only",
+    "vpn_fallback": false,
+    "pc_vpn_used": false,
+    "rate_limit_mib_s": 4,
+    "reused_groups": 8,
+    "reused_assets": 55,
+    "reused_source_files": 3493,
+    "reused_source_bytes": 47084260578,
+    "planned_new_assets": 616,
+    "uploaded_new_assets": 371,
+    "uploaded_new_bytes": 97543136909,
+    "pending_assets": 245,
+    "unresolved_groups": 0,
+    "source_deleted": false,
+    "experiment_status": "independent; see campaign run.json"
+  },
+  "experiment_complete": true,
+  "freed_bytes": 137101073101
 }

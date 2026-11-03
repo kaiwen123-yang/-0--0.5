@@ -24890,8 +24890,17 @@
       "parts": 1,
       "group": "ab-a-checkpoint-2010",
       "status": "pending",
-      "attempts": 1,
-      "error": "GitHub transport/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])"
+      "attempts": 3,
+      "error": "GitHub transport/API unavailable; pending: CalledProcessError(1, ['gh', 'release', 'view', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--json', 'databaseId,assets'])",
+      "attempt_history": [
+        {
+          "at_utc": "2026-11-03T08:01:22.615443+00:00",
+          "event": "vpn_upload_cancelled_by_user",
+          "name": "progressive-ab-a-checkpoint-2010-f134ef3a69509840-0b4f75520901a13d5673e1b0ca7d8bbd",
+          "previous_attempts": 2,
+          "remote_name_absent": true
+        }
+      ]
     },
     {
       "name": "progressive-ab-a-checkpoint-2010-f138e77283a09327-d057cd5e9d795fbf2c9fb49a3336f0e9",
