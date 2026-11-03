@@ -1,9 +1,9 @@
 {
   "started_at": "2026-11-03T09:08:53.890539+00:00",
   "completed": false,
-  "new_complete_tasks": 0,
-  "stage": "G_500",
-  "at_utc": "2026-11-03T12:00:14.010274+00:00",
+  "new_complete_tasks": 123,
+  "stage": "G_500_complete",
+  "at_utc": "2026-11-03T12:22:14.758948+00:00",
   "real_training_updates": 500,
   "error": null,
   "selected_candidate": "B",
@@ -12,8 +12,7 @@
   "history_upload": "separate low-priority queue; see transfer progress",
   "historical_upload_pid": 161599,
   "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/logs/G_500.log",
-  "child_pid": 162453,
+  "child_pid": null,
   "optimizer_updates": 4520,
-  "service_pid": 162275,
-  "retention_policy": "publication/pi0-g-fixed-vision-20261103/retention_policy.json"
+  "service_pid": 162275
 }
