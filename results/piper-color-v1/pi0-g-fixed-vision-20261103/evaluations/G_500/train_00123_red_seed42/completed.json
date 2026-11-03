@@ -1,0 +1,22 @@
+{
+  "split": "train",
+  "layout": 123,
+  "target": "red",
+  "base_seed": 42,
+  "success": false,
+  "error": null,
+  "slot": "back",
+  "failure_stage": "stability_or_distractor",
+  "frames": 420,
+  "first_close_frame": 164,
+  "close_time_s": 8.2,
+  "close_target_xy_mm": 14.023812689824561,
+  "target_lifted_5cm": true,
+  "non_target_lifted_5cm": false,
+  "correct_in_box": true,
+  "gripper_open": true,
+  "over_box_frames": 97,
+  "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed42/attempt000_seed42/layout_00123_red.json",
+  "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed42/attempt000_seed42/layout_00123_red.npz",
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/train_00123_red_seed42/attempt000_seed42/layout_00123_red.mp4"
+}
