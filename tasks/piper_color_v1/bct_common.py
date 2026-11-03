@@ -47,13 +47,8 @@ def gh_env():
     env = dict(os.environ)
     for key in ('http_proxy', 'https_proxy', 'all_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY'):
         env.pop(key, None)
-    # User-authorized fallback is server-local Mihomo only; never a PC tunnel.
-    if os.environ.get('PI_GITHUB_TRANSPORT') == 'server_clash':
-        proxy = 'http://127.0.0.1:7890'
-        env.update({key: proxy for key in ('http_proxy','https_proxy','all_proxy','HTTP_PROXY','HTTPS_PROXY','ALL_PROXY')})
-        env['NO_PROXY'] = env['no_proxy'] = 'localhost,127.0.0.1'
-        return env
-    # Academic acceleration remains the first transport until the running batch fails.
+    # Latest user instruction: official academic acceleration only; VPN permission revoked.
+    env.pop('PI_GITHUB_TRANSPORT', None)
     raw = subprocess.check_output(['bash', '-c', 'source /etc/network_turbo >/dev/null; env -0'], env=env, timeout=10)
     selected = {}
     for item in raw.split(b'\0'):

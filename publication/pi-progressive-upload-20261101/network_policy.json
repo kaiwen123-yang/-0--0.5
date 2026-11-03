@@ -1,11 +1,13 @@
 {
-  "at_utc": "2026-11-02T16:01:21.227646+00:00",
-  "authorization": "User allows D57 server VPN after another academic transport interruption",
-  "primary": "autodl_academic",
-  "fallback": "d57_server_clash",
-  "proxy_endpoint": "http://127.0.0.1:7890",
+  "at_utc": "2026-11-03T07:59:29.272468+00:00",
+  "authorization": "User revoked VPN use; official AutoDL academic acceleration only",
+  "transport": "autodl_academic_only",
+  "server_vpn_allowed": false,
   "pc_vpn_allowed": false,
-  "scope": "GitHub upload, remote metadata and git child processes only",
-  "attempts_per_asset_on_fallback": 3,
-  "existing_academic_batch_pid": 107475
+  "automatic_vpn_fallback": false,
+  "stopped_transfer_pids": [
+    146161,
+    146163,
+    146183
+  ]
 }

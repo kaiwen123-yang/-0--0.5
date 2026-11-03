@@ -103,3 +103,9 @@
 - User now permits the existing D57 server-local VPN after another academic acceleration interruption. This overrides earlier academic-only/VPN-prohibited transfer instructions for this project.
 - Keep the current academic batch running. On its next transport failure, resume the existing queue using D57 Mihomo at 127.0.0.1:7890 in GitHub child processes only. Do not use the PC reverse tunnel or alter other projects/global proxy settings.
 - Preserve receipts and failed attempts, reconcile remote name/state/size, and keep bounded retries. No new experiments or training are authorized by this network change.
+
+
+## 2026-11-03 latest network instruction: VPN revoked
+- User explicitly revoked all VPN use for this project. This overrides the 2026-11-02 server VPN fallback authorization.
+- Only official AutoDL academic acceleration may be used for uploads, metadata queries, and Git pushes. Slow transfer is acceptable. Both server VPN and PC VPN/tunnel are prohibited; automatic VPN fallback is disabled.
+- The VPN transfer batch was stopped. Resume the same queue through academic acceleration after reconciling remote names/states/sizes. Network failure leaves pending items and preserves originals. Do not restart experiments.
