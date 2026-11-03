@@ -1,25 +1,15 @@
 {
-  "at_utc": "2026-11-03T11:55:05.224215+00:00",
+  "at_utc": "2026-11-03T11:59:41.612050+00:00",
   "assets": [
     {
       "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-35029feb8cfd6555-87c028dca4b44408dd013779067eb0f2.part-000",
+      "name": "progressive-ab-b-checkpoint-1000-35029feb8cfd6555-87c028dca4b44408dd013779067eb0f2.part-001",
       "status": "pending",
       "bytes": 1073741824,
       "source_paths": [
         "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/87c028dca4b44408dd013779067eb0f2"
       ],
       "error": "GitHub upload exit=1; see transport.log"
-    },
-    {
-      "group": "ab-b-checkpoint-1000",
-      "name": "progressive-ab-b-checkpoint-1000-35029feb8cfd6555-87c028dca4b44408dd013779067eb0f2.part-001",
-      "status": "queued",
-      "bytes": 1073741824,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/1000/params/ocdbt.process_0/d/87c028dca4b44408dd013779067eb0f2"
-      ],
-      "error": null
     },
     {
       "group": "ab-b-checkpoint-1000",

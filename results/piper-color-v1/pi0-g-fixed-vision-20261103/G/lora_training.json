@@ -1,0 +1,26 @@
+{
+  "group": "G",
+  "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+  "local_updates": 0,
+  "optimizer_updates": 4020,
+  "full_optimizer_restored": true,
+  "optimizer_scalar_counters": [
+    4020,
+    4020
+  ],
+  "train_rng_key_data": [
+    1832780943,
+    270669613
+  ],
+  "gradient_parameters": 468039440,
+  "effective_update_parameters": 53235744,
+  "fixed_parameters": 414803696,
+  "fixed_module": "PaliGemma/img/.*",
+  "intervention": "zero final updates after tx.update, before optax.apply_updates",
+  "visual_gradients_and_optimizer_buffers": "original E rule",
+  "learning_rate": 1e-06,
+  "schedule_decay_steps": 5020,
+  "segment_end_local": 500,
+  "segment_complete": false,
+  "initialization_seconds": 9.152727304026484
+}
