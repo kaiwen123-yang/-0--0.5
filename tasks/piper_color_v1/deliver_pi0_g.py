@@ -67,63 +67,41 @@ def sync_index(mapping):
         g_assets=dict(total=len(g_jobs),uploaded=sum(j["status"]=="uploaded" for j in g_jobs)),
         historical_assets=dict(total=len(mapping["jobs"])-len(g_jobs),
             uploaded=sum(j["status"]=="uploaded" and not j["group"].startswith("g500-") for j in mapping["jobs"])),
+        retention_policy="retention_policy.json",automatic_research_product_deletion=False,
+        cleanup_scope="inactive temporary transfer copies only; all training/resumption/reproduction products retained",
+        prior_deletions_recorded_before_current_policy=True,
+        retained_groups=[p.stem.removeprefix("retained-") for p in LEDGER.glob("retained-*.json")],
         pending_assets=len(missing),pending_manifest=str((LEDGER/"pending.json").relative_to(ROOT)),
         deleted_groups=[dict(group=r["group"],files=len(r["deleted_paths"]),bytes=r["freed_bytes"]) for r in receipts if r["status"]=="deleted"],
         freed_bytes=sum(r["freed_bytes"] for r in receipts if r["status"]=="deleted")))
 
 def cleanup_group(group,jobs,assets,mapping):
-    record=LEDGER/("cleanup-"+group+".json")
-    if record.exists() and read(record)["status"]=="deleted":
-        return
+    # Latest user instruction retains all research products needed for training/continuation.
     if not all(j["status"]=="uploaded" for j in jobs):
         return
-    if any(j["name"] not in assets or assets[j["name"]]["size"]!=j["bytes"] or assets[j["name"]]["state"]!="uploaded" for j in jobs):
+    prior=LEDGER/("cleanup-"+group+".json")
+    if prior.exists() and read(prior).get("status")=="deleted":
         return
     members={m["source"]:m for j in jobs for m in j["members"]}
-    paths=[Path(name) for name in members]
-    if not all(p.resolve().is_relative_to(ROOT/"outputs") or p.resolve().is_relative_to(ROOT/"results") for p in paths):
+    retained=[m for name,m in members.items() if Path(name).is_file()]
+    if not retained:
         return
-    existing=[p for p in paths if p.is_file()]
-    if not existing:
-        return
-    receipt=dict(group=group,status="published_ready_to_delete",at_utc=now(),release_tag=upload.TAG,
-        assets=[dict(name=j["name"],size=j["bytes"],state=assets[j["name"]]["state"]) for j in jobs],
-        members=list(members.values()),deleted_paths=[],freed_bytes=0)
-    save(record,receipt);sync_index(mapping)
-    if not publish(group+"-indexed"):
-        return
-    removed=[]
-    for path in existing:
-        removed.append(dict(path=str(path),bytes=path.stat().st_size))
-        path.unlink()
-    receipt.update(status="deleted",deleted_paths=removed,freed_bytes=sum(p["bytes"] for p in removed),deleted_at=now())
-    save(record,receipt);sync_index(mapping)
-    publish(group+"-deleted")
-    print("GROUP_DELETED",group,receipt["freed_bytes"],flush=True)
+    save(LEDGER/("retained-"+group+".json"),dict(group=group,status="retained_for_training_and_resumption",
+        at_utc=now(),release_tag=upload.TAG,members=retained,
+        assets=[dict(name=j["name"],bytes=j["bytes"],status=j["status"]) for j in jobs],
+        policy="retention_policy.json",deleted_paths=[],freed_bytes=0))
+    sync_index(mapping)
+    publish(group+"-published-retained")
+    print("GROUP_RETAINED",group,len(retained),flush=True)
 
 def cleanup_restored(mapping):
-    restore=read(CAMPAIGN/"input_restore.json")
-    restore["groups"]["g-norm-copy"] = dict(source_receipt=restore["groups"]["ab-b-checkpoint-2010"]["source_receipt"],
-        members=[dict(path=str(NORM/"norm_stats.json"),bytes=(NORM/"norm_stats.json").stat().st_size)] if (NORM/"norm_stats.json").exists() else [])
-    for group,entry in restore["groups"].items():
-        record=LEDGER/("cleanup-restored-"+group+".json")
-        if record.exists() and read(record)["status"]=="deleted":
-            continue
-        receipt=dict(group="restored-"+group,status="published_ready_to_delete",
-            source_release=upload.TAG,source_receipt=entry["source_receipt"],members=entry["members"],
-            active_dependencies=False,deleted_paths=[],freed_bytes=0,at_utc=now())
-        save(record,receipt);sync_index(mapping)
-        if not publish("restored-"+group+"-indexed"):
-            continue
-        removed=[]
-        for member in entry["members"]:
-            path=Path(member["path"])
-            if path.is_file():
-                removed.append(dict(path=str(path),bytes=path.stat().st_size))
-                path.unlink()
-        receipt.update(status="deleted",deleted_paths=removed,freed_bytes=sum(p["bytes"] for p in removed),deleted_at=now())
-        save(record,receipt);sync_index(mapping)
-        publish("restored-"+group+"-deleted")
+    save(LEDGER/"retained-restored-inputs.json",dict(at_utc=now(),
+        status="retained_for_training_and_resumption",policy="retention_policy.json",
+        source_member_index=str((CAMPAIGN/"input_restore.json").relative_to(ROOT)),
+        protected_paths=[str(OLD),str(ROOT/"outputs/pi0-120-demo-v2-20261101/dataset"),
+                         str(NORM),str(CHECKPOINT)],
+        deleted_paths=[],freed_bytes=0))
+    sync_index(mapping)
 
 def deliver(history_only=False):
     LEDGER.mkdir(parents=True,exist_ok=True)

@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-11-03T12:08:05.797556+00:00",
+  "source": "User correction: retain everything related to training and continued training; remove only useless items",
+  "preserve": [
+    "all complete/root/continuation checkpoints",
+    "optimizer and RNG state",
+    "normalization and sampling order",
+    "training datasets and metadata",
+    "training/evaluation logs and results",
+    "trajectories and videos",
+    "source, Git, environments, runtime/compilation caches, shared base weights"
+  ],
+  "cleanup_only": [
+    "inactive transfer staging or redundant temporary transfer copies created by this task"
+  ],
+  "automatic_research_product_deletion": false,
+  "scope": "pi project; overrides earlier upload-then-delete instructions",
+  "foreground": "may end after stable operation; background campaign continues"
+}

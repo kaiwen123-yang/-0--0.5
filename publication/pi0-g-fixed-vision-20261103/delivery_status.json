@@ -1,7 +1,7 @@
 {
-  "at_utc": "2026-11-03T11:59:41.617763+00:00",
+  "at_utc": "2026-11-03T12:11:45.559173+00:00",
   "experiment_complete": false,
-  "experiment_stage": "train_G_500",
+  "experiment_stage": "G_500",
   "transport": "autodl_academic_only",
   "g_assets": {
     "total": 0,
@@ -11,6 +11,13 @@
     "total": 616,
     "uploaded": 380
   },
+  "retention_policy": "retention_policy.json",
+  "automatic_research_product_deletion": false,
+  "cleanup_scope": "inactive temporary transfer copies only; all training/resumption/reproduction products retained",
+  "prior_deletions_recorded_before_current_policy": true,
+  "retained_groups": [
+    "restored-inputs"
+  ],
   "pending_assets": 236,
   "pending_manifest": "publication/pi0-g-fixed-vision-20261103/pending.json",
   "deleted_groups": [

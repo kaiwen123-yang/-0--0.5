@@ -78,8 +78,8 @@ def report():
         lines.append(split+"："+str(counts))
     lines += ["", "## 任务与交付", "",
         f"真实训练500次；新增自主完整任务{status['new_complete_tasks']}次；E/F训练与B/E/F开发评测未重复。",
-        "源码、配置、正常日志、紧凑结果与本报告入Git；完整检查点及新轨迹/视频入Release。发布、删除与pending范围见publication/pi0-g-fixed-vision-20261103/delivery_status.json。",
-        "原B/v2资产复用已发布Release，恢复副本无活动依赖后清理，不重复上传。"]
+        "源码、配置、正常日志、紧凑结果与本报告入Git；完整检查点及新轨迹/视频入Release。发布、保留与pending范围见publication/pi0-g-fixed-vision-20261103/delivery_status.json。",
+        "按用户最新更正，B/v2恢复副本、G完整检查点、optimizer/RNG/norm/采样与训练数据、轨迹视频和相关记录全部保留；只清理无活动依赖的传输临时副本。B/v2已有Release资产不重复上传。"]
     (CAMPAIGN/"final_report_zh.md").write_text("\n".join(lines)+"\n")
     return paired
 

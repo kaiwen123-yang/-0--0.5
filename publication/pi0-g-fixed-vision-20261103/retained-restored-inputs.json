@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-11-03T12:11:45.551621+00:00",
+  "status": "retained_for_training_and_resumption",
+  "policy": "retention_policy.json",
+  "source_member_index": "outputs/pi0-g-fixed-vision-20261103/input_restore.json",
+  "protected_paths": [
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-120-demo-v2-20261101/dataset",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/assets/piper_h_color_v1",
+    "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500"
+  ],
+  "deleted_paths": [],
+  "freed_bytes": 0
+}

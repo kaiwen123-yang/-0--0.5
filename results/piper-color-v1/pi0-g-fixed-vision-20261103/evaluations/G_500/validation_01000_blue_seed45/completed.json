@@ -1,0 +1,22 @@
+{
+  "split": "validation",
+  "layout": 1000,
+  "target": "blue",
+  "base_seed": 45,
+  "success": true,
+  "error": null,
+  "slot": "front_right",
+  "failure_stage": "success",
+  "frames": 225,
+  "first_close_frame": 70,
+  "close_time_s": 3.5,
+  "close_target_xy_mm": 6.351100865937698,
+  "target_lifted_5cm": true,
+  "non_target_lifted_5cm": false,
+  "correct_in_box": true,
+  "gripper_open": true,
+  "over_box_frames": 89,
+  "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed45/attempt000_seed45/layout_01000_blue.json",
+  "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed45/attempt000_seed45/layout_01000_blue.npz",
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/evaluations/G_500/validation_01000_blue_seed45/attempt000_seed45/layout_01000_blue.mp4"
+}
