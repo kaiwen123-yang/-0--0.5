@@ -7,6 +7,16 @@ from run_pi0_ef import partition
 ENTRY = ROOT / "scripts/run_pi0_g_d57.sh"
 
 def prepare():
+    input_ledger=ROOT/"publication"/TASK/"input_pending.json"
+    record=read(input_ledger)
+    record.update(status="restored",missing_bytes=0,received_bytes=sum(a["expected_bytes"] for g in record["groups"] for a in g["assets"]),at_utc=now(),temporary_volumes_deleted=True)
+    for group in record["groups"]:
+        group.update(complete_parts=group["total_parts"],expanded=True,temporary_volumes_deleted=True)
+        for asset in group["assets"]:
+            asset.update(received_bytes=asset["expected_bytes"],missing_bytes=0,status="restored_and_temporary_volume_removed")
+    for name in ("new_training_updates","new_complete_tasks","G_checkpoint_created","G_results_available","new_layout_test_performed"):
+        record.pop(name,None)
+    save(input_ledger,record)
     for name in ("node_roster.json", "new_layout_roster.json"):
         shutil.copyfile(PREVIOUS/name, CAMPAIGN/name)
     (CAMPAIGN/"evaluation_layouts").mkdir(exist_ok=True)
@@ -33,6 +43,10 @@ def prepare():
 def main():
     runfile=CAMPAIGN/"run.json"
     status=read(runfile) if runfile.exists() else dict(started_at=now(),completed=False,new_complete_tasks=0)
+    if status.get("completed"):
+        from deliver_pi0_g import deliver
+        deliver()
+        return
     def update(**kw):
         status.update(kw,at_utc=now())
         save(runfile,status)
@@ -88,8 +102,11 @@ def main():
                 str(ROOT/"tasks/piper_color_v1/deliver_pi0_g.py"),"--history-only"],
                 cwd=ROOT,stdout=upload_log,stderr=subprocess.STDOUT,start_new_session=True)
             upload_log.close()
-            update(historical_upload_pid=historical.pid)
+            update(historical_upload_pid=historical.pid,history_upload="separate low-priority queue; see transfer progress")
             execute("train",label="train_G_500",run=CAMPAIGN/"G")
+        training=read(CAMPAIGN/"G/lora_training.json")
+        update(real_training_updates=training["local_updates"],optimizer_updates=training["optimizer_updates"],
+               selection_reason="G500 evaluation is pending; B remains the current best")
         publish("G500-checkpoint")
         with service(CHECKPOINT,"G500"):
             g=evaluate("G_500",CAMPAIGN/"node_roster.json",CHECKPOINT)

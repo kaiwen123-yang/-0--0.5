@@ -1,0 +1,65 @@
+REQUIRED_VOLUMEREQUIRED_VOLUME  ab-b-checkpoint-2010.tar.zst.part-017 ab-b-checkpoint-2010.tar.zst.part-015 preserved_partialpreserved_partial 415592448 
+212729137
+VOLUME_RESULT {"name": "ab-b-checkpoint-2010.tar.zst.part-017", "status": "downloaded", "bytes": 536870912, "at_utc": "2026-11-03T10:44:40.877546+00:00"}
+REQUIRED_VOLUME v2-training-data.tar.zst.part-000 preserved_partial 402947381
+VOLUME_RESULT {"name": "v2-training-data.tar.zst.part-000", "status": "pending", "bytes": 199505358, "expected": 536870912, "returncode": 1, "error": "unexpected EOF", "partial_preserved": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/v2-training-data/v2-training-data.tar.zst.part-000", "at_utc": "2026-11-03T10:48:33.214764+00:00"}
+REQUIRED_VOLUME v2-training-data.tar.zst.part-001 preserved_partial 328810496
+VOLUME_RESULT {"name": "ab-b-checkpoint-2010.tar.zst.part-015", "status": "pending", "bytes": 500137984, "expected": 536870912, "returncode": 1, "error": "unexpected EOF", "partial_preserved": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010/ab-b-checkpoint-2010.tar.zst.part-015", "at_utc": "2026-11-03T10:48:37.176085+00:00"}
+REQUIRED_VOLUME ab-b-checkpoint-2010.tar.zst.part-016 preserved_partial 536853810
+VOLUME_RESULT {"name": "v2-training-data.tar.zst.part-001", "status": "pending", "bytes": 59585681, "expected": 536870912, "returncode": 1, "error": "unexpected EOF", "partial_preserved": "/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/v2-training-data/v2-training-data.tar.zst.part-001", "at_utc": "2026-11-03T10:51:57.795463+00:00"}
+VOLUME_RESULT {"name": "ab-b-checkpoint-2010.tar.zst.part-016", "status": "downloaded", "bytes": 536870912, "at_utc": "2026-11-03T10:56:07.582006+00:00"}
+INPUTS_PENDING
+FETCH_REQUIRED_BYTES ab-b-checkpoint-2010.tar.zst.part-015 500137984 536870911
+FETCH_REQUIRED_BYTES v2-training-data.tar.zst.part-000 402947381 536870911
+FETCH_REQUIRED_BYTES v2-training-data.tar.zst.part-001 328810496 536870911
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/fetch_inputs_pi0_g.py", line 84, in <module>
+    main()
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/fetch_inputs_pi0_g.py", line 67, in main
+    records.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/fetch_inputs_pi0_g.py", line 55, in fetch
+    with tail.open("rb") as source,part.open("ab") as destination:
+         ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010.tar.zst.part-015.tail'
+FETCH_REMAINING_INPUT ab-b-checkpoint-2010.tar.zst.part-015 34341583 bytes 33 ranges
+FETCH_REMAINING_INPUT v2-training-data.tar.zst.part-000 133923531 bytes 128 ranges
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 16 128 16777216
+RANGE_PROGRESS ab-b-checkpoint-2010.tar.zst.part-015 16 33 16777216
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 32 128 33554432
+RANGE_PROGRESS ab-b-checkpoint-2010.tar.zst.part-015 32 33 33293007
+FETCH_REMAINING_INPUT v2-training-data.tar.zst.part-001 208060416 bytes 199 ranges
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 48 128 50331648
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 16 199 16777216
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 64 128 67108864
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 32 199 33554432
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 80 128 83886080
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 48 199 50331648
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 96 128 100663296
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 64 199 67108864
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 112 128 117440512
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 80 199 83886080
+RANGE_PROGRESS v2-training-data.tar.zst.part-000 128 128 133923531
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 96 199 100663296
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 112 199 117440512
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 128 199 134217728
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 144 199 150994944
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 160 199 167772160
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 176 199 184549376
+RANGE_PROGRESS v2-training-data.tar.zst.part-001 192 199 201326592
+DOWNLOADED v2-training-data.tar.zst.part-000 536870912
+DOWNLOADED v2-training-data.tar.zst.part-001 536870912
+DOWNLOADED v2-training-data.tar.zst.part-002 536870912
+DOWNLOADED v2-training-data.tar.zst.part-003 133567557
+RESTORED v2-training-data 482

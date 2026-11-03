@@ -6,6 +6,7 @@ from publish_pi0_g import publish
 import upload_pi_progressive as upload
 TRANSFER = ROOT / "runtime/pi-progressive-upload-20261101"
 LEDGER = ROOT / "publication" / TASK
+G_PART = 256 * 1024**2
 
 def register(mapping):
     if mapping.get("g500_registered"):
@@ -40,10 +41,10 @@ def register(mapping):
                 if size+n>64*1024**2: bundle()
                 small.append(member);size+=n
             else:
-                parts=math.ceil(n/upload.CHUNK) if n>=2*1024**3 else 1
+                parts=math.ceil(n/G_PART)
                 for part in range(parts):
-                    offset=part*upload.CHUNK if parts>1 else 0
-                    length=min(upload.CHUNK,n-offset) if parts>1 else n
+                    offset=part*G_PART if parts>1 else 0
+                    length=min(G_PART,n-offset) if parts>1 else n
                     jobs.append(dict(name=group+f"-file-{serial:04d}-part-{part:03d}",group=group,kind="raw_file_range",
                         members=[member],source_bytes=length,bytes=length,offset=offset,part=part,parts=parts,
                         status="queued",attempts=0))
@@ -146,7 +147,10 @@ def deliver(history_only=False):
     groups=collections.defaultdict(list)
     for job in mapping["jobs"]:
         groups[job["group"]].append(job)
-    for group,jobs in groups.items():
+    new_groups=[(group,jobs) for group,jobs in groups.items() if group.startswith("g500-")]
+    new_groups.sort(key=lambda item:item[0]=="g500-checkpoint")
+    previous_groups=[(group,jobs) for group,jobs in groups.items() if not group.startswith("g500-")]
+    for group,jobs in new_groups+previous_groups:
         for job in jobs:
             if history_only and read(CAMPAIGN/"run.json").get("completed"):
                 sync_index(mapping)

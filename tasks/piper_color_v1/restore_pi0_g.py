@@ -1,5 +1,5 @@
 """Restore the published B/v2 members used by G500, with bounded input transfers."""
-import concurrent.futures, fcntl, json, shutil, subprocess, tarfile, time
+import argparse, concurrent.futures, fcntl, json, shutil, subprocess, tarfile, time
 from pathlib import Path
 import zstandard
 from bct_common import ROOT, read, save, now, gh_env
@@ -9,12 +9,12 @@ STAGE = ROOT / "runtime" / (TASK + "-restore")
 REPO = "kaiwen123-yang/-0--0.5"
 TAG = "pi-complete-backup-20261101"
 
-def main():
+def main(groups=None):
     STAGE.mkdir(parents=True, exist_ok=True)
     receipt_path = RUN / "input_restore.json"
     receipt = read(receipt_path) if receipt_path.exists() else {"transport":"autodl_academic_only","groups":{}}
     env = gh_env()
-    for group in ("ab-b-checkpoint-2010", "v2-training-data"):
+    for group in groups or ("ab-b-checkpoint-2010", "v2-training-data"):
         with (STAGE/(group+".lock")).open("a") as group_lock:
             fcntl.flock(group_lock,fcntl.LOCK_EX)
             if receipt["groups"].get(group, {}).get("status") == "restored":
@@ -84,8 +84,11 @@ def main():
                 entry.update(status="pending",error=str(exc),at_utc=now())
                 save(receipt_path,receipt)
                 raise
-    receipt.update(status="ready",at_utc=now())
+    ready=all(receipt["groups"].get(g,{}).get("status")=="restored" for g in ("ab-b-checkpoint-2010","v2-training-data"))
+    receipt.update(status="ready" if ready else "restoring_inputs",at_utc=now())
     save(receipt_path,receipt)
 
 if __name__=="__main__":
-    main()
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--group",action="append",choices=("ab-b-checkpoint-2010","v2-training-data"))
+    main(parser.parse_args().group)

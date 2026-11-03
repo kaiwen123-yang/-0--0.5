@@ -1,0 +1,13 @@
+{
+  "asset": "ab-b-checkpoint-2010.tar.zst.part-015",
+  "origin_host": "releaseassetproduction.blob.core.windows.net",
+  "offset": 500137984,
+  "received_bytes": 2391345,
+  "content_range": [
+    "Content-Range: bytes 500137984-536870911/536870912"
+  ],
+  "returncode": 28,
+  "error": "curl: (28) Operation timed out after 180001 milliseconds with 2391345 out of 36732928 bytes received\n",
+  "transport": "autodl_academic_only",
+  "at_utc": "2026-11-03T11:15:54.214420+00:00"
+}

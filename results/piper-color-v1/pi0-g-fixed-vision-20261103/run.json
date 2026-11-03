@@ -2,11 +2,12 @@
   "started_at": "2026-11-03T09:08:53.890539+00:00",
   "completed": false,
   "new_complete_tasks": 0,
-  "stage": "input_restore_pending",
-  "at_utc": "2026-11-03T10:22:38.867252+00:00",
+  "stage": "inputs_restored",
+  "at_utc": "2026-11-03T11:54:58.544378+00:00",
   "real_training_updates": 0,
-  "error": "Required B/v2 input volumes remain incomplete after bounded official-academic transfer attempts",
+  "error": null,
   "selected_candidate": "B",
   "selection_reason": "Current best retained; G has not been trained or evaluated",
-  "input_pending": "publication/pi0-g-fixed-vision-20261103/input_pending.json"
+  "input_pending": "publication/pi0-g-fixed-vision-20261103/input_pending.json",
+  "history_upload": "stopped; bandwidth reserved for required B/v2 inputs"
 }
