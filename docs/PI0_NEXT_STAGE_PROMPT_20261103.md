@@ -1,0 +1,61 @@
+# Codex启动提示词：π0 G固定视觉权重对照（2026-11-03）
+
+把下面整段交给能访问现有AutoDL D57工作区的Codex执行。
+
+---
+
+继续我的仓库 https://github.com/kaiwen123-yang/-0--0.5 。
+
+先读main的 `docs/PI0_REPRO_REVIEW_NEXT_PLAN_20261103.md` 和本提示词。运行代码以 `codex/pi0-b-coverage-correction-test-20261101` 的 `c912dc5efbbec7dce53361fe989bf71eac0b2351` 为本次基线。main本次只更新研究文档与执行约定，不要用main的旧运行代码覆盖服务器最新代码。若远端已有更新，先阅读直接相关变更，保留用户当前工作与活动作业。
+
+在现有D57工作区 `/root/autodl-tmp/robot-repro/pi-reproduction` 接续，可使用新分支 `codex/pi0-g-fixed-vision-20261103`。将2026-11-03计划、提示词及当前执行约定带入研究分支，保证下次接续能够看到。不要重装或修改pi0、pi05、仿真环境、共享openpi、基础权重或其他项目。
+
+## 已完成的事实
+
+B仍是正式最佳：累计4020更新，全训练211/240、验证72/75、旧独立测试53/60。E/F已经各完成500次更新，验证67/75、65/75；困难开发48项为34/48、30/48，其中后排21/32、16/32。E修复B的3个验证失败，又丢失8个B成功；F也丢失8个。不要重跑E/F，不自动续至1000，不把旧53/60写成本轮新成绩。
+
+最新chunk分析已完成，raw切片一致；tail-only闭爪在成功回合也普遍出现，不重做这一分析，不无依据改replan。没有找到flow公式、delta/absolute或归一化移植错误。实际LoRA配置有468,039,440梯度参数，SigLIP仍参与更新，但视觉遗忘尚未被证明。
+
+## 本轮执行G500，唯一改变最终视觉参数更新
+
+从B完整4020状态恢复，严格复用E/sample_order.json前2000项，batch4、lr1e-6、500次真实更新。E原schedule保持warmup0、peak=end1e-6、decay_steps5020；保持B/E主RNG与累计fold_in步数4020–4519，最终累计4520。沿用旧norm、原image augmentation/noise规则、v2场景、horizon10、replan5、20Hz、420步与40步连续完整成功。
+
+按E原filter和dtype恢复全部模型与optimizer，不重置其他参数的moment或计数。仅在AdamW的tx.update之后、apply_updates之前，将PaliGemma/img/.*最终update置零；其他update照常。这样动量与weight decay也无法移动视觉权重。不要只把梯度设零，也不要直接改freeze_filter导致optimizer树/dtype变化。视觉梯度及其optimizer buffer仍按原规则计算，这轮只检验视觉权重能否移动，不同时做训练提速重构。
+
+使用项目自己的最小G训练入口和现有nnx_utils.state_map/PathRegex等机制，不修改共享环境。正常训练报告注明gradient_parameters、effective_update_parameters和固定模块即可，不新增冻结证明测试或全参数差分扫描。
+
+G只用原v2数据，直接PiperDataset(DATA, "train", 10)，不要继承旧CombinedDataset对F纠偏目录的无条件依赖。不新增纠偏、不改loss、不加状态机或规则抓取兜底。
+
+## 实际恢复输入，随后直接开展真实训练
+
+B与v2服务器副本已按发布记录删除，不能假定旧路径还存在。按以下回执，从Release `pi-complete-backup-20261101` 定向恢复：
+
+- `publication/pi-ef-cleanup-20261102/ab-b-checkpoint-2010.json`：19卷 `ab-b-checkpoint-2010.tar.zst.part-000..018`，恢复完整params、train_state、元数据、resume与norm。目录名2010对应累计4020。
+- `publication/pi-ef-cleanup-20261102/v2-training-data.json`：4卷 `v2-training-data.tar.zst.part-000..003`，只展开index.json、manifest.json及120条训练episode的4种NPY。
+- E/sample_order.json已在Git，按原序转int64 NPY；不要重抽样。无需下载E/F权重或旧视频，也无需恢复F纠偏。
+
+归档带pi-reproduction/outputs前缀，解包根为/root/autodl-tmp/robot-repro，按具体成员恢复。G的norm从B资产复制，不重算。已有pi0_base仍为配置依赖，保留。不要运行旧dataset.py prepare、旧整套--minimal-b或全库恢复工具。解包完成释放暂存下载卷，直接进行G真实训练；不做恢复演练。
+
+## 完整任务评测和条件推进
+
+G500跑现有node_roster.json中的48个困难训练任务和75个验证任务，共123次。B/E/F对应结果直接复用Git记录，不重复运行。分别比较G对B、G对E的修复/丢失任务、后排与前排、抓取/持物转运/释放阶段；不把48+75合成一个分数。
+
+- 若G验证<72/75，或后排<=14/32：保留B，结束本轮并发布。不要追加步数、降学习率或改比例。
+- 若G验证>=72/75且后排>14/32：冻结G500，补齐全训练240项。复用已跑的48项，只新增192项。
+- 若全训练<211/240，停止并保留B。否则按已固定new_layout_roster.json，在尚未使用的3000–3009布局上B/G各60次，共120次。
+- 新布局结果高于B才可结合现有指标列新最佳；相同如实写相当，低于则保留B。独立测试看过后不用于继续调参。
+- 本轮只训练500次，默认123次新任务，条件满足时最多435次。不启动第二项训练方案，不启动π0.5或实机。
+
+G改善只能支持“本次限制视觉更新改善了适配权衡”，不能直接声称证明灾难性遗忘。G无效则明确记录，后续研究再围绕持物后实际失败状态与监督一致性提出方案，不本轮自动加新数据训练。
+
+## 发布、删除与我的明确限制
+
+完成后直接推GitHub：代码、配置、紧凑结果与结论入Git；完整检查点、原始轨迹/视频等大文件入Release。每个已结束实验或独立产物组全部上传、有成员索引及上传回执后，直接删除对应服务器产物副本与上传临时卷。B/v2恢复副本无活动依赖后也清理，它们已发布过，不重复上传。不在我的电脑另做任何下载、压缩或归档。
+
+保留未上传原件及仍被活动任务使用的文件；保留源码、Git、pi0/pi05环境、runtime/d57-color-sim、运行缓存、共享基础权重与其他项目。只删除明确已发布的产物路径，不对工作区或runtime做整体清理。
+
+历史全项目队列还有245项pending，可按既有单并发低优先级队列通过官方AutoDL学术加速继续上传、按组清理。只用官方学术加速；服务器VPN、电脑VPN/隧道、自动VPN回退均禁止，不改全局网络。网络失败则记录pending并保留对应原件，不能假称已全部删除。
+
+禁止防御性编程、防御性测试、哈希/校验和扫描、冒烟/导入/shape/mock/单元测试、回下载、恢复演练、参数逐元素比对和全库重构。不要堆测试、重复报告或“确认能跑”的试训练；在真实500步训练和完整闭环中解决实际问题。
+
+我授权按以上计划连续完成真实实验、条件性评测、GitHub发布和已发布产物的服务器清理。正常阶段转换不要反复问我。最终报告清楚说明：G是否超越B，修复与新增失败各是什么，哪些只是推断，新测试是否真的执行，以及已发布/已删除/仍pending的具体范围。给我GitHub提交和结果链接，不给我电脑归档步骤。
