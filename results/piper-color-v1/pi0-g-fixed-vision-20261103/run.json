@@ -3,14 +3,15 @@
   "completed": false,
   "new_complete_tasks": 0,
   "stage": "train_G_500",
-  "at_utc": "2026-11-03T11:55:05.158990+00:00",
-  "real_training_updates": 0,
+  "at_utc": "2026-11-03T11:59:57.065263+00:00",
+  "real_training_updates": 500,
   "error": null,
   "selected_candidate": "B",
-  "selection_reason": "Current best retained; G has not been trained or evaluated",
+  "selection_reason": "G500 evaluation is pending; B remains the current best",
   "input_pending": "publication/pi0-g-fixed-vision-20261103/input_pending.json",
   "history_upload": "separate low-priority queue; see transfer progress",
   "historical_upload_pid": 161599,
   "child_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/logs/train_G_500.log",
-  "child_pid": 161600
+  "child_pid": null,
+  "optimizer_updates": 4520
 }
