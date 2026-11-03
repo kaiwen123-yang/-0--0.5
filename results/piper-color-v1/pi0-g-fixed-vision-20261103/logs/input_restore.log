@@ -11,3 +11,43 @@ DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-002 536870912
 DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-001 536870912
 DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-003 536870912
 DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-000 536870912
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-008
+DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-006 536870912
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-009
+DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-005 536870912
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-010
+DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-004 536870912
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-011
+DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-007 536870912
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-012
+DOWNLOADED ab-b-checkpoint-2010.tar.zst.part-008 536870912
+Get "https://release-assets.githubusercontent.com/github-production-release-asset/1432320095/3b9ccd16-eb95-4f64-a067-4f93255c3bb2?[signed-query-redacted]": net/http: TLS handshake timeout
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-013
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-014
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-015
+Get "https://release-assets.githubusercontent.com/github-production-release-asset/1432320095/b62738fe-248e-4763-b4b2-79ac280df16f?[signed-query-redacted]": net/http: TLS handshake timeout
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-016
+Post "https://api.github.com/graphql": net/http: TLS handshake timeout
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-017
+DOWNLOAD ab-b-checkpoint-2010.tar.zst.part-018
+unexpected EOF
+unexpected EOF
+Traceback (most recent call last):
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/restore_pi0_g.py", line 73, in <module>
+    main()
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/restore_pi0_g.py", line 41, in main
+    item=future.result()
+         ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/miniconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-reproduction/tasks/piper_color_v1/restore_pi0_g.py", line 34, in download
+    subprocess.run(["gh","release","download",TAG,"--repo",REPO,"--pattern",asset["name"],
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['gh', 'release', 'download', 'pi-complete-backup-20261101', '--repo', 'kaiwen123-yang/-0--0.5', '--pattern', 'ab-b-checkpoint-2010.tar.zst.part-012', '--dir', '/root/autodl-tmp/robot-repro/pi-reproduction/runtime/pi0-g-fixed-vision-20261103-restore/ab-b-checkpoint-2010', '--clobber']' returned non-zero exit status 1.

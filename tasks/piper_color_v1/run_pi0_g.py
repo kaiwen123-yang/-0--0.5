@@ -73,7 +73,7 @@ def main():
         publish(label+"-complete")
         return read(node)
     try:
-        update(stage="waiting_input_restore")
+        update(stage="waiting_input_restore",error=None)
         while True:
             restored=read(CAMPAIGN/"input_restore.json")
             if restored.get("status")=="ready": break
@@ -83,6 +83,12 @@ def main():
         if not (CAMPAIGN/"contract.json").exists(): prepare()
         publish("configuration")
         if not (CHECKPOINT/"resume.json").exists():
+            upload_log=(CAMPAIGN/"logs/historical_upload.log").open("a")
+            historical=subprocess.Popen([str(ROOT/"runtime/d57-color-sim/bin/python"),
+                str(ROOT/"tasks/piper_color_v1/deliver_pi0_g.py"),"--history-only"],
+                cwd=ROOT,stdout=upload_log,stderr=subprocess.STDOUT,start_new_session=True)
+            upload_log.close()
+            update(historical_upload_pid=historical.pid)
             execute("train",label="train_G_500",run=CAMPAIGN/"G")
         publish("G500-checkpoint")
         with service(CHECKPOINT,"G500"):

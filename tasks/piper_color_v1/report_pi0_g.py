@@ -48,6 +48,17 @@ def report():
         for split in ("train","validation"):
             value = paired["G_vs_"+reference][split]
             lines.append("| G对"+reference+" | "+split+" | "+str(value["repaired_count"])+" | "+str(value["lost_count"])+" |")
+    lines += ["", "## 逐任务修复与丢失", "",
+        "任务记法为layout/target/seed；train与validation分别比较，不合并评分。", "",
+        "| 配对 | 集合 | 修复任务 | 丢失任务及G失败阶段 |", "|---|---|---|---|"]
+    def identity(row):
+        return f"{row['layout']}/{row['target']}/s{row['base_seed']}"
+    for reference in ("B","E"):
+        for split in ("train","validation"):
+            value=paired["G_vs_"+reference][split]
+            repaired="、".join(identity(r) for r in value["repaired"]) or "无"
+            lost="、".join(identity(r["task"])+"("+r["task"]["failure_stage"]+")" for r in value["lost"]) or "无"
+            lines.append("| G对"+reference+" | "+split+" | "+repaired+" | "+lost+" |")
     lines += ["", f"G恢复E丢失的B验证成功{paired['E_lost_B_validation']['restored_by_G']}/8项；保留E修复的B训练难例{paired['E_repaired_B_training']['retained_by_G']}/13项。",
         "完整任务身份与失败阶段见paired_comparison.json；逐任务结果见node_G_500.json。", "",
         "## 选择与证据边界", "", "当前选择："+status["selected_candidate"]+"。"+status["selection_reason"]]

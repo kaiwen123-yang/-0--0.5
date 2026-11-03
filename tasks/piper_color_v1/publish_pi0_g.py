@@ -1,8 +1,13 @@
 """Publish the G source, compact records, and delivery indexes."""
-import os, shutil, subprocess
+import fcntl, os, re, shutil, subprocess
 from g_common import *
 
 def publish(stage):
+    with (ROOT / "runtime/pi-bct-publication.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        return publish_locked(stage)
+
+def publish_locked(stage):
     RESULTS.mkdir(parents=True, exist_ok=True)
     for current, dirs, files in os.walk(CAMPAIGN):
         dirs[:] = [d for d in dirs if d not in ("checkpoints", "assets", "scene")]
@@ -12,7 +17,14 @@ def publish(stage):
                 continue
             destination = RESULTS / source.relative_to(CAMPAIGN)
             destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source, destination)
+            if source.name == "input_restore.log":
+                log = source.read_text(errors="replace")
+                for url in re.findall('https://[^" ]+', log):
+                    if "?" in url:
+                        log = log.replace(url, url.split("?")[0] + "?[signed-query-redacted]")
+                destination.write_text(log)
+            else:
+                shutil.copyfile(source, destination)
     paths = ["AGENTS.md", "docs/PI0_REPRO_REVIEW_NEXT_PLAN_20261103.md", "docs/PI0_NEXT_STAGE_PROMPT_20261103.md",
              str(RESULTS.relative_to(ROOT))]
     paths += [str(p.relative_to(ROOT)) for p in (ROOT / "tasks/piper_color_v1").glob("*pi0_g.py")]

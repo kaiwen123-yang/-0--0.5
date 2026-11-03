@@ -62,7 +62,7 @@ def sync_index(mapping):
              for j in mapping["jobs"] if j["status"]!="uploaded"]
     save(LEDGER/"pending.json",dict(at_utc=now(),assets=missing))
     receipts=[read(p) for p in LEDGER.glob("cleanup-*.json")]
-    save(LEDGER/"delivery_status.json",dict(at_utc=now(),experiment_complete=True,transport="autodl_academic_only",
+    save(LEDGER/"delivery_status.json",dict(at_utc=now(),experiment_complete=read(CAMPAIGN/"run.json").get("completed",False),transport="autodl_academic_only",
         g_assets=dict(total=len(g_jobs),uploaded=sum(j["status"]=="uploaded" for j in g_jobs)),
         historical_assets=dict(total=len(mapping["jobs"])-len(g_jobs),
             uploaded=sum(j["status"]=="uploaded" and not j["group"].startswith("g500-") for j in mapping["jobs"])),
@@ -124,16 +124,18 @@ def cleanup_restored(mapping):
         save(record,receipt);sync_index(mapping)
         publish("restored-"+group+"-deleted")
 
-def deliver():
+def deliver(history_only=False):
     LEDGER.mkdir(parents=True,exist_ok=True)
     lock=(TRANSFER/"queue.lock").open("a")
     fcntl.flock(lock,fcntl.LOCK_EX)
     os.nice(19)
     mapping=read(TRANSFER/"mapping.json")
-    register(mapping)
+    if not history_only:
+        register(mapping)
     sync_index(mapping)
-    publish("release-queued")
-    cleanup_restored(mapping)
+    publish("historical-upload-started" if history_only else "release-queued")
+    if not history_only:
+        cleanup_restored(mapping)
     try:
         release_id,assets=upload.release(upload.TAG)
     except Exception as exc:
@@ -145,6 +147,10 @@ def deliver():
         groups[job["group"]].append(job)
     for group,jobs in groups.items():
         for job in jobs:
+            if history_only and read(CAMPAIGN/"run.json").get("completed"):
+                sync_index(mapping)
+                publish("historical-upload-yield-to-G")
+                return
             if job["status"]=="uploaded":
                 continue
             path=None;temporary=False
@@ -180,4 +186,5 @@ def deliver():
     publish("delivery-final")
 
 if __name__=="__main__":
-    deliver()
+    import sys
+    deliver(history_only="--history-only" in sys.argv)
