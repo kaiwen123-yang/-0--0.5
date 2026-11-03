@@ -1,5 +1,5 @@
 """Publish G500 first, retain all research products, and remove only transfer staging."""
-import collections, fcntl, math, os, shutil, subprocess
+import collections, fcntl, math, os, shutil, subprocess, time
 from pathlib import Path
 from g_common import *
 from publish_pi0_g import publish
@@ -146,13 +146,27 @@ def deliver(history_only=False):
                     else:
                         raise RuntimeError("Existing remote asset has different size/state")
                 else:
-                    job.update(status="uploading",attempts=job.get("attempts",0)+1)
-                    upload.write_status(mapping,"running",job["name"])
-                    receipt=upload.stream_upload(release_id,job,path,offset,size)
-                    job.update(status="uploaded",receipt=receipt,uploaded_at=now())
-                    assets[job["name"]]=receipt
-                    with (TRANSFER/"receipts.jsonl").open("a") as stream:
-                        stream.write(__import__("json").dumps(dict(at_utc=now(),name=job["name"],receipt=receipt))+"\n")
+                    for transfer_attempt in range(3):
+                        job.update(status="uploading",attempts=job.get("attempts",0)+1)
+                        upload.write_status(mapping,"running",job["name"])
+                        try:
+                            receipt=upload.stream_upload(release_id,job,path,offset,size)
+                        except Exception:
+                            time.sleep(10)
+                            release_id,assets=upload.release(upload.TAG)
+                            upload.reconcile_remote_receipts(mapping,assets)
+                            if job["status"]=="uploaded":
+                                print("ASSET_RECEIPT_RECOVERED",job["name"],flush=True)
+                                break
+                            if job["name"] in assets or transfer_attempt==2:
+                                raise
+                            print("RETRY_REMOTE_ABSENT",job["name"],transfer_attempt+2,flush=True)
+                            continue
+                        job.update(status="uploaded",receipt=receipt,uploaded_at=now())
+                        assets[job["name"]]=receipt
+                        with (TRANSFER/"receipts.jsonl").open("a") as stream:
+                            stream.write(__import__("json").dumps(dict(at_utc=now(),name=job["name"],receipt=receipt))+"\n")
+                        break
                 upload.write_status(mapping,"running")
                 sync_index(mapping)
                 print("ASSET_UPLOADED",job["name"],flush=True)
