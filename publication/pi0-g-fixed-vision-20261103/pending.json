@@ -1,65 +1,15 @@
 {
-  "at_utc": "2026-11-03T12:23:19.948628+00:00",
+  "at_utc": "2026-11-03T12:29:20.771244+00:00",
   "assets": [
     {
       "group": "g500-checkpoint",
-      "name": "g500-checkpoint-file-0000-part-000",
-      "status": "queued",
-      "bytes": 268435456,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
-      ],
-      "error": null
-    },
-    {
-      "group": "g500-checkpoint",
-      "name": "g500-checkpoint-file-0000-part-001",
-      "status": "queued",
-      "bytes": 268435456,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
-      ],
-      "error": null
-    },
-    {
-      "group": "g500-checkpoint",
-      "name": "g500-checkpoint-file-0000-part-002",
-      "status": "queued",
-      "bytes": 268435456,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
-      ],
-      "error": null
-    },
-    {
-      "group": "g500-checkpoint",
-      "name": "g500-checkpoint-file-0000-part-003",
-      "status": "queued",
-      "bytes": 268435456,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
-      ],
-      "error": null
-    },
-    {
-      "group": "g500-checkpoint",
-      "name": "g500-checkpoint-file-0000-part-004",
-      "status": "queued",
-      "bytes": 156186927,
-      "source_paths": [
-        "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0213bd36b072e735083faa4174c74089"
-      ],
-      "error": null
-    },
-    {
-      "group": "g500-checkpoint",
       "name": "g500-checkpoint-file-0001-part-000",
-      "status": "queued",
+      "status": "pending",
       "bytes": 34938169,
       "source_paths": [
         "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-g-fixed-vision-20261103/G/checkpoints/pi0_piper_color_lora/g_fixed_vision/500/params/ocdbt.process_0/d/0c479b5c16a3c2aa99f4f717720c1034"
       ],
-      "error": null
+      "error": "GitHub upload exit=1; see transport.log"
     },
     {
       "group": "g500-checkpoint",

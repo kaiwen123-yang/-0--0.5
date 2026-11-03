@@ -19,8 +19,16 @@
       "offset": 0,
       "part": 0,
       "parts": 5,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705518102,
+        "name": "g500-checkpoint-file-0000-part-000",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0000-part-000"
+      },
+      "uploaded_at": "2026-11-03T12:24:40.739098+00:00"
     },
     {
       "name": "g500-checkpoint-file-0000-part-001",
@@ -39,8 +47,16 @@
       "offset": 268435456,
       "part": 1,
       "parts": 5,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705521472,
+        "name": "g500-checkpoint-file-0000-part-001",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0000-part-001"
+      },
+      "uploaded_at": "2026-11-03T12:25:53.013168+00:00"
     },
     {
       "name": "g500-checkpoint-file-0000-part-002",
@@ -59,8 +75,16 @@
       "offset": 536870912,
       "part": 2,
       "parts": 5,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705524363,
+        "name": "g500-checkpoint-file-0000-part-002",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0000-part-002"
+      },
+      "uploaded_at": "2026-11-03T12:27:03.311365+00:00"
     },
     {
       "name": "g500-checkpoint-file-0000-part-003",
@@ -79,8 +103,16 @@
       "offset": 805306368,
       "part": 3,
       "parts": 5,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705527698,
+        "name": "g500-checkpoint-file-0000-part-003",
+        "size": 268435456,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0000-part-003"
+      },
+      "uploaded_at": "2026-11-03T12:28:14.084354+00:00"
     },
     {
       "name": "g500-checkpoint-file-0000-part-004",
@@ -99,8 +131,16 @@
       "offset": 1073741824,
       "part": 4,
       "parts": 5,
-      "status": "queued",
-      "attempts": 0
+      "status": "uploaded",
+      "attempts": 1,
+      "receipt": {
+        "id": 705531382,
+        "name": "g500-checkpoint-file-0000-part-004",
+        "size": 156186927,
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/kaiwen123-yang/-0--0.5/releases/download/pi-complete-backup-20261101/g500-checkpoint-file-0000-part-004"
+      },
+      "uploaded_at": "2026-11-03T12:28:54.427218+00:00"
     },
     {
       "name": "g500-checkpoint-file-0001-part-000",
@@ -119,8 +159,9 @@
       "offset": 0,
       "part": 0,
       "parts": 1,
-      "status": "queued",
-      "attempts": 0
+      "status": "pending",
+      "attempts": 1,
+      "error": "GitHub upload exit=1; see transport.log"
     },
     {
       "name": "g500-checkpoint-file-0002-part-000",
