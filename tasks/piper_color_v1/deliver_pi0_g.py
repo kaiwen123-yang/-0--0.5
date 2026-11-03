@@ -1,4 +1,4 @@
-"""Reuse the single Release queue, then clean only published inactive members."""
+"""Publish G500 first, retain all research products, and remove only transfer staging."""
 import collections, fcntl, math, os, shutil, subprocess
 from pathlib import Path
 from g_common import *
@@ -126,7 +126,7 @@ def deliver(history_only=False):
     for job in mapping["jobs"]:
         groups[job["group"]].append(job)
     new_groups=[(group,jobs) for group,jobs in groups.items() if group.startswith("g500-")]
-    new_groups.sort(key=lambda item:item[0]=="g500-checkpoint")
+    new_groups.sort(key=lambda item:item[0]!="g500-checkpoint")
     previous_groups=[(group,jobs) for group,jobs in groups.items() if not group.startswith("g500-")]
     for group,jobs in new_groups+previous_groups:
         for job in jobs:
@@ -154,8 +154,20 @@ def deliver(history_only=False):
                     with (TRANSFER/"receipts.jsonl").open("a") as stream:
                         stream.write(__import__("json").dumps(dict(at_utc=now(),name=job["name"],receipt=receipt))+"\n")
                 upload.write_status(mapping,"running")
+                sync_index(mapping)
                 print("ASSET_UPLOADED",job["name"],flush=True)
             except Exception as exc:
+                # An observed EOF can lose the reply after GitHub has stored the asset.
+                # Reconcile before marking it pending or ever attempting another upload.
+                try:
+                    release_id,assets=upload.release(upload.TAG)
+                    upload.reconcile_remote_receipts(mapping,assets)
+                except Exception as receipt_error:
+                    job["receipt_lookup_error"]=type(receipt_error).__name__
+                if job["status"]=="uploaded":
+                    sync_index(mapping)
+                    print("ASSET_RECEIPT_RECOVERED",job["name"],flush=True)
+                    continue
                 job.update(status="pending",error=str(exc))
                 upload.write_status(mapping,"paused_academic_transfer_failed",job["name"])
                 sync_index(mapping);publish("release-transfer-pending")
