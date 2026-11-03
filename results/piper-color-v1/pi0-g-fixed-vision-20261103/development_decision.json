@@ -1,0 +1,72 @@
+{
+  "qualified": false,
+  "criterion": "validation >=72/75 AND difficult rear >14/32",
+  "summary": {
+    "train": {
+      "total": 48,
+      "successes": 29,
+      "back_successes": 15,
+      "by_slot": {
+        "back": {
+          "total": 32,
+          "successes": 15
+        },
+        "front_left": {
+          "total": 8,
+          "successes": 7
+        },
+        "front_right": {
+          "total": 8,
+          "successes": 7
+        }
+      },
+      "by_color": {
+        "red": {
+          "total": 22,
+          "successes": 9
+        },
+        "green": {
+          "total": 16,
+          "successes": 13
+        },
+        "blue": {
+          "total": 10,
+          "successes": 7
+        }
+      }
+    },
+    "validation": {
+      "total": 75,
+      "successes": 64,
+      "back_successes": 20,
+      "by_slot": {
+        "back": {
+          "total": 25,
+          "successes": 20
+        },
+        "front_left": {
+          "total": 25,
+          "successes": 19
+        },
+        "front_right": {
+          "total": 25,
+          "successes": 25
+        }
+      },
+      "by_color": {
+        "red": {
+          "total": 25,
+          "successes": 19
+        },
+        "green": {
+          "total": 25,
+          "successes": 23
+        },
+        "blue": {
+          "total": 25,
+          "successes": 22
+        }
+      }
+    }
+  }
+}

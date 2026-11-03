@@ -1,0 +1,1046 @@
+{
+  "G_vs_B": {
+    "train": {
+      "repaired_count": 11,
+      "lost_count": 7,
+      "repaired": [
+        {
+          "split": "train",
+          "layout": 100,
+          "target": "green",
+          "base_seed": 42,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 100,
+          "target": "blue",
+          "base_seed": 42,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 101,
+          "target": "red",
+          "base_seed": 42,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 100,
+          "target": "blue",
+          "base_seed": 43,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 101,
+          "target": "green",
+          "base_seed": 43,
+          "slot": "front_right",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 107,
+          "target": "blue",
+          "base_seed": 42,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 113,
+          "target": "red",
+          "base_seed": 42,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 105,
+          "target": "red",
+          "base_seed": 43,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 115,
+          "target": "green",
+          "base_seed": 43,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 131,
+          "target": "red",
+          "base_seed": 43,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 134,
+          "target": "blue",
+          "base_seed": 43,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        }
+      ],
+      "lost": [
+        {
+          "task": {
+            "split": "train",
+            "layout": 101,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "front_right",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 101,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "front_right",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 101,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_no_closure"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 101,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 106,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 106,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 114,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "lower_or_release"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 114,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 122,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 122,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 131,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_no_closure"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 131,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 103,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 103,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        }
+      ]
+    },
+    "validation": {
+      "repaired_count": 2,
+      "lost_count": 10,
+      "repaired": [
+        {
+          "split": "validation",
+          "layout": 1001,
+          "target": "red",
+          "base_seed": 44,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "validation",
+          "layout": 1001,
+          "target": "blue",
+          "base_seed": 45,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        }
+      ],
+      "lost": [
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lower_or_release"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1000,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1000,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "blue",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "blue",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1002,
+            "target": "green",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1002,
+            "target": "green",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1004,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_no_closure"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1004,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "blue",
+            "base_seed": 44,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "blue",
+            "base_seed": 44,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1002,
+            "target": "green",
+            "base_seed": 44,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "stability_or_distractor"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1002,
+            "target": "green",
+            "base_seed": 44,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1000,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1000,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        }
+      ]
+    }
+  },
+  "G_vs_E": {
+    "train": {
+      "repaired_count": 4,
+      "lost_count": 9,
+      "repaired": [
+        {
+          "split": "train",
+          "layout": 105,
+          "target": "red",
+          "base_seed": 43,
+          "slot": "back",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 107,
+          "target": "blue",
+          "base_seed": 42,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 107,
+          "target": "blue",
+          "base_seed": 43,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "train",
+          "layout": 113,
+          "target": "red",
+          "base_seed": 42,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        }
+      ],
+      "lost": [
+        {
+          "task": {
+            "split": "train",
+            "layout": 102,
+            "target": "blue",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 102,
+            "target": "blue",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 114,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "lower_or_release"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 114,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 123,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "stability_or_distractor"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 123,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 123,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "stability_or_distractor"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 123,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 124,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_no_closure"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 124,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 131,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_no_closure"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 131,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 106,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 106,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 109,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 109,
+            "target": "red",
+            "base_seed": 42,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "train",
+            "layout": 101,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "front_right",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "train",
+            "layout": 101,
+            "target": "green",
+            "base_seed": 42,
+            "slot": "front_right",
+            "success": true,
+            "failure_stage": "success"
+          }
+        }
+      ]
+    },
+    "validation": {
+      "repaired_count": 2,
+      "lost_count": 5,
+      "repaired": [
+        {
+          "split": "validation",
+          "layout": 1001,
+          "target": "green",
+          "base_seed": 42,
+          "slot": "front_right",
+          "success": true,
+          "failure_stage": "success"
+        },
+        {
+          "split": "validation",
+          "layout": 1004,
+          "target": "green",
+          "base_seed": 43,
+          "slot": "front_left",
+          "success": true,
+          "failure_stage": "success"
+        }
+      ],
+      "lost": [
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "blue",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1001,
+            "target": "blue",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1002,
+            "target": "green",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1002,
+            "target": "green",
+            "base_seed": 43,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1004,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_no_closure"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1004,
+            "target": "red",
+            "base_seed": 43,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "blue",
+            "base_seed": 44,
+            "slot": "back",
+            "success": false,
+            "failure_stage": "approach_or_grasp"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "blue",
+            "base_seed": 44,
+            "slot": "back",
+            "success": true,
+            "failure_stage": "success"
+          }
+        },
+        {
+          "task": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "front_left",
+            "success": false,
+            "failure_stage": "lift_or_transfer"
+          },
+          "previous": {
+            "split": "validation",
+            "layout": 1003,
+            "target": "red",
+            "base_seed": 46,
+            "slot": "front_left",
+            "success": true,
+            "failure_stage": "success"
+          }
+        }
+      ]
+    }
+  },
+  "E_lost_B_validation": {
+    "total": 8,
+    "restored_by_G": 2,
+    "tasks": [
+      {
+        "split": "validation",
+        "layout": 1001,
+        "target": "green",
+        "base_seed": 42,
+        "slot": "front_right",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "validation",
+        "layout": 1003,
+        "target": "red",
+        "base_seed": 42,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "lower_or_release"
+      },
+      {
+        "split": "validation",
+        "layout": 1000,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      {
+        "split": "validation",
+        "layout": 1004,
+        "target": "green",
+        "base_seed": 43,
+        "slot": "front_left",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "validation",
+        "layout": 1001,
+        "target": "blue",
+        "base_seed": 44,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      {
+        "split": "validation",
+        "layout": 1002,
+        "target": "green",
+        "base_seed": 44,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      {
+        "split": "validation",
+        "layout": 1000,
+        "target": "red",
+        "base_seed": 46,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      {
+        "split": "validation",
+        "layout": 1001,
+        "target": "red",
+        "base_seed": 46,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      }
+    ]
+  },
+  "E_repaired_B_training": {
+    "total": 13,
+    "retained_by_G": 8,
+    "tasks": [
+      {
+        "split": "train",
+        "layout": 100,
+        "target": "green",
+        "base_seed": 42,
+        "slot": "front_left",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 100,
+        "target": "blue",
+        "base_seed": 42,
+        "slot": "back",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 101,
+        "target": "red",
+        "base_seed": 42,
+        "slot": "back",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 100,
+        "target": "blue",
+        "base_seed": 43,
+        "slot": "back",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 101,
+        "target": "green",
+        "base_seed": 43,
+        "slot": "front_right",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 109,
+        "target": "red",
+        "base_seed": 42,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      {
+        "split": "train",
+        "layout": 123,
+        "target": "red",
+        "base_seed": 42,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      {
+        "split": "train",
+        "layout": 124,
+        "target": "red",
+        "base_seed": 42,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_no_closure"
+      },
+      {
+        "split": "train",
+        "layout": 102,
+        "target": "blue",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      {
+        "split": "train",
+        "layout": 115,
+        "target": "green",
+        "base_seed": 43,
+        "slot": "back",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 123,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      {
+        "split": "train",
+        "layout": 131,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": true,
+        "failure_stage": "success"
+      },
+      {
+        "split": "train",
+        "layout": 134,
+        "target": "blue",
+        "base_seed": 43,
+        "slot": "back",
+        "success": true,
+        "failure_stage": "success"
+      }
+    ]
+  },
+  "G_failure_stages": {
+    "train": {
+      "approach_no_closure": 5,
+      "approach_or_grasp": 8,
+      "lower_or_release": 2,
+      "stability_or_distractor": 3,
+      "lift_or_transfer": 1
+    },
+    "validation": {
+      "lower_or_release": 1,
+      "approach_or_grasp": 4,
+      "lift_or_transfer": 4,
+      "approach_no_closure": 1,
+      "stability_or_distractor": 1
+    }
+  }
+}
