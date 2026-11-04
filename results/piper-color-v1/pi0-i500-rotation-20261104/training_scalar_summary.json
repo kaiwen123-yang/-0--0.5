@@ -1,0 +1,1006 @@
+{
+  "I": {
+    "all": {
+      "batches": 500,
+      "loss_median": 0.0061700448859483,
+      "loss_sum": 67.21826835296815,
+      "loss_mean": 0.1344365367059363,
+      "max_loss": 44.74391555786133,
+      "top_five": [
+        {
+          "local_update": 93,
+          "loss": 44.74391555786133,
+          "grad_norm": 50.08644104003906,
+          "sample_indices": [
+            8048,
+            24930,
+            9655,
+            32775
+          ]
+        },
+        {
+          "local_update": 150,
+          "loss": 10.637152671813965,
+          "grad_norm": 72.4270248413086,
+          "sample_indices": [
+            22178,
+            4296,
+            32785,
+            19824
+          ]
+        },
+        {
+          "local_update": 33,
+          "loss": 3.9503791332244873,
+          "grad_norm": 11.597233772277832,
+          "sample_indices": [
+            1617,
+            31271,
+            804,
+            32760
+          ]
+        },
+        {
+          "local_update": 416,
+          "loss": 3.0767643451690674,
+          "grad_norm": 210.74786376953125,
+          "sample_indices": [
+            30829,
+            32300,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 78,
+          "loss": 0.16383957862854004,
+          "grad_norm": 2.441636085510254,
+          "sample_indices": [
+            32475,
+            20373,
+            15214,
+            574
+          ]
+        }
+      ]
+    },
+    "H_pure_original_batch_positions": {
+      "batches": 432,
+      "loss_median": 0.0056657500099390745,
+      "loss_sum": 3.4515686577069573,
+      "loss_mean": 0.00798974226321055,
+      "max_loss": 0.04885871335864067,
+      "top_five": [
+        {
+          "local_update": 347,
+          "loss": 0.04885871335864067,
+          "grad_norm": 0.9145944118499756,
+          "sample_indices": [
+            2685,
+            9408,
+            15330,
+            28328
+          ]
+        },
+        {
+          "local_update": 476,
+          "loss": 0.0451820008456707,
+          "grad_norm": 1.726357102394104,
+          "sample_indices": [
+            19988,
+            26537,
+            28796,
+            31121
+          ]
+        },
+        {
+          "local_update": 427,
+          "loss": 0.04083701968193054,
+          "grad_norm": 1.9237514734268188,
+          "sample_indices": [
+            25469,
+            15022,
+            14204,
+            19048
+          ]
+        },
+        {
+          "local_update": 488,
+          "loss": 0.04021032527089119,
+          "grad_norm": 2.7647929191589355,
+          "sample_indices": [
+            8625,
+            22028,
+            29757,
+            5362
+          ]
+        },
+        {
+          "local_update": 491,
+          "loss": 0.03991660475730896,
+          "grad_norm": 0.8502770066261292,
+          "sample_indices": [
+            7530,
+            21478,
+            19169,
+            30073
+          ]
+        }
+      ]
+    },
+    "H_mixed_batch_positions": {
+      "batches": 68,
+      "loss_median": 0.016120383515954018,
+      "loss_sum": 63.766699695261195,
+      "loss_mean": 0.9377455837538411,
+      "max_loss": 44.74391555786133,
+      "top_five": [
+        {
+          "local_update": 93,
+          "loss": 44.74391555786133,
+          "grad_norm": 50.08644104003906,
+          "sample_indices": [
+            8048,
+            24930,
+            9655,
+            32775
+          ]
+        },
+        {
+          "local_update": 150,
+          "loss": 10.637152671813965,
+          "grad_norm": 72.4270248413086,
+          "sample_indices": [
+            22178,
+            4296,
+            32785,
+            19824
+          ]
+        },
+        {
+          "local_update": 33,
+          "loss": 3.9503791332244873,
+          "grad_norm": 11.597233772277832,
+          "sample_indices": [
+            1617,
+            31271,
+            804,
+            32760
+          ]
+        },
+        {
+          "local_update": 416,
+          "loss": 3.0767643451690674,
+          "grad_norm": 210.74786376953125,
+          "sample_indices": [
+            30829,
+            32300,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 78,
+          "loss": 0.16383957862854004,
+          "grad_norm": 2.441636085510254,
+          "sample_indices": [
+            32475,
+            20373,
+            15214,
+            574
+          ]
+        }
+      ]
+    },
+    "changed_recovery_batch_positions": {
+      "batches": 27,
+      "loss_median": 0.014448759146034718,
+      "loss_sum": 59.928836185950786,
+      "loss_mean": 2.219586525405585,
+      "max_loss": 44.74391555786133,
+      "top_five": [
+        {
+          "local_update": 93,
+          "loss": 44.74391555786133,
+          "grad_norm": 50.08644104003906,
+          "sample_indices": [
+            8048,
+            24930,
+            9655,
+            32775
+          ]
+        },
+        {
+          "local_update": 150,
+          "loss": 10.637152671813965,
+          "grad_norm": 72.4270248413086,
+          "sample_indices": [
+            22178,
+            4296,
+            32785,
+            19824
+          ]
+        },
+        {
+          "local_update": 33,
+          "loss": 3.9503791332244873,
+          "grad_norm": 11.597233772277832,
+          "sample_indices": [
+            1617,
+            31271,
+            804,
+            32760
+          ]
+        },
+        {
+          "local_update": 78,
+          "loss": 0.16383957862854004,
+          "grad_norm": 2.441636085510254,
+          "sample_indices": [
+            32475,
+            20373,
+            15214,
+            574
+          ]
+        },
+        {
+          "local_update": 107,
+          "loss": 0.11478262394666672,
+          "grad_norm": 2.2040534019470215,
+          "sample_indices": [
+            5367,
+            12742,
+            24392,
+            33075
+          ]
+        }
+      ]
+    },
+    "unchanged_recovery_batch_positions": {
+      "batches": 41,
+      "loss_median": 0.01753116585314274,
+      "loss_sum": 3.8378635093104094,
+      "loss_mean": 0.09360642705635144,
+      "max_loss": 3.0767643451690674,
+      "top_five": [
+        {
+          "local_update": 416,
+          "loss": 3.0767643451690674,
+          "grad_norm": 210.74786376953125,
+          "sample_indices": [
+            30829,
+            32300,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 100,
+          "loss": 0.049507517367601395,
+          "grad_norm": 3.5303268432617188,
+          "sample_indices": [
+            30449,
+            32935,
+            15586,
+            28948
+          ]
+        },
+        {
+          "local_update": 335,
+          "loss": 0.045840781182050705,
+          "grad_norm": 1.9704655408859253,
+          "sample_indices": [
+            28944,
+            33015,
+            16732,
+            24643
+          ]
+        },
+        {
+          "local_update": 144,
+          "loss": 0.045596614480018616,
+          "grad_norm": 1.5591226816177368,
+          "sample_indices": [
+            32655,
+            11265,
+            30589,
+            31716
+          ]
+        },
+        {
+          "local_update": 159,
+          "loss": 0.04548770561814308,
+          "grad_norm": 1.3708659410476685,
+          "sample_indices": [
+            21741,
+            0,
+            32955,
+            20145
+          ]
+        }
+      ]
+    }
+  },
+  "actual_sampling": {
+    "recorded_batches": 500,
+    "recorded_samples": 2000,
+    "actual_matches_recorded_I_order": true,
+    "actual_matches_H_order": true,
+    "original_samples": 1932,
+    "recovery_samples": 68,
+    "changed_recovery_batch_positions": [
+      19,
+      33,
+      48,
+      78,
+      93,
+      107,
+      137,
+      150,
+      166,
+      195,
+      209,
+      225,
+      255,
+      269,
+      284,
+      313,
+      328,
+      343,
+      372,
+      389,
+      401,
+      431,
+      450,
+      458,
+      475,
+      483,
+      490
+    ],
+    "observation": "Index equality preserves order; the specified three underlying recovery trajectories have changed."
+  },
+  "H": {
+    "all": {
+      "batches": 500,
+      "loss_median": 0.006118718534708023,
+      "loss_sum": 149.41897535260068,
+      "loss_mean": 0.29883795070520136,
+      "max_loss": 140.41127014160156,
+      "top_five": [
+        {
+          "local_update": 33,
+          "loss": 140.41127014160156,
+          "grad_norm": 74.71034240722656,
+          "sample_indices": [
+            1617,
+            31271,
+            804,
+            32760
+          ]
+        },
+        {
+          "local_update": 416,
+          "loss": 3.0915896892547607,
+          "grad_norm": 205.7151641845703,
+          "sample_indices": [
+            30829,
+            32300,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 19,
+          "loss": 1.2230267524719238,
+          "grad_norm": 8.478157043457031,
+          "sample_indices": [
+            23872,
+            10499,
+            32460,
+            3760
+          ]
+        },
+        {
+          "local_update": 48,
+          "loss": 0.16227415204048157,
+          "grad_norm": 2.423778533935547,
+          "sample_indices": [
+            13617,
+            27654,
+            31946,
+            33060
+          ]
+        },
+        {
+          "local_update": 93,
+          "loss": 0.06140679866075516,
+          "grad_norm": 1.7628767490386963,
+          "sample_indices": [
+            8048,
+            24930,
+            9655,
+            32775
+          ]
+        }
+      ]
+    },
+    "H_pure_original_batch_positions": {
+      "batches": 432,
+      "loss_median": 0.005577812669798732,
+      "loss_sum": 3.4517975868075155,
+      "loss_mean": 0.007990272191684064,
+      "max_loss": 0.04948403686285019,
+      "top_five": [
+        {
+          "local_update": 347,
+          "loss": 0.04948403686285019,
+          "grad_norm": 0.91867995262146,
+          "sample_indices": [
+            2685,
+            9408,
+            15330,
+            28328
+          ]
+        },
+        {
+          "local_update": 476,
+          "loss": 0.04547802731394768,
+          "grad_norm": 1.7552502155303955,
+          "sample_indices": [
+            19988,
+            26537,
+            28796,
+            31121
+          ]
+        },
+        {
+          "local_update": 427,
+          "loss": 0.04067225381731987,
+          "grad_norm": 1.92127525806427,
+          "sample_indices": [
+            25469,
+            15022,
+            14204,
+            19048
+          ]
+        },
+        {
+          "local_update": 488,
+          "loss": 0.03986320644617081,
+          "grad_norm": 2.709195137023926,
+          "sample_indices": [
+            8625,
+            22028,
+            29757,
+            5362
+          ]
+        },
+        {
+          "local_update": 491,
+          "loss": 0.03940584883093834,
+          "grad_norm": 0.8247670531272888,
+          "sample_indices": [
+            7530,
+            21478,
+            19169,
+            30073
+          ]
+        }
+      ]
+    },
+    "H_mixed_batch_positions": {
+      "batches": 68,
+      "loss_median": 0.014260140713304281,
+      "loss_sum": 145.96717776579317,
+      "loss_mean": 2.1465761436146056,
+      "max_loss": 140.41127014160156,
+      "top_five": [
+        {
+          "local_update": 33,
+          "loss": 140.41127014160156,
+          "grad_norm": 74.71034240722656,
+          "sample_indices": [
+            1617,
+            31271,
+            804,
+            32760
+          ]
+        },
+        {
+          "local_update": 416,
+          "loss": 3.0915896892547607,
+          "grad_norm": 205.7151641845703,
+          "sample_indices": [
+            30829,
+            32300,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 19,
+          "loss": 1.2230267524719238,
+          "grad_norm": 8.478157043457031,
+          "sample_indices": [
+            23872,
+            10499,
+            32460,
+            3760
+          ]
+        },
+        {
+          "local_update": 48,
+          "loss": 0.16227415204048157,
+          "grad_norm": 2.423778533935547,
+          "sample_indices": [
+            13617,
+            27654,
+            31946,
+            33060
+          ]
+        },
+        {
+          "local_update": 93,
+          "loss": 0.06140679866075516,
+          "grad_norm": 1.7628767490386963,
+          "sample_indices": [
+            8048,
+            24930,
+            9655,
+            32775
+          ]
+        }
+      ]
+    },
+    "changed_recovery_batch_positions": {
+      "batches": 27,
+      "loss_median": 0.01221983227878809,
+      "loss_sum": 142.1270856965566,
+      "loss_mean": 5.263966136909504,
+      "max_loss": 140.41127014160156,
+      "top_five": [
+        {
+          "local_update": 33,
+          "loss": 140.41127014160156,
+          "grad_norm": 74.71034240722656,
+          "sample_indices": [
+            1617,
+            31271,
+            804,
+            32760
+          ]
+        },
+        {
+          "local_update": 19,
+          "loss": 1.2230267524719238,
+          "grad_norm": 8.478157043457031,
+          "sample_indices": [
+            23872,
+            10499,
+            32460,
+            3760
+          ]
+        },
+        {
+          "local_update": 48,
+          "loss": 0.16227415204048157,
+          "grad_norm": 2.423778533935547,
+          "sample_indices": [
+            13617,
+            27654,
+            31946,
+            33060
+          ]
+        },
+        {
+          "local_update": 93,
+          "loss": 0.06140679866075516,
+          "grad_norm": 1.7628767490386963,
+          "sample_indices": [
+            8048,
+            24930,
+            9655,
+            32775
+          ]
+        },
+        {
+          "local_update": 209,
+          "loss": 0.05407058075070381,
+          "grad_norm": 2.1567718982696533,
+          "sample_indices": [
+            20103,
+            32805,
+            307,
+            30416
+          ]
+        }
+      ]
+    },
+    "unchanged_recovery_batch_positions": {
+      "batches": 41,
+      "loss_median": 0.016236579045653343,
+      "loss_sum": 3.8400920692365617,
+      "loss_mean": 0.0936607821765015,
+      "max_loss": 3.0915896892547607,
+      "top_five": [
+        {
+          "local_update": 416,
+          "loss": 3.0915896892547607,
+          "grad_norm": 205.7151641845703,
+          "sample_indices": [
+            30829,
+            32300,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 100,
+          "loss": 0.04978833347558975,
+          "grad_norm": 3.485435962677002,
+          "sample_indices": [
+            30449,
+            32935,
+            15586,
+            28948
+          ]
+        },
+        {
+          "local_update": 144,
+          "loss": 0.045577336102724075,
+          "grad_norm": 1.554547667503357,
+          "sample_indices": [
+            32655,
+            11265,
+            30589,
+            31716
+          ]
+        },
+        {
+          "local_update": 159,
+          "loss": 0.04472009465098381,
+          "grad_norm": 1.3751816749572754,
+          "sample_indices": [
+            21741,
+            0,
+            32955,
+            20145
+          ]
+        },
+        {
+          "local_update": 335,
+          "loss": 0.041401155292987823,
+          "grad_norm": 1.8996987342834473,
+          "sample_indices": [
+            28944,
+            33015,
+            16732,
+            24643
+          ]
+        }
+      ]
+    }
+  },
+  "E": {
+    "all": {
+      "batches": 500,
+      "loss_median": 0.005539446836337447,
+      "loss_sum": 7.104773306928109,
+      "loss_mean": 0.01420954661385622,
+      "max_loss": 3.10571026802063,
+      "top_five": [
+        {
+          "local_update": 416,
+          "loss": 3.10571026802063,
+          "grad_norm": 205.9264678955078,
+          "sample_indices": [
+            30829,
+            23585,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 347,
+          "loss": 0.049870941787958145,
+          "grad_norm": 0.9179825186729431,
+          "sample_indices": [
+            2685,
+            9408,
+            15330,
+            28328
+          ]
+        },
+        {
+          "local_update": 476,
+          "loss": 0.04716974124312401,
+          "grad_norm": 1.7756831645965576,
+          "sample_indices": [
+            19988,
+            26537,
+            28796,
+            31121
+          ]
+        },
+        {
+          "local_update": 100,
+          "loss": 0.046828512102365494,
+          "grad_norm": 3.5371854305267334,
+          "sample_indices": [
+            30449,
+            6218,
+            15586,
+            28948
+          ]
+        },
+        {
+          "local_update": 427,
+          "loss": 0.04070255160331726,
+          "grad_norm": 1.9062285423278809,
+          "sample_indices": [
+            25469,
+            15022,
+            14204,
+            19048
+          ]
+        }
+      ]
+    },
+    "H_pure_original_batch_positions": {
+      "batches": 432,
+      "loss_median": 0.005476755788549781,
+      "loss_sum": 3.4182477279682644,
+      "loss_mean": 0.00791261048140802,
+      "max_loss": 0.049870941787958145,
+      "top_five": [
+        {
+          "local_update": 347,
+          "loss": 0.049870941787958145,
+          "grad_norm": 0.9179825186729431,
+          "sample_indices": [
+            2685,
+            9408,
+            15330,
+            28328
+          ]
+        },
+        {
+          "local_update": 476,
+          "loss": 0.04716974124312401,
+          "grad_norm": 1.7756831645965576,
+          "sample_indices": [
+            19988,
+            26537,
+            28796,
+            31121
+          ]
+        },
+        {
+          "local_update": 427,
+          "loss": 0.04070255160331726,
+          "grad_norm": 1.9062285423278809,
+          "sample_indices": [
+            25469,
+            15022,
+            14204,
+            19048
+          ]
+        },
+        {
+          "local_update": 491,
+          "loss": 0.040587615221738815,
+          "grad_norm": 0.8592206835746765,
+          "sample_indices": [
+            7530,
+            21478,
+            19169,
+            30073
+          ]
+        },
+        {
+          "local_update": 488,
+          "loss": 0.039956942200660706,
+          "grad_norm": 2.7245073318481445,
+          "sample_indices": [
+            8625,
+            22028,
+            29757,
+            5362
+          ]
+        }
+      ]
+    },
+    "H_mixed_batch_positions": {
+      "batches": 68,
+      "loss_median": 0.006471032975241542,
+      "loss_sum": 3.686525578959845,
+      "loss_mean": 0.05421361145529184,
+      "max_loss": 3.10571026802063,
+      "top_five": [
+        {
+          "local_update": 416,
+          "loss": 3.10571026802063,
+          "grad_norm": 205.9264678955078,
+          "sample_indices": [
+            30829,
+            23585,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 100,
+          "loss": 0.046828512102365494,
+          "grad_norm": 3.5371854305267334,
+          "sample_indices": [
+            30449,
+            6218,
+            15586,
+            28948
+          ]
+        },
+        {
+          "local_update": 144,
+          "loss": 0.03396621346473694,
+          "grad_norm": 1.4299670457839966,
+          "sample_indices": [
+            30293,
+            11265,
+            30589,
+            31716
+          ]
+        },
+        {
+          "local_update": 335,
+          "loss": 0.03059667907655239,
+          "grad_norm": 1.5919767618179321,
+          "sample_indices": [
+            28944,
+            31893,
+            16732,
+            24643
+          ]
+        },
+        {
+          "local_update": 306,
+          "loss": 0.024134067818522453,
+          "grad_norm": 1.2468914985656738,
+          "sample_indices": [
+            21179,
+            6466,
+            20938,
+            10992
+          ]
+        }
+      ]
+    },
+    "changed_recovery_batch_positions": {
+      "batches": 27,
+      "loss_median": 0.004191093146800995,
+      "loss_sum": 0.17081751232035458,
+      "loss_mean": 0.006326574530383503,
+      "max_loss": 0.022686541080474854,
+      "top_five": [
+        {
+          "local_update": 313,
+          "loss": 0.022686541080474854,
+          "grad_norm": 0.9801210761070251,
+          "sample_indices": [
+            8161,
+            9432,
+            5361,
+            22513
+          ]
+        },
+        {
+          "local_update": 490,
+          "loss": 0.019430138170719147,
+          "grad_norm": 0.5462340712547302,
+          "sample_indices": [
+            14761,
+            26974,
+            16112,
+            18498
+          ]
+        },
+        {
+          "local_update": 389,
+          "loss": 0.012613499537110329,
+          "grad_norm": 0.8880759477615356,
+          "sample_indices": [
+            10210,
+            22468,
+            14480,
+            27881
+          ]
+        },
+        {
+          "local_update": 137,
+          "loss": 0.012020896188914776,
+          "grad_norm": 0.7460665106773376,
+          "sample_indices": [
+            2951,
+            4371,
+            14513,
+            1192
+          ]
+        },
+        {
+          "local_update": 284,
+          "loss": 0.01090579479932785,
+          "grad_norm": 0.593123733997345,
+          "sample_indices": [
+            18533,
+            5920,
+            4290,
+            20032
+          ]
+        }
+      ]
+    },
+    "unchanged_recovery_batch_positions": {
+      "batches": 41,
+      "loss_median": 0.007190333213657141,
+      "loss_sum": 3.5157080666394904,
+      "loss_mean": 0.08574897723510952,
+      "max_loss": 3.10571026802063,
+      "top_five": [
+        {
+          "local_update": 416,
+          "loss": 3.10571026802063,
+          "grad_norm": 205.9264678955078,
+          "sample_indices": [
+            30829,
+            23585,
+            29371,
+            25772
+          ]
+        },
+        {
+          "local_update": 100,
+          "loss": 0.046828512102365494,
+          "grad_norm": 3.5371854305267334,
+          "sample_indices": [
+            30449,
+            6218,
+            15586,
+            28948
+          ]
+        },
+        {
+          "local_update": 144,
+          "loss": 0.03396621346473694,
+          "grad_norm": 1.4299670457839966,
+          "sample_indices": [
+            30293,
+            11265,
+            30589,
+            31716
+          ]
+        },
+        {
+          "local_update": 335,
+          "loss": 0.03059667907655239,
+          "grad_norm": 1.5919767618179321,
+          "sample_indices": [
+            28944,
+            31893,
+            16732,
+            24643
+          ]
+        },
+        {
+          "local_update": 306,
+          "loss": 0.024134067818522453,
+          "grad_norm": 1.2468914985656738,
+          "sample_indices": [
+            21179,
+            6466,
+            20938,
+            10992
+          ]
+        }
+      ]
+    }
+  }
+}
