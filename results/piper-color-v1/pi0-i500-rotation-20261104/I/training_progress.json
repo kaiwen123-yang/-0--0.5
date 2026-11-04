@@ -1,0 +1,26 @@
+{
+  "group": "I",
+  "local_update": 500,
+  "optimizer_update": 4520,
+  "grad_norm": 0.34298089146614075,
+  "loss": 0.0034334503579884768,
+  "param_norm": 1379.8389892578125,
+  "wall_time": 1793787856.5406919,
+  "compute_seconds": 0.2902625147253275,
+  "data_wait_seconds": 0.019031517207622528,
+  "learning_rate": 1e-06,
+  "sample_offset_before": 1996,
+  "sample_indices": [
+    1341,
+    12596,
+    26288,
+    31627
+  ],
+  "sample_components": [
+    "original",
+    "original",
+    "original",
+    "original"
+  ],
+  "rng_fold_in_step": 4519
+}

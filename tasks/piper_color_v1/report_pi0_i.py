@@ -176,13 +176,38 @@ def report():
     # Read recorded scalar logs only. These are actual batch means, not per-sample causal assignments.
     import json
     batch_comparison = {}
+    scalar_summary = {}
+    corrected_names = {r['directory'] for r in contract['corrected_recovery_sources']}
+    tracked_updates = {19,33,48,416} | {r['update'] for r in sampler['replacements'] if r['suffix'] in corrected_names}
     for label, path in (('I', CAMPAIGN / 'I/lora_metrics.jsonl'),
                         ('H', H_RESULTS / 'H/lora_metrics.jsonl'),
                         ('E', E_RESULTS / 'E/lora_metrics.jsonl')):
         metrics = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+        recovery_updates = {r['update'] for r in sampler['replacements']}
+        changed_updates = {r['update'] for r in sampler['replacements'] if r['suffix'] in corrected_names}
+        def scalar_group(selected):
+            losses = [r['loss'] for r in selected]
+            return dict(batches=len(selected), loss_median=median(losses), loss_sum=sum(losses),
+                loss_mean=sum(losses)/len(losses), max_loss=max(losses),
+                top_five=[{k:r[k] for k in ('local_update','loss','grad_norm','sample_indices')}
+                          for r in sorted(selected,key=lambda r:r['loss'],reverse=True)[:5]])
+        scalar_summary[label] = {name:scalar_group([r for r in metrics if predicate(r['local_update'])])
+            for name,predicate in [('all',lambda u:True),('H_pure_original_batch_positions',lambda u:u not in recovery_updates),
+                ('H_mixed_batch_positions',lambda u:u in recovery_updates),
+                ('changed_recovery_batch_positions',lambda u:u in changed_updates),
+                ('unchanged_recovery_batch_positions',lambda u:u in recovery_updates and u not in changed_updates)]}
+        if label=='I':
+            observed=[index for r in metrics for index in r['sample_indices']]
+            planned=read(CAMPAIGN/'I/sample_order.json')
+            h_order=read(H_RESULTS/'H/sample_order.json')
+            scalar_summary['actual_sampling']=dict(recorded_batches=len(metrics),recorded_samples=len(observed),
+                actual_matches_recorded_I_order=observed==planned, actual_matches_H_order=observed==h_order,
+                original_samples=sum(i<32160 for i in observed),recovery_samples=sum(i>=32160 for i in observed),
+                changed_recovery_batch_positions=sorted(changed_updates),
+                observation='Index equality preserves order; the specified three underlying recovery trajectories have changed.')
         batch_comparison[label] = [{k: item.get(k) for k in ('local_update', 'loss', 'grad_norm',
             'sample_indices', 'sample_components', 'rng_fold_in_step')}
-            for item in metrics if item['local_update'] in (19, 33, 48, 416)]
+            for item in metrics if item['local_update'] in tracked_updates]
     data_change = {k: contract[k] for k in ('teacher_correction', 'corrected_recovery_sources',
         'replaced_teacher_frames', 'reused_teacher_frames', 'corrected_recovery_windows',
         'collection_wall_seconds', 'collection_metadata', 'collection_contract')}
@@ -218,6 +243,7 @@ def report():
     save(CAMPAIGN / 'data_change.json', data_change)
     save(CAMPAIGN / 'observed_training_batch_comparison.json', batch_comparison)
     save(CAMPAIGN / 'stage_timing.json', timing)
+    save(CAMPAIGN / 'training_scalar_summary.json', scalar_summary)
 
     lines = ['# I500教师姿态衔接修正结果', '', decision['reason'], '',
         f"本轮仅改变任务教师的接管旋转衔接：{contract['teacher_correction']}。"
@@ -295,11 +321,12 @@ def report():
               '| 更新 | I loss | H loss | E loss | I裁剪前grad norm |', '|---:|---:|---:|---:|---:|']
     metric_map = {label: {item['local_update']: item for item in batch_comparison[label]}
                   for label in ('I','H','E')}
-    for update in (19,33,48,416):
+    for update in (19,33,48,93,150,416):
         lines.append(f"| {update} | " + ' | '.join(f"{metric_map[label][update]['loss']:.9g}" for label in ('I','H','E')) +
                      f" | {metric_map['I'][update]['grad_norm']:.9g} |")
     lines += ['', '日志loss为实际批均值，grad_norm为原全局裁剪前数值；模型轨迹不同。'
-              '损失下降不等于自主完整任务改善；416原有跨实验尖峰未被归罪113尾窗。', '',
+              '损失下降不等于自主完整任务改善；416原有跨实验尖峰未被归罪113尾窗。'
+              '更新93和150分别含115相对15和25的新窗口，其归一化动作最大值升至91.089和36.988；平滑只是分散姿态回正，不等于消除所有大尺度监督。全部27个改变窗口的实际批次日志均保留。', '',
               '## 实际耗时与结果范围', '',
               f"教师三例正式再采：{timing['collection_seconds']:.2f}秒；"
               f"I正式训练：{timing['training_seconds']:.2f}秒；125项并行评测：{timing['evaluation_seconds']:.2f}秒。"

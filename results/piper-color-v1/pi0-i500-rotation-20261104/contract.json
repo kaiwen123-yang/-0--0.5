@@ -1,6 +1,6 @@
 {
   "task": "pi0-i500-rotation-20261104",
-  "implementation_commit": "3dd547a169c7a821fabd278af3b86a1f3d099b95",
+  "implementation_commit": "ddd225551c552a54ce663bc7da48560e8165d7e7",
   "research_parent": "3dd547a169c7a821fabd278af3b86a1f3d099b95",
   "main_plan_commit": "71f927b1baa26cc5994ba9e9ee20231edb3dbfc6",
   "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
@@ -527,5 +527,6 @@
   "diagnostic_forwards": 0,
   "baseline_reruns": 0,
   "decision_branch": "7.2 confirmed teacher attitude transition, corrected complete data preserves original windows",
-  "evidence_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-h-numeric-review-20261104"
+  "evidence_directory": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-h-numeric-review-20261104",
+  "input_recording_base_commit": "3dd547a169c7a821fabd278af3b86a1f3d099b95"
 }

@@ -1,0 +1,25 @@
+{
+  "group": "I",
+  "source_checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-ab-old2010-20261101/B/checkpoints/pi0_piper_color_lora/ab_old2010/2010",
+  "local_updates": 500,
+  "optimizer_updates": 4520,
+  "full_optimizer_restored": true,
+  "optimizer_scalar_counters": [
+    4020,
+    4020
+  ],
+  "train_rng_key_data": [
+    1832780943,
+    270669613
+  ],
+  "trainable_parameters": 468039440,
+  "train_step": "upstream.train_step",
+  "visual_update_zeroing": false,
+  "learning_rate": 1e-06,
+  "schedule_decay_steps": 5020,
+  "segment_end_local": 500,
+  "segment_complete": true,
+  "initialization_seconds": 9.793125001713634,
+  "checkpoint": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/I/checkpoints/pi0_piper_color_lora/i_rotation/500",
+  "wall_seconds": 204.66491584852338
+}
