@@ -1,0 +1,116 @@
+{
+  "teacher_correction": "Only the existing lift phase uses SO(3) shortest-path SLERP with the same smoothstep as position, from measured takeover rotation to original reset orientation over 30 frames. No policy/controller changes.",
+  "corrected_recovery_sources": [
+    {
+      "layout": 107,
+      "target": "blue",
+      "directory": "recovery_00107_blue_seed42",
+      "base_seed": 42
+    },
+    {
+      "layout": 115,
+      "target": "green",
+      "directory": "recovery_00115_green_seed43",
+      "base_seed": 43
+    },
+    {
+      "layout": 105,
+      "target": "red",
+      "directory": "recovery_00105_red_seed43",
+      "base_seed": 43
+    }
+  ],
+  "replaced_teacher_frames": 450,
+  "reused_teacher_frames": 750,
+  "corrected_recovery_windows": 27,
+  "collection_wall_seconds": 16.04270632751286,
+  "collection_metadata": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-held-rotation-20261104/manifest.json",
+  "collection_contract": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-held-rotation-20261104/collection_contract.json",
+  "collection_actual": {
+    "attempted": 3,
+    "accepted_count": 3,
+    "expert_frames": 450,
+    "wall_seconds": 16.04270632751286,
+    "stage_frames": {
+      "lift": 90,
+      "transfer": 120,
+      "lower": 78,
+      "release": 60,
+      "retreat": 90,
+      "settle": 12
+    }
+  },
+  "collection_cases": [
+    {
+      "layout": 107,
+      "target": "blue",
+      "base_seed": 42,
+      "success": true,
+      "accepted": true,
+      "intervention_frame": 110,
+      "teacher_frames": 150,
+      "stage_frames": {
+        "lift": 30,
+        "transfer": 40,
+        "lower": 26,
+        "release": 20,
+        "retreat": 30,
+        "settle": 4
+      },
+      "continuous_success_steps": 40,
+      "prefix_qpos_max_difference": 0.0,
+      "prefix_qvel_max_difference": 0.0,
+      "prefix_command_max_difference": 0.0
+    },
+    {
+      "layout": 115,
+      "target": "green",
+      "base_seed": 43,
+      "success": true,
+      "accepted": true,
+      "intervention_frame": 210,
+      "teacher_frames": 150,
+      "stage_frames": {
+        "lift": 30,
+        "transfer": 40,
+        "lower": 26,
+        "release": 20,
+        "retreat": 30,
+        "settle": 4
+      },
+      "continuous_success_steps": 40,
+      "prefix_qpos_max_difference": 0.0,
+      "prefix_qvel_max_difference": 0.0,
+      "prefix_command_max_difference": 0.0
+    },
+    {
+      "layout": 105,
+      "target": "red",
+      "base_seed": 43,
+      "success": true,
+      "accepted": true,
+      "intervention_frame": 190,
+      "teacher_frames": 150,
+      "stage_frames": {
+        "lift": 30,
+        "transfer": 40,
+        "lower": 26,
+        "release": 20,
+        "retreat": 30,
+        "settle": 4
+      },
+      "continuous_success_steps": 40,
+      "prefix_qpos_max_difference": 0.0,
+      "prefix_qvel_max_difference": 0.0,
+      "prefix_command_max_difference": 0.0
+    }
+  ],
+  "original_stage_frames": {
+    "lift": 30,
+    "transfer": 40,
+    "lower": 26,
+    "release": 20,
+    "retreat": 30,
+    "settle": 4
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "development": {
+    "grasp_to_lift_seconds": {
+      "observed": 46,
+      "median": 1.225
+    },
+    "held_to_box_seconds": {
+      "observed": 43,
+      "median": 2.9
+    },
+    "remaining_steps_at_box": {
+      "observed": 43,
+      "median": 235
+    },
+    "prebox_first_predicted_open_frame": {
+      "episodes": 0,
+      "tasks": []
+    },
+    "prebox_first_executed_open_frame": {
+      "episodes": 0,
+      "tasks": []
+    },
+    "prebox_first_bilateral_contact_loss_frame": {
+      "episodes": 0,
+      "tasks": []
+    }
+  },
+  "validation": {
+    "grasp_to_lift_seconds": {
+      "observed": 73,
+      "median": 1.5
+    },
+    "held_to_box_seconds": {
+      "observed": 70,
+      "median": 2.5
+    },
+    "remaining_steps_at_box": {
+      "observed": 70,
+      "median": 253.0
+    },
+    "prebox_first_predicted_open_frame": {
+      "episodes": 2,
+      "tasks": [
+        {
+          "split": "validation",
+          "layout": 1003,
+          "target": "red",
+          "base_seed": 43,
+          "slot": "front_left",
+          "success": false,
+          "failure_stage": "lift_or_transfer"
+        },
+        {
+          "split": "validation",
+          "layout": 1003,
+          "target": "green",
+          "base_seed": 43,
+          "slot": "front_right",
+          "success": false,
+          "failure_stage": "lift_or_transfer"
+        }
+      ]
+    },
+    "prebox_first_executed_open_frame": {
+      "episodes": 2,
+      "tasks": [
+        {
+          "split": "validation",
+          "layout": 1003,
+          "target": "red",
+          "base_seed": 43,
+          "slot": "front_left",
+          "success": false,
+          "failure_stage": "lift_or_transfer"
+        },
+        {
+          "split": "validation",
+          "layout": 1003,
+          "target": "green",
+          "base_seed": 43,
+          "slot": "front_right",
+          "success": false,
+          "failure_stage": "lift_or_transfer"
+        }
+      ]
+    },
+    "prebox_first_bilateral_contact_loss_frame": {
+      "episodes": 2,
+      "tasks": [
+        {
+          "split": "validation",
+          "layout": 1003,
+          "target": "red",
+          "base_seed": 43,
+          "slot": "front_left",
+          "success": false,
+          "failure_stage": "lift_or_transfer"
+        },
+        {
+          "split": "validation",
+          "layout": 1003,
+          "target": "green",
+          "base_seed": 43,
+          "slot": "front_right",
+          "success": false,
+          "failure_stage": "lift_or_transfer"
+        }
+      ]
+    }
+  },
+  "additional_sources": {
+    "grasp_to_lift_seconds": {
+      "observed": 2,
+      "median": 0.7749999999999999
+    },
+    "held_to_box_seconds": {
+      "observed": 2,
+      "median": 7.6
+    },
+    "remaining_steps_at_box": {
+      "observed": 2,
+      "median": 165.5
+    },
+    "prebox_first_predicted_open_frame": {
+      "episodes": 0,
+      "tasks": []
+    },
+    "prebox_first_executed_open_frame": {
+      "episodes": 0,
+      "tasks": []
+    },
+    "prebox_first_bilateral_contact_loss_frame": {
+      "episodes": 0,
+      "tasks": []
+    }
+  }
+}

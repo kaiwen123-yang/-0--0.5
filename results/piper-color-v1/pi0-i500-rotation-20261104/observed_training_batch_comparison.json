@@ -1,0 +1,224 @@
+{
+  "I": [
+    {
+      "local_update": 19,
+      "loss": 0.04600343480706215,
+      "grad_norm": 0.636016309261322,
+      "sample_indices": [
+        23872,
+        10499,
+        32460,
+        3760
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "recovery",
+        "original"
+      ],
+      "rng_fold_in_step": 4038
+    },
+    {
+      "local_update": 33,
+      "loss": 3.9503791332244873,
+      "grad_norm": 11.597233772277832,
+      "sample_indices": [
+        1617,
+        31271,
+        804,
+        32760
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "recovery"
+      ],
+      "rng_fold_in_step": 4052
+    },
+    {
+      "local_update": 48,
+      "loss": 0.024856919422745705,
+      "grad_norm": 0.8828324675559998,
+      "sample_indices": [
+        13617,
+        27654,
+        31946,
+        33060
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "recovery"
+      ],
+      "rng_fold_in_step": 4067
+    },
+    {
+      "local_update": 416,
+      "loss": 3.0767643451690674,
+      "grad_norm": 210.74786376953125,
+      "sample_indices": [
+        30829,
+        32300,
+        29371,
+        25772
+      ],
+      "sample_components": [
+        "original",
+        "recovery",
+        "original",
+        "original"
+      ],
+      "rng_fold_in_step": 4435
+    }
+  ],
+  "H": [
+    {
+      "local_update": 19,
+      "loss": 1.2230267524719238,
+      "grad_norm": 8.478157043457031,
+      "sample_indices": [
+        23872,
+        10499,
+        32460,
+        3760
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "recovery",
+        "original"
+      ],
+      "rng_fold_in_step": 4038
+    },
+    {
+      "local_update": 33,
+      "loss": 140.41127014160156,
+      "grad_norm": 74.71034240722656,
+      "sample_indices": [
+        1617,
+        31271,
+        804,
+        32760
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "recovery"
+      ],
+      "rng_fold_in_step": 4052
+    },
+    {
+      "local_update": 48,
+      "loss": 0.16227415204048157,
+      "grad_norm": 2.423778533935547,
+      "sample_indices": [
+        13617,
+        27654,
+        31946,
+        33060
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "recovery"
+      ],
+      "rng_fold_in_step": 4067
+    },
+    {
+      "local_update": 416,
+      "loss": 3.0915896892547607,
+      "grad_norm": 205.7151641845703,
+      "sample_indices": [
+        30829,
+        32300,
+        29371,
+        25772
+      ],
+      "sample_components": [
+        "original",
+        "recovery",
+        "original",
+        "original"
+      ],
+      "rng_fold_in_step": 4435
+    }
+  ],
+  "E": [
+    {
+      "local_update": 19,
+      "loss": 0.004191093146800995,
+      "grad_norm": 0.3812181055545807,
+      "sample_indices": [
+        23872,
+        10499,
+        5301,
+        3760
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "original"
+      ],
+      "rng_fold_in_step": 4038
+    },
+    {
+      "local_update": 33,
+      "loss": 0.002677885117009282,
+      "grad_norm": 0.3161928653717041,
+      "sample_indices": [
+        1617,
+        31271,
+        804,
+        30052
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "original"
+      ],
+      "rng_fold_in_step": 4052
+    },
+    {
+      "local_update": 48,
+      "loss": 0.0083400784060359,
+      "grad_norm": 0.4925588369369507,
+      "sample_indices": [
+        13617,
+        27654,
+        31946,
+        4025
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "original"
+      ],
+      "rng_fold_in_step": 4067
+    },
+    {
+      "local_update": 416,
+      "loss": 3.10571026802063,
+      "grad_norm": 205.9264678955078,
+      "sample_indices": [
+        30829,
+        23585,
+        29371,
+        25772
+      ],
+      "sample_components": [
+        "original",
+        "original",
+        "original",
+        "original"
+      ],
+      "rng_fold_in_step": 4435
+    }
+  ]
+}

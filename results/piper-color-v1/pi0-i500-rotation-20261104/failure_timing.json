@@ -1,0 +1,894 @@
+{
+  "frame_definition": "Zero-based pre-action frame; time=frame/20; terminal steps counts executed actions.",
+  "grasp_definition": "Start of first five-record bilateral contact interval, known retrospectively after frame+4.",
+  "box_definition": "XY interior only; remaining=420-frame, not stable-success dwell time.",
+  "total": 16,
+  "categories": {
+    "contact_without_lift": 4,
+    "lift_without_box": 6,
+    "box_with_more_than_40_steps": 5,
+    "box_with_less_than_40_steps": 1
+  },
+  "episodes": [
+    {
+      "task": {
+        "split": "validation",
+        "layout": 1000,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      "report_group": "validation",
+      "original_failure_stage": "approach_or_grasp",
+      "temporal_category": "contact_without_lift",
+      "progression": {
+        "first_reliable_grasp_frame": 284,
+        "first_lifted_5cm_frame": null,
+        "first_bilateral_lift_frame": null,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": null,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 45,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/validation_01000_red_seed43/attempt000_seed43/layout_01000_red.json",
+      "explanation_zh": "接触区间起点284，抬高未记录，双侧持物未记录，到箱未记录，到箱余步未记录。已有连续双侧接触，旧approach_or_grasp不能解释为从未抓到。"
+    },
+    {
+      "task": {
+        "split": "validation",
+        "layout": 1003,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      "report_group": "validation",
+      "original_failure_stage": "lift_or_transfer",
+      "temporal_category": "lift_without_box",
+      "progression": {
+        "first_reliable_grasp_frame": 88,
+        "first_lifted_5cm_frame": 111,
+        "first_bilateral_lift_frame": 111,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": 1.15,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": 262,
+        "prebox_first_executed_open_frame": 262,
+        "prebox_first_bilateral_contact_loss_frame": 122,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 37,
+      "over_box_frames": 0,
+      "drop_frame": 124,
+      "gripper_open_command_frames_before_drop": 0,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/validation_01003_red_seed43/attempt000_seed43/layout_01003_red.json",
+      "explanation_zh": "接触区间起点88，抬高111，双侧持物111，到箱未记录，到箱余步未记录。既有诊断掉落帧124；掉落前大开爪命令0帧；箱前首次执行大开爪262。该次大开爪晚于掉落，不能把这次开爪写成先行原因。"
+    },
+    {
+      "task": {
+        "split": "validation",
+        "layout": 1003,
+        "target": "green",
+        "base_seed": 43,
+        "slot": "front_right",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      "report_group": "validation",
+      "original_failure_stage": "lift_or_transfer",
+      "temporal_category": "lift_without_box",
+      "progression": {
+        "first_reliable_grasp_frame": 70,
+        "first_lifted_5cm_frame": 97,
+        "first_bilateral_lift_frame": 97,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": 1.35,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": 264,
+        "prebox_first_executed_open_frame": 264,
+        "prebox_first_bilateral_contact_loss_frame": 104,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 34,
+      "over_box_frames": 0,
+      "drop_frame": 106,
+      "gripper_open_command_frames_before_drop": 0,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/validation_01003_green_seed43/attempt000_seed43/layout_01003_green.json",
+      "explanation_zh": "接触区间起点70，抬高97，双侧持物97，到箱未记录，到箱余步未记录。既有诊断掉落帧106；掉落前大开爪命令0帧；箱前首次执行大开爪264。该次大开爪晚于掉落，不能把这次开爪写成先行原因。"
+    },
+    {
+      "task": {
+        "split": "validation",
+        "layout": 1003,
+        "target": "blue",
+        "base_seed": 44,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      "report_group": "validation",
+      "original_failure_stage": "approach_or_grasp",
+      "temporal_category": "contact_without_lift",
+      "progression": {
+        "first_reliable_grasp_frame": 259,
+        "first_lifted_5cm_frame": null,
+        "first_bilateral_lift_frame": null,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": null,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 161,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/validation_01003_blue_seed44/attempt000_seed44/layout_01003_blue.json",
+      "explanation_zh": "接触区间起点259，抬高未记录，双侧持物未记录，到箱未记录，到箱余步未记录。已有连续双侧接触，旧approach_or_grasp不能解释为从未抓到。"
+    },
+    {
+      "task": {
+        "split": "validation",
+        "layout": 1000,
+        "target": "red",
+        "base_seed": 46,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      "report_group": "validation",
+      "original_failure_stage": "lift_or_transfer",
+      "temporal_category": "lift_without_box",
+      "progression": {
+        "first_reliable_grasp_frame": 144,
+        "first_lifted_5cm_frame": 223,
+        "first_bilateral_lift_frame": 223,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": 3.95,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 276,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/validation_01000_red_seed46/attempt000_seed46/layout_01000_red.json",
+      "explanation_zh": "接触区间起点144，抬高223，双侧持物223，到箱未记录，到箱余步未记录。"
+    },
+    {
+      "task": {
+        "split": "validation",
+        "layout": 1001,
+        "target": "blue",
+        "base_seed": 46,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      "report_group": "validation",
+      "original_failure_stage": "stability_or_distractor",
+      "temporal_category": "box_with_more_than_40_steps",
+      "progression": {
+        "first_reliable_grasp_frame": 81,
+        "first_lifted_5cm_frame": 194,
+        "first_bilateral_lift_frame": 194,
+        "first_over_box_frame": 313,
+        "grasp_to_lift_seconds": 5.65,
+        "held_to_box_seconds": 5.95,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": 107,
+        "remaining_40_step_budget_at_box": true,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 296,
+      "over_box_frames": 107,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/validation_01001_blue_seed46/attempt000_seed46/layout_01001_blue.json",
+      "explanation_zh": "接触区间起点81，抬高194，双侧持物194，到箱313，到箱余步107。终态入箱且开爪，但未累计40步连续成功；JSON无最终连续计数，不推断具体缺几帧。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 100,
+        "target": "blue",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      "report_group": "development",
+      "original_failure_stage": "stability_or_distractor",
+      "temporal_category": "box_with_more_than_40_steps",
+      "progression": {
+        "first_reliable_grasp_frame": 169,
+        "first_lifted_5cm_frame": 321,
+        "first_bilateral_lift_frame": 321,
+        "first_over_box_frame": 359,
+        "grasp_to_lift_seconds": 7.6,
+        "held_to_box_seconds": 1.9,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": 61,
+        "remaining_40_step_budget_at_box": true,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 240,
+      "over_box_frames": 61,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00100_blue_seed43/attempt000_seed43/layout_00100_blue.json",
+      "explanation_zh": "接触区间起点169，抬高321，双侧持物321，到箱359，到箱余步61。终态入箱且开爪，但未累计40步连续成功；JSON无最终连续计数，不推断具体缺几帧。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 101,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "lower_or_release"
+      },
+      "report_group": "development",
+      "original_failure_stage": "lower_or_release",
+      "temporal_category": "box_with_less_than_40_steps",
+      "progression": {
+        "first_reliable_grasp_frame": 287,
+        "first_lifted_5cm_frame": 312,
+        "first_bilateral_lift_frame": 312,
+        "first_over_box_frame": 389,
+        "grasp_to_lift_seconds": 1.25,
+        "held_to_box_seconds": 3.85,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": 31,
+        "remaining_40_step_budget_at_box": false,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 133,
+      "over_box_frames": 31,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00101_red_seed43/attempt000_seed43/layout_00101_red.json",
+      "explanation_zh": "接触区间起点287，抬高312，双侧持物312，到箱389，到箱余步31。首次到箱已不足40步稳定计时预算，不能仅凭旧标签归因为释放控制。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 103,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      "report_group": "development",
+      "original_failure_stage": "approach_or_grasp",
+      "temporal_category": "contact_without_lift",
+      "progression": {
+        "first_reliable_grasp_frame": 194,
+        "first_lifted_5cm_frame": null,
+        "first_bilateral_lift_frame": null,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": null,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 8,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.038839599191038986
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00103_red_seed43/attempt000_seed43/layout_00103_red.json",
+      "explanation_zh": "接触区间起点194，抬高未记录，双侧持物未记录，到箱未记录，到箱余步未记录。已有连续双侧接触，旧approach_or_grasp不能解释为从未抓到。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 105,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      "report_group": "development",
+      "original_failure_stage": "lift_or_transfer",
+      "temporal_category": "lift_without_box",
+      "progression": {
+        "first_reliable_grasp_frame": 150,
+        "first_lifted_5cm_frame": 253,
+        "first_bilateral_lift_frame": 253,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": 5.15,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 270,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00105_red_seed43/attempt000_seed43/layout_00105_red.json",
+      "explanation_zh": "接触区间起点150，抬高253，双侧持物253，到箱未记录，到箱余步未记录。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 114,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      "report_group": "development",
+      "original_failure_stage": "stability_or_distractor",
+      "temporal_category": "box_with_more_than_40_steps",
+      "progression": {
+        "first_reliable_grasp_frame": 264,
+        "first_lifted_5cm_frame": 280,
+        "first_bilateral_lift_frame": 280,
+        "first_over_box_frame": 345,
+        "grasp_to_lift_seconds": 0.8,
+        "held_to_box_seconds": 3.25,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": 75,
+        "remaining_40_step_budget_at_box": true,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 125,
+      "over_box_frames": 75,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00114_red_seed43/attempt000_seed43/layout_00114_red.json",
+      "explanation_zh": "接触区间起点264，抬高280，双侧持物280，到箱345，到箱余步75。终态入箱且开爪，但未累计40步连续成功；JSON无最终连续计数，不推断具体缺几帧。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 124,
+        "target": "red",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "approach_or_grasp"
+      },
+      "report_group": "development",
+      "original_failure_stage": "approach_or_grasp",
+      "temporal_category": "contact_without_lift",
+      "progression": {
+        "first_reliable_grasp_frame": 411,
+        "first_lifted_5cm_frame": null,
+        "first_bilateral_lift_frame": null,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": null,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 9,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "green": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00124_red_seed43/attempt000_seed43/layout_00124_red.json",
+      "explanation_zh": "接触区间起点411，抬高未记录，双侧持物未记录，到箱未记录，到箱余步未记录。已有连续双侧接触，旧approach_or_grasp不能解释为从未抓到。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 126,
+        "target": "blue",
+        "base_seed": 43,
+        "slot": "back",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      "report_group": "development",
+      "original_failure_stage": "lift_or_transfer",
+      "temporal_category": "lift_without_box",
+      "progression": {
+        "first_reliable_grasp_frame": 172,
+        "first_lifted_5cm_frame": 210,
+        "first_bilateral_lift_frame": 210,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": 1.9,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 248,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00126_blue_seed43/attempt000_seed43/layout_00126_blue.json",
+      "explanation_zh": "接触区间起点172，抬高210，双侧持物210，到箱未记录，到箱余步未记录。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 100,
+        "target": "green",
+        "base_seed": 43,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "lift_or_transfer"
+      },
+      "report_group": "development",
+      "original_failure_stage": "lift_or_transfer",
+      "temporal_category": "lift_without_box",
+      "progression": {
+        "first_reliable_grasp_frame": 76,
+        "first_lifted_5cm_frame": 349,
+        "first_bilateral_lift_frame": 349,
+        "first_over_box_frame": null,
+        "grasp_to_lift_seconds": 13.65,
+        "held_to_box_seconds": null,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": null,
+        "remaining_40_step_budget_at_box": null,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 344,
+      "over_box_frames": 0,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "blue": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00100_green_seed43/attempt000_seed43/layout_00100_green.json",
+      "explanation_zh": "接触区间起点76，抬高349，双侧持物349，到箱未记录，到箱余步未记录。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 107,
+        "target": "blue",
+        "base_seed": 42,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "lower_or_release"
+      },
+      "report_group": "development",
+      "original_failure_stage": "lower_or_release",
+      "temporal_category": "box_with_more_than_40_steps",
+      "progression": {
+        "first_reliable_grasp_frame": 75,
+        "first_lifted_5cm_frame": 307,
+        "first_bilateral_lift_frame": 307,
+        "first_over_box_frame": 371,
+        "grasp_to_lift_seconds": 11.6,
+        "held_to_box_seconds": 3.2,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": 49,
+        "remaining_40_step_budget_at_box": true,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 345,
+      "over_box_frames": 49,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": false,
+        "wrong_in_box": false,
+        "gripper_open": false,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00107_blue_seed42/attempt000_seed42/layout_00107_blue.json",
+      "explanation_zh": "接触区间起点75，抬高307，双侧持物307，到箱371，到箱余步49。"
+    },
+    {
+      "task": {
+        "split": "train",
+        "layout": 120,
+        "target": "blue",
+        "base_seed": 43,
+        "slot": "front_left",
+        "success": false,
+        "failure_stage": "stability_or_distractor"
+      },
+      "report_group": "additional_sources",
+      "original_failure_stage": "stability_or_distractor",
+      "temporal_category": "box_with_more_than_40_steps",
+      "progression": {
+        "first_reliable_grasp_frame": 83,
+        "first_lifted_5cm_frame": 100,
+        "first_bilateral_lift_frame": 100,
+        "first_over_box_frame": 337,
+        "grasp_to_lift_seconds": 0.85,
+        "held_to_box_seconds": 11.85,
+        "prebox_first_predicted_open_frame": null,
+        "prebox_first_executed_open_frame": null,
+        "prebox_first_bilateral_contact_loss_frame": null,
+        "remaining_steps_at_box": 83,
+        "remaining_40_step_budget_at_box": true,
+        "definitions": {
+          "grasp": "both normal forces >0.05 N for 5 consecutive recorded frames; report interval start",
+          "lift": "target height > block half-height +0.05 m",
+          "held": "lift and bilateral contact",
+          "prebox_open": "width command >0.04 m after first bilateral lift and before first over-box frame; descriptive event, not proof of cause",
+          "contact_loss": "first loss of bilateral contact in same interval, not necessarily a drop",
+          "times": "recorded pre-action frame /20; normal complete-task trajectory only"
+        }
+      },
+      "bilateral_contact_frames": 301,
+      "over_box_frames": 83,
+      "drop_frame": null,
+      "gripper_open_command_frames_before_drop": null,
+      "terminal": {
+        "steps": 420,
+        "success": false,
+        "stable_2s": false,
+        "correct_in_box": true,
+        "wrong_in_box": false,
+        "gripper_open": true,
+        "distractor_displacement_m": {
+          "red": 0.0,
+          "green": 0.0
+        },
+        "max_joint_violation_rad": 0.0,
+        "error": null
+      },
+      "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/evaluations/I_500/train_00120_blue_seed43/attempt000_seed43/layout_00120_blue.json",
+      "explanation_zh": "接触区间起点83，抬高100，双侧持物100，到箱337，到箱余步83。终态入箱且开爪，但未累计40步连续成功；JSON无最终连续计数，不推断具体缺几帧。"
+    }
+  ]
+}

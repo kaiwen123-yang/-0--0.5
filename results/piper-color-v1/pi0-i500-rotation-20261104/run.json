@@ -1,10 +1,10 @@
 {
   "started_at": "2026-11-04T10:21:07.886443+00:00",
-  "completed": false,
-  "new_complete_tasks": 73,
-  "stage": "parallel_formal_evaluation",
+  "completed": true,
+  "new_complete_tasks": 125,
+  "stage": "experiment_complete",
   "error": null,
-  "at_utc": "2026-11-04T10:32:01.879512+00:00",
+  "at_utc": "2026-11-04T10:37:07.810617+00:00",
   "training_pid": null,
   "training_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/logs/train_I500.log",
   "training_exit": 0,
@@ -18,41 +18,46 @@
   "lanes": [
     {
       "lane": 0,
-      "completed": 38,
+      "completed": 63,
       "expected": 63,
       "last": {
-        "split": "validation",
-        "layout": 1004,
-        "target": "blue",
-        "base_seed": 46,
-        "report_group": "validation",
-        "roster_index": 74,
+        "split": "train",
+        "layout": 139,
+        "target": "red",
+        "base_seed": 42,
+        "report_group": "additional_sources",
+        "roster_index": 124,
         "lane": 0
       },
       "started_at": "2026-11-04T10:25:32.050491+00:00",
-      "at_utc": "2026-11-04T10:32:01.012227+00:00",
-      "wall_seconds": 388.9617507029325
+      "at_utc": "2026-11-04T10:37:02.002035+00:00",
+      "wall_seconds": 689.951558900997
     },
     {
       "lane": 1,
-      "completed": 35,
+      "completed": 62,
       "expected": 62,
       "last": {
-        "split": "validation",
-        "layout": 1003,
-        "target": "red",
-        "base_seed": 46,
-        "report_group": "validation",
-        "roster_index": 69,
+        "split": "train",
+        "layout": 120,
+        "target": "blue",
+        "base_seed": 43,
+        "report_group": "additional_sources",
+        "roster_index": 123,
         "lane": 1
       },
       "started_at": "2026-11-04T10:25:32.045643+00:00",
-      "at_utc": "2026-11-04T10:32:00.434942+00:00",
-      "wall_seconds": 388.38931107893586
+      "at_utc": "2026-11-04T10:36:59.275043+00:00",
+      "wall_seconds": 687.229409981519
     }
   ],
   "worker_pids": [
     228506,
     228507
-  ]
+  ],
+  "finished_at": "2026-11-04T10:37:07.810601+00:00",
+  "execution_wall_seconds": 959.805645108223,
+  "retain_I_as_candidate": false,
+  "official_model": "B",
+  "large_artifacts": "server_retained_no_I_release_queue"
 }

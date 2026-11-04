@@ -1,0 +1,14 @@
+{
+  "retain_I_as_candidate": false,
+  "official_model": "B",
+  "I_validation_successes": 69,
+  "I_development_successes": 39,
+  "I_source_successes": 4,
+  "B_source_successes": 0,
+  "related_complete_task_benefit_over_B": true,
+  "criterion": "I validation >=72/75 and (development complete successes >25/48 or recovery source autonomous successes >0/8); retain as candidate only, B remains official",
+  "reason": "本次教师姿态衔接修正的I500未达到候选保留条件；B继续正式，本轮结束。",
+  "automatic_continuation": false,
+  "new_independent_test_performed": false,
+  "scope": "Only teacher rotation transition changes; original H order and B coordinates retained."
+}

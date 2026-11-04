@@ -1,0 +1,446 @@
+{
+  "development": {
+    "I": {
+      "total": 48,
+      "successes": 39,
+      "by_color": {
+        "red": {
+          "total": 22,
+          "successes": 17
+        },
+        "green": {
+          "total": 16,
+          "successes": 15
+        },
+        "blue": {
+          "total": 10,
+          "successes": 7
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 32,
+          "successes": 25
+        },
+        "front_left": {
+          "total": 8,
+          "successes": 6
+        },
+        "front_right": {
+          "total": 8,
+          "successes": 8
+        }
+      },
+      "failure_stages": {
+        "stability_or_distractor": 2,
+        "lower_or_release": 2,
+        "approach_or_grasp": 2,
+        "lift_or_transfer": 3
+      }
+    },
+    "H": {
+      "total": 48,
+      "successes": 37,
+      "by_color": {
+        "red": {
+          "total": 22,
+          "successes": 17
+        },
+        "green": {
+          "total": 16,
+          "successes": 15
+        },
+        "blue": {
+          "total": 10,
+          "successes": 5
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 32,
+          "successes": 24
+        },
+        "front_left": {
+          "total": 8,
+          "successes": 5
+        },
+        "front_right": {
+          "total": 8,
+          "successes": 8
+        }
+      },
+      "failure_stages": {
+        "stability_or_distractor": 1,
+        "approach_or_grasp": 3,
+        "lower_or_release": 3,
+        "lift_or_transfer": 4
+      }
+    },
+    "E": {
+      "total": 48,
+      "successes": 34,
+      "by_color": {
+        "red": {
+          "total": 22,
+          "successes": 13
+        },
+        "green": {
+          "total": 16,
+          "successes": 15
+        },
+        "blue": {
+          "total": 10,
+          "successes": 6
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 32,
+          "successes": 21
+        },
+        "front_left": {
+          "total": 8,
+          "successes": 5
+        },
+        "front_right": {
+          "total": 8,
+          "successes": 8
+        }
+      },
+      "failure_stages": {
+        "stability_or_distractor": 2,
+        "approach_or_grasp": 5,
+        "lift_or_transfer": 2,
+        "release": 1,
+        "approach_no_closure": 1,
+        "lower_or_release": 3
+      }
+    },
+    "B": {
+      "total": 48,
+      "successes": 25,
+      "by_color": {
+        "red": {
+          "total": 22,
+          "successes": 10
+        },
+        "green": {
+          "total": 16,
+          "successes": 12
+        },
+        "blue": {
+          "total": 10,
+          "successes": 3
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 32,
+          "successes": 14
+        },
+        "front_left": {
+          "total": 8,
+          "successes": 4
+        },
+        "front_right": {
+          "total": 8,
+          "successes": 7
+        }
+      },
+      "failure_stages": {
+        "approach_or_grasp": 10,
+        "lower_or_release": 2,
+        "approach_no_closure": 3,
+        "stability_or_distractor": 1,
+        "lift_or_transfer": 7
+      }
+    }
+  },
+  "validation": {
+    "I": {
+      "total": 75,
+      "successes": 69,
+      "by_color": {
+        "red": {
+          "total": 25,
+          "successes": 22
+        },
+        "green": {
+          "total": 25,
+          "successes": 24
+        },
+        "blue": {
+          "total": 25,
+          "successes": 23
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 25,
+          "successes": 22
+        },
+        "front_left": {
+          "total": 25,
+          "successes": 23
+        },
+        "front_right": {
+          "total": 25,
+          "successes": 24
+        }
+      },
+      "failure_stages": {
+        "approach_or_grasp": 2,
+        "lift_or_transfer": 3,
+        "stability_or_distractor": 1
+      }
+    },
+    "H": {
+      "total": 75,
+      "successes": 65,
+      "by_color": {
+        "red": {
+          "total": 25,
+          "successes": 22
+        },
+        "green": {
+          "total": 25,
+          "successes": 19
+        },
+        "blue": {
+          "total": 25,
+          "successes": 24
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 25,
+          "successes": 22
+        },
+        "front_left": {
+          "total": 25,
+          "successes": 19
+        },
+        "front_right": {
+          "total": 25,
+          "successes": 24
+        }
+      },
+      "failure_stages": {
+        "lift_or_transfer": 5,
+        "lower_or_release": 3,
+        "approach_or_grasp": 2
+      }
+    },
+    "E": {
+      "total": 75,
+      "successes": 67,
+      "by_color": {
+        "red": {
+          "total": 25,
+          "successes": 21
+        },
+        "green": {
+          "total": 25,
+          "successes": 22
+        },
+        "blue": {
+          "total": 25,
+          "successes": 24
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 25,
+          "successes": 22
+        },
+        "front_left": {
+          "total": 25,
+          "successes": 21
+        },
+        "front_right": {
+          "total": 25,
+          "successes": 24
+        }
+      },
+      "failure_stages": {
+        "lift_or_transfer": 3,
+        "lower_or_release": 1,
+        "approach_or_grasp": 4
+      }
+    },
+    "B": {
+      "total": 75,
+      "successes": 72,
+      "by_color": {
+        "red": {
+          "total": 25,
+          "successes": 24
+        },
+        "green": {
+          "total": 25,
+          "successes": 25
+        },
+        "blue": {
+          "total": 25,
+          "successes": 23
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 25,
+          "successes": 23
+        },
+        "front_left": {
+          "total": 25,
+          "successes": 24
+        },
+        "front_right": {
+          "total": 25,
+          "successes": 25
+        }
+      },
+      "failure_stages": {
+        "approach_or_grasp": 1,
+        "lift_or_transfer": 2
+      }
+    }
+  },
+  "additional_sources": {
+    "I": {
+      "total": 2,
+      "successes": 1,
+      "by_color": {
+        "red": {
+          "total": 1,
+          "successes": 1
+        },
+        "green": {
+          "total": 0,
+          "successes": 0
+        },
+        "blue": {
+          "total": 1,
+          "successes": 0
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 0,
+          "successes": 0
+        },
+        "front_left": {
+          "total": 2,
+          "successes": 1
+        },
+        "front_right": {
+          "total": 0,
+          "successes": 0
+        }
+      },
+      "failure_stages": {
+        "stability_or_distractor": 1
+      }
+    },
+    "H": {
+      "total": 2,
+      "successes": 2,
+      "by_color": {
+        "red": {
+          "total": 1,
+          "successes": 1
+        },
+        "green": {
+          "total": 0,
+          "successes": 0
+        },
+        "blue": {
+          "total": 1,
+          "successes": 1
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 0,
+          "successes": 0
+        },
+        "front_left": {
+          "total": 2,
+          "successes": 2
+        },
+        "front_right": {
+          "total": 0,
+          "successes": 0
+        }
+      },
+      "failure_stages": {}
+    },
+    "E": {
+      "total": 0,
+      "successes": 0,
+      "by_color": {
+        "red": {
+          "total": 0,
+          "successes": 0
+        },
+        "green": {
+          "total": 0,
+          "successes": 0
+        },
+        "blue": {
+          "total": 0,
+          "successes": 0
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 0,
+          "successes": 0
+        },
+        "front_left": {
+          "total": 0,
+          "successes": 0
+        },
+        "front_right": {
+          "total": 0,
+          "successes": 0
+        }
+      },
+      "failure_stages": {}
+    },
+    "B": {
+      "total": 2,
+      "successes": 0,
+      "by_color": {
+        "red": {
+          "total": 1,
+          "successes": 0
+        },
+        "green": {
+          "total": 0,
+          "successes": 0
+        },
+        "blue": {
+          "total": 1,
+          "successes": 0
+        }
+      },
+      "by_slot": {
+        "back": {
+          "total": 0,
+          "successes": 0
+        },
+        "front_left": {
+          "total": 2,
+          "successes": 0
+        },
+        "front_right": {
+          "total": 0,
+          "successes": 0
+        }
+      },
+      "failure_stages": {
+        "historical_failure": 2
+      }
+    }
+  }
+}
