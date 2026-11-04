@@ -2,9 +2,9 @@
   "started_at": "2026-11-04T10:21:07.886443+00:00",
   "completed": true,
   "new_complete_tasks": 125,
-  "stage": "experiment_complete",
+  "stage": "complete",
   "error": null,
-  "at_utc": "2026-11-04T10:37:07.810617+00:00",
+  "at_utc": "2026-11-04T10:37:33.738427+00:00",
   "training_pid": null,
   "training_log": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-i500-rotation-20261104/logs/train_I500.log",
   "training_exit": 0,
@@ -59,5 +59,6 @@
   "execution_wall_seconds": 959.805645108223,
   "retain_I_as_candidate": false,
   "official_model": "B",
-  "large_artifacts": "server_retained_no_I_release_queue"
+  "large_artifacts": "server_retained_no_I_release_queue",
+  "publication_status": "pushed"
 }
