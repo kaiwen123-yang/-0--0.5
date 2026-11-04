@@ -1,0 +1,397 @@
+{
+  "layout": 105,
+  "target": "red",
+  "base_seed": 43,
+  "split": "train",
+  "trajectory": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-held-rotation-20261104/dataset/recovery_00105_red_seed43.npz",
+  "source_result": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.json",
+  "input_source": "selective_release_member_restore",
+  "asset": "progressive-bct-new-records-47ef5a035399e90f.tar",
+  "asset_id": 701633726,
+  "archive_member": "pi-reproduction/outputs/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00105_red_seed43/attempt000_seed43/layout_00105_red.npz",
+  "bytes": 728992,
+  "intervention_frame": 190,
+  "slot": "back",
+  "problem_stage": "late_transfer_insufficient_stability_budget",
+  "selection_reason": "First box arrival at 404 leaves less than 40 frames; recover earlier actual held state rather than label release failure",
+  "source_first_over_box_frame": 404,
+  "source_contact_changes": [
+    100,
+    101,
+    102
+  ],
+  "source_takeover": {
+    "normal_force_N": [
+      9.993123933445498,
+      10.006869126870223
+    ],
+    "target_position": [
+      -0.20914381468875903,
+      -0.028421803448157566,
+      0.0786589964753964
+    ],
+    "tcp": [
+      -0.21870453550826485,
+      -0.03434684218609165,
+      0.07719694061426143
+    ],
+    "measured_width_m": 0.032715536653995514,
+    "executed_command": [
+      -0.13387538492679596,
+      1.4492324590682983,
+      -0.8624036908149719,
+      -0.005152137018740177,
+      1.0370510816574097,
+      -0.6947722434997559,
+      0.010152867995202541
+    ],
+    "raw_prediction": [
+      -0.13387538492679596,
+      1.4492324590682983,
+      -0.8624036908149719,
+      -0.005152137018740177,
+      1.0370510816574097,
+      -0.6947722434997559,
+      0.010152867995202541
+    ]
+  },
+  "source_stage_window": [
+    {
+      "frame": 180,
+      "normal_force_N": [
+        9.992354350779006,
+        10.007638447140865
+      ],
+      "target_position": [
+        -0.2057478535390452,
+        -0.030642473547220172,
+        0.07360511371029548
+      ],
+      "executed_command": [
+        -0.13958542048931122,
+        1.4543817043304443,
+        -0.8458723425865173,
+        -0.006269492674618959,
+        1.0176358222961426,
+        -0.678849458694458,
+        0.00496539706364274
+      ],
+      "raw_prediction": [
+        -0.13958542048931122,
+        1.4543817043304443,
+        -0.8458723425865173,
+        -0.006269492674618959,
+        1.0176358222961426,
+        -0.678849458694458,
+        0.00496539706364274
+      ]
+    },
+    {
+      "frame": 185,
+      "normal_force_N": [
+        10.005904450246689,
+        10.024079622456433
+      ],
+      "target_position": [
+        -0.20825765809514546,
+        -0.029720188483211438,
+        0.07626464926790494
+      ],
+      "executed_command": [
+        -0.13481877744197845,
+        1.4494168758392334,
+        -0.849265992641449,
+        -0.005944570992141962,
+        1.026390552520752,
+        -0.6884980797767639,
+        0.0067145852372050285
+      ],
+      "raw_prediction": [
+        -0.13481877744197845,
+        1.4494168758392334,
+        -0.849265992641449,
+        -0.005944570992141962,
+        1.026390552520752,
+        -0.6884980797767639,
+        0.0067145852372050285
+      ]
+    },
+    {
+      "frame": 190,
+      "normal_force_N": [
+        9.993123933445498,
+        10.006869126870223
+      ],
+      "target_position": [
+        -0.20914381468875903,
+        -0.028421803448157566,
+        0.0786589964753964
+      ],
+      "executed_command": [
+        -0.13387538492679596,
+        1.4492324590682983,
+        -0.8624036908149719,
+        -0.005152137018740177,
+        1.0370510816574097,
+        -0.6947722434997559,
+        0.010152867995202541
+      ],
+      "raw_prediction": [
+        -0.13387538492679596,
+        1.4492324590682983,
+        -0.8624036908149719,
+        -0.005152137018740177,
+        1.0370510816574097,
+        -0.6947722434997559,
+        0.010152867995202541
+      ]
+    },
+    {
+      "frame": 195,
+      "normal_force_N": [
+        9.994112791003396,
+        10.005884711705804
+      ],
+      "target_position": [
+        -0.20702099526814524,
+        -0.028132072453804134,
+        0.08207749525330386
+      ],
+      "executed_command": [
+        -0.13182194530963898,
+        1.4455841779708862,
+        -0.862350583076477,
+        -0.0054247393272817135,
+        1.0388984680175781,
+        -0.7037193775177002,
+        0.007289804983884096
+      ],
+      "raw_prediction": [
+        -0.13182194530963898,
+        1.4455841779708862,
+        -0.862350583076477,
+        -0.0054247393272817135,
+        1.0388984680175781,
+        -0.7037193775177002,
+        0.007289804983884096
+      ]
+    },
+    {
+      "frame": 200,
+      "normal_force_N": [
+        10.007509763166645,
+        10.027855627965906
+      ],
+      "target_position": [
+        -0.2070989098955027,
+        -0.02753154599941707,
+        0.08264297469022458
+      ],
+      "executed_command": [
+        -0.12950067222118378,
+        1.445859432220459,
+        -0.8714844584465027,
+        -0.005492285825312138,
+        1.0425708293914795,
+        -0.708547830581665,
+        0.01510748639702797
+      ],
+      "raw_prediction": [
+        -0.12950067222118378,
+        1.445859432220459,
+        -0.8714844584465027,
+        -0.005492285825312138,
+        1.0425708293914795,
+        -0.708547830581665,
+        0.01510748639702797
+      ]
+    }
+  ],
+  "name": "recovery_00105_red_seed43",
+  "attempted_at": "2026-11-04T10:15:26.676851+00:00",
+  "success": true,
+  "accepted": true,
+  "teacher_intervention": true,
+  "autonomous_success_eligible": false,
+  "video": "/root/autodl-tmp/robot-repro/pi-reproduction/outputs/pi0-held-rotation-20261104/dataset/recovery_00105_red_seed43.mp4",
+  "remaining_budget": 230,
+  "teacher_plan": [
+    {
+      "stage": "lift",
+      "start_frame": 190,
+      "endpoint": [
+        -0.21870453550826485,
+        -0.03434684218609165,
+        0.17
+      ],
+      "width": 0.0,
+      "planned_frames": 30
+    },
+    {
+      "stage": "transfer",
+      "start_frame": 220,
+      "endpoint": [
+        -0.15067628799001323,
+        0.1558822317532245,
+        0.17
+      ],
+      "width": 0.0,
+      "planned_frames": 40
+    },
+    {
+      "stage": "lower",
+      "start_frame": 260,
+      "endpoint": [
+        -0.15100305427954916,
+        0.1558448137773488,
+        0.08
+      ],
+      "width": 0.0,
+      "planned_frames": 26
+    },
+    {
+      "stage": "release",
+      "start_frame": 286,
+      "endpoint": [
+        -0.15332863990748666,
+        0.1546251478043116,
+        0.08313162695651845
+      ],
+      "width": 0.1,
+      "planned_frames": 20
+    },
+    {
+      "stage": "retreat",
+      "start_frame": 306,
+      "endpoint": [
+        -0.15371297880798948,
+        0.15453344700962726,
+        0.17
+      ],
+      "width": 0.1,
+      "planned_frames": 30
+    }
+  ],
+  "prefix_qpos_max_difference": 0.0,
+  "prefix_qvel_max_difference": 0.0,
+  "prefix_command_max_difference": 0.0,
+  "takeover": {
+    "tcp": [
+      -0.21870453550826485,
+      -0.03434684218609165,
+      0.07719694061426143
+    ],
+    "target_position": [
+      -0.20914381468875903,
+      -0.028421803448157566,
+      0.0786589964753964
+    ],
+    "target_lift_m": 0.061158996475396396,
+    "normal_force_N": [
+      9.993123933445498,
+      10.006869126870223
+    ],
+    "contact_count": [
+      1,
+      1
+    ],
+    "measured_width_m": 0.032715536653995514,
+    "commanded_width_m": 0.004103112034499645,
+    "object_in_tcp_m": [
+      -0.011270941848635974,
+      1.6220071877931968e-06,
+      -0.0012715900240997439
+    ]
+  },
+  "takeover_clock_seconds": 9.499999999999842,
+  "takeover_steps": 190,
+  "held_at_takeover": true,
+  "bilateral_at_takeover": true,
+  "rotation_transition": {
+    "stage": "lift",
+    "frames": 30,
+    "interpolation": "shortest-path SLERP with t*t*(3-2*t)",
+    "measured_start": [
+      [
+        -0.8512893278085705,
+        -0.5240441418668843,
+        0.026157555968310334
+      ],
+      [
+        -0.5244228227006534,
+        0.8513973743592574,
+        -0.010159427387587922
+      ],
+      [
+        -0.016946486063887288,
+        -0.022366231447551305,
+        -0.9996062066138461
+      ]
+    ],
+    "reset_target": [
+      [
+        -0.9393726957153469,
+        -0.34289785438884574,
+        9.620061553156133e-08
+      ],
+      [
+        -0.34289785438884196,
+        0.9393726957153516,
+        5.334413751236759e-08
+      ],
+      [
+        -1.0865982183857321e-07,
+        1.7123041598944604e-08,
+        -0.9999999999999944
+      ]
+    ]
+  },
+  "terminal": {
+    "layout_seed": 105,
+    "target": "red",
+    "correct_in_box": true,
+    "wrong_in_box": false,
+    "gripper_open": true,
+    "distractor_displacement_m": {
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_lift_m": {
+      "red": 0.150796429921643,
+      "green": 0.0,
+      "blue": 0.0
+    },
+    "max_joint_violation_rad": 0.0,
+    "success": true,
+    "final_positions": {
+      "red": [
+        -0.15023028390776313,
+        0.1597311358535495,
+        0.025393255988701208
+      ],
+      "green": [
+        -0.23113053065713446,
+        -0.13623912628450224,
+        0.017393255988701235
+      ],
+      "blue": [
+        -0.14129157524841646,
+        -0.14981227843248202,
+        0.01739325598870124
+      ]
+    },
+    "steps": 340
+  },
+  "steps": 340,
+  "continuous_success_steps": 40,
+  "outcome_reason": "Teacher suffix completed original task conditions for 40 consecutive steps within total 420",
+  "teacher_frames": 150,
+  "stage_frames": {
+    "lift": 30,
+    "transfer": 40,
+    "lower": 26,
+    "release": 20,
+    "retreat": 30,
+    "settle": 4
+  }
+}

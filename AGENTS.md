@@ -1,3 +1,15 @@
+## 2026-11-04 当前任务：已定位教师姿态衔接，唯一 I500 已授权
+
+- main当前依据 docs/PI0_H500_REVIEW_NEXT_PLAN_20261104.md，运行基线3dd547a及后续本工作区；不用main旧代码覆盖。
+- H500已完成37/48开发、65/75验证、补充2/2、八来源5/8；不重跑H/B/E/G、不续H1000，B仍正式。
+- 已定点读取更新19/33/48/416，共20个真实窗口；NPY与恢复NPZ对应无错位。证据与21例失败时序在 results/piper-color-v1/pi0-h-numeric-review-20261104/。
+- 已确认reset固定姿态导致接管IK目标突变。只改本任务教师，原30帧lift同步SLERP姿态；107/115/105三次完整恢复均成功、各150帧/阶段不变、原接管qpos/qvel/command差0。原版本保留，新增450教师帧版本，其余750复用。
+- 正常进入计划7.2唯一I500，执行入口tasks/piper_color_v1/run_pi0_i.py；先读outputs/pi0-i500-rotation-20261104/run.json与活动进程，不重复启动。B完整4020、原optimizer/RNG/norm、500更新、batch4、1e-6、原upstream范围；H全部2000采样顺序不动，1932原+68恢复，27窗口读新版三轨迹。
+- I保存后原125任务两独立服务/worker（18774/18775），原种子/420/40/20Hz/horizon10/replan5/flow10；复用B/E/H，报告I/H、I/E、I/B与八来源。B继续正式，无续训或扩评。
+- 416共有异常未完全定位，不能归罪113；不重采113，不改norm、clip、屏蔽关节或删高loss样本。
+- 小文件先推codex/pi0-i500-rotation-20261104。大模型/optimizer/视频/原始数组留服务器供用户备份，不在电脑下载归档、不新增大文件队列、不自动删除资料。只用官方学术加速，不改环境/共享OpenPI/基础权重/缓存/其他项目。
+- 禁止测试框架、哈希、冒烟/shape/mock/单元测试、容量试跑、额外模型前向或诊断仿真、回下载、恢复演练和规则兜底。
+
 ## 2026-11-03 H500 authorized execution (current scope)
 
 - Execute only `docs/PI0_H500_PLAN_20261103.md`, including section 6.1, under the current user's H500 instruction. Preserve the research branch and subsequent server work.

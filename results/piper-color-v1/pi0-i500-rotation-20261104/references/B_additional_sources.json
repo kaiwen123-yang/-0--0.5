@@ -1,0 +1,34 @@
+[
+  {
+    "split": "train",
+    "layout": 120,
+    "target": "blue",
+    "base_seed": 43,
+    "report_group": "additional_sources",
+    "roster_index": 123,
+    "lane": 1,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "slot": "front_left",
+    "failure_stage": "historical_failure",
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00120_blue_seed43/attempt000_seed43/layout_00120_blue.json",
+    "reused_from": "B_coverage"
+  },
+  {
+    "split": "train",
+    "layout": 139,
+    "target": "red",
+    "base_seed": 42,
+    "report_group": "additional_sources",
+    "roster_index": 124,
+    "lane": 0,
+    "success": false,
+    "error": null,
+    "frames": 420,
+    "slot": "front_left",
+    "failure_stage": "historical_failure",
+    "result_json": "/root/autodl-tmp/robot-repro/pi-reproduction/results/piper-color-v1/pi0-b-coverage-correction-test-20261101/evaluations/B_coverage/train_00139_red_seed42/attempt000_seed42/layout_00139_red.json",
+    "reused_from": "B_coverage"
+  }
+]
