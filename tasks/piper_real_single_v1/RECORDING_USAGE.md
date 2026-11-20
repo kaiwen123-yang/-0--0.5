@@ -2,7 +2,7 @@
 
 本模块只处理真实观测。`associate_h0.py` 是已录数据分析；`live_view.py` 订阅一个已经存在的 ROS RGB 话题并读取 H0 已落盘反馈。两者均不创建相机驱动管线、不打开 CAN、不导入机械臂 SDK、不使能、不发送目标，也不运行策略。
 
-代码准备不代表现场运行完成。**本次硬件执行：NOT_RUN；模型推理：NOT_RUN。** 下面命令供现场执行端使用，不能把命令存在写成实测成功。
+2026-11-20 已在现场运行以下入口，安装为 wrist，模型推理 NOT_RUN。[本轮实录](../../results/piper-real-single-v1/20261120_194402/report_zh.md)。
 
 ## 1. 固定源格式与相机身份
 
@@ -11,7 +11,7 @@
 - `scripts/h0_record_camera.py` 写入 `stream_timing.csv`、`sample_index.jsonl`、原始 RGB PNG 和深度 NPY、CameraInfo、`camera_live.json`/`camera_summary.json`。
 - `scripts/h0_record_arm.py` 写入真实接收组的 `joints.csv`、0x2A8 反馈的 `gripper.csv`、`arm_live.json`/`arm_summary.json`。约 10 Hz 的缓存快照不作为本模块关节反馈来源。
 - 六关节是 `q1_rad` 至 `q6_rad`，夹爪是实测总开口 `width_m`。没有夹爪反馈时明确缺失，不能拿目标值补齐。
-- 单相机规范字段名为 `camera_rgb`。`--mount external_fixed` 或 `--mount wrist` 必须显式给出；没有历史默认。当前外部固定方案使用前者，但必须与现场实际安装一致。
+- 单相机规范字段名为 `camera_rgb`。`--mount external_fixed` 或 `--mount wrist` 必须显式给出；没有历史默认。当前照片已确认 wrist。
 - H0 的历史 ROS 命名空间是 `/wrist_camera`。沿用该话题名不证明相机仍在腕部；安装改变应另记真实安装与待标定状态，不能由话题名推断外参。
 
 ## 2. 复用现有记录器
@@ -56,7 +56,7 @@ env -u LD_LIBRARY_PATH \
 bash "$H0_ROOT/scripts/h0_ros_env.sh" /usr/bin/python3 \
   "$PI_ROOT/tasks/piper_real_single_v1/live_view.py" \
   --topic /wrist_camera/color/image_raw \
-  --camera-id 实际相机序列号 --mount external_fixed \
+  --camera-id CC16762023M --mount wrist \
   --arm-dir "$PI_SESSION"
 ```
 
@@ -80,7 +80,7 @@ Viewer 要求臂元信息 boot_id 等于运行主机当前 Linux boot_id；跨�
 ```bash
 /usr/bin/python3 "$PI_ROOT/tasks/piper_real_single_v1/associate_h0.py" \
   --camera-dir "$PI_SESSION" --arm-dir "$PI_SESSION" \
-  --camera-id 实际相机序列号 --mount external_fixed \
+  --camera-id CC16762023M --mount wrist \
   --max-joint-age-ms 100 --max-gripper-age-ms 100 \
   --output "$PI_DATA/precalib_20261120_session01_association"
 ```
@@ -118,8 +118,8 @@ Viewer 要求臂元信息 boot_id 等于运行主机当前 Linux boot_id；跨�
 
 所有关联只证明**同一主机、同一 boot 的软件接收时间关系**，不证明曝光同步、硬件同步或端到端实时性。相机原 ROS header 在 H0 中是驱动回调时间，不能重新命名为曝光时间。
 
-## 5. 本次完成与未运行项
+## 5. 准备提交的历史摘录
 
 已完成源码准备和一段历史真实 H0 CSV 的离线关联分析：读取旧运动窗口前 240 条 timing 行与前 800 条关节/夹爪行，包含 65 个 RGB 接收事件；65 行都有先行实测关节与夹爪。该摘录未下载原始 PNG，所以完整图像观测数为 0，不能用于模型输入或训练。
 
-此短摘录来自旧 DDS 运动窗口，RGB 接收存在成批到达；其数值不代表最终 240 秒静止窗口或当前部署性能。离线执行不包括相机启动、ROS 显示、CAN 接收、推理或机械臂动作。本次 `live_view.py` 的现场运行仍为 **NOT_RUN**。
+此短摘录来自旧 DDS 运动窗口，RGB 接收存在成批到达；其数值不代表最终 240 秒静止窗口或当前部署性能。离线执行不包括相机启动、ROS 显示、CAN 接收、推理或机械臂动作。11 月 20 日现场显示的独立结果见本文件开头的实录链接。

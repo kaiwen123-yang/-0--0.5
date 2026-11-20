@@ -1,8 +1,6 @@
-# 单相机实机准备工具
+# 单相机实机工具
 
-此目录新增一个真实RGB输入的独立接口，不改变历史仿真模块、B配置或共享OpenPI。现场相机安装显式选择 external_fixed / wrist。当前用户意图是外部固定，历史H0为腕部；两者的记录不能混为同一安装。
-
-**当前完成的是代码准备和有限历史数据离线处理。现场viewer、标定与两模型训练尚未执行。当前工具不发送机械臂指令。**
+北京时间 2026-11-20 已实际运行只读采集、现场显示、时间关联和单帧导出。照片确认 DC1 腕部安装；5,382 张连续原图均有完整先行关节和夹爪反馈。板和真实动作监督数据仍待到位。两套模型入口已在 D57 独立部署。[实录报告](../../results/piper-real-single-v1/20261120_194402/report_zh.md) · [到板后采集、求解和独立验证命令](../../docs/PI_SINGLE_CAMERA_BOARD_HANDOFF_20261122.md)
 
 ## 文件与职责
 
@@ -15,6 +13,8 @@
 | dataset.py | 有真实动作标签的完整episode读取；不将静止记录变示范 |
 | train.py | 真实训练split统计量计算与正式全参入口；缺条件为NOT_RUN |
 | infer.py | 从真实保存观测做一次只读推理；需要对应新checkpoint与资产 |
+| capture_pose.sh / flange_observation.py | 每个稳定姿态只读记录；从实测关节产生法兰 FK 并对照原始控制器反馈 |
+| pose_manifest.py | 汇总真实姿态，生成或读取逐姿态复核 CSV，保留 split 和时间 |
 | calibration.py | 普通棋盘检测、内参、手眼和独立姿态评估 |
 | calibration_spec.example.json | 待填写的真实板/图像/FK/安装信息，无假外参 |
 | pi0_full.example.json / pi05_full.example.json | 两套准备配置；未确定项为空，不自动训练 |

@@ -1,0 +1,137 @@
+{
+  "kind": "preboard_pose_diagnostic",
+  "session": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402",
+  "camera_id": "CC16762023M",
+  "camera_mount": "wrist",
+  "camera_role": "left_wrist_0_rgb",
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_path": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/samples/color_000120.png",
+  "stream_index": 120,
+  "image_size": [
+    640,
+    480
+  ],
+  "image_header_ns": 1795175094702668101,
+  "image_receive_monotonic_ns": 2288677985141,
+  "boot_id": "fd4ea199-adf2-4fbd-8bc0-d852eba206a5",
+  "base_frame": "base_link",
+  "gripper_frame": "flange_link",
+  "pose_source": "pyAgxArm 1.0.0 piper_h MDH FK",
+  "T_base_gripper": [
+    [
+      -0.3038771063075086,
+      -0.01647049635210051,
+      0.9525688568350796,
+      0.05915651328324245
+    ],
+    [
+      -0.016180879107267985,
+      0.999795557899307,
+      0.012125244580191333,
+      0.002474334636934882
+    ],
+    [
+      -0.95257382045356,
+      -0.011728817277497545,
+      -0.3040814881438526,
+      0.1675532286433284
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "pose_receive_monotonic_ns": 2288677579551,
+  "joint_feedback": {
+    "status": "associated",
+    "values": [
+      -0.040090212918309755,
+      -0.05637413483941684,
+      0.028466320100027514,
+      0.12164944886400476,
+      0.4273438673508116,
+      -0.13919000784654778
+    ],
+    "csv_data_row": 887,
+    "host_monotonic_ns": 2288677579551,
+    "host_unix_ns": 1795175094703722405,
+    "receive_age_ms": 0.40559,
+    "source_timestamps_s": {
+      "can_first_s": "1795175094.7034426",
+      "can_last_s": "1795175094.7037141",
+      "sdk_timestamp_s": "1795175094.7037141"
+    },
+    "source_timestamp_note": "Original CSV strings retained; not compared with monotonic time"
+  },
+  "controller_flange_feedback": {
+    "pose_m_rad": [
+      0.059155,
+      0.002474,
+      0.167548,
+      -3.1030383304132383,
+      1.2615763432190612,
+      -3.088395017989006
+    ],
+    "T_base_flange": [
+      [
+        -0.303885204464513,
+        -0.01646833403900729,
+        0.9525663108054686,
+        0.059155
+      ],
+      [
+        -0.016181241494281746,
+        0.9997955822275582,
+        0.012122754718359961,
+        0.002474
+      ],
+      [
+        -0.9525712308962857,
+        -0.011729779718198373,
+        -0.304089563018032,
+        0.167548
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "age_ms": 0.775326,
+    "host_monotonic_ns": [
+      2288677121345,
+      2288677129504,
+      2288677209815
+    ],
+    "can_timestamp_s": [
+      "1795175094.7031112",
+      "1795175094.7032197",
+      "1795175094.703336"
+    ],
+    "ids": [
+      "0x2a2",
+      "0x2a3",
+      "0x2a4"
+    ]
+  },
+  "fk_controller_difference": {
+    "translation_mm": 0.005453505212755769,
+    "rotation_deg": 0.0005058707919649425
+  },
+  "joint_rows_within_250ms": 100,
+  "joint_range_rad_within_250ms": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "transform_convention": "flange coordinates to base, metres",
+  "pose_verified": false,
+  "static_capture_verified": false,
+  "board_orientation_verified": false
+}

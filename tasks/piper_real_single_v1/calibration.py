@@ -65,7 +65,7 @@ No result is labelled physically validated or automatically published as TF.
 Do not choose poses/parameters repeatedly against the same held-out set.
 
 The current stream's image_domain must be explicitly verified as "raw" or
-"rectified" before processing. The example leaves it unknown. Raw fits five
+"rectified" before fitting. Corner detection can run while the domain is unknown. Raw fits five
 distortion coefficients; rectified holds D=0 and fits the effective pinhole K
 of that actual rectified stream. Neither mode applies another undistortion.
 This tool accepts only its own real checkerboard-fit intrinsics for hand-eye;
@@ -93,15 +93,15 @@ def write_json(path, value):
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
 
 
-def load_spec(path):
+def load_spec(path, *, fitting):
     spec = json.loads(path.read_text())
     mode = spec.get("mount_mode")
     expected_role = {"external_fixed": "base_0_rgb", "wrist": "left_wrist_0_rgb"}
     if mode not in expected_role or spec.get("camera_role") != expected_role[mode]:
         raise ValueError("Select external_fixed/base_0_rgb or wrist/left_wrist_0_rgb explicitly.")
-    if spec.get("image_domain_verified") is not True or spec.get("image_domain") is None:
+    if fitting and (spec.get("image_domain_verified") is not True or spec.get("image_domain") is None):
         raise NotReady("Verify whether the actual RGB stream is raw or rectified; CameraInfo D=0 alone is insufficient.")
-    if spec.get("image_domain") not in ("raw", "rectified"):
+    if fitting and spec.get("image_domain") not in ("raw", "rectified"):
         raise ValueError("image_domain must explicitly be raw or rectified after checking the actual stream.")
     board = spec.get("board", {})
     if board.get("type") != "chessboard":
@@ -224,7 +224,7 @@ def detect(records, spec, out, cv2, np):
         accepted.append({**row, "corners": corners})
     write_json(out / "detection.json", {
         "status": "DETECTION_ONLY", "camera_role": spec["camera_role"],
-        "image_domain": spec["image_domain"], "image_domain_verified": True,
+        "image_domain": spec.get("image_domain"), "image_domain_verified": spec.get("image_domain_verified") is True,
         "image_domain_evidence": spec.get("image_domain_evidence"),
         "image_size": spec["image_size"], "board": spec["board"],
         "detector": "OpenCV findChessboardCornersSB", "opencv_version": cv2.__version__,
@@ -475,7 +475,7 @@ def main():
     try:
         if args.command != "detect" and (args.out / (args.command + ".json")).exists():
             raise ValueError("A fitted calibration already exists in --out; choose a new result directory.")
-        spec, records = load_spec(args.spec), load_records(args.manifest)
+        spec, records = load_spec(args.spec, fitting=args.command != "detect"), load_records(args.manifest)
         import cv2
         import numpy as np
 

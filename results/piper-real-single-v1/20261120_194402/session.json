@@ -1,0 +1,188 @@
+{
+  "session": "20261120_194402",
+  "session_dir": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402",
+  "date_timezone": "Asia/Shanghai",
+  "camera_started": "2026-11-20T19:44:50.643161+08:00",
+  "arm_started": "2026-11-20T19:44:50.234367+08:00",
+  "host": "kaiwen-Legion-Y9000P-IAX10H",
+  "boot_id": "fd4ea199-adf2-4fbd-8bc0-d852eba206a5",
+  "data_kind": "observation_only",
+  "camera": {
+    "model": "Orbbec Dabai DC1",
+    "serial": "CC16762023M",
+    "usb": [
+      "2bc5:0557",
+      "2bc5:0657"
+    ],
+    "usb_speed_mbps": 480,
+    "camera_mount": "wrist",
+    "installation_evidence": "mount_wrist.jpg",
+    "active_slot": "left_wrist_0_rgb",
+    "color_topic": "/wrist_camera/color/image_raw",
+    "info_topic": "/wrist_camera/color/camera_info",
+    "rgb": [
+      640,
+      480,
+      "UVC MJPEG",
+      "ROS rgb8"
+    ],
+    "depth": [
+      640,
+      400,
+      "16UC1",
+      0.001
+    ],
+    "depth_registered": false,
+    "depth_color_sync": false,
+    "hardware_sync_verified": false,
+    "driver_revision": "f7e71d9ce806e788cb48d8580aac2c778fba4214",
+    "ros_color_info_url": "",
+    "rgb_roi": [
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "get_uvc_mirror": 0,
+    "rgb_K": [
+      488.7884521484375,
+      0.0,
+      318.6218566894531,
+      0.0,
+      488.7884521484375,
+      211.0999755859375,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "rgb_D": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "device_r_k": [
+      0.0749608,
+      -0.09909887,
+      -0.00020435,
+      -0.00035161,
+      0
+    ],
+    "internal_rectification": null,
+    "exposure_mode_before_launch": "UVC 3 aperture-priority, dynamic frame rate on",
+    "automatic_white_balance_before_launch": true,
+    "running_uvc_readback": {
+      "exposure": 157,
+      "gain": 0,
+      "white_balance": 4600
+    },
+    "mode_note": "UVC mode flags read before opening pipeline; runtime getters read controls, not per-exposure metadata."
+  },
+  "acquisition": {
+    "camera_seconds": 180.030646793,
+    "arm_seconds": 190.035912291,
+    "raw_sample_period_s": 0,
+    "bag_seconds": 0,
+    "frames": {
+      "color": 5382,
+      "depth": 5402,
+      "color_info": 5382,
+      "depth_info": 5401
+    },
+    "queue_drops": 0,
+    "queue_max": 19,
+    "writer_error": null,
+    "arm_error": null,
+    "joint_groups": 37993,
+    "gripper_measurements": 37993,
+    "raw_can_frames": 440922,
+    "can_error_frames": 0,
+    "interface_delta": {
+      "rx_packets": 440995,
+      "rx_errors": 0,
+      "rx_dropped": 54,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    },
+    "viewer": {
+      "viewer_seconds": 180.00510920800025,
+      "rgb_callbacks": 5382,
+      "hardware_commands_sent": 0,
+      "model_inference": "NOT_RUN"
+    }
+  },
+  "sampling": {
+    "recording": "single H0 driver, ROS domain 88, localhost, FastDDS 64 MiB SHM",
+    "h0_revision": "284c1f3",
+    "installed_h0_worktree_revision": "29eab00e940a1b129875311f29b38065f12bf36f",
+    "viewers_measured_csv_flush_s": 2
+  },
+  "frame_120": {
+    "state": [
+      -0.040090212918309755,
+      -0.05637413483941684,
+      0.028466320100027514,
+      0.12164944886400476,
+      0.4273438673508116,
+      -0.13919000784654778,
+      0.039099999999999996
+    ],
+    "rgb": {
+      "path": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/samples/color_000120.png",
+      "available": true,
+      "stream_index": 120,
+      "host_monotonic_ns": 2288677985141,
+      "host_unix_ns": 1795175094704128897,
+      "header_ns": 1795175094702668101,
+      "frame_id": "wrist_camera_color_optical_frame",
+      "source_encoding": "rgb8",
+      "width": 640,
+      "height": 480,
+      "stored_format": "PNG",
+      "decode_note": "Pillow convert('RGB') decodes directly; cv2.imread needs one BGR-to-RGB conversion. Do not swap an already-RGB array."
+    },
+    "joint": {
+      "status": "associated",
+      "values": [
+        -0.040090212918309755,
+        -0.05637413483941684,
+        0.028466320100027514,
+        0.12164944886400476,
+        0.4273438673508116,
+        -0.13919000784654778
+      ],
+      "csv_data_row": 887,
+      "host_monotonic_ns": 2288677579551,
+      "host_unix_ns": 1795175094703722405,
+      "receive_age_ms": 0.40559,
+      "source_timestamps_s": {
+        "can_first_s": "1795175094.7034426",
+        "can_last_s": "1795175094.7037141",
+        "sdk_timestamp_s": "1795175094.7037141"
+      },
+      "source_timestamp_note": "Original CSV strings retained; not compared with monotonic time"
+    },
+    "gripper": {
+      "status": "associated",
+      "values": [
+        0.039099999999999996
+      ],
+      "csv_data_row": 887,
+      "host_monotonic_ns": 2288677727622,
+      "host_unix_ns": 1795175094703870505,
+      "receive_age_ms": 0.257519,
+      "source_timestamps_s": {
+        "can_timestamp_s": "1795175094.703855"
+      },
+      "source_timestamp_note": "Original CSV strings retained; not compared with monotonic time"
+    }
+  },
+  "action": null,
+  "training_eligible": false,
+  "commands_sent": 0,
+  "model_inference": "NOT_RUN",
+  "training": "NOT_RUN",
+  "calibration": "NOT_RUN"
+}

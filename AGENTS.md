@@ -2,9 +2,9 @@
 
 ## 当前入口：单相机实机与标定前准备（2026-11-20）
 
-用户最新决定：只用一台现有相机；本轮称为外部摄像头。之前“全参微调资源评估”记录为腕部 DC1，现场安装需要用实际设备/照片核实；最新指令优先，不擅自按旧记忆改回腕部。标定板预计北京时间 2026-11-22 周日到达。遥操作/示教方案暂不讨论。
+本机 11 月 20 日已实录。用户提供的安装照片确认唯一 DC1（CC16762023M）固定于腕端，camera_mount=wrist，唯一模型槽 left_wrist_0_rgb。当前先读 docs/PI_REAL_TEST_STATE.md 及 docs/PI_SINGLE_CAMERA_BOARD_HANDOFF_20261122.md。5,382 条真实图像与反馈已保存。周日板到后接续 eye-in-hand；遥操作/示教方案暂不讨论。
 
-先读 docs/PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md、docs/PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md、docs/PI_REAL_TEST_STATE.md。新代码在 tasks/piper_real_single_v1/，与历史双相机仿真模块分开。
+标定前任务背景在 docs/PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md 和 docs/PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md。新代码在 tasks/piper_real_single_v1/，与历史双相机仿真模块分开。
 
 - 不等待、不推荐购买第二台相机。只使用一个真实 camera_rgb 输入；external_fixed 映射 base_0_rgb，wrist 映射 left_wrist_0_rgb，安装类型显式选择。
 - 未使用的模型图像槽 mask=False，允许协议所需的零占位；禁止把复制图/黑图标为真实有效第二视角。

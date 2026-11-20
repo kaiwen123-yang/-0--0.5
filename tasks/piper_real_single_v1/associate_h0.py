@@ -186,6 +186,7 @@ def associate(args: argparse.Namespace) -> dict:
     report = {
         "schema": "piper_real_single_v1.h0_association_report.v1",
         "hardware_execution": "NOT_RUN", "model_inference": "NOT_RUN",
+        "hardware_execution_scope": "This offline association process only; consult the source session for hardware acquisition.",
         "operation": "offline analysis of existing real H0 recording",
         "data_kind": "observation_only", "training_eligible": False, "action_rows_created": 0,
         "camera_id": args.camera_id, "mount": args.mount,
@@ -203,7 +204,7 @@ def associate(args: argparse.Namespace) -> dict:
                            "gripper": timing_summary(gripper_times)},
         "preceding_receive_age_ms": {"joint": distribution(joint_ages), "gripper": distribution(gripper_ages)},
         "limitations": ["Receive association is not exposure synchronization or sensor latency.",
-                        "H0 periodic PNG samples are sparse; most timing rows may have no raw image file.",
+                        "Raw PNG availability is counted from actual files; sparse H0 sessions may lack images for many timing rows.",
                         "Annotated preview.avi is not used as raw RGB.",
                         "No action labels are inferred from measured states or historical motion events.",
                         "CameraInfo, intrinsics and extrinsics remain source metadata, not newly calibrated values."],

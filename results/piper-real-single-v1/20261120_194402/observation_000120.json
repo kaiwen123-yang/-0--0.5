@@ -1,0 +1,17 @@
+{
+  "operation": "export_one_existing_real_observation",
+  "source_index": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/association/observations.jsonl",
+  "stream_index": 120,
+  "source_image": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/samples/color_000120.png",
+  "camera_id": "CC16762023M",
+  "camera_mount": "wrist",
+  "camera_host_monotonic_ns": 2288677985141,
+  "joint_receive_age_ms": 0.40559,
+  "gripper_receive_age_ms": 0.257519,
+  "observation_file": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/observation_000120.npz",
+  "image_conversion": "PNG decoded directly to RGB with Pillow; no BGR stage, resize or undistortion",
+  "action_labels_created": 0,
+  "training_eligible": false,
+  "model_inference": "NOT_RUN",
+  "commands_sent": 0
+}
