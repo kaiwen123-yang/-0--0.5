@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-11-20T19:49:59+08:00",
+  "computer": "D57",
+  "existing_project": "/root/autodl-tmp/robot-repro/pi-reproduction",
+  "existing_project_head": "209485c4ff5065368238531f9512e11078aae85f",
+  "branch": "codex/pi0-i500-rotation-20261104",
+  "worktree_inspection": "git status displayed branch only",
+  "deployment": "/root/autodl-tmp/robot-repro/piper-real-single-v1/20261120_194402",
+  "dataset": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/dc1_wrist_v1",
+  "dataset_contents": "reserved directory; no labelled episodes or dataset.json",
+  "outputs": "/root/autodl-tmp/robot-repro/piper-real-single-v1/outputs",
+  "model_specs": [
+    "pi0_full.json",
+    "pi05_full.json"
+  ],
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "jax": "0.5.3",
+  "flax": "0.10.2",
+  "params_observation": "Both distinct params dirs have _METADATA, manifest.ocdbt and data shards; no model restored.",
+  "envs": {
+    "pi0": {
+      "activation": "/root/autodl-tmp/robot-repro/pi0/activate.sh",
+      "venv_realpath": "/root/robot-repro-envs/pi0",
+      "xdg_cache": "/root/autodl-tmp/robot-repro/pi0/.cache",
+      "hf_cache": "/root/autodl-tmp/robot-repro/pi0/.cache/huggingface"
+    },
+    "pi05": {
+      "activation": "/root/autodl-tmp/robot-repro/pi05/activate.sh",
+      "venv_realpath": "/root/robot-repro-envs/pi05",
+      "xdg_cache": "/root/autodl-tmp/robot-repro/pi05/.cache",
+      "hf_cache": "/root/autodl-tmp/robot-repro/pi05/.cache/huggingface"
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "total_MiB": 97887,
+    "used_MiB": 1498,
+    "free_MiB": 95754,
+    "util_pct": 78,
+    "other_compute_pids": [
+      500828,
+      502596
+    ],
+    "compute_process_MiB": [
+      742,
+      742
+    ]
+  },
+  "cgroup_cpu_quota_cores": 25,
+  "cgroup_memory_limit_bytes": 128849018880,
+  "autodl_tmp_available_GiB_rounded": 237,
+  "root_overlay_available_GiB_rounded": 4.4,
+  "active_jobs_note": "Running non-π GPU processes observed; instantaneous utilization only.",
+  "training": "NOT_RUN",
+  "inference": "NOT_RUN",
+  "norm_computed": false,
+  "parallel_full_capacity": "UNVERIFIED"
+}

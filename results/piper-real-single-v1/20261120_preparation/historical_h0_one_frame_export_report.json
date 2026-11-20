@@ -1,0 +1,133 @@
+{
+  "schema": "piper_real_single_v1.historical_one_frame_export_report.v1",
+  "analysis_scope": "historical offline analysis and actual export of one real RGB/state observation",
+  "analysis_date": "2026-11-20",
+  "source_session_date": "2026-11-16",
+  "execution": {
+    "association": {
+      "entry": "tasks/piper_real_single_v1/associate_h0.py",
+      "exit_code": 0,
+      "status": "COMPLETED"
+    },
+    "export_initial_attempt": {
+      "entry": "tasks/piper_real_single_v1/export_observation.py",
+      "exit_code": 1,
+      "reason": "ModuleNotFoundError: cv2 in the provided primary Python runtime; no NPZ created by this attempt."
+    },
+    "export_after_source_change": {
+      "entry": "tasks/piper_real_single_v1/export_observation.py",
+      "exit_code": 0,
+      "status": "COMPLETED",
+      "change": "Root simplified the exporter to one Pillow Image.open(...).convert(RGB) decoding path. No fallback decoder and no dependency installation."
+    },
+    "artifact_read": "Read the resulting actual NPZ with numpy.load(allow_pickle=False) to report its real keys, shapes, dtypes, measured state and explicit diagnostic prompt.",
+    "hardware_execution": "NOT_RUN",
+    "ros_viewer_execution": "NOT_RUN",
+    "model_inference": "NOT_RUN",
+    "training": "NOT_RUN",
+    "commands_sent": 0
+  },
+  "association_counts": {
+    "joint_associated": 180,
+    "gripper_associated": 180,
+    "rgb_receive_rows": 180,
+    "rows_with_complete_measured_state": 180,
+    "rows_with_retained_raw_png": 1,
+    "complete_observation_rows": 1
+  },
+  "rgb_stream_index_range_inclusive": [
+    19016,
+    19195
+  ],
+  "selected_source": {
+    "stream_index": 19157,
+    "camera_id": "CC16762023M",
+    "historical_mount": "wrist",
+    "boot_id": "3d72cd12-6f1b-40f3-a505-ef917cabd41d",
+    "arm_same_boot_verified": true,
+    "camera_host_monotonic_ns_exact": "1855547945445",
+    "camera_header_ns_exact": "1794834834818599950",
+    "joint_csv_data_row": 939,
+    "gripper_csv_data_row": 939,
+    "joint_preceding_receive_age_ms": 2.638816,
+    "gripper_preceding_receive_age_ms": 2.487724,
+    "png_bytes": 357151,
+    "state_original_csv_precision": [
+      1.4582400433337823,
+      0.0477696616270848,
+      0.0,
+      -0.019757127132575814,
+      0.42877503733744693,
+      0.09697049324080495,
+      0.0395
+    ],
+    "state_units": "q1..q6: rad; seventh value: measured total gripper opening in m"
+  },
+  "actual_npz_artifact": {
+    "keys": [
+      "camera_rgb",
+      "state",
+      "prompt"
+    ],
+    "camera_rgb": {
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "dtype": "uint8",
+      "color_order": "RGB",
+      "pixel_value_min": 0,
+      "pixel_value_max": 255
+    },
+    "state": {
+      "shape": [
+        7
+      ],
+      "dtype": "float32",
+      "values": [
+        1.458240032196045,
+        0.047769661992788315,
+        0.0,
+        -0.01975712738931179,
+        0.42877504229545593,
+        0.09697049111127853,
+        0.039500001817941666
+      ],
+      "fields": [
+        "q1_rad",
+        "q2_rad",
+        "q3_rad",
+        "q4_rad",
+        "q5_rad",
+        "q6_rad",
+        "measured_gripper_total_opening_m"
+      ]
+    },
+    "prompt": {
+      "shape": [],
+      "dtype": "<U135",
+      "value": "H0 historical observation diagnostics only; inspect the real RGB frame and measured Piper state. This is not a manipulation task label.",
+      "label_status": "Explicit observation diagnostics prompt; not a demonstrated manipulation task label."
+    },
+    "contains_action_array": false
+  },
+  "image_conversion": "PNG decoded directly to RGB with Pillow; no BGR stage, resize or undistortion",
+  "action_labels_created": 0,
+  "training_eligible": false,
+  "local_artifacts": {
+    "association_index": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-association/observations.jsonl",
+    "association_report": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-association/association_report.json",
+    "observation_npz": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-export/observation_019157.npz",
+    "export_report": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-export/observation_019157.json"
+  },
+  "limitations": [
+    "One historical raw RGB frame and measured state establish the implemented offline data path only; no model inference or current hardware acceptance was performed.",
+    "The current implementation directly decodes PNG to RGB with Pillow; it has no BGR stage and applies no extra channel swap, resizing or undistortion.",
+    "The source window is historical wrist-camera data. It does not validate the current external-camera mounting, calibration or model input distribution.",
+    "Association compares same-boot monotonic receive timestamps, not camera exposure or hardware-synchronized timestamps.",
+    "The explicit diagnostic prompt is not a real manipulation task label, and no measured feedback is relabeled as an action.",
+    "Original nanosecond values are read from preserved source text with Python integers; exact timestamp strings here prevent consumer JavaScript number rounding.",
+    "Historical CSV/PNG and NPZ stay outside the pi repository; only this compact report and provenance are supplied for integration."
+  ]
+}

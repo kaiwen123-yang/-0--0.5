@@ -1,0 +1,96 @@
+{
+  "schema": "piper_real_single_v1.h0_association_report.v1",
+  "hardware_execution": "NOT_RUN",
+  "model_inference": "NOT_RUN",
+  "operation": "offline analysis of existing real H0 recording",
+  "data_kind": "observation_only",
+  "training_eligible": false,
+  "action_rows_created": 0,
+  "camera_id": "CC16762023M",
+  "mount": "wrist",
+  "clock": {
+    "boot_id": "fd4ea199-adf2-4fbd-8bc0-d852eba206a5",
+    "arm_same_boot_verified": true,
+    "basis": "same-host monotonic receive time",
+    "hardware_sync_claimed": false,
+    "note": "ROS header, kernel CAN and SDK times are retained separately; none is asserted to be exposure time"
+  },
+  "sources": {
+    "camera_directory": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402",
+    "arm_directory": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402",
+    "camera_metadata": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/camera_summary.json",
+    "arm_metadata": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/arm_summary.json",
+    "sample_manifest": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/sample_index.jsonl"
+  },
+  "association_limits_ms": {
+    "joint": 100.0,
+    "gripper": 100.0,
+    "meaning": "caller-selected data association limits, not verified hardware latency limits"
+  },
+  "counts": {
+    "joint_associated": 5382,
+    "gripper_associated": 5382,
+    "rgb_receive_rows": 5382,
+    "rows_with_complete_measured_state": 5382,
+    "rows_with_retained_raw_png": 5382,
+    "complete_observation_rows": 5382
+  },
+  "receive_timing": {
+    "camera_rgb": {
+      "rows": 5382,
+      "receive_span_s": 179.947522803,
+      "receive_hz": 29.903162411915627,
+      "receive_interval_ms": {
+        "count": 5381,
+        "p50": 32.282524,
+        "p95": 36.517873,
+        "max": 41.689102
+      }
+    },
+    "joint": {
+      "rows": 37993,
+      "receive_span_s": 189.992601393,
+      "receive_hz": 199.96568140784328,
+      "receive_interval_ms": {
+        "count": 37992,
+        "p50": 5.0007885000000005,
+        "p95": 5.367798549999999,
+        "max": 9.705255
+      }
+    },
+    "gripper": {
+      "rows": 37993,
+      "receive_span_s": 189.992630654,
+      "receive_hz": 199.9656506108814,
+      "receive_interval_ms": {
+        "count": 37992,
+        "p50": 5.0006319999999995,
+        "p95": 5.423591999999999,
+        "max": 9.929933
+      }
+    }
+  },
+  "preceding_receive_age_ms": {
+    "joint": {
+      "count": 5382,
+      "p50": 2.534589,
+      "p95": 4.806645249999999,
+      "max": 7.043108
+    },
+    "gripper": {
+      "count": 5382,
+      "p50": 2.5257245,
+      "p95": 4.8379271,
+      "max": 6.893269
+    }
+  },
+  "limitations": [
+    "Receive association is not exposure synchronization or sensor latency.",
+    "All 5382 received RGB events in this session have a retained raw PNG.",
+    "Annotated preview.avi is not used as raw RGB.",
+    "No action labels are inferred from measured states or historical motion events.",
+    "CameraInfo, intrinsics and extrinsics remain source metadata, not newly calibrated values."
+  ],
+  "hardware_execution_scope": "Offline association only; source images and feedback were acquired live in this field session.",
+  "source_session_id": "20261120_194402"
+}

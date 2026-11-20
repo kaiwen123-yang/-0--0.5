@@ -1,0 +1,98 @@
+{
+  "schema": "piper_real_single_v1.h0_association_report.v1",
+  "hardware_execution": "NOT_RUN",
+  "model_inference": "NOT_RUN",
+  "operation": "offline analysis of existing real H0 recording",
+  "data_kind": "observation_only",
+  "training_eligible": false,
+  "action_rows_created": 0,
+  "camera_id": "CC16762023M",
+  "mount": "wrist",
+  "clock": {
+    "boot_id": "3d72cd12-6f1b-40f3-a505-ef917cabd41d",
+    "arm_same_boot_verified": true,
+    "basis": "same-host monotonic receive time",
+    "hardware_sync_claimed": false,
+    "note": "ROS header, kernel CAN and SDK times are retained separately; none is asserted to be exposure time"
+  },
+  "sources": {
+    "camera_directory": "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts",
+    "arm_directory": "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts",
+    "camera_metadata": "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts/full_run_camera_summary.json",
+    "arm_metadata": "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts/full_run_arm_summary.json",
+    "sample_manifest": null
+  },
+  "association_limits_ms": {
+    "joint": 100,
+    "gripper": 100,
+    "meaning": "caller-selected data association limits, not verified hardware latency limits"
+  },
+  "counts": {
+    "joint_associated": 65,
+    "gripper_associated": 65,
+    "rgb_receive_rows": 65,
+    "rows_with_complete_measured_state": 65,
+    "rows_with_retained_raw_png": 0,
+    "complete_observation_rows": 0
+  },
+  "receive_timing": {
+    "camera_rgb": {
+      "rows": 65,
+      "receive_span_s": 1.854175844,
+      "receive_hz": 34.51668308974043,
+      "receive_interval_ms": {
+        "count": 64,
+        "p50": 0.6780065,
+        "p95": 251.91201124999904,
+        "max": 357.245955
+      }
+    },
+    "joint": {
+      "rows": 800,
+      "receive_span_s": 3.994774416,
+      "receive_hz": 200.01129395437684,
+      "receive_interval_ms": {
+        "count": 799,
+        "p50": 4.999382,
+        "p95": 5.184173899999999,
+        "max": 9.595247
+      }
+    },
+    "gripper": {
+      "rows": 800,
+      "receive_span_s": 3.994881572,
+      "receive_hz": 200.00592898677297,
+      "receive_interval_ms": {
+        "count": 799,
+        "p50": 4.999267,
+        "p95": 5.251669499999998,
+        "max": 9.55815
+      }
+    }
+  },
+  "preceding_receive_age_ms": {
+    "joint": {
+      "count": 65,
+      "p50": 2.514505,
+      "p95": 4.9011214,
+      "max": 4.995945
+    },
+    "gripper": {
+      "count": 65,
+      "p50": 2.492252,
+      "p95": 4.8295528,
+      "max": 4.930582
+    }
+  },
+  "limitations": [
+    "Receive association is not exposure synchronization or sensor latency.",
+    "H0 periodic PNG samples are sparse; most timing rows may have no raw image file.",
+    "Annotated preview.avi is not used as raw RGB.",
+    "No action labels are inferred from measured states or historical motion events.",
+    "CameraInfo, intrinsics and extrinsics remain source metadata, not newly calibrated values.",
+    "No original PNG bytes were downloaded for this analysis; zero complete model observations is intentional and must not be relabeled as an export/inference success.",
+    "The short old motion-window RGB excerpt contains receive bursts and has a different duration from the arm excerpts; its receive_hz is not a current camera performance claim.",
+    "Historical wrist mount describes this source session only; the current camera mounting choice must be recorded explicitly."
+  ],
+  "analysis_scope": "historical offline analysis of a real 2026-11-16 H0 motion-window excerpt, performed 2026-11-20; not a current hardware acceptance result"
+}

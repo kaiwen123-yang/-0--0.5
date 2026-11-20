@@ -1,100 +1,36 @@
-## 2026-11-04 I500完成后的当前状态
+# π0 / π0.5 当前执行约定
 
-- I500已完成500更新、125项正式评测：开发39/48、验证69/75、补充1/2、八来源4/8；B继续正式。
-- 唯一I已结束，不重跑、不续I/H1000、不扩评。结果见 results/piper-color-v1/pi0-i500-rotation-20261104/final_report_zh.md。
-- 本轮仅教师姿态衔接修正：三条新版后缀450帧、其余750帧复用，原H采样不动。原版本与全部研究资料保留服务器，小结果入Git；大产物无新增队列。
-- 115后续窗口仍有大尺度动作；不能仅凭更新33下降宣称数值问题全消失。416仍为跨实验共有尖峰，不归罪113。
+## 当前入口：单相机实机与标定前准备（2026-11-20）
 
-## 2026-11-04 当前任务：已定位教师姿态衔接，唯一 I500 已授权
+本机 11 月 20 日已实录。用户提供的安装照片确认唯一 DC1（CC16762023M）固定于腕端，camera_mount=wrist，唯一模型槽 left_wrist_0_rgb。当前先读 docs/PI_REAL_TEST_STATE.md 及 docs/PI_SINGLE_CAMERA_BOARD_HANDOFF_20261122.md。5,382 条真实图像与反馈已保存。周日板到后接续 eye-in-hand；遥操作/示教方案暂不讨论。
 
-- main当前依据 docs/PI0_H500_REVIEW_NEXT_PLAN_20261104.md，运行基线3dd547a及后续本工作区；不用main旧代码覆盖。
-- H500已完成37/48开发、65/75验证、补充2/2、八来源5/8；不重跑H/B/E/G、不续H1000，B仍正式。
-- 已定点读取更新19/33/48/416，共20个真实窗口；NPY与恢复NPZ对应无错位。证据与21例失败时序在 results/piper-color-v1/pi0-h-numeric-review-20261104/。
-- 已确认reset固定姿态导致接管IK目标突变。只改本任务教师，原30帧lift同步SLERP姿态；107/115/105三次完整恢复均成功、各150帧/阶段不变、原接管qpos/qvel/command差0。原版本保留，新增450教师帧版本，其余750复用。
-- 正常进入计划7.2唯一I500，执行入口tasks/piper_color_v1/run_pi0_i.py；先读outputs/pi0-i500-rotation-20261104/run.json与活动进程，不重复启动。B完整4020、原optimizer/RNG/norm、500更新、batch4、1e-6、原upstream范围；H全部2000采样顺序不动，1932原+68恢复，27窗口读新版三轨迹。
-- I保存后原125任务两独立服务/worker（18774/18775），原种子/420/40/20Hz/horizon10/replan5/flow10；复用B/E/H，报告I/H、I/E、I/B与八来源。B继续正式，无续训或扩评。
-- 416共有异常未完全定位，不能归罪113；不重采113，不改norm、clip、屏蔽关节或删高loss样本。
-- 小文件先推codex/pi0-i500-rotation-20261104。大模型/optimizer/视频/原始数组留服务器供用户备份，不在电脑下载归档、不新增大文件队列、不自动删除资料。只用官方学术加速，不改环境/共享OpenPI/基础权重/缓存/其他项目。
-- 禁止测试框架、哈希、冒烟/shape/mock/单元测试、容量试跑、额外模型前向或诊断仿真、回下载、恢复演练和规则兜底。
+标定前任务背景在 docs/PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md 和 docs/PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md。新代码在 tasks/piper_real_single_v1/，与历史双相机仿真模块分开。
 
-## 2026-11-03 H500 authorized execution (current scope)
+- 不等待、不推荐购买第二台相机。只使用一个真实 camera_rgb 输入；external_fixed 映射 base_0_rgb，wrist 映射 left_wrist_0_rgb，安装类型显式选择。
+- 未使用的模型图像槽 mask=False，允许协议所需的零占位；禁止把复制图/黑图标为真实有效第二视角。
+- B 累计 4020 保留为历史双相机仿真基线，不是已适配单相机的实机模型。不改写其原 norm、配置与结果。
+- π0 与 π0.5 都准备全参：使用非 LoRA 参数结构、训练全部参数，各用自身基础权重、资产、norm 和输出目录。π0 连续状态/mean-std；π0.5 保留离散状态/quantile；不能相互套用。
+- 单卡 96GB 同时跑两个全参任务未获证实，不自动双开、不因资源不足改成 LoRA。当前先准备两个任务，真实数据与资源条件落实后正式执行。
+- 本轮完成单相机采集/显示/记录/时间关联、模型接口与全参配置、标定采集/解算工具和精确启动文档。现场数据未采到时如实标 NOT_RUN，不把代码准备称已实测。
+- 单相机观测记录没有实际动作标签时只能是 observation_only，不能作为成功示范或微调数据。state=6 实测关节 rad + 实测夹爪总开口 m；action=6 绝对关节目标 rad + 绝对开口 m。
+- 标定前不生成假外参，不用默认 FK/夹爪目标代替经过确认的法兰位姿或测量反馈。外部固定相机走 eye-to-hand，腕部相机走 eye-in-hand，矩阵方向在配置中明确。
+- 当前代码不发送 CAN 运动、不自动使能/回零。真实运动仍复用 H0 成功的唯一发送端，由现场明确操作启动；不创建竞争控制器。
+- 只读复用 dog-and-arm H0@284c1f3 和既有 pyAgxArm/ROS/DDS 环境。不修改该仓库，不执行 P0–P3、M1、门场景或底盘任务。
 
-- Execute only `docs/PI0_H500_PLAN_20261103.md`, including section 6.1, under the current user's H500 instruction. Preserve the research branch and subsequent server work.
-- Entry: `tasks/piper_color_v1/run_pi0_h.py`; tmux/output task `pi0-h500-recovery-20261103`. Read its `outputs/pi0-h500-recovery-20261103/run.json` and live process state before any continuation. Do not duplicate an active or completed run.
-- B full model/optimizer/RNG/norm at cumulative 4020; E/upstream update path, 500 updates only, batch4, constant 1e-6, no warmup or visual update zeroing. Exactly 1932 unchanged E samples plus 68 fixed recovery suffix starts, all 120 original episodes retained; no F dataset.
-- H500 full save precedes 125 formal autonomous tasks, split 63/62 by original roster index parity. Independent services/RNG/ports/CPU sets/progress; no lane-dependent seed. Original 420/40, 20Hz, horizon10, replan5, batch1, flow10.
-- Original 48 development and 75 validation plus only 120/blue/43 and 139/red/42. Reuse B/E; extract eight source outcomes from these 125. No G/B/E/F rerun, new collection, 3000-3009, continuation, extra evaluation or recipe search.
-- One parent merges and publishes small records to `codex/pi0-h500-recovery-20261103`. Keep the current working branch; do not replace runtime code from main. Main documentation is the current plan.
-- Checkpoints, optimizer, videos and arrays remain on this server for user backup. No H large-file queue, local-PC archive, deletion, environment/shared OpenPI/base-weight/cache modification, or interruption of existing jobs.
-- Academic GitHub transport only. No hashes, smoke/import/shape/mock/unit tests, capacity trials, warmup episodes, redownload verification, recovery rehearsal, full refactor, or autonomous rule fallback.
+## 历史与工作区
 
-## 2026-11-03 当前研究状态：8 条恢复完成，H 未启动
+H500、I500 和八条恢复采集已完成，不重跑、续训或扩旧基线。旧 2026-11-16 双相机 R0 提示词已被当前单相机任务替代。
 
-- G500 已完成，验证 64/75，仍选 B（验证 72/75）；不重跑 G 或续 G1000。
-- 按 main 新计划完成 8 个指定训练案例的真实抓稳/持物恢复：8/8 完整成功，新增 1,200 帧教师后缀；原前缀不作专家标签，完整原始记录保留。
-- 当前结果入口：`results/piper-color-v1/pi0-held-recovery-20261103/final_report_zh.md`；逐条名单和阶段统计见同目录。
-- H 配方已根据本轮数据提出，但尚未训练；未经新的训练指令，不自动启动 H。B 自主成绩不因教师恢复改写。
-- 新大文件通过既有队列锁后台发布，小结果先推 GitHub；不等待历史全队列上传。现有训练、推理与上传任务保留。
-- 下方最新保留规则继续生效：保留全部训练、续训、复现资料，上传完成不删除；仅清理无活动依赖的传输暂存或重复临时副本。
+历史运行基线为 codex/pi0-i500-rotation-20261104@77c102769411e1d7fa02e98dc830cdad7bb78388，或现场已有真实后续。main 维护当前文档和明确新增模块，不能用它的旧仿真代码覆盖现场工作。先查看本项目活动进程、分支与未提交修改，必要时用独立工作树。模型代码与官方 OpenPI 已有环境版本核对，不改共享 OpenPI。
 
-## 2026-11-03 最新用户更正：保留训练与续训资料
+## 发布、保留与环境
 
-本条覆盖本文及历史计划中“发布后删除训练产物、B/v2恢复副本”的安排。
+- 用户已授权持续提交/推送本轮代码、实际配置、紧凑日志、代表真实证据、结论与下一步提示词；只提交本轮明确文件。
+- 完整模型、optimizer、RNG、norm、原始录像/深度/数组留原机器，不自动移动/删除，不新增归档、压缩或大文件队列。此前其他对话的盘点不等于本轮清理任务。
+- 不停止活动训练、推理、采集或上传，不对长期进程加武断超时。有限真实采集窗口可按任务定义运行。
+- 不重装 ROS/CUDA/SDK/JAX，不改 Conda base、共享环境、缓存、基础权重、其他项目或全局网络。AutoDL GitHub 访问沿用既有官方学术加速，只作用本项目子进程。
+- 不加防御性框架、通用 fallback、无限重试、哈希扫描、冒烟/导入/shape/mock/单元测试流水线、容量试跑、全参数差分、回下载验证、恢复演练、前置试训练或全库重构。
+- 真实样本读取和实际时序分析是本轮工作；缺少硬件或示范时明确记录边界，不造通过结果。
 
-- 保留所有与原始训练、根训练、续训和复现有关的现有内容，包括 B/G 及历史完整检查点、optimizer、RNG、norm、采样顺序、训练数据与元信息、训练和评测记录、轨迹、视频。
-- 源码、Git、所有环境、运行/编译缓存、共享基础权重继续保留。完成 GitHub 发布也不触发这些资料的自动删除。
-- 清理只限本任务生成、已无活动依赖的传输暂存和重复临时副本。没有明确属于无用临时副本的内容默认保留。
-- 更正之前已按旧授权完成的删除保留原回执，不改写为“仍在服务器”；不据此自动恢复无关历史资料。
-- 用户允许稳定运行后结束前台对话，后台仍按原 G500 预算和条件门槛继续评测与发布。官方学术加速限制不变。
-- 当前执行入口的删除范围见 publication/pi0-g-fixed-vision-20261103/retention_policy.json。
-
-# π0 / π0.5 项目执行约定
-
-## 2026-11-03 当前要求（覆盖下方历史安排）
-
-- 首先读 `docs/PI0_REPRO_REVIEW_NEXT_PLAN_20261103.md` 与 `docs/PI0_NEXT_STAGE_PROMPT_20261103.md`。B累计4020仍最佳：训练211/240、验证72/75、旧独立测试53/60。E/F各500已结束，验证67/75、65/75；不要重跑或自动续至1000。
-- main本次仅发布审查与计划。实际代码基线为 `codex/pi0-b-coverage-correction-test-20261101` 提交 `c912dc5efbbec7dce53361fe989bf71eac0b2351`；不得以main旧代码覆盖当前工作区。本次审查未启动训练或删除服务器文件。收到启动提示词后，用户授权按计划完成G、条件性评测、发布和对应产物清理，正常阶段转换不重复询问。
-- 下一轮只做G500：B完整状态、E前2000个采样起点及同一RNG/lr/batch/场景，只在AdamW最终updates处固定PaliGemma/img视觉参数。原filter、dtype、optimizer树和裁剪口径保持，不重置其余moment。视觉梯度和buffer仍计算，报告实际有效更新范围，不预设视觉遗忘为已证原因。
-- 已完成的chunk诊断不重做；不无证据改动作、归一化、loss、replan或引入状态机兜底。G用原PiperDataset，不依赖无用的F纠偏目录。先123次完整任务，按计划门槛才补192与新测试120，最多435次；无效即发布并停止。
-- B/v2服务器副本已经发布后清理。仅按指定Release组恢复B完整params/train_state/resume/norm和v2必需NPY/元信息；E采样JSON直接转格式。不是恢复演练，不恢复全历史，不运行旧prepare哈希流程或旧整套--minimal-b。
-- 用户禁止防御性编程、通用fallback、无限重试、mock/单元/冒烟/导入/shape测试、哈希/校验和扫描、全参数差分检查、回下载、恢复演练、重复pilot及全库重构。只做实际训练、完整任务评测与必要交付；不为验证能跑另做试训练，不增加重复报告。
-- 只推GitHub，不在用户电脑另做下载、压缩或归档。源码/配置/紧凑结果入Git，大文件入Release。上传回执及远端名称/状态/大小用于交付清点，不另加哈希流水线。
-- 一个已结束实验或独立产物组全部发布并有索引后，直接删除对应服务器产物副本和临时卷。B/v2恢复副本用完且无活动依赖后清理，不重复上传。未上传原件与当前活动依赖保留至可清理时；Git日志push不等于大文件上传完成。
-- 保留工作源码、Git、pi0/pi05/仿真环境、runtime运行及编译缓存、共享基础权重、认证配置和其他项目。不得重装包、修改共享openpi或整体删除工作区/runtime；现有pi0_base仍是配置依赖。
-- 2026-11-03已撤销所有VPN授权。服务器GitHub上传、查询与push只使用官方AutoDL学术加速；禁止服务器VPN、电脑VPN/隧道和自动回退。仅作用于本项目子进程，不改全局网络。历史pending队列可低优先级单并发接续；网络失败保留原件并如实记录。
-- 原53/60保留为历史测试。3000–3009当前尚未使用，只用于冻结候选后的比较；使用后不得拿来调参。教师介入与自主成功严格分开，同一模型多推理种子不称独立训练种子。
-
-## 2026-11-02 已执行阶段记录（当前行动以2026-11-03为准）
-
-- 先读 `docs/PI0_NEXT_STAGE_PLAN_20261102.md` 和配套启动提示词。当前最佳为B累计4020：训练211/240、验证72/75、测试53/60；最新覆盖/纠偏/独立测试已完成，不重跑旧流程。
-- main本次仅发布审查与计划；最新运行代码位于 `codex/pi0-b-coverage-correction-test-20261101`（审查提交9b30982）。不得用main旧代码覆盖服务器最新工作区，保留活动任务与未提交工作。
-- 本次用户已授权审查和计划推送；本次未实际启动新训练或删除服务器数据。收到下一阶段启动指令后，按计划完整执行，正常阶段转换不重复请求许可。
-- 用户明确禁止防御性编程和哈希/校验和、单元/mock/冒烟/导入/shape测试堆砌，不全库扫描摘要、不回下载、不恢复演练。旧文档中的对应验收要求不再适用于后续执行；只调整本轮调用路径，不开展全库重构。
-- 后续只推GitHub，不在用户电脑下载或归档。完整检查点、原始数组、视频和数据用Release，源码/配置/紧凑结果用Git。上传成功回执与远端名称/状态/大小足以支持交付清点，不另设哈希流水线。
-- 用户重新明确授权：一个已结束实验或独立产物组全部上传并有索引后，直接清理对应服务器产物副本。未上传原件和当前活动任务所需B/数据/有效检查点保留到可清理时；工作代码、Git、全部工作环境、共享基础权重及其他项目不动。按计划记录已删与待传，不把Git日志推送当作二进制上传完成。
-- 保持已授权的AutoDL学术加速设置仅作用于GitHub子进程，不自动回退用户VPN，不改其他项目网络和作业。
-- 历史研究结果、原始失败和发布历史继续保留在GitHub；原测试53/60不被新训练改写。新的正式比较使用预先固定的新布局。
-
-## 历史约定
-
-远端：https://github.com/kaiwen123-yang/-0--0.5 。本仓库保存 fy-5080 历史工作和 D57 后续复现准备。
-
-- 默认计算机 autodl-d57，工作区 /root/autodl-tmp/robot-repro/pi-reproduction。fy-5080 原目录仅作历史来源，不修改其已完成结果或其他人的任务。
-- 先读 README.md、ARTIFACT_INDEX.json、docs/AUTODL_D57.md 和直接相关任务源码。历史文档中的“当前/下一步”只属于其记录日期。
-- π0 和 π0.5 使用各自隔离环境；不得修改 Conda base、MPC-RL、SuperMimic 的包或正在运行的作业。GPU 仍共享，执行前核对实际占用。
-- 本次任务仅发布、迁移和准备，没有授权开始新训练、重评或实机动作。以后按用户具体任务执行。
-- LIBERO 183/200 与 196/200 是每任务 5 初态 pilot；Piper H 32/75 与 47/75 是更换机器人后的迁移仿真，不混为一套基准。
-- 颜色入盒是 π0.5 实验：165 条合成示范；LoRA 1500 updates 后完整任务验证 0/15。保留失败，不以抬升替代入盒、松爪与稳定成功。
-- LoRA 1499 本地只有推理参数和资产，没有优化器状态。全参 1000 本地备份不完整，不作为可恢复训练检查点。不得根据云端旧 inventory 声称本地文件完整。
-- 原 120/15/30 布局划分、数据动作语义和原始记录保留；从臂反馈是 observation，实际发送的目标是 action。
-- 不新增通用 fallback、无限重试、单元/mock/冒烟/导入/形状测试套件或流水报告。用实际完整任务和必要的发布完整性检查推进。
-- 原 2026-10-25 Git 归档不覆盖、不 force-push。新增大文件使用 Release，索引记录真实大小、摘要和位置；源码/配置/紧凑结果用 Git。
-- 凭据、SSH 私钥、认证配置、安装缓存和环境包二进制不发布。官方基础/任务权重保留原来源及校验清单，避免重复镜像。
-- 所有新计算与大文件发布在服务器完成；不在用户电脑再次下载、压缩或归档。
-
-## 2026-10-31 后续指令与状态
-- 用户已授权 D57 入口适配、旧 LoRA 完整闭环复评、失败诊断和及时提交 GitHub；本轮没有启动新训练或硬件动作。
-- 当前路线按用户倾向先专注 π0，再进入实机数据和闭环，最后推进 π0.5。具体下一轮方案见 docs/PI0_FIRST_PLAN.md；这是方案，不是已经执行的训练。
-- D57 旧 LoRA 两次完整验证为 3/15 和 0/15，不能只保留较好一次。教师回放/前缀介入不计入自主成功率。运行索引 results/piper-color-v1/d57-recovery-20261031/index.json。
-- 新仿真入口 scripts/run_piper_color_d57.sh；独立环境 runtime/d57-color-sim。保留旧仿真与模型配置，历史路径脚本不直接整套重跑。
+更多历史结果见 README 和既有报告；验证集已反复用于选择，仿真成绩不冒称实机成功率。
 

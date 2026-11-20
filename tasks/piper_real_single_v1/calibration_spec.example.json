@@ -1,0 +1,50 @@
+{
+  "preparation_status": "NOT_RUN",
+  "camera_role": "base_0_rgb",
+  "mount_mode": "external_fixed",
+  "installation_verified": false,
+  "camera_frame": null,
+  "image_domain": null,
+  "image_domain_verified": false,
+  "image_domain_evidence": null,
+  "image_size": [640, 480],
+  "board": {
+    "type": "chessboard",
+    "inner_corners_cols": null,
+    "inner_corners_rows": null,
+    "square_size_m": null,
+    "geometry_verified": false,
+    "origin_description": null,
+    "x_axis_description": null,
+    "y_axis_description": null,
+    "mounted_rigidly_to": null,
+    "rigid_mount_verified": false
+  },
+  "robot": {
+    "base_frame": null,
+    "gripper_frame": null,
+    "pose_source": null,
+    "pose_source_verified": false,
+    "translation_unit": "m"
+  },
+  "minimum_views": {
+    "train": 15,
+    "heldout": 5
+  },
+  "notes": [
+    "This is a preparation example, not a calibration result. Enter the actual received board geometry; do not infer its model from a shopping suggestion.",
+    "The current requested camera role is external_fixed/base_0_rgb. Physically confirm installation; historical wrist_camera topic names do not establish it.",
+    "H0 RGB was 640x480; verify the current stream dimensions without resizing. Enter its actual RGB optical frame in camera_frame.",
+    "Verify the actual stream's image domain from driver/device processing evidence and real images. Set image_domain=raw or rectified and image_domain_verified=true only after that review; record the evidence. CameraInfo D=0 alone does not decide this.",
+    "Raw fits five distortion coefficients. Rectified fixes D=0 and estimates the effective pinhole K for the current rectified stream. Both require real board images, unchanged by additional capture-side resizing or undistortion.",
+    "Inner corners are one fewer than square counts in each direction. square_size_m is in metres. Mark a physical origin outside the detection pattern and keep corner numbering consistent.",
+    "For external_fixed: camera and robot base stay fixed; board is rigidly attached to a fixed end-effector part, mounted_rigidly_to=gripper.",
+    "For wrist: set camera_role=left_wrist_0_rgb and mount_mode=wrist; camera stays rigidly attached to the flange/gripper; board stays fixed relative to base, mounted_rigidly_to=base_world.",
+    "Do not use a moving jaw as a fixed board mount. Joint targets are not measured poses; enter T_base_gripper only after verifying the actual FK/model or feedback pose conventions.",
+    "Use stationary image captures, actual feedback and reviewed time association. Different views should include rotations around at least two non-parallel axes; H0 J6-only tiny motion is insufficient.",
+    "15 training and 5 held-out pose groups are workflow defaults, not a claim of guaranteed accuracy. Reserve held-out views before fitting; do not reuse one pose across splits.",
+    "Unverified factory CameraInfo D=0 is not presumed rectified. Fit RGB intrinsics from real board captures and inspect held-out results before hand-eye. Do not overwrite the original CameraInfo evidence.",
+    "Raw depth has separate dimensions/intrinsics and is not registered by this tool. RGB calibration requires no depth lookup.",
+    "No CAN control, automatic enable, homing, or robot motion is performed by this tool. Real calibration and hand-eye accuracy remain NOT_RUN until actual data exist."
+  ]
+}

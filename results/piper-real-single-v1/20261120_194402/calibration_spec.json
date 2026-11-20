@@ -1,0 +1,44 @@
+{
+  "preparation_status": "NOT_RUN",
+  "camera_role": "left_wrist_0_rgb",
+  "mount_mode": "wrist",
+  "installation_verified": true,
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_domain": null,
+  "image_domain_verified": false,
+  "image_domain_evidence": "本次 MJPEG 解码后 rgb8 直发；无主机端校正、裁剪或再次缩放。设备内部几何待确认。",
+  "image_size": [
+    640,
+    480
+  ],
+  "board": {
+    "type": null,
+    "inner_corners_cols": null,
+    "inner_corners_rows": null,
+    "square_size_m": null,
+    "geometry_verified": false,
+    "origin_description": null,
+    "x_axis_description": null,
+    "y_axis_description": null,
+    "mounted_rigidly_to": "base_world",
+    "rigid_mount_verified": false
+  },
+  "robot": {
+    "base_frame": "base_link",
+    "gripper_frame": "flange_link",
+    "pose_source": "pyAgxArm 1.0.0 piper_h MDH FK",
+    "pose_source_verified": false,
+    "translation_unit": "m"
+  },
+  "minimum_views": {
+    "train": 15,
+    "heldout": 5
+  },
+  "notes": [
+    "到货后核实板型、物理原点、+x/+y、角点行列与格长（m），固定到与基座刚性相连的桌面。",
+    "保留原图。确认接收图像域后填写 raw/rectified 和依据。检测角点可先于图像域核实。",
+    "先核对多姿态控制器法兰与实测关节 FK、基座和法兰定义。按每个样本实际情况填写独立复核项。",
+    "本配置没有外参；安装照片 mount_wrist.jpg，位姿核对见 flange_000120.json。"
+  ],
+  "camera_id": "CC16762023M"
+}

@@ -1,0 +1,54 @@
+{
+  "repository": "kaiwen123-yang/dog-and-arm",
+  "commit": "284c1f3f1bb9d5096003433f6153a9c5e95d6189",
+  "source_directory": "results/hardware/h0/20261116_2051/evidence/motion_success",
+  "files": {
+    "stream_timing.csv": "header + first 240 data rows",
+    "joints.csv": "header + first 800 data rows",
+    "gripper.csv": "header + first 800 data rows",
+    "full_run_camera_summary.json": "full original metadata",
+    "full_run_arm_summary.json": "full original metadata"
+  },
+  "scope": "Unmodified real H0 source excerpt for offline receive-time association. No PNG bytes fetched; no hardware/model execution.",
+  "analysis_scope": "historical offline analysis",
+  "analysis_date": "2026-11-20",
+  "source_session_date": "2026-11-16",
+  "source_url": "https://github.com/kaiwen123-yang/dog-and-arm/tree/284c1f3f1bb9d5096003433f6153a9c5e95d6189/results/hardware/h0/20261116_2051/evidence/motion_success",
+  "local_source_excerpt_directory": "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts",
+  "local_complete_analysis_directory": "/workspace/scratch/1c7d09da5651/pi-h0-association-analysis",
+  "source_rgb_stream_index_range_inclusive": [
+    19016,
+    19080
+  ],
+  "source_rgb_receive_rows": 65,
+  "images_downloaded": 0,
+  "image_sample_manifest_used": null,
+  "executed_entry": "tasks/piper_real_single_v1/associate_h0.py",
+  "executed_arguments": [
+    "--camera-dir",
+    "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts",
+    "--arm-dir",
+    "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts",
+    "--camera-metadata",
+    "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts/full_run_camera_summary.json",
+    "--arm-metadata",
+    "/workspace/scratch/1c7d09da5651/pi-h0-source-excerpts/full_run_arm_summary.json",
+    "--camera-id",
+    "CC16762023M",
+    "--mount",
+    "wrist",
+    "--output",
+    "/workspace/scratch/1c7d09da5651/pi-h0-association-analysis"
+  ],
+  "association_age_defaults_ms": {
+    "joint": 100,
+    "gripper": 100
+  },
+  "execution_exit_code": 0,
+  "action_labels_created": 0,
+  "training_eligible": false,
+  "hardware_execution": "NOT_RUN",
+  "ros_viewer_execution": "NOT_RUN",
+  "model_inference": "NOT_RUN",
+  "interpretation": "This records an executed analysis of real historical CSV, not unit/mock/import/smoke testing. No live hardware, motion, training or model inference was run. The historical source files and full observations index remain local intermediates; this compact report preserves the real zero-image result."
+}
