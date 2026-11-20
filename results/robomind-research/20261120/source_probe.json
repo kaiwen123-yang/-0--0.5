@@ -1,0 +1,392 @@
+{
+  "observed_date": "2026-11-20",
+  "timezone": "Asia/Shanghai",
+  "source": "official ModelScope X-Humanoid/RoboMIND2.0-Agilex public repo API",
+  "official_project": "https://log2r.github.io/RoboMIND2.0/",
+  "official_dataset": "https://modelscope.cn/datasets/X-Humanoid/RoboMIND2.0-Agilex",
+  "tree_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=master&Root=data/agilex&PageSize=100",
+  "task_directory_count": 66,
+  "latest_repo_commit_observed": "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382",
+  "api_response_structure": "Code=200; Data.Files[] with Name,Type,Path,Revision,Size; Data.TotalCount and top-level PageNumber/PageSize/TotalCount",
+  "tasks": [
+    {
+      "task_folder": "place_milk_next_to_cup",
+      "official_zh_description": "拿起牛奶放在杯子旁边",
+      "episode_directory_count": 360,
+      "count_is_not_validated_usable_count": true,
+      "file_revision": "b21612bdf4847b20fd2792be452e194c064db852",
+      "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=b21612bdf4847b20fd2792be452e194c064db852&FilePath=data%2Fagilex%2Fplace_milk_next_to_cup%2Fzh_description.txt",
+      "episode_tree_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=master&Root=data%2Fagilex%2Fplace_milk_next_to_cup%2Fsuccess_episodes&PageSize=100",
+      "first_episode_directory": "0611_144656",
+      "sample_file_size_bytes": 1004016688
+    },
+    {
+      "task_folder": "place_pomegranate_in_white_plate",
+      "official_zh_description": "石榴放进白色盘子",
+      "episode_directory_count": 266,
+      "count_is_not_validated_usable_count": true,
+      "file_revision": "8e97db09b59052ed955eaa29505bd4b09b128546",
+      "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=8e97db09b59052ed955eaa29505bd4b09b128546&FilePath=data%2Fagilex%2Fplace_pomegranate_in_white_plate%2Fzh_description.txt",
+      "episode_tree_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=master&Root=data%2Fagilex%2Fplace_pomegranate_in_white_plate%2Fsuccess_episodes&PageSize=100",
+      "first_episode_directory": "2024_12_12-10_29_11-173637122753700320.00",
+      "sample_file_size_bytes": 180660362
+    },
+    {
+      "task_folder": "put_scissors_into_bucket",
+      "official_zh_description": "将剪刀放进桶中",
+      "episode_directory_count": 264,
+      "count_is_not_validated_usable_count": true,
+      "file_revision": "3e7ddb1d940ddb9c710abdf105b87a6a38562bfe",
+      "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=3e7ddb1d940ddb9c710abdf105b87a6a38562bfe&FilePath=data%2Fagilex%2Fput_scissors_into_bucket%2Fzh_description.txt",
+      "episode_tree_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=master&Root=data%2Fagilex%2Fput_scissors_into_bucket%2Fsuccess_episodes&PageSize=100",
+      "first_episode_directory": "0411_153031",
+      "sample_file_size_bytes": null
+    },
+    {
+      "task_folder": "transfer_banana_from_pink_plate_to_green_bowl",
+      "official_zh_description": "用左臂从粉色盘子里拿起香蕉，将其交到右臂的夹爪中，然后用右臂把它放入绿色的碗里",
+      "episode_directory_count": 340,
+      "count_is_not_validated_usable_count": true,
+      "file_revision": "471a4bf080ce6506f359e976fae54efd907dba0d",
+      "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=471a4bf080ce6506f359e976fae54efd907dba0d&FilePath=data%2Fagilex%2Ftransfer_banana_from_pink_plate_to_green_bowl%2Fzh_description.txt",
+      "episode_tree_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=master&Root=data%2Fagilex%2Ftransfer_banana_from_pink_plate_to_green_bowl%2Fsuccess_episodes&PageSize=100",
+      "first_episode_directory": "0429_173322",
+      "sample_file_size_bytes": null
+    }
+  ],
+  "reading_method": "Official metadata GET and tiny description files; successful HDF5 byte ranges0-1023,0-65535,0-1048575. Existing libhdf51.14.5 parsed metadata from1MiB prefix held in a sparse cache; unfetched portions are not interpreted as data. No full episode download or new dependencies.",
+  "initial_hdf5_range_bytes": 1024,
+  "hdf5_metadata_status": "PARTIAL_REAL_METADATA_READ_COMPLETED; numerical values and images NOT_VERIFIED",
+  "provisional_limitations": [
+    "Task names do not prove single-arm independence; banana official description explicitly requires handover.",
+    "Episode counts are official directory counts, not screened usable demonstrations.",
+    "The verified six joint columns plus separate one-column end-effector position are structurally compatible candidates for our7D interface, not proof of compatible units or kinematics.",
+    "No evidence in the inspected metadata establishes that every Agilex episode is Piper or matches Piper H.",
+    "No full HDF5 or image payload was downloaded; no training, inference or robot action executed."
+  ],
+  "known_successful_hdf5_range_bytes": 1115136,
+  "other_attempt": "An existing-lib ROS3 proxy attempt had an8MiB maximum budget and was interrupted at open without a result; actual transfer for that attempt was not captured. No numerical values were claimed from it.",
+  "sample_hdf5": {
+    "file": "data/agilex/place_milk_next_to_cup/success_episodes/0611_144656/data/trajectory.hdf5",
+    "revision": "b21612bdf4847b20fd2792be452e194c064db852",
+    "source_size_bytes": 1004016688,
+    "prefix_bytes_parsed": 1048576,
+    "library": "existing system libhdf51.14.5 via ctypes",
+    "actual_dataset_metadata": {
+      "camera_observations/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "camera_observations/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "master/arm_left_position_align/data": {
+        "shape": [
+          2658,
+          6
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "master/arm_left_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "master/arm_left_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "master/arm_right_position_align/data": {
+        "shape": [
+          2658,
+          6
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "master/arm_right_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "master/arm_right_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "master/end_effector_left_pose_align/data": {
+        "shape": [
+          2658,
+          7
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 8
+      },
+      "master/end_effector_left_pose_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "master/end_effector_left_pose_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "master/end_effector_left_position_align/data": {
+        "shape": [
+          2658
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "master/end_effector_left_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "master/end_effector_left_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "master/end_effector_right_pose_align/data": {
+        "shape": [
+          2658,
+          7
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 8
+      },
+      "master/end_effector_right_pose_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "master/end_effector_right_pose_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "master/end_effector_right_position_align/data": {
+        "shape": [
+          2658
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "master/end_effector_right_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "master/end_effector_right_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "puppet/arm_left_position_align/data": {
+        "shape": [
+          2658,
+          6
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "puppet/arm_left_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "puppet/arm_left_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "puppet/arm_right_position_align/data": {
+        "shape": [
+          2658,
+          6
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "puppet/arm_right_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "puppet/arm_right_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "puppet/end_effector_left_pose_align/data": {
+        "shape": [
+          2658,
+          7
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 8
+      },
+      "puppet/end_effector_left_pose_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "puppet/end_effector_left_pose_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "puppet/end_effector_left_position_align/data": {
+        "shape": [
+          2658
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "puppet/end_effector_left_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "puppet/end_effector_left_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "puppet/end_effector_right_pose_align/data": {
+        "shape": [
+          2658,
+          7
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 8
+      },
+      "puppet/end_effector_right_pose_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "puppet/end_effector_right_pose_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      },
+      "puppet/end_effector_right_position_align/data": {
+        "shape": [
+          2658
+        ],
+        "type_class": "float",
+        "itemsize_bytes": 4
+      },
+      "puppet/end_effector_right_position_align/is_intervene": {
+        "shape": [
+          2658
+        ],
+        "type_class": "enum",
+        "itemsize_bytes": 1
+      },
+      "puppet/end_effector_right_position_align/timestamp": {
+        "shape": [
+          2658
+        ],
+        "type_class": "integer",
+        "itemsize_bytes": 8
+      }
+    },
+    "unfetched_metadata_paths": [
+      "camera_color_channel/camera_front",
+      "camera_color_channel/camera_left",
+      "camera_color_channel/camera_right",
+      "camera_color_resolution/camera_front",
+      "camera_color_resolution/camera_left",
+      "camera_color_resolution/camera_right",
+      "camera_depth_resolution/camera_front",
+      "camera_depth_resolution/camera_left",
+      "camera_depth_resolution/camera_right",
+      "camera_model/camera_front",
+      "camera_model/camera_left",
+      "camera_model/camera_right"
+    ],
+    "current_camera_child_names_observed": [
+      "camera_front",
+      "camera_left",
+      "camera_right"
+    ],
+    "read_scope": "38 current HDF5 dataset headers plus metadata attributes were read using existing libhdf5. Image payloads, active camera model/calibration values and numerical control arrays were not decoded. Failed partial-cache accesses are not evidence of source corruption.",
+    "unverified": [
+      "actual robot variant / Piper versus ARX5",
+      "joint and gripper units/scales",
+      "original timestamp values and cadence",
+      "whether master values are actual follower commands without remapping/delay",
+      "single-arm task independence and wrist view sufficiency",
+      "complete image/state/action integrity"
+    ],
+    "verified_metadata_attributes": {
+      "collection_time": "2025-09-22 19:02:25",
+      "data_type": "real",
+      "language_instruction": "Pick up the milk and place it next to the cup",
+      "trajectory_length": 2658
+    },
+    "checked_numeric_dataset_attributes": {
+      "master/arm_left_position_align/data": {},
+      "puppet/arm_left_position_align/data": {},
+      "master/end_effector_left_position_align/data": {},
+      "camera_observations/timestamp": {}
+    }
+  }
+}

@@ -13,6 +13,8 @@
 | 三报文离线审计 | 已运行。37,993 行的最大跨度为 0.4976 ms；5,382 张 RGB 引用的 5,382 个不同关节行最大 0.4640 ms（图像索引 3371）。5 ms 筛查标记 0 行，原完整观测仍为 5,382，接口 rx_dropped +54 的 ID 未知。[离线审计与发送端接入点](../results/piper-real-single-v1/20261120_194402/joint_packet_review_zh.md) |
 | 发送端与周日配置 | H0 的命令 CSV 记录高层调用返回后的入参，TX CSV 记录底层调用前的尝试。后续在同一发送端补底层逐帧提交结果并关联独立反馈。周日副本预选 received，有效 K/残余 D 等待板图；图像链核实标志为 false，设备内部校正为 null。[周日配置](../results/piper-real-single-v1/20261120_194402/calibration_spec_20261122_prepared.json) |
 | 模型 | D57 实际环境、独立基础权重、数据和输出路径已核对，两份腕部全参配置与入口已就位。真实示范和新 norm 未就绪，训练、推理、容量试跑均 NOT_RUN，动作发送 0。单卡双全参无实测依据。[云端现场记录](../results/piper-real-single-v1/20261120_194402/autodl.json) |
+| RoboMIND 公开示范调研 | 已读取官方论文、发布目录、候选任务说明及一个真实 HDF5 的有限元数据；发现六关节和独立末端位置流。优先检查 V2 AgileX 牛奶搬运/石榴入盘候选，尝试公开数据训练后的零本地任务示范测试。机器人版本、单位、单臂独立性、时序仍未验收；完整转换、norm、训练均 NOT_RUN。[调研报告](ROBOMIND_FOR_PI_SINGLE_WRIST_20261120.md) · [数据侧下一步提示词](ROBOMIND_SINGLE_WRIST_NEXT_PROMPT_20261120.md) |
 
-H0 的历史接入、H500、I500 和八条恢复采集均已完成。B 累计 4020 保留为旧双相机仿真基线；仿真验证 72/75，验证集曾反复参与选择。旧双相机提示词已停用。两模型后续从有实际动作标签的真实训练 split 计算独立 norm。[标定前计划](PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md) · [11 月 20 日已执行提示词](PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md)
+H0 的历史接入、H500、I500 和八条恢复采集均已完成。B 累计 4020 保留为旧双相机仿真基线；仿真验证 72/75，验证集曾反复参与选择。旧双相机提示词已停用。两模型后续从有可信动作监督、已完成语义适配的真实训练 split 计算独立 norm；训练示范可以来自公共数据，不要求全部本地自采。现有静止观测保持 observation_only。[标定前计划](PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md) · [11 月 20 日已执行提示词](PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md)
+
 

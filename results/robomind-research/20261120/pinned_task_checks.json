@@ -1,0 +1,50 @@
+[
+  {
+    "task": "place_milk_next_to_cup",
+    "revision": "b21612bdf4847b20fd2792be452e194c064db852",
+    "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=b21612bdf4847b20fd2792be452e194c064db852&FilePath=data%2Fagilex%2Fplace_milk_next_to_cup%2Fzh_description.txt",
+    "description": "拿起牛奶放在杯子旁边",
+    "episode_list_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=b21612bdf4847b20fd2792be452e194c064db852&Root=data%2Fagilex%2Fplace_milk_next_to_cup%2Fsuccess_episodes&PageSize=1",
+    "episode_directory_count": 360,
+    "first_entry": [
+      {
+        "Name": "0611_144656",
+        "Path": "data/agilex/place_milk_next_to_cup/success_episodes/0611_144656",
+        "Type": "tree",
+        "Revision": ""
+      }
+    ]
+  },
+  {
+    "task": "place_pomegranate_in_white_plate",
+    "revision": "8e97db09b59052ed955eaa29505bd4b09b128546",
+    "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=8e97db09b59052ed955eaa29505bd4b09b128546&FilePath=data%2Fagilex%2Fplace_pomegranate_in_white_plate%2Fzh_description.txt",
+    "description": "石榴放进白色盘子",
+    "episode_list_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=8e97db09b59052ed955eaa29505bd4b09b128546&Root=data%2Fagilex%2Fplace_pomegranate_in_white_plate%2Fsuccess_episodes&PageSize=1",
+    "episode_directory_count": 266,
+    "first_entry": [
+      {
+        "Name": "2024_12_12-10_29_11-173637122753700320.00",
+        "Path": "data/agilex/place_pomegranate_in_white_plate/success_episodes/2024_12_12-10_29_11-173637122753700320.00",
+        "Type": "tree",
+        "Revision": "8e97db09b59052ed955eaa29505bd4b09b128546"
+      }
+    ]
+  },
+  {
+    "task": "transfer_banana_from_pink_plate_to_green_bowl",
+    "revision": "471a4bf080ce6506f359e976fae54efd907dba0d",
+    "description_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo?Revision=471a4bf080ce6506f359e976fae54efd907dba0d&FilePath=data%2Fagilex%2Ftransfer_banana_from_pink_plate_to_green_bowl%2Fzh_description.txt",
+    "description": "用左臂从粉色盘子里拿起香蕉，将其交到右臂的夹爪中，然后用右臂把它放入绿色的碗里",
+    "episode_list_url": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=471a4bf080ce6506f359e976fae54efd907dba0d&Root=data%2Fagilex%2Ftransfer_banana_from_pink_plate_to_green_bowl%2Fsuccess_episodes&PageSize=1",
+    "episode_directory_count": 340,
+    "first_entry": [
+      {
+        "Name": "0429_173322",
+        "Path": "data/agilex/transfer_banana_from_pink_plate_to_green_bowl/success_episodes/0429_173322",
+        "Type": "tree",
+        "Revision": ""
+      }
+    ]
+  }
+]
