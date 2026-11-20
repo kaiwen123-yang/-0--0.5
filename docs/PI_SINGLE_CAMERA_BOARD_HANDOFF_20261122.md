@@ -19,7 +19,7 @@ SPEC="$CAL/calibration_spec.json"
 在一个终端初始化一次，按板上标识和量具实测填写副本，沿用相机、话题、分辨率、基座和法兰定义。
 
 ```bash
-mkdir "$CAL" && cp "$PI/results/piper-real-single-v1/20261120_194402/calibration_spec.json" "$SPEC"
+mkdir "$CAL" && cp "$PI/results/piper-real-single-v1/20261120_194402/calibration_spec_20261122_prepared.json" "$SPEC"
 ```
 
 - 普通棋盘填 `board.type=chessboard`、真实内角点列/行、格长（m）。用硬底板或夹具把板固定在基座所在刚性桌面，夹具放在图案外，留出边框。记录基座夹具、板四角和物理原点照片。核实后填写 `geometry_verified`、`rigid_mount_verified`、`origin_description`、`x_axis_description`、`y_axis_description`。ChArUco/AprilGrid 须先按实物字典、ID、间距接入对应检测器。
@@ -32,6 +32,8 @@ bash "$H0/scripts/h0_ros_env.sh" ros2 topic list --no-daemon --spin-time 2
 # 仅在没有运行中的 H0 相机驱动时启动
 bash "$H0/scripts/h0_camera.sh"
 ```
+
+11 月 20 日静止段的三报文审计已完成，周日只需按新增姿态核对此项。周日配置预选 received，像素链核实标志和依据留给当日填写。[离线审计与发送端接入点](../results/piper-real-single-v1/20261120_194402/joint_packet_review_zh.md)
 
 终端 B 保持现场画面。单姿态记录器各自保存真实状态，此处作为构图视窗。
 

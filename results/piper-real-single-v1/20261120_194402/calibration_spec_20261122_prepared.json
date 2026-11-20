@@ -1,0 +1,45 @@
+{
+  "preparation_status": "NOT_RUN",
+  "camera_role": "left_wrist_0_rgb",
+  "mount_mode": "wrist",
+  "installation_verified": true,
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_domain": "received",
+  "image_domain_verified": false,
+  "image_domain_evidence": null,
+  "image_size": [
+    640,
+    480
+  ],
+  "board": {
+    "type": null,
+    "inner_corners_cols": null,
+    "inner_corners_rows": null,
+    "square_size_m": null,
+    "geometry_verified": false,
+    "origin_description": null,
+    "x_axis_description": null,
+    "y_axis_description": null,
+    "mounted_rigidly_to": "base_world",
+    "rigid_mount_verified": false
+  },
+  "robot": {
+    "base_frame": "base_link",
+    "gripper_frame": "flange_link",
+    "pose_source": "pyAgxArm 1.0.0 piper_h MDH FK",
+    "pose_source_verified": false,
+    "translation_unit": "m"
+  },
+  "minimum_views": {
+    "train": 15,
+    "heldout": 5
+  },
+  "notes": [
+    "到货后核实板型、物理原点、+x/+y、角点行列与格长（m），固定到与基座刚性相连的桌面。",
+    "11 月 22 日现场核对 DC1、腕端支架、RGB 模式、ROI、镜像、旋转、缩放以及保存和求解路径。填写当日像素链依据后再设置 image_domain_verified=true。对实际接收像素拟合有效 K 和五项残余 D，设备内部校正仍未知。",
+    "先核对多姿态控制器法兰与实测关节 FK、基座和法兰定义。按每个样本实际情况填写独立复核项。",
+    "本配置没有外参；安装照片 mount_wrist.jpg，位姿核对见 flange_000120.json。"
+  ],
+  "camera_id": "CC16762023M",
+  "device_internal_rectification": null
+}

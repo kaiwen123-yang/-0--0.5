@@ -39,7 +39,7 @@ SESSION=/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-
 
 若输出已经存在，直接阅读原结果；需要新一轮分析时用新文件名。读 `all_supplied_joint_rows`、`unique_joint_rows_referenced_by_rgb`、`affected_rgb_stream_indices` 和 `anomalous_joint_rows`。有异常再按原时间定位本机 `raw/raw_can.csv`，报告实际报文、跨度和可确认的影响；没有异常也保留“54 次接口丢弃未按 ID 归因”的边界。三帧跨度并不提供相机曝光时间。
 
-这项审计入口本次只完成源码审阅与语法解析。当前 ChatGPT 工作区没有现场机完整 CSV，**本次未执行本轮 37,993 条数据的审计，未生成通过结论**。现场 Codex 执行后再提交紧凑 JSON 和实际结论。周日单姿态目录具备同样文件，可以沿用同一命令把 `SESSION` 换成具体姿态目录。
+现场已于北京时间 11 月 20 日执行本命令。全部 37,993 个关节行和 RGB 引用的 5,382 个不同行均未触发 5 ms 筛查；原图关联计数保留。周日可对新采的姿态目录运行同一工具。[离线审计与发送端接入点](../results/piper-real-single-v1/20261120_194402/joint_packet_review_zh.md)
 
 来源：[固定 H0 接收器](https://github.com/kaiwen123-yang/dog-and-arm/blob/284c1f3f1bb9d5096003433f6153a9c5e95d6189/scripts/h0_record_arm.py)、[Linux 接口统计定义](https://docs.kernel.org/networking/statistics.html)。
 
@@ -100,7 +100,7 @@ train 用于拟合 K/D 和手眼，heldout 独立报告像素残差、固定板�
 
 现有 `dataset.py` 只是读取已整理好的数组；发送端动作日志与这些数组之间的转换尚未实现。这项接口约定先留在接续任务中，待实际发送记录格式确定后实现转换。现有静止段继续保持 0 动作资格。
 
-## 4. 现在可交给现场 Codex 的提示词
+## 4. 11 月 20 日已执行的提示词（留作来源）
 
 ```text
 继续 π0/π0.5 单腕相机实机。先读 AGENTS.md、docs/PI_REAL_TEST_STATE.md、
@@ -127,6 +127,6 @@ docs/PI_SINGLE_CAMERA_FIELD_REVIEW_20261120.md 和周日 BOARD_HANDOFF 文档。
 不重装环境，不新增相机，不改 dog-and-arm，不执行 H/I 或其他机器人任务。
 ```
 
-## 本次修改的核验范围
+## 准备提交 282a04f 的核验范围（历史）
 
 对照当前提交和固定 H0/OpenCV 原始文档做源码审阅；两项 Python 修改做静态语法解析，配置 JSON 做解析检查。未在此工作区运行现场 CSV 审计、相机/机械臂、模型、标定拟合或模拟测试。原有现场数据报告保持原样，状态中的待执行项与已完成项分开。

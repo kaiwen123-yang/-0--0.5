@@ -1,0 +1,118 @@
+{
+  "schema": "piper_real_single_v1.joint_packet_span_audit.v1",
+  "status": "READ_ONLY_ANALYSIS_COMPLETED",
+  "data_kind": "observation_only",
+  "training_eligible": false,
+  "model_inference": "NOT_RUN",
+  "training": "NOT_RUN",
+  "hardware_commands_sent": 0,
+  "sources": {
+    "joints_csv": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/joints.csv",
+    "observations_jsonl": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/association/observations.jsonl",
+    "arm_summary_json": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/20261120_194402/arm_summary.json",
+    "boot_id": "fd4ea199-adf2-4fbd-8bc0-d852eba206a5"
+  },
+  "screening_reference": {
+    "nominal_period_ms": "5",
+    "comparison": "can_last_s minus can_first_s >= reference",
+    "meaning": "caller-selected nominal packet-group period; screening only, not an acceptance limit"
+  },
+  "arithmetic": "Source decimal strings parsed with Decimal; epoch timestamps are never subtracted as floats. Span/distribution values are decimal strings in ms; percentiles interpolate adjacent ranks.",
+  "all_supplied_joint_rows": {
+    "joint_rows": 37993,
+    "finite_span_ms": {
+      "count": 37993,
+      "min": "0.0019000",
+      "p50": "0.23910000",
+      "p95": "0.292300000",
+      "p99": "0.321508000",
+      "max": "0.4976000"
+    },
+    "max_span_source": {
+      "csv_data_row": 21339,
+      "host_monotonic_ns": "2390955409910",
+      "can_first_s": "1795175196.9810407",
+      "can_last_s": "1795175196.9815383"
+    },
+    "finite_span_includes_negative_values": true,
+    "rows_with_screening_flags": 0,
+    "flag_counts": {},
+    "flag_counts_can_overlap": true
+  },
+  "unique_joint_rows_referenced_by_rgb": {
+    "joint_rows": 5382,
+    "finite_span_ms": {
+      "count": 5382,
+      "min": "0.0478000",
+      "p50": "0.2400000",
+      "p95": "0.291600000",
+      "p99": "0.321719000",
+      "max": "0.4640000"
+    },
+    "max_span_source": {
+      "csv_data_row": 22628,
+      "host_monotonic_ns": "2397401757284",
+      "can_first_s": "1795175203.4271376",
+      "can_last_s": "1795175203.4276016"
+    },
+    "finite_span_includes_negative_values": true,
+    "rows_with_screening_flags": 0,
+    "flag_counts": {},
+    "flag_counts_can_overlap": true
+  },
+  "source_observation_counts_unchanged": {
+    "observation_rows": 5382,
+    "rows_originally_marked_model_observation_complete": 5382
+  },
+  "arm_summary_reported_joint_rows": 37993,
+  "arm_summary_joint_row_count_matches_csv": true,
+  "affected_rgb_stream_indices": [],
+  "affected_rgb_by_screening_flag": {},
+  "unlinked_rgb_observations": [],
+  "anomalous_joint_rows": [],
+  "recorded_arm_session": {
+    "started_monotonic_ns": 2284208224634,
+    "ended_monotonic_ns": 2474244136925,
+    "can_error_frames": 0,
+    "recorder_error": null,
+    "interface_before": {
+      "rx_packets": 179918,
+      "rx_errors": 0,
+      "rx_dropped": 179918,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    },
+    "interface_after": {
+      "rx_packets": 620913,
+      "rx_errors": 0,
+      "rx_dropped": 179972,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    },
+    "interface_delta_computed_from_snapshots": {
+      "rx_packets": 440995,
+      "rx_errors": 0,
+      "rx_dropped": 54,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    },
+    "interface_delta_recorded_in_summary": {
+      "rx_packets": 440995,
+      "rx_errors": 0,
+      "rx_dropped": 54,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "limitations": [
+    "A short packet-group span does not prove same-cycle J1-J6 feedback or physical synchronization.",
+    "Interface rx_dropped counts cannot be attributed to individual CAN IDs or affected images from these files.",
+    "Flags locate source rows for a later examination of actual raw CAN; this tool does not infer missing packets.",
+    "No original observation is rejected, relabeled, removed, or reassociated; original completeness counts remain unchanged.",
+    "CAN receive timestamps and same-host observation association do not establish camera exposure or control latency."
+  ]
+}
