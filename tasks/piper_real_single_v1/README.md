@@ -7,6 +7,7 @@
 | 文件 | 用途 |
 |---|---|
 | associate_h0.py | 原始H0时间表、实际PNG索引、关节/夹爪反馈的接收时间关联 |
+| joint_packet_audit.py | 读取已有关节 CSV 与观测索引，报告六关节三条 CAN 报文跨度及受影响 RGB，不改变既有关联结果 |
 | live_view.py | 订阅已有ROS RGB，并显示H0已落盘反馈及年龄 |
 | export_observation.py | 将一条真实完整观测导出为单相机NPZ，不生成动作标签 |
 | policy_config.py | 单相机输入、绝对动作输出，以及π0/π0.5全参配置 |
@@ -55,7 +56,7 @@ python tasks/piper_real_single_v1/export_observation.py \
 
 ## 4. 周日使用的标定入口
 
-先复制 calibration_spec.example.json 为本次实际配置并填写真实设备/板信息。图像域raw或rectified必须有现场依据；D=0或话题名image_raw不能自动证明是哪一种。
+沿用 [11 月 22 日接续文档](../../docs/PI_SINGLE_CAMERA_BOARD_HANDOFF_20261122.md) 复制本机已确认的腕部配置，再填写真实板信息。`image_domain=received` 对固定、可复现的实际接收像素拟合有效 K 与残余畸变，不要求先证明设备内部是否校正。填写处理链依据，内部状态未知时保留 `device_internal_rectification=null`。`raw` 或 `rectified` 则分别需要相应像素域的证据；D=0 或话题名 image_raw 不能自动证明是哪一种。
 
 每行manifest表示一张真实接收图，必需字段：
 
@@ -84,7 +85,7 @@ python tasks/piper_real_single_v1/calibration.py handeye \
   --method park --out /实际新路径/handeye
 ~~~
 
-raw拟合K与5项畸变；rectified固定D0并拟合当前流有效K。两者都使用真实图像，采集端不得再次缩放/去畸变后还沿用旧像素几何。
+received 拟合当前接收流的有效 K 与 5 项残余畸变；raw 拟合已确认原始几何像素的 K 与 5 项畸变；rectified 固定 D0 并拟合当前校正流的有效 K。三种模式都使用真实图像，采集端不得再次缩放/去畸变后还沿用旧像素几何。received 的五参数模型是待独立组验证的近似，不能描述任意 ISP 变换；结果光学系属于该图像模型，不自动等同于物理外壳或未配准深度坐标系。
 
 结果为FIT_REQUIRES_REVIEW，独立图像/姿态误差单独报告，不自动发布TF或宣称通过。无真实输入为NOT_RUN，不输出假外参。普通棋盘需要确认原点编号一致；实际板若是ChArUco/AprilGrid，按真实字典/ID补检测器。
 
@@ -99,4 +100,7 @@ raw拟合K与5项畸变；rectified固定D0并拟合当前流有效K。两者都
 [本轮总计划](../../docs/PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md)；
 [现场Codex提示词](../../docs/PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md)；
 [当前状态](../../docs/PI_REAL_TEST_STATE.md)。
+
+11 月 20 日现场结果后的补充审阅、现有日志补查命令、动作记录接口与下一步提示词见 [接续审阅](../../docs/PI_SINGLE_CAMERA_FIELD_REVIEW_20261120.md)。
+
 

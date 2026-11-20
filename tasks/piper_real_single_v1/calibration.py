@@ -41,15 +41,16 @@ not turn nearest receive-time association into exposure synchronisation.
 
 Convention: T_a_b maps coordinates in frame b into frame a. Let G_i be
 T_base_gripper and C_i be T_camera_target obtained by PnP using RGB intrinsics.
-The camera frame is the actual RGB optical frame, not the camera housing.
+The camera frame is the optical frame of the calibrated RGB image model, not
+the camera housing or the unregistered depth camera.
 
-external_fixed (latest intended installation): camera stays fixed to the base/
+external_fixed (supported alternative): camera stays fixed to the base/
 world; board is rigidly fixed to a fixed part of the gripper/flange. The board
 must not move relative to that frame, e.g. with moving gripper jaws. Supply
 inverse(G_i) and C_i to OpenCV calibrateHandEye; its result is X=T_base_camera.
     inverse(G_i) @ X @ C_i = T_gripper_target (constant)
 
-wrist: camera is rigidly fixed to the gripper/flange; board stays fixed relative
+wrist (confirmed installation on 2026-11-20): camera is rigidly fixed to the gripper/flange; board stays fixed relative
 to the robot base/world. Supply G_i and C_i; X=T_gripper_camera.
     G_i @ X @ C_i = T_base_target (constant)
 
@@ -64,10 +65,19 @@ held-out constant transform with a constant fitted from TRAINING views only.
 No result is labelled physically validated or automatically published as TF.
 Do not choose poses/parameters repeatedly against the same held-out set.
 
-The current stream's image_domain must be explicitly verified as "raw" or
-"rectified" before fitting. Corner detection can run while the domain is unknown. Raw fits five
-distortion coefficients; rectified holds D=0 and fits the effective pinhole K
-of that actual rectified stream. Neither mode applies another undistortion.
+Select the current stream's image_domain before fitting. "received" fits an
+effective K and five residual Brown-Conrady coefficients to the unchanged,
+reproducible received pixels. Record the observed processing chain and retain
+unknown device-internal rectification as null; proving the ISP implementation
+is not required. image_domain_verified then confirms the recorded pixel
+pipeline, not raw-sensor or rectification status. This approximate image model
+still requires held-out validation and does not model arbitrary ISP warps.
+"raw" requires evidence of raw geometric pixels and fits five coefficients;
+"rectified" requires rectification evidence, holds D=0 and fits effective K.
+All modes use the same unchanged frames; none applies another undistortion.
+For "received", the fitted optical axes are +x right, +y down, +z forward.
+The ROS frame name binds this image model; it does not independently establish
+coincidence with the physical sensor axes if internal virtual rotation exists.
 This tool accepts only its own real checkerboard-fit intrinsics for hand-eye;
 H0 CameraInfo D=[0,0,0,0,0] does not establish which domain the stream uses.
 It neither changes the camera driver nor registers raw depth into RGB.
@@ -88,6 +98,26 @@ class NotReady(RuntimeError):
     pass
 
 
+CAMERA_MODELS = {
+    "raw": "raw_rgb_brown_conrady_5",
+    "rectified": "effective_rectified_pinhole",
+    "received": "effective_received_rgb_brown_conrady_5",
+}
+
+
+def image_geometry_metadata(spec):
+    return {
+        "camera_id": spec.get("camera_id"),
+        "image_domain_evidence": spec.get("image_domain_evidence"),
+        "device_internal_rectification": spec.get("device_internal_rectification"),
+        "camera_frame_definition": (
+            "Optical frame of this calibrated RGB image model: +x right, +y down, +z forward. "
+            "Not a camera-housing or unregistered-depth transform. For received pixels, "
+            "coincidence with unprocessed physical sensor axes is not asserted."
+        ),
+    }
+
+
 def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + "\n")
@@ -100,9 +130,13 @@ def load_spec(path, *, fitting):
     if mode not in expected_role or spec.get("camera_role") != expected_role[mode]:
         raise ValueError("Select external_fixed/base_0_rgb or wrist/left_wrist_0_rgb explicitly.")
     if fitting and (spec.get("image_domain_verified") is not True or spec.get("image_domain") is None):
-        raise NotReady("Verify whether the actual RGB stream is raw or rectified; CameraInfo D=0 alone is insufficient.")
-    if fitting and spec.get("image_domain") not in ("raw", "rectified"):
-        raise ValueError("image_domain must explicitly be raw or rectified after checking the actual stream.")
+        raise NotReady("Confirm the recorded pixel pipeline and select received, raw or rectified; CameraInfo D=0 alone is insufficient.")
+    if fitting and spec.get("image_domain") not in CAMERA_MODELS:
+        raise ValueError("image_domain must explicitly be received, raw or rectified.")
+    if fitting and spec["image_domain"] == "received":
+        evidence = spec.get("image_domain_evidence")
+        if not isinstance(evidence, str) or not evidence.strip():
+            raise NotReady("Received-stream fitting needs evidence of the fixed resolution and processing chain.")
     board = spec.get("board", {})
     if board.get("type") != "chessboard":
         raise ValueError("This minimal tool supports a chessboard, not an unspecified ChArUco board.")
@@ -225,7 +259,7 @@ def detect(records, spec, out, cv2, np):
     write_json(out / "detection.json", {
         "status": "DETECTION_ONLY", "camera_role": spec["camera_role"],
         "image_domain": spec.get("image_domain"), "image_domain_verified": spec.get("image_domain_verified") is True,
-        "image_domain_evidence": spec.get("image_domain_evidence"),
+        **image_geometry_metadata(spec),
         "image_size": spec["image_size"], "board": spec["board"],
         "detector": "OpenCV findChessboardCornersSB", "opencv_version": cv2.__version__,
         "image_count": len(records), "detected_count": len(accepted),
@@ -305,10 +339,9 @@ def intrinsics(records, spec, out, cv2, np):
         "intrinsics_origin": "real_checkerboard_fit", "opencv_version": cv2.__version__,
         "camera_role": spec["camera_role"], "camera_frame": spec.get("camera_frame"),
         "image_domain": spec["image_domain"], "image_domain_verified": True,
-        "image_domain_evidence": spec.get("image_domain_evidence"),
+        **image_geometry_metadata(spec),
         "image_size": spec["image_size"],
-        "camera_model": ("effective_rectified_pinhole" if spec["image_domain"] == "rectified"
-                         else "raw_rgb_brown_conrady_5"),
+        "camera_model": CAMERA_MODELS[spec["image_domain"]],
         "calibration_flags": flag_names,
         "distortion_model": "plumb_bob", "distortion_order": ["k1", "k2", "p1", "p2", "k3"],
         "K": K.tolist(), "D": D.reshape(-1).tolist(), "board": spec["board"],
@@ -325,6 +358,7 @@ def intrinsics(records, spec, out, cv2, np):
         "detection_report": str((out / "detection.json").resolve()),
         "validation_note": "K,D fitted only on training views. Held-out PnP fits each target pose only. "
                            "These are pixel residuals, not independently measured metric accuracy. "
+                           "Received-stream K,D describe the observed pixels; they do not establish ISP internals. "
                            "No driver CameraInfo was overwritten and no physical acceptance was inferred.",
     }
     write_json(out / "intrinsics.json", result)
@@ -376,15 +410,14 @@ def handeye(records, spec, intrinsics_path, method, out, cv2, np):
     if intr.get("intrinsics_origin") != "real_checkerboard_fit" or intr.get("fit_performed") is not True:
         raise ValueError("Use intrinsics.json from a real checkerboard fit; factory zero D is not presumed valid.")
     if intr.get("image_domain_verified") is not True:
-        raise NotReady("The intrinsic fit must record a verified raw/rectified domain for the current stream.")
-    for name in ("camera_role", "camera_frame", "image_size", "image_domain"):
+        raise NotReady("The intrinsic fit must record the reviewed received/raw/rectified pixel pipeline.")
+    for name in ("camera_id", "camera_role", "camera_frame", "image_size", "image_domain"):
         if intr.get(name) != spec.get(name):
             raise ValueError(f"Intrinsics {name} differs from the current capture/spec.")
     K, D = np.asarray(intr["K"], dtype=float), np.asarray(intr["D"], dtype=float)
     if K.shape != (3, 3) or D.size != 5 or not np.isfinite(K).all() or not np.isfinite(D).all():
         raise ValueError("Expected finite 3x3 K and five plumb_bob coefficients from the intrinsic fit.")
-    expected_model = ("effective_rectified_pinhole" if spec["image_domain"] == "rectified"
-                      else "raw_rgb_brown_conrady_5")
+    expected_model = CAMERA_MODELS[spec["image_domain"]]
     if intr.get("camera_model") != expected_model:
         raise ValueError("The intrinsic camera model does not match the verified current stream domain.")
     if spec["image_domain"] == "rectified" and np.any(D != 0):
@@ -443,6 +476,7 @@ def handeye(records, spec, intrinsics_path, method, out, cv2, np):
         "status": "FIT_REQUIRES_REVIEW", "fit_performed": True,
         "mount_mode": spec["mount_mode"], "camera_role": spec["camera_role"],
         "image_domain": spec["image_domain"], "image_domain_verified": True,
+        **image_geometry_metadata(spec),
         "image_size": spec["image_size"], "camera_model": expected_model,
         "camera_frame": spec["camera_frame"], "robot": robot, "board": board,
         "matrix_convention": "T_a_b maps coordinates from frame b to frame a; translations in metres",
@@ -503,3 +537,4 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
