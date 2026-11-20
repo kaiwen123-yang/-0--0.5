@@ -6,7 +6,7 @@
 
 标定前任务背景在 docs/PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md 和 docs/PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md。新代码在 tasks/piper_real_single_v1/，与历史双相机仿真模块分开。
 
-现场结果后补充见 docs/PI_SINGLE_CAMERA_FIELD_REVIEW_20261120.md。先用已有本机日志补六关节三 CAN 报文跨度，不重录同类 180 秒。标定支持 received 有效成像模型：核实固定接收像素处理链，不必先证明设备内部 raw/rectified；未知内部校正保持未知，真实独立组验证仍必需。代码已准备不等于本机日志已审计或标定已完成。
+11 月 20 日已有会话的六关节三 CAN 报文跨度审计已完成，37,993 行无 5 ms 筛查标记，原 5,382 条图像关联保留。结果及唯一发送端的日志接入点见 results/piper-real-single-v1/20261120_194402/joint_packet_review_zh.md。周日用新的 received 配置，按当日实查填写像素处理链，内部校正未知留 null。待到板后采集各组实际姿态并独立验证。
 
 - 不等待、不推荐购买第二台相机。只使用一个真实 camera_rgb 输入；external_fixed 映射 base_0_rgb，wrist 映射 left_wrist_0_rgb，安装类型显式选择。
 - 未使用的模型图像槽 mask=False，允许协议所需的零占位；禁止把复制图/黑图标为真实有效第二视角。
