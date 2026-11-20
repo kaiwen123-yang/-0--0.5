@@ -1,13 +1,16 @@
 {
   "preparation_status": "NOT_RUN",
-  "camera_role": "base_0_rgb",
-  "mount_mode": "external_fixed",
+  "camera_role": "left_wrist_0_rgb",
+  "mount_mode": "wrist",
   "installation_verified": false,
   "camera_frame": null,
   "image_domain": null,
   "image_domain_verified": false,
   "image_domain_evidence": null,
-  "image_size": [640, 480],
+  "image_size": [
+    640,
+    480
+  ],
   "board": {
     "type": "chessboard",
     "inner_corners_cols": null,
@@ -33,10 +36,10 @@
   },
   "notes": [
     "This is a preparation example, not a calibration result. Enter the actual received board geometry; do not infer its model from a shopping suggestion.",
-    "The current requested camera role is external_fixed/base_0_rgb. Physically confirm installation; historical wrist_camera topic names do not establish it.",
+    "The 2026-11-20 installation is wrist/left_wrist_0_rgb. Enter the actual camera identity and verify the present mount; use the field session spec and handoff for the confirmed DC1.",
     "H0 RGB was 640x480; verify the current stream dimensions without resizing. Enter its actual RGB optical frame in camera_frame.",
-    "Verify the actual stream's image domain from driver/device processing evidence and real images. Set image_domain=raw or rectified and image_domain_verified=true only after that review; record the evidence. CameraInfo D=0 alone does not decide this.",
-    "Raw fits five distortion coefficients. Rectified fixes D=0 and estimates the effective pinhole K for the current rectified stream. Both require real board images, unchanged by additional capture-side resizing or undistortion.",
+    "Review the fixed received pixel pipeline and set image_domain=received, raw or rectified, with image_domain_verified=true and processing evidence. For received, this verifies the recorded pipeline, not device-internal rectification; unknown internal status stays null.",
+    "Received fits effective K and five residual Brown-Conrady coefficients on unchanged delivered pixels. Raw fits K and five coefficients with raw-domain evidence. Rectified fixes D=0 with rectification evidence. All models require independent view validation and no extra capture-side warp or resize.",
     "Inner corners are one fewer than square counts in each direction. square_size_m is in metres. Mark a physical origin outside the detection pattern and keep corner numbering consistent.",
     "For external_fixed: camera and robot base stay fixed; board is rigidly attached to a fixed end-effector part, mounted_rigidly_to=gripper.",
     "For wrist: set camera_role=left_wrist_0_rgb and mount_mode=wrist; camera stays rigidly attached to the flange/gripper; board stays fixed relative to base, mounted_rigidly_to=base_world.",
@@ -46,5 +49,8 @@
     "Unverified factory CameraInfo D=0 is not presumed rectified. Fit RGB intrinsics from real board captures and inspect held-out results before hand-eye. Do not overwrite the original CameraInfo evidence.",
     "Raw depth has separate dimensions/intrinsics and is not registered by this tool. RGB calibration requires no depth lookup.",
     "No CAN control, automatic enable, homing, or robot motion is performed by this tool. Real calibration and hand-eye accuracy remain NOT_RUN until actual data exist."
-  ]
+  ],
+  "camera_id": null,
+  "device_internal_rectification": null
 }
+
