@@ -1,0 +1,68 @@
+{
+  "schema": "piper_real_single_v1.historical_one_frame_provenance.v1",
+  "analysis_scope": "historical offline analysis and export of one real observation",
+  "analysis_date": "2026-11-20",
+  "repository": "kaiwen123-yang/dog-and-arm",
+  "commit": "284c1f3f1bb9d5096003433f6153a9c5e95d6189",
+  "source_directory": "results/hardware/h0/20261116_2051/evidence/motion_success",
+  "source_url": "https://github.com/kaiwen123-yang/dog-and-arm/tree/284c1f3f1bb9d5096003433f6153a9c5e95d6189/results/hardware/h0/20261116_2051/evidence/motion_success",
+  "files": {
+    "stream_timing.csv": {
+      "sha": "a5caafe7272747782fab4b4c3c2282a581a467f1",
+      "source_lines": {
+        "first": 1,
+        "last_inclusive": 701,
+        "includes_header": true
+      },
+      "persisted_text_lines": 701
+    },
+    "joints.csv": {
+      "sha": "307819be508e91e2661ce3d30519c27dda2142f0",
+      "source_lines": {
+        "first": 1,
+        "last_inclusive": 2201,
+        "includes_header": true
+      },
+      "persisted_text_lines": 2201
+    },
+    "gripper.csv": {
+      "sha": "7f9a83f213f2bdfc4e6f67e70481a54d5ef82c13",
+      "source_lines": {
+        "first": 1,
+        "last_inclusive": 2201,
+        "includes_header": true
+      },
+      "persisted_text_lines": 2201
+    },
+    "window_manifest.json": {
+      "sha": "bd2a37ede07a131d0a06294ee1bf6488d02d49ec",
+      "source_lines": "full file",
+      "persisted_text_lines": 179
+    },
+    "full_run_camera_summary.json": {
+      "sha": "157997c8bbcc46452ebedf9b79cdbed86ada9c9f",
+      "source_lines": "full file",
+      "persisted_text_lines": 22
+    },
+    "full_run_arm_summary.json": {
+      "sha": "4939f22fa5541a3c9810feee5edbd7ffb888cfe0",
+      "source_lines": "full file",
+      "persisted_text_lines": 222
+    },
+    "samples/color_019157.png": {
+      "sha": "0b549328f84c607ba9fcdff93ac96432785cc89a",
+      "fetch_encoding": "base64",
+      "scope": "one complete original PNG"
+    }
+  },
+  "local_source_directory": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-source",
+  "local_association_directory": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-association",
+  "local_export_directory": "/workspace/scratch/1c7d09da5651/pi-h0-one-frame-20261120-export",
+  "images_downloaded": 1,
+  "source_handling": "Original text contents preserved as text, with only the specified initial CSV line ranges retained. PNG fetched as base64 and decoded to original bytes without image edits. No source JSON timestamp parsed through JavaScript was used to build the data files.",
+  "joints_retrieval_note": "Retrieved the known original Git blob because the GitHub file endpoint had previously returned empty content for this file larger than 1 MB; persisted only lines 1–2201.",
+  "historical_mount": "wrist",
+  "current_mount_note": "Historical source mount only; does not select or validate the current external camera installation.",
+  "prior_analysis": "The earlier 65-RGB-event zero-PNG analysis and its report were not overwritten.",
+  "not_committed": "The historical source CSV/metadata/PNG, full observation index and exported NPZ remain scratch intermediates; only compact facts and provenance are supplied for the pi repository."
+}

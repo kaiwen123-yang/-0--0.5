@@ -1,0 +1,28 @@
+{
+  "status": "PREPARATION_ONLY",
+  "model_family": "pi05",
+  "camera_mount": "external_fixed",
+  "policy_hz": 20,
+  "action_horizon": 10,
+  "experiment_name": null,
+  "run_root": null,
+  "dataset_root": null,
+  "openpi_root": null,
+  "base_params": null,
+  "training": {
+    "ema_enabled": null,
+    "ema_decay": null,
+    "batch_size": null,
+    "num_workers": null,
+    "num_train_steps": null,
+    "seed": null,
+    "log_interval": null,
+    "save_interval": null,
+    "keep_period": null,
+    "resume": null,
+    "warmup_steps": null,
+    "peak_lr": null,
+    "decay_steps": null,
+    "decay_lr": null
+  }
+}
