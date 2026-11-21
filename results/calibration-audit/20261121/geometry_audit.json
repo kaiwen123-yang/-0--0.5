@@ -1,0 +1,141 @@
+{
+  "source_commit": "b3bb539109af287f7963fc750dc2dcb0b0549baa",
+  "source_branch": "field/pi-single-20261120",
+  "mode": "Read-only published-result audit; no hardware or fitting rerun",
+  "source_paths": [
+    "results/piper-real-single-v1/20261121_q12_01/report_zh.md",
+    "results/piper-real-single-v1/20261121_q12_01/final_seven/board_outline.json",
+    "results/piper-real-single-v1/20261121_q12_01/outer_rim_cross_validation.json",
+    "results/piper-real-single-v1/20261121_q12_01/pre_move_validation.json",
+    "results/piper-real-single-v1/20261121_q12_01/final_seven/calibration_spec.json",
+    "results/piper-real-single-v1/20261121_q12_01/candidate_result.json",
+    "results/piper-real-single-v1/20261121_q12_01/mount_check.json"
+  ],
+  "recorded_scale": {
+    "nominal_ten_intervals_mm": 200,
+    "rough_ruler_ten_intervals_mm": 197,
+    "rough_measurement_qualification": "Photographed steel-ruler reading with perspective/parallax; not precision metrology.",
+    "nominal_square_size_m": 0.02
+  },
+  "conditional_scale_sensitivity": {
+    "assumption": "Only if a traceable repeat measurement establishes that ten intervals are 197mm.",
+    "assumed_to_actual_ratio": 1.015228426395939,
+    "relative_scale_overestimate_fraction": 0.015228426395939021,
+    "translation_difference_of_PnP_target_origin_depth_mm": [
+      8.298703314815059,
+      10.858772287794087
+    ],
+    "meaning": "Uniform target-coordinate scale affects inferred PnP translation, not image fit residual. This is not a measured error of the delivered hand-eye transform.",
+    "warning": "Do not multiply the delivered hand-eye matrix by197/200. Robot translations remain metric; a verified grid-scale correction requires refitting the preserved data."
+  },
+  "outer_rim_cross_validation": {
+    "train_view_count": 27,
+    "train_max_camera_baseline_mm": 216.70615679850636,
+    "train_max_parallax_per_corner_deg": [
+      16.33666295713385,
+      15.711733878129653,
+      11.684013970065653,
+      13.565994427103579
+    ],
+    "train_max_outer_edge_error_mm": 3.8373874393837752,
+    "seven_validation_max_camera_baseline_mm": 57.98858890005197,
+    "seven_validation_max_parallax_per_corner_deg": [
+      4.1042812869433485,
+      3.594093481442211,
+      2.238810040045871,
+      3.4513360042092533
+    ],
+    "seven_validation_max_outer_edge_error_mm": 13.29984539320435,
+    "independent_features_not_independent_metrology": "Exterior edges were excluded from K/D and Park fitting, so their heldout predictions are useful cross-validation. They still use the same fitted camera and FK, manufacturer nominal dimensions and checkerboard-guided search bands; they do not establish absolute base-coordinate ground truth.",
+    "all_view_outer_corner_mean_predicted_minus_measured_dy_px": 2.3077761504532974,
+    "per_view_bias": [
+      {
+        "id": "h01",
+        "mean_dx": 0.3155515874037462,
+        "mean_dy": 2.340945065328377
+      },
+      {
+        "id": "h02",
+        "mean_dx": -0.0831531863731243,
+        "mean_dy": 2.824964195253731
+      },
+      {
+        "id": "h03",
+        "mean_dx": 0.28443329728386857,
+        "mean_dy": 1.6570798162809979
+      },
+      {
+        "id": "h05",
+        "mean_dx": 0.6431755119399725,
+        "mean_dy": 0.9018452779365944
+      },
+      {
+        "id": "u06",
+        "mean_dx": -0.6481185554864624,
+        "mean_dy": 2.543463938661425
+      },
+      {
+        "id": "u07",
+        "mean_dx": -1.065528937837854,
+        "mean_dy": 2.517294866342315
+      },
+      {
+        "id": "u08",
+        "mean_dx": 0.24058281721357844,
+        "mean_dy": 3.3688398933696426
+      }
+    ],
+    "interpretation": "Short baselines amplify triangulation sensitivity. These discrepancies limit metric acceptance but do not alone establish that the entire hand-eye transform is wrong. The shared positive vertical image residual is a coherent pattern to investigate, not proof of a specific fault."
+  },
+  "coverage": {
+    "train_corner_min_px": [
+      62.943355560302734,
+      46.949581146240234
+    ],
+    "train_corner_max_px": [
+      589.28076171875,
+      310.5639953613281
+    ],
+    "train_target_origin_depth_range_m": [
+      0.5532468876543367,
+      0.7239181525196052
+    ],
+    "lower_image_height_fraction_without_train_corners": 0.35090834299723306,
+    "interpretation": "Current evidence describes the recorded volume and image coverage. It does not validate close-range grasping or lower-frame corners."
+  },
+  "distortion_extrapolation": {
+    "derivation": "For actual delivered k1,k2,k3, radial mapping rho(r)=r*(1+k1*r^2+k2*r^4+k3*r^6); derivative=1+3*k1*r^2+5*k2*r^4+7*k3*r^6.",
+    "first_positive_stationary_radius_undistorted": 0.9200561828767975,
+    "radial_only_max_distorted_radius": 0.8161817363449351,
+    "received_image_corner_normalized_radii": [
+      {
+        "u": 0,
+        "v": 0,
+        "normalized_received_radius": 0.7727678931977741
+      },
+      {
+        "u": 639,
+        "v": 0,
+        "normalized_received_radius": 0.7813320847059615
+      },
+      {
+        "u": 639,
+        "v": 479,
+        "normalized_received_radius": 0.851651874841193
+      },
+      {
+        "u": 0,
+        "v": 479,
+        "normalized_received_radius": 0.8438016983195055
+      }
+    ],
+    "qualification": "Analytic radial component diagnostic only; tangential terms nonzero. No cv2 round-trip was run, no claim that every image pixel is invalid. Negative high-order radial coefficient causes extrapolation/foldover risk outside observed coverage; full-frame use requires additional calibration-domain verification."
+  },
+  "assessment": "Retain delivered calibration as a locally supported candidate for offline/read-only use. Do not claim full-frame metric or task-level absolute accuracy.",
+  "minimal_next_evidence": [
+    "Repeat traceable long/short grid-pitch and external-size measurement with ruler/calliper aligned in the board plane; resolve197mm versus nominal200mm before changing scale.",
+    "After the separately reviewed robot control/clearance issue is resolved, acquire a few preassigned genuinely new heldout poses spanning larger lateral baseline, lower image coverage where visible, and intended task distances; evaluate frozen model first.",
+    "Only if task use requires metric base coordinates, add an independently measured 3D/height reference or surveyed fixed reference; same-camera triangulation alone is not absolute ground truth.",
+    "If scale or model is changed, preserve the current version, refit explicitly, and reserve a fresh final validation set."
+  ]
+}

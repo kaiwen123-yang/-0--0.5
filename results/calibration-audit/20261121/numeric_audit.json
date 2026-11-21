@@ -1,0 +1,382 @@
+{
+  "source_commit": "b3bb539109af287f7963fc750dc2dcb0b0549baa",
+  "source_directory": "results/piper-real-single-v1/20261121_q12_01",
+  "analysis_scope": "Offline arithmetic on published measured joint vectors and matrices; no image re-detection, no solver refit, no hardware commands, no dependency installation.",
+  "file_consistency_max_abs_difference": {
+    "K_json_vs_validation": 0.0,
+    "D_json_vs_validation": 0.0,
+    "T_handeye_vs_validation": 0.0,
+    "K_json_vs_OpenCV_YAML": 0.0,
+    "D_json_vs_OpenCV_YAML": 0.0,
+    "T_json_vs_OpenCV_YAML": 0.0,
+    "K_json_vs_ROS_YAML": 0.0,
+    "D_json_vs_ROS_YAML": 0.0,
+    "ROS_R_vs_identity": 0.0,
+    "ROS_P_vs_K_zero": 0.0
+  },
+  "frozen_candidate_comparison": {
+    "K": 0.0,
+    "D": 0.0,
+    "T_flange_camera": 0.0,
+    "T_base_board_train_mean": 0.0
+  },
+  "rigid_transform": {
+    "R_determinant": 1.0000000000000044,
+    "R_orthonormality_max_abs": 4.157320136274914e-15,
+    "bottom_row_max_abs_error": 0.0,
+    "translation_mm": [
+      -82.41923107110475,
+      -2.5243496574550655,
+      27.074977885144303
+    ],
+    "translation_norm_mm": 86.7891492009589,
+    "convention": "p_flange = T_flange_camera @ p_camera, translations metres"
+  },
+  "split_checks": {
+    "train_count": 27,
+    "heldout_count": 7,
+    "formal_ids": [
+      "h01",
+      "h02",
+      "h03",
+      "h05"
+    ],
+    "supplemental_ids": [
+      "u06",
+      "u07",
+      "u08"
+    ],
+    "train_heldout_overlap": [],
+    "train_list_matches_selection": true,
+    "heldout_list_matches_selection": true,
+    "posthoc_supplemental_caveat": "Three extra poses were retrospectively identified in archived pre-move frames, close to existing poses; they are not seven prospectively preassigned independent validation poses."
+  },
+  "independent_fk_chain_reconstruction": {
+    "mdh_source": "https://github.com/agilexrobotics/pyAgxArm/blob/d90e234ba8e408cfa964b38aa9120b3131fc9f85/pyAgxArm/api/constants.py",
+    "joint_sources": [
+      "pose_review.json",
+      "final_seven/selection.json"
+    ],
+    "max_abs_GXC_vs_published_fixed_matrix": 4.0870085094013575e-15,
+    "train_mean_reference_max_abs_difference": 6.661338147750939e-16,
+    "max_translation_residual_difference_mm": 1.892708212380967e-12,
+    "max_rotation_residual_difference_deg": 1.6082274401085783e-11,
+    "caveat": "This independently checks computation and units against published measured q, not physical robot kinematic accuracy."
+  },
+  "recalculated_rotation_excitation": {
+    "singular_values_rad": [
+      1.4135284378454578,
+      0.7279993559516444,
+      0.2557173388343575
+    ],
+    "second_to_first": 0.5150227872750002,
+    "third_to_first": 0.18090710592574244,
+    "max_abs_difference_vs_report": 1.3322676295501878e-15
+  },
+  "recalculated_optical_center_baseline": {
+    "train": {
+      "max_optical_center_distance_mm": 216.70615679850627,
+      "pair": [
+        "t01",
+        "t36"
+      ]
+    },
+    "seven_validation": {
+      "max_optical_center_distance_mm": 57.98858890005197,
+      "pair": [
+        "h05",
+        "u06"
+      ]
+    }
+  },
+  "recalculated_statistics": {
+    "seven_total": {
+      "pnp_rms_px": {
+        "count": 7,
+        "mean": 0.14300600013562612,
+        "median": 0.13998934626579285,
+        "p95": 0.17989212423563003,
+        "max": 0.1825159192085266,
+        "max_id": "u06",
+        "p95_neighbor_ids": [
+          "h01",
+          "u06"
+        ]
+      },
+      "fixed_board_mm": {
+        "count": 7,
+        "mean": 2.338016570783904,
+        "median": 2.5368778421340705,
+        "p95": 3.0831555890715787,
+        "max": 3.1627337048398227,
+        "max_id": "u08",
+        "p95_neighbor_ids": [
+          "u06",
+          "u08"
+        ]
+      },
+      "fixed_board_deg": {
+        "count": 7,
+        "mean": 0.3636323782652683,
+        "median": 0.38785512051388454,
+        "p95": 0.4970332228646733,
+        "max": 0.5181319199627121,
+        "max_id": "h02",
+        "p95_neighbor_ids": [
+          "h05",
+          "h02"
+        ]
+      },
+      "full_chain_rms_px": {
+        "count": 7,
+        "mean": 2.1109132170677185,
+        "median": 2.361093044281006,
+        "p95": 2.9329616546630857,
+        "max": 2.988892078399658,
+        "max_id": "u08",
+        "p95_neighbor_ids": [
+          "u07",
+          "u08"
+        ]
+      }
+    },
+    "four_original": {
+      "pnp_rms_px": {
+        "count": 4,
+        "mean": 0.1344635710120201,
+        "median": 0.12639269977808,
+        "p95": 0.16870284751057624,
+        "max": 0.17376993596553802,
+        "max_id": "h01",
+        "p95_neighbor_ids": [
+          "h02",
+          "h01"
+        ]
+      },
+      "fixed_board_mm": {
+        "count": 4,
+        "mean": 1.8954450552457114,
+        "median": 1.8410081009217305,
+        "p95": 2.495171156206288,
+        "max": 2.5368778421340705,
+        "max_id": "h02",
+        "p95_neighbor_ids": [
+          "h01",
+          "h02"
+        ]
+      },
+      "fixed_board_deg": {
+        "count": 4,
+        "mean": 0.36065548649124146,
+        "median": 0.37475829738516586,
+        "p95": 0.5075825714136927,
+        "max": 0.5181319199627121,
+        "max_id": "h02",
+        "p95_neighbor_ids": [
+          "h05",
+          "h02"
+        ]
+      },
+      "full_chain_rms_px": {
+        "count": 4,
+        "mean": 1.6559875160455704,
+        "median": 1.5995025038719177,
+        "p95": 2.507131779193878,
+        "max": 2.6150739192962646,
+        "max_id": "h02",
+        "p95_neighbor_ids": [
+          "h01",
+          "h02"
+        ]
+      }
+    },
+    "three_supplemental": {
+      "pnp_rms_px": {
+        "count": 3,
+        "mean": 0.15439590563376746,
+        "median": 0.15950685739517212,
+        "p95": 0.18021501302719117,
+        "max": 0.1825159192085266,
+        "max_id": "u06",
+        "p95_neighbor_ids": [
+          "u07",
+          "u06"
+        ]
+      },
+      "fixed_board_mm": {
+        "count": 3,
+        "mean": 2.9281119248348273,
+        "median": 2.8974733189456763,
+        "p95": 3.136207666250408,
+        "max": 3.1627337048398227,
+        "max_id": "u08",
+        "p95_neighbor_ids": [
+          "u06",
+          "u08"
+        ]
+      },
+      "fixed_board_deg": {
+        "count": 3,
+        "mean": 0.3676015672973039,
+        "median": 0.38785512051388454,
+        "p95": 0.4151303681644141,
+        "max": 0.41816095123669517,
+        "max_id": "u07",
+        "p95_neighbor_ids": [
+          "u08",
+          "u07"
+        ]
+      },
+      "full_chain_rms_px": {
+        "count": 3,
+        "mean": 2.7174808184305825,
+        "median": 2.802457332611084,
+        "p95": 2.9702486038208007,
+        "max": 2.988892078399658,
+        "max_id": "u08",
+        "p95_neighbor_ids": [
+          "u07",
+          "u08"
+        ]
+      }
+    }
+  },
+  "max_reported_summary_difference": 5.551115123125783e-17,
+  "pixel_residual_caveat": "Per-image PnP RMS and full fixed-chain RMS statistics are recomputed from published per-view scalar values, not re-detected raw corner coordinates. Fixed-chain mean is about 14.8 times PnP mean because PnP refits each board pose.",
+  "intrinsic_coverage": {
+    "corner_bounds_px": [
+      [
+        62.943355560302734,
+        46.949581146240234
+      ],
+      [
+        589.28076171875,
+        310.5639953613281
+      ]
+    ],
+    "grid_6x4": [
+      [
+        0,
+        23,
+        114,
+        44,
+        0,
+        0
+      ],
+      [
+        28,
+        321,
+        670,
+        679,
+        160,
+        24
+      ],
+      [
+        3,
+        105,
+        81,
+        79,
+        37,
+        8
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "depth_m": [
+      0.5532468876543367,
+      0.7239181525196052
+    ],
+    "rotation_singular_values_rad": [
+      1.4135284378454565,
+      0.7279993559516438,
+      0.2557173388343575
+    ]
+  },
+  "distortion_extrapolation_diagnostic": {
+    "formula": "rho(r)=r*(1+k1*r^2+k2*r^4+k3*r^6); rho_prime=1+3*k1*r^2+5*k2*r^4+7*k3*r^6",
+    "first_positive_radial_derivative_zero": 0.9200561828767978,
+    "radial_distorted_radius_at_turnover": 0.8161817363449351,
+    "received_corner_normalized_radius": {
+      "top_left": 0.7727678931977741,
+      "top_right": 0.7813320847059614,
+      "bottom_left": 0.8438016983195055,
+      "bottom_right": 0.851651874841193
+    },
+    "full_Brown_Jacobian_along_bottom_corner_directions": {
+      "bottom_left": [
+        {
+          "ideal_normalized_radius": 0.7,
+          "jacobian_determinant": 0.8659814432981086,
+          "distorted_normalized_radius": 0.7021063099709665
+        },
+        {
+          "ideal_normalized_radius": 0.9,
+          "jacobian_determinant": 0.1250371749048143,
+          "distorted_normalized_radius": 0.8171972132361212
+        },
+        {
+          "ideal_normalized_radius": 0.9200561828767978,
+          "jacobian_determinant": 0.004776191503611644,
+          "distorted_normalized_radius": 0.8186578707543103
+        },
+        {
+          "ideal_normalized_radius": 0.94,
+          "jacobian_determinant": -0.12280472886823576,
+          "distorted_normalized_radius": 0.8173277733547559
+        }
+      ],
+      "bottom_right": [
+        {
+          "ideal_normalized_radius": 0.7,
+          "jacobian_determinant": 0.8523362923469237,
+          "distorted_normalized_radius": 0.6983938571139446
+        },
+        {
+          "ideal_normalized_radius": 0.9,
+          "jacobian_determinant": 0.11210720228365106,
+          "distorted_normalized_radius": 0.8110601294135523
+        },
+        {
+          "ideal_normalized_radius": 0.9200561828767978,
+          "jacobian_determinant": -0.007570778946713673,
+          "distorted_normalized_radius": 0.8122441875081768
+        },
+        {
+          "ideal_normalized_radius": 0.94,
+          "jacobian_determinant": -0.13443173745147852,
+          "distorted_normalized_radius": 0.8106329909044845
+        }
+      ]
+    },
+    "normal_branch_upper_bound_including_tangential": {
+      "tangential_vector_definition": "p=(p2,p1), t(z)=r^2*p+2*z*(p dot z)",
+      "p_norm": 0.0017091811498313183,
+      "undistorted_radius_upper_bound_r_star": 0.9214053788023792,
+      "received_radius_upper_bound_rho_star": 0.8205285919425375,
+      "positive_root_count": 1,
+      "bound_derivative_residual": 7.860032069650913e-15,
+      "received_corner_radius_minus_upper_bound": {
+        "top_left": -0.04776069874476341,
+        "top_right": -0.039196507236576084,
+        "bottom_left": 0.023273106376968,
+        "bottom_right": 0.031123282898655513
+      },
+      "bottom_corners_have_no_inverse_on_central_nonsingular_branch": true,
+      "proof": "The Brown Jacobian is symmetric. The nonsingular branch connected to r=0 has positive eigenvalues. Its radial Rayleigh quotient is rho_prime(r)+6*r*(p dot u), at most rho_prime(r)+6*r*norm(p). This scalar polynomial has one positive root r_star and is negative beyond it, so the central positive-Jacobian branch is contained in r<r_star. Within that disk, norm(distorted z)<=rho(r)+3*norm(p)*r^2<=rho(r_star)+3*norm(p)*r_star^2. Both actual received bottom-corner radii exceed this global bound. This uses full p1/p2, not an assumption that distorted radius equals undistorted radius.",
+      "meaning": "The published five-coefficient Brown model cannot provide a physically regular central-branch inverse for the two native received bottom corners. This is a full-frame extrapolation failure, not evidence that fitted/validated checkerboard-region geometry is wrong."
+    },
+    "interpretation": "Actual fitted polynomial has a turnover beyond the sampled checkerboard region. Large bottom-corner received radii and absent bottom image coverage mean full-frame undistortion cannot be certified from this calibration. Do not discard local-region fit solely for this extrapolation issue.",
+    "not_claimed": "No OpenCV undistort/projectPoints round-trip was run and no full per-pixel validity mask was computed. The two bottom-corner no-inverse conclusion follows from the analytic full-Brown bound above."
+  },
+  "acceptance_boundaries": {
+    "published_absolute_accuracy_certified": false,
+    "published_hardware_motion_acceptance": false,
+    "review_conclusion": "Published numerical results are internally consistent; local image/hand-eye chain residuals are useful. No evidence here certifies full-frame distortion or task-level absolute accuracy."
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "audit_date": "2026-11-21",
+  "timezone": "Asia/Shanghai",
+  "audited_repository": "kaiwen123-yang/-0--0.5",
+  "audited_ref": "b3bb539109af287f7963fc750dc2dcb0b0549baa",
+  "branch": "field/pi-single-20261120",
+  "scope": "Read-only publication/code/provenance audit. No hardware commands, training, source-data downloads, or original full solve executed.",
+  "evidence_root": "results/piper-real-single-v1/20261121_q12_01/",
+  "split": {
+    "train_count": 27,
+    "formal_heldout": [
+      "h01",
+      "h02",
+      "h03",
+      "h05"
+    ],
+    "supplemental_heldout": [
+      {
+        "id": "u06",
+        "original_role": "transit",
+        "recorded_from": "moves/h01",
+        "nearest_original": "t36",
+        "max_joint_difference_deg": 1.5379999999999967,
+        "after_arrival_s": 1.503302237,
+        "before_next_target_s": 2.876586075,
+        "joint_rows": 100,
+        "window_range_deg": 0
+      },
+      {
+        "id": "u07",
+        "original_role": "transit",
+        "recorded_from": "moves/h02",
+        "nearest_original": "h02",
+        "max_joint_difference_deg": 1.5830000000000055,
+        "after_arrival_s": 1.069784102,
+        "before_next_target_s": 2.955315858,
+        "joint_rows": 100,
+        "window_range_deg": 0
+      },
+      {
+        "id": "u08",
+        "original_role": "transit",
+        "recorded_from": "moves/h03",
+        "nearest_original": "h03",
+        "max_joint_difference_deg": 1.5720000000000027,
+        "after_arrival_s": 1.57211205,
+        "before_next_target_s": 3.02514226,
+        "joint_rows": 100,
+        "window_range_deg": 0
+      }
+    ],
+    "formal_heldout_target": 8,
+    "configured_minimum": {
+      "train": 15,
+      "heldout": 5
+    },
+    "first_four_stage": {
+      "status": "FIT_REQUIRES_REVIEW",
+      "accepted_for_use": false,
+      "reason": "4 eligible independent heldout views; configured minimum 5, planned 8. Short triangulation baseline and unverified post-stop contact.",
+      "diagnostic_only": [
+        "h04"
+      ],
+      "report_disclosure": "Standard fit_clean check returned NOT_READY at four eligible heldout; h04 was retained solely as diagnostic fifth view for an intermediate solve. It is absent from final evaluation."
+    },
+    "interpretation": "Final seven are seven distinct published poses, comprising four preassigned and three retrospective archived stationary observations. They were not used in fitting. The retrospective addition and small pose differences limit independence/coverage claims; do not describe them as seven preplanned independent broad-coverage trials.",
+    "selection": "Original and supplemental omissions are explained by visible white-border/gripper criteria. The stated before-score chronology is recorded in validation_plan/screening; unpublished raw review history was not independently inspected."
+  },
+  "frozen_model_comparison": {
+    "method": "Direct parsed JSON element comparison: original candidate_result vs final_seven/validation.",
+    "max_absolute_difference": {
+      "K": 0,
+      "D": 0,
+      "T_flange_camera": 0,
+      "T_base_board_train_mean": 0
+    }
+  },
+  "core_solver": {
+    "source": "tasks/piper_real_single_v1/calibration.py",
+    "facts": [
+      "fitting_splits enforces unique pose_group minimum train15/heldout5 from unchanged final spec.",
+      "intrinsics fits cv2.calibrateCameraExtended using train only.",
+      "handeye rejects heldout overlap with intrinsic train sample IDs/image paths/pose groups.",
+      "handeye calibrateHandEye uses train only, and fixed_reference averages only train transforms.",
+      "Handeye output status remains FIT_REQUIRES_REVIEW; no TF or driver write is performed."
+    ]
+  },
+  "reproducibility": {
+    "inspected_locations": [
+      "results/piper-real-single-v1/20261121_q12_01",
+      "results/piper-real-single-v1/20261121_q12_01/final_seven",
+      "tasks/piper_real_single_v1",
+      "publication commit file lists 609ef1a / 4ca51d8 / b3bb539"
+    ],
+    "available": "Core calibration code, selected photos, per-pose summaries, final intrinsics/handeye, selection and validation metrics.",
+    "missing_from_inspected_publication": "Actual reviewed_seven_manifest.jsonl, full detection corner table, supplemental_sources.json and dedicated script producing final_seven/full-chain projection/outer-rim summary. They are referenced by local path and hash.",
+    "consequence": "Published results can be cross-checked; this audit does not establish full from-raw reproducibility of all 34 selected views.",
+    "minimum_next_export": "Publish the actual small assembly/review script, selected manifest with provenance, and compact ordered 2D corner/robot-transform data, preserving original labels and criteria. No need to publish bulk raw video or redo existing collection."
+  },
+  "stop_and_recovery": {
+    "source": "stop_event.json + reconnect_state.json; h0_operator_motion.py@e727cdf53085c502375f9a7424d3fe7d6498c0d7",
+    "stop_time": "2026-11-21T22:42:21.682331+08:00",
+    "arrival_code": {
+      "deadline_seconds": 3,
+      "joint_tolerance_deg": 0.5,
+      "required_mode_feedback": 1,
+      "required_motion_status": 0,
+      "required_quiet_seconds": 0.5
+    },
+    "observed": "At u11, reported max target error about0.20deg was within code tolerance, but motion_status remained1. Timeout called electronic_emergency_stop; later joint changes/drift were observed. No controller or CAN fault was recorded; physical reason for no arrival is unresolved.",
+    "last_published_state": {
+      "control_mode": "CAN MOVE_J, drives off",
+      "joints_deg": [
+        0.48499999999999993,
+        -3.221,
+        1.53,
+        -0.396,
+        24.453000000000003,
+        -24.437
+      ],
+      "enabled": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "limits": {
+        "2": {
+          "confirmed": true,
+          "controller_deg": [
+            0,
+            180
+          ],
+          "sdk_config_deg": [
+            0,
+            180.00001984784282
+          ],
+          "measured_deg": -3.221,
+          "reply_timestamp_s": 1795274175.238871
+        },
+        "3": {
+          "confirmed": true,
+          "controller_deg": [
+            -170,
+            0
+          ],
+          "sdk_config_deg": [
+            -170.00001556208605,
+            0
+          ],
+          "measured_deg": 1.53,
+          "reply_timestamp_s": 1795274175.2394588
+        },
+        "purpose": "Query only J2/J3 angle limits after reconnect; no configuration writes."
+      },
+      "position_targets_since_reconnect": 0,
+      "enable_requests_since_reconnect": 0,
+      "home_after_reconnect": false,
+      "speed50_home": false
+    },
+    "implication": "Mode selection is not drive enable or motion acceptance. Do not infer calibration error from the stop, or prescribe automatic enable/home/high-speed motion. New on-site state and manufacturer-appropriate recovery must precede new motion."
+  },
+  "recommended_disposition": "Preserve current K/D/X as a reproducible published calibration candidate with completed seven-pose offline checks and explicit source/coverage limits. Do not certify application-level absolute accuracy or hardware readiness.",
+  "recommended_next_validation": "Do not repeat 27 train automatically. After field control recovery and board-scale confirmation, freeze current parameters and acquire genuinely new preassigned validation poses with larger lateral baseline, lower-image and intended task-distance coverage. Refit only if concrete residual/coverage issues justify it; retain a new untouched final validation group after any adjustment."
+}
