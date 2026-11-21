@@ -1,0 +1,90 @@
+{
+  "local_session": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01",
+  "camera_id": "CC16762023M",
+  "camera_role": "left_wrist_0_rgb",
+  "record_type": "supervised_near_zero_return",
+  "image_topic": "/wrist_camera/color/image_raw",
+  "image_size": [
+    640,
+    480
+  ],
+  "H0_sender_commit": "e727cdf",
+  "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+  "initial_deg": [
+    -1.6070000000000002,
+    -0.218,
+    0.443,
+    3.4410000000000003,
+    2.709,
+    -0.872
+  ],
+  "mode_transitions": [
+    {
+      "event": "handoff_standby_confirmed",
+      "ctrl_mode": 0,
+      "receive_check_monotonic_ns": 19788478060116
+    },
+    {
+      "event": "handoff_can_confirmed",
+      "ctrl_mode": 1,
+      "receive_check_monotonic_ns": 19788835016489
+    }
+  ],
+  "target_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "final_capture_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "final_ctrl_mode": 1,
+  "final_enable_bits": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "independent_joint_rows": 2532,
+  "interface_delta": {
+    "rx_packets": 30272,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 1088,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "submitted_frames": [
+    {
+      "id": "0x151",
+      "result": "host_submitted",
+      "frames": 71
+    },
+    {
+      "id": "0x155",
+      "result": "host_submitted",
+      "frames": 339
+    },
+    {
+      "id": "0x156",
+      "result": "host_submitted",
+      "frames": 339
+    },
+    {
+      "id": "0x157",
+      "result": "host_submitted",
+      "frames": 339
+    }
+  ],
+  "calibration_pose_captures": 0
+}

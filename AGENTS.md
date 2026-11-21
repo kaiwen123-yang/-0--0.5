@@ -1,12 +1,12 @@
 # π0 / π0.5 当前执行约定
 
-## 当前入口：单相机实机与标定前准备（2026-11-20）
+## 当前入口：已到货棋盘板实机标定（2026-11-21）
 
-本机 11 月 20 日已实录。用户提供的安装照片确认唯一 DC1（CC16762023M）固定于腕端，camera_mount=wrist，唯一模型槽 left_wrist_0_rgb。当前先读 docs/PI_REAL_TEST_STATE.md 及 docs/PI_SINGLE_CAMERA_BOARD_HANDOFF_20261122.md。5,382 条真实图像与反馈已保存。周日板到后接续 eye-in-hand；遥操作/示教方案暂不讨论。
+本机 11 月 20 日已实录。用户提供的安装照片确认唯一 DC1（CC16762023M）固定于腕端，camera_mount=wrist，唯一模型槽 left_wrist_0_rgb。用户 11 月 21 日确认大凡光学 Q12-290-20【铝基板】已到，当前先读 docs/PI_REAL_TEST_STATE.md 及 docs/PI_Q12_BOARD_CALIBRATION_20261121.md，无需等周日。厂家名义参数为 12×9 方格、20 mm 格长，配置为 11×8 内角点、0.020 m；本轮实物、安装、图像链和多姿态位姿来源已核实。5,382 条历史真实图像与反馈已保存；遥操作/示教方案暂不讨论。
 
 标定前任务背景在 docs/PI_SINGLE_CAMERA_PRECALIB_PLAN_20261120.md 和 docs/PI_SINGLE_CAMERA_PRECALIB_PROMPT_20261120.md。新代码在 tasks/piper_real_single_v1/，与历史双相机仿真模块分开。
 
-11 月 20 日已有会话的六关节三 CAN 报文跨度审计已完成，37,993 行无 5 ms 筛查标记，原 5,382 条图像关联保留。结果及唯一发送端的日志接入点见 results/piper-real-single-v1/20261120_194402/joint_packet_review_zh.md。周日用新的 received 配置，按当日实查填写像素处理链，内部校正未知留 null。待到板后采集各组实际姿态并独立验证。
+11 月 20 日已有会话的六关节三 CAN 报文跨度审计已完成，37,993 行无 5 ms 筛查标记，原 5,382 条图像关联保留。结果及唯一发送端的日志接入点见 results/piper-real-single-v1/20261120_194402/joint_packet_review_zh.md。标定用 tasks/piper_real_single_v1/calibration_spec.q12_290_20.example.json 的新会话副本，按当日实查填写像素处理链，内部校正未知留 null。板相对基座固定，机械臂换姿态停稳后只读采集；角点顺序修正后重新 detect，实际核对同一物理原点。review 的 0 不自动排除样本，不能批量改 1。旧周日接续文档保留连续记录器分支与历史信息。
 
 - 不等待、不推荐购买第二台相机。只使用一个真实 camera_rgb 输入；external_fixed 映射 base_0_rgb，wrist 映射 left_wrist_0_rgb，安装类型显式选择。
 - 未使用的模型图像槽 mask=False，允许协议所需的零占位；禁止把复制图/黑图标为真实有效第二视角。
@@ -18,6 +18,8 @@
 - 标定前不生成假外参，不用默认 FK/夹爪目标代替经过确认的法兰位姿或测量反馈。外部固定相机走 eye-to-hand，腕部相机走 eye-in-hand，矩阵方向在配置中明确。
 - 当前代码不发送 CAN 运动、不自动使能/回零。真实运动仍复用 H0 成功的唯一发送端，由现场明确操作启动；不创建竞争控制器。
 - 只读复用 dog-and-arm H0@284c1f3 和既有 pyAgxArm/ROS/DDS 环境。不修改该仓库，不执行 P0–P3、M1、门场景或底盘任务。
+
+用户授权的 H0 单次定位已用于实采。36 个 train 和 5 个 heldout 全部检出 88 点，筛选后为 27 和 4。K/D 与 Park 手眼已求候选，尚未验收。h05 后 u11 到位超时触发阻尼急停，现场报告可能触桌。先保留 STOP 并核实现场恢复和固定关系，详见[现场记录](results/piper-real-single-v1/20261121_q12_01/report_zh.md)与[接续提示词](results/piper-real-single-v1/20261121_q12_01/next_prompt.md)。
 
 ## 历史与工作区
 

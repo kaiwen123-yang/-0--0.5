@@ -1,0 +1,22 @@
+{
+  "rule": "Before viewing any heldout residual, require actual measured stationary capture, same physical printed corner orientation, visible board with peripheral white border, and matching receive times and FK/controller frames. Keep originals.",
+  "exclusions": {
+    "t10": "gripper overlaps lower white rim",
+    "t11": "gripper overlaps lower checker row",
+    "t12": "gripper overlaps lower checker row",
+    "t13": "gripper overlaps lower checkerboard edge",
+    "t14": "gripper obscures lower rim near print",
+    "t15": "gripper obscures lower white rim near print",
+    "t16": "gripper grazes lower rim near brand",
+    "t19": "left side of outer white rim exits image",
+    "t28": "top white edge is outside image",
+    "h04": "Gripper covers lower white border. All 88 inner intersections remain visible; score for diagnostic comparison only."
+  },
+  "notes": {
+    "t09": "5.056 ms joint packet span; same-boot adjacent 100 joint rows identical on all six axes.",
+    "h02": "J6 changes by 0.100 deg at +206.042 ms. No change across received image or up to +200 ms.",
+    "t36": "Upper white edge close to frame boundary; outer edge verified in full image."
+  },
+  "review_evidence": "image_and_pose_review_v1.json",
+  "heldout_planned": 8
+}

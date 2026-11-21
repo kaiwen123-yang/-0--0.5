@@ -1,0 +1,63 @@
+{
+  "preparation_status": "FIELD_CAPTURED",
+  "camera_role": "left_wrist_0_rgb",
+  "mount_mode": "wrist",
+  "installation_verified": true,
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_domain": "received",
+  "image_domain_verified": true,
+  "image_domain_evidence": "本会话 H0 驱动日志与设备服务确认 CC16762023M、MJPEG 640×480@30。/wrist_camera/color/image_raw 实收 640×480 rgb8，step=1920，wrist_camera_color_optical_frame。运行参数 color_roi 四项均为 -1。astra_camera f7e71d9 的 MJPEG 回调解码为 RGB，软件 uvc_flip_ 初始为 0，无旋转/缩放分支。H0 h0_record_camera.py 对 rgb8 只换 RGB/BGR 通道写样本 PNG。get_uvc_mirror 的实现未把读取值赋给 response.data，其返回 0 不作硬件结论。t01 在 H0 的第45张 RGB PNG 为原尺寸 640×480；对照正读的手机正面图，型号位于同一物理右下白边、同样排列。已核实 received 像素链。证据在 pixel_chain/。",
+  "image_size": [
+    640,
+    480
+  ],
+  "board": {
+    "type": "chessboard",
+    "inner_corners_cols": 11,
+    "inner_corners_rows": 8,
+    "square_size_m": 0.02,
+    "geometry_verified": true,
+    "origin_description": "面对可正读的 DFOPTIX Q12-290-20 型号，最近的右下内角点。首张 t01 ORIGIN 0 位于像素 (457.36, 238.35)。",
+    "x_axis_description": "面对正读型号，由 O 向左沿长边，对应 t01 角点 0→1。",
+    "y_axis_description": "面对正读型号，由 O 向上沿短边，对应 t01 角点 0→11。",
+    "mounted_rigidly_to": "base_world",
+    "rigid_mount_verified": true,
+    "manufacturer": "大凡光学 / DFOPTIX",
+    "model": "Q12-290-20",
+    "material": "aluminum substrate (user-reported received SKU)",
+    "nominal_squares": [
+      12,
+      9
+    ],
+    "nominal_outer_size_m": [
+      0.29,
+      0.23
+    ],
+    "nominal_pattern_size_m": [
+      0.24,
+      0.18
+    ],
+    "manufacturer_geometry_source": "https://www.dfoptic.com/in-stock-standards-product/152.html",
+    "physical_geometry_evidence": "evidence/phone_face_model.jpg：DFOPTIX Q12-290-20，实数 12×9 方格。evidence/phone_ruler_overview.jpg 和 phone_ruler_detail.jpg：长向同排第1至第11内角点，十格距粗读约 9.7 至 29.4 cm，相差约 197 mm，与名义约 200 mm 量级吻合。照片有视差，不能作精密节距测量。按型号名义格长 0.020 m。",
+    "mount_evidence": "现场人员确认板已用胶带固定到与基座相对静止的硬支撑。手机照片可见桌面和木架，胶带固定点由现场人员确认。 evidence/phone_side_mount.jpg 显示板底接触桌面、板面后倾。用户描述基座面与板底桌面基本平齐，未测量确切高差。",
+    "orientation_reference": "使用板面右下角永久印字 DFOPTIX Q12-290-20 与 t01 原始叠加作为物理朝向证据；现场选择免贴临时标签。"
+  },
+  "robot": {
+    "base_frame": "base_link",
+    "gripper_frame": "flange_link",
+    "pose_source": "pyAgxArm 1.0.0 piper_h MDH FK",
+    "pose_source_verified": true,
+    "translation_unit": "m",
+    "pose_source_evidence": "独立记录的实测关节经 Piper H SDK MDH FK 得 base_link←flange_link，单位 m。41 个停稳姿态与控制器三帧法兰反馈比较，位置最大 0.0051 mm，旋转最大 0.0029°。独立接收的六轴相对于单次目标的最大误差 0.097°，各轴都出现非零运动，零位有独立记录。控制器和 FK 可共用运动学假设，绝对度量另见板外缘复核。"
+  },
+  "minimum_views": {
+    "train": 15,
+    "heldout": 5
+  },
+  "notes": [
+    "2026-11-21. Session-specific evidence recorded under board, robot, image_domain_evidence and installation_evidence."
+  ],
+  "camera_id": "CC16762023M",
+  "device_internal_rectification": null,
+  "installation_evidence": "用户确认腕端相机支架已锁紧，维持已拍照确认的 DC1 腕端安装；现场确认桌架稳定、工作区已清空并可停止。"
+}

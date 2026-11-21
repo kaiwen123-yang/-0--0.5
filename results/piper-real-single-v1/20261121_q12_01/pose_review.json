@@ -1,0 +1,2257 @@
+[
+  {
+    "id": "h01",
+    "split": "heldout",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.54365,
+    "gripper_age_ms": 4.435906,
+    "flange_age_ms": 4.889022,
+    "joint_span_ms": 0.25153160095214844,
+    "fk_mm": 0.0036910402789291858,
+    "fk_deg": 0.0006729437163986525,
+    "q_deg": [
+      6.086,
+      57.446,
+      -35.274,
+      12.12,
+      -8.591,
+      -14.202
+    ],
+    "xyz_mm": [
+      225.6,
+      21.0,
+      312.6
+    ],
+    "count": 88,
+    "bbox": [
+      360.3,
+      129.7,
+      542.6,
+      253.3
+    ],
+    "O": [
+      532.9,
+      253.3
+    ],
+    "last": [
+      363.7,
+      129.7
+    ],
+    "flange_span_ms": 0.2887248992919922,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.086,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "h02",
+    "split": "heldout",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.09999999999999697,
+    "joint_age_ms": 3.980705,
+    "gripper_age_ms": 3.870735,
+    "flange_age_ms": 4.276266,
+    "joint_span_ms": 0.23746490478515625,
+    "fk_mm": 0.001913815545943966,
+    "fk_deg": 0.0003948553123810595,
+    "q_deg": [
+      2.839,
+      54.272,
+      -32.434,
+      9.153,
+      -6.422,
+      -16.908
+    ],
+    "xyz_mm": [
+      212.1,
+      8.8,
+      304.2
+    ],
+    "count": 88,
+    "bbox": [
+      320.1,
+      102.2,
+      503.3,
+      235.2
+    ],
+    "O": [
+      483.6,
+      235.2
+    ],
+    "last": [
+      331.5,
+      102.2
+    ],
+    "flange_span_ms": 0.22101402282714844,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.092,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": "J6 changes by 0.100 deg at +206.042 ms. No change across received image or up to +200 ms."
+  },
+  {
+    "id": "h03",
+    "split": "heldout",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.065029,
+    "gripper_age_ms": 2.015537,
+    "flange_age_ms": 2.554594,
+    "joint_span_ms": 0.22983551025390625,
+    "fk_mm": 0.0036659505956603347,
+    "fk_deg": 0.0009380210213971177,
+    "q_deg": [
+      0.339,
+      51.113,
+      -31.828,
+      6.691,
+      -7.329,
+      -19.586
+    ],
+    "xyz_mm": [
+      201.6,
+      -0.2,
+      313.5
+    ],
+    "count": 88,
+    "bbox": [
+      279.0,
+      135.1,
+      455.6,
+      270.6
+    ],
+    "O": [
+      434.2,
+      270.6
+    ],
+    "last": [
+      296.5,
+      135.1
+    ],
+    "flange_span_ms": 0.26035308837890625,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.071,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "h04",
+    "split": "heldout",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.797046,
+    "gripper_age_ms": 0.702049,
+    "flange_age_ms": 1.196829,
+    "joint_span_ms": 0.23746490478515625,
+    "fk_mm": 0.0029150408575397053,
+    "fk_deg": 0.0008764492781532042,
+    "q_deg": [
+      -2.162,
+      48.087,
+      -31.256,
+      4.343,
+      -8.396,
+      -22.139
+    ],
+    "xyz_mm": [
+      190.8,
+      -8.3,
+      322.2
+    ],
+    "count": 88,
+    "bbox": [
+      234.2,
+      161.3,
+      408.6,
+      300.2
+    ],
+    "O": [
+      383.9,
+      300.2
+    ],
+    "last": [
+      258.5,
+      161.3
+    ],
+    "flange_span_ms": 0.19073486328125,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.087,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "Gripper covers lower white border. All 88 inner intersections remain visible; score for diagnostic comparison only.",
+    "note": null
+  },
+  {
+    "id": "h05",
+    "split": "heldout",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.929721,
+    "gripper_age_ms": 2.889281,
+    "flange_age_ms": 3.409877,
+    "joint_span_ms": 0.1983642578125,
+    "fk_mm": 0.00311977288315225,
+    "fk_deg": 0.0004564168826916029,
+    "q_deg": [
+      -3.203,
+      45.015,
+      -28.493,
+      1.34,
+      -5.805,
+      -23.005
+    ],
+    "xyz_mm": [
+      178.2,
+      -10.2,
+      310.9
+    ],
+    "count": 88,
+    "bbox": [
+      227.5,
+      124.2,
+      405.0,
+      270.4
+    ],
+    "O": [
+      373.5,
+      270.4
+    ],
+    "last": [
+      257.4,
+      124.2
+    ],
+    "flange_span_ms": 0.23055076599121094,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.093,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t01",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.706943,
+    "gripper_age_ms": 0.559947,
+    "flange_age_ms": 1.018661,
+    "joint_span_ms": 0.2543926239013672,
+    "fk_mm": 0.0010227975620513505,
+    "fk_deg": 0.0010000004015645386,
+    "q_deg": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "xyz_mm": [
+      66.4,
+      0.0,
+      214.2
+    ],
+    "count": 88,
+    "bbox": [
+      313.5,
+      142.6,
+      457.4,
+      245.6
+    ],
+    "O": [
+      457.4,
+      238.3
+    ],
+    "last": [
+      313.5,
+      152.4
+    ],
+    "flange_span_ms": 0.2510547637939453,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.0,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t02",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.965698,
+    "gripper_age_ms": 0.927805,
+    "flange_age_ms": 1.465206,
+    "joint_span_ms": 0.2925395965576172,
+    "fk_mm": 0.004302068858779755,
+    "fk_deg": 0.0008241193575793545,
+    "q_deg": [
+      1.533,
+      1.584,
+      -1.507,
+      0.0,
+      0.0,
+      0.965
+    ],
+    "xyz_mm": [
+      67.6,
+      1.8,
+      221.5
+    ],
+    "count": 88,
+    "bbox": [
+      330.6,
+      145.6,
+      476.7,
+      250.3
+    ],
+    "O": [
+      476.7,
+      242.1
+    ],
+    "last": [
+      330.6,
+      156.8
+    ],
+    "flange_span_ms": 0.2663135528564453,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.093,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t03",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.428425,
+    "gripper_age_ms": 4.12558,
+    "flange_age_ms": 4.765349,
+    "joint_span_ms": 0.25153160095214844,
+    "fk_mm": 0.001393954431520437,
+    "fk_deg": 0.0008172607474240922,
+    "q_deg": [
+      0.0,
+      3.17,
+      -3.176,
+      -1.503,
+      1.516,
+      2.511
+    ],
+    "xyz_mm": [
+      69.1,
+      -0.1,
+      227.2
+    ],
+    "count": 88,
+    "bbox": [
+      314.4,
+      136.5,
+      459.8,
+      242.4
+    ],
+    "O": [
+      459.8,
+      232.8
+    ],
+    "last": [
+      314.4,
+      148.8
+    ],
+    "flange_span_ms": 0.21910667419433594,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.03,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t04",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.811473,
+    "gripper_age_ms": 3.724001,
+    "flange_age_ms": 4.228905,
+    "joint_span_ms": 0.27370452880859375,
+    "fk_mm": 0.0030936636383703847,
+    "fk_deg": 0.0010076865779369952,
+    "q_deg": [
+      -1.54,
+      4.727,
+      -4.737,
+      -2.97,
+      2.942,
+      3.967
+    ],
+    "xyz_mm": [
+      70.8,
+      -2.2,
+      232.4
+    ],
+    "count": 88,
+    "bbox": [
+      296.6,
+      127.8,
+      442.1,
+      234.8
+    ],
+    "O": [
+      442.1,
+      223.6
+    ],
+    "last": [
+      296.6,
+      140.6
+    ],
+    "flange_span_ms": 0.22554397583007812,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.073,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t05",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.983387,
+    "gripper_age_ms": 0.824703,
+    "flange_age_ms": 1.192431,
+    "joint_span_ms": 0.22840499877929688,
+    "fk_mm": 0.0015531307703782944,
+    "fk_deg": 0.0014077590914733785,
+    "q_deg": [
+      -3.185,
+      6.329,
+      -6.401,
+      -4.485,
+      4.481,
+      5.486
+    ],
+    "xyz_mm": [
+      72.5,
+      -4.6,
+      238.0
+    ],
+    "count": 88,
+    "bbox": [
+      278.0,
+      119.1,
+      424.0,
+      227.6
+    ],
+    "O": [
+      424.0,
+      214.9
+    ],
+    "last": [
+      278.0,
+      132.9
+    ],
+    "flange_span_ms": 0.20599365234375,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.071,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t06",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.642881,
+    "gripper_age_ms": 3.531381,
+    "flange_age_ms": 4.009565,
+    "joint_span_ms": 0.20122528076171875,
+    "fk_mm": 0.001068960231806425,
+    "fk_deg": 0.001165926620537317,
+    "q_deg": [
+      -4.764,
+      7.915,
+      -7.996,
+      -5.967,
+      5.908,
+      7.024
+    ],
+    "xyz_mm": [
+      74.3,
+      -7.2,
+      243.3
+    ],
+    "count": 88,
+    "bbox": [
+      258.6,
+      110.2,
+      405.5,
+      220.5
+    ],
+    "O": [
+      405.5,
+      206.0
+    ],
+    "last": [
+      258.6,
+      125.0
+    ],
+    "flange_span_ms": 0.23436546325683594,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.092,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t07",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.609971,
+    "gripper_age_ms": 2.398887,
+    "flange_age_ms": 2.959141,
+    "joint_span_ms": 0.24127960205078125,
+    "fk_mm": 0.0013448734341591352,
+    "fk_deg": 0.00021283808145687418,
+    "q_deg": [
+      -6.316,
+      9.51,
+      -9.161,
+      -4.441,
+      4.383,
+      8.538
+    ],
+    "xyz_mm": [
+      76.7,
+      -9.1,
+      250.8
+    ],
+    "count": 88,
+    "bbox": [
+      250.6,
+      124.2,
+      401.2,
+      240.8
+    ],
+    "O": [
+      401.2,
+      218.2
+    ],
+    "last": [
+      250.6,
+      146.7
+    ],
+    "flange_span_ms": 0.2560615539550781,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.09,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t08",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.833355,
+    "gripper_age_ms": 0.510148,
+    "flange_age_ms": 1.184404,
+    "joint_span_ms": 0.2377033233642578,
+    "fk_mm": 0.0012230735507706113,
+    "fk_deg": 0.0017174916923595688,
+    "q_deg": [
+      -7.916,
+      11.128,
+      -10.332,
+      -2.819,
+      2.804,
+      10.162
+    ],
+    "xyz_mm": [
+      79.3,
+      -11.3,
+      258.4
+    ],
+    "count": 88,
+    "bbox": [
+      244.0,
+      139.5,
+      397.7,
+      262.3
+    ],
+    "O": [
+      397.7,
+      231.8
+    ],
+    "last": [
+      244.0,
+      169.6
+    ],
+    "flange_span_ms": 0.2372264862060547,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.084,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t09",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.519957,
+    "gripper_age_ms": 3.324624,
+    "flange_age_ms": 3.657155,
+    "joint_span_ms": 5.055904388427734,
+    "fk_mm": 0.0030798173833314598,
+    "fk_deg": 0.0002351460642397,
+    "q_deg": [
+      -9.562,
+      12.741,
+      -11.503,
+      -1.27,
+      1.22,
+      11.752
+    ],
+    "xyz_mm": [
+      81.9,
+      -13.8,
+      265.9
+    ],
+    "count": 88,
+    "bbox": [
+      239.0,
+      155.8,
+      395.7,
+      284.6
+    ],
+    "O": [
+      395.7,
+      246.2
+    ],
+    "last": [
+      239.0,
+      193.3
+    ],
+    "flange_span_ms": 0.23055076599121094,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.097,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": "5.056 ms joint packet span; same-boot adjacent 100 joint rows identical on all six axes."
+  },
+  {
+    "id": "t10",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.705976,
+    "gripper_age_ms": 2.556129,
+    "flange_age_ms": 2.919579,
+    "joint_span_ms": 0.2262592315673828,
+    "fk_mm": 0.002240557940584737,
+    "fk_deg": 0.0022180152019625997,
+    "q_deg": [
+      -11.15,
+      14.323,
+      -12.734,
+      0.408,
+      -0.41,
+      13.356
+    ],
+    "xyz_mm": [
+      84.4,
+      -16.6,
+      273.8
+    ],
+    "count": 88,
+    "bbox": [
+      235.4,
+      173.1,
+      394.7,
+      308.1
+    ],
+    "O": [
+      394.7,
+      261.7
+    ],
+    "last": [
+      235.4,
+      217.9
+    ],
+    "flange_span_ms": 0.17881393432617188,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.077,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper overlaps lower white rim",
+    "note": null
+  },
+  {
+    "id": "t11",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.278718,
+    "gripper_age_ms": 0.138689,
+    "flange_age_ms": 0.564228,
+    "joint_span_ms": 0.22554397583007812,
+    "fk_mm": 0.0036605144595124226,
+    "fk_deg": 0.0017922166984195816,
+    "q_deg": [
+      -12.738,
+      15.94,
+      -13.93,
+      1.932,
+      -2.035,
+      14.976
+    ],
+    "xyz_mm": [
+      87.0,
+      -19.8,
+      281.4
+    ],
+    "count": 88,
+    "bbox": [
+      232.6,
+      191.3,
+      394.3,
+      332.4
+    ],
+    "O": [
+      394.3,
+      277.8
+    ],
+    "last": [
+      232.6,
+      243.2
+    ],
+    "flange_span_ms": 0.21028518676757812,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.07,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper overlaps lower checker row",
+    "note": null
+  },
+  {
+    "id": "t12",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.206384,
+    "gripper_age_ms": 0.15609,
+    "flange_age_ms": 0.582207,
+    "joint_span_ms": 0.2758502960205078,
+    "fk_mm": 0.0018887525470770818,
+    "fk_deg": 0.0009343045949568944,
+    "q_deg": [
+      -14.338,
+      17.31,
+      -15.621,
+      3.34,
+      -0.424,
+      13.481
+    ],
+    "xyz_mm": [
+      89.1,
+      -22.8,
+      286.9
+    ],
+    "count": 88,
+    "bbox": [
+      215.4,
+      189.6,
+      377.8,
+      331.9
+    ],
+    "O": [
+      377.8,
+      275.7
+    ],
+    "last": [
+      215.4,
+      242.8
+    ],
+    "flange_span_ms": 0.30493736267089844,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.09,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper overlaps lower checker row",
+    "note": null
+  },
+  {
+    "id": "t13",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.959937,
+    "gripper_age_ms": 0.800693,
+    "flange_age_ms": 1.27228,
+    "joint_span_ms": 0.20647048950195312,
+    "fk_mm": 0.0013807016791922947,
+    "fk_deg": 0.0019251457956420792,
+    "q_deg": [
+      -15.937,
+      18.756,
+      -17.38,
+      4.719,
+      1.153,
+      11.85
+    ],
+    "xyz_mm": [
+      91.4,
+      -25.9,
+      292.6
+    ],
+    "count": 88,
+    "bbox": [
+      198.4,
+      188.3,
+      362.0,
+      332.0
+    ],
+    "O": [
+      362.0,
+      274.0
+    ],
+    "last": [
+      198.4,
+      242.7
+    ],
+    "flange_span_ms": 0.2033710479736328,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.081,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper overlaps lower checkerboard edge",
+    "note": null
+  },
+  {
+    "id": "t14",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.927386,
+    "gripper_age_ms": 2.835678,
+    "flange_age_ms": 2.885828,
+    "joint_span_ms": 0.24557113647460938,
+    "fk_mm": 0.0036696766498141966,
+    "fk_deg": 0.0014297616815698946,
+    "q_deg": [
+      -17.582,
+      20.133,
+      -19.017,
+      6.17,
+      2.715,
+      10.264
+    ],
+    "xyz_mm": [
+      93.6,
+      -29.2,
+      297.7
+    ],
+    "count": 88,
+    "bbox": [
+      181.8,
+      186.5,
+      347.1,
+      331.9
+    ],
+    "O": [
+      347.1,
+      272.2
+    ],
+    "last": [
+      181.8,
+      242.4
+    ],
+    "flange_span_ms": 0.23484230041503906,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.085,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper obscures lower rim near print",
+    "note": null
+  },
+  {
+    "id": "t15",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 1.45245,
+    "gripper_age_ms": 1.311792,
+    "flange_age_ms": 1.78433,
+    "joint_span_ms": 0.2243518829345703,
+    "fk_mm": 0.0012718757467246268,
+    "fk_deg": 0.0016821559630114185,
+    "q_deg": [
+      -19.118,
+      21.552,
+      -20.773,
+      7.601,
+      4.365,
+      8.596
+    ],
+    "xyz_mm": [
+      96.0,
+      -32.2,
+      303.2
+    ],
+    "count": 88,
+    "bbox": [
+      165.9,
+      184.5,
+      333.2,
+      331.3
+    ],
+    "O": [
+      333.2,
+      270.1
+    ],
+    "last": [
+      165.9,
+      241.8
+    ],
+    "flange_span_ms": 0.2872943878173828,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.082,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper obscures lower white rim near print",
+    "note": null
+  },
+  {
+    "id": "t16",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.334113,
+    "gripper_age_ms": 0.251009,
+    "flange_age_ms": 0.751575,
+    "joint_span_ms": 0.1499652862548828,
+    "fk_mm": 0.0034080739052919445,
+    "fk_deg": 0.002205375498705502,
+    "q_deg": [
+      -20.754,
+      22.984,
+      -22.45,
+      8.975,
+      5.983,
+      7.001
+    ],
+    "xyz_mm": [
+      98.4,
+      -35.6,
+      308.2
+    ],
+    "count": 88,
+    "bbox": [
+      150.1,
+      182.3,
+      319.7,
+      331.0
+    ],
+    "O": [
+      319.7,
+      267.8
+    ],
+    "last": [
+      150.1,
+      241.2
+    ],
+    "flange_span_ms": 0.2334117889404297,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.05,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "gripper grazes lower rim near brand",
+    "note": null
+  },
+  {
+    "id": "t17",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.985315,
+    "gripper_age_ms": 2.868677,
+    "flange_age_ms": 3.34975,
+    "joint_span_ms": 0.23651123046875,
+    "fk_mm": 0.0017563538680274303,
+    "fk_deg": 0.002172222649486839,
+    "q_deg": [
+      -22.318,
+      24.519,
+      -22.932,
+      7.512,
+      7.583,
+      5.44
+    ],
+    "xyz_mm": [
+      101.6,
+      -39.9,
+      305.6
+    ],
+    "count": 88,
+    "bbox": [
+      114.8,
+      162.1,
+      289.8,
+      310.6
+    ],
+    "O": [
+      289.8,
+      250.0
+    ],
+    "last": [
+      114.8,
+      217.6
+    ],
+    "flange_span_ms": 0.2543926239013672,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.082,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t18",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.602973,
+    "gripper_age_ms": 0.549576,
+    "flange_age_ms": 1.116268,
+    "joint_span_ms": 0.23865699768066406,
+    "fk_mm": 0.0006425278348045898,
+    "fk_deg": 0.0029097627972808297,
+    "q_deg": [
+      -23.991,
+      26.13,
+      -23.471,
+      6.032,
+      9.175,
+      3.82
+    ],
+    "xyz_mm": [
+      104.5,
+      -44.8,
+      303.0
+    ],
+    "count": 88,
+    "bbox": [
+      78.8,
+      139.3,
+      260.9,
+      288.5
+    ],
+    "O": [
+      260.9,
+      230.8
+    ],
+    "last": [
+      78.8,
+      191.5
+    ],
+    "flange_span_ms": 0.2071857452392578,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.07,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t19",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.206016,
+    "gripper_age_ms": 3.105361,
+    "flange_age_ms": 3.564264,
+    "joint_span_ms": 0.25391578674316406,
+    "fk_mm": 0.0012840553857891143,
+    "fk_deg": 0.002277383549070723,
+    "q_deg": [
+      -25.576,
+      27.723,
+      -23.924,
+      4.493,
+      10.82,
+      2.15
+    ],
+    "xyz_mm": [
+      107.2,
+      -49.7,
+      299.8
+    ],
+    "count": 88,
+    "bbox": [
+      40.5,
+      112.2,
+      232.0,
+      262.9
+    ],
+    "O": [
+      232.0,
+      208.2
+    ],
+    "last": [
+      40.5,
+      160.7
+    ],
+    "flange_span_ms": 0.2472400665283203,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.077,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "left side of outer white rim exits image",
+    "note": null
+  },
+  {
+    "id": "t20",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 1.607992,
+    "gripper_age_ms": 1.482796,
+    "flange_age_ms": 1.956475,
+    "joint_span_ms": 0.24890899658203125,
+    "fk_mm": 0.0026522076925779006,
+    "fk_deg": 0.0020788783449188393,
+    "q_deg": [
+      -24.081,
+      29.376,
+      -24.729,
+      6.005,
+      9.152,
+      0.634
+    ],
+    "xyz_mm": [
+      113.5,
+      -49.0,
+      304.1
+    ],
+    "count": 88,
+    "bbox": [
+      62.9,
+      119.5,
+      249.4,
+      267.1
+    ],
+    "O": [
+      249.4,
+      215.2
+    ],
+    "last": [
+      62.9,
+      165.5
+    ],
+    "flange_span_ms": 0.20360946655273438,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.081,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t21",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.861095,
+    "gripper_age_ms": 0.761997,
+    "flange_age_ms": 1.22448,
+    "joint_span_ms": 0.23818016052246094,
+    "fk_mm": 0.0006608358722224607,
+    "fk_deg": 0.0009612058084188102,
+    "q_deg": [
+      -22.415,
+      30.962,
+      -25.537,
+      7.51,
+      7.646,
+      -0.962
+    ],
+    "xyz_mm": [
+      119.8,
+      -47.6,
+      308.0
+    ],
+    "count": 88,
+    "bbox": [
+      83.4,
+      126.8,
+      266.0,
+      271.8
+    ],
+    "O": [
+      266.0,
+      222.3
+    ],
+    "last": [
+      83.4,
+      170.6
+    ],
+    "flange_span_ms": 0.2391338348388672,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.063,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t22",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.972291,
+    "gripper_age_ms": 3.875121,
+    "flange_age_ms": 4.401212,
+    "joint_span_ms": 0.28061866760253906,
+    "fk_mm": 0.004110376200640702,
+    "fk_deg": 0.0007999827174154068,
+    "q_deg": [
+      -20.799,
+      32.529,
+      -26.339,
+      8.937,
+      6.079,
+      -2.564
+    ],
+    "xyz_mm": [
+      126.1,
+      -46.2,
+      312.0
+    ],
+    "count": 88,
+    "bbox": [
+      103.1,
+      134.2,
+      282.1,
+      277.3
+    ],
+    "O": [
+      282.1,
+      230.1
+    ],
+    "last": [
+      103.1,
+      176.2
+    ],
+    "flange_span_ms": 0.2224445343017578,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.079,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t23",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.385556,
+    "gripper_age_ms": 1.995648,
+    "flange_age_ms": 2.501777,
+    "joint_span_ms": 4.867076873779297,
+    "fk_mm": 0.002158771425954084,
+    "fk_deg": 0.0017244067725948665,
+    "q_deg": [
+      -19.211,
+      34.171,
+      -27.153,
+      10.459,
+      4.442,
+      -4.193
+    ],
+    "xyz_mm": [
+      132.7,
+      -44.8,
+      315.8
+    ],
+    "count": 88,
+    "bbox": [
+      121.4,
+      142.0,
+      297.4,
+      283.0
+    ],
+    "O": [
+      297.4,
+      238.1
+    ],
+    "last": [
+      121.4,
+      182.0
+    ],
+    "flange_span_ms": 0.2372264862060547,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.047,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t24",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.785585,
+    "gripper_age_ms": 4.678645,
+    "flange_age_ms": 0.161801,
+    "joint_span_ms": 0.25391578674316406,
+    "fk_mm": 0.004192810004852371,
+    "fk_deg": 0.0009914433371114306,
+    "q_deg": [
+      -17.626,
+      35.743,
+      -27.961,
+      12.005,
+      2.788,
+      -5.742
+    ],
+    "xyz_mm": [
+      139.1,
+      -43.2,
+      319.6
+    ],
+    "count": 88,
+    "bbox": [
+      137.7,
+      149.9,
+      311.3,
+      289.4
+    ],
+    "O": [
+      311.3,
+      246.3
+    ],
+    "last": [
+      137.7,
+      188.4
+    ],
+    "flange_span_ms": 0.24938583374023438,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.058,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t25",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.502599,
+    "gripper_age_ms": 4.303823,
+    "flange_age_ms": 4.848312,
+    "joint_span_ms": 0.25725364685058594,
+    "fk_mm": 0.003576275930948559,
+    "fk_deg": 0.0011922544697010832,
+    "q_deg": [
+      -16.03,
+      37.345,
+      -27.755,
+      10.462,
+      3.46,
+      -7.408
+    ],
+    "xyz_mm": [
+      145.4,
+      -40.7,
+      313.0
+    ],
+    "count": 88,
+    "bbox": [
+      142.8,
+      117.3,
+      316.2,
+      251.9
+    ],
+    "O": [
+      316.2,
+      218.1
+    ],
+    "last": [
+      142.8,
+      147.2
+    ],
+    "flange_span_ms": 0.2486705780029297,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.062,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t26",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 1.353917,
+    "gripper_age_ms": 1.3011,
+    "flange_age_ms": 1.813634,
+    "joint_span_ms": 0.22602081298828125,
+    "fk_mm": 0.0004742410660748047,
+    "fk_deg": 0.001873233080540263,
+    "q_deg": [
+      -14.438,
+      38.928,
+      -27.451,
+      8.845,
+      4.207,
+      -9.004
+    ],
+    "xyz_mm": [
+      151.1,
+      -37.8,
+      305.7
+    ],
+    "count": 88,
+    "bbox": [
+      151.4,
+      85.7,
+      323.9,
+      215.5
+    ],
+    "O": [
+      323.9,
+      191.0
+    ],
+    "last": [
+      151.4,
+      106.2
+    ],
+    "flange_span_ms": 0.2598762512207031,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.072,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t27",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.016696,
+    "gripper_age_ms": 3.908367,
+    "flange_age_ms": 4.357919,
+    "joint_span_ms": 0.25272369384765625,
+    "fk_mm": 0.0032109019273045794,
+    "fk_deg": 0.0009821239957846673,
+    "q_deg": [
+      -12.869,
+      40.535,
+      -27.114,
+      7.21,
+      4.89,
+      -10.559
+    ],
+    "xyz_mm": [
+      156.6,
+      -34.7,
+      298.0
+    ],
+    "count": 88,
+    "bbox": [
+      163.0,
+      50.3,
+      334.7,
+      176.0
+    ],
+    "O": [
+      334.7,
+      161.6
+    ],
+    "last": [
+      163.0,
+      60.8
+    ],
+    "flange_span_ms": 0.19621849060058594,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.069,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t28",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.278971,
+    "gripper_age_ms": 3.159844,
+    "flange_age_ms": 3.630273,
+    "joint_span_ms": 0.27251243591308594,
+    "fk_mm": 0.002140168251606457,
+    "fk_deg": 0.0011313406099038288,
+    "q_deg": [
+      -11.265,
+      42.127,
+      -26.871,
+      5.585,
+      5.574,
+      -12.139
+    ],
+    "xyz_mm": [
+      161.7,
+      -31.3,
+      290.9
+    ],
+    "count": 88,
+    "bbox": [
+      179.4,
+      18.6,
+      349.6,
+      140.4
+    ],
+    "O": [
+      348.8,
+      136.5
+    ],
+    "last": [
+      179.4,
+      18.6
+    ],
+    "flange_span_ms": 0.26488304138183594,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.073,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "excluded",
+    "reason": "top white edge is outside image",
+    "note": null
+  },
+  {
+    "id": "t29",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 2.092053,
+    "gripper_age_ms": 2.018477,
+    "flange_age_ms": 2.526303,
+    "joint_span_ms": 0.24461746215820312,
+    "fk_mm": 0.002282429642883462,
+    "fk_deg": 0.0015803739944014485,
+    "q_deg": [
+      -9.686,
+      43.352,
+      -28.345,
+      6.643,
+      4.011,
+      -13.796
+    ],
+    "xyz_mm": [
+      168.0,
+      -27.9,
+      298.8
+    ],
+    "count": 88,
+    "bbox": [
+      200.5,
+      46.9,
+      366.3,
+      164.3
+    ],
+    "O": [
+      362.3,
+      163.5
+    ],
+    "last": [
+      200.5,
+      46.9
+    ],
+    "flange_span_ms": 0.26702880859375,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.086,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t30",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.309492,
+    "gripper_age_ms": 4.120164,
+    "flange_age_ms": 4.660377,
+    "joint_span_ms": 0.21910667419433594,
+    "fk_mm": 0.00223985103041532,
+    "fk_deg": 0.0009882871584468462,
+    "q_deg": [
+      -8.092,
+      44.537,
+      -29.917,
+      7.759,
+      2.469,
+      -15.389
+    ],
+    "xyz_mm": [
+      174.1,
+      -24.2,
+      307.4
+    ],
+    "count": 88,
+    "bbox": [
+      218.6,
+      74.5,
+      380.8,
+      190.6
+    ],
+    "O": [
+      375.0,
+      190.6
+    ],
+    "last": [
+      218.6,
+      74.5
+    ],
+    "flange_span_ms": 0.24962425231933594,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.092,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t31",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 1.032211,
+    "gripper_age_ms": 0.899974,
+    "flange_age_ms": 1.368644,
+    "joint_span_ms": 0.2295970916748047,
+    "fk_mm": 0.003323363454725574,
+    "fk_deg": 0.0009599613104588726,
+    "q_deg": [
+      -6.438,
+      45.715,
+      -31.509,
+      8.839,
+      0.826,
+      -16.921
+    ],
+    "xyz_mm": [
+      180.1,
+      -20.1,
+      316.1
+    ],
+    "count": 88,
+    "bbox": [
+      233.4,
+      102.5,
+      394.2,
+      218.9
+    ],
+    "O": [
+      386.6,
+      218.9
+    ],
+    "last": [
+      234.8,
+      102.5
+    ],
+    "flange_span_ms": 0.24437904357910156,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.091,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t32",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.373114,
+    "gripper_age_ms": 4.286388,
+    "flange_age_ms": 4.712824,
+    "joint_span_ms": 0.2396106719970703,
+    "fk_mm": 0.002318862422804562,
+    "fk_deg": 0.0008156671203271267,
+    "q_deg": [
+      -4.87,
+      46.945,
+      -33.154,
+      9.933,
+      -0.755,
+      -18.531
+    ],
+    "xyz_mm": [
+      186.2,
+      -16.1,
+      324.8
+    ],
+    "count": 88,
+    "bbox": [
+      245.0,
+      128.3,
+      406.6,
+      245.6
+    ],
+    "O": [
+      397.5,
+      245.6
+    ],
+    "last": [
+      249.7,
+      128.3
+    ],
+    "flange_span_ms": 0.2498626708984375,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.07,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t33",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.84262,
+    "gripper_age_ms": 3.684131,
+    "flange_age_ms": 4.199306,
+    "joint_span_ms": 0.25010108947753906,
+    "fk_mm": 0.0032745874571483004,
+    "fk_deg": 0.0016298992845776075,
+    "q_deg": [
+      -3.27,
+      48.108,
+      -34.738,
+      11.103,
+      -2.375,
+      -20.214
+    ],
+    "xyz_mm": [
+      191.8,
+      -11.7,
+      333.4
+    ],
+    "count": 88,
+    "bbox": [
+      254.9,
+      154.5,
+      417.6,
+      273.4
+    ],
+    "O": [
+      406.9,
+      273.4
+    ],
+    "last": [
+      262.1,
+      154.5
+    ],
+    "flange_span_ms": 0.2086162567138672,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.092,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t34",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 0.592183,
+    "gripper_age_ms": 0.42305,
+    "flange_age_ms": 0.685375,
+    "joint_span_ms": 4.917621612548828,
+    "fk_mm": 0.0051003628080568755,
+    "fk_deg": 0.0011223594179019364,
+    "q_deg": [
+      1.387,
+      52.8,
+      -35.942,
+      12.541,
+      -5.475,
+      -16.884
+    ],
+    "xyz_mm": [
+      210.4,
+      3.1,
+      329.3
+    ],
+    "count": 88,
+    "bbox": [
+      310.1,
+      157.4,
+      477.0,
+      274.4
+    ],
+    "O": [
+      470.2,
+      274.4
+    ],
+    "last": [
+      312.8,
+      157.4
+    ],
+    "flange_span_ms": 0.3705024719238281,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.075,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t35",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 45,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 4.149399,
+    "gripper_age_ms": 3.8493,
+    "flange_age_ms": 4.46154,
+    "joint_span_ms": 0.2372264862060547,
+    "fk_mm": 0.004643814847259921,
+    "fk_deg": 0.0022957676479207455,
+    "q_deg": [
+      6.024,
+      57.458,
+      -37.106,
+      14.05,
+      -8.631,
+      -13.612
+    ],
+    "xyz_mm": [
+      227.7,
+      20.5,
+      323.6
+    ],
+    "count": 88,
+    "bbox": [
+      364.6,
+      149.3,
+      542.1,
+      270.8
+    ],
+    "O": [
+      539.4,
+      270.8
+    ],
+    "last": [
+      364.6,
+      155.2
+    ],
+    "flange_span_ms": 0.20456314086914062,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.094,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": null
+  },
+  {
+    "id": "t36",
+    "split": "train",
+    "colored_image_matches": true,
+    "rgb": 44,
+    "joint_rows": 100,
+    "static_range_deg": 0.0,
+    "joint_age_ms": 3.771312,
+    "gripper_age_ms": 3.589982,
+    "flange_age_ms": 4.180428,
+    "joint_span_ms": 0.23221969604492188,
+    "fk_mm": 0.0024352272210564725,
+    "fk_deg": 0.0008790867403005212,
+    "q_deg": [
+      9.182,
+      60.554,
+      -37.968,
+      15.051,
+      -10.713,
+      -11.428
+    ],
+    "xyz_mm": [
+      238.3,
+      33.8,
+      319.5
+    ],
+    "count": 88,
+    "bbox": [
+      400.6,
+      136.5,
+      589.3,
+      266.3
+    ],
+    "O": [
+      589.2,
+      264.2
+    ],
+    "last": [
+      400.6,
+      149.1
+    ],
+    "flange_span_ms": 0.2124309539794922,
+    "tx_during_capture": 0,
+    "camera_errors": null,
+    "boot_matches": true,
+    "capture_target_error_deg": 0.087,
+    "corner_order": "detected",
+    "pose_verified": true,
+    "static_capture_verified": true,
+    "board_orientation_verified": true,
+    "physical_origin": "printed lower right; 0 to 1 left, 0 to 11 up",
+    "quality": "included",
+    "reason": null,
+    "note": "Upper white edge close to frame boundary; outer edge verified in full image."
+  }
+]

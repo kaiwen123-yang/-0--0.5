@@ -1,0 +1,62 @@
+{
+  "image": "t01",
+  "width_feedback_m": -0.0003,
+  "mesh_opening_m": 0.0,
+  "fingers": [
+    {
+      "finger": 1,
+      "tip_flange_m": [
+        -0.00011363672092556953,
+        -0.00351530569605529,
+        0.1415482878056355
+      ],
+      "tip_px": [
+        345.04034502493397,
+        342.40464848267845
+      ],
+      "highest_silhouette_row_px": 309
+    },
+    {
+      "finger": 2,
+      "tip_flange_m": [
+        0.00011363672092556953,
+        0.0035153056960552905,
+        0.1415482878056355
+      ],
+      "tip_px": [
+        319.53398889606774,
+        344.13576184229936
+      ],
+      "highest_silhouette_row_px": 310
+    }
+  ],
+  "nominal_urdf_T_flange_camera": [
+    [
+      6.123233995736766e-17,
+      1.0,
+      0.0,
+      -0.092
+    ],
+    [
+      -1.0,
+      6.123233995736766e-17,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0465
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "nominal_to_fitted_origin_distance_mm": 21.80584689079081,
+  "nominal_to_fitted_angle_deg": 21.02108038823442,
+  "note": "Nominal digital camera frame is a mounting hypothesis, not independent optical metrology. Finger outlines are projected from the CAD using fitted transform; compare to actual t01."
+}

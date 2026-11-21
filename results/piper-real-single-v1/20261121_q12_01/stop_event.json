@@ -1,0 +1,108 @@
+{
+  "status": "STOP_LATCHED",
+  "session": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01",
+  "transit": "u11",
+  "last_capture": "h05",
+  "attempt_target_deg": [
+    -3.7,
+    43.5,
+    -27.0,
+    -0.2,
+    -4.5,
+    -23.4
+  ],
+  "ramp_end_measured_deg": [
+    -3.634,
+    43.56,
+    -27.074,
+    0.0,
+    -4.578,
+    -23.339000000000002
+  ],
+  "commanded_reference_duration_s": 3.084914119,
+  "arrival_timeout_s": 3.007475946,
+  "initial_site_handoff": "2026-11-21 earlier reported still and no contact; operator subsequently reported possible tabletop contact",
+  "error": "RuntimeError('Target arrival and 0.5 s of quiet feedback were not confirmed')",
+  "timeout_local_time": "2026-11-21T22:42:21.682331+08:00",
+  "motion_status_during_arrival": [
+    1
+  ],
+  "ctrl_modes_during_arrival": [
+    1
+  ],
+  "arm_status_during_arrival": [
+    0
+  ],
+  "cached_polls_in_arrival": 30,
+  "controller_driver_faults_during_arrival": false,
+  "reported_controller_faults_during_arrival": false,
+  "all_driver_enable_flags_during_arrival": true,
+  "can_error_frames": 0,
+  "interface_delta": {
+    "rx_packets": 23033,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 489,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "submitted_ids": {
+    "0x151": 32,
+    "0x155": 152,
+    "0x156": 152,
+    "0x157": 152,
+    "0x150": 1
+  },
+  "damping_stop_frame": {
+    "host_submit_start_ns": "21143502370221",
+    "host_submit_end_ns": "21143502422369",
+    "phase": "calibration_pose",
+    "id": "0x150",
+    "data_hex": "0100000000000000",
+    "result": "host_submitted",
+    "error": ""
+  },
+  "independent_status_after_stop": {
+    "ctrl_mode": 1,
+    "arm_status": 0,
+    "mode_feedback": 1,
+    "teach_status": 2,
+    "motion_status": 1,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "later_read_only_snapshot": {
+    "monotonic_s": 21699.941894434,
+    "q_deg": [
+      -3.634,
+      34.688,
+      0.9,
+      0.0,
+      29.502,
+      -23.339000000000002
+    ],
+    "ctrl_mode": 0,
+    "arm_status": 1,
+    "mode_feedback": 1,
+    "teach_status": 0,
+    "motion_status": 1
+  },
+  "later_snapshot_wall_time": "2026-11-21T22:51:38.350289+08:00",
+  "operator_photo": "stop_wrist.jpg",
+  "contact_confirmed": null,
+  "recovery_executed": false,
+  "interpretation": "Controller did not acknowledge arrival. Timeout in H0 executed damping e-stop, followed by large joint-angle changes and slower residual drift. Obstruction, tabletop contact and firmware reason are not established by logs."
+}

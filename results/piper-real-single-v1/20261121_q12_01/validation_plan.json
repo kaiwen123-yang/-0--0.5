@@ -1,0 +1,25 @@
+{
+  "criterion": "Before viewing any heldout residual, require actual measured stationary capture, same physical printed corner orientation, visible board with peripheral white border, and matching receive times and FK/controller frames. Keep originals.",
+  "training_review_candidates": {
+    "t10": "gripper overlaps lower white rim",
+    "t11": "gripper overlaps lower checker row",
+    "t12": "gripper overlaps lower checker row",
+    "t13": "gripper overlaps lower checkerboard edge",
+    "t14": "gripper obscures lower rim near print",
+    "t15": "gripper obscures lower white rim near print",
+    "t16": "gripper grazes lower rim near brand",
+    "t19": "left side of outer white rim exits image",
+    "t28": "top white edge is outside image"
+  },
+  "heldout_preassigned": [
+    "h01",
+    "h02",
+    "h03",
+    "h04",
+    "h05",
+    "h06",
+    "h07",
+    "h08"
+  ],
+  "fit": "received 5-term distortion, K/D train only; Park train only; frozen before validation scores"
+}

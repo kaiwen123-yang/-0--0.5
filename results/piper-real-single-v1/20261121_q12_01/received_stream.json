@@ -1,0 +1,16 @@
+{
+  "first_message": {
+    "topic": "/wrist_camera/color/image_raw",
+    "width": 640,
+    "height": 480,
+    "step": 1920,
+    "encoding": "rgb8",
+    "frame": "wrist_camera_color_optical_frame",
+    "header_sec": 1795269721,
+    "header_nsec": 145675326
+  },
+  "driver": "[astra_camera_node-1] [INFO] [1795269665.309365203] [wrist_camera.camera]: uvc config: vendor_id: 2bc5\n[astra_camera_node-1] product_id: 557\n[astra_camera_node-1] width: 640\n[astra_camera_node-1] height: 480\n[astra_camera_node-1] fps: 30\n[astra_camera_node-1] serial_number: CC16762023M\n[astra_camera_node-1] format: mjpeg\n[astra_camera_node-1] optical_frame_id : wrist_camera_color_optical_frame\n[astra_camera_node-1] [INFO] [1795269665.358325668] [wrist_camera.camera]: set uvc mode 640x480@30 format UVC_FRAME_FORMAT_MJPEG\n",
+  "device_service": "waiting for service to become available...\nrequester: making request: astra_camera_msgs.srv.GetDeviceInfo_Request()\n\nresponse:\nastra_camera_msgs.srv.GetDeviceInfo_Response(info=astra_camera_msgs.msg.DeviceInfo(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name='Astra', vid=11205, pid=1623, serial_number='CC16762023M', firmware_version='', supported_min_sdk_version='', hardware_version=''), success=True, message='')\n\n",
+  "evidence": "本会话 H0 驱动日志与设备服务确认 CC16762023M、MJPEG 640×480@30。/wrist_camera/color/image_raw 实收 640×480 rgb8，step=1920，wrist_camera_color_optical_frame。运行参数 color_roi 四项均为 -1。astra_camera f7e71d9 的 MJPEG 回调解码为 RGB，软件 uvc_flip_ 初始为 0，无旋转/缩放分支。H0 h0_record_camera.py 对 rgb8 只换 RGB/BGR 通道写样本 PNG。get_uvc_mirror 的实现未把读取值赋给 response.data，其返回 0 不作硬件结论。t01 在 H0 的第45张 RGB PNG 为原尺寸 640×480；对照正读的手机正面图，型号位于同一物理右下白边、同样排列。已核实 received 像素链。证据在 pixel_chain/。",
+  "device_internal_rectification": null
+}

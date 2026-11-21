@@ -1,0 +1,66 @@
+{
+  "preparation_status": "BOARD_RECEIVED_PENDING_FIELD_VERIFICATION",
+  "camera_role": "left_wrist_0_rgb",
+  "mount_mode": "wrist",
+  "installation_verified": false,
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_domain": "received",
+  "image_domain_verified": false,
+  "image_domain_evidence": null,
+  "image_size": [
+    640,
+    480
+  ],
+  "board": {
+    "type": "chessboard",
+    "inner_corners_cols": 11,
+    "inner_corners_rows": 8,
+    "square_size_m": 0.02,
+    "geometry_verified": false,
+    "origin_description": "待首张 t01 检测后记录：以实际 ORIGIN 0 对应的物理内角点为原点，或用 reverse_180 选择其对角；标记并拍照，所有姿态对应同一物理点。",
+    "x_axis_description": "待现场确认：由原点沿长边内角点列增加方向。",
+    "y_axis_description": "待现场确认：由原点沿短边内角点行增加方向。",
+    "mounted_rigidly_to": "base_world",
+    "rigid_mount_verified": false,
+    "manufacturer": "大凡光学 / DFOPTIX",
+    "model": "Q12-290-20",
+    "material": "aluminum substrate (user-reported received SKU)",
+    "nominal_squares": [
+      12,
+      9
+    ],
+    "nominal_outer_size_m": [
+      0.29,
+      0.23
+    ],
+    "nominal_pattern_size_m": [
+      0.24,
+      0.18
+    ],
+    "manufacturer_geometry_source": "https://www.dfoptic.com/in-stock-standards-product/152.html",
+    "physical_geometry_evidence": null
+  },
+  "robot": {
+    "base_frame": "base_link",
+    "gripper_frame": "flange_link",
+    "pose_source": "pyAgxArm 1.0.0 piper_h MDH FK",
+    "pose_source_verified": false,
+    "translation_unit": "m"
+  },
+  "minimum_views": {
+    "train": 15,
+    "heldout": 5
+  },
+  "notes": [
+    "2026-11-21 用户确认板已收到，型号 Q12-290-20【铝基板】；无需等待原计划 11 月 22 日。",
+    "厂家型号表给出 12×9 方格、20 mm 格长、240×180 mm 图案、290×230 mm 外形。11×8 内角点与 0.020 m 为对应配置；不借用其他材质或工艺的精度保证。",
+    "现场数格、核标签、跨多格量尺寸并拍照后，将 board.geometry_verified 设 true；此项连 detect 都需要。厂家名义规格不等于已核验用户实物。",
+    "板固定在相对基座不动的支架/桌面，整个采集批次不移动；确认后填写 rigid_mount_verified。",
+    "今日核实 DC1 CC16762023M 腕端安装与支架后填写 installation_verified；20 日安装照片仅为历史依据。",
+    "确认实际 640×480 接收像素链、ROI/镜像/旋转/缩放后填写 image_domain_evidence 和 image_domain_verified；received 表示拟合有效 K/残余 D，设备内部校正未知仍为 null。",
+    "先核对本次多姿态控制器法兰与 Piper H 实测关节 FK、物理方向、基座及法兰定义，再填写 pose_source_verified。不能用单姿态软件相符代替物理验收。",
+    "本模板没有内参或手眼结果，不自动使能、回零、移动机器人或写回驱动。"
+  ],
+  "camera_id": "CC16762023M",
+  "device_internal_rectification": null
+}
