@@ -1,0 +1,165 @@
+{
+  "original_train_included": [
+    "t01",
+    "t02",
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t17",
+    "t18",
+    "t20",
+    "t21",
+    "t22",
+    "t23",
+    "t24",
+    "t25",
+    "t26",
+    "t27",
+    "t29",
+    "t30",
+    "t31",
+    "t32",
+    "t33",
+    "t34",
+    "t35",
+    "t36"
+  ],
+  "original_heldout_included": [
+    "h01",
+    "h02",
+    "h03",
+    "h05"
+  ],
+  "added_observations": [
+    {
+      "actual_pose": "u06",
+      "source_split": "transit",
+      "evaluation_role": "supplemental held-aside observation",
+      "recorder_directory": "moves/h01",
+      "physical_interpretation": "Stationary at u06 before departure to h01.",
+      "frame_index": 0,
+      "image_sha256": "a7e40809b343fab3869ba2ae0e1aa3dc1ede8026d37b860fd4274136294f1298",
+      "image_receive_monotonic_ns": 21000938921296,
+      "pose_receive_monotonic_ns": 21000938109285,
+      "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+      "after_previous_verified_arrival_s": 1.503302237,
+      "before_next_target_s": 2.876586075,
+      "status_checks_at_rest": 5,
+      "joint_rows": 100,
+      "window_range_deg": 0.0,
+      "rgb_joint_age_ms": 0.812011,
+      "rgb_flange_age_ms": 0.941854,
+      "fk_controller_difference": {
+        "translation_mm": 0.0042357713371368845,
+        "rotation_deg": 0.0018690912814616613
+      },
+      "nearest_original_group": "t36",
+      "max_axis_difference_to_nearest_deg": 1.5379999999999967,
+      "previous_final_difference_deg": 0.0,
+      "measured_q_deg": [
+        7.678,
+        59.016000000000005,
+        -36.687,
+        13.666000000000002,
+        -9.69,
+        -12.816
+      ],
+      "image_review": "four white edges visible"
+    },
+    {
+      "actual_pose": "u07",
+      "source_split": "transit",
+      "evaluation_role": "supplemental held-aside observation",
+      "recorder_directory": "moves/h02",
+      "physical_interpretation": "Stationary at u07 before departure to h02.",
+      "frame_index": 0,
+      "image_sha256": "182583a7336a4cfcf6d083ba7d0fea00f4c3672f4fe70d462ebee82c534c388d",
+      "image_receive_monotonic_ns": 21021723830442,
+      "pose_receive_monotonic_ns": 21021723630980,
+      "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+      "after_previous_verified_arrival_s": 1.069784102,
+      "before_next_target_s": 2.955315858,
+      "status_checks_at_rest": 5,
+      "joint_rows": 100,
+      "window_range_deg": 0.0,
+      "rgb_joint_age_ms": 0.199462,
+      "rgb_flange_age_ms": 0.69435,
+      "fk_controller_difference": {
+        "translation_mm": 0.003183216527178453,
+        "rotation_deg": 0.0007111129851199786
+      },
+      "nearest_original_group": "h02",
+      "max_axis_difference_to_nearest_deg": 1.5830000000000055,
+      "previous_final_difference_deg": 0.0,
+      "measured_q_deg": [
+        4.394,
+        55.855000000000004,
+        -33.829,
+        10.635,
+        -7.495,
+        -15.637000000000002
+      ],
+      "image_review": "four white edges visible"
+    },
+    {
+      "actual_pose": "u08",
+      "source_split": "transit",
+      "evaluation_role": "supplemental held-aside observation",
+      "recorder_directory": "moves/h03",
+      "physical_interpretation": "Stationary at u08 before departure to h03.",
+      "frame_index": 0,
+      "image_sha256": "9c08f4d65a73a1ce1d3ecf73d5e04914d601ec451de70e3e986dfdfe173c017f",
+      "image_receive_monotonic_ns": 21042856631200,
+      "pose_receive_monotonic_ns": 21042853587017,
+      "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+      "after_previous_verified_arrival_s": 1.57211205,
+      "before_next_target_s": 3.02514226,
+      "status_checks_at_rest": 5,
+      "joint_rows": 100,
+      "window_range_deg": 0.0,
+      "rgb_joint_age_ms": 3.044183,
+      "rgb_flange_age_ms": 3.43165,
+      "fk_controller_difference": {
+        "translation_mm": 0.0016960229969271996,
+        "rotation_deg": 0.001092060265646405
+      },
+      "nearest_original_group": "h03",
+      "max_axis_difference_to_nearest_deg": 1.5720000000000027,
+      "previous_final_difference_deg": 0.0,
+      "measured_q_deg": [
+        1.614,
+        52.685,
+        -32.190000000000005,
+        7.95,
+        -6.868,
+        -18.26
+      ],
+      "image_review": "four white edges visible"
+    }
+  ],
+  "original_exclusions": {
+    "t10": "gripper overlaps lower white rim",
+    "t11": "gripper overlaps lower checker row",
+    "t12": "gripper overlaps lower checker row",
+    "t13": "gripper overlaps lower checkerboard edge",
+    "t14": "gripper obscures lower rim near print",
+    "t15": "gripper obscures lower white rim near print",
+    "t16": "gripper grazes lower rim near brand",
+    "t19": "left side of outer white rim exits image",
+    "t28": "top white edge is outside image",
+    "h04": "Gripper covers lower white border. All 88 inner intersections remain visible; score for diagnostic comparison only."
+  },
+  "supplemental_exclusions": {
+    "u09": "Gripper reaches the lower white rim.",
+    "u10": "Gripper reaches the lower white rim near the print."
+  },
+  "original_notes": {
+    "t09": "5.056 ms joint packet span; same-boot adjacent 100 joint rows identical on all six axes.",
+    "h02": "J6 changes by 0.100 deg at +206.042 ms. No change across received image or up to +200 ms.",
+    "t36": "Upper white edge close to frame boundary; outer edge verified in full image."
+  }
+}

@@ -1,6 +1,6 @@
 # 已到货 Q12-290-20 铝基棋盘板：DC1 腕部标定流程
 
-**11 月 21 日现场进展**　已经采到 t01–t36 和 h01–h05。u11 后处于阻尼急停，候选手眼尚待验收。续作请从[现场结果](../results/piper-real-single-v1/20261121_q12_01/report_zh.md)和[本次接续提示词](../results/piper-real-single-v1/20261121_q12_01/next_prompt.md)开始。下文为准备阶段记录。
+**11 月 21 日现场结果**　已完成 27 个训练姿态和七姿态离线验证（4 个正式预留、3 个 H0 静止补充）。[最终报告](../results/piper-real-single-v1/20261121_q12_01/final_seven/Q12_DC1_calibration.md) · [接续提示词](../results/piper-real-single-v1/20261121_q12_01/next_prompt.md)。下文保留准备阶段记录。
 
 更新：北京时间 2026-11-21。用户确认标定板已收到，无需等原计划的 11 月 22 日。对象是 Piper H、官方夹爪、腕部 DC1（CC16762023M）；唯一 π 图像槽仍为 `left_wrist_0_rgb`。本文已按 `b93ee78` 的实际采集与标定脚本核对，未执行硬件采集或求解。
 

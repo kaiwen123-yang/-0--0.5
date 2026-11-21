@@ -1,0 +1,450 @@
+{
+  "status": "COMPLETED_APPROVED_SEVEN_VIEW_OFFLINE_REVIEW",
+  "solver_status": "FIT_REQUIRES_REVIEW",
+  "hardware_motion_acceptance": false,
+  "absolute_accuracy_certified": false,
+  "disposition": "实测 K/D 与 Park 手眼已完成七姿态离线几何复核。适用本次固定腕部安装、640×480 received RGB 和实际覆盖视域。保留两类验证来源。作业级绝对精度与带载执行未验收。",
+  "source_split": {
+    "approved": "现场用户明确选择「用七个姿态结算，注明来源」",
+    "original_formal_heldout": [
+      "h01",
+      "h02",
+      "h03",
+      "h05"
+    ],
+    "additional_validation": [
+      "u06",
+      "u07",
+      "u08"
+    ],
+    "additional_original_role": "transit in H0 move logs",
+    "original_train": [
+      "t01",
+      "t02",
+      "t03",
+      "t04",
+      "t05",
+      "t06",
+      "t07",
+      "t08",
+      "t09",
+      "t17",
+      "t18",
+      "t20",
+      "t21",
+      "t22",
+      "t23",
+      "t24",
+      "t25",
+      "t26",
+      "t27",
+      "t29",
+      "t30",
+      "t31",
+      "t32",
+      "t33",
+      "t34",
+      "t35",
+      "t36"
+    ],
+    "not_in_evaluation": [
+      "h04",
+      "u09",
+      "u10"
+    ],
+    "stratification": "4 preassigned capture_pose records and 3 retrospectively identified archived, stationary pre-move RGB observations. Preserve both provenance groups. Only the 27 original train poses fit K,D,X and the fixed base-board reference.",
+    "raw_data_local": true,
+    "prior_model_sha256": "61ec07a870838d7d57dba5de794a42433f965f692f48a799b8abbd8ffbf1ea6d",
+    "operator_reports_camera_board_base_unchanged": true
+  },
+  "camera_id": "CC16762023M",
+  "camera_role": "left_wrist_0_rgb",
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_size": [
+    640,
+    480
+  ],
+  "image_domain": "received",
+  "device_internal_rectification": null,
+  "robot": {
+    "base_frame": "base_link",
+    "gripper_frame": "flange_link",
+    "pose_source": "pyAgxArm 1.0.0 piper_h MDH FK",
+    "pose_source_verified": true,
+    "translation_unit": "m",
+    "pose_source_evidence": "独立记录的实测关节经 Piper H SDK MDH FK 得 base_link←flange_link，单位 m。41 个停稳姿态与控制器三帧法兰反馈比较，位置最大 0.0051 mm，旋转最大 0.0029°。独立接收的六轴相对于单次目标的最大误差 0.097°，各轴都出现非零运动，零位有独立记录。控制器和 FK 可共用运动学假设，绝对度量另见板外缘复核。"
+  },
+  "matrix_convention": "T_a_b maps coordinates from frame b to frame a; translations in metres",
+  "parent_frame": "flange_link",
+  "distortion_model": "plumb_bob",
+  "distortion_order": [
+    "k1",
+    "k2",
+    "p1",
+    "p2",
+    "k3"
+  ],
+  "K": [
+    [
+      492.37567865957647,
+      0.0,
+      316.97519608183586
+    ],
+    [
+      0.0,
+      492.3071121205301,
+      210.44865824516836
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D": [
+    0.09278091462246699,
+    -0.07288786453967515,
+    -0.0004410515551773507,
+    -0.0016512945614318324,
+    -0.22950146948147707
+  ],
+  "T_flange_camera": [
+    [
+      0.05946957772881874,
+      0.9338003742622536,
+      0.3528175595863,
+      -0.08241923107110474
+    ],
+    [
+      -0.9981005956042833,
+      0.0499304704811198,
+      0.036085304098910434,
+      -0.0025243496574550656
+    ],
+    [
+      0.016080123728781672,
+      -0.35429339415971767,
+      0.9349960537219714,
+      0.0270749778851443
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_base_board_train_mean": [
+    [
+      0.042409613970973925,
+      0.3681285829500548,
+      0.9288071764677628,
+      0.7627878366485846
+    ],
+    [
+      0.9989157534585047,
+      0.002244341018857038,
+      -0.04650032715819269,
+      -0.17658887274666005
+    ],
+    [
+      -0.019202659588214627,
+      0.9297721814232641,
+      -0.3676342591709366,
+      0.055709703921436114
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "method": "park",
+  "train_reprojection_rms_px": 0.12014698063386198,
+  "training_coverage": {
+    "corner_bounds_px": [
+      [
+        62.943355560302734,
+        46.949581146240234
+      ],
+      [
+        589.28076171875,
+        310.5639953613281
+      ]
+    ],
+    "grid_6x4": [
+      [
+        0,
+        23,
+        114,
+        44,
+        0,
+        0
+      ],
+      [
+        28,
+        321,
+        670,
+        679,
+        160,
+        24
+      ],
+      [
+        3,
+        105,
+        81,
+        79,
+        37,
+        8
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "depth_m": [
+      0.5532468876543367,
+      0.7239181525196052
+    ],
+    "rotation_singular_values_rad": [
+      1.4135284378454565,
+      0.7279993559516438,
+      0.2557173388343575
+    ]
+  },
+  "max_abs_difference_from_frozen_model": {
+    "K": 0.0,
+    "D": 0.0,
+    "T_flange_camera": 0.0,
+    "T_base_board_reference": 0.0
+  },
+  "validation_summaries": {
+    "seven_total": {
+      "pnp_rms_px": {
+        "mean": 0.14300600013562612,
+        "p95": 0.17989212423563003,
+        "p95_neighbor_ids": [
+          "h01",
+          "u06"
+        ],
+        "max": 0.1825159192085266,
+        "max_id": "u06"
+      },
+      "fixed_board_mm": {
+        "mean": 2.338016570783904,
+        "p95": 3.0831555890715787,
+        "p95_neighbor_ids": [
+          "u06",
+          "u08"
+        ],
+        "max": 3.1627337048398227,
+        "max_id": "u08"
+      },
+      "fixed_board_deg": {
+        "mean": 0.36363237826526823,
+        "p95": 0.4970332228646733,
+        "p95_neighbor_ids": [
+          "h05",
+          "h02"
+        ],
+        "max": 0.5181319199627121,
+        "max_id": "h02"
+      },
+      "full_chain_rms_px": {
+        "mean": 2.1109132170677185,
+        "p95": 2.9329616546630857,
+        "p95_neighbor_ids": [
+          "u07",
+          "u08"
+        ],
+        "max": 2.988892078399658,
+        "max_id": "u08"
+      }
+    },
+    "four_original": {
+      "pnp_rms_px": {
+        "mean": 0.1344635710120201,
+        "p95": 0.16870284751057624,
+        "p95_neighbor_ids": [
+          "h02",
+          "h01"
+        ],
+        "max": 0.17376993596553802,
+        "max_id": "h01"
+      },
+      "fixed_board_mm": {
+        "mean": 1.8954450552457114,
+        "p95": 2.495171156206288,
+        "p95_neighbor_ids": [
+          "h01",
+          "h02"
+        ],
+        "max": 2.5368778421340705,
+        "max_id": "h02"
+      },
+      "fixed_board_deg": {
+        "mean": 0.36065548649124146,
+        "p95": 0.5075825714136927,
+        "p95_neighbor_ids": [
+          "h05",
+          "h02"
+        ],
+        "max": 0.5181319199627121,
+        "max_id": "h02"
+      },
+      "full_chain_rms_px": {
+        "mean": 1.6559875160455704,
+        "p95": 2.507131779193878,
+        "p95_neighbor_ids": [
+          "h01",
+          "h02"
+        ],
+        "max": 2.6150739192962646,
+        "max_id": "h02"
+      }
+    },
+    "three_supplemental": {
+      "pnp_rms_px": {
+        "mean": 0.15439590563376746,
+        "p95": 0.18021501302719117,
+        "p95_neighbor_ids": [
+          "u07",
+          "u06"
+        ],
+        "max": 0.1825159192085266,
+        "max_id": "u06"
+      },
+      "fixed_board_mm": {
+        "mean": 2.9281119248348273,
+        "p95": 3.136207666250408,
+        "p95_neighbor_ids": [
+          "u06",
+          "u08"
+        ],
+        "max": 3.1627337048398227,
+        "max_id": "u08"
+      },
+      "fixed_board_deg": {
+        "mean": 0.3676015672973039,
+        "p95": 0.4151303681644141,
+        "p95_neighbor_ids": [
+          "u08",
+          "u07"
+        ],
+        "max": 0.41816095123669517,
+        "max_id": "u07"
+      },
+      "full_chain_rms_px": {
+        "mean": 2.7174808184305825,
+        "p95": 2.9702486038208007,
+        "p95_neighbor_ids": [
+          "u07",
+          "u08"
+        ],
+        "max": 2.988892078399658,
+        "max_id": "u08"
+      }
+    }
+  },
+  "per_validation_pose": [
+    {
+      "id": "h01",
+      "split": "heldout",
+      "source_group": "formal_capture_pose",
+      "pnp_rms_px": 0.17376993596553802,
+      "fixed_board_mm": 2.2588332692821864,
+      "fixed_board_deg": 0.3017136651344156,
+      "full_chain_rms_px": 1.8954596519470215
+    },
+    {
+      "id": "h02",
+      "split": "heldout",
+      "source_group": "formal_capture_pose",
+      "pnp_rms_px": 0.13998934626579285,
+      "fixed_board_mm": 2.5368778421340705,
+      "fixed_board_deg": 0.5181319199627121,
+      "full_chain_rms_px": 2.6150739192962646
+    },
+    {
+      "id": "h03",
+      "split": "heldout",
+      "source_group": "formal_capture_pose",
+      "pnp_rms_px": 0.11129894852638245,
+      "fixed_board_mm": 1.4231829325612744,
+      "fixed_board_deg": 0.17497343123192194,
+      "full_chain_rms_px": 1.303545355796814
+    },
+    {
+      "id": "h05",
+      "split": "heldout",
+      "source_group": "formal_capture_pose",
+      "pnp_rms_px": 0.11279605329036713,
+      "fixed_board_mm": 1.362886177005315,
+      "fixed_board_deg": 0.44780292963591617,
+      "full_chain_rms_px": 0.8098711371421814
+    },
+    {
+      "id": "u06",
+      "split": "heldout",
+      "source_group": "archived_pre_move",
+      "pnp_rms_px": 0.1825159192085266,
+      "fixed_board_mm": 2.8974733189456763,
+      "fixed_board_deg": 0.2967886301413321,
+      "full_chain_rms_px": 2.361093044281006
+    },
+    {
+      "id": "u07",
+      "split": "heldout",
+      "source_group": "archived_pre_move",
+      "pnp_rms_px": 0.15950685739517212,
+      "fixed_board_mm": 2.7241287507189833,
+      "fixed_board_deg": 0.41816095123669517,
+      "full_chain_rms_px": 2.802457332611084
+    },
+    {
+      "id": "u08",
+      "split": "heldout",
+      "source_group": "archived_pre_move",
+      "pnp_rms_px": 0.12116494029760361,
+      "fixed_board_mm": 3.1627337048398227,
+      "fixed_board_deg": 0.38785512051388454,
+      "full_chain_rms_px": 2.988892078399658
+    }
+  ],
+  "local_session": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/approved_seven_01",
+  "source_sha256": {
+    "approved_seven_01/reviewed_seven_manifest.jsonl": "f8c31e3b29055fd8fe1acfdae1bcea3cc64cad1f6090f4d5b7cc37291bb7b029",
+    "fit_clean_v1.jsonl": "b3f02679ae996d61d25f97168fa05eb43d3adade5d4f14b08292fb7bda54fde9",
+    "diagnostic_v1/candidate_result.json": "61ec07a870838d7d57dba5de794a42433f965f692f48a799b8abbd8ffbf1ea6d",
+    "detect_initial/detection.json": "f825addba7a65d2d740fa714079315d203caa1220f71734d533a19dad65aa37d",
+    "approved_seven_01/detect_supplement/detection.json": "97a97560fa5e94e90c3a69e7754192ede590453f9939da4379d110832e5e4376",
+    "approved_seven_01/fit/intrinsics.json": "f6266d1378c5bb5f853510a0c51b8367d01ba115fbbc53cc4b7aebe40e840995",
+    "approved_seven_01/fit/handeye.json": "1d60227ace13f76735a5de7d2932d89ecb51e2f83ddade0c4f0f78de12919eb1",
+    "approved_seven_01/supplemental_sources.json": "22e740bfaddfe1e37a308464a4743c3fa047225f9c5cf5f6d28f1b5e51fc6ada",
+    "approved_seven_01/calibration_spec.json": "c43d91d968ac83a95591a5f2c5d6d90a9f48873d68aed34e88381cf072c4cd7a"
+  },
+  "physical_review": {
+    "status": "OFFLINE_REVIEW_COMPLETE_ABSOLUTE_METRIC_ACCURACY_UNCONFIRMED",
+    "train_triangulated_outer_edges_max_nominal_deviation_mm": 3.8373874393837752,
+    "validation_only_outer_edges_max_nominal_deviation_mm": 13.29984539320435,
+    "outside_corner_prediction_on_seven": {
+      "mean_rms_px": 2.5450236818069705,
+      "p95_rms_px": 3.3258293986387817,
+      "max_rms_px": 3.4653129535927505,
+      "max_pose": "u08",
+      "p95_neighbor_ids": [
+        "h02",
+        "u08"
+      ]
+    },
+    "mount_evidence": "../mount_check.json",
+    "outline_evidence": "board_outline.json"
+  },
+  "selection_file": "selection.json",
+  "opencv_version": "4.5.4"
+}

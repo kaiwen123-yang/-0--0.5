@@ -1,0 +1,349 @@
+{
+  "status": "FIT_REQUIRES_REVIEW",
+  "fit_performed": true,
+  "intrinsics_origin": "real_checkerboard_fit",
+  "opencv_version": "4.5.4",
+  "camera_role": "left_wrist_0_rgb",
+  "camera_frame": "wrist_camera_color_optical_frame",
+  "image_domain": "received",
+  "image_domain_verified": true,
+  "camera_id": "CC16762023M",
+  "image_domain_evidence": "本会话 H0 驱动日志与设备服务确认 CC16762023M、MJPEG 640×480@30。/wrist_camera/color/image_raw 实收 640×480 rgb8，step=1920，wrist_camera_color_optical_frame。运行参数 color_roi 四项均为 -1。astra_camera f7e71d9 的 MJPEG 回调解码为 RGB，软件 uvc_flip_ 初始为 0，无旋转/缩放分支。H0 h0_record_camera.py 对 rgb8 只换 RGB/BGR 通道写样本 PNG。get_uvc_mirror 的实现未把读取值赋给 response.data，其返回 0 不作硬件结论。t01 在 H0 的第45张 RGB PNG 为原尺寸 640×480；对照正读的手机正面图，型号位于同一物理右下白边、同样排列。已核实 received 像素链。证据在 pixel_chain/。",
+  "device_internal_rectification": null,
+  "camera_frame_definition": "Optical frame of this calibrated RGB image model: +x right, +y down, +z forward. Not a camera-housing or unregistered-depth transform. For received pixels, coincidence with unprocessed physical sensor axes is not asserted.",
+  "image_size": [
+    640,
+    480
+  ],
+  "camera_model": "effective_received_rgb_brown_conrady_5",
+  "calibration_flags": [],
+  "distortion_model": "plumb_bob",
+  "distortion_order": [
+    "k1",
+    "k2",
+    "p1",
+    "p2",
+    "k3"
+  ],
+  "K": [
+    [
+      492.37567865957647,
+      0.0,
+      316.97519608183586
+    ],
+    [
+      0.0,
+      492.3071121205301,
+      210.44865824516836
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D": [
+    0.09278091462246699,
+    -0.07288786453967515,
+    -0.0004410515551773507,
+    -0.0016512945614318324,
+    -0.22950146948147707
+  ],
+  "board": {
+    "type": "chessboard",
+    "inner_corners_cols": 11,
+    "inner_corners_rows": 8,
+    "square_size_m": 0.02,
+    "geometry_verified": true,
+    "origin_description": "面对可正读的 DFOPTIX Q12-290-20 型号，最近的右下内角点。首张 t01 ORIGIN 0 位于像素 (457.36, 238.35)。",
+    "x_axis_description": "面对正读型号，由 O 向左沿长边，对应 t01 角点 0→1。",
+    "y_axis_description": "面对正读型号，由 O 向上沿短边，对应 t01 角点 0→11。",
+    "mounted_rigidly_to": "base_world",
+    "rigid_mount_verified": true,
+    "manufacturer": "大凡光学 / DFOPTIX",
+    "model": "Q12-290-20",
+    "material": "aluminum substrate (user-reported received SKU)",
+    "nominal_squares": [
+      12,
+      9
+    ],
+    "nominal_outer_size_m": [
+      0.29,
+      0.23
+    ],
+    "nominal_pattern_size_m": [
+      0.24,
+      0.18
+    ],
+    "manufacturer_geometry_source": "https://www.dfoptic.com/in-stock-standards-product/152.html",
+    "physical_geometry_evidence": "evidence/phone_face_model.jpg：DFOPTIX Q12-290-20，实数 12×9 方格。evidence/phone_ruler_overview.jpg 和 phone_ruler_detail.jpg：长向同排第1至第11内角点，十格距粗读约 9.7 至 29.4 cm，相差约 197 mm，与名义约 200 mm 量级吻合。照片有视差，不能作精密节距测量。按型号名义格长 0.020 m。",
+    "mount_evidence": "现场人员确认板已用胶带固定到与基座相对静止的硬支撑。手机照片可见桌面和木架，胶带固定点由现场人员确认。 evidence/phone_side_mount.jpg 显示板底接触桌面、板面后倾。用户描述基座面与板底桌面基本平齐，未测量确切高差。",
+    "orientation_reference": "使用板面右下角永久印字 DFOPTIX Q12-290-20 与 t01 原始叠加作为物理朝向证据；现场选择免贴临时标签。"
+  },
+  "train_sample_ids": [
+    "t01",
+    "t02",
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t17",
+    "t18",
+    "t20",
+    "t21",
+    "t22",
+    "t23",
+    "t24",
+    "t25",
+    "t26",
+    "t27",
+    "t29",
+    "t30",
+    "t31",
+    "t32",
+    "t33",
+    "t34",
+    "t35",
+    "t36"
+  ],
+  "train_image_paths": [
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t01/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t02/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t03/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t04/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t05/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t06/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t07/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t08/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t09/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t17/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t18/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t20/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t21/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t22/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t23/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t24/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t25/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t26/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t27/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t29/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t30/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t31/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t32/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t33/samples/color_000044.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t34/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t35/samples/color_000045.png",
+    "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/poses/t36/samples/color_000044.png"
+  ],
+  "train_pose_groups": [
+    "t01",
+    "t02",
+    "t03",
+    "t04",
+    "t05",
+    "t06",
+    "t07",
+    "t08",
+    "t09",
+    "t17",
+    "t18",
+    "t20",
+    "t21",
+    "t22",
+    "t23",
+    "t24",
+    "t25",
+    "t26",
+    "t27",
+    "t29",
+    "t30",
+    "t31",
+    "t32",
+    "t33",
+    "t34",
+    "t35",
+    "t36"
+  ],
+  "heldout_sample_ids": [
+    "h01",
+    "h02",
+    "h03",
+    "h05",
+    "u06",
+    "u07",
+    "u08"
+  ],
+  "train_reprojection_rms_px": 0.12014698063386198,
+  "train_per_view_rms_px": [
+    {
+      "sample_id": "t01",
+      "reprojection_rms_px": 0.11563338134823652
+    },
+    {
+      "sample_id": "t02",
+      "reprojection_rms_px": 0.1381966794552447
+    },
+    {
+      "sample_id": "t03",
+      "reprojection_rms_px": 0.13873628306971064
+    },
+    {
+      "sample_id": "t04",
+      "reprojection_rms_px": 0.12759764250227082
+    },
+    {
+      "sample_id": "t05",
+      "reprojection_rms_px": 0.11275491394827246
+    },
+    {
+      "sample_id": "t06",
+      "reprojection_rms_px": 0.10837890017854805
+    },
+    {
+      "sample_id": "t07",
+      "reprojection_rms_px": 0.10133233165757576
+    },
+    {
+      "sample_id": "t08",
+      "reprojection_rms_px": 0.11089588870636635
+    },
+    {
+      "sample_id": "t09",
+      "reprojection_rms_px": 0.09467903097852676
+    },
+    {
+      "sample_id": "t17",
+      "reprojection_rms_px": 0.07246170404937807
+    },
+    {
+      "sample_id": "t18",
+      "reprojection_rms_px": 0.08985596801646782
+    },
+    {
+      "sample_id": "t20",
+      "reprojection_rms_px": 0.10887419199533382
+    },
+    {
+      "sample_id": "t21",
+      "reprojection_rms_px": 0.09719416577090682
+    },
+    {
+      "sample_id": "t22",
+      "reprojection_rms_px": 0.10676311418897545
+    },
+    {
+      "sample_id": "t23",
+      "reprojection_rms_px": 0.1101195661963398
+    },
+    {
+      "sample_id": "t24",
+      "reprojection_rms_px": 0.11340404293174315
+    },
+    {
+      "sample_id": "t25",
+      "reprojection_rms_px": 0.10833140282199508
+    },
+    {
+      "sample_id": "t26",
+      "reprojection_rms_px": 0.11462331084561292
+    },
+    {
+      "sample_id": "t27",
+      "reprojection_rms_px": 0.11155868758662797
+    },
+    {
+      "sample_id": "t29",
+      "reprojection_rms_px": 0.1096386245200846
+    },
+    {
+      "sample_id": "t30",
+      "reprojection_rms_px": 0.1260557423436666
+    },
+    {
+      "sample_id": "t31",
+      "reprojection_rms_px": 0.12669799257821385
+    },
+    {
+      "sample_id": "t32",
+      "reprojection_rms_px": 0.13322933869851242
+    },
+    {
+      "sample_id": "t33",
+      "reprojection_rms_px": 0.1325781189094784
+    },
+    {
+      "sample_id": "t34",
+      "reprojection_rms_px": 0.13761036495927517
+    },
+    {
+      "sample_id": "t35",
+      "reprojection_rms_px": 0.1812351645388477
+    },
+    {
+      "sample_id": "t36",
+      "reprojection_rms_px": 0.16236419351716902
+    }
+  ],
+  "intrinsic_parameter_standard_deviations": [
+    3.978269728874671,
+    4.001289767209386,
+    0.9578089741781105,
+    0.9310301132117218,
+    0.0068241144502430495,
+    0.03328144813258383,
+    0.0005752217388626856,
+    0.0006053412347186539,
+    0.07028412077640762,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "heldout_reprojection_rms_px": {
+    "count": 7,
+    "mean": 0.14300600013562612,
+    "median": 0.13998934626579285,
+    "p95": 0.17989212423563003,
+    "max": 0.1825159192085266
+  },
+  "heldout_per_view": [
+    {
+      "sample_id": "h01",
+      "reprojection_rms_px": 0.17376993596553802
+    },
+    {
+      "sample_id": "h02",
+      "reprojection_rms_px": 0.13998934626579285
+    },
+    {
+      "sample_id": "h03",
+      "reprojection_rms_px": 0.11129894852638245
+    },
+    {
+      "sample_id": "h05",
+      "reprojection_rms_px": 0.11279605329036713
+    },
+    {
+      "sample_id": "u06",
+      "reprojection_rms_px": 0.1825159192085266
+    },
+    {
+      "sample_id": "u07",
+      "reprojection_rms_px": 0.15950685739517212
+    },
+    {
+      "sample_id": "u08",
+      "reprojection_rms_px": 0.12116494029760361
+    }
+  ],
+  "detection_report": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/approved_seven_01/fit/detection.json",
+  "validation_note": "K,D fitted only on training views. Held-out PnP fits each target pose only. These are pixel residuals, not independently measured metric accuracy. Received-stream K,D describe the observed pixels; they do not establish ISP internals. No driver CameraInfo was overwritten and no physical acceptance was inferred."
+}

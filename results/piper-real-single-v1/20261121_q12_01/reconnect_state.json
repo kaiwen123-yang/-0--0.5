@@ -1,0 +1,235 @@
+{
+  "local_time": "2026-11-21T23:07:38.369332+08:00",
+  "sdk": "1.0.0",
+  "profile": "V189",
+  "usb_serial": "004F00374548570120353731",
+  "can_channel": "can0",
+  "bitrate": 1000000,
+  "camera_id": "CC16762023M",
+  "operator_confirmed_mount_board_base_unchanged": true,
+  "host_boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+  "elapsed_s": 2.0043929840000003,
+  "actual_joint_groups": 400,
+  "status": {
+    "ctrl_mode": 0,
+    "arm_status": 0,
+    "mode_feedback": 0,
+    "teach_status": 0,
+    "motion_status": 0,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "joint_deg": [
+    0.48499999999999993,
+    -3.221,
+    1.53,
+    -0.396,
+    24.453000000000003,
+    -24.437
+  ],
+  "enabled": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "interface_delta": {
+    "rx_packets": 4648,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 0,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "can_error_frames": 0,
+  "robot_instruction_frames_sent": 0,
+  "formal_new_heldout_at_this_snapshot": 0,
+  "session": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/usb_reconnect_01",
+  "second_independent_check": {
+    "source": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01/post_reconnect_validation_01/field_ready_01",
+    "local_time": "2026-11-21T23:09:54.757406+08:00",
+    "six_axis_groups": 220,
+    "drive_status_byte_counts": {
+      "0x265": {
+        "00": 22
+      },
+      "0x264": {
+        "00": 22
+      },
+      "0x263": {
+        "00": 22
+      },
+      "0x262": {
+        "00": 22
+      },
+      "0x261": {
+        "00": 22
+      },
+      "0x266": {
+        "00": 22
+      }
+    },
+    "status_bit": "Byte index 5, bit 6 is the driver-enable bit; all six status bytes observed as 0x00.",
+    "interface_tx": 0,
+    "arm": {
+      "ctrl_mode": 0,
+      "arm_status": 0,
+      "mode_feedback": 0,
+      "teach_status": 0,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    }
+  },
+  "latest_control_mode": "CAN MOVE_J, drives off",
+  "mode_selection": {
+    "operation": "select_can_while_disabled",
+    "execute": true,
+    "request_count": 1,
+    "confirmed": true,
+    "before": {
+      "ctrl_mode": 0,
+      "mode_feedback": 0,
+      "q_deg": [
+        0.48499999999999993,
+        -3.221,
+        1.53,
+        -0.396,
+        24.453000000000003,
+        -24.437
+      ],
+      "enabled": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "after": {
+      "ctrl_mode": 1,
+      "mode_feedback": 1,
+      "q_deg": [
+        0.48499999999999993,
+        -3.221,
+        1.53,
+        -0.396,
+        24.453000000000003,
+        -24.437
+      ],
+      "enabled": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "mode_interface_delta": {
+    "rx_packets": 14448,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 1,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "mode_joint_groups": 1200,
+  "current_controller_limits": {
+    "purpose": "Query only J2/J3 angle limits after reconnect; no configuration writes.",
+    "2": {
+      "confirmed": true,
+      "controller_deg": [
+        0.0,
+        180.0
+      ],
+      "sdk_config_deg": [
+        0.0,
+        180.00001984784282
+      ],
+      "measured_deg": -3.221,
+      "reply_timestamp_s": 1795274175.238871
+    },
+    "3": {
+      "confirmed": true,
+      "controller_deg": [
+        -170.0,
+        0.0
+      ],
+      "sdk_config_deg": [
+        -170.00001556208605,
+        0.0
+      ],
+      "measured_deg": 1.53,
+      "reply_timestamp_s": 1795274175.2394588
+    }
+  },
+  "limit_query_delta": {
+    "rx_packets": 12118,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 2,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "offline_hold_encoding": {
+    "transport": "offline, no CAN socket",
+    "measured_deg": [
+      0.48499999999999993,
+      -3.221,
+      1.53,
+      -0.396,
+      24.453000000000003,
+      -24.437
+    ],
+    "encoded_hold_target_deg": [
+      0.485,
+      -3.221,
+      1.53,
+      -0.396,
+      24.453,
+      -24.437
+    ],
+    "flange_fk_delta_xyz_mm": [
+      0.0,
+      1.0842021724855044e-16,
+      0.0
+    ],
+    "flange_fk_distance_mm": 1.0842021724855044e-16,
+    "flange_fk_delta_deg": 0.0
+  },
+  "position_targets_sent_since_reconnect": 0,
+  "enable_requests_since_reconnect": 0,
+  "home_after_reconnect": false,
+  "speed50_home_executed": false
+}

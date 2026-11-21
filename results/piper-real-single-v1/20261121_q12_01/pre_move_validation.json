@@ -1,0 +1,177 @@
+{
+  "qualification": "Supplemental checks on archived stationary images before the next move. No rows count toward formal heldout minimum. Reviewed per-pose, fixed 27-view training fit; no parameters changed.",
+  "model_sha256": "61ec07a870838d7d57dba5de794a42433f965f692f48a799b8abbd8ffbf1ea6d",
+  "rows": [
+    {
+      "pose": "u06",
+      "move": "h01",
+      "before_new_command_s": 2.876586075,
+      "previous_move_completed": true,
+      "prev_final_difference_deg": 0.0,
+      "window_rows": 100,
+      "window_spread_deg": 0.0,
+      "rgb_joint_age_ms": 0.812011,
+      "rgb_flange_age_ms": 0.941854,
+      "fk_diff": {
+        "translation_mm": 0.0042357713371368845,
+        "rotation_deg": 0.0018690912814616613
+      },
+      "q_deg": [
+        7.678,
+        59.016000000000005,
+        -36.687,
+        13.666000000000002,
+        -9.69,
+        -12.816
+      ],
+      "count": 88,
+      "formal_heldout": false,
+      "image_review": "four white edges visible",
+      "orientation_verified": true,
+      "full_rim": true,
+      "reprojection_rms_px": 0.18251809959584447,
+      "translation_mm": 2.897489264484191,
+      "rotation_deg": 0.2967879118047838,
+      "fixed_board_prediction_rms_px": 2.3610949107964574,
+      "nearest_original_group": "t36",
+      "max_joint_difference_to_nearest_deg": 1.5379999999999967
+    },
+    {
+      "pose": "u07",
+      "move": "h02",
+      "before_new_command_s": 2.955315858,
+      "previous_move_completed": true,
+      "prev_final_difference_deg": 0.0,
+      "window_rows": 100,
+      "window_spread_deg": 0.0,
+      "rgb_joint_age_ms": 0.199462,
+      "rgb_flange_age_ms": 0.69435,
+      "fk_diff": {
+        "translation_mm": 0.003183216527178453,
+        "rotation_deg": 0.0007111129851199786
+      },
+      "q_deg": [
+        4.394,
+        55.855000000000004,
+        -33.829,
+        10.635,
+        -7.495,
+        -15.637000000000002
+      ],
+      "count": 88,
+      "formal_heldout": false,
+      "image_review": "four white edges visible",
+      "orientation_verified": true,
+      "full_rim": true,
+      "reprojection_rms_px": 0.15950628566544914,
+      "translation_mm": 2.724136694500881,
+      "rotation_deg": 0.4181626898186697,
+      "fixed_board_prediction_rms_px": 2.8024584504470265,
+      "nearest_original_group": "h02",
+      "max_joint_difference_to_nearest_deg": 1.5830000000000055
+    },
+    {
+      "pose": "u08",
+      "move": "h03",
+      "before_new_command_s": 3.02514226,
+      "previous_move_completed": true,
+      "prev_final_difference_deg": 0.0,
+      "window_rows": 100,
+      "window_spread_deg": 0.0,
+      "rgb_joint_age_ms": 3.044183,
+      "rgb_flange_age_ms": 3.43165,
+      "fk_diff": {
+        "translation_mm": 0.0016960229969271996,
+        "rotation_deg": 0.001092060265646405
+      },
+      "q_deg": [
+        1.614,
+        52.685,
+        -32.190000000000005,
+        7.95,
+        -6.868,
+        -18.26
+      ],
+      "count": 88,
+      "formal_heldout": false,
+      "image_review": "four white edges visible",
+      "orientation_verified": true,
+      "full_rim": true,
+      "reprojection_rms_px": 0.12116446670114686,
+      "translation_mm": 3.1627334025921563,
+      "rotation_deg": 0.38785295264972103,
+      "fixed_board_prediction_rms_px": 2.988890351677723,
+      "nearest_original_group": "h03",
+      "max_joint_difference_to_nearest_deg": 1.5720000000000027
+    },
+    {
+      "pose": "u09",
+      "move": "h04",
+      "before_new_command_s": 2.9990952020000003,
+      "previous_move_completed": true,
+      "prev_final_difference_deg": 0.0,
+      "window_rows": 100,
+      "window_spread_deg": 0.0,
+      "rgb_joint_age_ms": 1.563507,
+      "rgb_flange_age_ms": 1.908473,
+      "fk_diff": {
+        "translation_mm": 0.0026960550474458707,
+        "rotation_deg": 0.0011544093179552421
+      },
+      "q_deg": [
+        -0.8740000000000001,
+        49.629,
+        -31.585,
+        5.466,
+        -7.85,
+        -20.902
+      ],
+      "count": 88,
+      "formal_heldout": false,
+      "image_review": "gripper reaches the lower white edge; keep separate",
+      "orientation_verified": true,
+      "full_rim": false,
+      "reprojection_rms_px": 0.1314695151210536,
+      "translation_mm": 1.6544440811542955,
+      "rotation_deg": 0.1607727926508489,
+      "fixed_board_prediction_rms_px": 1.2833835012252464,
+      "nearest_original_group": "h03",
+      "max_joint_difference_to_nearest_deg": 1.4840000000000018
+    },
+    {
+      "pose": "u10",
+      "move": "h05",
+      "before_new_command_s": 3.0094401950000003,
+      "previous_move_completed": true,
+      "prev_final_difference_deg": 0.0,
+      "window_rows": 100,
+      "window_spread_deg": 0.0,
+      "rgb_joint_age_ms": 2.963566,
+      "rgb_flange_age_ms": 3.67341,
+      "fk_diff": {
+        "translation_mm": 0.0019443441543641506,
+        "rotation_deg": 0.0009493225847038833
+      },
+      "q_deg": [
+        -2.681,
+        46.542,
+        -29.825000000000003,
+        2.818,
+        -7.163,
+        -22.583000000000002
+      ],
+      "count": 88,
+      "formal_heldout": false,
+      "image_review": "gripper reaches the lower white edge under print; keep separate",
+      "orientation_verified": true,
+      "full_rim": false,
+      "reprojection_rms_px": 0.11561572330171026,
+      "translation_mm": 1.0835623193679214,
+      "rotation_deg": 0.17040591724170295,
+      "fixed_board_prediction_rms_px": 0.7754019977237234,
+      "nearest_original_group": "h05",
+      "max_joint_difference_to_nearest_deg": 1.527000000000001
+    }
+  ],
+  "original_protocol_eligible_heldout_count": 4
+}

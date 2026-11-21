@@ -1,0 +1,48 @@
+%YAML:1.0
+---
+camera_id: CC16762023M
+camera_role: left_wrist_0_rgb
+camera_frame: wrist_camera_color_optical_frame
+image_width: 640
+image_height: 480
+image_domain: received
+device_internal_rectification: unknown
+distortion_model: plumb_bob
+distortion_order: k1 k2 p1 p2 k3
+camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 4.9237567865957647e+02, 0., 3.1697519608183586e+02, 0.,
+       4.9230711212053012e+02, 2.1044865824516836e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data: [ 9.2780914622466987e-02, -7.2887864539675148e-02,
+       -4.4105155517735068e-04, -1.6512945614318324e-03,
+       -2.2950146948147707e-01 ]
+handeye_method: Park
+parent_frame: flange_link
+child_frame: wrist_camera_color_optical_frame
+translation_unit: m
+transform_convention: "p_flange = T_flange_camera * p_camera"
+T_flange_camera: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [ 5.9469577728818737e-02, 9.3380037426225360e-01,
+       3.5281755958630001e-01, -8.2419231071104743e-02,
+       -9.9810059560428332e-01, 4.9930470481119801e-02,
+       3.6085304098910434e-02, -2.5243496574550656e-03,
+       1.6080123728781672e-02, -3.5429339415971767e-01,
+       9.3499605372197137e-01, 2.7074977885144302e-02, 0., 0., 0., 1. ]
+board_model: Q12-290-20
+inner_corners_cols: 11
+inner_corners_rows: 8
+square_size_m: 2.0000000000000000e-02
+train_poses: 27
+formal_validation_poses: 4
+supplemental_validation_poses: 3
+metric_accuracy_status: unconfirmed_absolute
+calibration_date: "2026-11-21"

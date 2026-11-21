@@ -1,6 +1,6 @@
 # 11 月 22 日到板后接续 · DC1 腕部单相机
 
-**11 月 21 日现场进展**　已经采到 t01–t36 和 h01–h05。u11 后处于阻尼急停，候选手眼尚待验收。续作请从[现场结果](../results/piper-real-single-v1/20261121_q12_01/report_zh.md)和[本次接续提示词](../results/piper-real-single-v1/20261121_q12_01/next_prompt.md)开始。下文为准备阶段记录。
+**11 月 21 日现场结果**　已完成 27 个训练姿态和七姿态离线验证（4 个正式预留、3 个 H0 静止补充）。[最终报告](../results/piper-real-single-v1/20261121_q12_01/final_seven/Q12_DC1_calibration.md) · [接续提示词](../results/piper-real-single-v1/20261121_q12_01/next_prompt.md)。下文保留准备阶段记录。
 
 **11 月 21 日更新：用户已提前收到大凡光学 Q12-290-20【铝基板】。当前使用[本板型的现场流程与提示词](PI_Q12_BOARD_CALIBRATION_20261121.md)，无需等待 11 月 22 日。本文保留原始准备过程、命令背景与连续记录器分支；板几何改按新模板现场核实。**
 

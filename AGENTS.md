@@ -19,7 +19,7 @@
 - 当前代码不发送 CAN 运动、不自动使能/回零。真实运动仍复用 H0 成功的唯一发送端，由现场明确操作启动；不创建竞争控制器。
 - 只读复用 dog-and-arm H0@284c1f3 和既有 pyAgxArm/ROS/DDS 环境。不修改该仓库，不执行 P0–P3、M1、门场景或底盘任务。
 
-用户授权的 H0 单次定位已用于实采。36 个 train 和 5 个 heldout 全部检出 88 点，筛选后为 27 和 4。K/D 与 Park 手眼已求候选，尚未验收。h05 后 u11 到位超时触发阻尼急停，现场报告可能触桌。先保留 STOP 并核实现场恢复和固定关系，详见[现场记录](results/piper-real-single-v1/20261121_q12_01/report_zh.md)与[接续提示词](results/piper-real-single-v1/20261121_q12_01/next_prompt.md)。
+2026-11-21 已完成 Q12 离线标定结算。27 个训练姿态单独求 K/D 和 Park；验证为 4 个正式预留加 3 个经现场同意的 H0 静止观测。7 姿态平均 0.143 px、2.338 mm、0.364°。见[最终标定文件](results/piper-real-single-v1/20261121_q12_01/final_seven/Q12_DC1_calibration.yml)与[最终报告](results/piper-real-single-v1/20261121_q12_01/final_seven/Q12_DC1_calibration.md)。u11 后曾触发阻尼急停；重插后已进入 CAN 位置指令模式、六轴失能，J2/J3 超出控制器回读的限位。
 
 ## 历史与工作区
 
