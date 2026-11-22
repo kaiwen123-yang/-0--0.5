@@ -1,0 +1,186 @@
+{
+  "session": "20261122_q12_recollect_01",
+  "base_pi_commit": "b9fce95c4fa588c83fef4aa62d7db54229767fc0",
+  "original_field_commit": "b3bb539109af287f7963fc750dc2dcb0b0549baa",
+  "local_session": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01",
+  "arm": "Piper H, pyAgxArm 1.0.0, V189 profile",
+  "can_adapter_serial": "004F00374548570120353731",
+  "channel": "can0, 1000000 bit/s",
+  "sources": {
+    "h0_receive_and_camera": "dog-and-arm working copy: h0_record_arm.py / h0_camera.sh and operator file contents checked against e727cdf; working tree has unrelated pre-existing changes",
+    "manual_url": "https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/ay1awrn2hrhn1krg",
+    "manual_title": "PIPER H 用户手册",
+    "manual_version_table": "V.1.1.0, 2026-01-25",
+    "manual_page_updated_at": "2026-10-22T06:59:44.000Z",
+    "manual_sections": [
+      "安全信息",
+      "1.2",
+      "2.2.4",
+      "3.1.3",
+      "4.6",
+      "4.8",
+      "4.9",
+      "7.3"
+    ],
+    "product_spec_deg": {
+      "J2": [
+        0,
+        195
+      ],
+      "J3": [
+        -175,
+        0
+      ]
+    }
+  },
+  "receive_only_windows": [
+    {
+      "purpose": "status",
+      "started_bjt": "2026-11-22T13:37:40.231+08:00",
+      "complete_joint_groups": 400,
+      "raw_frames": 4662,
+      "can_error_frames": 0,
+      "record_error": null,
+      "interface_delta": {
+        "rx_packets": 4687,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_packets": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0
+      }
+    },
+    {
+      "purpose": "visibility_feedback",
+      "started_bjt": "2026-11-22T13:38:45.347+08:00",
+      "complete_joint_groups": 2000,
+      "raw_frames": 23222,
+      "can_error_frames": 0,
+      "record_error": null,
+      "interface_delta": {
+        "rx_packets": 23270,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_packets": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0
+      }
+    }
+  ],
+  "wrist_frame": {
+    "host_monotonic_ns": 7318304588116,
+    "host_unix_ns": 1795325926135149725,
+    "header_ns": 1795325926129759546,
+    "frame_id": "wrist_camera_color_optical_frame",
+    "encoding": "rgb8",
+    "width": 640,
+    "height": 480,
+    "stride": 1920,
+    "subscription_index_one_based": 16,
+    "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "bjt": "2026-11-22T13:38:46.135+08:00",
+    "topic": "/wrist_camera/color/image_raw",
+    "camera_id": "CC16762023M",
+    "driver": "H0 Astra RGB 640x480@30 MJPEG, depth disabled for visibility",
+    "raw_local_file": "received.png",
+    "detector": "OpenCV 4.5.4 findChessboardCornersSB, 11x8, NORMALIZE_IMAGE | EXHAUSTIVE | ACCURACY",
+    "complete_board_detected": false,
+    "manual_image_review": "Desk, laptop, cables and gripper in view. Q12 not visible in this frame. Board location elsewhere and contact unknown.",
+    "past_joint_row_age_ms": 4.568352,
+    "past_joint_deg": [
+      0.375,
+      -3.172,
+      0.207,
+      -1.051,
+      30.574,
+      0.0
+    ],
+    "joint_rows_in_250ms_each_side": 100,
+    "joint_range_deg_over_window": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "last_hardware_read": {
+    "time": "2026-11-22T13:41:17.848679+08:00",
+    "method": "get_joint_angle_vel_limits only; no parameter writes, enable, mode, target, or home",
+    "controller_limits": {
+      "2": {
+        "min_deg": 0.0,
+        "max_deg": 180.0,
+        "request_unix_s": 1795326077.8650634,
+        "reply_unix_s": 1795326077.8656425
+      },
+      "3": {
+        "min_deg": -170.0,
+        "max_deg": 0.0,
+        "request_unix_s": 1795326077.8658798,
+        "reply_unix_s": 1795326077.8673193
+      }
+    },
+    "q_deg": [
+      0.375,
+      -3.172,
+      0.207,
+      -1.051,
+      30.574,
+      0.0
+    ],
+    "arm_status": {
+      "ctrl_mode": 0,
+      "arm_status": 0,
+      "mode_feedback": 0,
+      "teach_status": 0,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "joint_enabled": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "joint_reply_unix_s": 1795326078.017016,
+    "arm_reply_unix_s": 1795326078.0163162,
+    "interface_delta": {
+      "rx_packets": 505,
+      "tx_packets": 2,
+      "rx_errors": 0,
+      "tx_errors": 0,
+      "rx_dropped": 0
+    }
+  },
+  "operator_statement": "User reports conditions met. No independent evidence of restoration or board placement. Current angle readback outside queried zero ends.",
+  "new_train_views": 0,
+  "new_heldout_views": 0,
+  "mode_selections": 0,
+  "enable_requests": 0,
+  "motion_targets": 0,
+  "zero_or_limit_writes": 0,
+  "new_K_D_X": null,
+  "device_internal_rectification": null,
+  "contact_confirmed": null,
+  "motion_acceptance": false,
+  "pi_training": "NOT_RUN",
+  "ended": "Both receive loggers and our camera driver exited; no robot controller started."
+}

@@ -2,7 +2,13 @@
 
 更新于北京时间 2026-11-22。先读 AGENTS.md、PI_REAL_TEST_STATE.md、PI_DAILY_WORK_LOG.md 当日记录、[本轮复算](../results/calibration-audit/20261122/README.md)、[已冻结准则](../results/calibration-audit/20261122/comparison_rules.md)和[尺度表](../results/calibration-audit/20261122/board_measurement.md)。[11/21 原始提示词](https://github.com/kaiwen123-yang/-0--0.5/blob/5ce7e162bebeab4248aab675f4facfa2cd8c3c72/docs/PI_Q12_CALIBRATION_REVIEW_NEXT_PROMPT_20261121.md)保留历史。
 
-## 可直接交给下一轮
+## 优先接续 11/22 现场新批次
+
+用户已改为重新采集。先看[现场读取证据](../results/calibration-audit/20261122/recollection_status_01.json)和当日日志会话 2。13:41 最后读数为待机、六驱动失能，J2 −3.172° / J3 +0.207°，超出同窗从这台控制器读取的零端；13:38 腕图未见 Q12。厂家手册 §1.2、§2.2.4、§4.8/4.9、§7.3 已核，见日志。新会话在 /home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01，已有状态和可见性检查，合格姿态为 0。不要以重复读取同一静止姿态代替采集。
+
+现场操作者完成针对当前读数的恢复后，重新核对实测关节和本机限位、状态、工作区及安装；通过静止腕图确认整板 88 点和固定的物理原点，再进行多姿态。给新批次单独编号，预设训练/开发/最终独立姿态与用途，最低 15/5，完整保留逐帧 received RGB、角点表、G/q/时间和来源，冻结后再评估最终独立组。若机械臂维持可靠固定，只移动棋盘的内参采集必须独立。保留旧结果，不把新批称为重新得到旧 27 训练视角，不为采集自动改限位、零点或到位/停止逻辑。
+
+## 如找回旧输入，离线复现可沿用以下路径
 
 继续 π0/π0.5 的 Piper H 单腕 DC1 离线标定。只动 π 项目，先查本项目工作树、修改、新提交差异与活动进程。现场数据固定为 field/pi-single-20261120@b3bb539109af287f7963fc750dc2dcb0b0549baa。沿用现场既有工作树，仅接入明确小模块与文档。不要合并整分支、覆盖 final_seven、上传录像、扫描全库或操作硬件。
 
