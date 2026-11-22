@@ -182,5 +182,86 @@
   "contact_confirmed": null,
   "motion_acceptance": false,
   "pi_training": "NOT_RUN",
-  "ended": "Both receive loggers and our camera driver exited; no robot controller started."
+  "ended": "Both receive loggers and our camera driver exited; no robot controller started.",
+  "subsequent_readbacks": [
+    {
+      "image_time_bjt": "2026-11-22T13:46:05.136+08:00",
+      "source_local_dir": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_02",
+      "q_deg_last": [
+        0.375,
+        -3.172,
+        0.207,
+        -1.051,
+        30.574,
+        0.0
+      ],
+      "joint_enabled": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "arm_status": {
+        "ctrl_mode": 0,
+        "arm_status": 0,
+        "mode_feedback": 0,
+        "teach_status": 0,
+        "motion_status": 0,
+        "trajectory_num": 0,
+        "err_status": {
+          "joint_1_angle_limit": false,
+          "joint_2_angle_limit": false,
+          "joint_3_angle_limit": false,
+          "joint_4_angle_limit": false,
+          "joint_5_angle_limit": false,
+          "joint_6_angle_limit": false,
+          "communication_status_joint_1": false,
+          "communication_status_joint_2": false,
+          "communication_status_joint_3": false,
+          "communication_status_joint_4": false,
+          "communication_status_joint_5": false,
+          "communication_status_joint_6": false
+        }
+      },
+      "complete_joint_groups": 1000,
+      "interface_delta": {
+        "rx_packets": 11666,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_packets": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0
+      },
+      "can_error_frames": 0,
+      "image": {
+        "host_monotonic_ns": 7757305686759,
+        "host_unix_ns": 1795326365136238837,
+        "header_ns": 1795326365132100070,
+        "frame_id": "wrist_camera_color_optical_frame",
+        "encoding": "rgb8",
+        "width": 640,
+        "height": 480,
+        "stride": 1920,
+        "subscription_index_one_based": 16,
+        "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a"
+      },
+      "joint_rows_within_250ms_each_side": 100,
+      "window_joint_range_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "full_Q12_detected": false,
+      "manual_observation": "Desk, laptop, cables and gripper. Board not visible.",
+      "hardware_limits_source": "13:41 query recorded above",
+      "new_train": 0,
+      "new_heldout": 0,
+      "new_fit": null
+    }
+  ]
 }

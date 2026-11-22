@@ -4,7 +4,7 @@
 
 [11/22 数值、来源及缺件清单](../results/calibration-audit/20261122/README.md) · [实物尺度复核表](../results/calibration-audit/20261122/board_measurement.md) · [下一轮精确提示词](PI_Q12_CALIBRATION_REVIEW_NEXT_PROMPT_20261121.md) · [每日工作日志](PI_DAILY_WORK_LOG.md) · [11/21 原审计](PI_Q12_CALIBRATION_AUDIT_20261121.md)。
 
-**11/22 新现场读数。** 用户改为重采。13:41 本机限位查询返回 J2 [0°,180°]、J3 [−170°,0°]，实测 −3.172° / +0.207°。六轴失能、待机；13:38 腕部 received RGB 未见 Q12。新会话训练/留出均为 0，等待新的可用起点和可见棋盘。已作两条参数查询，未发运动指令。[本次现场证据](../results/calibration-audit/20261122/recollection_status_01.json)。
+**11/22 新现场读数。** 用户改为重采。13:41 本机限位查询返回 J2 [0°,180°]、J3 [−170°,0°]，实测 −3.172° / +0.207°。六轴失能、待机；13:38 和 13:46 两次腕图均未见 Q12。13:46 再读 1,000 组六轴反馈，末次 J2/J3 与 13:41 一致，仍为待机失能。新会话训练/留出均为 0，等待新的可用起点和可见棋盘。已作两条参数查询，未发运动指令。[本次现场证据](../results/calibration-audit/20261122/recollection_status_01.json)。
 
 ## 版本与工作树
 
