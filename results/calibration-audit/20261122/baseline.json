@@ -1,0 +1,447 @@
+{
+  "source_commit": "b3bb539109af287f7963fc750dc2dcb0b0549baa",
+  "opencv": "4.5.4",
+  "numpy": "1.26.4",
+  "mdh_piper_h_d_a_alpha_offset": [
+    [
+      0.123,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.5707963267948966,
+      -3.0058060377846343
+    ],
+    [
+      0.0,
+      0.28502999999999995,
+      0.0,
+      -1.793849405199772
+    ],
+    [
+      0.25575,
+      -0.02198,
+      1.5707963267948966,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.5707963267948966,
+      0.0
+    ],
+    [
+      0.0963,
+      0.0,
+      1.5707963267948966,
+      0.0
+    ]
+  ],
+  "minimum_views": {
+    "train": 15,
+    "heldout": 5
+  },
+  "park_from_published_C_max_abs_X_delta": 1.734723475976807e-15,
+  "max_abs_train_reference_delta": 1.1379786002407855e-15,
+  "published_pixel_scalars_and_recomputed_fixed_metrics": {
+    "train": {
+      "pnp_rms_px": {
+        "count": 27,
+        "mean": 0.11817789326111476,
+        "median": 0.1127551943063736,
+        "p95": 0.15527656078338622,
+        "max": 0.18123532831668854
+      },
+      "full_chain_rms_px": {
+        "count": 27,
+        "mean": 2.0216177481741027,
+        "median": 2.1841344920833845,
+        "p95": 3.1588495196162913,
+        "max": 3.7573936364010225
+      },
+      "fixed_board_mm": {
+        "count": 27,
+        "mean": 2.7309291863064753,
+        "median": 2.6713817938505366,
+        "p95": 4.17057681252569,
+        "max": 4.2680709560140055
+      },
+      "fixed_board_deg": {
+        "count": 27,
+        "mean": 0.33544197328829767,
+        "median": 0.31518447659575605,
+        "p95": 0.5955481767188879,
+        "max": 0.6081272653840012
+      }
+    },
+    "formal": {
+      "pnp_rms_px": {
+        "count": 4,
+        "mean": 0.1344635710120201,
+        "median": 0.12639269977808,
+        "p95": 0.16870284751057624,
+        "max": 0.17376993596553802
+      },
+      "full_chain_rms_px": {
+        "count": 4,
+        "mean": 1.6559875160455704,
+        "median": 1.5995025038719177,
+        "p95": 2.507131779193878,
+        "max": 2.6150739192962646
+      },
+      "fixed_board_mm": {
+        "count": 4,
+        "mean": 1.8954450552456215,
+        "median": 1.8410081009215917,
+        "p95": 2.495171156206256,
+        "max": 2.536877842134064
+      },
+      "fixed_board_deg": {
+        "count": 4,
+        "mean": 0.3606554864914937,
+        "median": 0.3747582973863739,
+        "p95": 0.5075825714124967,
+        "max": 0.5181319199613051
+      }
+    },
+    "retrospective": {
+      "pnp_rms_px": {
+        "count": 3,
+        "mean": 0.15439590563376746,
+        "median": 0.15950685739517212,
+        "p95": 0.18021501302719117,
+        "max": 0.1825159192085266
+      },
+      "full_chain_rms_px": {
+        "count": 3,
+        "mean": 2.7174808184305825,
+        "median": 2.802457332611084,
+        "p95": 2.9702486038208007,
+        "max": 2.988892078399658
+      },
+      "fixed_board_mm": {
+        "count": 3,
+        "mean": 2.9281119248346195,
+        "median": 2.8974733189451394,
+        "p95": 3.1362076662504044,
+        "max": 3.1627337048398783
+      },
+      "fixed_board_deg": {
+        "count": 3,
+        "mean": 0.36760156729532306,
+        "median": 0.38785512051388454,
+        "p95": 0.41513036816127635,
+        "max": 0.4181609512332088
+      }
+    },
+    "combined_seven": {
+      "pnp_rms_px": {
+        "count": 7,
+        "mean": 0.14300600013562612,
+        "median": 0.13998934626579285,
+        "p95": 0.17989212423563003,
+        "max": 0.1825159192085266
+      },
+      "full_chain_rms_px": {
+        "count": 7,
+        "mean": 2.1109132170677185,
+        "median": 2.361093044281006,
+        "p95": 2.9329616546630857,
+        "max": 2.988892078399658
+      },
+      "fixed_board_mm": {
+        "count": 7,
+        "mean": 2.338016570783764,
+        "median": 2.536877842134064,
+        "p95": 3.0831555890714566,
+        "max": 3.1627337048398783
+      },
+      "fixed_board_deg": {
+        "count": 7,
+        "mean": 0.3636323782645635,
+        "median": 0.38785512051388454,
+        "p95": 0.4970332228636884,
+        "max": 0.5181319199613051
+      }
+    }
+  },
+  "redetected_five_actual_images": {
+    "t01": {
+      "pnp_rms_px": 0.11606480926275253,
+      "full_chain_rms_px": 1.0471057891845703,
+      "fixed_board_mm": 2.0316333985842223,
+      "fixed_board_deg": 0.2517735433411423
+    },
+    "h01": {
+      "pnp_rms_px": 0.17329831421375275,
+      "full_chain_rms_px": 1.8948795795440674,
+      "fixed_board_mm": 2.254286433571274,
+      "fixed_board_deg": 0.30074664008460683
+    },
+    "h02": {
+      "pnp_rms_px": 0.13998934626579285,
+      "full_chain_rms_px": 2.6150739192962646,
+      "fixed_board_mm": 2.536877842134064,
+      "fixed_board_deg": 0.5181319199613051
+    },
+    "u06": {
+      "pnp_rms_px": 0.18330435454845428,
+      "full_chain_rms_px": 2.361353874206543,
+      "fixed_board_mm": 2.9045645529031265,
+      "fixed_board_deg": 0.29864982530594664
+    },
+    "u08": {
+      "pnp_rms_px": 0.12116494029760361,
+      "full_chain_rms_px": 2.988892078399658,
+      "fixed_board_mm": 3.1627337048398783,
+      "fixed_board_deg": 0.38785512051388454
+    }
+  },
+  "redetected_minus_original": {
+    "t01": {
+      "pnp_rms_px": 0.00043091922998428345,
+      "full_chain_rms_px": 0.00015161448613110196,
+      "fixed_board_mm": -0.009299121852293979,
+      "fixed_board_deg": 0.0043172888520283115
+    },
+    "h01": {
+      "pnp_rms_px": -0.0004716217517852783,
+      "full_chain_rms_px": -0.0005800724029541016,
+      "fixed_board_mm": -0.00454683571073744,
+      "fixed_board_deg": -0.0009670250522247348
+    },
+    "h02": {
+      "pnp_rms_px": 0.0,
+      "full_chain_rms_px": 0.0,
+      "fixed_board_mm": 0.0,
+      "fixed_board_deg": 0.0
+    },
+    "u06": {
+      "pnp_rms_px": 0.0007884353399276733,
+      "full_chain_rms_px": 0.0002608299255371094,
+      "fixed_board_mm": 0.007091233957987164,
+      "fixed_board_deg": 0.0018611951670706173
+    },
+    "u08": {
+      "pnp_rms_px": 0.0,
+      "full_chain_rms_px": 0.0,
+      "fixed_board_mm": 0.0,
+      "fixed_board_deg": 0.0
+    }
+  },
+  "rim_from_published_exterior_pixels": {
+    "train": {
+      "base_corners_m": [
+        [
+          0.7383870766889639,
+          -0.2199865555086371,
+          0.018611891291107522
+        ],
+        [
+          0.7600555873480609,
+          0.06832267489076711,
+          0.0075199516800009995
+        ],
+        [
+          0.8394351943776376,
+          0.06831278699881589,
+          0.22356380530687064
+        ],
+        [
+          0.8118139472685407,
+          -0.21655410881657208,
+          0.23249559872774236
+        ]
+      ],
+      "cyclic_edges_mm": [
+        289.33504421693647,
+        230.1653075506574,
+        286.3422053366741,
+        226.16261256061713
+      ],
+      "max_abs_edge_difference_mm": 3.8373874393828658
+    },
+    "combined_seven": {
+      "base_corners_m": [
+        [
+          0.7429104931397154,
+          -0.22047101426166266,
+          0.01829010822814184
+        ],
+        [
+          0.7634255153375541,
+          0.06817116589448233,
+          0.008475195632034664
+        ],
+        [
+          0.8152201918310255,
+          0.0651890900567551,
+          0.23291764151542796
+        ],
+        [
+          0.8028237925804114,
+          -0.21119251528904928,
+          0.23766471027029704
+        ]
+      ],
+      "cyclic_edges_mm": [
+        289.53671064364096,
+        230.36057128659246,
+        276.70019362058287,
+        227.59813271248353
+      ],
+      "max_abs_edge_difference_mm": 13.299806379417134
+    },
+    "per_validation_rms_px": {
+      "h01": 2.625221012313219,
+      "h02": 3.0003677704126805,
+      "h03": 1.8365325905480165,
+      "h05": 1.2241427676924497,
+      "u06": 2.763903612168596,
+      "u07": 2.899685065919245,
+      "u08": 3.4653129535923743
+    },
+    "difference_from_published_rms_px": {
+      "h01": -4.0678571622265736e-13,
+      "h02": -1.7541523789077473e-13,
+      "h03": -8.43769498715119e-15,
+      "h05": -2.757793993168889e-13,
+      "u06": -8.171241461241152e-13,
+      "u07": -1.5232259897857148e-13,
+      "u08": -3.7614356074300304e-13
+    },
+    "summary": {
+      "formal": {
+        "count": 4,
+        "mean": 2.1715660352415913,
+        "median": 2.2308768014306177,
+        "p95": 2.9440957566977612,
+        "max": 3.0003677704126805
+      },
+      "retrospective": {
+        "count": 3,
+        "mean": 3.0429672105600716,
+        "median": 2.899685065919245,
+        "p95": 3.4087501648250615,
+        "max": 3.4653129535923743
+      },
+      "combined_seven": {
+        "count": 7,
+        "mean": 2.5450236818066543,
+        "median": 2.763903612168596,
+        "p95": 3.325829398638466,
+        "max": 3.4653129535923743
+      }
+    }
+  },
+  "source_selection_added_observations": [
+    {
+      "actual_pose": "u06",
+      "source_split": "transit",
+      "evaluation_role": "supplemental held-aside observation",
+      "recorder_directory": "moves/h01",
+      "physical_interpretation": "Stationary at u06 before departure to h01.",
+      "frame_index": 0,
+      "image_sha256": "a7e40809b343fab3869ba2ae0e1aa3dc1ede8026d37b860fd4274136294f1298",
+      "image_receive_monotonic_ns": 21000938921296,
+      "pose_receive_monotonic_ns": 21000938109285,
+      "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+      "after_previous_verified_arrival_s": 1.503302237,
+      "before_next_target_s": 2.876586075,
+      "status_checks_at_rest": 5,
+      "joint_rows": 100,
+      "window_range_deg": 0.0,
+      "rgb_joint_age_ms": 0.812011,
+      "rgb_flange_age_ms": 0.941854,
+      "fk_controller_difference": {
+        "translation_mm": 0.0042357713371368845,
+        "rotation_deg": 0.0018690912814616613
+      },
+      "nearest_original_group": "t36",
+      "max_axis_difference_to_nearest_deg": 1.5379999999999967,
+      "previous_final_difference_deg": 0.0,
+      "measured_q_deg": [
+        7.678,
+        59.016000000000005,
+        -36.687,
+        13.666000000000002,
+        -9.69,
+        -12.816
+      ],
+      "image_review": "four white edges visible"
+    },
+    {
+      "actual_pose": "u07",
+      "source_split": "transit",
+      "evaluation_role": "supplemental held-aside observation",
+      "recorder_directory": "moves/h02",
+      "physical_interpretation": "Stationary at u07 before departure to h02.",
+      "frame_index": 0,
+      "image_sha256": "182583a7336a4cfcf6d083ba7d0fea00f4c3672f4fe70d462ebee82c534c388d",
+      "image_receive_monotonic_ns": 21021723830442,
+      "pose_receive_monotonic_ns": 21021723630980,
+      "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+      "after_previous_verified_arrival_s": 1.069784102,
+      "before_next_target_s": 2.955315858,
+      "status_checks_at_rest": 5,
+      "joint_rows": 100,
+      "window_range_deg": 0.0,
+      "rgb_joint_age_ms": 0.199462,
+      "rgb_flange_age_ms": 0.69435,
+      "fk_controller_difference": {
+        "translation_mm": 0.003183216527178453,
+        "rotation_deg": 0.0007111129851199786
+      },
+      "nearest_original_group": "h02",
+      "max_axis_difference_to_nearest_deg": 1.5830000000000055,
+      "previous_final_difference_deg": 0.0,
+      "measured_q_deg": [
+        4.394,
+        55.855000000000004,
+        -33.829,
+        10.635,
+        -7.495,
+        -15.637000000000002
+      ],
+      "image_review": "four white edges visible"
+    },
+    {
+      "actual_pose": "u08",
+      "source_split": "transit",
+      "evaluation_role": "supplemental held-aside observation",
+      "recorder_directory": "moves/h03",
+      "physical_interpretation": "Stationary at u08 before departure to h03.",
+      "frame_index": 0,
+      "image_sha256": "9c08f4d65a73a1ce1d3ecf73d5e04914d601ec451de70e3e986dfdfe173c017f",
+      "image_receive_monotonic_ns": 21042856631200,
+      "pose_receive_monotonic_ns": 21042853587017,
+      "boot_id": "70d0a5aa-b6dc-476c-a1c8-75da158007b8",
+      "after_previous_verified_arrival_s": 1.57211205,
+      "before_next_target_s": 3.02514226,
+      "status_checks_at_rest": 5,
+      "joint_rows": 100,
+      "window_range_deg": 0.0,
+      "rgb_joint_age_ms": 3.044183,
+      "rgb_flange_age_ms": 3.43165,
+      "fk_controller_difference": {
+        "translation_mm": 0.0016960229969271996,
+        "rotation_deg": 0.001092060265646405
+      },
+      "nearest_original_group": "h03",
+      "max_axis_difference_to_nearest_deg": 1.5720000000000027,
+      "previous_final_difference_deg": 0.0,
+      "measured_q_deg": [
+        1.614,
+        52.685,
+        -32.190000000000005,
+        7.95,
+        -6.868,
+        -18.26
+      ],
+      "image_review": "four white edges visible"
+    }
+  ]
+}

@@ -311,10 +311,14 @@ def target_pose(row, points, K, D, cv2, np):
     return T, error
 
 
-def intrinsics(records, spec, out, cv2, np):
+def intrinsics(records, spec, out, cv2, np, *, fix_k3=False):
     train, heldout = fitting_splits(records, spec)
     points = board_points(spec, np)
     flags, flag_names = 0, []
+    if fix_k3:
+        if spec["image_domain"] != "received":
+            raise ValueError("--fix-k3 is for the received-image Brown comparison.")
+        flags, flag_names = cv2.CALIB_FIX_K3, ["CALIB_FIX_K3"]
     if spec["image_domain"] == "rectified":
         # With no USE_INTRINSIC_GUESS, fixed radial coefficients are initialized
         # to zero; ZERO_TANGENT_DIST also fixes p1,p2 at zero. No rational model
@@ -505,7 +509,11 @@ def main():
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--intrinsics", type=Path)
     parser.add_argument("--method", choices=("park", "tsai", "horaud"), default="park")
+    parser.add_argument("--fix-k3", action="store_true",
+                        help="Jointly refit received RGB intrinsics with k3 fixed at zero (intrinsics only).")
     args = parser.parse_args()
+    if args.fix_k3 and args.command != "intrinsics":
+        parser.error("--fix-k3 is only valid for intrinsics")
     try:
         if args.command != "detect" and (args.out / (args.command + ".json")).exists():
             raise ValueError("A fitted calibration already exists in --out; choose a new result directory.")
@@ -521,7 +529,7 @@ def main():
         if not accepted:
             raise NotReady("No specified board detected in real images; no fit was performed.")
         if args.command == "intrinsics":
-            result = intrinsics(accepted, spec, args.out, cv2, np)
+            result = intrinsics(accepted, spec, args.out, cv2, np, fix_k3=args.fix_k3)
         else:
             result = handeye(accepted, spec, args.intrinsics, args.method, args.out, cv2, np)
         print(json.dumps({"status": result["status"],
