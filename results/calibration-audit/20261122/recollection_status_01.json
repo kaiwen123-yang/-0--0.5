@@ -262,6 +262,209 @@
       "new_train": 0,
       "new_heldout": 0,
       "new_fit": null
+    },
+    {
+      "source_pi_commit": "83d9f97514b329e6c85592fea83f9f5a88515eb2",
+      "source_local_dir": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_03",
+      "initial_status_window": {
+        "source_local_dir": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_03/status",
+        "first_joint_time_bjt": "2026-11-22T13:53:38.245+08:00",
+        "last_joint_time_bjt": "2026-11-22T13:53:40.240+08:00",
+        "status_time_bjt": "2026-11-22T13:53:40.159+08:00",
+        "complete_joint_groups": 400,
+        "q_deg_last": [
+          0.968,
+          -0.698,
+          -34.653,
+          1.844,
+          44.441,
+          0.0
+        ],
+        "joint_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "arm_status": {
+          "ctrl_mode": 2,
+          "arm_status": 0,
+          "mode_feedback": 0,
+          "teach_status": 2,
+          "motion_status": 0,
+          "trajectory_num": 0,
+          "err_status": {
+            "joint_1_angle_limit": false,
+            "joint_2_angle_limit": false,
+            "joint_3_angle_limit": false,
+            "joint_4_angle_limit": false,
+            "joint_5_angle_limit": false,
+            "joint_6_angle_limit": false,
+            "communication_status_joint_1": false,
+            "communication_status_joint_2": false,
+            "communication_status_joint_3": false,
+            "communication_status_joint_4": false,
+            "communication_status_joint_5": false,
+            "communication_status_joint_6": false
+          }
+        },
+        "interface_delta": {
+          "rx_packets": 4693,
+          "rx_errors": 0,
+          "rx_dropped": 0,
+          "tx_packets": 0,
+          "tx_errors": 0,
+          "tx_dropped": 0
+        },
+        "can_error_frames": 0
+      },
+      "synchronized_wrist_window": {
+        "source_local_dir": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_03/visibility_feedback",
+        "first_joint_time_bjt": "2026-11-22T13:54:23.662+08:00",
+        "last_joint_time_bjt": "2026-11-22T13:54:28.656+08:00",
+        "status_time_bjt": "2026-11-22T13:54:28.576+08:00",
+        "complete_joint_groups": 1000,
+        "q_deg_last": [
+          0.968,
+          -0.698,
+          -34.653,
+          1.844,
+          44.441,
+          0.0
+        ],
+        "joint_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "arm_status": {
+          "ctrl_mode": 2,
+          "arm_status": 0,
+          "mode_feedback": 0,
+          "teach_status": 2,
+          "motion_status": 0,
+          "trajectory_num": 0,
+          "err_status": {
+            "joint_1_angle_limit": false,
+            "joint_2_angle_limit": false,
+            "joint_3_angle_limit": false,
+            "joint_4_angle_limit": false,
+            "joint_5_angle_limit": false,
+            "joint_6_angle_limit": false,
+            "communication_status_joint_1": false,
+            "communication_status_joint_2": false,
+            "communication_status_joint_3": false,
+            "communication_status_joint_4": false,
+            "communication_status_joint_5": false,
+            "communication_status_joint_6": false
+          }
+        },
+        "interface_delta": {
+          "rx_packets": 11669,
+          "rx_errors": 0,
+          "rx_dropped": 0,
+          "tx_packets": 0,
+          "tx_errors": 0,
+          "tx_dropped": 0
+        },
+        "can_error_frames": 0
+      },
+      "image_time_bjt": "2026-11-22T13:54:24.728+08:00",
+      "image": {
+        "host_monotonic_ns": 8256897671532,
+        "host_unix_ns": 1795326864728225157,
+        "header_ns": 1795326864723804812,
+        "frame_id": "wrist_camera_color_optical_frame",
+        "encoding": "rgb8",
+        "width": 640,
+        "height": 480,
+        "stride": 1920,
+        "subscription_index_one_based": 16,
+        "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a"
+      },
+      "joint_rows_within_250ms_each_side": 100,
+      "past_joint_row_age_ms": 1.773812,
+      "window_joint_range_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hardware_limits_source": "13:41 readback recorded above: J2 [0,180] deg; J3 [-170,0] deg.",
+      "SDK_status_meanings": {
+        "ctrl_mode_2": "teaching mode",
+        "teach_status_2": "stop recording / leave drag recording"
+      },
+      "full_Q12_detected": true,
+      "detected_inner_corners": 88,
+      "board_observation": "recollection_first_board.json",
+      "image_assessment": "First stationary board observation in the new session; full white border visible, detector point 0 at lower right. New session board fixation relative to base not independently verified.",
+      "new_train": 0,
+      "new_heldout": 0,
+      "new_fit": null,
+      "after_operator_teach_stop": {
+        "operator_report": "Teaching has been exited.",
+        "source_local_dir": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_03/after_teach/status",
+        "status_time_bjt": "2026-11-22T13:55:54.013+08:00",
+        "first_joint_time_bjt": "2026-11-22T13:55:52.608+08:00",
+        "last_joint_time_bjt": "2026-11-22T13:55:54.103+08:00",
+        "q_deg_last": [
+          0.968,
+          -0.698,
+          -34.653,
+          1.844,
+          44.441,
+          0.0
+        ],
+        "complete_joint_groups": 300,
+        "joint_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "arm_status": {
+          "ctrl_mode": 2,
+          "arm_status": 0,
+          "mode_feedback": 0,
+          "teach_status": 2,
+          "motion_status": 0,
+          "trajectory_num": 0,
+          "err_status": {
+            "joint_1_angle_limit": false,
+            "joint_2_angle_limit": false,
+            "joint_3_angle_limit": false,
+            "joint_4_angle_limit": false,
+            "joint_5_angle_limit": false,
+            "joint_6_angle_limit": false,
+            "communication_status_joint_1": false,
+            "communication_status_joint_2": false,
+            "communication_status_joint_3": false,
+            "communication_status_joint_4": false,
+            "communication_status_joint_5": false,
+            "communication_status_joint_6": false
+          }
+        },
+        "interface_delta": {
+          "rx_packets": 3527,
+          "rx_errors": 0,
+          "rx_dropped": 0,
+          "tx_packets": 0,
+          "tx_errors": 0,
+          "tx_dropped": 0
+        },
+        "can_error_frames": 0,
+        "interpretation": "Teach recording is stopped; controller reports teaching control source. No CAN control handoff was executed in this window."
+      }
     }
   ]
 }
