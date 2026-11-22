@@ -1,0 +1,270 @@
+{
+  "counts": {
+    "train": {
+      "planned": 43,
+      "accepted": 35
+    },
+    "dev": {
+      "planned": 9,
+      "accepted": 7
+    },
+    "final": {
+      "planned": 11,
+      "accepted": 9
+    }
+  },
+  "excluded": {
+    "t18": "No frame acquired: quiet arrival criterion failed; fresh two-second hold recorded J6 alternating 0 and 0.309 deg with no controller fault.",
+    "t27": "All 88 found; left finger obscured a portion of the lower white outer rim.",
+    "l01": "Finger occludes part of checker pattern; complete 88-point detection absent.",
+    "l04": "Finger occludes part of checker pattern; complete 88-point detection absent.",
+    "l06": "Finger occludes part of checker pattern; complete 88-point detection absent.",
+    "l08": "Finger occludes part of checker pattern; complete 88-point detection absent.",
+    "l12": "Finger occludes part of checker pattern; complete 88-point detection absent.",
+    "l10": "All 88 detected; left lower portion of board perimeter occluded by fingers.",
+    "l09": "All 88 detected; foreground finger touches the lower-left board corner and its entire white perimeter cannot be confirmed.",
+    "a01": "No frame acquired. Target flag remained 1 despite two seconds of stationary measured feedback and no drive fault. Holding the measured position subsequently restored flag 0.",
+    "l11": "All 88 detected; the wrist fingers visibly obscure the lower-left perimeter of the board.",
+    "l03": "All 88 detected; the wrist fingers visibly obscure the lower-left perimeter of the board."
+  },
+  "chosen": "fix_k3",
+  "frozen_time_bjt": "2026-11-22T14:19:45.264510+08:00",
+  "training_coverage": {
+    "views": 35,
+    "corners": 3080,
+    "bbox_px": [
+      66.99752807617188,
+      55.829341888427734,
+      579.8309936523438,
+      354.0896911621094
+    ],
+    "counts_grid_4rows_6cols": [
+      [
+        0,
+        42,
+        168,
+        168,
+        57,
+        2
+      ],
+      [
+        31,
+        385,
+        771,
+        604,
+        298,
+        55
+      ],
+      [
+        26,
+        145,
+        80,
+        48,
+        148,
+        52
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "occupied_cells": 17
+  },
+  "all_coverage": {
+    "views": 51,
+    "corners": 4488,
+    "bbox_px": [
+      50.39064407348633,
+      54.44905090332031,
+      583.5623168945312,
+      354.0896911621094
+    ],
+    "counts_grid_4rows_6cols": [
+      [
+        0,
+        60,
+        190,
+        232,
+        98,
+        2
+      ],
+      [
+        49,
+        488,
+        1001,
+        945,
+        510,
+        76
+      ],
+      [
+        68,
+        263,
+        130,
+        74,
+        232,
+        70
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "occupied_cells": 17
+  },
+  "metrics": {
+    "train": {
+      "pnp_px": {
+        "count": 35,
+        "mean": 0.11952,
+        "median": 0.12252,
+        "p95": 0.14577,
+        "max": 0.14872,
+        "max_id": "t17"
+      },
+      "chain_px": {
+        "count": 35,
+        "mean": 2.30638,
+        "median": 2.17891,
+        "p95": 4.53994,
+        "max": 5.1657,
+        "max_id": "t24"
+      },
+      "fixed_board_mm": {
+        "count": 35,
+        "mean": 3.24591,
+        "median": 2.73662,
+        "p95": 6.12584,
+        "max": 7.35337,
+        "max_id": "t24"
+      },
+      "fixed_board_deg": {
+        "count": 35,
+        "mean": 0.36036,
+        "median": 0.32743,
+        "p95": 0.64895,
+        "max": 0.69356,
+        "max_id": "t01"
+      }
+    },
+    "dev": {
+      "pnp_px": {
+        "count": 7,
+        "mean": 0.11137,
+        "median": 0.10789,
+        "p95": 0.1408,
+        "max": 0.14674,
+        "max_id": "d01"
+      },
+      "chain_px": {
+        "count": 7,
+        "mean": 3.13952,
+        "median": 3.41981,
+        "p95": 4.80137,
+        "max": 5.04627,
+        "max_id": "d05"
+      },
+      "fixed_board_mm": {
+        "count": 7,
+        "mean": 4.46591,
+        "median": 4.70888,
+        "p95": 6.15429,
+        "max": 6.25228,
+        "max_id": "d05"
+      },
+      "fixed_board_deg": {
+        "count": 7,
+        "mean": 0.4707,
+        "median": 0.45722,
+        "p95": 0.71864,
+        "max": 0.76753,
+        "max_id": "d02"
+      }
+    },
+    "independent": {
+      "pnp_px": {
+        "count": 9,
+        "mean": 0.10681,
+        "median": 0.10962,
+        "p95": 0.13199,
+        "max": 0.13286,
+        "max_id": "l07"
+      },
+      "chain_px": {
+        "count": 9,
+        "mean": 2.22166,
+        "median": 2.2816,
+        "p95": 3.56282,
+        "max": 3.87749,
+        "max_id": "l07"
+      },
+      "fixed_board_mm": {
+        "count": 9,
+        "mean": 3.34248,
+        "median": 3.4142,
+        "p95": 5.35407,
+        "max": 6.12626,
+        "max_id": "l07"
+      },
+      "fixed_board_deg": {
+        "count": 9,
+        "mean": 0.44542,
+        "median": 0.42945,
+        "p95": 0.67674,
+        "max": 0.68226,
+        "max_id": "v01"
+      }
+    }
+  },
+  "grid_verified_inverses": 307200,
+  "ideal_grid_roundtrips": 307200,
+  "grid_points": 307200,
+  "train_board_origin_depth_m": [
+    0.6170140887934598,
+    0.7372005325805817
+  ],
+  "max_fk_vs_controller_mm": 0.005079012062117301,
+  "max_fk_vs_controller_deg": 0.002743761781703738,
+  "max_joint_age_ms": 5.986331,
+  "max_static_window_range_deg": 0.10200000000000031,
+  "rotation_second_to_first_ratio": 0.8676328190109445,
+  "home_q_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "home_arm_status": {
+    "ctrl_mode": 1,
+    "arm_status": 0,
+    "mode_feedback": 1,
+    "teach_status": 2,
+    "motion_status": 0,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "home_repeat_corner_rms_px": 0.23608597124043137,
+  "home_repeat_max_corner_px": 0.41727667764655685
+}

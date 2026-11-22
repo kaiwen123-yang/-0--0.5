@@ -1,0 +1,265 @@
+{
+  "opencv": "4.5.4",
+  "size": [
+    640,
+    480
+  ],
+  "K": [
+    [
+      487.11243748458264,
+      0.0,
+      317.45767944873825
+    ],
+    [
+      0.0,
+      486.84449185807097,
+      210.68181265298804
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D": [
+    0.10352732258268614,
+    -0.13992880231904503,
+    -0.0003461861182665524,
+    -0.0006613643797691709,
+    -0.1278605976387715
+  ],
+  "tolerance_px": 1e-05,
+  "pixel_centers": 307200,
+  "received": {
+    "certified_root_count": 307043,
+    "without_verified_root_count": 157,
+    "valid_roundtrip_max_px": 9.999103059403833e-10,
+    "root_det_range": [
+      0.014787095900378328,
+      1.0443969147731273
+    ],
+    "root_min_eigenvalue_range": [
+      0.016793535459614373,
+      1.0160127416719695
+    ],
+    "valid_inclusive_boundary_runs": {
+      "top_x": [
+        [
+          0,
+          639
+        ]
+      ],
+      "bottom_x": [
+        [
+          8,
+          625
+        ]
+      ],
+      "left_y": [
+        [
+          0,
+          470
+        ]
+      ],
+      "right_y": [
+        [
+          0,
+          463
+        ]
+      ]
+    },
+    "invalid_x_runs_by_y": {
+      "464": [
+        [
+          639,
+          639
+        ]
+      ],
+      "465": [
+        [
+          638,
+          639
+        ]
+      ],
+      "466": [
+        [
+          637,
+          639
+        ]
+      ],
+      "467": [
+        [
+          636,
+          639
+        ]
+      ],
+      "468": [
+        [
+          636,
+          639
+        ]
+      ],
+      "469": [
+        [
+          635,
+          639
+        ]
+      ],
+      "470": [
+        [
+          634,
+          639
+        ]
+      ],
+      "471": [
+        [
+          0,
+          0
+        ],
+        [
+          633,
+          639
+        ]
+      ],
+      "472": [
+        [
+          0,
+          1
+        ],
+        [
+          632,
+          639
+        ]
+      ],
+      "473": [
+        [
+          0,
+          2
+        ],
+        [
+          631,
+          639
+        ]
+      ],
+      "474": [
+        [
+          0,
+          2
+        ],
+        [
+          631,
+          639
+        ]
+      ],
+      "475": [
+        [
+          0,
+          3
+        ],
+        [
+          630,
+          639
+        ]
+      ],
+      "476": [
+        [
+          0,
+          4
+        ],
+        [
+          629,
+          639
+        ]
+      ],
+      "477": [
+        [
+          0,
+          5
+        ],
+        [
+          628,
+          639
+        ]
+      ],
+      "478": [
+        [
+          0,
+          6
+        ],
+        [
+          627,
+          639
+        ]
+      ],
+      "479": [
+        [
+          0,
+          7
+        ],
+        [
+          626,
+          639
+        ]
+      ]
+    },
+    "corners": {
+      "0,0": {
+        "received_normalized_radius": 0.7823059533809942,
+        "central_root": true,
+        "central_ideal_xy": [
+          -0.6670877951645311,
+          -0.44301969100747224
+        ]
+      },
+      "639,0": {
+        "received_normalized_radius": 0.7893051988087453,
+        "central_root": true,
+        "central_ideal_xy": [
+          0.6816192905942874,
+          -0.4463240673728159
+        ]
+      },
+      "0,479": {
+        "received_normalized_radius": 0.8535119690927633,
+        "central_root": false,
+        "central_ideal_xy": null
+      },
+      "639,479": {
+        "received_normalized_radius": 0.859931842389717,
+        "central_root": false,
+        "central_ideal_xy": null
+      }
+    },
+    "analytic_bound": {
+      "central_radius_upper": 0.9593120527949168,
+      "received_radius_upper": 0.8434850734565609,
+      "proven_outside_count": 109,
+      "other_unresolved_count": 48
+    },
+    "directional_bound": {
+      "proven_outside_among_without_root": 157,
+      "still_unclassified": 0,
+      "minimum_normalized_gap": 7.2420346051149664e-06,
+      "roundoff_margin": 1e-10,
+      "radial_intervals": 1024
+    }
+  },
+  "same_K_ideal_grid": {
+    "forward_outside_received_count": 4705,
+    "forward_then_inverse_pass": 307200,
+    "roundtrip_max_px": 1.4915793622220577e-09,
+    "det_range": [
+      0.45591577315727316,
+      1.044396846541938
+    ],
+    "min_eigenvalue_range": [
+      0.48139070130018186,
+      1.0160127550087428
+    ],
+    "forward_vs_cv_projectPoints_max_px": 2.5421149729252077e-13
+  },
+  "opencv_default_inverse": {
+    "forward_error_max_px": 15.062932647302855,
+    "errors_over_tolerance": 25220
+  }
+}

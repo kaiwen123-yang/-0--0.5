@@ -1,0 +1,222 @@
+{
+  "pyAgxArm": "1.0.0",
+  "firmware_profile": "V189",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "started_unix_ns": 1795328520008168709,
+  "started_monotonic_ns": 9912177623257,
+  "recorder_sends_commands": false,
+  "error": null,
+  "joint_rows": 400,
+  "gripper_rows": 400,
+  "raw_frames": 4846,
+  "can_error_frames": 0,
+  "snapshot_kind": "cached_poll_10hz_with_sdk_timestamps",
+  "interface_before": {
+    "rx_packets": 3207168,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 16721,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "last_snapshot": {
+    "kind": "cached_poll",
+    "host_monotonic_ns": 9914086948258,
+    "host_unix_ns": 1795328521917494715,
+    "joint": {
+      "sdk_timestamp_s": 1795328521.9130614,
+      "data": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "arm": {
+      "sdk_timestamp_s": 1795328521.9173276,
+      "data": {
+        "ctrl_mode": 1,
+        "arm_status": 0,
+        "mode_feedback": 1,
+        "teach_status": 2,
+        "motion_status": 0,
+        "trajectory_num": 0,
+        "err_status": {
+          "joint_1_angle_limit": false,
+          "joint_2_angle_limit": false,
+          "joint_3_angle_limit": false,
+          "joint_4_angle_limit": false,
+          "joint_5_angle_limit": false,
+          "joint_6_angle_limit": false,
+          "communication_status_joint_1": false,
+          "communication_status_joint_2": false,
+          "communication_status_joint_3": false,
+          "communication_status_joint_4": false,
+          "communication_status_joint_5": false,
+          "communication_status_joint_6": false
+        }
+      }
+    },
+    "drivers": [
+      {
+        "sdk_timestamp_s": 1795328521.8934276,
+        "data": {
+          "vol": 23.0,
+          "foc_temp": 33.0,
+          "motor_temp": 25.0,
+          "foc_status": {
+            "voltage_too_low": false,
+            "motor_overheating": false,
+            "driver_overcurrent": false,
+            "driver_overheating": false,
+            "collision_status": false,
+            "driver_error_status": false,
+            "driver_enable_status": true,
+            "stall_status": false
+          },
+          "bus_current": 0.0
+        }
+      },
+      {
+        "sdk_timestamp_s": 1795328521.8835096,
+        "data": {
+          "vol": 23.0,
+          "foc_temp": 32.0,
+          "motor_temp": 26.0,
+          "foc_status": {
+            "voltage_too_low": false,
+            "motor_overheating": false,
+            "driver_overcurrent": false,
+            "driver_overheating": false,
+            "collision_status": false,
+            "driver_error_status": false,
+            "driver_enable_status": true,
+            "stall_status": false
+          },
+          "bus_current": 0.0
+        }
+      },
+      {
+        "sdk_timestamp_s": 1795328521.8736362,
+        "data": {
+          "vol": 23.0,
+          "foc_temp": 36.0,
+          "motor_temp": 33.0,
+          "foc_status": {
+            "voltage_too_low": false,
+            "motor_overheating": false,
+            "driver_overcurrent": false,
+            "driver_overheating": false,
+            "collision_status": false,
+            "driver_error_status": false,
+            "driver_enable_status": true,
+            "stall_status": false
+          },
+          "bus_current": 0.0
+        }
+      },
+      {
+        "sdk_timestamp_s": 1795328521.9138029,
+        "data": {
+          "vol": 23.0,
+          "foc_temp": 36.0,
+          "motor_temp": 29.0,
+          "foc_status": {
+            "voltage_too_low": false,
+            "motor_overheating": false,
+            "driver_overcurrent": false,
+            "driver_overheating": false,
+            "collision_status": false,
+            "driver_error_status": false,
+            "driver_enable_status": true,
+            "stall_status": false
+          },
+          "bus_current": 0.0
+        }
+      },
+      {
+        "sdk_timestamp_s": 1795328521.9038887,
+        "data": {
+          "vol": 23.0,
+          "foc_temp": 40.0,
+          "motor_temp": 34.0,
+          "foc_status": {
+            "voltage_too_low": false,
+            "motor_overheating": false,
+            "driver_overcurrent": false,
+            "driver_overheating": false,
+            "collision_status": false,
+            "driver_error_status": false,
+            "driver_enable_status": true,
+            "stall_status": false
+          },
+          "bus_current": 0.0
+        }
+      },
+      {
+        "sdk_timestamp_s": 1795328521.8941343,
+        "data": {
+          "vol": 23.0,
+          "foc_temp": 36.0,
+          "motor_temp": 30.0,
+          "foc_status": {
+            "voltage_too_low": false,
+            "motor_overheating": false,
+            "driver_overcurrent": false,
+            "driver_overheating": false,
+            "collision_status": false,
+            "driver_error_status": false,
+            "driver_enable_status": true,
+            "stall_status": false
+          },
+          "bus_current": 0.0
+        }
+      }
+    ],
+    "gripper": {
+      "sdk_timestamp_s": 1795328521.9131982,
+      "data": {
+        "value": -9.999999999999999e-05,
+        "force": -0.003,
+        "foc_status": {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "sensor_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "homing_status": false
+        },
+        "mode": "width"
+      }
+    }
+  },
+  "last_joint_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "ended_monotonic_ns": 9914182259408,
+  "interface_after": {
+    "rx_packets": 3212016,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 16721,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "interface_delta": {
+    "rx_packets": 4848,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 0,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  }
+}

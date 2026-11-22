@@ -1,0 +1,131 @@
+{
+  "opencv": "4.5.4",
+  "size": [
+    640,
+    480
+  ],
+  "K": [
+    [
+      485.9957933866547,
+      0.0,
+      316.8354936164656
+    ],
+    [
+      0.0,
+      485.70801038997104,
+      210.43816773080977
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D": [
+    0.10946944385152121,
+    -0.19610035643756976,
+    -0.0004649597750604916,
+    -0.0010028698508359273,
+    0.0
+  ],
+  "tolerance_px": 1e-05,
+  "pixel_centers": 307200,
+  "received": {
+    "certified_root_count": 307200,
+    "without_verified_root_count": 0,
+    "valid_roundtrip_max_px": 9.99978026787113e-10,
+    "root_det_range": [
+      0.5839126357298654,
+      1.0450154445747613
+    ],
+    "root_min_eigenvalue_range": [
+      0.6101712353600133,
+      1.016450855409436
+    ],
+    "valid_inclusive_boundary_runs": {
+      "top_x": [
+        [
+          0,
+          639
+        ]
+      ],
+      "bottom_x": [
+        [
+          0,
+          639
+        ]
+      ],
+      "left_y": [
+        [
+          0,
+          479
+        ]
+      ],
+      "right_y": [
+        [
+          0,
+          479
+        ]
+      ]
+    },
+    "invalid_x_runs_by_y": {},
+    "corners": {
+      "0,0": {
+        "received_normalized_radius": 0.7827695712288205,
+        "central_root": true,
+        "central_ideal_xy": [
+          -0.6549794338101204,
+          -0.4354122587089524
+        ]
+      },
+      "639,0": {
+        "received_normalized_radius": 0.7919251588743725,
+        "central_root": true,
+        "central_ideal_xy": [
+          0.6712985273139556,
+          -0.4380243591646182
+        ]
+      },
+      "0,479": {
+        "received_normalized_radius": 0.854835310274212,
+        "central_root": true,
+        "central_ideal_xy": [
+          -0.6736347816978304,
+          0.5724003117881103
+        ]
+      },
+      "639,479": {
+        "received_normalized_radius": 0.8632268898198533,
+        "central_root": true,
+        "central_ideal_xy": [
+          0.6935611372944659,
+          0.5781904122341238
+        ]
+      }
+    },
+    "analytic_bound": {
+      "central_radius_upper": 1.093050792015458,
+      "received_radius_upper": 0.9340018184598312,
+      "proven_outside_count": 0,
+      "other_unresolved_count": 0
+    }
+  },
+  "same_K_ideal_grid": {
+    "forward_outside_received_count": 5744,
+    "forward_then_inverse_pass": 307200,
+    "roundtrip_max_px": 1.157831918507934e-09,
+    "det_range": [
+      0.6744894992751229,
+      1.0450155052350685
+    ],
+    "min_eigenvalue_range": [
+      0.6947470179491335,
+      1.0164508554466878
+    ],
+    "forward_vs_cv_projectPoints_max_px": 2.5421149729252077e-13
+  },
+  "opencv_default_inverse": {
+    "forward_error_max_px": 0.06421421265527563,
+    "errors_over_tolerance": 10574
+  }
+}

@@ -2,6 +2,12 @@
 
 更新于北京时间 2026-11-22。先读 AGENTS.md、PI_REAL_TEST_STATE.md、PI_DAILY_WORK_LOG.md 当日记录、[本轮复算](../results/calibration-audit/20261122/README.md)、[已冻结准则](../results/calibration-audit/20261122/comparison_rules.md)和[尺度表](../results/calibration-audit/20261122/board_measurement.md)。[11/21 原始提示词](https://github.com/kaiwen123-yang/-0--0.5/blob/5ce7e162bebeab4248aab675f4facfa2cd8c3c72/docs/PI_Q12_CALIBRATION_REVIEW_NEXT_PROMPT_20261121.md)保留历史。
 
+## 最新接续结果
+
+**14:21 第二开发平台实机续采。** 经 SSH 使用 pyAgxArm 及 CAN 低速 MOVE_J，取得 35 个训练、7 个开发和 9 个冻结后实拍独立姿态。采用名义格距 20 mm，固定 k3 重新求解 K、D 和 T_flange_camera。完整 640×480 接收网格逆映射通过。独立组逐姿态均值为 PnP 0.107 px、固定板全链 2.222 px、板位姿偏差 3.342 mm / 0.445°。结束时实测 q=[0.000, 0.000, 0.000, 0.000, 0.000, 0.000]°、全使能、CAN/MOVE_J。该结果是本次单腕安装、名义尺度与实测距离内的标定候选，绝对空间精度待计量核验。[14:21 实机标定报告](../results/calibration-audit/20261122/ssh_multiview/report_zh.md)。
+
+新 K/D/X 与分组已冻结并已有独立验证。保留本轮原图和像素域。需要验证绝对几何时，再用独立实物基准测量格距与任务空间误差。
+
 ## 优先接续 11/22 现场新批次
 
 **最新接续点（14:01）。** 用户已回零，本轮独立测得六轴均为 0.000°、全部使能、CAN/MOVE_J、motion_status=0。零位已有一张完整的 88 点原图和真实 q/G，与 13:54 的有板观测分别留存。[零位帧](../results/calibration-audit/20261122/recollection_home_board.json)。不要沿用更早的 J2 越界作为当前结论，也不需要再次执行物理回零。中断发生在多姿态运动前；接续时核对实际现场与控制状态，保留预分组，不以这两次诊断代替新手眼求解或盲验收。
