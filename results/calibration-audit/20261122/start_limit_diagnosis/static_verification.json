@@ -1,0 +1,78 @@
+{
+  "views": 9,
+  "method": "Redetect 88 ordered corners from each original accepted independent PNG; use frozen parameters and recompute G from measured q.",
+  "per_view": [
+    {
+      "id": "v01",
+      "pnp_px": 0.07344931364059448,
+      "chain_px": 1.2445069551467896,
+      "max_corner_diff_px": 0.020646945961922212,
+      "fixed_board_mm": 2.4775147308817913,
+      "fixed_board_deg": 0.6849122925467109
+    },
+    {
+      "id": "v02",
+      "pnp_px": 0.10961607843637466,
+      "chain_px": 2.2815961837768555,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 3.4142029732749863,
+      "fixed_board_deg": 0.42944639095911513
+    },
+    {
+      "id": "v03",
+      "pnp_px": 0.10461173206567764,
+      "chain_px": 3.0908100605010986,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 4.195793707637336,
+      "fixed_board_deg": 0.45498950303924973
+    },
+    {
+      "id": "v04",
+      "pnp_px": 0.1306973695755005,
+      "chain_px": 2.8583943843841553,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 3.8018903594963445,
+      "fixed_board_deg": 0.16692837864480872
+    },
+    {
+      "id": "v05",
+      "pnp_px": 0.11368104070425034,
+      "chain_px": 2.528526782989502,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 3.975243212652092,
+      "fixed_board_deg": 0.5702797767376193
+    },
+    {
+      "id": "v06",
+      "pnp_px": 0.09023558348417282,
+      "chain_px": 1.3531006574630737,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 2.2906442148637582,
+      "fixed_board_deg": 0.2970424110282948
+    },
+    {
+      "id": "l07",
+      "pnp_px": 0.13285969197750092,
+      "chain_px": 3.8774898052215576,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 6.126258312484216,
+      "fixed_board_deg": 0.6684645619003381
+    },
+    {
+      "id": "a04",
+      "pnp_px": 0.08334100991487503,
+      "chain_px": 0.4821785092353821,
+      "max_corner_diff_px": 0.0,
+      "fixed_board_mm": 0.40534444124142655,
+      "fixed_board_deg": 0.4091442622050728
+    },
+    {
+      "id": "a07",
+      "pnp_px": 0.12436127662658691,
+      "chain_px": 2.2780888080596924,
+      "max_corner_diff_px": 0.0368792904968253,
+      "fixed_board_mm": 3.3958705907010143,
+      "fixed_board_deg": 0.3077796348228263
+    }
+  ]
+}

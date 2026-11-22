@@ -1,0 +1,97 @@
+{
+  "source": "/home/kaiwen/research/pi-q12-data/20261122_local_rgb_can_timing_01",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "start_bjt": "2026-11-22T15:09:21.461000+08:00",
+  "retained_rgb": 90,
+  "complete_7D": 90,
+  "duration_s": 2.975466847,
+  "rgb_rate_hz": 29.911272609114707,
+  "max_rgb_receive_gap_ms": 38.732224,
+  "header_to_receive_ms": {
+    "min": 1.353011,
+    "median": 1.7312925,
+    "p95": 2.46728035,
+    "max": 4.222663
+  },
+  "joint_feedback_age_ms": {
+    "min": 0.047363,
+    "median": 2.825291,
+    "p95": 4.87483735,
+    "max": 5.060903
+  },
+  "gripper_feedback_age_ms": {
+    "min": 0.004448,
+    "median": 2.7497575,
+    "p95": 4.8313338,
+    "max": 4.956815
+  },
+  "measured_state_min": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -9.999999999999999e-05
+  ],
+  "measured_state_max": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -9.999999999999999e-05
+  ],
+  "grid_20hz_observation_ticks": 60,
+  "per_grid_rgb_age_ms": {
+    "min": 2.020245,
+    "median": 16.790962999999998,
+    "p95": 34.718178349999995,
+    "max": 34.891681
+  },
+  "rgb_decode": "All 90 distinct retained PNG paths decoded at 640x480",
+  "can_counters": {
+    "rx_packets": 9805,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_packets": 0,
+    "tx_errors": 0,
+    "tx_dropped": 0
+  },
+  "can_error_frames": 0,
+  "camera_worker_error": null,
+  "camera_queue_drops": 0,
+  "training_eligible": false,
+  "action_label_count": 0,
+  "controller_final": {
+    "ctrl_mode": 1,
+    "arm_status": 0,
+    "mode_feedback": 1,
+    "teach_status": 2,
+    "motion_status": 0,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "enabled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "source": [
+    "put_scissors_into_bucket",
+    "0411_153031",
+    "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382"
+  ],
+  "source_path": "data/agilex/put_scissors_into_bucket/success_episodes/0411_153031/data/trajectory.hdf5",
+  "source_size": 725252895,
+  "rows": 1893,
+  "language_instruction": "put black-edged scissors into the pen holder",
+  "source_time_first_last": [
+    1744356747,
+    1744356766
+  ],
+  "delta_ticks_min_p50_p95_max": [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "duplicate_ticks": 1873,
+  "backwards_ticks": 0,
+  "sides": {
+    "left": {
+      "master": {
+        "arm": {
+          "min": [
+            -0.27353936433792114,
+            -0.03251561522483826,
+            -1.807599663734436,
+            -1.1580722332000732,
+            -0.09393593668937683,
+            -0.09449414908885956
+          ],
+          "max": [
+            0.03996420279145241,
+            1.697371006011963,
+            0.04212725907564163,
+            0.17463187873363495,
+            1.2266969680786133,
+            1.3781981468200684
+          ],
+          "span": [
+            0.31350356712937355,
+            1.7298866212368011,
+            1.8497269228100777,
+            1.3327041119337082,
+            1.3206329047679901,
+            1.472692295908928
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "gripper": {
+          "min": [
+            -0.0019600000232458115
+          ],
+          "max": [
+            0.03765999898314476
+          ],
+          "span": [
+            0.03961999900639057
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "puppet": {
+        "arm": {
+          "min": [
+            -0.2665617763996124,
+            -0.0026863759849220514,
+            -1.7750141620635986,
+            -1.127109169960022,
+            -0.016065923497080803,
+            -0.08331254124641418
+          ],
+          "max": [
+            0.04216214641928673,
+            1.6938822269439697,
+            0.0006803160067647696,
+            0.16181054711341858,
+            1.2573286294937134,
+            1.3819833993911743
+          ],
+          "span": [
+            0.30872392281889915,
+            1.6965686029288918,
+            1.7756944780703634,
+            1.2889197170734406,
+            1.2733945529907942,
+            1.4652959406375885
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "gripper": {
+          "min": [
+            -0.0019600000232458115
+          ],
+          "max": [
+            0.03668000176548958
+          ],
+          "span": [
+            0.03864000178873539
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "master_vs_puppet_same_row_mae_arm_source_units": [
+        0.0065450181898643,
+        0.03666382661935572,
+        0.04184526126800775,
+        0.04550725725546825,
+        0.0527060977751522,
+        0.02217653112454518
+      ],
+      "master_vs_puppet_same_row_mae_gripper_source_units": 0.004201552954735204,
+      "candidate_first_row_source_units": {
+        "master": [
+          -0.049785174429416656,
+          -0.030788660049438477,
+          0.03994676098227501,
+          -0.027125420048832893,
+          -0.028520939871668816,
+          -0.04298201575875282,
+          -0.0019600000232458115
+        ],
+        "puppet": [
+          -0.051913343369960785,
+          -0.0026863759849220514,
+          0.0,
+          -0.024037832394242287,
+          0.052157558500766754,
+          -0.03326570615172386,
+          -0.0019600000232458115
+        ]
+      }
+    },
+    "right": {
+      "master": {
+        "arm": {
+          "min": [
+            -0.029323363676667213,
+            -0.03745226934552193,
+            -2.146519184112549,
+            -0.008390563540160656,
+            -0.08934816718101501,
+            -0.6246172785758972
+          ],
+          "max": [
+            0.3627479672431946,
+            1.7118494510650635,
+            0.02103746309876442,
+            1.250124216079712,
+            1.2958101034164429,
+            0.0
+          ],
+          "span": [
+            0.3920713309198618,
+            1.7493017204105854,
+            2.1675566472113132,
+            1.2585147796198726,
+            1.3851582705974579,
+            0.6246172785758972
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "gripper": {
+          "min": [
+            -0.00749000022187829
+          ],
+          "max": [
+            0.03759000077843666
+          ],
+          "span": [
+            0.04508000100031495
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "puppet": {
+        "arm": {
+          "min": [
+            -0.02368895150721073,
+            -0.010919944383203983,
+            -2.1111600399017334,
+            0.0,
+            0.007099708076566458,
+            -0.6082199215888977
+          ],
+          "max": [
+            0.36360272765159607,
+            1.7601170539855957,
+            0.014879732392728329,
+            1.2181843519210815,
+            1.2677078247070312,
+            0.0
+          ],
+          "span": [
+            0.3872916791588068,
+            1.7710369983687997,
+            2.1260397722944617,
+            1.2181843519210815,
+            1.2606081166304648,
+            0.6082199215888977
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "gripper": {
+          "min": [
+            -0.006089999806135893
+          ],
+          "max": [
+            0.03660999983549118
+          ],
+          "span": [
+            0.04269999964162707
+          ],
+          "nonfinite": 0,
+          "nonzero_intervene": 0,
+          "timestamps_equal_camera_rows": 1893,
+          "source_minus_camera_ticks_p0_p50_p100": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "master_vs_puppet_same_row_mae_arm_source_units": [
+        0.005788899027856585,
+        0.02973366896434007,
+        0.04028948676608278,
+        0.027862590018854654,
+        0.06318732921518208,
+        0.013122318956284644
+      ],
+      "master_vs_puppet_same_row_mae_gripper_source_units": 0.003032445639243311,
+      "candidate_first_row_source_units": {
+        "master": [
+          -0.029323363676667213,
+          -0.03106776438653469,
+          0.01929306425154209,
+          0.008896440267562866,
+          -0.021142128854990005,
+          0.0,
+          -0.003710000077262521
+        ],
+        "puppet": [
+          -0.02368895150721073,
+          -0.00976863969117403,
+          0.014879732392728329,
+          0.019729163497686386,
+          0.06302516907453537,
+          0.0,
+          -0.003710000077262521
+        ]
+      }
+    }
+  },
+  "images": [
+    {
+      "camera": "camera_left",
+      "row": 0,
+      "decoded_wh": [
+        640,
+        480
+      ],
+      "camera_model": "RealSense_D435if",
+      "declared_channels": "rgb",
+      "source_bytes": 72056,
+      "row_timestamp": 1744356747
+    },
+    {
+      "camera": "camera_left",
+      "row": 946,
+      "decoded_wh": [
+        640,
+        480
+      ],
+      "camera_model": "RealSense_D435if",
+      "declared_channels": "rgb",
+      "source_bytes": 80659,
+      "row_timestamp": 1744356757
+    },
+    {
+      "camera": "camera_left",
+      "row": 1892,
+      "decoded_wh": [
+        640,
+        480
+      ],
+      "camera_model": "RealSense_D435if",
+      "declared_channels": "rgb",
+      "source_bytes": 74169,
+      "row_timestamp": 1744356766
+    },
+    {
+      "camera": "camera_right",
+      "row": 0,
+      "decoded_wh": [
+        640,
+        480
+      ],
+      "camera_model": "RealSense_D435if",
+      "declared_channels": "rgb",
+      "source_bytes": 81749,
+      "row_timestamp": 1744356747
+    },
+    {
+      "camera": "camera_right",
+      "row": 946,
+      "decoded_wh": [
+        640,
+        480
+      ],
+      "camera_model": "RealSense_D435if",
+      "declared_channels": "rgb",
+      "source_bytes": 76420,
+      "row_timestamp": 1744356757
+    },
+    {
+      "camera": "camera_right",
+      "row": 1892,
+      "decoded_wh": [
+        640,
+        480
+      ],
+      "camera_model": "RealSense_D435if",
+      "declared_channels": "rgb",
+      "source_bytes": 86055,
+      "row_timestamp": 1744356766
+    }
+  ],
+  "numeric_and_rgb_bytes_fetched_this_phase": 1211167,
+  "cached_source_bytes_including_metadata": 1211167
+}

@@ -1,0 +1,42 @@
+{
+  "milk": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "place_milk_next_to_cup",
+    "episode": "0611_144656",
+    "revision": "b21612bdf4847b20fd2792be452e194c064db852",
+    "source_size_bytes": 1004016688,
+    "path": "data/agilex/place_milk_next_to_cup/success_episodes/0611_144656/data/trajectory.hdf5"
+  },
+  "pomegranate": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "place_pomegranate_in_white_plate",
+    "episode": "2024_12_12-10_29_11-173637122753700320.00",
+    "revision": "8e97db09b59052ed955eaa29505bd4b09b128546",
+    "source_size_bytes": 180660362,
+    "path": "data/agilex/place_pomegranate_in_white_plate/success_episodes/2024_12_12-10_29_11-173637122753700320.00/data/trajectory.hdf5"
+  },
+  "scissors": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "put_scissors_into_bucket",
+    "episode": "0411_153031",
+    "revision": "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382",
+    "source_size_bytes": 725252895,
+    "path": "data/agilex/put_scissors_into_bucket/success_episodes/0411_153031/data/trajectory.hdf5"
+  },
+  "door": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "close_fridge_door",
+    "episode": "0306_204419",
+    "revision": "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382",
+    "source_size_bytes": 887062584,
+    "path": "data/agilex/close_fridge_door/success_episodes/0306_204419/data/trajectory.hdf5"
+  },
+  "digit0": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "write_number_0_on_whiteboard",
+    "episode": "0417_160949",
+    "revision": "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382",
+    "source_size_bytes": 1442056201,
+    "path": "data/agilex/write_number_0_on_whiteboard/success_episodes/0417_160949/data/trajectory.hdf5"
+  }
+}

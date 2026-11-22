@@ -1,0 +1,200 @@
+{
+  "source": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success",
+  "boot_id": "3d72cd12-6f1b-40f3-a505-ef917cabd41d",
+  "task": "H0 bench motion and gripper opening/closing",
+  "training_eligible": false,
+  "evidence": "Logged SDK buffers and matching application calls, no per-frame bus delivery acknowledgement in this 11/16 format.",
+  "rgb_count": 6,
+  "rows_with_complete_seven_targets": 3,
+  "rows": [
+    {
+      "source_rgb": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success/samples/color_019157.png",
+      "rgb_index": 19157,
+      "image_receive_ns": 1855547945445,
+      "image_header_ns": 1794834834818599950,
+      "host_receive_minus_ros_header_ms": 248.431455,
+      "image_encoding": "rgb8",
+      "state_joint_and_grip_age_ms": [
+        2.638816,
+        2.487724
+      ],
+      "measured_state_rad_m": [
+        1.4582400433337823,
+        0.0477696616270848,
+        0.0,
+        -0.019757127132575814,
+        0.42877503733744693,
+        0.09697049324080495,
+        0.0395
+      ],
+      "latest_logged_setpoint_rad_m": null,
+      "sdk_wire_checked": false
+    },
+    {
+      "source_rgb": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success/samples/color_019308.png",
+      "rgb_index": 19308,
+      "image_receive_ns": 1860605662468,
+      "image_header_ns": 1794834839865915506,
+      "host_receive_minus_ros_header_ms": 258.832742,
+      "image_encoding": "rgb8",
+      "state_joint_and_grip_age_ms": [
+        0.943249,
+        0.844081
+      ],
+      "measured_state_rad_m": [
+        1.4582400433337823,
+        0.0477696616270848,
+        0.0,
+        -0.019757127132575814,
+        0.42877503733744693,
+        0.1286831257495419,
+        0.0395
+      ],
+      "latest_logged_setpoint_rad_m": null,
+      "sdk_wire_checked": false
+    },
+    {
+      "source_rgb": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success/samples/color_019461.png",
+      "rgb_index": 19461,
+      "image_receive_ns": 1865862622407,
+      "image_header_ns": 1794834845049399903,
+      "host_receive_minus_ros_header_ms": 332.308228,
+      "image_encoding": "rgb8",
+      "state_joint_and_grip_age_ms": [
+        3.323497,
+        3.281875
+      ],
+      "measured_state_rad_m": [
+        1.4582400433337823,
+        0.0477696616270848,
+        0.0,
+        -0.019757127132575814,
+        0.42877503733744693,
+        0.11615166172022263,
+        0.0395
+      ],
+      "latest_logged_setpoint_rad_m": null,
+      "sdk_wire_checked": false
+    },
+    {
+      "source_rgb": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success/samples/color_019617.png",
+      "rgb_index": 19617,
+      "image_receive_ns": 1871036573771,
+      "image_header_ns": 1794834850264619980,
+      "host_receive_minus_ros_header_ms": 291.039718,
+      "image_encoding": "rgb8",
+      "state_joint_and_grip_age_ms": [
+        3.167365,
+        3.066962
+      ],
+      "measured_state_rad_m": [
+        1.4582400433337823,
+        0.0477696616270848,
+        0.0,
+        -0.019757127132575814,
+        0.42877503733744693,
+        0.0969879465333249,
+        0.0395
+      ],
+      "latest_logged_setpoint_rad_m": [
+        1.4582400433337823,
+        0.04923573819876004,
+        0.0,
+        -0.019757127132575807,
+        0.42877503733744693,
+        0.09697049324080495,
+        0.04
+      ],
+      "sdk_wire_checked": true,
+      "rate_note": "Latest separately issued arm and gripper setpoints at receipt, not a 20 Hz demonstration label.",
+      "command_ages_at_image_reception_ms": [
+        24.353979,
+        24.18043
+      ],
+      "source_call_times_ns": [
+        1871012219792,
+        1871012393341
+      ]
+    },
+    {
+      "source_rgb": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success/samples/color_019768.png",
+      "rgb_index": 19768,
+      "image_receive_ns": 1876240943413,
+      "image_header_ns": 1794834855447856097,
+      "host_receive_minus_ros_header_ms": 312.173088,
+      "image_encoding": "rgb8",
+      "state_joint_and_grip_age_ms": [
+        3.19285,
+        3.098404
+      ],
+      "measured_state_rad_m": [
+        1.4582400433337823,
+        0.0477696616270848,
+        0.0,
+        -0.019757127132575814,
+        0.42877503733744693,
+        0.0969879465333249,
+        0.015099999999999999
+      ],
+      "latest_logged_setpoint_rad_m": [
+        1.4582400433337823,
+        0.04923573819876004,
+        0.0,
+        -0.019757127132575807,
+        0.42877503733744693,
+        0.09697049324080495,
+        0.015
+      ],
+      "sdk_wire_checked": true,
+      "rate_note": "Latest separately issued arm and gripper setpoints at receipt, not a 20 Hz demonstration label.",
+      "command_ages_at_image_reception_ms": [
+        17.72462,
+        251.138665
+      ],
+      "source_call_times_ns": [
+        1876223218793,
+        1875989804748
+      ]
+    },
+    {
+      "source_rgb": "/home/kaiwen/research/dog-and-arm/results/hardware/h0/20261116_2051/evidence/motion_success/samples/color_019922.png",
+      "rgb_index": 19922,
+      "image_receive_ns": 1881477168740,
+      "image_header_ns": 1794834860695165932,
+      "host_receive_minus_ros_header_ms": 301.088963,
+      "image_encoding": "rgb8",
+      "state_joint_and_grip_age_ms": [
+        5.105586,
+        5.022354
+      ],
+      "measured_state_rad_m": [
+        1.4582400433337823,
+        0.0477696616270848,
+        0.0,
+        -0.019757127132575814,
+        0.42877503733744693,
+        0.0969879465333249,
+        0.0395
+      ],
+      "latest_logged_setpoint_rad_m": [
+        1.4582400433337823,
+        0.04923573819876004,
+        0.0,
+        -0.019757127132575807,
+        0.42877503733744693,
+        0.09697049324080495,
+        0.04
+      ],
+      "sdk_wire_checked": true,
+      "rate_note": "Latest separately issued arm and gripper setpoints at receipt, not a 20 Hz demonstration label.",
+      "command_ages_at_image_reception_ms": [
+        1.100658,
+        1962.210647
+      ],
+      "source_call_times_ns": [
+        1881476068082,
+        1879514958093
+      ]
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "disabled": {
+    "source": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/status",
+    "axes": {
+      "J2": {
+        "joint_deg": [
+          -3.172,
+          -3.172
+        ],
+        "motor_deg": [
+          -3.1512678732195276,
+          -3.1512678732195276
+        ],
+        "motor_current_A": [
+          0.0,
+          0.0
+        ],
+        "joint_packets": 402,
+        "motor_packets": 201
+      },
+      "J3": {
+        "joint_deg": [
+          0.20700000000000002,
+          0.20700000000000002
+        ],
+        "motor_deg": [
+          0.17188733853924698,
+          0.17188733853924698
+        ],
+        "motor_current_A": [
+          0.0,
+          0.0
+        ],
+        "joint_packets": 402,
+        "motor_packets": 201
+      }
+    },
+    "drive_bytes": {
+      "0x261": {
+        "0x0": 41
+      },
+      "0x262": {
+        "0x0": 40
+      },
+      "0x263": {
+        "0x0": 40
+      },
+      "0x264": {
+        "0x0": 40
+      },
+      "0x265": {
+        "0x0": 40
+      },
+      "0x266": {
+        "0x0": 40
+      }
+    },
+    "q_deg": [
+      0.37500000000000006,
+      -3.172,
+      0.20700000000000002,
+      -1.051,
+      30.574,
+      0.0
+    ],
+    "sdk_arm_status": {
+      "ctrl_mode": 0,
+      "arm_status": 0,
+      "mode_feedback": 0,
+      "teach_status": 0,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "boot": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "CAN_errors": 0,
+    "interface_delta": {
+      "rx_packets": 4687,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "next_disabled": {
+    "source": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_02/status",
+    "axes": {
+      "J2": {
+        "joint_deg": [
+          -3.172,
+          -3.172
+        ],
+        "motor_deg": [
+          -3.1512678732195276,
+          -3.1512678732195276
+        ],
+        "motor_current_A": [
+          0.0,
+          0.0
+        ],
+        "joint_packets": 1002,
+        "motor_packets": 501
+      },
+      "J3": {
+        "joint_deg": [
+          0.20700000000000002,
+          0.20700000000000002
+        ],
+        "motor_deg": [
+          0.17188733853924698,
+          0.17188733853924698
+        ],
+        "motor_current_A": [
+          0.0,
+          0.0
+        ],
+        "joint_packets": 1001,
+        "motor_packets": 501
+      }
+    },
+    "drive_bytes": {
+      "0x261": {
+        "0x0": 100
+      },
+      "0x262": {
+        "0x0": 100
+      },
+      "0x263": {
+        "0x0": 100
+      },
+      "0x264": {
+        "0x0": 101
+      },
+      "0x265": {
+        "0x0": 100
+      },
+      "0x266": {
+        "0x0": 100
+      }
+    },
+    "q_deg": [
+      0.37500000000000006,
+      -3.172,
+      0.20700000000000002,
+      -1.051,
+      30.574,
+      0.0
+    ],
+    "sdk_arm_status": {
+      "ctrl_mode": 0,
+      "arm_status": 0,
+      "mode_feedback": 0,
+      "teach_status": 0,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "boot": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "CAN_errors": 0,
+    "interface_delta": {
+      "rx_packets": 11666,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "teach": {
+    "source": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/recheck_03/status",
+    "axes": {
+      "J2": {
+        "joint_deg": [
+          -0.6980000000000001,
+          -0.6980000000000001
+        ],
+        "motor_deg": [
+          0.17188733853924698,
+          0.17188733853924698
+        ],
+        "motor_current_A": [
+          1.225,
+          1.25
+        ],
+        "joint_packets": 402,
+        "motor_packets": 201
+      },
+      "J3": {
+        "joint_deg": [
+          -34.653,
+          -34.653
+        ],
+        "motor_deg": [
+          -35.0077212824933,
+          -35.0077212824933
+        ],
+        "motor_current_A": [
+          -0.854,
+          -0.8200000000000001
+        ],
+        "joint_packets": 401,
+        "motor_packets": 201
+      }
+    },
+    "drive_bytes": {
+      "0x261": {
+        "0x40": 40
+      },
+      "0x262": {
+        "0x40": 40
+      },
+      "0x263": {
+        "0x40": 40
+      },
+      "0x264": {
+        "0x40": 40
+      },
+      "0x265": {
+        "0x40": 41
+      },
+      "0x266": {
+        "0x40": 40
+      }
+    },
+    "q_deg": [
+      0.968,
+      -0.6980000000000001,
+      -34.653,
+      1.8439999999999999,
+      44.441,
+      0.0
+    ],
+    "sdk_arm_status": {
+      "ctrl_mode": 2,
+      "arm_status": 0,
+      "mode_feedback": 0,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "boot": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "CAN_errors": 0,
+    "interface_delta": {
+      "rx_packets": 4693,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "home": {
+    "source": "/home/kaiwen/research/pi-q12-data/20261122_q12_recollect_01/after_reported_home_01/status",
+    "axes": {
+      "J2": {
+        "joint_deg": [
+          0.0,
+          0.0
+        ],
+        "motor_deg": [
+          0.6302535746439055,
+          0.6302535746439055
+        ],
+        "motor_current_A": [
+          0.71,
+          0.734
+        ],
+        "joint_packets": 401,
+        "motor_packets": 201
+      },
+      "J3": {
+        "joint_deg": [
+          0.0,
+          0.0
+        ],
+        "motor_deg": [
+          -0.40107045659157625,
+          -0.40107045659157625
+        ],
+        "motor_current_A": [
+          -1.3880000000000001,
+          -1.294
+        ],
+        "joint_packets": 401,
+        "motor_packets": 201
+      }
+    },
+    "drive_bytes": {
+      "0x261": {
+        "0x40": 40
+      },
+      "0x262": {
+        "0x40": 41
+      },
+      "0x263": {
+        "0x40": 40
+      },
+      "0x264": {
+        "0x40": 40
+      },
+      "0x265": {
+        "0x40": 40
+      },
+      "0x266": {
+        "0x40": 40
+      }
+    },
+    "q_deg": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sdk_arm_status": {
+      "ctrl_mode": 1,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "boot": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "CAN_errors": 0,
+    "interface_delta": {
+      "rx_packets": 4887,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "recent": {
+    "source": "/home/kaiwen/research/pi-q12-data/20261122_start_diagnosis/live_baseline_144557",
+    "axes": {
+      "J2": {
+        "joint_deg": [
+          0.0,
+          0.0
+        ],
+        "motor_deg": [
+          0.6302535746439055,
+          0.6302535746439055
+        ],
+        "motor_current_A": [
+          0.763,
+          0.78
+        ],
+        "joint_packets": 401,
+        "motor_packets": 201
+      },
+      "J3": {
+        "joint_deg": [
+          0.0,
+          0.0
+        ],
+        "motor_deg": [
+          -0.40107045659157625,
+          -0.40107045659157625
+        ],
+        "motor_current_A": [
+          -1.347,
+          -1.2550000000000001
+        ],
+        "joint_packets": 401,
+        "motor_packets": 201
+      }
+    },
+    "drive_bytes": {
+      "0x261": {
+        "0x40": 40
+      },
+      "0x262": {
+        "0x40": 40
+      },
+      "0x263": {
+        "0x40": 41
+      },
+      "0x264": {
+        "0x40": 40
+      },
+      "0x265": {
+        "0x40": 40
+      },
+      "0x266": {
+        "0x40": 40
+      }
+    },
+    "q_deg": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sdk_arm_status": {
+      "ctrl_mode": 1,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "boot": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "CAN_errors": 0,
+    "interface_delta": {
+      "rx_packets": 4865,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_packets": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "queried_limits": {
+    "2": {
+      "min_deg": 0.0,
+      "max_deg": 180.0,
+      "request_unix_s": 1795326077.8650634,
+      "reply_unix_s": 1795326077.8656425
+    },
+    "3": {
+      "min_deg": -170.0,
+      "max_deg": 0.0,
+      "request_unix_s": 1795326077.8658798,
+      "reply_unix_s": 1795326077.8673193
+    }
+  },
+  "stop_event": {
+    "status": "STOP_LATCHED",
+    "session": "/home/kaiwen/Documents/Codex/2026-11-20/https-github-com-kaiwen123-yang-0/work/field/board_q12_20261121_01",
+    "transit": "u11",
+    "last_capture": "h05",
+    "attempt_target_deg": [
+      -3.7,
+      43.5,
+      -27.0,
+      -0.2,
+      -4.5,
+      -23.4
+    ],
+    "ramp_end_measured_deg": [
+      -3.634,
+      43.56,
+      -27.074,
+      0.0,
+      -4.578,
+      -23.339000000000002
+    ],
+    "commanded_reference_duration_s": 3.084914119,
+    "arrival_timeout_s": 3.007475946,
+    "initial_site_handoff": "2026-11-21 earlier reported still and no contact; operator subsequently reported possible tabletop contact",
+    "error": "RuntimeError('Target arrival and 0.5 s of quiet feedback were not confirmed')",
+    "timeout_local_time": "2026-11-21T22:42:21.682331+08:00",
+    "motion_status_during_arrival": [
+      1
+    ],
+    "ctrl_modes_during_arrival": [
+      1
+    ],
+    "arm_status_during_arrival": [
+      0
+    ],
+    "cached_polls_in_arrival": 30,
+    "controller_driver_faults_during_arrival": false,
+    "reported_controller_faults_during_arrival": false,
+    "all_driver_enable_flags_during_arrival": true,
+    "can_error_frames": 0,
+    "interface_delta": {
+      "rx_packets": 23033,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_packets": 489,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    },
+    "submitted_ids": {
+      "0x151": 32,
+      "0x155": 152,
+      "0x156": 152,
+      "0x157": 152,
+      "0x150": 1
+    },
+    "damping_stop_frame": {
+      "host_submit_start_ns": "21143502370221",
+      "host_submit_end_ns": "21143502422369",
+      "phase": "calibration_pose",
+      "id": "0x150",
+      "data_hex": "0100000000000000",
+      "result": "host_submitted",
+      "error": ""
+    },
+    "independent_status_after_stop": {
+      "ctrl_mode": 1,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 1,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "later_read_only_snapshot": {
+      "monotonic_s": 21699.941894434,
+      "q_deg": [
+        -3.634,
+        34.688,
+        0.9,
+        0.0,
+        29.502,
+        -23.339000000000002
+      ],
+      "ctrl_mode": 0,
+      "arm_status": 1,
+      "mode_feedback": 1,
+      "teach_status": 0,
+      "motion_status": 1
+    },
+    "later_snapshot_wall_time": "2026-11-21T22:51:38.350289+08:00",
+    "operator_photo": "stop_wrist.jpg",
+    "contact_confirmed": null,
+    "recovery_executed": false,
+    "interpretation": "Controller did not acknowledge arrival. Timeout in H0 executed damping e-stop, followed by large joint-angle changes and slower residual drift. Obstruction, tabletop contact and firmware reason are not established by logs."
+  },
+  "published_reconnect": [
+    0.48499999999999993,
+    -3.221,
+    1.53,
+    -0.396,
+    24.453000000000003,
+    -24.437
+  ],
+  "host_stop_vs_joint_feedback": "The Nov 21 stop, later reconnect and Nov 22 disabled readings are separate timestamped windows; no physical fixture or continuous cross-machine record connects all intervening events."
+}

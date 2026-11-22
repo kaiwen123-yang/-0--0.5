@@ -1,0 +1,31 @@
+{
+  "source": [
+    "close_fridge_door",
+    "0306_204419",
+    "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382"
+  ],
+  "source_path": "data/agilex/close_fridge_door/success_episodes/0306_204419/data/trajectory.hdf5",
+  "rows": 2243,
+  "native_side": "right",
+  "active_camera_path": "camera_observations/color_images/camera_right",
+  "original_rgb_indices": [
+    0,
+    1121,
+    2242
+  ],
+  "proposed_target_model_slot": "left_wrist_0_rgb (one active wrist; source side explicitly retained)",
+  "source_arrays": {
+    "state_joint": "puppet/arm_right_position_align",
+    "state_gripper": "puppet/end_effector_right_position_align",
+    "leader_joint": "master/arm_right_position_align",
+    "leader_gripper": "master/end_effector_right_position_align"
+  },
+  "channel_order": "original compressed RGB; decode BGR to RGB once when loading into model",
+  "training_eligible": false,
+  "open_items": [
+    "master-to-command semantics, source model vs Piper H and joint signs",
+    "gripper zero/scale and total opening",
+    "subsecond timebase and policy-grid alignment",
+    "independence from mobile base or other environmental actions"
+  ]
+}
