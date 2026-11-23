@@ -39,17 +39,22 @@ def main():
     sub = p.add_subparsers(dest="kind", required=True)
     sub.add_parser("status", help="读取两秒实测反馈；TX=0")
     sub.add_parser("limits", help="仅查询六轴当前控制器限位")
-    for kind in ("prepare", "teach", "empty", "block"):
-        sp = sub.add_parser(kind, help=dict(prepare="建立本次起点，核实开口",
-                            teach="被动手拖记录", empty="移走方块后核查新路径",
-                            block="按原布局抓放一次")[kind])
+    modes = {"prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
+             "teach": "被动手拖记录", "empty": "移走方块后核查新路径",
+             "block": "按原布局抓放一次"}
+    for kind, help_text in modes.items():
+        sp = sub.add_parser(kind, help=help_text)
         sp.add_argument("session", type=Path)
+        if kind == "width-check":
+            sp.add_argument("target_mm", type=float, help="本次空夹目标 mm，15 至 40")
         if kind == "teach":
             sp.add_argument("placement", help="摆放编号")
         if kind == "block":
             sp.add_argument("--formal", action="store_true", help="首批逐条质检通过后采正式示范")
     a = p.parse_args()
     kind = a.kind
+    if kind == "width-check" and not 15 <= a.target_mm <= 40:
+        p.error("单点空夹目标须在 15–40 mm 内")
     if kind not in ("status", "limits") and not sys.stdin.isatty():
         p.error("在能观察机械臂的交互终端运行")
     session = getattr(a, "session", ROOT / "pi-q12-data/pi-demo-checks").resolve()
@@ -106,12 +111,17 @@ def main():
             raise RuntimeError("实测姿态距先前有提交记录的起点超过 0.35°")
         return h["q"]
 
-    def physical_width(label):
+    def physical_width(label, *, require_match=True):
         value = float(input(label + " 从侧面用标尺读两指内侧总间距（mm）：")) / 1000
         actual = rx.current()[1]
-        if not math.isfinite(value) or not 0 <= value <= .1 or abs(actual-value) > .002:
-            raise ValueError(f"尺读与反馈差超过 2 mm 或输入无效，实测反馈 {actual*1000:.2f} mm")
-        return dict(ruler_m=value, feedback_m=actual, mono_ns=CLOCK())
+        if not math.isfinite(value) or not 0 <= value <= .1:
+            raise ValueError("尺读必须为 0–100 mm 的有限数值")
+        within = abs(actual-value) <= .002
+        report.setdefault("opening_checks", []).append(dict(
+            phase=label, ruler_m=value, feedback_m=actual, mono_ns=CLOCK(),
+            feedback_minus_ruler_m=actual-value, within_2_mm=within))
+        if require_match and not within:
+            raise ValueError(f"尺读 {value*1000:.2f} mm，反馈 {actual*1000:.2f} mm，相差超过 2 mm")
 
     def grip_at(width, force, label, require_width):
         sender.width(width, force, label)
@@ -124,6 +134,30 @@ def main():
                 return row["width_m"]
             time.sleep(.02)
         raise RuntimeError(f"夹爪 {label} 无合格的新反馈")
+
+    def check_width():
+        report["use"] = "gripper_metrology_only"
+        target = a.target_mm / 1000
+        base = healthy(dev, rx, grip)["q_rad"]
+        h0.calibration_arrival(dev, base)
+        agree(f"夹爪空载、卡尺与人手已撤离。单次目标 {a.target_mm:g} mm，力 1 N")
+        current = healthy(dev, rx, grip)
+        if gap(base, current["q_rad"]) > .1 or current["arm"]["motion_status"] != 0:
+            raise RuntimeError("单点检查前机械臂偏离保持位")
+        grip_at(target, 1., "caliper_check", True)
+        # The SDK keeps this single gripper command. This measurement sends
+        # no arm command and never marks a teaching/replay session ready.
+        widths = []
+        until = time.monotonic() + .5
+        while time.monotonic() < until:
+            row = healthy(dev, rx, grip)
+            if gap(base, row["q_rad"]) > .1 or row["arm"]["motion_status"] != 0:
+                raise RuntimeError("空夹检查期间机械臂姿态变化")
+            widths.append(row["width_m"])
+            time.sleep(.01)
+        report["settled_feedback_m"] = [min(widths), max(widths)]
+        print("半秒反馈范围 (mm)", [round(v*1000, 2) for v in report["settled_feedback_m"]], flush=True)
+        physical_width("caliper_check", require_match=False)
 
     def prepare():
         nonlocal active
@@ -140,7 +174,7 @@ def main():
         force = float(input("现场核实适用的力 N："))
         if not .015 <= cl < op <= .040 or not 0 < force <= 1:
             raise ValueError("首批仅使用 H0 台架范围内的开口、力度")
-        report["opening_checks"] = [physical_width("初始")]
+        physical_width("初始")
         agree("夹爪空载，手和标尺已撤离，将下发当前实测位置保持，并张开夹爪。")
         q = healthy(dev, rx, grip)["q_rad"]
         if gap(q, base) > .1:
@@ -157,7 +191,7 @@ def main():
             # Once a powered hold is established, a rejected ruler reading
             # terminates preparation in place.
             active = False
-            report["opening_checks"].append(physical_width(name))
+            physical_width(name)
 
         cfg = dict(open_m=op, close_m=cl, force_N=force, session_id=report["run_id"],
                    opening_checks=report["opening_checks"])
@@ -418,6 +452,8 @@ def main():
                 print(json.dumps(limits(), ensure_ascii=False))
             elif kind == "prepare":
                 prepare()
+            elif kind == "width-check":
+                check_width()
             elif kind == "teach":
                 teach()
             else:
