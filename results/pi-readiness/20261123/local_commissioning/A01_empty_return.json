@@ -1,0 +1,191 @@
+{
+  "run_id": "b8771585-9f6a-450d-a0c6-860c82bc314e",
+  "directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_222313_159762_return-start",
+  "complete": true,
+  "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+  "reference_run": "20261123_221226_399268_empty",
+  "start_local": "2026-11-23T22:23:13.159986+08:00",
+  "end_local": "2026-11-23T22:27:47.724003+08:00",
+  "original_ticks": 7606,
+  "return_ticks": 5439,
+  "wall_s": 274.564017438,
+  "final": {
+    "mono_ns": 125459879775077,
+    "q_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "width_m": 0.0395,
+    "arm": {
+      "ctrl_mode": 1,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "drives": [
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      }
+    ],
+    "gripper": {
+      "value": 0.0395,
+      "force": 0.106,
+      "foc_status": {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "sensor_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "homing_status": false
+      },
+      "mode": "width"
+    }
+  },
+  "stop": "arrived_powered_hold",
+  "command_kinds": {
+    "read_limit": 6,
+    "speed": 1,
+    "mode": 1,
+    "arm": 5439
+  },
+  "tx_status": {
+    "host_submitted": 16325
+  },
+  "interface_delta": {
+    "tx_packets": 16325,
+    "rx_packets": 664700,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "first_joint": {
+    "id": "9:arm",
+    "kind": "arm",
+    "requested": [
+      0.06358234465015343,
+      2.2235669203332957,
+      -1.9943179230838406,
+      -0.12667599710974844,
+      1.1601727136781907,
+      0.2541722989679342
+    ],
+    "source": "7618:arm",
+    "start_ns": 125186724313595,
+    "result": "host_submitted",
+    "actual": [
+      0.06358234465015343,
+      2.2235669203332957,
+      -1.9943179230838406,
+      -0.12667599710974844,
+      1.1601727136781907,
+      0.2541722989679342
+    ],
+    "submitted_ns": 125186724625779,
+    "frames": 3
+  },
+  "last_joint": {
+    "id": "5447:arm",
+    "kind": "arm",
+    "requested": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "10:arm",
+    "start_ns": 125459313510364,
+    "result": "host_submitted",
+    "actual": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "submitted_ns": 125459313814600,
+    "frames": 3
+  }
+}
