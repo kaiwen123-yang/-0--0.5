@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-23",
+  "scope": "Read-only review of publicly committed A01 visual evidence; no live hardware, raw data replay, training, or remote writes.",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "source_commit": "0ee2d2ecc6783ffcfdec115079a83db3944caeb5",
+  "instructions_read": "AGENTS.md at source_commit",
+  "conclusion_zh": "可接受为第 1 条成功的实物 commissioning 记录。现场记录、完整控制/反馈摘要、空场与带物夹爪曲线对照及已查看的末帧互相一致。当前公开的图像只能独立确认最终蓝块落盘、空爪抬离的画面；完整抓起和搬运过程仍来自现场观察记录，未在本次审查中观看全程视频。这个公开证据边界不构成否定该次现场成功的理由，也不应把 1 条记录当成已建立可泛化训练集。",
+  "inspected_images": [
+    {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_block01_terminal.png",
+      "source_url": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/results/pi-readiness/20261123/local_commissioning/A01_block01_terminal.png",
+      "bytes": 390040,
+      "viewed_with": "view_image",
+      "observed_zh": "640×480 腕图中，蓝色方块清楚位于画面左侧透明浅盘内部；下方前景两夹指张开，指间未见物体。右侧可见相邻透明器件/容器和深色固定带。目标蓝块和其所在托盘区域可辨认，夹爪占据图像下方较大区域。",
+      "supports_zh": "与放下后空爪抬离的最终状态一致。",
+      "cannot_establish_zh": [
+        "不能单张证明此前抓起、全程无滑落或无人介入。",
+        "不能由这张终帧推出开始/接近阶段的完整可见性，也不能测出毫米级净空。"
+      ]
+    },
+    {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_block01_trajectory.png",
+      "source_url": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/results/pi-readiness/20261123/local_commissioning/A01_block01_trajectory.png",
+      "bytes": 99479,
+      "viewed_with": "view_image",
+      "observed_zh": "六轴实测和 submitted hold 曲线在图尺度上紧密重合；中段存在长时间平坦保持。夹持段的目标开口为 15 mm，实测约 24.7 mm；释放后回到约 39.5 mm。",
+      "supports_zh": "支持抓取/释放指令确实分阶段执行、带物闭合反馈与空夹不同，以及长等待确实存在。",
+      "cannot_establish_zh": [
+        "轨迹图不能替代物体抓持的图像证据。",
+        "SDK 开口反馈不是卡尺测得的指垫净距。"
+      ]
+    },
+    {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_empty_trajectory.png",
+      "source_url": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/results/pi-readiness/20261123/local_commissioning/A01_empty_trajectory.png",
+      "bytes": 99519,
+      "viewed_with": "view_image",
+      "observed_zh": "空场闭合阶段实测与 15 mm 目标接近，显著区别于带物执行约 24.7 mm 的闭合反馈；六轴曲线和长等待整体结构相似。",
+      "supports_zh": "为空夹/带物状态差异提供可核查对照，结合现场记录符合物体夹在指间的解释。",
+      "cannot_establish_zh": [
+        "这不是独立的力/接触标定。",
+        "空场完成不代表任意新布局都已经验收。"
+      ]
+    }
+  ],
+  "public_inventory": {
+    "directories_checked": [
+      "results/pi-readiness/20261123/local_commissioning/",
+      "results/pi-readiness/20261123/local_commissioning/A01_episode01/"
+    ],
+    "current_episode_public_images": [
+      "A01_block01_terminal.png",
+      "A01_block01_trajectory.png",
+      "A01_empty_trajectory.png"
+    ],
+    "episode_subdirectory_files": [
+      "alignment_manifest.json",
+      "dataset.json",
+      "export_validation.json",
+      "index.json",
+      "review.json"
+    ],
+    "not_present_in_checked_directories": [
+      "真实开始原图",
+      "闭合前后原图",
+      "搬运中原图",
+      "释放前后原图",
+      "完整或短 MP4",
+      "布局照片",
+      "卡尺指垫测量照片"
+    ],
+    "scope_limit_zh": "只对指定目录及 A01_episode01 子目录作此结论，没有声称全仓库不存在其他历史照片或视频。",
+    "locally_retained_video_report": {
+      "source_url": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/docs/PI_DAILY_WORK_LOG.md",
+      "location_reported": "Windows 项目 outputs/20261123",
+      "playback_reported": "空场与实物四倍速 MP4，每四个原始序号取约一帧，展示用途",
+      "independently_watched_here": false
+    }
+  },
+  "recorded_success_evidence": {
+    "operator_statement_source": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/docs/PI_DAILY_WORK_LOG.md",
+    "report_source": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/results/pi-readiness/20261123/local_commissioning/A01_block01.json",
+    "review_source": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/results/pi-readiness/20261123/local_commissioning/A01_episode01/review.json",
+    "episode_id": "ca2fbcb1-de38-4dac-9149-e1d3f710e698",
+    "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+    "actual_success_count": 1,
+    "current_split": "commissioning",
+    "training_eligible": false,
+    "site_statement_zh": "腕图看到蓝块在指间随臂转移，张开后留在浅盘，空爪抬离；操作者确认全程无人介入。",
+    "gripper_while_closed_sdk_mm": {
+      "min": 24.6,
+      "median": 24.7,
+      "max": 24.8
+    },
+    "commanded_close_sdk_mm": 15,
+    "gripper_open_settled_sdk_mm": 39.5,
+    "note_zh": "一条 7680 行的时间序列仍是一条任务示范；有现场成功和正确导出并不等于训练多样性足够。"
+  },
+  "wrist_observability": {
+    "source_url": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/docs/PI_DAILY_WORK_LOG.md",
+    "true_source_start_image": "第二遍手拖原始 start 对应 rgb/0002595.png",
+    "true_source_blue_centroid_px": [
+      312.3,
+      446.3
+    ],
+    "ready_image": "block1_ready_223406/rgb/0000000.png",
+    "ready_blue_centroid_px": [
+      313.8,
+      431.6
+    ],
+    "recorded_offset_px": [
+      1.4,
+      -14.7
+    ],
+    "image_size_wh": [
+      640,
+      480
+    ],
+    "finding_zh": "记录的初始蓝块中心离图像下边缘约 33–48 px，说明初始任务区位于视野较靠下位置。公开终帧中两夹指也占据下方前景。实际起点原图尚未在本次读取到，不能仅凭中心点断言方块已裁切、或全部轮廓和接近空间都清楚。",
+    "interpretation_limit_zh": "此次带有约 15 px 的纵向起点差仍抓放成功，只是这一次条件下的结果；不能作为通用摆放误差阈值，不能直接换算成毫米。",
+    "next_check_zh": "从现存开始原图和闭合前图检查物体整个轮廓、接近路径、指尖及盘沿的可见性；正式采集优先在当前已验证且看得清的区域改变布局。无需重新跑相机或已冻结标定，也不主动改变相机安装。",
+    "placement_adjustment_zh": "若起点关键物体确实贴边或被遮住，先调整物体布局并为该布局重新示教/验收；任何新起始姿态由既有现场流程单独确认。"
+  },
+  "pad_measurement_evidence": {
+    "source_url": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/results/pi-readiness/20261123/local_commissioning/pad_clearance_2134.json",
+    "source_type": "numeric/operator-recorded",
+    "physical_photos_seen": false,
+    "object_width_mm": 20,
+    "target_sdk_mm": [
+      40,
+      25,
+      15,
+      40
+    ],
+    "caliper_pad_gap_mm": [
+      35,
+      22,
+      14.5,
+      34.71
+    ],
+    "approximate_caliper_entries": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "conclusion_zh": "这是有记录的实物尺读点，当前指定目录未附量测照片。本次未独立目视复核量具位置；不能把 SDK 开口、目标开口和物理指垫净距合并成同一个量，更不能从这几个点直接宣称固定偏置。"
+  },
+  "minimal_additional_public_evidence": {
+    "method_zh": "优先从本次已保留的原始资料导出，不需要为补展示证据重做该次任务。",
+    "original_raw_root": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_223453_601082_block",
+    "raw_image_candidates": [
+      {
+        "phase": "开始",
+        "id": 67,
+        "provenance": "export_validation.json row 0"
+      },
+      {
+        "phase": "闭合前",
+        "id": 5531,
+        "provenance": "A01_block01.json keyframes"
+      },
+      {
+        "phase": "闭合后",
+        "id": 5581,
+        "provenance": "A01_block01.json keyframes"
+      },
+      {
+        "phase": "夹持运输中",
+        "id": 8680,
+        "provenance": "export_validation.json row 5760; 发布前现场确认此帧确为可辨认的搬运中画面"
+      },
+      {
+        "phase": "释放前",
+        "id": 10100,
+        "provenance": "A01_block01.json keyframes"
+      },
+      {
+        "phase": "释放后",
+        "id": 10175,
+        "provenance": "A01_block01.json keyframes"
+      },
+      {
+        "phase": "终态",
+        "id": 11551,
+        "provenance": "A01_block01.json keyframes; 对应终帧证据已公开"
+      }
+    ],
+    "image_requirements_zh": "保持 received RGB 的原始像素、不叠字；配独立清单记录 episode、raw image ID、接收时间和阶段。可另给带标注的展示拼图，但不将其当训练输入。",
+    "video_requirements_zh": "提供现存的全程 4× 展示片或涵盖开始—抓起—运输—释放—空爪抬离的连续片段，标明加速/抽帧规则和原始时间。关键抓起与释放处可另保留原速短片；无需把全部大原图或 7 GB NPY 上传 GitHub。",
+    "independence_note_zh": "未发布完整视频不撤销现场 PASS；补材料的作用是让远程审阅者也能直接检查全过程。"
+  },
+  "next_collection_recommendations_zh": [
+    "保留 A01 作为 commissioning 首条及链路回归样本。现有源路径长等待应在正式示范前按控制审查结论处理，但不篡改已经完成的原始记录。",
+    "按已有计划把 commissioning 成功数补到 3–5 条；每条均保留开始、接近/夹持、运输、释放与退离的代表图，失败与人工介入单独标记保存。",
+    "正式 30–50 条按真实布局与来源路径做变化：在当前看得清、可达的区域内改变方块起点和轻微朝向，再逐步改变目标落盘位置；每个新布局记录对应源示教和场景编号，先沿既有流程验收后执行。相同源轨迹、相同布局重复 50 次不能算 50 种独立示范。",
+    "先保持同一蓝块、托盘和相机安装，建立稳定单任务基线；不在首批同时增加物体材质、尺寸、光照、起点和任务语言等所有变量，避免失败原因无法定位。",
+    "按 source_trajectory_id、layout_id 和 session_id 分组划分训练/验证，整条 episode 及同源近重复不跨集合；验证集保留未见过的布局组合，不能随机拆帧。",
+    "每个布局先检查腕图关键阶段是否可辨认物体与指尖接近区域。只用当前单腕相机；无需恢复额外相机、重跑长观测或重做已完成标定。"
+  ],
+  "not_done": [
+    "未查看本地保留的完整 4× MP4",
+    "未访问测试机或 Windows 原始目录",
+    "未独立重算全部 7680 行或 11553 帧",
+    "未发送硬件动作",
+    "未启动训练",
+    "未推送仓库"
+  ]
+}

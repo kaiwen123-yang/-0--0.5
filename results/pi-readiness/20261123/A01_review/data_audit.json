@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "reviewed_commit": "0ee2d2ecc6783ffcfdec115079a83db3944caeb5",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "review_date": "2026-11-23",
+  "scope": {
+    "mode": "read_only_source_and_published_receipts",
+    "read_agents_md": true,
+    "independently_reran_local_npy_raw_log_validation": false,
+    "hardware_actions": false,
+    "training_started": false,
+    "remote_writes": false,
+    "limitations": [
+      "7680-row state/action exact checks and nine RGB pixel comparisons are published local validation receipts. The multi-GB NPYs and original full raw logs remain on the user's machine.",
+      "This audit does not independently establish full-video task success; approved_block=true is the recorded local review verdict.",
+      "One episode and one layout/source trajectory do not establish task success rate or learned-policy generalization."
+    ]
+  },
+  "verdict": {
+    "commissioning_episode": "PASS_WITH_PUBLISHED_FIELD_EVIDENCE",
+    "direct_formal_training": false,
+    "summary_zh": "首条 A01 可作为通过现场复核的真实联调成功样本保存。实际 state 和 action 来源、20 Hz 对齐、episode 边界行为与代码一致。当前必须保持 commissioning_only，不能以一条或7680行当作正式训练集。正式下一步先落实 SDK 夹爪坐标契约和合法任务结束点，再开始独立会话/布局的有效示范采集。",
+    "discard_or_repeat_entire_A01_required": false
+  },
+  "episode": {
+    "run_id": "ca2fbcb1-de38-4dac-9149-e1d3f710e698",
+    "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+    "session_id": "15cfe613-408f-4c60-bced-e6999de92412",
+    "placement": "A01",
+    "split": "commissioning",
+    "training_eligible": false,
+    "rows": 7680,
+    "images_recorded": 11553,
+    "policy_hz": 20,
+    "horizon": 10,
+    "grid_span_s": 384.001588599,
+    "total_wall_s": 388.319883716,
+    "feedback_age_p95_ms": {
+      "image": 31.79378665,
+      "joint": 4.7577953,
+      "gripper": 4.7654731
+    },
+    "rgb_interval_max_ms": 39.185344,
+    "max_axis_tracking_error_deg": {
+      "p95": 0.151,
+      "max": 0.397
+    },
+    "queue_drops": 0,
+    "interface_rx_errors": 0,
+    "interface_tx_errors": 0,
+    "interface_rx_dropped": 0,
+    "interface_tx_dropped": 0,
+    "rejected_incoherent_joint_triplets": 5,
+    "state_gripper_vs_target_diff_gt5mm_rows": 3074,
+    "exported_npy_total_bytes": 7078380032,
+    "reported_validation": {
+      "state_float32_exact_rows": 7680,
+      "wire_action_float32_exact_rows": 7680,
+      "rgb_pixel_equal_sampled_rows": 9,
+      "reader_final_chunk_repeats_last": true,
+      "provenance": "results/pi-readiness/20261123/local_commissioning/A01_episode01/export_validation.json"
+    }
+  },
+  "code_supported_findings": [
+    {
+      "id": "actual_state_and_action",
+      "assessment": "supported",
+      "summary_zh": "state 来自真实 CAN 反馈；action 来自成功 host_submitted 的原始命令帧解码，没有把实测关节/夹爪状态直接复制成 action。",
+      "references": [
+        "tasks/piper_real_single_v1/demo_io.py:64-95",
+        "tasks/piper_real_single_v1/demo_io.py:128-161",
+        "tasks/piper_real_single_v1/demo_export.py:57-91",
+        "tasks/piper_real_single_v1/demo_export.py:107-113,149-150"
+      ],
+      "details_zh": "六关节反馈是 0x2A5–0x2A7 的完整三帧，毫度转 rad；夹爪反馈 0x2A8 原始 µm 转 m。目标是 0x155–0x157 三帧及 0x159。发送记录验证完整事务、实际帧内容和量化目标一致；host_submitted 不应写成物理总线确认或控制器已执行。"
+    },
+    {
+      "id": "causal_alignment",
+      "assessment": "supported",
+      "summary_zh": "每个 t 只选 <=t 收到的 RGB、完整关节组和夹爪反馈；action 取 (t,t+50ms] 末最后完整有效目标，避开正在发送中的半个三帧事务。",
+      "references": [
+        "tasks/piper_real_single_v1/demo_export.py:119-159",
+        "tasks/piper_real_single_v1/dataset.py:60-66",
+        "results/pi-readiness/20261123/local_commissioning/A01_episode01/alignment_manifest.json"
+      ],
+      "details_zh": "该约定没有未来反馈泄漏，且来源时间/命令 ID 有逐行记录。训练后的发送器应与这个未来一个政策间隔的动作约定保持一致。长期保持的夹爪目标命令年龄较大是有效保持，不是状态陈旧；曝光同步仍未被此接收时钟对齐证明。"
+    },
+    {
+      "id": "episode_boundary",
+      "assessment": "supported",
+      "summary_zh": "horizon=10；末尾重复本 episode 最后动作，不跨入下一 episode；代码和现场 reader 回执一致。",
+      "references": [
+        "tasks/piper_real_single_v1/dataset.py:83-100",
+        "tasks/piper_real_single_v1/demo_export.py:313-319",
+        "results/pi-readiness/20261123/local_commissioning/A01_episode01/export_validation.json"
+      ]
+    },
+    {
+      "id": "contact_difference",
+      "assessment": "correct_and_useful",
+      "summary_zh": "夹住方块时 SDK 实测宽度约24.6–24.8mm，而闭合目标为15mm，二者应各自保留。3074行差值>5mm本身不是错标签；不得把反馈覆盖目标或把目标改写为反馈。",
+      "references": [
+        "results/pi-readiness/20261123/local_commissioning/A01_block01.json",
+        "results/pi-readiness/20261123/local_commissioning/A01_episode01/export_validation.json"
+      ],
+      "details_zh": "设备反馈的带符号力值仍是原始设备量，不据此声称精确物理夹持力。"
+    },
+    {
+      "id": "formal_gripper_domain",
+      "assessment": "must_resolve_before_formal_collection",
+      "summary_zh": "SDK 宽度与指垫物理净距不相等；代码已将 prepare-pads 会话限制为 commissioning。最务实的首版契约是本机 SDK 宽度坐标，保留 µm→m 的反馈和命令值，指垫净距另外记录。",
+      "references": [
+        "tasks/piper_real_single_v1/demo_field.py:121-131",
+        "tasks/piper_real_single_v1/demo_field.py:264-270,455-461",
+        "tasks/piper_real_single_v1/demo_export.py:293-311",
+        "tasks/piper_real_single_v1/dataset.py:28-56",
+        "tasks/piper_real_single_v1/policy_config.py:82-99",
+        "results/pi-readiness/20261123/local_commissioning/pad_clearance_2134.json"
+      ],
+      "details_zh": "实测目标40mm、稳定反馈39.5mm时指垫净距约35/34.71mm；目标25mm对应约22mm；目标15mm对应约14.5mm。这些稀疏点不能生成通用线性偏置。对同机行为克隆无需先拟合全行程净距曲线，但 dataset 根元数据、norm/run spec、policy metadata、推理适配器、唯一发送端必须显式使用同一 gripper_basis 和版本。现有 total_opening 的物理措辞需消除歧义，不能只把 commissioning_only 改 false。",
+      "action_zh": "采用诸如 piper_h_sdk_width_m_v1 的明确字段；state第7维为 measured SDK width，action第7维为 absolute SDK width target。首6维仍rad，DELTA_MASK前6 true、第7 false。按新正式setup采集；保留A01原始证据。同步让 training_data_requirements 明确核验 training_eligible 与该坐标契约，目前代码主要依据train split且尚不检查这两个字段。当前原样A01没有train split，所以并未被现行训练入口误放行。"
+    },
+    {
+      "id": "formal_task_end",
+      "assessment": "must_resolve_before_formal_collection",
+      "summary_zh": "人工选定抬离端点本身有来源证据，但现行代码只允许 reviewed commissioning 使用该分支；正式采集必须有正常、合法并保留来源的释放后抬离任务结束点。",
+      "references": [
+        "tasks/piper_real_single_v1/demo_field.py:462-473",
+        "results/pi-readiness/20261123/local_commissioning/A01_episode01/alignment_manifest.json"
+      ],
+      "details_zh": "A01选用 source joint ID43901，参考原图rgb/0006527.png，释放后抬离Δz70.8mm。独立回起点应在episode外。可让正常示教明确在抬离点结束，或正式实现并校验同类end selection；不可仅删门禁、改JSON或把有问题的后续手拖回程混入成功示范。"
+    },
+    {
+      "id": "split_groups",
+      "assessment": "collection_plan_requirement",
+      "summary_zh": "导出器分别限制 session_id、placement、source_trajectory_id 均不可跨train/validation。同一session内多个布局也无法被部分分到验证。",
+      "references": [
+        "tasks/piper_real_single_v1/demo_export.py:239-244,258-274"
+      ],
+      "action_zh": "采集前按split建立真正独立会话，placement名称全局避免交叉复用，source trajectory重新示教。示例T01/T02会话共40条训练，V01独立会话10条验证；T布局前缀T、V布局前缀V，V不复用T源轨迹。50条只是计划例子，不是保证成功的门槛；不可同一session录50条后随机40/10切分，也不可改ID制造独立性。"
+    },
+    {
+      "id": "one_episode_and_storage",
+      "assessment": "practical_collection_advice",
+      "summary_zh": "7680帧来自一个长episode，不能按7680个独立示范计算；下一轮更有价值的是新的有效路径/布局和更简洁的执行，而非重复放大同一A01。",
+      "references": [
+        "results/pi-readiness/20261123/local_commissioning/A01_episode01/index.json",
+        "results/pi-readiness/20261123/local_commissioning/A01_episode01/export_validation.json"
+      ],
+      "details_zh": "当前单episode导出约7.08GB；若照此长度录50条，仅这些NPY约354GB，不含原始RGB和反馈。缩短无任务价值的停顿应发生在下一次正常示教/重放安排中；不要事后随意删行并继续声称50ms连续时间轴。具体动作停顿分析由另一路控制审查提供。"
+    }
+  ],
+  "next_order_zh": [
+    "保存A01 commissioning原始数据和已发布回执，无需整条推翻。",
+    "先落实并贯通本机SDK宽度坐标契约，正式setup与合法抬离结束点；既有标定无需因此重做。",
+    "录下一条更紧凑的新成功示范，针对实际变化验证完整性；不额外搭建mock、shape或全库测试。",
+    "按独立会话、布局、源轨迹继续正式采集；30–50成功示范是首轮采集预算，按覆盖和后续学习结果调整。",
+    "正式集冻结后，π0与π0.5共用相同数据划分，各算各自train-only norm并保持独立权重与输出。",
+    "先离线观察模型输出和时间约定，再经现场唯一发送端进入低速闭环；本次云端审查不操作硬件。"
+  ]
+}

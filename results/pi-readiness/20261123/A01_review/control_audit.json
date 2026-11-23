@@ -1,0 +1,292 @@
+{
+  "audit_date": "2026-11-23",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "commit": "0ee2d2ecc6783ffcfdec115079a83db3944caeb5",
+  "reviewer_scope": "只读核对已提交摘要与实际控制/规划/导出代码；未连接硬件、未运行训练、未修改共享SDK或dog-and-arm、未重读测试机全部原始图像/反馈/7680行。",
+  "decision": {
+    "commissioning": "A01可以保留为第一条成功的实物联调示范。真实低速目标重放、夹爪接触/释放、图像状态记录和导出链路已有同次证据。",
+    "formal_training": "当前条目明确commissioning_only。不能直接改use或--formal把这条中断示教后选择末端的记录变成正式示范。",
+    "next_priority": "先落实SDK夹爪宽度坐标的版本化契约、支持正常完成的抬离终点及独立返回、缩短不必要停留，然后重新真实采集干净源/空场/实物；不先提高已验证速度上限。",
+    "deployment": "这些记录尚不证明π0/π0.5自主控制成功、跨摆放泛化或笛卡尔毫米精度。"
+  },
+  "actual_state": {
+    "last_report_time_bjt": "2026-11-23T22:46:19+08:00",
+    "q_deg": [
+      3.627,
+      127.481,
+      -114.178,
+      -7.188,
+      66.424,
+      14.585
+    ],
+    "description": "放置后抬离姿态，非零位；CAN/MOVE_J到位，六轴使能保持。",
+    "gripper_sdk_width_m": 0.0395,
+    "state_source": "docs/PI_REAL_TEST_STATE.md:51",
+    "caution": "这只是仓库末次记录，下一次动作前需现场status读当前反馈；不能以历史结果认定当前仍同boot/TX/姿态。"
+  },
+  "evidence": {
+    "source": {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_selected_retreat.json",
+      "id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+      "directory": "20261123_215419_277510_teach",
+      "start_joint_id": 17608,
+      "close_joint_id": 22628,
+      "open_joint_id": 39441,
+      "selected_end_joint_id": 43901,
+      "selected_end_kind": "observed_stationary_retreat",
+      "start_to_close_s": 25.099700998,
+      "close_to_open_s": 84.064253495,
+      "open_to_selected_end_s": 22.299811254,
+      "selected_source_span_s": 131.463765747,
+      "selected_rows": 26294,
+      "retained_knots": 453,
+      "reference_ticks": 7601,
+      "planned_duration_s": 380.05,
+      "planned_over_selected_source": 2.890910197,
+      "first_excluded_out_of_limit_joint_id": 44917,
+      "source_complete": false,
+      "source_error": "KeyboardInterrupt('operator interrupt')",
+      "interpretation": "经人工选取合法静止抬离终点的联调特例，原始数据和越限尾段继续保留；不能继承为正式完整示教。"
+    },
+    "empty": {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_empty.json",
+      "review": "results/pi-readiness/20261123/local_commissioning/A01_empty_review.json",
+      "directory": "20261123_221226_399268_empty",
+      "complete": true,
+      "wall_s": 402.461005202,
+      "grid_span_s": 398.158554482,
+      "pause_resume_verified": true,
+      "prior_0_4s_max_axis_excursion_deg": 0.228,
+      "pause_target_interval_s": 14.039263009,
+      "tracking_max_axis_deg": {
+        "p95": 0.149,
+        "max": 0.307
+      },
+      "review_result": "PASS",
+      "approved_empty": true,
+      "qualification": "验证了一次当前低速空场路径在运动后P暂停、保持、R恢复；不能推广到任意速度/任意紧急停机、通信故障或策略闭环。"
+    },
+    "real_block": {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_block01.json",
+      "run_id": "ca2fbcb1-de38-4dac-9149-e1d3f710e698",
+      "directory": "20261123_223453_601082_block",
+      "complete": true,
+      "use": "commissioning_only",
+      "wall_s": 388.319883716,
+      "grid_span_s": 384.001588599,
+      "grid_rows": 7680,
+      "rgb_received_and_written": 11553,
+      "measured_joint_groups": 77650,
+      "measured_gripper_frames": 77655,
+      "rejected_triplets": 5,
+      "q_target_groups": 7603,
+      "gripper_commands": 3,
+      "gripper_targets_m": [
+        0.04,
+        0.015,
+        0.04
+      ],
+      "gripper_force_command_N": 1,
+      "arm_target_interval_ms": {
+        "median": 50.097,
+        "p95": 50.300653,
+        "max": 1367.436455
+      },
+      "intentional_gripper_wait_intervals_s": [
+        1.367436455,
+        1.36469292
+      ],
+      "tracking_max_axis_deg": {
+        "p95": 0.151,
+        "max": 0.397
+      },
+      "grip_held_feedback_m": {
+        "min": 0.0246,
+        "median": 0.0247,
+        "max": 0.0248
+      },
+      "grip_held_feedback_signed_force_N": {
+        "min": -1.066,
+        "median": -1.043,
+        "max": -1.025
+      },
+      "queue_drops": 0,
+      "kernel_can_rx_errors": 0,
+      "kernel_can_tx_errors": 0,
+      "kernel_can_rx_dropped": 0,
+      "kernel_can_tx_dropped": 0,
+      "host_submitted_tx_frames": 22820,
+      "pauses": [],
+      "stop": "arrived_powered_hold",
+      "grasp_dwell_s": 68.343,
+      "dwell_fraction_of_grid": 0.177976,
+      "dwell_evidence": "docs/PI_REAL_TEST_STATE.md:51及已提交每日记录/导出分析；未重新打开测试机原始commands.jsonl独立重算该连续区间。"
+    },
+    "independent_return": {
+      "path": "results/pi-readiness/20261123/local_commissioning/A01_empty_return.json",
+      "reference_empty_run": "20261123_221226_399268_empty",
+      "actual_return_run": "20261123_222313_159762_return-start",
+      "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+      "original_reversed_targets": 7606,
+      "shortened_return_targets": 5439,
+      "wall_s": 274.564017438,
+      "tx_frames": 16325,
+      "gripper_commands": 0,
+      "final_q_rad": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_gripper_sdk_width_m": 0.0395,
+      "stop": "arrived_powered_hold",
+      "purpose": "reposition_only；在首个实物执行之前实际验证过的独立回程，不是11/23最终姿态，也不计训练示范。"
+    }
+  },
+  "metric_interpretation": [
+    "20Hz是导出观测/held-target/future-target网格。正常轨迹关节提交间隔接近50ms；C/O处等待新夹爪反馈产生约1.365s间隔，期间关节保持。三个夹爪命令不等于每秒20个夹爪命令。",
+    "误差指标在每个网格计算六轴abs(state-held_target)的最大值，再汇总p95/max；不是state与下一帧action比较，也不是法兰/夹指的位置误差。",
+    "host_submitted及底层计数说明主机发送路径可追溯；真实反馈和实际任务观察共同支撑执行结果。host_submitted本身不等同设备确认到位。",
+    "15mm SDK闭合目标遇20mm实物后测得约24.7mm SDK反馈并不矛盾；action保留真实提交目标，state保留实测反馈，不能用实测开口覆盖控制目标。",
+    "内核错误/drop为0与五个被拒绝的反馈三报文组是不同指标；接受后的有效网格完整，不应把被拒绝组写成不存在。",
+    "时间关联基于同机接收时钟，曝光同步未由本次验证。"
+  ],
+  "implementation_findings": [
+    {
+      "severity": "required_before_formal",
+      "title": "正式数据资格存在两道有依据的硬门",
+      "references": [
+        "tasks/piper_real_single_v1/demo_field.py:458-460",
+        "tasks/piper_real_single_v1/demo_field.py:468-470"
+      ],
+      "current": "setup.commissioning_only阻止--formal；selected-retreat来源仅允许reviewed commissioning。",
+      "improvement": "新定义版本化的sdk_width_m坐标合同，明确state与action单位m、SDK原生宽度非指垫净距、接触时目标/实测不同、padding/mask和norm一致；元数据绑定当前指垫/夹爪安装及独立卡尺测量，不由少量端点拟合全行程。用新契约新建正式会话。旧A01不得直接改flag。"
+    },
+    {
+      "severity": "required_before_formal",
+      "title": "常规示教/规划/重放仍强制回到起点，与任务结束于抬离的语义不一致",
+      "references": [
+        "tasks/piper_real_single_v1/demo_field.py:359-363",
+        "tasks/piper_real_single_v1/demo_path.py:44-45",
+        "tasks/piper_real_single_v1/demo_field.py:501-502"
+      ],
+      "current": "teach的E、normal plan及replay三处要求末位近起点；A01是通过人工选取抬离终点特例完成。",
+      "improvement": "新增版本化terminal_kind=post_release_retreat：start仍要求匹配当前保持位；正常E只允许在open之后、反馈新鲜、限内、静止且操作员确认的实际抬离姿态完成；记录真实end反馈id/时间/姿态。plan保留四标记顺序、全窗口连续性/限位/标记静止验证，对新类型不再要求末位等于首位；replay按明确terminal_kind一致检查。旧home_return类型可保留旧约束。新formal来源必须正常complete并只取start至真实end合法窗口，不继承原越限尾段或把旧中断改为complete。",
+      "reset": "独立返回依然使用同源完成且现场通过的真实empty提交轨迹；不加入任务episode。新源/new geometry需相应新空场核查。"
+    },
+    {
+      "severity": "required_for_useful_demonstration_timing",
+      "title": "规划保留人等候并对每个节点保守停起，显著拉长任务",
+      "references": [
+        "tasks/piper_real_single_v1/demo_path.py:58-88",
+        "tasks/piper_real_single_v1/demo_field.py:575-598"
+      ],
+      "current": "每弦采用零端速smoothstep，duration=max(源时间差,1.5*最大轴角差/速度,sqrt(6*最大轴角差/8))，50ms向上取整。131.464s源窗口、453节点生成380.05s计划，实物网格384.002s，wall388.320s。约68.343s抓取位停留并非本次P暂停（实物pauses为空）。",
+      "improvement": "优先重新教紧凑任务并在录制前讲清C/O/E，避免把对话和等指令时间录入任务。若新增时间参数化，显式标记可压缩的非任务静止段、保留接触/释放/稳定观察等必要等待，重新实际执行并记录新20Hz监督。保留当前2.5deg/s与8deg/s²上限，不为去掉人等候先升速。不保证仅删等待就能变成几十秒，因路径/保守节点加减速还占用时间。",
+      "forbidden_shortcut": "不能从A01中删掉中间68s后重新编号为连续50ms并让action chunk跨越拼接；不应把这种加工包装成原始连续20Hz动作。A01原始保持commissioning。"
+    },
+    {
+      "severity": "optional_targeted_fix",
+      "title": "正常E结束后确认保持但未更新持有目标账本",
+      "references": [
+        "tasks/piper_real_single_v1/demo_field.py:559-571",
+        "tasks/piper_real_single_v1/demo_field.py:442-446",
+        "tasks/piper_real_single_v1/demo_field.py:106-119"
+      ],
+      "current": "replay E与return-start的P/E在normal_hold后退出，缺少record_hold。replay E也未明确标记operator_ended_in_hold。实际TX已变化但hold.json仍旧，后续previous_hold会拒绝。",
+      "improvement": "若要支持中途正常结束后的清晰接续，确认到位后写准确stop与当前已提交目标账本，同时保留run.complete=false与不可训练资格；恢复/返回流程仍应核验来源/当前状态，不放宽boot/TX/接口检查。该问题不影响已完成A01和已验证P/R恢复。"
+    }
+  ],
+  "stop_and_gripper_semantics": {
+    "normal_pause": "normal_hold(last)核查上一次实际提交目标到位，保留电机使能；P后监测保持位、R从当前弦剩余部分重新限速/限加速度。已完成的空场证据只覆盖这一低速路径的一次P/R。",
+    "normal_end": "成功到末位时normal_hold(last)、record_hold(last)、arrived_powered_hold；没有自动回零、松力或关闭驱动。",
+    "gripper": "普通P/E/成功结束不自动改变已知最近width目标；本次末次open=0.040m，实测0.0395m。夹持期间目标0.015m与实测约0.0247m各有各的语义。独立return-start不发送夹爪命令，进入及循环均要求仍张开。",
+    "fault": "一般active异常进入现有fault/emergency_stop路径，与正常目标到位保持不同；不能把一次正常P/R等同全部故障停机都已验证。"
+  },
+  "next_site_sequence": {
+    "read_only_preparation": [
+      "D=/home/kaiwen/research/pi-single-live/tasks/piper_real_single_v1/pi_demo.sh",
+      "S=/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053",
+      "bash \"$D\" status"
+    ],
+    "status_notes": "status为接收检查并保存本次状态；不要在现有hold之后单独先跑limits，因为它发送六个查询帧并改变TX计数。程序自身在动作入口有管理该查询账本的流程。",
+    "onsite_order": [
+      "现场读当前status，核对静止/全使能/CAN MOVE_J/无错误/张开及保持账本仍有效；仓库末态只是历史。",
+      "若状态与原会话可追溯关系仍有效，先移走方块和工具，保留盘/胶带，确认回程轨迹净空。",
+      "在同一S运行 bash \"$D\" return-start \"$S\"，由现场操作员确认YES。此步骤会真实运动，审查阶段未执行。",
+      "返回程序使用该S的empty.json所引用真实empty commands.jsonl的实际量化关节目标倒序回放，保留所有不同目标；连续相同目标超过1s才缩为0.5s。要求同源已完成empty、P/R已验证、当前已完成run/目标匹配，完全不使用非法手拖回零尾段。",
+      "待返回正常到位且当前实测近起点/张开，再复摆A01，单次block或进入新干净示教准备。当前抬离姿态不能直接block。",
+      "同源同摆放的少数commissioning重复可复用已通过empty；若改源、路径或布局，需要相应新的空场确认。正式扩采应先落实上述新契约/正常终点/时间质量。",
+      "若boot、TX、CAN接口或姿态不匹配，保留错误读状态诊断；不编辑hold.json、不调用restart-teach假装它负责远位回零。"
+    ]
+  },
+  "source_url_prefix": "https://github.com/kaiwen123-yang/-0--0.5/blob/0ee2d2ecc6783ffcfdec115079a83db3944caeb5/",
+  "first_empty_bootstrap_addendum": {
+    "finding": "新正式post_release_retreat示教结束于非零位后，现有empty需要已建立起点保持；return-start又需要同源已完成empty。因此E后直接return-start存在首次空场循环依赖，不能宣称现有CLI已经覆盖。",
+    "sdk_home_2207": {
+      "receipt": "results/pi-readiness/20261123/local_commissioning/sdk_home_2207.json",
+      "host_source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_220721_direct_sdk_home",
+      "initial_q_deg": [
+        -1.033,
+        -0.556,
+        0.31,
+        0.888,
+        6.336,
+        -3.446
+      ],
+      "initial_ctrl_mode": 2,
+      "initial_teach_status": 2,
+      "initial_motion_status": 0,
+      "final_q_deg": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "final_ctrl_mode": 1,
+      "final_motion_status": 0,
+      "actual_joint_transactions": 382,
+      "first_to_last_arm_submission_s": 19.102246548,
+      "actual_tx_frames": 1156,
+      "tx_by_id": {
+        "0x472": 6,
+        "0x151": 4,
+        "0x155": 382,
+        "0x156": 382,
+        "0x157": 382,
+        "0x159": 0
+      },
+      "feedback_joint_and_gripper_rows_each": 4287,
+      "ending_bjt": "2026-11-23T22:07:43.506162+08:00",
+      "observed_final_gripper_sdk_width_m": 0.0288,
+      "diary_reported_method": "现场已确认短回程、已使能健康停止示教；待机到CAN分别取新反馈，MOVE_J 5%且参考最高0.5deg/s，微小越零端的J2/J3第一组合法目标为0。",
+      "verified_scope": "一次从上述近零但J5约6.336deg姿态到零的短回程；不能外推为从J2约127deg抬离位置直接回零的验收。",
+      "source_verification_limit": "已读固定提交回执及日志并检查完整git tree（truncated=false）。专用源码不在该提交，日志明确其仅保存在测试机上述目录；本次没有测试机文件访问，不能声称已逐行审查该home源码或知道其可直接复制的命令。pi_demo.sh/demo_field.py CLI也没有通用home子命令。",
+      "do_not_generalize": "不把本次微小J2/J3越限起点处理推广成任何路径可静默clamp；不将厂家零位目标示例等同任意场景直线回零路径净空。"
+    },
+    "default_minimal_plan": [
+      "在新的正常teach中，E于post_release_retreat真实静止姿态锁定任务end ID/时间/q。任务合法范围始终是start至该end；这就是新formal源的任务窗口。",
+      "E之后增加独立reset阶段：仍在实体被动示教模式下，由现场操作者完成手动重定位。保留reset开始/结束时间、反馈和最终released snapshot，use=reposition_only；不把该段作为训练任务尾段，也不以实际reset末位改写task end。",
+      "回到既有健康近起点范围并确认现场条件后，操作者退出实体示教，重新读取状态。满足当前近起点handoff和起点容差才沿用已验证交接/同位锚定。禁止把非零远端直接传给仅近零验收过的handoff。",
+      "如果手动近起点尚未满足合法起点条件，现场Codex先只读获取220721_direct_sdk_home目录中的原源码、发送与反馈，核对该次行为及当前安装版本。只有新鲜健康状态、实际短回程路径和现场净空适用于这条已有验证方法时，才经现场确认复用受限短回零；没有取得这些条件时保持未就绪，不输出或执行盲目六零目标。",
+      "成功建立源起点的真实已提交保持目标后，再张开/确认已知开口并执行第一次empty。首次empty现场通过并完成后，既有return-start才能作为后续同源重复的独立返回。",
+      "将新正式SDK宽度契约接入近起点重建保持的有限入口。当前restart-teach本身限定commissioning_only且仅处理特定来源，不能把它当现成通用formal重定位命令；保持其近起点、健康、限位、实际同位提交与账本检查，不扩大成远位自动home。"
+    ],
+    "minimum_acceptance": [
+      "一个新完整源：task_end真实位于抬离静止点，后续reset记录与任务窗口分离，原raw保留；plan只验证/使用合法start..end并对新terminal_kind一致处理。",
+      "一次现场人工reset后的当前起点复核和既有近零交接/同位提交，记录boot、CAN接口、TX、实际目标、到位及夹爪状态；不得编辑hold账本代替真实动作。",
+      "第一次空场正常完成且现场P/R、净空通过；后续return-start按其现有同源实际empty要求运行。该真实场景验收足以解决新增依赖，无需为本项扩成通用复位框架。"
+    ],
+    "optional_automatic_future": "若以后要求从非零抬离位自动开始第一次回程，需要单独审查/验收非零保持交接、当前目标锚定、受审回程路径与异常停止；这是新能力，22:07短回零或现有近零H0 helper均不能替代该验收。本轮默认流程不依赖它。",
+    "code_refs": [
+      "tasks/piper_real_single_v1/demo_field.py:272-310",
+      "tasks/piper_real_single_v1/demo_field.py:312-378",
+      "tasks/piper_real_single_v1/demo_field.py:381-453",
+      "tasks/piper_real_single_v1/demo_field.py:501-533"
+    ]
+  }
+}
