@@ -1,0 +1,28 @@
+{
+  "status": "PREPARATION_ONLY",
+  "model_family": "pi0",
+  "camera_mount": "wrist",
+  "policy_hz": 20,
+  "action_horizon": 10,
+  "experiment_name": "dc1_wrist_pickplace_v1",
+  "run_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/outputs",
+  "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/dc1_wrist_pickplace_v1",
+  "openpi_root": "/root/autodl-tmp/robot-repro/pi0/openpi",
+  "base_params": "/root/autodl-tmp/robot-repro/assets/openpi-assets/checkpoints/pi0_base/params",
+  "training": {
+    "ema_enabled": null,
+    "ema_decay": null,
+    "batch_size": null,
+    "num_workers": null,
+    "num_train_steps": null,
+    "seed": null,
+    "log_interval": null,
+    "save_interval": null,
+    "keep_period": null,
+    "resume": null,
+    "warmup_steps": null,
+    "peak_lr": null,
+    "decay_steps": null,
+    "decay_lr": null
+  }
+}

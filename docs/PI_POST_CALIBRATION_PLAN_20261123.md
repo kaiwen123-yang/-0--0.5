@@ -61,4 +61,4 @@ D57 的两套环境、基础权重和实际腕部配置最近证据来自 11/20�
 
 现场 Codex 从 [本次执行提示词](PI_POST_CALIBRATION_NEXT_PROMPT_20261123.md) 开始。第一轮目标是**取得合格的本地动作示范，并把真实记录转换为训练数据**；只有该阶段通过后才进入正式训练与模型控制。
 
-本次是仓库/公开数据/手册审阅与计划发布。没有操作用户机械臂、采集新本地示范、做训练或执行 π 推理。每日详细记录继续写入唯一文件 [PI_DAILY_WORK_LOG.md](PI_DAILY_WORK_LOG.md)。
+11/23 晚已在测试机部署采集与转换入口，并读到六轴限位、机械臂状态和一张实时腕图。下一步执行[现场指南](PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md)，等待操作者完成手拖与抓放。两份抓放任务配置在 `tasks/piper_real_single_v1/pickplace_pi0_full.json` 和 `pickplace_pi05_full.json`，正式训练预算待定。实测记录继续写入[唯一工作日志](PI_DAILY_WORK_LOG.md)。

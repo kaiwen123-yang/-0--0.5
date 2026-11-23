@@ -1,0 +1,534 @@
+{
+  "host": "kaiwen-Legion-Y9000P-IAH7H",
+  "root": "/home/kaiwen/research/pi-q12-data/pi-demo-checks",
+  "h0_passive": {
+    "path": "/home/kaiwen/research/pi-q12-data/20261123_200334_pi_demo_status/arm_summary.json",
+    "joint_groups": 400,
+    "gripper_frames": 401,
+    "can_error_frames": 0,
+    "tx_delta": 0
+  },
+  "runs": {
+    "20261123_201042_803329_status": {
+      "kind": "status",
+      "joint_groups": 520,
+      "gripper_frames": 520,
+      "rejected_triplets": 0,
+      "delta": {
+        "tx_packets": 0,
+        "rx_packets": 6342,
+        "rx_errors": 0,
+        "tx_errors": 0,
+        "rx_dropped": 0,
+        "tx_dropped": 0
+      }
+    },
+    "20261123_201045_543789_limits": {
+      "kind": "limits",
+      "joint_groups": 121,
+      "gripper_frames": 121,
+      "rejected_triplets": 0,
+      "delta": {
+        "tx_packets": 6,
+        "rx_packets": 1602,
+        "rx_errors": 0,
+        "tx_errors": 0,
+        "rx_dropped": 0,
+        "tx_dropped": 0
+      },
+      "limits": [
+        {
+          "joint": 1,
+          "received_unix_s": 1795435846.152526,
+          "controller": [
+            -2.6179938779914944,
+            2.6179938779914944
+          ],
+          "sdk": [
+            -2.617994,
+            2.617994
+          ],
+          "usable": [
+            -2.6179938779914944,
+            2.6179938779914944
+          ]
+        },
+        {
+          "joint": 2,
+          "received_unix_s": 1795435846.1532974,
+          "controller": [
+            0.0,
+            3.141592653589793
+          ],
+          "sdk": [
+            0.0,
+            3.141593
+          ],
+          "usable": [
+            0.0,
+            3.141592653589793
+          ]
+        },
+        {
+          "joint": 3,
+          "received_unix_s": 1795435846.1558552,
+          "controller": [
+            -2.9670597283903604,
+            0.0
+          ],
+          "sdk": [
+            -2.96706,
+            0.0
+          ],
+          "usable": [
+            -2.9670597283903604,
+            0.0
+          ]
+        },
+        {
+          "joint": 4,
+          "received_unix_s": 1795435846.1565828,
+          "controller": [
+            -2.356194490192345,
+            2.356194490192345
+          ],
+          "sdk": [
+            -2.356195,
+            2.356195
+          ],
+          "usable": [
+            -2.356194490192345,
+            2.356194490192345
+          ]
+        },
+        {
+          "joint": 5,
+          "received_unix_s": 1795435846.1572025,
+          "controller": [
+            -1.562069680534925,
+            1.562069680534925
+          ],
+          "sdk": [
+            -1.56207,
+            1.56207
+          ],
+          "usable": [
+            -1.562069680534925,
+            1.562069680534925
+          ]
+        },
+        {
+          "joint": 6,
+          "received_unix_s": 1795435846.1578872,
+          "controller": [
+            -2.9670597283903604,
+            2.9670597283903604
+          ],
+          "sdk": [
+            -2.96706,
+            2.96706
+          ],
+          "usable": [
+            -2.9670597283903604,
+            2.9670597283903604
+          ]
+        }
+      ],
+      "tx": [
+        {
+          "start_ns": "117238321489092",
+          "end_ns": "117238321545495",
+          "command_id": "1:read_limit",
+          "can_id": "0x472",
+          "data": "0101000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117238322292663",
+          "end_ns": "117238322331219",
+          "command_id": "2:read_limit",
+          "can_id": "0x472",
+          "data": "0201000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117238323039046",
+          "end_ns": "117238323068435",
+          "command_id": "3:read_limit",
+          "can_id": "0x472",
+          "data": "0301000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117238325518387",
+          "end_ns": "117238325549163",
+          "command_id": "4:read_limit",
+          "can_id": "0x472",
+          "data": "0401000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117238326187531",
+          "end_ns": "117238326214850",
+          "command_id": "5:read_limit",
+          "can_id": "0x472",
+          "data": "0501000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117238326873129",
+          "end_ns": "117238326897232",
+          "command_id": "6:read_limit",
+          "can_id": "0x472",
+          "data": "0601000000000000",
+          "result": "host_submitted",
+          "error": ""
+        }
+      ]
+    },
+    "20261123_201548_613269_status": {
+      "kind": "status",
+      "joint_groups": 520,
+      "gripper_frames": 520,
+      "rejected_triplets": 0,
+      "delta": {
+        "tx_packets": 0,
+        "rx_packets": 6342,
+        "rx_errors": 0,
+        "tx_errors": 0,
+        "rx_dropped": 0,
+        "tx_dropped": 0
+      }
+    },
+    "20261123_201651_255258_limits": {
+      "kind": "limits",
+      "joint_groups": 121,
+      "gripper_frames": 121,
+      "rejected_triplets": 0,
+      "delta": {
+        "tx_packets": 6,
+        "rx_packets": 1627,
+        "rx_errors": 0,
+        "tx_errors": 0,
+        "rx_dropped": 0,
+        "tx_dropped": 0
+      },
+      "limits": [
+        {
+          "joint": 1,
+          "received_unix_s": 1795436211.8741927,
+          "controller": [
+            -2.6179938779914944,
+            2.6179938779914944
+          ],
+          "max_rad_s": 3.0,
+          "sdk": [
+            -2.617994,
+            2.617994
+          ],
+          "usable": [
+            -2.6179938779914944,
+            2.6179938779914944
+          ]
+        },
+        {
+          "joint": 2,
+          "received_unix_s": 1795436211.8748984,
+          "controller": [
+            0.0,
+            3.141592653589793
+          ],
+          "max_rad_s": 3.0,
+          "sdk": [
+            0.0,
+            3.141593
+          ],
+          "usable": [
+            0.0,
+            3.141592653589793
+          ]
+        },
+        {
+          "joint": 3,
+          "received_unix_s": 1795436211.8756032,
+          "controller": [
+            -2.9670597283903604,
+            0.0
+          ],
+          "max_rad_s": 3.0,
+          "sdk": [
+            -2.96706,
+            0.0
+          ],
+          "usable": [
+            -2.9670597283903604,
+            0.0
+          ]
+        },
+        {
+          "joint": 4,
+          "received_unix_s": 1795436211.8778489,
+          "controller": [
+            -2.356194490192345,
+            2.356194490192345
+          ],
+          "max_rad_s": 3.0,
+          "sdk": [
+            -2.356195,
+            2.356195
+          ],
+          "usable": [
+            -2.356194490192345,
+            2.356194490192345
+          ]
+        },
+        {
+          "joint": 5,
+          "received_unix_s": 1795436211.8790705,
+          "controller": [
+            -1.562069680534925,
+            1.562069680534925
+          ],
+          "max_rad_s": 3.0,
+          "sdk": [
+            -1.56207,
+            1.56207
+          ],
+          "usable": [
+            -1.562069680534925,
+            1.562069680534925
+          ]
+        },
+        {
+          "joint": 6,
+          "received_unix_s": 1795436211.879753,
+          "controller": [
+            -2.9670597283903604,
+            2.9670597283903604
+          ],
+          "max_rad_s": 3.0,
+          "sdk": [
+            -2.96706,
+            2.96706
+          ],
+          "usable": [
+            -2.9670597283903604,
+            2.9670597283903604
+          ]
+        }
+      ],
+      "tx": [
+        {
+          "start_ns": "117604043107777",
+          "end_ns": "117604043169504",
+          "command_id": "1:read_limit",
+          "can_id": "0x472",
+          "data": "0101000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117604043908828",
+          "end_ns": "117604043943231",
+          "command_id": "2:read_limit",
+          "can_id": "0x472",
+          "data": "0201000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117604044607734",
+          "end_ns": "117604044638600",
+          "command_id": "3:read_limit",
+          "can_id": "0x472",
+          "data": "0301000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117604045394333",
+          "end_ns": "117604045542231",
+          "command_id": "4:read_limit",
+          "can_id": "0x472",
+          "data": "0401000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117604048037074",
+          "end_ns": "117604048082325",
+          "command_id": "5:read_limit",
+          "can_id": "0x472",
+          "data": "0501000000000000",
+          "result": "host_submitted",
+          "error": ""
+        },
+        {
+          "start_ns": "117604048776114",
+          "end_ns": "117604048806700",
+          "command_id": "6:read_limit",
+          "can_id": "0x472",
+          "data": "0601000000000000",
+          "result": "host_submitted",
+          "error": ""
+        }
+      ]
+    },
+    "20261123_201903_738801_status": {
+      "kind": "status",
+      "joint_groups": 520,
+      "gripper_frames": 520,
+      "rejected_triplets": 0,
+      "delta": {
+        "tx_packets": 0,
+        "rx_packets": 6345,
+        "rx_errors": 0,
+        "tx_errors": 0,
+        "rx_dropped": 0,
+        "tx_dropped": 0
+      }
+    }
+  },
+  "scene": {
+    "path": "/home/kaiwen/research/pi-q12-data/pi-demo-checks/20261123_201121_scene",
+    "status": {
+      "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+      "camera_id": "CC16762023M",
+      "topic": "/wrist_camera/color/image_raw",
+      "received": 1,
+      "written": 1,
+      "queue_drops": 0,
+      "last_ns": 117277436346551,
+      "error": null
+    },
+    "first": {
+      "index": "0",
+      "mono_ns": "117277436346551",
+      "unix_ns": "1795435885266896618",
+      "header_ns": "1795435885260359100"
+    },
+    "header_to_receive_ms": 6.537518
+  },
+  "final": {
+    "run": "20261123_201903_738801_status",
+    "observed_local": "2026-11-23T20:19:06.359303+08:00",
+    "snapshot": {
+      "mono_ns": 117738524089104,
+      "q_rad": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m": -9.999999999999999e-05,
+      "arm": {
+        "ctrl_mode": 1,
+        "arm_status": 0,
+        "mode_feedback": 1,
+        "teach_status": 2,
+        "motion_status": 0,
+        "trajectory_num": 0,
+        "err_status": {
+          "joint_1_angle_limit": false,
+          "joint_2_angle_limit": false,
+          "joint_3_angle_limit": false,
+          "joint_4_angle_limit": false,
+          "joint_5_angle_limit": false,
+          "joint_6_angle_limit": false,
+          "communication_status_joint_1": false,
+          "communication_status_joint_2": false,
+          "communication_status_joint_3": false,
+          "communication_status_joint_4": false,
+          "communication_status_joint_5": false,
+          "communication_status_joint_6": false
+        }
+      },
+      "drives": [
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        }
+      ],
+      "gripper": {
+        "value": -9.999999999999999e-05,
+        "force": -0.007,
+        "foc_status": {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "sensor_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "homing_status": false
+        },
+        "mode": "width"
+      }
+    }
+  },
+  "motor_target_submissions": 0,
+  "complete_pick_place": 0
+}
