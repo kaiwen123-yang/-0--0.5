@@ -1,0 +1,189 @@
+{
+  "run": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_214010_390778_teach",
+  "run_id": "6c3c7000-9d5d-4967-9b0c-bd4d0f1405ff",
+  "placement": "A01",
+  "reason": "Operator reported the grasp pose was too high and requested a new trajectory.",
+  "use": "rejected_source_only",
+  "complete": false,
+  "stop": "KeyboardInterrupt('operator interrupt')",
+  "start_local": "2026-11-23T21:40:10.390981+08:00",
+  "end_local": "2026-11-23T21:46:53.038797+08:00",
+  "marks": [
+    {
+      "event": "start",
+      "joint_id": 49676,
+      "mono_ns": 122850946779818,
+      "q": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "event": "close",
+      "joint_id": 65437,
+      "mono_ns": 122929753031347,
+      "q": [
+        0.0,
+        1.85296370696482,
+        -1.1498054579213444,
+        0.07852236304722487,
+        0.5911430176504794,
+        -0.0839328837284073
+      ]
+    },
+    {
+      "event": "open",
+      "joint_id": 75576,
+      "mono_ns": 122980448944311,
+      "q": [
+        0.003979350694547071,
+        2.3344476877124953,
+        -1.9314511634270048,
+        0.03206169835913583,
+        0.8832413212642505,
+        -0.16460200175558523
+      ]
+    }
+  ],
+  "joint_groups": 80525,
+  "gripper_frames": 80525,
+  "rejected_triplets": 0,
+  "interface_delta": {
+    "tx_packets": 0,
+    "rx_packets": 957023,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "camera": {
+    "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "camera_id": "CC16762023M",
+    "topic": "/wrist_camera/color/image_raw",
+    "received": 11996,
+    "written": 11996,
+    "queue_drops": 0,
+    "last_ns": 123005043921354,
+    "error": null
+  },
+  "final_at_teach_exit": {
+    "mono_ns": 123005196358503,
+    "q_rad": [
+      0.0062482787221397,
+      2.3222303829485353,
+      -1.9409981144354138,
+      0.016667894356545847,
+      0.9631424944205509,
+      -0.03354522822333101
+    ],
+    "width_m": 0.0036,
+    "arm": {
+      "ctrl_mode": 2,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 1,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "drives": [
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      }
+    ],
+    "gripper": {
+      "value": 0.0036,
+      "force": -0.003,
+      "foc_status": {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "sensor_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "homing_status": false
+      },
+      "mode": "width"
+    }
+  },
+  "later_disconnect_local": "2026-11-23T21:51:11+08:00",
+  "later_kernel_events": [
+    "11月 23 21:51:11 kaiwen-Legion-Y9000P-IAH7H kernel: usb 3-2.2: USB disconnect, device number 11",
+    "11月 23 21:51:11 kaiwen-Legion-Y9000P-IAH7H kernel: usb 3-2.2.2: USB disconnect, device number 12"
+  ]
+}

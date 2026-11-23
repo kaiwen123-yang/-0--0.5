@@ -39,7 +39,7 @@ def main():
     sub = p.add_subparsers(dest="kind", required=True)
     sub.add_parser("status", help="读取两秒实测反馈；TX=0")
     sub.add_parser("limits", help="仅查询六轴当前控制器限位")
-    modes = {"prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
+    modes = {"restart-teach": "重新建立本次实测保持位并复开夹爪", "prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
              "teach": "被动手拖记录", "empty": "移走方块后核查新路径",
              "block": "按原布局抓放一次"}
     for kind, help_text in modes.items():
@@ -103,12 +103,15 @@ def main():
         return sender.bounds
 
     def record_hold(q):
-        save(led, dict(boot_id=BOOT, q=q, tx_packets=stats()["tx_packets"],
+        save(led, dict(boot_id=BOOT, q=q, ifindex=int(Path("/sys/class/net/can0/ifindex").read_text()),
+                       tx_packets=stats()["tx_packets"],
                        run=run.name, command_file=str(run / "commands.jsonl")))
 
     def previous_hold():
         h = read(led)
-        if h["boot_id"] != BOOT or h["tx_packets"] != stats()["tx_packets"]:
+        link_index = int(Path("/sys/class/net/can0/ifindex").read_text())
+        if (h["boot_id"] != BOOT or h["tx_packets"] != stats()["tx_packets"]
+                or h.get("ifindex",link_index) != link_index):
             raise RuntimeError("保持目标的 boot/TX 计数已变化，请重新建立本次起点")
         if gap(rx.current()[0], h["q"]) > .35:
             raise RuntimeError("实测姿态距先前有提交记录的起点超过 0.35°")
@@ -264,6 +267,36 @@ def main():
                       run=first.name,command_file=str(first/"commands.jsonl")))
         save(session/"setup.json",cfg)
         report.update(source_hold=anchor["id"], pad_measurements=points, object_m=object_m)
+
+    def restart_teach():
+        nonlocal active
+        cfg = read(session/"setup.json")
+        old = read(led)
+        if not cfg.get("commissioning_only") or old["boot_id"] != BOOT:
+            raise ValueError("需要本次启动下已核实指垫端点的同一联调会话")
+        width, force = cfg["open_m"], cfg["force_N"]
+        if not .015 <= cfg["close_m"] < width <= .040 or not 0 < force <= 1:
+            raise ValueError("当前开口或力度配置超出已核实范围")
+        row = healthy(dev, rx, grip)
+        start = row["q_rad"]
+        if (row["arm"]["motion_status"] != 0 or max(map(abs,start)) > math.radians(5)
+                or gap(start,old["q"]) > .35):
+            raise ValueError("先在现场恢复到既有起点并确认 CAN/MOVE_J 到位")
+        report.update(previous_hold=old, expected_open_m=width)
+        h0.calibration_arrival(dev,start)
+        agree(f"已退出示教，空载，手和工具已移开。在当前实测位置保持，复开至 {width*1000:g} mm")
+        limits()
+        q = healthy(dev,rx,grip)["q_rad"]
+        if gap(q,start) > .1:
+            raise ValueError("确认期间当前位置发生变化")
+        h0.calibration_arrival(dev,q)
+        active = True
+        sender.arm(q,"fresh_stationary_anchor_after_interruption")
+        normal_hold(q)
+        report["settled_open_m"] = grip_at(width,force,"reopen_before_reteach",True)
+        normal_hold(q)
+        record_hold(q)
+        active = False
 
     def teach():
         base = previous_hold()
@@ -527,6 +560,8 @@ def main():
                 check_width()
             elif kind == "prepare-pads":
                 prepare_pads()
+            elif kind == "restart-teach":
+                restart_teach()
             elif kind == "teach":
                 teach()
             else:
