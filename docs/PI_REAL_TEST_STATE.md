@@ -54,6 +54,8 @@
 
 **22:07 最新状态。** 第二遍已修正抓取高度。操作者选取真实抬离停点 ID 43901 作 A01 终点，越限的手拖尾段仅保留原始证据。有效窗口含 26294 组且规划检查通过；空场实走和成功实物抓放均为 0。测试机经 Ubuntu SDK 直接回零，22:07:43 六轴实测 0°、全使能、CAN/MOVE_J 到位、夹爪反馈 28.8 mm，未发送夹爪目标。下次空场前先确认夹爪按既有实测配置张开。[选定停点](../results/pi-readiness/20261123/local_commissioning/A01_selected_retreat.json) · [回零结果](../results/pi-readiness/20261123/local_commissioning/sdk_home_2207.json)
 
+**22:19 A01 真实空场已完成并通过。** 修正后的 A01 路径到位保持，动态暂停与恢复通过。11977/11977 帧腕图，全部 22832 帧主机提交有底层回执；有效网格点上的六轴最大绝对误差 P95 0.149°。现场确认指尖、盘沿及线缆无干涉，审核为 PASS。结束时夹爪反馈 39.5 mm，六轴全使能。以后续实际的独立返回和第一条实物记录为接续，不再为同一源/摆放重复空场。[空场质量摘要](../results/pi-readiness/20261123/local_commissioning/A01_empty.json) · [审核记录](../results/pi-readiness/20261123/local_commissioning/A01_empty_review.json)
+
 ## 先前硬件快照与部署范围
 
 11/23 北京时间 20:19:06 测试机实测六轴均为 0°、6/6 使能、CAN/MOVE_J、已到位、停止示教，夹爪已使能、总开口 −0.1 mm、力 0 N。该会话 TX 增量 0。专用相机、采集和控制进程已退出，发送锁已释放。重新开始先读实时状态。[现场紧凑证据](../results/pi-readiness/20261123/local_commissioning/field_checks.json)

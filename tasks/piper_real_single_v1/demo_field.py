@@ -12,6 +12,7 @@ import time
 from collections import deque
 from contextlib import ExitStack
 from datetime import datetime
+from itertools import groupby
 from pathlib import Path
 from uuid import uuid4
 
@@ -39,7 +40,7 @@ def main():
     sub = p.add_subparsers(dest="kind", required=True)
     sub.add_parser("status", help="读取两秒实测反馈；TX=0")
     sub.add_parser("limits", help="仅查询六轴当前控制器限位")
-    modes = {"restart-teach": "重新建立本次实测保持位并复开夹爪", "prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
+    modes = {"return-start": "沿已执行空场目标倒序返回，保持夹爪张开", "restart-teach": "重新建立本次实测保持位并复开夹爪", "prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
              "teach": "被动手拖记录", "empty": "移走方块后核查新路径",
              "block": "按原布局抓放一次"}
     for kind, help_text in modes.items():
@@ -377,6 +378,80 @@ def main():
             raise RuntimeError("手拖期间主机 TX 变化；该轨迹需排查")
         # Mark the source only after the receive-only run closed cleanly.
 
+    def return_start():
+        nonlocal active
+        cfg = read(session/"setup.json")
+        source = read(source_file)
+        receipt = read(clear_file)
+        empty_path = session/receipt["run"]
+        empty = read(empty_path/"run.json")
+        quality = read(empty_path/"quality.json")
+        held = previous_hold()
+        last_run = read(session/read(led)["run"]/"run.json")
+        if (not empty["complete"] or empty["kind"] != "empty" or not empty["pause_resume_verified"]
+                or empty["stop"] != "arrived_powered_hold" or not last_run["complete"]
+                or empty["source_directory"] != str(session/source["run"])
+                or empty["source_trajectory_id"] != last_run.get("source_trajectory_id")
+                or last_run["stop"] != "arrived_powered_hold" or not quality["grid_rows"]):
+            raise ValueError("需要同源已到位的执行和本次真实空场提交记录")
+        with (empty_path/"commands.jsonl").open() as f:
+            all_cmds = [json.loads(x) for x in f]
+        if any(c["result"] != "host_submitted" for c in all_cmds):
+            raise ValueError("空场记录包含不完整提交")
+        route = [c for c in reversed(all_cmds) if c["kind"]=="arm" and
+                 (c["source"]=="source_start" or isinstance(c["source"], list))]
+        if (len(route)<2 or route[-1]["source"]!="source_start" or
+                gap(held,route[0]["actual"])>.01 or gap(route[-1]["actual"],empty["initial"]["q_rad"])>.35):
+            raise ValueError("当前保持与已执行路径的首末不匹配")
+        # The geometry is unchanged. Shorten strictly identical quantized holds
+        # longer than a second to ten ticks; retain every distinct wire target.
+        targets = []
+        for _, group in groupby(route, key=lambda c:c["actual"]):
+            same = list(group)
+            targets.extend(same if len(same)<=20 else same[:5]+same[-5:])
+        if any(gap(a["actual"],b["actual"]) > empty["reference_deg_s"]*.05+.002
+               for a,b in zip(targets,targets[1:])):
+            raise ValueError("空场原轨迹中存在过大相邻步")
+        now = healthy(dev,rx,grip)
+        if abs(now["width_m"]-cfg["open_m"])>.002 or now["arm"]["motion_status"]!=0:
+            raise ValueError("请确认空夹张开且臂已到位")
+        report.update(use="reposition_only",reference_run=empty_path.name,
+                      source_trajectory_id=empty["source_trajectory_id"],original_ticks=len(route),
+                      return_ticks=len(targets),start_target=route[0]["actual"],end_target=route[-1]["actual"])
+        print("原路返回参考秒",len(targets)*.05,flush=True)
+        agree("物体与工具已移出；沿空场原路倒序返回，空夹始终张开")
+        previous_hold()
+        limits()
+        if any(not lo<=v<=hi for c in targets for v,(lo,hi) in zip(c["actual"],sender.bounds)):
+            raise ValueError("本次反馈的控制器限位不覆盖该执行路径")
+        h0.calibration_arrival(dev,held)
+        active = True
+        sender.call("speed",5,lambda:dev.robot.set_speed_percent(5))
+        sender.call("mode","MOVE_J",lambda:dev.robot.set_motion_mode("j"))
+        time.sleep(.15)
+        goal = held
+        previous_tick = time.monotonic()
+        for c in targets:
+            tick = time.monotonic()
+            if tick-previous_tick>.15:
+                raise RuntimeError("返回轨迹调度中断")
+            previous_tick = tick
+            row = healthy(dev,rx,grip)
+            if gap(row["q_rad"],goal)>1 or abs(row["width_m"]-cfg["open_m"])>.002:
+                raise RuntimeError("返回期间关节跟踪或开口异常")
+            if line() in ("p","e"):
+                normal_hold(goal)
+                active = False
+                report["stop"] = "operator_ended_in_hold"
+                raise ValueError("中止独立返回，已确认保持")
+            goal = c["actual"]
+            sender.arm(goal,c["id"])
+            time.sleep(max(0,.05-(time.monotonic()-tick)))
+        normal_hold(goal)
+        record_hold(goal)
+        report["stop"] = "arrived_powered_hold"
+        active = False
+
     def replay():
         nonlocal active
         cfg = read(session / "setup.json")
@@ -577,6 +652,8 @@ def main():
                 prepare_pads()
             elif kind == "restart-teach":
                 restart_teach()
+            elif kind == "return-start":
+                return_start()
             elif kind == "teach":
                 teach()
             else:

@@ -1,0 +1,423 @@
+{
+  "run_id": "8dac64f7-bd13-4245-9fb4-071e003e504e",
+  "directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_221226_399268_empty",
+  "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_215419_277510_teach",
+  "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+  "placement": "A01",
+  "kind": "empty",
+  "complete": true,
+  "start_local": "2026-11-23T22:12:26.399501+08:00",
+  "end_local": "2026-11-23T22:19:08.860506+08:00",
+  "elapsed_s": 402.461005202,
+  "grid_span_s": 398.158554482,
+  "planned_reference_s": 380.05,
+  "source_rows": 26294,
+  "retreat_window": {
+    "source_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+    "operator_selected": true,
+    "end_joint_id": 43901,
+    "selection_kind": "observed_stationary_retreat",
+    "reference_rgb": "rgb/0006527.png",
+    "delta_flange_xyz_mm": [
+      -27.0,
+      3.5,
+      70.8
+    ],
+    "note": "Operator selected actual post-release retreat as episode end; separately return to start between runs."
+  },
+  "reference_deg_s": 2.5,
+  "pauses": [
+    {
+      "at_ns": 124575616231849,
+      "target": [
+        0.0,
+        0.2430401712367046,
+        -0.28578929301871553,
+        -0.11399688213524796,
+        0.38203667149693066,
+        0.0
+      ],
+      "key": "p",
+      "prior_motion_deg": 0.22799999999999887
+    }
+  ],
+  "pause_resume_verified": true,
+  "stop": "arrived_powered_hold",
+  "end_target_deg": [
+    3.6430000000000002,
+    127.401,
+    -114.266,
+    -7.258000000000001,
+    66.473,
+    14.562999999999999
+  ],
+  "end_observed_deg": [
+    3.601,
+    127.42299999999999,
+    -114.175,
+    -7.264000000000001,
+    66.4,
+    14.625
+  ],
+  "start_q_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "tx_ids": {
+    "0x472": 6,
+    "0x155": 7607,
+    "0x156": 7607,
+    "0x157": 7607,
+    "0x151": 2,
+    "0x159": 3
+  },
+  "tx_status": {
+    "host_submitted": 22832
+  },
+  "command_kinds": {
+    "read_limit": 6,
+    "arm": 7607,
+    "speed": 1,
+    "mode": 1,
+    "grip": 3
+  },
+  "gripper_submissions": [
+    {
+      "id": "11:grip",
+      "phase": "initial_open",
+      "actual_m": 0.04,
+      "force_N": 1.0,
+      "submitted_ns": 124541883627266
+    },
+    {
+      "id": "3656:grip",
+      "phase": "close",
+      "actual_m": 0.015,
+      "force_N": 1.0,
+      "submitted_ns": 124739764524096
+    },
+    {
+      "id": "6696:grip",
+      "phase": "open",
+      "actual_m": 0.04,
+      "force_N": 1.0,
+      "submitted_ns": 124893340145855
+    }
+  ],
+  "reference_gaps_over_100_ms": [
+    [
+      14039.263009,
+      "658:arm",
+      "659:arm"
+    ],
+    [
+      1364.943022,
+      "3655:arm",
+      "3657:arm"
+    ],
+    [
+      1364.280731,
+      "6695:arm",
+      "6697:arm"
+    ]
+  ],
+  "gripper_basis": "sdk_width_m_with_separate_caliper_endpoints",
+  "quality": {
+    "images": 11977,
+    "grid_rows": 7963,
+    "joint_groups": 80483,
+    "gripper_rows": 80488,
+    "host_frames": 22832,
+    "queue_drops": 0,
+    "rejected_triplets": 5,
+    "interface_delta": {
+      "tx_packets": 22832,
+      "rx_packets": 974358,
+      "rx_errors": 0,
+      "tx_errors": 0,
+      "rx_dropped": 0,
+      "tx_dropped": 0
+    },
+    "feedback_age_ms": {
+      "image": {
+        "n": 7963,
+        "min": 0.00653,
+        "p50": 16.624095,
+        "p95": 31.5432962,
+        "max": 37.487069
+      },
+      "joint": {
+        "n": 7963,
+        "min": 0.795516,
+        "p50": 3.079222,
+        "p95": 4.1786299,
+        "max": 7.254955
+      },
+      "grip": {
+        "n": 7963,
+        "min": 0.744882,
+        "p50": 2.966733,
+        "p95": 4.0830284,
+        "max": 7.121033
+      }
+    },
+    "rgb_interval_ms": {
+      "n": 11976,
+      "min": 3.790118,
+      "p50": 32.0689725,
+      "p95": 36.40010175,
+      "max": 40.162567
+    },
+    "header_to_receive_ms": {
+      "n": 11977,
+      "min": 1.380661,
+      "p50": 1.717345,
+      "p95": 2.2022457999999996,
+      "max": 56.386613
+    },
+    "triplet_host_span_ms": {
+      "n": 80483,
+      "min": 0.037898,
+      "p50": 0.271355,
+      "p95": 0.35504729999999984,
+      "max": 2.587733
+    },
+    "triplet_wire_span_ms": {
+      "n": 80483,
+      "min": 0.007867813110351562,
+      "p50": 0.23889541625976562,
+      "p95": 0.29087066650390625,
+      "max": 0.6968975067138672
+    },
+    "reference_interval_including_dwell_ms": {
+      "n": 7604,
+      "min": 48.028532,
+      "p50": 50.094976,
+      "p95": 50.29464815,
+      "max": 14039.263009
+    },
+    "max_axis_tracking_error_deg": {
+      "n": 7963,
+      "min": 0.0,
+      "p50": 0.09100000000000015,
+      "p95": 0.14899999999999963,
+      "max": 0.307
+    },
+    "events": [
+      {
+        "event": "close",
+        "mono_ns": 124740574323959,
+        "target_m": 0.015,
+        "measured_m": 0.015099999999999999
+      },
+      {
+        "event": "open",
+        "mono_ns": 124894148520683,
+        "target_m": 0.04,
+        "measured_m": 0.0395
+      }
+    ],
+    "final": {
+      "mono_ns": 124941016321589,
+      "q_rad": [
+        0.06284930636431581,
+        2.2239508927687344,
+        -1.9927296734645257,
+        -0.1267807168648681,
+        1.1588986233242349,
+        0.2552544031041707
+      ],
+      "width_m": 0.0395,
+      "arm": {
+        "ctrl_mode": 1,
+        "arm_status": 0,
+        "mode_feedback": 1,
+        "teach_status": 2,
+        "motion_status": 0,
+        "trajectory_num": 0,
+        "err_status": {
+          "joint_1_angle_limit": false,
+          "joint_2_angle_limit": false,
+          "joint_3_angle_limit": false,
+          "joint_4_angle_limit": false,
+          "joint_5_angle_limit": false,
+          "joint_6_angle_limit": false,
+          "communication_status_joint_1": false,
+          "communication_status_joint_2": false,
+          "communication_status_joint_3": false,
+          "communication_status_joint_4": false,
+          "communication_status_joint_5": false,
+          "communication_status_joint_6": false
+        }
+      },
+      "drives": [
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        }
+      ],
+      "gripper": {
+        "value": 0.0395,
+        "force": 0.105,
+        "foc_status": {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "sensor_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "homing_status": false
+        },
+        "mode": "width"
+      }
+    },
+    "pauses": [
+      {
+        "at_ns": 124575616231849,
+        "target": [
+          0.0,
+          0.2430401712367046,
+          -0.28578929301871553,
+          -0.11399688213524796,
+          0.38203667149693066,
+          0.0
+        ],
+        "key": "p",
+        "prior_motion_deg": 0.22799999999999887
+      }
+    ],
+    "host_submit_duration_ms": {
+      "n": 7607,
+      "min": 0.063345,
+      "p50": 0.088907,
+      "p95": 0.23775589999999994,
+      "max": 2.134985
+    },
+    "representative_association": {
+      "t": 124741742064278,
+      "image": 6020,
+      "image_ns": 124741717288225,
+      "image_header_ns": 1795443349546087742,
+      "q": 40628,
+      "q_ns": 124741738949457,
+      "grip": 40633,
+      "grip_ns": 124741739096220,
+      "state_age_ms": [
+        24.776053,
+        3.114821,
+        2.968058
+      ],
+      "triplet_host_span_ns": 256275,
+      "held_at_ns": 124741742064278,
+      "held": [
+        "3680:arm",
+        "3656:grip"
+      ],
+      "action_at_ns": 124741792064278,
+      "action": [
+        "3681:arm",
+        "3656:grip"
+      ],
+      "action_age_ms": [
+        15.614877,
+        2027.540182
+      ],
+      "valid_from": [
+        124741776449401,
+        124739764524096
+      ],
+      "valid_until_exclusive": [
+        124741826465601,
+        124893340006975
+      ],
+      "measured": [
+        0.05068436147791533,
+        2.1947166277978294,
+        -1.6290903238115073,
+        -0.0709127275085296,
+        1.1227528545154324,
+        0.2552544031041707,
+        0.015099999999999999
+      ],
+      "submitted_next": [
+        0.05227261109723017,
+        2.1951355068183083,
+        -1.6303120542879033,
+        -0.07112216701876893,
+        1.122822667685512,
+        0.2541722989679342,
+        0.015
+      ],
+      "submitted_hold": [
+        0.05227261109723017,
+        2.1951355068183083,
+        -1.6303120542879033,
+        -0.07112216701876893,
+        1.122822667685512,
+        0.2541722989679342,
+        0.015
+      ]
+    }
+  }
+}
