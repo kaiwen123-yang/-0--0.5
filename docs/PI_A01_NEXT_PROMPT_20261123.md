@@ -18,7 +18,7 @@
 1. main@0ee2d2e 已交付 1 条 A01 真实抓放成功；11,553 原始 RGB，7,680 个 20 Hz 行，现场逐行核对已通过。它是人工示教路径的 SDK 重放，split=commissioning / training_eligible=false，不是 π 自主控制成绩。
 2. 现场项目 /home/kaiwen/research/pi-single-live；入口 /home/kaiwen/research/pi-single-live/tasks/piper_real_single_v1/pi_demo.sh。
 3. 原会话 /home/kaiwen/research/pi-q12-data/pickplace_20261123_211053；成功运行子目录 20261123_223453_601082_block；既有导出是同级 pickplace_20261123_211053_commissioning_01。保留原始数据和旧资格。
-4. 末次实测 11/23 22:46:19 在抬离位 [3.627,127.481,-114.178,-7.188,66.424,14.585]°，全使能、CAN/MOVE_J 到位，SDK 夹爪反馈39.5mm。没有再次回零；相机和viewer在22:48交付时仍运行。先读现在的状态，不能当成实时事实。
+4. 23:27 SDK 已从 A01 抬离位直接回零，11/23 23:28:12 独立实测六轴均为 0°，6/6 使能、CAN/MOVE_J 已到位，SDK 夹爪 39.5 mm；相机与 viewer 仍运行。新会话先读取实际状态。
 5. 唯一 DC1 CC16762023M，wrist，唯一有效 left_wrist_0_rgb，其余槽mask=False；沿用11/22冻结 wrist_rgb_calibration.json、received RGB与相同安装。不重跑标定、长静止或RoboMIND调研。
 
 本轮目标：先修现有正式采集合同和正常结束/重定位接续，录下一条更紧凑且来源完整的新示范并审核导出，再按实际进度扩采。3–5条不是必须先重复旧六分钟A01的数量门禁；30–50条是首轮正式集预算，不保证学习效果。
