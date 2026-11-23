@@ -292,6 +292,8 @@ def export(a):
                             f.write(json.dumps(r,separators=(",",":"))+"\n")
                     manifests.append(dict(directory=ident, raw_directory=str(path), boot_id=run["boot_id"],
                         calibration_commit=run["calibration_commit"], calibration=run["calibration"],
+                        retreat_window=run.get("retreat_window"),
+                        reset_between_runs=run.get("reset_between_runs"),
                         gripper_basis=run.get("gripper_basis","sdk_width_m"),
                         pad_measurements=run.get("pad_measurements",[]),
                         source_trajectory_id=run["source_trajectory_id"], session_id=run["session_id"],

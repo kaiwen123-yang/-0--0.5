@@ -6,11 +6,26 @@ import math
 from demo_io import gap, read
 
 
-def plan(path, bounds, speed_deg_s):
+def plan(path, bounds, speed_deg_s, retreat_window=None):
     teach = read(path / "run.json")
-    if teach["kind"] != "teach" or not teach["complete"]:
-        raise ValueError("Incomplete source trajectory")
-    marks = teach["marks"]
+    if teach["kind"] != "teach":
+        raise ValueError("Expected a taught source")
+    marks = list(teach["marks"])
+    if retreat_window is None:
+        if not teach["complete"]:
+            raise ValueError("Incomplete source trajectory")
+    else:
+        observed_end = read(path / "operator_retreat_end.json")
+        cam = read(path / "rgb_status.json")
+        if (teach["run_id"] != retreat_window["source_id"] or
+                not retreat_window["operator_selected"] or teach["complete"] or
+                teach.get("error") != "KeyboardInterrupt('operator interrupt')" or
+                teach["interface_before"]["tx_packets"] != teach["interface_after"]["tx_packets"] or
+                cam["error"] or cam["queue_drops"] or cam["received"] != cam["written"] or
+                cam["boot_id"] != teach["boot_id"] or
+                not marks[-1]["joint_id"] < retreat_window["end_joint_id"] <= observed_end["joint_id"]):
+            raise ValueError("Selected retreat requires a traceable, receive-only operator-ended recording")
+        marks.append(dict(event="end",joint_id=retreat_window["end_joint_id"]))
     if [m["event"] for m in marks] != ["start", "close", "open", "end"]:
         raise ValueError("Expected start, close, open, end")
     with (path / "feedback.csv").open() as f:
@@ -26,7 +41,7 @@ def plan(path, bounds, speed_deg_s):
             raise ValueError(f"Taught sample {rows[i][0]} outside limits")
         if i and (not 0 < ns-rows[i-1][1] <= 50_000_000 or gap(q, rows[i-1][2]) > 2):
             raise ValueError(f"Gap or discontinuity near taught sample {rows[i][0]}")
-    if gap(rows[0][2], rows[-1][2]) > .35:
+    if retreat_window is None and gap(rows[0][2], rows[-1][2]) > .35:
         raise ValueError("End the taught path at its measured starting hold (within 0.35 deg)")
     for k in locked:
         window = [r for r in rows if abs(r[1]-rows[k][1]) <= 500_000_000]

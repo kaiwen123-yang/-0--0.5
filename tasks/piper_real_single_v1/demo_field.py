@@ -277,10 +277,20 @@ def main():
         width, force = cfg["open_m"], cfg["force_N"]
         if not .015 <= cfg["close_m"] < width <= .040 or not 0 < force <= 1:
             raise ValueError("当前开口或力度配置超出已核实范围")
+        expected = old["q"]
+        if source_file.exists():
+            src = read(source_file)
+            if src.get("retreat_window"):
+                # Terminal hold and intended *next* start are distinct. This
+                # command must see the manually restored start before any TX.
+                taught = read(session/src["run"]/"run.json")
+                if src["retreat_window"]["source_id"] != taught["run_id"]:
+                    raise ValueError("Source trajectory identity mismatch")
+                expected = taught["marks"][0]["q"]
         row = healthy(dev, rx, grip)
         start = row["q_rad"]
         if (row["arm"]["motion_status"] != 0 or max(map(abs,start)) > math.radians(5)
-                or gap(start,old["q"]) > .35):
+                or gap(start,expected) > .35):
             raise ValueError("先在现场恢复到既有起点并确认 CAN/MOVE_J 到位")
         report.update(previous_hold=old, expected_open_m=width)
         h0.calibration_arrival(dev,start)
@@ -379,6 +389,11 @@ def main():
             raise ValueError('当前布局的示教尚未正常完成')
         path = session / src["run"]
         taught = read(path / "run.json")
+        window = src.get("retreat_window")
+        if window:
+            if not cfg.get("commissioning_only") or report["use"] == "formal":
+                raise ValueError("Selected retreat is for reviewed commissioning only")
+            report.update(retreat_window=window,reset_between_runs="separate_confirmed_return")
         report.update(source_trajectory_id=taught["run_id"], source_directory=str(path),
                       placement=taught["placement"], session_id=cfg["session_id"])
         if kind == "empty":
@@ -404,12 +419,12 @@ def main():
         # Queries cannot replace the previously submitted joint target.
         save(led, dict(old_hold, tx_packets=after_queries))
         speed = min(2.5, *(math.degrees(r['max_rad_s']) for r in report['limits']))
-        points = plan(path, bounds, speed)
+        points = plan(path, bounds, speed, window)
         report.update(reference_deg_s=speed, reference_deg_s2=8, retained_points=len(points))
         print("源关节点", points[-1]["id"]-points[0]["id"]+1, "保留节点", len(points),
               "计划轨迹秒", sum(p["ticks"] for p in points)*.05, flush=True)
-        if max(gap(base, p["q"]) for p in (points[0],points[-1])) > .35:
-            raise ValueError("首尾不在同一已知起点")
+        if gap(base,points[0]["q"]) > .35 or (not window and gap(base,points[-1]["q"]) > .35):
+            raise ValueError("起点与实测保持位不符，或未经选择的末端偏离起点")
         agree("确认以上路径与时间，启动本次低速执行")
         with camera(run) as check:
             try:

@@ -1,0 +1,105 @@
+{
+  "selected": {
+    "source_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+    "operator_selected": true,
+    "end_joint_id": 43901,
+    "selection_kind": "observed_stationary_retreat",
+    "reference_rgb": "rgb/0006527.png",
+    "delta_flange_xyz_mm": [
+      -27.0,
+      3.5,
+      70.8
+    ],
+    "note": "Operator selected actual post-release retreat as episode end; separately return to start between runs."
+  },
+  "source": "20261123_215419_277510_teach",
+  "marks": [
+    {
+      "event": "start",
+      "joint_id": 17608,
+      "mono_ns": 123539487372591,
+      "q": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "event": "close",
+      "joint_id": 22628,
+      "mono_ns": 123564587073589,
+      "q": [
+        0.05227261109723017,
+        2.1951355068183083,
+        -1.6303120542879033,
+        -0.07112216701876893,
+        1.122822667685512,
+        0.2541722989679342
+      ]
+    },
+    {
+      "event": "open",
+      "joint_id": 39441,
+      "mono_ns": 123648651327084,
+      "q": [
+        0.05028293574995664,
+        2.367504223745268,
+        -1.9754858204548218,
+        -0.12449433554475553,
+        0.9344143749327242,
+        0.2541722989679342
+      ]
+    }
+  ],
+  "endpoint": {
+    "id": 43901,
+    "ns": 123670951138338,
+    "q": [
+      0.06358234465015343,
+      2.2235669203332957,
+      -1.9943179230838406,
+      -0.12667599710974844,
+      1.1601727136781907,
+      0.2541722989679342
+    ],
+    "ticks": 9,
+    "marker": "end"
+  },
+  "source_rows": 26294,
+  "knots": 453,
+  "reference_ticks": 7601,
+  "raw_joint_groups": 54955,
+  "raw_gripper_rows": 54955,
+  "rgb": {
+    "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "camera_id": "CC16762023M",
+    "topic": "/wrist_camera/color/image_raw",
+    "received": 8167,
+    "written": 8167,
+    "queue_drops": 0,
+    "last_ns": 123726069637513,
+    "error": null
+  },
+  "observed_end": {
+    "event": "operator_reported_retreat_end",
+    "joint_id": 54912,
+    "mono_ns": 123726005759063,
+    "q": [
+      -0.01802925117310142,
+      -0.056025068989017976,
+      0.02944370448114434,
+      0.009215338450530061,
+      0.12571606602115157,
+      -0.0601440460237246
+    ],
+    "capture_ns": 123726055704670,
+    "operator_report": "退回到了，已停稳",
+    "observed_half_second_span_deg": 0.0,
+    "execution_approved": false
+  },
+  "excluded_first_out_of_limit_id": 44917,
+  "tx_delta": 0
+}

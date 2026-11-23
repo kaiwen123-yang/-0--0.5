@@ -1,0 +1,325 @@
+{
+  "host_session": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_220721_direct_sdk_home",
+  "operation": "operator_requested_direct_sdk_move_j_to_zero",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "sdk": "pyAgxArm@d90e234ba8e408cfa964b38aa9120b3131fc9f85",
+  "completed": true,
+  "initial_q_deg": [
+    -1.033,
+    -0.556,
+    0.31,
+    0.888,
+    6.336,
+    -3.446
+  ],
+  "initial_status": {
+    "ctrl_mode": 2,
+    "arm_status": 0,
+    "mode_feedback": 1,
+    "teach_status": 2,
+    "motion_status": 0,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "final": {
+    "mono_ns": 124255654232427,
+    "q_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "width_m": 0.0288,
+    "arm": {
+      "ctrl_mode": 1,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "drives": [
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      }
+    ],
+    "gripper": {
+      "value": 0.0288,
+      "force": -0.004,
+      "foc_status": {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "sensor_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "homing_status": false
+      },
+      "mode": "width"
+    }
+  },
+  "host_submit_counts_by_id": {
+    "0x472": 6,
+    "0x151": 4,
+    "0x155": 382,
+    "0x156": 382,
+    "0x157": 382
+  },
+  "host_submit_counts_by_result": {
+    "host_submitted": 1156
+  },
+  "six_joint_transactions": 382,
+  "first_arm": {
+    "id": "10:arm",
+    "kind": "arm",
+    "requested": [
+      -0.01802925117310142,
+      0.0,
+      0.0,
+      0.015498523757709647,
+      0.11058406140636072,
+      -0.0601440460237246
+    ],
+    "source": "zero_return_from_fresh_feedback",
+    "start_ns": 124235990419176,
+    "result": "host_submitted",
+    "actual": [
+      -0.01802925117310142,
+      0.0,
+      0.0,
+      0.015498523757709647,
+      0.11058406140636072,
+      -0.0601440460237246
+    ],
+    "submitted_ns": 124235990799478,
+    "frames": 3
+  },
+  "last_arm": {
+    "id": "391:arm",
+    "kind": "arm",
+    "requested": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "zero_return_from_fresh_feedback",
+    "start_ns": 124255092375377,
+    "result": "host_submitted",
+    "actual": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "submitted_ns": 124255093046026,
+    "frames": 3
+  },
+  "reference_duration_s": 19.102246548,
+  "joint_groups": 4287,
+  "gripper_frames": 4287,
+  "interface_delta": {
+    "tx_packets": 1156,
+    "rx_packets": 51836,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "ended_local": "2026-11-23T22:07:43.506162+08:00",
+  "source_limits": [
+    {
+      "joint": 1,
+      "received_unix_s": 1795442842.650495,
+      "controller": [
+        -2.6179938779914944,
+        2.6179938779914944
+      ],
+      "max_rad_s": 3.0,
+      "sdk": [
+        -2.617994,
+        2.617994
+      ],
+      "usable": [
+        -2.6179938779914944,
+        2.6179938779914944
+      ]
+    },
+    {
+      "joint": 2,
+      "received_unix_s": 1795442842.6528304,
+      "controller": [
+        0.0,
+        3.141592653589793
+      ],
+      "max_rad_s": 3.0,
+      "sdk": [
+        0.0,
+        3.141593
+      ],
+      "usable": [
+        0.0,
+        3.141592653589793
+      ]
+    },
+    {
+      "joint": 3,
+      "received_unix_s": 1795442842.6542246,
+      "controller": [
+        -2.9670597283903604,
+        0.0
+      ],
+      "max_rad_s": 3.0,
+      "sdk": [
+        -2.96706,
+        0.0
+      ],
+      "usable": [
+        -2.9670597283903604,
+        0.0
+      ]
+    },
+    {
+      "joint": 4,
+      "received_unix_s": 1795442842.6552966,
+      "controller": [
+        -2.356194490192345,
+        2.356194490192345
+      ],
+      "max_rad_s": 3.0,
+      "sdk": [
+        -2.356195,
+        2.356195
+      ],
+      "usable": [
+        -2.356194490192345,
+        2.356194490192345
+      ]
+    },
+    {
+      "joint": 5,
+      "received_unix_s": 1795442842.6568294,
+      "controller": [
+        -1.562069680534925,
+        1.562069680534925
+      ],
+      "max_rad_s": 3.0,
+      "sdk": [
+        -1.56207,
+        1.56207
+      ],
+      "usable": [
+        -1.562069680534925,
+        1.562069680534925
+      ]
+    },
+    {
+      "joint": 6,
+      "received_unix_s": 1795442842.6578321,
+      "controller": [
+        -2.9670597283903604,
+        2.9670597283903604
+      ],
+      "max_rad_s": 3.0,
+      "sdk": [
+        -2.96706,
+        2.96706
+      ],
+      "usable": [
+        -2.9670597283903604,
+        2.9670597283903604
+      ]
+    }
+  ]
+}
