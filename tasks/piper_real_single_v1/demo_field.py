@@ -39,12 +39,15 @@ def main():
     sub = p.add_subparsers(dest="kind", required=True)
     sub.add_parser("status", help="读取两秒实测反馈；TX=0")
     sub.add_parser("limits", help="仅查询六轴当前控制器限位")
-    modes = {"prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
+    modes = {"prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
              "teach": "被动手拖记录", "empty": "移走方块后核查新路径",
              "block": "按原布局抓放一次"}
     for kind, help_text in modes.items():
         sp = sub.add_parser(kind, help=help_text)
         sp.add_argument("session", type=Path)
+        if kind == "prepare-pads":
+            sp.add_argument("--first-open-mm", required=True, type=float, help="首次张开独立卡尺净距")
+            sp.add_argument("--object-mm", required=True, type=float, help="同一夹持方向的实物宽")
         if kind == "width-check":
             sp.add_argument("target_mm", type=float, help="本次空夹目标 mm，15 至 40")
         if kind == "teach":
@@ -198,6 +201,70 @@ def main():
         save(session / "setup.json", cfg)
         record_hold(q)
 
+    def prepare_pads():
+        # Recover only a known submitted hold after an opening metrology rejection.
+        # Each following TX must belong to a completed, gripper-only measurement.
+        if (session/"setup.json").exists() or led.exists():
+            raise ValueError("该会话已有准备结果")
+        first, = session.glob("*_prepare")
+        initial = read(first/"run.json")
+        if (initial["complete"] or initial["boot_id"] != BOOT or
+                "尺读" not in initial.get("error","") or "2 mm" not in initial["error"]):
+            raise ValueError("需要同一次启动下因开口尺读超差而结束的准备记录")
+        def commands(path, data):
+            with (path/"commands.jsonl").open() as f:
+                items = [json.loads(line) for line in f]
+            with (path/"tx.csv").open() as f:
+                frames = list(csv.DictReader(f))
+            if (not frames or any(r["result"] != "host_submitted" for r in items+frames)
+                    or sum(r["frames"] for r in items) != len(frames)
+                    or data["interface_after"]["tx_packets"]-data["interface_before"]["tx_packets"] != len(frames)):
+                raise ValueError("提交记录与实际接口计数不一致")
+            return items
+        original = commands(first, initial)
+        if [r["kind"] for r in original] != ["read_limit"]*6+["arm","grip"]:
+            raise ValueError("原准备记录的关节保持或张开来源不明确")
+        anchor, opening = original[-2:]
+        if anchor["source"] != "measured_stationary_anchor" or opening["source"] != "open":
+            raise ValueError("缺少当前实测保持与首次张开提交")
+        open_m, force = opening["actual"], opening["force_N"]
+        points = [dict(run=first.name, target_m=open_m, pad_gap_m=a.first_open_mm/1000)]
+        tx_count = initial["interface_after"]["tx_packets"]
+        for path in sorted(session.glob("*_width-check")):
+            data = read(path/"run.json")
+            if (data["boot_id"] != BOOT or not data["complete"] or
+                    data["interface_before"]["tx_packets"] != tx_count):
+                raise ValueError("卡尺核查会话间有未追溯的 TX 或时钟变化")
+            cmd, = commands(path,data)
+            if cmd["kind"] != "grip" or cmd["force_N"] != force:
+                raise ValueError("两次测量间有其他动作或力设置")
+            check, = data["opening_checks"]
+            points.append(dict(run=path.name,target_m=cmd["actual"],pad_gap_m=check["ruler_m"],
+                               sdk_width_m=check["feedback_m"]))
+            tx_count = data["interface_after"]["tx_packets"]
+        closing = min(points,key=lambda pt:pt["target_m"])
+        repeated = points[-1]
+        object_m = a.object_mm/1000
+        if (len({pt["target_m"] for pt in points}) < 3 or repeated["target_m"] != open_m or
+                abs(repeated["pad_gap_m"]-points[0]["pad_gap_m"]) > .002 or
+                not all(0 < pt["pad_gap_m"] <= .1 for pt in points) or
+                not closing["pad_gap_m"] < object_m < min(repeated["pad_gap_m"],points[0]["pad_gap_m"])):
+            raise ValueError("需要实测闭合端、中间点、可重复张开端，并覆盖方块宽度")
+        now = healthy(dev,rx,grip)
+        if (stats()["tx_packets"] != tx_count or gap(now["q_rad"],anchor["actual"]) > .35 or
+                abs(now["width_m"]-open_m) > .002):
+            raise ValueError("当前姿态、夹爪或目标来源发生变化")
+        h0.calibration_arrival(dev,anchor["actual"])
+        if stats()["tx_packets"] != tx_count:
+            raise ValueError("建立只读接续期间出现额外主机 TX")
+        cfg = dict(session_id=report["run_id"],open_m=open_m,close_m=closing["target_m"],
+                   force_N=force,object_m=object_m,gripper_basis="sdk_width_m_with_separate_caliper_endpoints",
+                   commissioning_only=True,pad_measurements=points)
+        save(led,dict(boot_id=BOOT,q=anchor["actual"],tx_packets=tx_count,
+                      run=first.name,command_file=str(first/"commands.jsonl")))
+        save(session/"setup.json",cfg)
+        report.update(source_hold=anchor["id"], pad_measurements=points, object_m=object_m)
+
     def teach():
         base = previous_hold()
         cfg = read(session / "setup.json")
@@ -270,6 +337,10 @@ def main():
     def replay():
         nonlocal active
         cfg = read(session / "setup.json")
+        if cfg.get("commissioning_only"):
+            if report["use"] == "formal":
+                raise ValueError("此会话仅核实了指垫端点，正式训练需先确定物理开口契约")
+            report.update(gripper_basis=cfg["gripper_basis"],pad_measurements=cfg["pad_measurements"])
         src = read(source_file)
         if not src.get('run'):
             raise ValueError('当前布局的示教尚未正常完成')
@@ -442,7 +513,7 @@ def main():
         try:
             dev.connect()
             report["initial"] = snapshot(dev, rx, grip)
-            if kind not in ("teach","status"):
+            if kind not in ("teach","status","prepare-pads"):
                 tx = stack.enter_context((run/"tx.csv").open("x",newline="",buffering=1))
                 commands = stack.enter_context((run/"commands.jsonl").open("x",buffering=1))
                 sender = Sender(dev, grip, tx, commands)
@@ -454,6 +525,8 @@ def main():
                 prepare()
             elif kind == "width-check":
                 check_width()
+            elif kind == "prepare-pads":
+                prepare_pads()
             elif kind == "teach":
                 teach()
             else:

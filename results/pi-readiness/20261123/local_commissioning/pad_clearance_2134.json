@@ -1,0 +1,215 @@
+{
+  "session": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053",
+  "object_mm": 20,
+  "tool": "vernier caliper",
+  "surface": "opposing textured finger pads, same depth",
+  "approximate_readings_mm": [
+    22,
+    14.5
+  ],
+  "measurements": [
+    {
+      "run": "20261123_211437_276532_prepare",
+      "command": "8:grip",
+      "target_mm": 40.0,
+      "settled_feedback_mm": 39.5,
+      "feedback_at_entry_mm": 40.1,
+      "caliper_mm": 35.0,
+      "feedback_minus_caliper_mm": 5.1,
+      "tx_frames": {
+        "start_ns": "121308237446412",
+        "end_ns": "121308237502472",
+        "command_id": "8:grip",
+        "can_id": "0x159",
+        "data": "00009c4003e80100",
+        "result": "host_submitted",
+        "error": ""
+      }
+    },
+    {
+      "run": "20261123_212928_021074_width-check",
+      "command": "1:grip",
+      "target_mm": 25.0,
+      "settled_feedback_mm": 25.3,
+      "feedback_at_entry_mm": 25.2,
+      "caliper_mm": 22.0,
+      "feedback_minus_caliper_mm": 3.2,
+      "tx_frames": {
+        "start_ns": "121961399594632",
+        "end_ns": "121961399730139",
+        "command_id": "1:grip",
+        "can_id": "0x159",
+        "data": "000061a803e80100",
+        "result": "host_submitted",
+        "error": ""
+      }
+    },
+    {
+      "run": "20261123_213133_675787_width-check",
+      "command": "1:grip",
+      "target_mm": 15.0,
+      "settled_feedback_mm": 15.1,
+      "feedback_at_entry_mm": 15.1,
+      "caliper_mm": 14.5,
+      "feedback_minus_caliper_mm": 0.6,
+      "tx_frames": {
+        "start_ns": "122087052257954",
+        "end_ns": "122087052355941",
+        "command_id": "1:grip",
+        "can_id": "0x159",
+        "data": "00003a9803e80100",
+        "result": "host_submitted",
+        "error": ""
+      }
+    },
+    {
+      "run": "20261123_213224_745332_width-check",
+      "command": "1:grip",
+      "target_mm": 40.0,
+      "settled_feedback_mm": 39.5,
+      "feedback_at_entry_mm": 40.3,
+      "caliper_mm": 34.71,
+      "feedback_minus_caliper_mm": 5.59,
+      "tx_frames": {
+        "start_ns": "122138115504649",
+        "end_ns": "122138115596145",
+        "command_id": "1:grip",
+        "can_id": "0x159",
+        "data": "00009c4003e80100",
+        "result": "host_submitted",
+        "error": ""
+      }
+    }
+  ],
+  "resume": {
+    "run": "20261123_213427_543920_prepare-pads",
+    "tx_delta": 0,
+    "ended_local": "2026-11-23T21:34:28.707842+08:00",
+    "final": {
+      "mono_ns": 122260838188032,
+      "q_rad": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "width_m": 0.040299999999999996,
+      "arm": {
+        "ctrl_mode": 1,
+        "arm_status": 0,
+        "mode_feedback": 1,
+        "teach_status": 2,
+        "motion_status": 0,
+        "trajectory_num": 0,
+        "err_status": {
+          "joint_1_angle_limit": false,
+          "joint_2_angle_limit": false,
+          "joint_3_angle_limit": false,
+          "joint_4_angle_limit": false,
+          "joint_5_angle_limit": false,
+          "joint_6_angle_limit": false,
+          "communication_status_joint_1": false,
+          "communication_status_joint_2": false,
+          "communication_status_joint_3": false,
+          "communication_status_joint_4": false,
+          "communication_status_joint_5": false,
+          "communication_status_joint_6": false
+        }
+      },
+      "drives": [
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        }
+      ],
+      "gripper": {
+        "value": 0.040299999999999996,
+        "force": -0.11900000000000001,
+        "foc_status": {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "sensor_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "homing_status": false
+        },
+        "mode": "width"
+      }
+    },
+    "hold": {
+      "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+      "q": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tx_packets": 16750,
+      "run": "20261123_211437_276532_prepare",
+      "command_file": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_211437_276532_prepare/commands.jsonl"
+    },
+    "scope": "commissioning_only"
+  }
+}

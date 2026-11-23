@@ -2,7 +2,9 @@
 
 日期：2026-11-23，北京时间。当前阶段是标定后真实任务采集；不是重新标定、静止录制或无适配权重直接控制机械臂。
 
-**11/23 20:19 接续位置。** 操作者稍后到场，成功示范 0 条。测试机 `/home/kaiwen/research/pi-single-live` 已有 `tasks/piper_real_single_v1/pi_demo.sh` 及 `demo_*.py`。先看[可复制的现场步骤](PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md)和每日日志会话 4。从当时的 `status`、现场布置与 `prepare` 开始，沿 `teach → empty → review → block → review` 走完第一条。不要重做 RoboMIND 审查或静止观测基线。下面保留原始任务和验收口径。
+**最新现场位置：11/23 21:34。** 先看每日日志会话 5 和实时状态。空夹测量完成，现场会话 `/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053` 已保留真实保持位与实测指垫张合端点；下一步确认 A01 方块布置并启动被动手拖。
+
+**11/23 20:19 部署记录。** 操作者稍后到场，成功示范 0 条。测试机 `/home/kaiwen/research/pi-single-live` 已有 `tasks/piper_real_single_v1/pi_demo.sh` 及 `demo_*.py`。先看[可复制的现场步骤](PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md)和每日日志会话 4。从当时的 `status`、现场布置与 `prepare` 开始，沿 `teach → empty → review → block → review` 走完第一条。不要重做 RoboMIND 审查或静止观测基线。下面保留原始任务和验收口径。
 
 ```text
 你只负责 π0 / π0.5 的单腕 Piper H 实机测试。继续现有仓库 kaiwen123-yang/-0--0.5，先读当前 AGENTS.md、docs/PI_REAL_TEST_STATE.md、docs/PI_DAILY_WORK_LOG.md 最近记录，以及：
