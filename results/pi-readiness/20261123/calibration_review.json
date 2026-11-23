@@ -1,0 +1,263 @@
+{
+  "audit_date": "2026-11-23",
+  "source_commit": "72ad763699502defed9d39d51bd22a56ea2ce2e8",
+  "source_directory": "results/calibration-audit/20261122/ssh_multiview",
+  "scope": "Read-only review of published actual observations, planned splits, frozen parameters, grid validation, independent metrics and reproduction code. No new hardware I/O, no refit, no new dependencies.",
+  "conclusion": "The new fixed-k3 model supersedes the old failed Brown5 model for this wrist installation. Published full-frame numerical invertibility checks pass; proceed to action/data/policy adaptation rather than re-run the calibration cycle. Absolute metric task accuracy and unseen near-field/edge accuracy remain unverified.",
+  "calibration_binding": {
+    "camera_id": "CC16762023M",
+    "image_domain": "received RGB 640x480; device_internal_rectification unknown",
+    "direction": "T_flange_camera maps RGB optical coordinates into flange_link, metres",
+    "board": "Q12-290-20, 11x8; 0 at lower right near model text; +x along long edge to left, +y along short edge upward",
+    "frozen_at_unix_ns_string": "1795328385264509915",
+    "frozen_time_bjt": "2026-11-22T14:19:45.264510+08:00",
+    "K": [
+      [
+        485.9957933866547,
+        0,
+        316.8354936164656
+      ],
+      [
+        0,
+        485.70801038997104,
+        210.43816773080977
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "D": [
+      0.10946944385152121,
+      -0.19610035643756976,
+      -0.0004649597750604916,
+      -0.0010028698508359273,
+      0
+    ],
+    "T_flange_camera": [
+      [
+        0.0249769207917348,
+        0.935099425263478,
+        0.3535041984187396,
+        -0.07008002139904523
+      ],
+      [
+        -0.9996771421405299,
+        0.025013166814031422,
+        0.004466874486344253,
+        0.0008630482208288898
+      ],
+      [
+        -0.004665287719604147,
+        -0.3535016355801568,
+        0.9354222729509104,
+        0.04354747689416299
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "split_verification": {
+    "counts": {
+      "train": {
+        "planned": 43,
+        "accepted": 35
+      },
+      "dev": {
+        "planned": 9,
+        "accepted": 7
+      },
+      "final": {
+        "planned": 11,
+        "accepted": 9
+      }
+    },
+    "final": [
+      {
+        "id": "v01",
+        "accepted": true,
+        "seconds_after_freeze": 80.862156288
+      },
+      {
+        "id": "v02",
+        "accepted": true,
+        "seconds_after_freeze": 70.998922752
+      },
+      {
+        "id": "v03",
+        "accepted": true,
+        "seconds_after_freeze": 58.09158656
+      },
+      {
+        "id": "v04",
+        "accepted": true,
+        "seconds_after_freeze": 23.4537856
+      },
+      {
+        "id": "v05",
+        "accepted": true,
+        "seconds_after_freeze": 31.613221888
+      },
+      {
+        "id": "v06",
+        "accepted": true,
+        "seconds_after_freeze": 36.460723712
+      },
+      {
+        "id": "l03",
+        "accepted": false,
+        "seconds_after_freeze": 91.72532224
+      },
+      {
+        "id": "l07",
+        "accepted": true,
+        "seconds_after_freeze": 51.807872512
+      },
+      {
+        "id": "l11",
+        "accepted": false,
+        "seconds_after_freeze": 44.719991552
+      },
+      {
+        "id": "a04",
+        "accepted": true,
+        "seconds_after_freeze": 66.519165952
+      },
+      {
+        "id": "a07",
+        "accepted": true,
+        "seconds_after_freeze": 17.50288
+      }
+    ],
+    "export_parameter_differences": {
+      "K": 0,
+      "D": 0,
+      "T_flange_camera": 0
+    },
+    "frozen_candidate_differences": {
+      "K": 0,
+      "D": 0,
+      "T_flange_camera": 0,
+      "T_base_board_train_reference": 0
+    }
+  },
+  "recomputed_independent_metrics": {
+    "pnp_px": {
+      "mean": 0.10681498961316215,
+      "p95": 0.13199476301670074,
+      "max": 0.13285969197750092
+    },
+    "chain_px": {
+      "mean": 2.2216600510809155,
+      "p95": 3.5628179073333737,
+      "max": 3.8774898052215576
+    },
+    "fixed_board_mm": {
+      "mean": 3.342484140046202,
+      "p95": 5.354072470545463,
+      "max": 6.126258312484216
+    },
+    "fixed_board_deg": {
+      "mean": 0.4454158144637602,
+      "p95": 0.6767441142101017,
+      "max": 0.6822638157499442
+    }
+  },
+  "numeric_inverse": {
+    "received_grid_pass": 307200,
+    "received_total": 307200,
+    "received_roundtrip_max_px": 9.99978026787113e-10,
+    "received_min_eigenvalue": 0.6101712353600133,
+    "ideal_grid_pass": 307200,
+    "ideal_forward_outside_received": 5744,
+    "opencv_default_inverse_max_roundtrip_px": 0.06421421265527563,
+    "caveat": "Numerical function checks do not establish full-frame empirical imaging accuracy. Same-K undistorted output has 5,744 ideal pixels sampling outside received source; do not silently change VLA preprocessing."
+  },
+  "coverage": {
+    "views": 35,
+    "corners": 3080,
+    "bbox_px": [
+      66.99752807617188,
+      55.829341888427734,
+      579.8309936523438,
+      354.0896911621094
+    ],
+    "counts_grid_4rows_6cols": [
+      [
+        0,
+        42,
+        168,
+        168,
+        57,
+        2
+      ],
+      [
+        31,
+        385,
+        771,
+        604,
+        298,
+        55
+      ],
+      [
+        26,
+        145,
+        80,
+        48,
+        148,
+        52
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "occupied_cells": 17
+  },
+  "train_depth_m": [
+    0.6170140887934598,
+    0.7372005325805817
+  ],
+  "physical_accuracy_limits": [
+    "Nominal 20 mm square still used; previous coarse 197/200 mm discrepancy has no new precise scale measurement in these files.",
+    "Training corners stop at y=354.0897; bottom roughly 26% is numerically valid but lacks checkerboard support.",
+    "Training target origin depth 0.617–0.737 m does not certify closer gripper-object geometry.",
+    "Independent translation P95 5.3541 mm is slightly above prior suggested 5 mm engineering target, not a strict automatic pass.",
+    "Nine true post-freeze poses improve independence; low PnP residual still not physical absolute accuracy."
+  ],
+  "artifact_notes": [
+    "frozen.json, fix_k3.json:model and wrist_rgb_calibration.json K/D/X equal exactly.",
+    "All accepted final rows are timestamped 17.5029–80.8622 seconds after frozen timestamp; all 11 planned final rows occur after freeze.",
+    "51 accepted rows have 88 corners, matching serial, real G and receive timestamps; 35/7/9 split matches preallocated plan.",
+    "reproduce.py fits K,D and Park X only on rows split=train and in_fit_or_score=true; final views are not fit inputs."
+  ],
+  "recommended_minimum_next": [
+    "Bind current received RGB + K/D/X to serial/frame/installation and calibration version; retain raw RGB for policy unless preprocessing is deliberately retrained.",
+    "Move to real action-label/continuous tracking and public-data supervision readiness; no need for routine full recollection.",
+    "Before actual grasping, verify task-space visibility and contact clearance with current device state; use task outcome/physical reference to evaluate rather than treating calibration residual as success rate.",
+    "For precision tasks or camera/arm mount changes, add targeted physical validation or recalibration appropriate to changed conditions."
+  ],
+  "sources": [
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/report_zh.md",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/frozen.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/fix_k3.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/fix_k3_frame_geometry.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/independent.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/observations.jsonl",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/plan.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/reviewed.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/summary.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/wrist_rgb_calibration.json",
+    "https://github.com/kaiwen123-yang/-0--0.5/blob/72ad763699502defed9d39d51bd22a56ea2ce2e8/results/calibration-audit/20261122/ssh_multiview/reproduce.py"
+  ],
+  "publication_note": "Compact review evidence. Local retrieval paths may refer to analysis-only source material that was not published; see README.md for the exact published subset. No complete source episode or training dataset is included."
+}

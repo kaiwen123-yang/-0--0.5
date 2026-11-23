@@ -1,0 +1,858 @@
+{
+  "source": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "place_utensils_into_plate",
+    "episode": "0617_144408",
+    "revision": "f132a6a3a4af090d8f97b2c440b787aaebaeb66e",
+    "path": "data/agilex/place_utensils_into_plate/success_episodes/0617_144408/data/trajectory.hdf5",
+    "source_size_bytes": 1013801757
+  },
+  "training_eligible": false,
+  "inspection_only": true,
+  "groups": {
+    "camera_color_channel/camera_front": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "rgb"
+    },
+    "camera_color_channel/camera_left": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "rgb"
+    },
+    "camera_color_channel/camera_right": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "rgb"
+    },
+    "camera_color_resolution/camera_front": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_color_resolution/camera_left": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_color_resolution/camera_right": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_depth_resolution/camera_front": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_depth_resolution/camera_left": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_depth_resolution/camera_right": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_model/camera_front": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "RealSense_D435if"
+    },
+    "camera_model/camera_left": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "RealSense_D435if"
+    },
+    "camera_model/camera_right": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "RealSense_D435if"
+    },
+    "camera_observations/color_images/camera_front": {
+      "shape": [
+        2883
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/color_images/camera_left": {
+      "shape": [
+        2883
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/color_images/camera_right": {
+      "shape": [
+        2883
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/depth_images/camera_front": {
+      "shape": [
+        2883
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/depth_images/camera_left": {
+      "shape": [
+        2883
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/depth_images/camera_right": {
+      "shape": [
+        2883
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "camera_observations/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/arm_left_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/arm_left_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/arm_left_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/arm_right_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/arm_right_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/arm_right_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_left_pose_align/data": {
+      "shape": [
+        2883,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "master/end_effector_left_pose_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_left_pose_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_left_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/end_effector_left_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_left_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_right_pose_align/data": {
+      "shape": [
+        2883,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "master/end_effector_right_pose_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_right_pose_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_right_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/end_effector_right_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_right_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/arm_left_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/arm_left_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/arm_left_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/arm_right_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/arm_right_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/arm_right_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_pose_align/data": {
+      "shape": [
+        2883,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_pose_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_pose_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_pose_align/data": {
+      "shape": [
+        2883,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_pose_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_pose_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_position_align/is_intervene": {
+      "shape": [
+        2883
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_position_align/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    }
+  },
+  "numerics": {
+    "master/arm_left_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ptp": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "last": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "master/end_effector_left_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "min": 0.0,
+      "max": 0.0,
+      "ptp": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "master/arm_right_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "min": [
+        -0.2509493827819824,
+        -0.03232373297214508,
+        -1.8657927513122559,
+        -0.11943906545639038,
+        -0.10944365710020065,
+        -0.20039667189121246
+      ],
+      "max": [
+        0.643282413482666,
+        1.972864031791687,
+        0.03317848965525627,
+        0.0729856938123703,
+        1.337937355041504,
+        0.696905255317688
+      ],
+      "ptp": [
+        0.8942317962646484,
+        2.005187749862671,
+        1.8989711999893188,
+        0.19242475926876068,
+        1.4473810195922852,
+        0.8973019123077393
+      ],
+      "first": [
+        0.0117747001349926,
+        -0.027840623632073402,
+        0.028520939871668816,
+        -0.025136804208159447,
+        -0.09801783412694931,
+        -0.015891484916210175
+      ],
+      "last": [
+        -0.006907823961228132,
+        -0.025782231241464615,
+        0.028852375224232674,
+        -0.06292051076889038,
+        -0.02086302451789379,
+        0.09669209271669388
+      ]
+    },
+    "master/end_effector_right_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "min": -0.007420000154525042,
+      "max": 0.05033000186085701,
+      "ptp": 0.057750001549720764,
+      "first": -0.0067900000140070915,
+      "last": -0.006719999946653843
+    },
+    "puppet/arm_left_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ptp": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "last": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "puppet/end_effector_left_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "min": 0.0,
+      "max": 0.0,
+      "ptp": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "puppet/arm_right_position_align/data": {
+      "shape": [
+        2883,
+        6
+      ],
+      "min": [
+        -0.24299491941928864,
+        -0.011216492392122746,
+        -1.8318816423416138,
+        -0.10075654089450836,
+        -0.02637532725930214,
+        -0.18851730227470398
+      ],
+      "max": [
+        0.6441022753715515,
+        2.0293128490448,
+        0.026113668456673622,
+        0.0667058527469635,
+        1.242640733718872,
+        0.6984926462173462
+      ],
+      "ptp": [
+        0.887097179889679,
+        2.040529251098633,
+        1.8579952716827393,
+        0.16746239364147186,
+        1.2690160274505615,
+        0.8870099782943726
+      ],
+      "first": [
+        0.016135700047016144,
+        -0.011216492392122746,
+        0.02415993995964527,
+        -0.026567211374640465,
+        -0.02637532725930214,
+        -0.0086347796022892
+      ],
+      "last": [
+        -0.0004012119898106903,
+        -0.0102047398686409,
+        0.025852007791399956,
+        -0.0651184543967247,
+        0.057966411113739014,
+        0.10318125784397125
+      ]
+    },
+    "puppet/end_effector_right_position_align/data": {
+      "shape": [
+        2883
+      ],
+      "min": -0.0002800000074785203,
+      "max": 0.049559999257326126,
+      "ptp": 0.04983999952673912,
+      "first": -0.0002800000074785203,
+      "last": -0.0002800000074785203
+    },
+    "camera_observations/timestamp": {
+      "shape": [
+        2883
+      ],
+      "dtype": "int64",
+      "first": 1750142666,
+      "last": 1750142695,
+      "unique_diffs": [
+        0,
+        1
+      ]
+    }
+  },
+  "images": {
+    "front": [
+      {
+        "index": 0,
+        "file": "front_00000.jpg",
+        "bytes": 81697,
+        "width": 640,
+        "height": 480,
+        "sha256": "57b163c7226eeef99001d7c27b56f7284c35e074a9b7d172ae1ab1724fae73ec"
+      },
+      {
+        "index": 360,
+        "file": "front_00360.jpg",
+        "bytes": 80015,
+        "width": 640,
+        "height": 480,
+        "sha256": "b7d0751cbff2f33dc94d45c3646cf54fd1def159093d09973ccc8b30d88bfc20"
+      },
+      {
+        "index": 720,
+        "file": "front_00720.jpg",
+        "bytes": 78577,
+        "width": 640,
+        "height": 480,
+        "sha256": "10557e7144076b18eca98174f82612f8db81d73f52463c6f3a7a547736b99c72"
+      },
+      {
+        "index": 1080,
+        "file": "front_01080.jpg",
+        "bytes": 74009,
+        "width": 640,
+        "height": 480,
+        "sha256": "05deec3ff80895892dadbcc7b28b98842ad3218608da47d5e69fc7857774ccd5"
+      },
+      {
+        "index": 1441,
+        "file": "front_01441.jpg",
+        "bytes": 73935,
+        "width": 640,
+        "height": 480,
+        "sha256": "1fe9a431bc09cdc286750b8bc93fcd3b3ee9068ff3bf3c1ff71a02a27806dcdd"
+      },
+      {
+        "index": 1801,
+        "file": "front_01801.jpg",
+        "bytes": 76156,
+        "width": 640,
+        "height": 480,
+        "sha256": "4ea5159c39099c1109985a080741687a3ac7d8b8d6bd9e86f4727449906cf03c"
+      },
+      {
+        "index": 2161,
+        "file": "front_02161.jpg",
+        "bytes": 76810,
+        "width": 640,
+        "height": 480,
+        "sha256": "3a63f6f1e6b6c583c12c6b1977b801bdbd010175c8540aae3ffa21e91f6c5c17"
+      },
+      {
+        "index": 2521,
+        "file": "front_02521.jpg",
+        "bytes": 76371,
+        "width": 640,
+        "height": 480,
+        "sha256": "cd03471c571f82eee6c68a8a612a8fe893b0299c02867e83db61e95ccd10dcac"
+      },
+      {
+        "index": 2882,
+        "file": "front_02882.jpg",
+        "bytes": 77884,
+        "width": 640,
+        "height": 480,
+        "sha256": "5f881518e1338a5cc8743f7ef40ddb564b9536db0575a51ac3e86a308b50b977"
+      }
+    ],
+    "left": [
+      {
+        "index": 0,
+        "file": "left_00000.jpg",
+        "bytes": 67346,
+        "width": 640,
+        "height": 480,
+        "sha256": "55ccc93ae55c3a4eeac843b65ddf0b81fdac8af19454d3c39776c56c5d0d75cf"
+      },
+      {
+        "index": 360,
+        "file": "left_00360.jpg",
+        "bytes": 55287,
+        "width": 640,
+        "height": 480,
+        "sha256": "b465fff57c7ef041ba3d9b080e61346b9e65356f838551b135b87d9b2ca42f1b"
+      },
+      {
+        "index": 720,
+        "file": "left_00720.jpg",
+        "bytes": 77030,
+        "width": 640,
+        "height": 480,
+        "sha256": "a266fe96a91f3fe7c1b423728097d26d49574a8be185028b9918a3b3ca6150e8"
+      },
+      {
+        "index": 1080,
+        "file": "left_01080.jpg",
+        "bytes": 77993,
+        "width": 640,
+        "height": 480,
+        "sha256": "56e0a7ac631f75b7330def924dc0fdf66b792c8d98821bf539be124a7ede6c55"
+      },
+      {
+        "index": 1441,
+        "file": "left_01441.jpg",
+        "bytes": 81948,
+        "width": 640,
+        "height": 480,
+        "sha256": "3dd37db8f0c16b72ec65b12b343f4979e3deb7840cd2a023ed8aae1e5484cd12"
+      },
+      {
+        "index": 1801,
+        "file": "left_01801.jpg",
+        "bytes": 83236,
+        "width": 640,
+        "height": 480,
+        "sha256": "3dd74138b3b44326ac4d333ad3c5ae8051e50dce681f6ea9218e2d56fcadc8f6"
+      },
+      {
+        "index": 2161,
+        "file": "left_02161.jpg",
+        "bytes": 82805,
+        "width": 640,
+        "height": 480,
+        "sha256": "383db81e5de026f3be161fbdc54393dbb7b91f220d078bff588ffe655ff61fa8"
+      },
+      {
+        "index": 2521,
+        "file": "left_02521.jpg",
+        "bytes": 83443,
+        "width": 640,
+        "height": 480,
+        "sha256": "093001e9de1b232d79c8b69e2eef6072453685efce96f1b891eb59a1d7876037"
+      },
+      {
+        "index": 2882,
+        "file": "left_02882.jpg",
+        "bytes": 67367,
+        "width": 640,
+        "height": 480,
+        "sha256": "7a5b2b10e88ff3602088562fb87e20ee96516a43890c54758898d788f064d2e6"
+      }
+    ],
+    "right": [
+      {
+        "index": 0,
+        "file": "right_00000.jpg",
+        "bytes": 77723,
+        "width": 640,
+        "height": 480,
+        "sha256": "f0b1a7c818a8b3fec5cdcb1d3ca5c92a493735ea45995a5eb57c3557230cb0d9"
+      },
+      {
+        "index": 360,
+        "file": "right_00360.jpg",
+        "bytes": 78012,
+        "width": 640,
+        "height": 480,
+        "sha256": "758f4761368a7181ad85ff6a5cddac4ba26dc56554f4325d7b33f9b540db62d9"
+      },
+      {
+        "index": 1080,
+        "file": "right_01080.jpg",
+        "bytes": 47922,
+        "width": 640,
+        "height": 480,
+        "sha256": "9a4190f2829f2c07234f59a6c87525b7bacf98fb251b619cc2d0cc58d8efcc15"
+      },
+      {
+        "index": 2882,
+        "file": "right_02882.jpg",
+        "bytes": 81568,
+        "width": 640,
+        "height": 480,
+        "sha256": "4ff6263c9f3e81b6ebeebba815e0d601adf010b32ee4c78080c2fb2684e8c1b9"
+      }
+    ]
+  },
+  "root_attrs": {},
+  "root_keys": [
+    "camera_color_channel",
+    "camera_color_resolution",
+    "camera_depth_resolution",
+    "camera_model",
+    "camera_observations",
+    "master",
+    "metadata",
+    "puppet"
+  ],
+  "group_attributes": {
+    "metadata": {
+      "collection_time": "2025-09-22 19:02:25",
+      "collector": "open_a44b61b414f7654b39ae2357376313bc",
+      "data_type": "real",
+      "language_instruction": "move to silver cutlery IKEA plate and place on cream white bunny tray",
+      "trajectory_length": 2883
+    },
+    "master": {},
+    "puppet": {},
+    "camera_observations": {}
+  },
+  "decoded_source_jpeg_count": 22,
+  "verified_unique_range_bytes": 3498781,
+  "verified_cached_block_count": 54,
+  "download_measure": "Unique fully validated cached source byte ranges; excludes HTTP retries, aborted transfers, and duplicate concurrent requests. Not a cumulative network traffic counter.",
+  "sampling_note": "Front+left 9 uniform sample rows each; right limited actual successful rows. Complete planned 81-image extraction was stopped once task dependence had been established."
+}

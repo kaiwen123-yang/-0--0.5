@@ -1,0 +1,850 @@
+{
+  "source": {
+    "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "task": "put_pen_and_scissors_into_bin",
+    "episode": "0415_102035",
+    "revision": "8c8da260725e5293ccbe72a06f6a7657047d21b0",
+    "path": "data/agilex/put_pen_and_scissors_into_bin/success_episodes/0415_102035/data/trajectory.hdf5",
+    "source_size_bytes": 1181169033
+  },
+  "training_eligible": false,
+  "inspection_only": true,
+  "groups": {
+    "camera_color_channel/camera_front": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "rgb"
+    },
+    "camera_color_channel/camera_left": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "rgb"
+    },
+    "camera_color_channel/camera_right": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "rgb"
+    },
+    "camera_color_resolution/camera_front": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_color_resolution/camera_left": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_color_resolution/camera_right": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_depth_resolution/camera_front": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_depth_resolution/camera_left": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_depth_resolution/camera_right": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "camera_model/camera_front": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "RealSense_D435if"
+    },
+    "camera_model/camera_left": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "RealSense_D435if"
+    },
+    "camera_model/camera_right": {
+      "shape": [],
+      "dtype": "object",
+      "attrs": {},
+      "value": "RealSense_D435if"
+    },
+    "camera_observations/color_images/camera_front": {
+      "shape": [
+        2947
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/color_images/camera_left": {
+      "shape": [
+        2947
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/color_images/camera_right": {
+      "shape": [
+        2947
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/depth_images/camera_front": {
+      "shape": [
+        2947
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/depth_images/camera_left": {
+      "shape": [
+        2947
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/depth_images/camera_right": {
+      "shape": [
+        2947
+      ],
+      "dtype": "object",
+      "attrs": {}
+    },
+    "camera_observations/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "camera_observations/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/arm_left_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/arm_left_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/arm_left_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/arm_right_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/arm_right_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/arm_right_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_left_pose_align/data": {
+      "shape": [
+        2947,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "master/end_effector_left_pose_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_left_pose_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_left_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/end_effector_left_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_left_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_right_pose_align/data": {
+      "shape": [
+        2947,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "master/end_effector_right_pose_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_right_pose_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "master/end_effector_right_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "master/end_effector_right_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "master/end_effector_right_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/arm_left_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/arm_left_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/arm_left_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/arm_right_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/arm_right_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/arm_right_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_pose_align/data": {
+      "shape": [
+        2947,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_pose_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_pose_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_left_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_pose_align/data": {
+      "shape": [
+        2947,
+        7
+      ],
+      "dtype": "float64",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_pose_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_pose_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "dtype": "float32",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_position_align/is_intervene": {
+      "shape": [
+        2947
+      ],
+      "dtype": "bool",
+      "attrs": {}
+    },
+    "puppet/end_effector_right_position_align/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "attrs": {}
+    }
+  },
+  "numerics": {
+    "master/arm_left_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "min": [
+        -0.14586672186851501,
+        -0.03445189818739891,
+        -1.5650756359100342,
+        -1.6667741537094116,
+        -0.031660858541727066,
+        0.03406813368201256
+      ],
+      "max": [
+        0.13449324667453766,
+        1.8767999410629272,
+        0.03248072788119316,
+        -0.04905252903699875,
+        1.260189414024353,
+        1.7027088403701782
+      ],
+      "ptp": [
+        0.28035998344421387,
+        1.9112517833709717,
+        1.5975563526153564,
+        1.617721676826477,
+        1.2918503284454346,
+        1.6686407327651978
+      ],
+      "first": [
+        -0.14586672186851501,
+        -0.02808484062552452,
+        0.024072719737887383,
+        -0.04905252903699875,
+        -0.029846683144569397,
+        0.03406813368201256
+      ],
+      "last": [
+        0.04142950102686882,
+        -0.02934080734848976,
+        0.025782231241464615,
+        -0.18738344311714172,
+        0.11940418183803558,
+        0.0439239926636219
+      ]
+    },
+    "master/end_effector_left_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "min": -0.002240000059828162,
+      "max": 0.045570001006126404,
+      "ptp": 0.04780999943614006,
+      "first": -0.002099999925121665,
+      "last": -0.0021699999924749136
+    },
+    "master/arm_right_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "min": [
+        -0.06857236474752426,
+        -0.03483566641807556,
+        -1.6619596481323242,
+        0.0,
+        -0.8691124320030212,
+        -0.5537074208259583
+      ],
+      "max": [
+        0.6288213133811951,
+        1.8907901048660278,
+        0.02911403588950634,
+        0.7723854184150696,
+        1.205851435661316,
+        -0.08219613134860992
+      ],
+      "ptp": [
+        0.6973936557769775,
+        1.9256258010864258,
+        1.6910736560821533,
+        0.7723854184150696,
+        2.0749638080596924,
+        0.4715113043785095
+      ],
+      "first": [
+        -0.06857236474752426,
+        -0.027910400182008743,
+        0.026863759383559227,
+        0.0,
+        0.06520567089319229,
+        -0.15990914404392242
+      ],
+      "last": [
+        0.046034716069698334,
+        -0.028381388634443283,
+        0.02714286372065544,
+        0.0,
+        0.04354022443294525,
+        -0.12618990242481232
+      ]
+    },
+    "master/end_effector_right_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "min": -0.007840000092983246,
+      "max": 0.04836999997496605,
+      "ptp": 0.056210000067949295,
+      "first": -0.0067900000140070915,
+      "last": -0.0067900000140070915
+    },
+    "puppet/arm_left_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "min": [
+        -0.14850077033042908,
+        -0.0030178120359778404,
+        -1.5313389301300049,
+        -1.5919917821884155,
+        0.038254693150520325,
+        0.03790581226348877
+      ],
+      "max": [
+        0.13510377705097198,
+        1.9298646450042725,
+        0.0017618440324440598,
+        -0.04062707722187042,
+        1.2308660745620728,
+        1.7049068212509155
+      ],
+      "ptp": [
+        0.28360456228256226,
+        1.9328824281692505,
+        1.5331007242202759,
+        1.5513646602630615,
+        1.1926113367080688,
+        1.6670010089874268
+      ],
+      "first": [
+        -0.14850077033042908,
+        -0.0030178120359778404,
+        0.0017444000113755465,
+        -0.04062707722187042,
+        0.04596494138240814,
+        0.04444731026887894
+      ],
+      "last": [
+        0.04950607195496559,
+        -0.0024072721134871244,
+        0.0017618440324440598,
+        -0.17590530216693878,
+        0.19483204185962677,
+        0.0541287325322628
+      ]
+    },
+    "puppet/end_effector_left_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "min": -0.00203000009059906,
+      "max": 0.041370000690221786,
+      "ptp": 0.04340000078082085,
+      "first": -0.00203000009059906,
+      "last": -0.00203000009059906
+    },
+    "puppet/arm_right_position_align/data": {
+      "shape": [
+        2947,
+        6
+      ],
+      "min": [
+        -0.06021668761968613,
+        -0.007954464294016361,
+        -1.6431899070739746,
+        0.010640840046107769,
+        -0.7761359214782715,
+        -0.5384265184402466
+      ],
+      "max": [
+        0.6288561820983887,
+        1.947116732597351,
+        0.009402316063642502,
+        0.7202627658843994,
+        1.2037755250930786,
+        -0.07877710461616516
+      ],
+      "ptp": [
+        0.689072847366333,
+        1.955071210861206,
+        1.6525921821594238,
+        0.7096219062805176,
+        1.97991144657135,
+        0.4596494138240814
+      ],
+      "first": [
+        -0.06021668761968613,
+        -0.006471723783761263,
+        0.008512672036886215,
+        0.010640840046107769,
+        0.13916823267936707,
+        -0.16146166622638702
+      ],
+      "last": [
+        0.05158190801739693,
+        -0.007954464294016361,
+        0.009262763895094395,
+        0.012455016374588013,
+        0.11621192842721939,
+        -0.13145798444747925
+      ]
+    },
+    "puppet/end_effector_right_position_align/data": {
+      "shape": [
+        2947
+      ],
+      "min": -0.006089999806135893,
+      "max": 0.04746000096201897,
+      "ptp": 0.05355000123381615,
+      "first": -0.006089999806135893,
+      "last": -0.006089999806135893
+    },
+    "camera_observations/timestamp": {
+      "shape": [
+        2947
+      ],
+      "dtype": "int64",
+      "first": 1744683662,
+      "last": 1744683691,
+      "unique_diffs": [
+        0,
+        1
+      ]
+    }
+  },
+  "images": {
+    "front": [
+      {
+        "index": 0,
+        "file": "front_00000.jpg",
+        "bytes": 93539,
+        "width": 640,
+        "height": 480,
+        "sha256": "d47223722557da842559b3eb96d6af7687de8ad90389f3ce6dc611fcacf5f033"
+      },
+      {
+        "index": 368,
+        "file": "front_00368.jpg",
+        "bytes": 94269,
+        "width": 640,
+        "height": 480,
+        "sha256": "3b2cb89b4b2c6e3b65841b78d283d5a360da1ef128ddb6805e57bfcd6cef7f2f"
+      },
+      {
+        "index": 736,
+        "file": "front_00736.jpg",
+        "bytes": 94423,
+        "width": 640,
+        "height": 480,
+        "sha256": "c653c330bdb3e1a06fa271b1c20c50291a668ce56127d3bf2319d940f5e36ed8"
+      },
+      {
+        "index": 1104,
+        "file": "front_01104.jpg",
+        "bytes": 95473,
+        "width": 640,
+        "height": 480,
+        "sha256": "ff0c2cf9776f79efbca133bbcf76ed0a7102acb598023d5f03f1cca353f0882c"
+      },
+      {
+        "index": 1473,
+        "file": "front_01473.jpg",
+        "bytes": 96473,
+        "width": 640,
+        "height": 480,
+        "sha256": "7e797b2df59bb71c0f18fab517797d26fdb3eac2c5c3828beb32f1ac0c252399"
+      },
+      {
+        "index": 1841,
+        "file": "front_01841.jpg",
+        "bytes": 92820,
+        "width": 640,
+        "height": 480,
+        "sha256": "d5b585d661de952ea28a79e9b7b6bf550a98820e4e32d9fbe0cefe7ca2c962d9"
+      },
+      {
+        "index": 2209,
+        "file": "front_02209.jpg",
+        "bytes": 93614,
+        "width": 640,
+        "height": 480,
+        "sha256": "3fa9b7ea9a6d82a03bef822b058fd7b6b5c243345f391d051b57d7bcc19eaac6"
+      },
+      {
+        "index": 2577,
+        "file": "front_02577.jpg",
+        "bytes": 92753,
+        "width": 640,
+        "height": 480,
+        "sha256": "1c92a6def977ebc2ca58084d3521285121b6a907d93063412cc19241724144c2"
+      },
+      {
+        "index": 2946,
+        "file": "front_02946.jpg",
+        "bytes": 93135,
+        "width": 640,
+        "height": 480,
+        "sha256": "472e337c6a6e22f49a7201fe9a279ba979e93192693c8f0365bf453a4c51f2f9"
+      }
+    ],
+    "left": [
+      {
+        "index": 0,
+        "file": "left_00000.jpg",
+        "bytes": 79746,
+        "width": 640,
+        "height": 480,
+        "sha256": "43dc60396b3681ca0edecf79d8084fdab53bdde88c316a247efc17e4e2143bef"
+      },
+      {
+        "index": 368,
+        "file": "left_00368.jpg",
+        "bytes": 94426,
+        "width": 640,
+        "height": 480,
+        "sha256": "2f945f7799e18e081f0dca59cf5b90adf70d60f580b31a37af5f99985a3452ab"
+      },
+      {
+        "index": 736,
+        "file": "left_00736.jpg",
+        "bytes": 62554,
+        "width": 640,
+        "height": 480,
+        "sha256": "3120a61caeaac7d70a9321b51aa2caa8c9e859b78c22e9fa7d37022e26a67599"
+      },
+      {
+        "index": 1104,
+        "file": "left_01104.jpg",
+        "bytes": 87341,
+        "width": 640,
+        "height": 480,
+        "sha256": "0a93be0569afcbe5c3bb28c6833cf2e86fb06b0a5ede54865495e16688b9667c"
+      },
+      {
+        "index": 1473,
+        "file": "left_01473.jpg",
+        "bytes": 79482,
+        "width": 640,
+        "height": 480,
+        "sha256": "25f02ff01028bf80da6085c2fcb0336675a24b14fe2dbed0637afaf492806e0d"
+      },
+      {
+        "index": 1841,
+        "file": "left_01841.jpg",
+        "bytes": 80189,
+        "width": 640,
+        "height": 480,
+        "sha256": "adefa8eb93e28832a35a5ed3e8a8bcafb6fd48ff716073895c2f7ce29874ed74"
+      },
+      {
+        "index": 2209,
+        "file": "left_02209.jpg",
+        "bytes": 81430,
+        "width": 640,
+        "height": 480,
+        "sha256": "11ad6100c38b705d42185f76617f99144c7810f19423750f768f91d53b852f7d"
+      },
+      {
+        "index": 2577,
+        "file": "left_02577.jpg",
+        "bytes": 68854,
+        "width": 640,
+        "height": 480,
+        "sha256": "0352a2c1610602e6e13d9310af32e3b841bd7f14e4f7f3537edc808798502d36"
+      },
+      {
+        "index": 2946,
+        "file": "left_02946.jpg",
+        "bytes": 90290,
+        "width": 640,
+        "height": 480,
+        "sha256": "f7286eac295ac2c23a5685166f79c50980e8acd178be9ccc1e7c8ce59c020e20"
+      }
+    ],
+    "right": [
+      {
+        "index": 0,
+        "file": "right_00000.jpg",
+        "bytes": 88523,
+        "width": 640,
+        "height": 480,
+        "sha256": "746311e47d3daac6f1695f4a81dbea8653fbfa482c35cfbf342bed778236f9d5"
+      },
+      {
+        "index": 1473,
+        "file": "right_01473.jpg",
+        "bytes": 72573,
+        "width": 640,
+        "height": 480,
+        "sha256": "0496603712cbf7d0837f2a5beef0c8a2409ce9e709349200490d1a77ff476ee0"
+      },
+      {
+        "index": 2946,
+        "file": "right_02946.jpg",
+        "bytes": 90370,
+        "width": 640,
+        "height": 480,
+        "sha256": "8265aa7b0621049722d14aba82303e7e8c746cb2889a39182c708d212b9c4ed2"
+      }
+    ]
+  },
+  "root_attrs": {},
+  "root_keys": [
+    "camera_color_channel",
+    "camera_color_resolution",
+    "camera_depth_resolution",
+    "camera_model",
+    "camera_observations",
+    "master",
+    "metadata",
+    "puppet"
+  ],
+  "group_attributes": {
+    "metadata": {
+      "collection_time": "2025-09-22 19:02:25",
+      "collector": "open_3deb983485dcfa8fe1c5b4518552756",
+      "data_type": "real",
+      "language_instruction": "put red marker with left arm and scissors with right arm into the pen holder ",
+      "trajectory_length": 2947
+    },
+    "master": {},
+    "puppet": {},
+    "camera_observations": {}
+  },
+  "decoded_source_jpeg_count": 21,
+  "verified_unique_range_bytes": 3552649,
+  "verified_cached_block_count": 55,
+  "download_measure": "Unique fully validated cached source byte ranges; excludes HTTP retries, aborted transfers, and duplicate concurrent requests. Not a cumulative network traffic counter.",
+  "sampling_note": "Front+left 9 uniform sample rows each; right limited actual successful rows. Complete planned 81-image extraction was stopped once task dependence had been established."
+}

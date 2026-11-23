@@ -1,0 +1,148 @@
+{
+  "review_date": "2026-11-23",
+  "scope": "Read-only review; no hardware motion, SDK installation, shared SDK/H0 edits, training, or remote writes.",
+  "repository": {
+    "name": "kaiwen123-yang/-0--0.5",
+    "ref": "72ad763699502defed9d39d51bd22a56ea2ce2e8"
+  },
+  "installed_sdk": {
+    "repository": "agilexrobotics/pyAgxArm",
+    "ref": "d90e234ba8e408cfa964b38aa9120b3131fc9f85",
+    "hardware": "Piper H, firmware parsed as v189"
+  },
+  "decision": {
+    "local_fallback": "Use the existing Piper H physical drag-teaching capability to capture a source trajectory, annotate gripper events, and replay it through the unique pyAgxArm sender. Collect the training episode during successful real external replay.",
+    "source_data_not_training": "Dragged joint/width feedback is trajectory-source data. It must not be relabeled as commands. Teacher-hand images and failed or interrupted replays remain outside the first success-only training split.",
+    "internal_replay": "The physical double-click controller playback is documented, but no reviewed source proves it broadcasts complete, timed, fresh 0x155/0x156/0x157/0x159 commands on host CAN. A parser being able to decode those IDs is insufficient evidence. Do not promise controller-internal playback can produce traceable 7D actions.",
+    "no_new_teleop_hardware": "No UArm, second arm, VR controller, or teaching pendant purchase required for this plan.",
+    "availability": "The repository has passive RGB/state recording and model dataset code, but lacks a complete ready-to-run teach-marker/replay/real-action episode collector. Codex must add a small local module before providing the executable command line."
+  },
+  "official_evidence": [
+    {
+      "url": "https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/ay1awrn2hrhn1krg",
+      "title": "PIPER H 用户手册",
+      "sections": "3.1.1-3.1.3",
+      "findings": [
+        "Single-click switches drag trajectory recording on/off; green steady during recording and lamp off when stopped.",
+        "Double-click after a recording starts one internal replay; green flashes at approximately 500 ms.",
+        "Each new built-in recording replaces the previous one; built-in recording is limited to three minutes.",
+        "After teaching, confirm lamp off, switch to standby, then CAN control."
+      ],
+      "local_read_evidence": "/workspace/scratch/1c7d09da5651/pi-next-20261123/piper_h_manual_body.json",
+      "caution": "Do not copy full fetched manual into project deliverables; cite source and summarize only."
+    },
+    {
+      "url": "https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/ay1awrn2hrhn1krg",
+      "sections": "4.11, 4.19",
+      "findings": [
+        "The standard gripper/teaching-device panel independently controls enable, spacing and torque, and reports actual gripper values.",
+        "A teaching device is an optional separate end effector. The manual does not establish that this user's ordinary energized gripper can safely be hand-forced.",
+        "The desktop trajectory library can import/export/edit trajectories, but reviewed text does not establish export of the physical-button internal recording with full image/command timing."
+      ]
+    },
+    {
+      "url": "https://github.com/agilexrobotics/Agilex-College/blob/master/piper/recordAndPlayTraj/recordTrajectory_new.py",
+      "findings": [
+        "Official example records measured joint state and measured gripper opening with elapsed times in CSV.",
+        "It waits for teaching mode, asks Enter to record, samples around 100 Hz, and writes only changed poses.",
+        "It is a trajectory recorder, not an RGB/action training-data collector."
+      ]
+    },
+    {
+      "url": "https://github.com/agilexrobotics/Agilex-College/blob/master/piper/recordAndPlayTraj/playTrajectory_new.py",
+      "findings": [
+        "Official example replays CSV as explicit host JointCtrl and GripperCtrl commands.",
+        "It relies on piper_sdk C_PiperInterface_V2 rather than installed pyAgxArm.",
+        "The example defaults to speed percentage 100 and includes EmergencyStop/recovery and zero-position waiting. Do not run or port these defaults unchanged to the current commissioned Piper H."
+      ]
+    },
+    {
+      "url": "https://github.com/agilexrobotics/pyAgxArm/blob/d90e234ba8e408cfa964b38aa9120b3131fc9f85/pyAgxArm/protocols/can_protocol/drivers/piper/default/driver.py",
+      "findings": [
+        "move_j accepts six joint angles in radians and submits its command messages; get_joint_angles and get_arm_status provide measured feedback.",
+        "No ordinary drag-record/playback high-level public method was found in this pinned driver; leader/follower-specific methods are not a reason to reconfigure this single arm.",
+        "move_js is a distinct immediate-response mode with explicit shock/instability warning; do not substitute it for the commissioned MOVE_J path."
+      ]
+    },
+    {
+      "url": "https://github.com/agilexrobotics/pyAgxArm/blob/d90e234ba8e408cfa964b38aa9120b3131fc9f85/pyAgxArm/protocols/can_protocol/drivers/piper/default/parser.py",
+      "findings": [
+        "Received 0x155, 0x156 and 0x157 decode into leader_joint_12, leader_joint_34 and leader_joint_56; this only describes received messages."
+      ]
+    },
+    {
+      "url": "https://github.com/agilexrobotics/pyAgxArm/blob/d90e234ba8e408cfa964b38aa9120b3131fc9f85/pyAgxArm/protocols/can_protocol/drivers/effector/agx_gripper/default/driver.py",
+      "findings": [
+        "move_gripper_m(value, force) sends absolute opening in meters and force in newtons using status_code=1.",
+        "get_gripper_ctrl_states returns an optional cached decoded command only if received; no query guaranteeing internal playback target extraction.",
+        "disable_gripper/calibrate_gripper are separate maintenance functions, not a general requirement for every teaching episode."
+      ]
+    }
+  ],
+  "proposed_operator_workflow": [
+    "Prepare one lightweight matte block that fits the already measured gripper opening, and a fixed shallow tray. Keep the block and approach visible from the fixed wrist camera/start pose. Record camera mount and calibration identifiers.",
+    "Start existing passive RGB/CAN recording and the new trajectory/event collector. The teaching phase does not issue joint or gripper motion commands.",
+    "With lamp off, single-click the physical teaching button; confirm green steady and actual teaching mode. In the proposed UI press Enter to start source recording.",
+    "Guide the arm smoothly through: safe start -> pregrasp above block -> grasp pose -> vertical lift -> above tray -> release pose -> retreat. At grasp pose and release pose, mark CLOSE and OPEN intent with keyboard; these marks do not move the jaws during teaching.",
+    "The gripper can remain at the previously verified open width throughout source teaching. Do not hand-force its jaws. No successful grasp is claimed during this pass; the physical task success will be checked in replay.",
+    "End source recording; single-click physical button back to lamp off. Preserve the source trajectory immediately because another built-in recording overwrites controller memory.",
+    "Codex validates the captured path, joint limits, step size, speed/acceleration budget and gripper event order; use the existing verified standby->CAN handoff and sole-sender lock. Do not reuse old example EmergencyStop/reset routines.",
+    "Reset the block to the recorded placement, keep hands outside the working path, then start one replay from its real verified start pose. The unique sender executes the captured/interpolated joint path, holds at the grasp marker while issuing real CLOSE, then lifts/transfers, holds at release while issuing real OPEN, then retreats.",
+    "Before the first object-bearing replay of each materially new path, complete a low-speed real empty-workspace traversal with the same gripper events; verify clearance, cable motion, timing and normal pause/hold. This is an actual trajectory check, not synthetic training data or a policy capacity test.",
+    "During replay save all raw wrist RGB, real joint/gripper feedback, exact actual targets and send outcomes. With an object in the jaws, measured width need not reach the closed target; record target and measured width separately.",
+    "Inspect the complete video and feedback, mark actual outcome: successful grasp, lift, placement, release, retreat, no manual rescue. Admit only complete successful, cleanly logged episodes to the initial training split. Keep failures/interruptions with reason but exclude them from initial success cloning.",
+    "Change the block placement and teach a matching new trajectory before replaying at that placement. Do not blindly move the block and replay an old fixed joint path.",
+    "Finish by normal hold and report actual final arm mode/enable/gripper state. Ctrl+C, generic process killing, disabling drives and emergency damping are not interchangeable with a normal pause."
+  ],
+  "minimal_module_requirements": {
+    "location": "Only π repository tasks/piper_real_single_v1; names/CLI finalized by Codex after implementation.",
+    "source_capture": [
+      "timestamped q_source_rad[6], measured gripper width, mode, source feedback IDs, session/boot IDs",
+      "markers with source timestamp/index, grasp/release stage, intended gripper target; raw source retained",
+      "record stationary samples, start pose and terminal hold explicitly; do not just port the official changed-only CSV loop",
+      "use existing passive receiver, not a second active controller"
+    ],
+    "execution": [
+      "one sender and the existing shared motion lock; pyAgxArm MOVE_J only",
+      "per-tick requested and post-limits/quantization applied targets, held gripper target provenance",
+      "send_bus.send interception below SDK wrappers, including gripper commands; exceptions and partial groups are not successful targets",
+      "real-time feedback directly from receiver events, not the 2-second-flush viewer CSV",
+      "first replay uses current verified limits; the historical 2-degree calibration move bound does not authorize a full pick/place trajectory",
+      "no model is necessary to collect these demonstrations; the teacher path is the controller source"
+    ],
+    "action_schema": [
+      "episode_id, session_id, host_id, boot_id, trajectory_id, trajectory_source_kind=human_taught_replay",
+      "command_id, source_trajectory_index, source_observation_id, stage",
+      "observation receive monotonic_ns, camera header timestamp, actual feedback receive timestamps/IDs and ages",
+      "requested_q_target_rad[6], applied_q_target_rad[6], requested_width_m, applied_width_m, force_N",
+      "arm_target_source_command_id, gripper_target_source_command_id, gripper_valid_from_ns",
+      "command_due_ns, submit_start_ns, submit_end_ns; each CAN ID/data/submission result/exception",
+      "complete_joint_group, complete_7d_target, partial_send, stop/intervention reason",
+      "measured q_rad[6], measured width_m, tracking error, mode, drive enable/error/motion status",
+      "training_eligible and reason after episode QA, task instruction, placement/session split group"
+    ],
+    "timing_checks": [
+      "RGB/source-header-to-receive distribution remains separately reported; received clock is not exposure synchronization",
+      "RGB/joint/gripper receive intervals and queue drops, full-joint CAN group span",
+      "observation/state age at each actual command submission, deadline jitter, send latency and partial-send count",
+      "time from real target submission to feedback changes and subsequent settled tracking error",
+      "20 Hz dataset is a 50 ms label grid, not an asserted policy inference rate",
+      "join only by timestamps on the same host and boot; do not relabel feedback or replay intent as a successfully submitted command"
+    ]
+  },
+  "collection_budget": {
+    "nature": "Engineering pilot proposal, not a minimum guaranteed by a paper or a promise of policy success.",
+    "initial_validation": "First collect 3-5 complete successful replay episodes for commissioning and inspect full video, actual command provenance and dynamic time alignment. Later formal successful local demonstrations are explicitly authorized for training after QA; no further permission gate.",
+    "first_formal_batch": "Engineering starting target: 30-50 diverse successful complete task episodes; for a concrete 50-episode batch use 40 train and 10 validation, grouping by taught source trajectory and physical placement/session. This is not 50 repeats of one identical path and not an official guaranteed minimum.",
+    "variety": "About 10 distinct taught block placements within the verified wrist-visible reachable area, with several real replays per placement, plus modest natural lighting/object orientation/start-pose variation only when the executed trajectory is still appropriate. Same trajectory repeated at an identical setup is not independent diversity.",
+    "evaluation": "Reserve additional real reset conditions/placements for closed-loop policy testing, separate from demonstration training/validation; count successes over explicit attempts and record intervention/failure phase.",
+    "escalation": "If the first task does not learn or generalize, add data at observed failure states/placements rather than promising the initial count is sufficient. Keep π0 and π0.5 comparisons on the same dataset split and protocol."
+  },
+  "fallback": [
+    "If continuous drag capture is awkward, use keyframe capture at the same grasp/lift/place/retreat stages plus conservatively interpolated replay, preserving human-taught source and real replay targets.",
+    "If gripper action during teaching mode cannot be verified, keep it as event annotation only; actuate only after documented standby->CAN transition.",
+    "If no safe valid source path has been captured, do not invent angles or run arbitrary example poses; obtain poses through the existing physical teaching method.",
+    "Do not block the local route on proving that controller-internal double-click playback exposes action commands. External replay already supplies their provenance."
+  ],
+  "publication_note": "Compact review evidence. Local retrieval paths may refer to analysis-only source material that was not published; see README.md for the exact published subset. No complete source episode or training dataset is included."
+}

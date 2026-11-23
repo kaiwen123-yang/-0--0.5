@@ -1,3 +1,7 @@
+# 历史 Q12 标定提示词（当前入口已更新）
+
+> 2026-11-23 接续说明：11/22 的 35/7/9 新标定已冻结，当前主线是本地任务示范与训练数据。请执行 [11/23 新提示词](PI_POST_CALIBRATION_NEXT_PROMPT_20261123.md)，并阅读 [当前状态](PI_REAL_TEST_STATE.md)。以下内容保留历史，不能按早期起点重新执行回零/重采或继续将旧 Brown5 当当前参数。
+
 # Q12 单腕标定下一轮精确提示词
 
 更新于北京时间 2026-11-22。先读 AGENTS.md、PI_REAL_TEST_STATE.md、PI_DAILY_WORK_LOG.md 当日记录、[本轮复算](../results/calibration-audit/20261122/README.md)、[已冻结准则](../results/calibration-audit/20261122/comparison_rules.md)和[尺度表](../results/calibration-audit/20261122/board_measurement.md)。[11/21 原始提示词](https://github.com/kaiwen123-yang/-0--0.5/blob/5ce7e162bebeab4248aab675f4facfa2cd8c3c72/docs/PI_Q12_CALIBRATION_REVIEW_NEXT_PROMPT_20261121.md)保留历史。
@@ -29,3 +33,4 @@
 5. 本轮保持离线。另有明确现场任务时由合适操作者按厂家流程核查实时状态、净空/接触/安装、到位状态与超时停止。最后记录 CAN/MOVE_J，六轴失能，J2/J3 超查询限位，重连后无目标/使能/回零。恢复验收后才规划约 8 个事先指定、争取至少 5 个有实质差异的新姿态，覆盖任务距离、更大侧向基线及安全可见的下部；冻结候选和通过条件，保留失败/遮挡。若腕部遮挡，另开 intrinsics_only：相机与机械臂可靠固定，仅移动棋盘，此组不得参与固定板手眼姿态集。
 6. π 继续使用 CC16762023M 的 640×480 received RGB，唯一槽 left_wrist_0_rgb；保留固件校正 null，不向驱动、深度或 π 预处理插入 D。公开 RoboMIND 单臂示范优先，先核版本、动作/状态单位、单臂独立性及时序，从可信动作 train split 分别计算两套 norm。静止 180 s observation_only 无动作标签。无本轮训练、推理或运动授权，不修改共享 SDK/ROS/CUDA/JAX、缓存或基础权重。
 7. 按北京时间真实发生日向唯一 PI_DAILY_WORK_LOG.md 同日追加，记录来源、版本、问题及证实程度、实际数值、边界、未执行项、硬件状态及下一步；同步状态页和接续词。仅提交推送明确小文件，保留现场分支和其他活动任务。
+

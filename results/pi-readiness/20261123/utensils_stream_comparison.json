@@ -1,0 +1,145 @@
+{
+  "scope": "one new raw episode; empirical stream correspondence, not physical calibration or proof of commanded bus delivery",
+  "source": "place_utensils_into_plate/0617_144408@f132a6a3a4af090d8f97b2c440b787aaebaeb66e",
+  "rows": 2883,
+  "timestamp_span_s": 29,
+  "average_fps_estimate": 99.37931034482759,
+  "integer_seconds": true,
+  "axis_units": "native; likely rad arm and metre-like gripper but not certified here",
+  "axes": [
+    {
+      "axis": 1,
+      "command_min_max": [
+        -0.2509493827819824,
+        0.643282413482666
+      ],
+      "state_min_max": [
+        -0.24299491941928864,
+        0.6441022753715515
+      ],
+      "zero_lag_corr": 0.9960742341369141,
+      "zero_lag_rmse": 0.02166673732618776,
+      "best_position_correlation": 0.9999654586577297,
+      "best_lag_frames_follower_later": 8,
+      "rough_lag_seconds_using_average_fps": 0.08049965301873699,
+      "best_lag_fitted_slope": 0.9924845901419335,
+      "best_lag_fitted_offset": 0.005114417560562659,
+      "best_lag_raw_rmse": 0.004828125827363528
+    },
+    {
+      "axis": 2,
+      "command_min_max": [
+        -0.03232373297214508,
+        1.972864031791687
+      ],
+      "state_min_max": [
+        -0.011216492392122746,
+        2.0293128490448
+      ],
+      "zero_lag_corr": 0.9992130312977656,
+      "zero_lag_rmse": 0.048006941478108744,
+      "best_position_correlation": 0.9999400503605195,
+      "best_lag_frames_follower_later": 9,
+      "rough_lag_seconds_using_average_fps": 0.09056210964607911,
+      "best_lag_fitted_slope": 1.019135421978034,
+      "best_lag_fitted_offset": 0.0125945018897642,
+      "best_lag_raw_rmse": 0.036183084179800054
+    },
+    {
+      "axis": 3,
+      "command_min_max": [
+        -1.8657927513122559,
+        0.03317848965525627
+      ],
+      "state_min_max": [
+        -1.8318816423416138,
+        0.026113668456673622
+      ],
+      "zero_lag_corr": 0.9992748952770194,
+      "zero_lag_rmse": 0.03639931237842026,
+      "best_position_correlation": 0.9999525604411235,
+      "best_lag_frames_follower_later": 8,
+      "rough_lag_seconds_using_average_fps": 0.08049965301873699,
+      "best_lag_fitted_slope": 0.9808315988673323,
+      "best_lag_fitted_offset": 0.00038821315230328955,
+      "best_lag_raw_rmse": 0.023897151954425294
+    },
+    {
+      "axis": 4,
+      "command_min_max": [
+        -0.11943906545639038,
+        0.0729856938123703
+      ],
+      "state_min_max": [
+        -0.10075654089450836,
+        0.0667058527469635
+      ],
+      "zero_lag_corr": 0.958244262959708,
+      "zero_lag_rmse": 0.012481500445047628,
+      "best_position_correlation": 0.9805618607149454,
+      "best_lag_frames_follower_later": 12,
+      "rough_lag_seconds_using_average_fps": 0.12074947952810548,
+      "best_lag_fitted_slope": 0.9015483188302973,
+      "best_lag_fitted_offset": 0.0023861469615380506,
+      "best_lag_raw_rmse": 0.009576599310702727
+    },
+    {
+      "axis": 5,
+      "command_min_max": [
+        -0.10944365710020065,
+        1.337937355041504
+      ],
+      "state_min_max": [
+        -0.02637532725930214,
+        1.242640733718872
+      ],
+      "zero_lag_corr": 0.9980766395350583,
+      "zero_lag_rmse": 0.06157186774574968,
+      "best_position_correlation": 0.9991081047737278,
+      "best_lag_frames_follower_later": 11,
+      "rough_lag_seconds_using_average_fps": 0.11068702290076336,
+      "best_lag_fitted_slope": 0.9339037691021921,
+      "best_lag_fitted_offset": 0.07695597200618698,
+      "best_lag_raw_rmse": 0.0560721511487484
+    },
+    {
+      "axis": 6,
+      "command_min_max": [
+        -0.20039667189121246,
+        0.696905255317688
+      ],
+      "state_min_max": [
+        -0.18851730227470398,
+        0.6984926462173462
+      ],
+      "zero_lag_corr": 0.9936395824619727,
+      "zero_lag_rmse": 0.027264517903436054,
+      "best_position_correlation": 0.9998080526984705,
+      "best_lag_frames_follower_later": 10,
+      "rough_lag_seconds_using_average_fps": 0.10062456627342123,
+      "best_lag_fitted_slope": 0.9846398190304937,
+      "best_lag_fitted_offset": 0.008635832660994193,
+      "best_lag_raw_rmse": 0.008431150831536876
+    },
+    {
+      "axis": 7,
+      "command_min_max": [
+        -0.007420000154525042,
+        0.05033000186085701
+      ],
+      "state_min_max": [
+        -0.0002800000074785203,
+        0.049559999257326126
+      ],
+      "zero_lag_corr": 0.9629558356050377,
+      "zero_lag_rmse": 0.008489552502910074,
+      "best_position_correlation": 0.9763030623948513,
+      "best_lag_frames_follower_later": 9,
+      "rough_lag_seconds_using_average_fps": 0.09056210964607911,
+      "best_lag_fitted_slope": 0.7994841866276036,
+      "best_lag_fitted_offset": 0.007089019144653571,
+      "best_lag_raw_rmse": 0.007920567528125923
+    }
+  ],
+  "publication_note": "Compact review evidence. Local retrieval paths may refer to analysis-only source material that was not published; see README.md for the exact published subset. No complete source episode or training dataset is included."
+}

@@ -1,0 +1,234 @@
+{
+  "scope": "Read-only review of three additional pinned official RoboMIND2.0-Agilex episodes; no training, hardware commands, full dataset download, repository or remote write.",
+  "decision_zh": "RoboMIND含有值得保留的单臂子任务，但本次没有得到可立即可靠接入用户Piper H单腕7D训练的合格公共批次。按用户先查能用就用、不能直接用就采本地示范的约束，下一步以本机单腕真实示范为主线；不把继续研究公共数据放在关键路径。",
+  "limitations": [
+    "No source robot model/URDF/serial in inspected episode metadata; front/wrist views do not establish Piper vs ARX5 or Piper H variant reliably.",
+    "No measured source-to-user joint zero/axis/limit and gripper total-opening mapping.",
+    "Integer-second source timestamps do not make sequences untrainable; they limit exact subsecond alignment claims and require an explicit resampling policy.",
+    "Sparse keyframes establish demonstrated dependence/defects but do not certify every frame or precise subepisode boundaries.",
+    "A right wrist can occupy a model image slot only with explicit native side identity; this is not an image mirror or a joint sign transformation."
+  ],
+  "positive_reuse": "Candidate native-side subepisodes may support later adaptation or pretraining after robot/units/timing/task boundaries are verified. They cannot establish zero-local-demonstration success merely because hand-eye calibration has passed.",
+  "episodes": [
+    {
+      "verdict": "reject_whole_task_for_single_arm",
+      "task_dependence_zh": "左臂从竖直插架取电路板，递给右臂，由右臂放到金属托盘；图示至少两次交接，不能删除另一臂动作后把整条当成抓放。",
+      "evidence": [
+        {
+          "row": 745,
+          "camera": "left",
+          "observation": "左夹爪持竖直电路板，另一张开夹爪接近。"
+        },
+        {
+          "row": 1118,
+          "camera": "left",
+          "observation": "左夹爪已空，右夹爪将电路板放到金属托盘。"
+        },
+        {
+          "row": 1864,
+          "camera": "left",
+          "observation": "第二块板在两夹爪之间交接。"
+        }
+      ],
+      "reuse_zh": "完整任务不适合作为首个单臂抓放；截取交接后的右臂放置会丢失单臂从桌面独立抓取的起始条件。",
+      "source": {
+        "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+        "task": "place_circuit_board_on_tray",
+        "episode": "0623_131736",
+        "revision": "09e542af4b7a2f1bf75e89a9eb12ca4297a746c1",
+        "path": "data/agilex/place_circuit_board_on_tray/success_episodes/0623_131736/data/trajectory.hdf5",
+        "source_size_bytes": 1008990493
+      },
+      "pinned_tree_api": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=09e542af4b7a2f1bf75e89a9eb12ca4297a746c1&Root=data%2Fagilex%2Fplace_circuit_board_on_tray%2Fsuccess_episodes%2F0623_131736%2Fdata&PageSize=100",
+      "manifest": "results/pi-readiness/20261123/robomind_visual/place_circuit_board_on_tray/0623_131736/manifest.json",
+      "contact_sheets": {
+        "front": "results/pi-readiness/20261123/robomind_visual/place_circuit_board_on_tray/0623_131736/front_contact.jpg",
+        "left": "results/pi-readiness/20261123/robomind_visual/place_circuit_board_on_tray/0623_131736/left_contact.jpg",
+        "right": "results/pi-readiness/20261123/robomind_visual/place_circuit_board_on_tray/0623_131736/right_contact.jpg"
+      },
+      "source_instruction": "take double sided circuit boards",
+      "robot_model": "unconfirmed",
+      "training_eligible_now": false
+    },
+    {
+      "verdict": "reject_whole_task_keep_right_subtask_candidate",
+      "task_dependence_zh": "左臂先将白盘搬到兔子托盘；右臂再依次放叉、刀、勺。左臂数值全0但图像明确运动，左侧数值流无效。",
+      "evidence": [
+        {
+          "row": 0,
+          "camera": "left",
+          "observation": "夹爪面向托盘左侧独立白盘。"
+        },
+        {
+          "row": 360,
+          "camera": "left",
+          "observation": "夹爪在白盘边缘，视角和盘子位置显著变化。"
+        },
+        {
+          "row": 720,
+          "camera": "left",
+          "observation": "白盘已被放到兔子托盘，左夹爪移动完毕。"
+        },
+        {
+          "row": 1080,
+          "camera": "right",
+          "observation": "右夹爪持餐具在托盘上方，匹配有效右侧数值流。"
+        },
+        {
+          "row": 2882,
+          "camera": "front",
+          "observation": "托盘内有白盘、叉、刀、勺。"
+        }
+      ],
+      "reuse_zh": "保留白盘预先就位后的右侧叉刀勺子任务；不得使用左侧全0动作/状态作为搬盘示范。需要在密集帧中确定起止边界和对应单臂语言指令。",
+      "source": {
+        "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+        "task": "place_utensils_into_plate",
+        "episode": "0617_144408",
+        "revision": "f132a6a3a4af090d8f97b2c440b787aaebaeb66e",
+        "path": "data/agilex/place_utensils_into_plate/success_episodes/0617_144408/data/trajectory.hdf5",
+        "source_size_bytes": 1013801757
+      },
+      "pinned_tree_api": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=f132a6a3a4af090d8f97b2c440b787aaebaeb66e&Root=data%2Fagilex%2Fplace_utensils_into_plate%2Fsuccess_episodes%2F0617_144408%2Fdata&PageSize=100",
+      "manifest": "results/pi-readiness/20261123/robomind_visual/place_utensils_into_plate/0617_144408/manifest.json",
+      "contact_sheets": {
+        "front": "results/pi-readiness/20261123/robomind_visual/place_utensils_into_plate/0617_144408/front_contact.jpg",
+        "left": "results/pi-readiness/20261123/robomind_visual/place_utensils_into_plate/0617_144408/left_contact.jpg",
+        "right": "results/pi-readiness/20261123/robomind_visual/place_utensils_into_plate/0617_144408/right_contact.jpg"
+      },
+      "source_instruction": "move to silver cutlery IKEA plate and place on cream white bunny tray",
+      "robot_model": "unconfirmed",
+      "training_eligible_now": false
+    },
+    {
+      "verdict": "keep_left_marker_subtask_candidate",
+      "task_dependence_zh": "先左臂把紫色笔放入固定黑色网状笔筒，后右臂把剪刀放入同一笔筒。所见关键帧无交接或另一臂持物支撑。两段在同一场景顺序发生。",
+      "evidence": [
+        {
+          "row": 0,
+          "camera": "front",
+          "observation": "笔在左、剪刀在右，笔筒固定于中间。"
+        },
+        {
+          "row": 736,
+          "camera": "left",
+          "observation": "左夹爪夹起紫色笔。"
+        },
+        {
+          "row": 1104,
+          "camera": "left",
+          "observation": "紫色笔已进入固定笔筒。"
+        },
+        {
+          "row": 1473,
+          "camera": "right",
+          "observation": "右夹爪接近剪刀。"
+        },
+        {
+          "row": 2209,
+          "camera": "front",
+          "observation": "右臂将剪刀插入笔筒。"
+        },
+        {
+          "row": 2946,
+          "camera": "front",
+          "observation": "笔与剪刀均在笔筒内，夹爪已撤离。"
+        }
+      ],
+      "reuse_zh": "优先左臂笔→笔筒完整子段，独立起始条件最清楚。右剪刀子段也可能可用，但初始笔筒已有笔。原始指令称red marker，图像为紫色；子任务需按实际视觉重写指令，不能沿用整条双臂句子。",
+      "source": {
+        "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+        "task": "put_pen_and_scissors_into_bin",
+        "episode": "0415_102035",
+        "revision": "8c8da260725e5293ccbe72a06f6a7657047d21b0",
+        "path": "data/agilex/put_pen_and_scissors_into_bin/success_episodes/0415_102035/data/trajectory.hdf5",
+        "source_size_bytes": 1181169033
+      },
+      "pinned_tree_api": "https://modelscope.cn/api/v1/datasets/X-Humanoid/RoboMIND2.0-Agilex/repo/tree?Revision=8c8da260725e5293ccbe72a06f6a7657047d21b0&Root=data%2Fagilex%2Fput_pen_and_scissors_into_bin%2Fsuccess_episodes%2F0415_102035%2Fdata&PageSize=100",
+      "manifest": "results/pi-readiness/20261123/robomind_visual/put_pen_and_scissors_into_bin/0415_102035/manifest.json",
+      "contact_sheets": {
+        "front": "results/pi-readiness/20261123/robomind_visual/put_pen_and_scissors_into_bin/0415_102035/front_contact.jpg",
+        "left": "results/pi-readiness/20261123/robomind_visual/put_pen_and_scissors_into_bin/0415_102035/left_contact.jpg",
+        "right": "results/pi-readiness/20261123/robomind_visual/put_pen_and_scissors_into_bin/0415_102035/right_contact.jpg"
+      },
+      "source_instruction": "put red marker with left arm and scissors with right arm into the pen holder ",
+      "robot_model": "unconfirmed",
+      "training_eligible_now": false
+    }
+  ],
+  "extraction_summary": {
+    "decoded_jpegs": 66,
+    "verified_unique_range_bytes": 10326467,
+    "episodes": [
+      {
+        "source": {
+          "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+          "task": "place_circuit_board_on_tray",
+          "episode": "0623_131736",
+          "revision": "09e542af4b7a2f1bf75e89a9eb12ca4297a746c1",
+          "path": "data/agilex/place_circuit_board_on_tray/success_episodes/0623_131736/data/trajectory.hdf5",
+          "source_size_bytes": 1008990493
+        },
+        "images": 23,
+        "by_camera": {
+          "front": 9,
+          "left": 9,
+          "right": 5
+        },
+        "verified_unique_range_bytes": 3275037,
+        "blocks": 50
+      },
+      {
+        "source": {
+          "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+          "task": "place_utensils_into_plate",
+          "episode": "0617_144408",
+          "revision": "f132a6a3a4af090d8f97b2c440b787aaebaeb66e",
+          "path": "data/agilex/place_utensils_into_plate/success_episodes/0617_144408/data/trajectory.hdf5",
+          "source_size_bytes": 1013801757
+        },
+        "images": 22,
+        "by_camera": {
+          "front": 9,
+          "left": 9,
+          "right": 4
+        },
+        "verified_unique_range_bytes": 3498781,
+        "blocks": 54
+      },
+      {
+        "source": {
+          "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+          "task": "put_pen_and_scissors_into_bin",
+          "episode": "0415_102035",
+          "revision": "8c8da260725e5293ccbe72a06f6a7657047d21b0",
+          "path": "data/agilex/put_pen_and_scissors_into_bin/success_episodes/0415_102035/data/trajectory.hdf5",
+          "source_size_bytes": 1181169033
+        },
+        "images": 21,
+        "by_camera": {
+          "front": 9,
+          "left": 9,
+          "right": 3
+        },
+        "verified_unique_range_bytes": 3552649,
+        "blocks": 55
+      }
+    ]
+  },
+  "http_byte_accounting": "verified_unique_range_bytes is unique fully validated source blocks retained in cache. Retries, interrupted transfers and any duplicate concurrent fetch are not counted; no cumulative wire-traffic counter was logged.",
+  "official_website_preview": {
+    "url": "https://log2r.github.io/RoboMIND2.0/",
+    "files": [
+      "https://log2r.github.io/RoboMIND2.0/gifs/agx/task1/camera_front.gif",
+      "https://log2r.github.io/RoboMIND2.0/gifs/agx/task2/camera_front.gif",
+      "https://log2r.github.io/RoboMIND2.0/gifs/agx/task3/camera_front.gif",
+      "https://log2r.github.io/RoboMIND2.0/gifs/agx/task4/camera_front.gif",
+      "https://log2r.github.io/RoboMIND2.0/gifs/agx/task5/camera_front.gif",
+      "https://log2r.github.io/RoboMIND2.0/gifs/agx/task6/camera_front.gif"
+    ],
+    "downloaded_gif_bytes": 73505489,
+    "use": "Background only; no source episode binding. Not counted in the 66 source HDF5 JPEG frames."
+  },
+  "correction_record": "Initial front-only reading of utensils suggested a single active arm. This was explicitly corrected immediately after the left wrist frames demonstrated the left arm moving a plate despite all-zero left numeric streams. Final decision includes the correction."
+}

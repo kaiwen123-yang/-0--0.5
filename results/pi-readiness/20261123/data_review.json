@@ -1,0 +1,184 @@
+{
+  "review_date": "2026-11-23",
+  "timezone": "Asia/Shanghai",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "source_commit": "72ad763699502defed9d39d51bd22a56ea2ce2e8",
+  "scope": "Read-only review of published reports, five numeric sample summaries, actual single-wrist extractor and local recorder, training reader, normalization, inference and deployed configuration files. No original HDF5 downloads, new local data collection, model loading, training, hardware or remote writes.",
+  "current_bottleneck": "Task-level action supervision, timing/command semantics and a compatible trained single-wrist policy; calibration is no longer the principal blocker for beginning these tasks.",
+  "robomind": {
+    "reviewed_episodes": 5,
+    "source_dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+    "published_inspection": "All numerical joint/gripper sequences from five selected episodes and first/middle/last images from both wrists; 30 decoded wrist images total, not all video frames.",
+    "samples": [
+      {
+        "task": "place_milk_next_to_cup",
+        "rows": 2658,
+        "duplicate_adjacent_camera_timestamps": 2630,
+        "left_puppet_max_joint_span_native": 1.7624545260332525,
+        "right_puppet_max_joint_span_native": 1.8361554564908147,
+        "finding": "Both arms move materially; cannot remove one based on task name."
+      },
+      {
+        "task": "place_pomegranate_in_white_plate",
+        "rows": 706,
+        "duplicate_adjacent_camera_timestamps": 680,
+        "instruction": "xxxx",
+        "left_puppet_gripper_native_range": [
+          0.039483070373535156,
+          5.42591667175293
+        ],
+        "finding": "Both arms move; gripper convention differs strongly from other samples; instruction unresolved."
+      },
+      {
+        "task": "put_scissors_into_bucket",
+        "rows": 1893,
+        "duplicate_adjacent_camera_timestamps": 1873,
+        "finding": "Both arms move; file instruction says pen holder while directory says bucket."
+      },
+      {
+        "task": "close_fridge_door",
+        "rows": 2243,
+        "duplicate_adjacent_camera_timestamps": 2220,
+        "left_puppet_max_joint_span_native": 0.0018141772598028183,
+        "right_puppet_max_joint_span_native": 2.3204531790688634,
+        "finding": "Right-arm-dominant candidate; instruction includes moving to fridge, so mobile-base/environment independence remains unresolved."
+      },
+      {
+        "task": "write_number_0_on_whiteboard",
+        "rows": 5688,
+        "duplicate_adjacent_camera_timestamps": 5630,
+        "finding": "Explicit left-to-right handover; cannot treat complete task as independent single-arm demonstration."
+      }
+    ],
+    "door_preview": {
+      "training_eligible": false,
+      "all_numeric_rows": 2243,
+      "retained_rgb_frames": [
+        0,
+        1121,
+        2242
+      ],
+      "source_camera": "camera_observations/color_images/camera_right",
+      "camera_model": "RealSense_D435if",
+      "proposed_project_slot": "left_wrist_0_rgb",
+      "mapping_caveat": "Project slot is logical; preserve physical right-side source identity. No automatic mirroring or sign change.",
+      "numeric_units": "source native; not yet certified local rad/metre targets",
+      "right_master_gripper_constant": -0.007280000019818544,
+      "right_puppet_gripper_native_range": [
+        -0.005810000002384186,
+        -0.005739999935030937
+      ],
+      "reported_local_J2_J3_violation_rows_if_direct_rad_interpretation": 849,
+      "violation_count_scope": "Reported in pilot document; this review did not re-download the 2243-row raw source array.",
+      "cannot_train_pick_place_from_this_alone": "Only three images are retained, gripper does not perform grasp/release, time base is coarse, target semantics and platform mapping are unresolved."
+    },
+    "needed_before_training": [
+      "Source platform, ordered joint axes, signs and mechanical zero mapping to Piper H.",
+      "Leader/master to actually issued follower command definition; no same-frame state-to-action copy.",
+      "Per-batch gripper unit, sign, zero and total opening convention.",
+      "High-resolution time or documented nominal capture/alignment rules; equal integer seconds do not establish 20 Hz.",
+      "Single-arm task independence including any mobile base or other-arm support.",
+      "Complete selected episode wrist frames and episode/scene-separated training versus evaluation split."
+    ]
+  },
+  "local_data": {
+    "nov20_180s": {
+      "rgb_frames": 5382,
+      "action_labels": 0,
+      "role": "observation_only"
+    },
+    "nov22_short_static": {
+      "rgb_frames": 90,
+      "complete_7d_states": 90,
+      "action_labels": 0,
+      "tx_packets": 0,
+      "rgb_hz": 29.911272609114707,
+      "header_to_receive_p95_ms": 2.46728035,
+      "joint_feedback_age_p95_ms": 4.87483735,
+      "gripper_feedback_age_p95_ms": 4.8313338,
+      "measured_gripper_m": -0.0001,
+      "interpretation": "Short static observation and timestamp association works; dynamic timing and paired actual commands have not been demonstrated. Negative close reading is a zero-offset issue to verify at known openings, not a physical negative aperture."
+    },
+    "old_h0_six_images": {
+      "complete_measured_states": 6,
+      "both_recorded_targets_known": 3,
+      "header_to_receive_ms_range": [
+        248.4,
+        332.3
+      ],
+      "caveat": "Historical transport configuration; do not apply old delay numbers to the new 90-frame session. SDK hook shows bytes handed to send layer, not bus delivery. Bench movement is not a successful task demonstration."
+    }
+  },
+  "model_code": {
+    "dataset_files": [
+      "dataset.json",
+      "index.json",
+      "alignment_manifest.json",
+      "episode/state.npy",
+      "episode/actions.npy",
+      "episode/camera_rgb.npy",
+      "episode/policy_timestamps_ns.npy"
+    ],
+    "state": "6 measured joint radians + measured total gripper opening metres",
+    "action": "6 actual absolute joint target radians + absolute total opening metres",
+    "policy_hz": 20,
+    "policy_period_ns": 50000000,
+    "action_horizon": 10,
+    "active_image_slot": "left_wrist_0_rgb",
+    "inactive_image_masks": false,
+    "preprocessing": "DeltaActions on first six axes relative to chunk-start measured q; gripper remains absolute; after prediction AbsoluteActions adds same start q once.",
+    "full_finetuning": "nnx.Nothing freeze filter; gemma_2b and gemma_300m, internal action_dim=32",
+    "normalization": "prepare-stats uses train episodes only and same action chunks; saves mean/std/q01/q99 under model-family-specific asset. pi0 uses continuous state and mean/std; pi05 discrete state and quantile.",
+    "inference": "infer.py is read-only saved-observation inference, requires checkpoint/params plus that family/mount asset norm_stats.json. It does not send CAN or implement the live closed loop.",
+    "actual_configs": "results/piper-real-single-v1/20261120_194402/pi0_full.json and pi05_full.json use wrist. Early task-module example files still use external_fixed; do not use them unchanged.",
+    "training_budget": "Actual deployed configuration training fields remain null.",
+    "data_conversion_status": "Aligned-episode reader exists; general raw record/public HDF5 to complete policy dataset converter is not yet implemented."
+  },
+  "resource_scope": {
+    "d57_snapshot_date": "2026-11-20T19:49:59+08:00",
+    "status": "Separate environments/base weights/specs exist; no newly adapted real dataset, norms, training or inference results. Hardware capacity for two concurrent full jobs remains unverified.",
+    "source": "results/piper-real-single-v1/20261120_194402/autodl.json"
+  },
+  "recommended_next": {
+    "local_lane": "Use the existing unique sender to collect a complete local light-object pick/place pilot with real submitted targets and measured RGB/state, then validate the collection path before scaling local demonstrations. One pilot is not sufficient training data or success-rate evidence.",
+    "public_data_lane": "Preserve the deeper 2026-11-23 review and new raw multi-view evidence. Left-arm pen placement and prepared-scene right-arm utensil segments are future candidates, not approved direct Piper H training data. No further public expansion is required before starting local demonstrations.",
+    "model_lane": "Prepare separate pi0/pi05 experiment specs from actual wrist specs. Generate each norm only after qualified training episodes exist, then formally fine-tune; perform meaningful recorded-observation/online no-send evaluation with actual adapted checkpoints before model-driven real actions.",
+    "parallelism": "Local collection-path work and independent model-configuration preparation can proceed together. The next dataset route is local demonstrations; public candidates are retained for later work. This does not prove that two full training jobs fit one 96 GB GPU.",
+    "dataset_decision": "The bounded deeper public-data audit is complete. It found useful public raw material but no accepted training batch for this machine. Proceed with local task demonstrations as the engineering mainline; retain public subtask candidates for a later separate pilot.",
+    "experiment_labeling": "Commissioning-only local data remain excluded from train/norm until explicitly selected for local adaptation. If local task demonstrations are used for training, report local adaptation rather than a public-only/zero-local-demonstration result."
+  },
+  "primary_upstream_check": {
+    "url": "https://github.com/Physical-Intelligence/openpi/blob/main/README.md",
+    "readme_blob_sha": "d16e43d4790c60d9e22e67c58a407594fa6fb772",
+    "checked_on": "2026-11-23",
+    "facts": "Official pi0_base/pi05_base are listed for fine-tuning; README experts target DROID/ALOHA/LIBERO, with no matching Piper H single-wrist expert listed there. Full-finetuning reference requirement is >70 GB. This is not proof that no third-party Piper checkpoint exists."
+  },
+  "source_paths": [
+    "docs/PI_SINGLE_WRIST_DATA_PILOT_20261122.md",
+    "results/robomind-research/20261122/sources.json",
+    "results/robomind-research/20261122/door_preview_manifest.json",
+    "results/robomind-research/20261122/door_numeric.json",
+    "results/robomind-research/20261122/milk_numeric.json",
+    "results/robomind-research/20261122/pomegranate_numeric.json",
+    "results/robomind-research/20261122/scissors_numeric.json",
+    "results/robomind-research/20261122/digit0_numeric.json",
+    "results/robomind-research/20261122/extract_single_wrist.py",
+    "results/robomind-research/20261122/record_wrist_observations.py",
+    "results/robomind-research/20261122/live_rgb_can_pilot.json",
+    "tasks/piper_real_single_v1/dataset.py",
+    "tasks/piper_real_single_v1/policy_config.py",
+    "tasks/piper_real_single_v1/train.py",
+    "tasks/piper_real_single_v1/infer.py",
+    "tasks/piper_real_single_v1/MODEL_USAGE.md",
+    "results/piper-real-single-v1/20261120_194402/pi0_full.json",
+    "results/piper-real-single-v1/20261120_194402/pi05_full.json",
+    "results/piper-real-single-v1/20261120_194402/autodl.json"
+  ],
+  "superseded_by": {
+    "artifact": "robomind_deep_review.json",
+    "date": "2026-11-23",
+    "scope": "Recommendations and additional RoboMIND evidence; original five-episode and project-code factual observations remain valid.",
+    "latest_user_priority": "Public RoboMIND first if suitable; otherwise collect local training demonstrations and provide detailed instructions. Zero-local-training is no longer a hard constraint."
+  },
+  "publication_note": "Compact review evidence. Local retrieval paths may refer to analysis-only source material that was not published; see README.md for the exact published subset. No complete source episode or training dataset is included."
+}

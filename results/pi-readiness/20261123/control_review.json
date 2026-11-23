@@ -1,0 +1,165 @@
+{
+  "review_date": "2026-11-23",
+  "timezone": "Asia/Shanghai",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "source_commit": "72ad763699502defed9d39d51bd22a56ea2ce2e8",
+  "scope": "Read-only source and published-event review. No robot, camera, training, inference, installation or remote mutation executed.",
+  "sources": {
+    "diagnosis": "docs/PI_PIPER_H_START_DIAGNOSIS_20261122.md",
+    "same_target_evidence": "results/calibration-audit/20261122/start_limit_diagnosis/live_same_target.json",
+    "same_target_wire": "results/calibration-audit/20261122/start_limit_diagnosis/same_target_tx.csv",
+    "data_pilot": "docs/PI_SINGLE_WRIST_DATA_PILOT_20261122.md",
+    "observation_pilot": "results/robomind-research/20261122/live_rgb_can_pilot.json",
+    "observation_recorder": "results/robomind-research/20261122/record_wrist_observations.py",
+    "legacy_alignment": "results/robomind-research/20261122/local_alignment.py",
+    "policy_io": "tasks/piper_real_single_v1/policy_config.py",
+    "inference": "tasks/piper_real_single_v1/infer.py",
+    "dataset": "tasks/piper_real_single_v1/dataset.py",
+    "recording_contract": "tasks/piper_real_single_v1/RECORDING_USAGE.md",
+    "motion_source": "https://github.com/kaiwen123-yang/dog-and-arm/blob/cf01b434011db7c443e2fc88b3b458dc280ef984/scripts/h0_operator_motion.py"
+  },
+  "timeout_repair": {
+    "previous_failure": "A normal calibration-pose arrival timeout entered the generic exception handler and sent damping emergency stop, even though target error was about 0.20 degrees and the unresolved condition was motion_status=1.",
+    "unchanged_normal_arrival": "Target error <=0.5 degrees, MOVE_J mode feedback, motion_status=0, continuous quiet confirmation.",
+    "confirmed_original_target": "On arrival timeout, preserve the original target only after fresh healthy drive feedback and an additional joint/motor stationary assessment; original pose remains rejected and route stops.",
+    "unconfirmed_original_target": "Only when all drives are healthy and enabled, CAN/MOVE_J is confirmed, measured joints remain in bounds and within 0.5 degrees of the target, and joint/motor values are stationary for 0.5 seconds, issue the current measured position once. Then require fresh post-submit arrival and quiet feedback. Do not continue the failed route.",
+    "fault_path": "Drive errors, input stop, movement, stale feedback or failed hold still use emergency handling. No automatic reset, enable or continuation is added.",
+    "actual_send_logging": "Calibration path wraps python-can send_bus.send and records host submission start/end, CAN ID, bytes, result/error, surfacing errors swallowed by the SDK. Host submission is not wire-delivery or physical-arrival acknowledgement.",
+    "important_limit": "The repaired routine remains a small calibration-target executor, not a validated policy action-chunk scheduler. The old H0 gripper demo path still has the older pre-send hook format."
+  },
+  "published_same_target_hold": {
+    "task": "Re-submit only the already latched all-zero target in CAN/MOVE_J.",
+    "can_ids": [
+      "0x155",
+      "0x156",
+      "0x157"
+    ],
+    "host_submitted_frames": 3,
+    "feedback_groups": 424,
+    "joint_span_deg": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "final_enabled": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "final_motion_status": 0,
+    "rx_tx_error_or_drop_increment": 0,
+    "supports": "The same-target submission and subsequent enabled stationary arrival state worked at the recorded home pose.",
+    "does_not_support": "No new motion, gripper operation, task execution, dynamic policy tracking, emergency-drop recreation or current realtime state is certified by this hold."
+  },
+  "existing_realtime_and_model_contract": {
+    "active_camera_slot": "left_wrist_0_rgb",
+    "state": "6 measured joint angles in radians + measured total gripper opening in metres",
+    "action": "6 absolute joint targets in radians + absolute total gripper opening in metres",
+    "model_transform": "The first six dimensions become deltas internally and are converted back to absolute outputs; gripper remains absolute. The deployed sender must consume the returned absolute 7D values without applying another delta conversion.",
+    "policy_grid_hz": 20,
+    "grid_semantics": "50 ms dataset/action spacing; not observed policy inference or motor feedback frequency.",
+    "single_frame_inference": "infer.py loads one saved NPZ and its matching trained checkpoint/norm, writes predicted actions with sent=false, and imports no CAN sender.",
+    "viewer": "live_view reads feedback flushed to CSV, with a documented explicit 2 s flush interval; it is not a live controller state channel.",
+    "new_recorder": "record_wrist_observations.py records only RGB and passive CAN. It does not record or issue task actions.",
+    "remaining_components": [
+      "Receiver-event state delivery for a causal current observation, independent of disk flush.",
+      "Persistent unique sender with separate requested, interpolated and actually host-submitted actions, including gripper and initial held-target provenance.",
+      "Action-log-to-20-Hz-episode conversion preserving source observations and multi-rate timestamps.",
+      "After a matched checkpoint exists, a live observation/inference/action-chunk bridge with measured response age and explicit expiry/replanning/stop behavior."
+    ],
+    "template_caution": "pi0_full.example.json is still an old preparation template with camera_mount=external_fixed and empty training fields; use the actual deployed wrist specs, not that template verbatim."
+  },
+  "new_static_observation_pilot": {
+    "time_bjt": "2026-11-22T15:09:21.461000+08:00",
+    "duration_s": 2.975466847,
+    "rgb_and_complete_state_count": 90,
+    "rgb_hz": 29.911272609114707,
+    "grid_observation_ticks_20hz": 60,
+    "image_header_to_receive_p95_ms": 2.46728035,
+    "joint_receive_age_p95_ms": 4.87483735,
+    "gripper_receive_age_p95_ms": 4.8313338,
+    "grid_rgb_age_p95_ms": 34.718178349999995,
+    "tx_increment": 0,
+    "action_labels": 0,
+    "training_eligible": false,
+    "gripper_reading_m": -0.0001,
+    "interpretation": "Useful static observation/timestamp result. Dynamic capture, action submission and tracking remain unmeasured together. Negative near-closed gripper reading must retain its raw value and be checked against a known physical opening rather than silently clamped."
+  },
+  "recommended_next_task": {
+    "objective": "Public-data-first per the current user instruction. If RoboMIND cannot provide a directly usable task-matched full-episode subset, proceed to local demonstrations: first 3-5 full commissioning episodes, then quality-reviewed diverse successful real episodes for training.",
+    "default_usage": "First 3-5 full episodes are commissioning/checking runs by default. The user has authorized local training data if public data is unsuitable; subsequent complete, successful, provenance-valid local demonstrations are eligible for train/validation and train-only normalization after QA and frozen episode-level splits. No extra authorization boundary is introduced.",
+    "execution_producer": "Use on-site approved reachable targets through the existing verified SDK path in the single sender; do not let an unadapted base policy choose first-motion targets. No teleoperation purchase is needed to complete the logging/interface work.",
+    "starting_conditions": "Re-read actual current camera/install/state/mode/limits and establish both known arm and gripper held setpoints before declaring complete 7D action provenance. Use existing validated low-speed behavior and actual task clearance, not historical absolute q or a blind home.",
+    "episode_phases": [
+      "approach",
+      "grasp",
+      "lift",
+      "transfer",
+      "release",
+      "settle",
+      "retreat"
+    ],
+    "proposed_success_definition": "Object actually leaves the support, is placed inside the specified shallow tray, released and remains there for a stated observation interval. Save failed/stopped attempts and reason instead of deleting them.",
+    "minimum_action_event_fields": [
+      "episode_id",
+      "command_id",
+      "phase",
+      "source_kind",
+      "source_observation_id",
+      "requested_q_rad[6]",
+      "requested_gripper_total_opening_m",
+      "applied_or_interpolated_q_rad[6]",
+      "applied_gripper_target_m",
+      "command_created_monotonic_ns",
+      "submit_start_monotonic_ns",
+      "submit_end_monotonic_ns",
+      "per_CAN_frame_id_and_bytes",
+      "per_frame_submission_result",
+      "error_or_partial_submission",
+      "arm_target_valid_from_ns",
+      "gripper_target_valid_from_ns",
+      "held_target_source_ids",
+      "fresh_feedback_ids_and_times",
+      "mode_enable_fault_status",
+      "stop_or_override_reason"
+    ],
+    "minimum_observation_fields": [
+      "camera_serial",
+      "mount_and_calibration_version",
+      "image_index_and_raw_path",
+      "received_RGB_encoding_and_size",
+      "ROS_header_ns",
+      "host_receive_monotonic_ns",
+      "host_unix_ns",
+      "boot_id",
+      "joint_triplet_packet_timestamps",
+      "gripper_feedback_timestamp",
+      "measured_state7",
+      "observation_assembly_ns",
+      "causal_source_ages_and_missingness"
+    ],
+    "metrics_to_measure_during_the_actual_task": [
+      "Image source/header-to-receive delay separately from receive-to-observation age; preserve that header is not proven exposure time.",
+      "Observation-to-command and command-to-host-submit latency; CAN triple completion/partial failure; command spacing and jitter.",
+      "Per-axis target-versus-feedback errors and lag during motion, gripper closure/release timing and measured opening; do not compare asynchronously without noting target activation interval.",
+      "Mode/drive/fault states and exact reason/behavior at stop; complete success/failure outcome with representative video.",
+      "Later model stage: request-send/reply-receive and scheduled-actuation times on the same host clock. Server computation time is a separate duration; do not subtract cloud monotonic clocks from local clocks."
+    ],
+    "supervision_boundary": "A genuine recorded replay can provide valid supervised real action labels when actual submitted targets, RGB, and feedback have complete provenance. Initial commissioning does not establish adequate diversity or policy generalization. After checking 3-5 complete runs, collect an engineering starting batch of roughly 30-50 diverse successful task episodes if RoboMIND is not ready/usable; evaluate and expand from observed policy failures. Passive hand-guided feedback and static calibration remain ineligible as direct action labels.",
+    "executor_scope": "Implement only the specific episode adapter/log writer using the existing single-sender SDK path and lock. Do not launch the calibration script once per 50 ms policy tick or wait for its 0.5 s quiet-arrival test between every policy action. Do not invent a reachable pick/place pose when none is supplied; obtain approved real poses through existing on-site operation before execution.",
+    "stop_integration_risks": [
+      "cf01b43 ordinary calibration timeout preserves or reanchors an enabled hold only under its narrow healthy/stationary/near-target conditions. It is not a general safe stop for a moving task or network interruption.",
+      "Ctrl+C/other exceptions after started_motion still call damping emergency stop, which may lower an unsupported arm/load. A routine episode pause/completion must not be silently mapped to process termination, drive disable or damping emergency stop.",
+      "A multi-frame arm command or a separate gripper command may be partly submitted. Preserve partial results and do not mark a complete 7D action active unless the arm and gripper held-target origins are known.",
+      "Queue/camera/inference expiry must stop advancing new references through the established task stop interface; do not send a historic last-good pose as an unexamined recovery move. Reuse the verified existing behavior and report any missing dynamic-stop evidence."
+    ],
+    "local_demonstration_route": "Physical drag teaching captures a source joint path and explicit gripper-event markers; the unique commissioned pyAgxArm sender replays the reviewed path and actual gripper commands. Training data is captured during successful robot execution. Internal button playback target broadcasting is unverified. See local_demonstration_review.json and local_demo_guide_draft.md."
+  },
+  "publication_note": "Compact review evidence. Local retrieval paths may refer to analysis-only source material that was not published; see README.md for the exact published subset. No complete source episode or training dataset is included."
+}

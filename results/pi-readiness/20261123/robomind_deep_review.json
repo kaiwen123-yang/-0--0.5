@@ -1,0 +1,179 @@
+{
+  "review_date": "2026-11-23",
+  "repository_baseline": "kaiwen123-yang/-0--0.5@72ad763699502defed9d39d51bd22a56ea2ce2e8",
+  "latest_user_priority": "Inspect and use RoboMIND if suitable; otherwise proceed directly to collecting local training demonstrations with detailed instructions. Zero local training is a preference to investigate, not a hard constraint.",
+  "scope": "Read-only inspection of official documentation and code, two derivative dataset descriptions and small public metadata, and numeric analysis of a newly retrieved official raw episode. No training, hardware activity, environment installation, or remote writes by this reviewer. This is not an audit of the entire RoboMIND corpus.",
+  "decision": {
+    "whole_dataset_unusable": false,
+    "public_data_has_real_useful_actions": true,
+    "ready_to_replace_local_demos_for_this_hardware_task_now": false,
+    "recommendation": "RoboMIND contains useful training raw material, but this bounded review has not produced an accepted training dataset for this particular machine and observation/action contract. The root reviewer also inspected the candidate wrist/front evidence and chose local task demonstrations as the engineering mainline. Preparing reliable public subepisodes, verifying the source morphology and mapping their effective 7D actions would otherwise become a separate adaptation project. This is not a declaration that the whole corpus is unsuitable or untrainable.",
+    "reason": "The user prioritized public data if suitable and explicitly authorized local demonstrations otherwise. The practical decision is based on the remaining source-specific mapping, frozen-stream and complete single-wrist task-segmentation work, not on the mere presence of integer-second timestamps or normal master/follower tracking differences.",
+    "remaining_decisive_checks": [
+      "Confirm that the chosen complete task can be observed and performed with one wrist camera and one arm, without another arm or mobile base contributing essential state/actions.",
+      "Identify the actual arm type for the source batch. AgileX is not sufficient to distinguish Piper from older ARX5-type source arms.",
+      "Establish source joint order, signs, zero conventions and whether recorded master positions are passed directly or transformed before follower commands for this batch. Ordinary tracking lag is not itself evidence of incompatibility.",
+      "Establish or deliberately retarget the selected batch's gripper quantity, opening direction, closed offset and scale to local total opening in metres. A 0-to-1 processed range is not by itself a physical calibration."
+    ],
+    "public_route_status": "Potentially useful, but no drop-in, fully qualified Piper H single-wrist training batch was established by this bounded review. Source data usefulness and direct hardware suitability are separate findings.",
+    "engineering_mainline": "Proceed with local task demonstrations for the first pi0/pi05 Piper H single-wrist training and test. Retain public candidates for a later separate pilot; do not expand the public audit further in this iteration.",
+    "retained_public_candidates_for_later": [
+      "The left-arm pen-placement subtask from the newly visually inspected pen/scissors episode, with complete phase boundaries and source mapping still required.",
+      "Right-arm fork/knife/spoon subepisodes after the white plate has been placed in place_utensils_into_plate/0617_144408; exclude invalid left-arm supervision and relabel the prepared initial scene."
+    ]
+  },
+  "problems_that_are_repairable_without_local_training_demos": [
+    {
+      "issue": "Integer-second source timestamps",
+      "assessment": "Not an absolute barrier to robot policy training. Per-episode frame order and an explicitly approximate average rate can support a documented temporal conversion. Exact source exposure time cannot be reconstructed from the integer stamps alone.",
+      "concrete_method": "When valid, estimate source fps as (N-1)/(last_timestamp-first_timestamp), reconstruct an approximate uniform source timeline, and consistently select image/state/action source rows on the chosen 20 Hz policy grid. Preserve original row indices, integer stamps and measured average rate; label output time as estimated, not measured. Do not silently label every raw source row as a new 20 Hz observation. Avoid an unrecorded extra action shift.",
+      "evidence": "RynnVLA-Latent hdf5_fps explicitly uses this formula on integer-second RoboMIND stamps for latent stride estimation. The OneWorld inspected episode retains explicit source row indices after average-rate resampling."
+    },
+    {
+      "issue": "Unreliable native EEF fields",
+      "assessment": "Do not use them as ground truth. The current project uses joint targets, so EEF corruption does not automatically disqualify otherwise suitable joint/image/action data. A validated nominal model can reconstruct EEF poses when separately needed.",
+      "evidence": "OneWorld explicitly documents nominal FK from separate puppet and master joint rows and does not fit to invalid AgileX native EEF values."
+    },
+    {
+      "issue": "Recorded master versus puppet fields",
+      "assessment": "There is positive evidence of intended action/state semantics, not a complete absence of meaning. Official RoboMIND V1 robomind.yaml assigns qpos_arm_key=puppet and action_arm_key=master; its official unit guide declares joint angles in radians. These facts support interpretation but do not certify every differently formatted V2 source batch or its physical command mapping.",
+      "evidence": "The newly examined utensils episode has correlated, changing master and puppet streams, including gripper opening and closing."
+    },
+    {
+      "issue": "Choosing a public right wrist as the one model image slot",
+      "assessment": "The project can place the selected physical right-wrist image in its logical left_wrist_0_rgb slot while preserving source-side metadata. This does not itself require image mirroring or joint sign changes. Task observability and embodiment compatibility remain separate checks."
+    }
+  ],
+  "new_official_raw_episode": {
+    "task": "place_utensils_into_plate",
+    "episode": "0617_144408",
+    "revision": "f132a6a3a4af090d8f97b2c440b787aaebaeb66e",
+    "path": "data/agilex/place_utensils_into_plate/success_episodes/0617_144408/data/trajectory.hdf5",
+    "rows": 2883,
+    "integer_timestamp_span_s": 29,
+    "average_source_rate_estimate_hz": 99.37931034482759,
+    "source_camera_model": "RealSense_D435if, three recorded views",
+    "numeric_findings": "Left master and puppet arm/gripper values are all zero. The right arm and gripper clearly move. Zero left streams alone do not prove that the left physical arm was irrelevant or stationary.",
+    "stream_comparison": "The six right-arm position streams have high positive master/puppet correlation. The best position-correlation lag is 8 to 12 source rows with follower later. On the approximate average-rate timeline this is about 80 to 121 ms. These are descriptive tracking statistics, not physical calibration and not reasons by themselves to reject the data.",
+    "gripper_native_ranges": {
+      "master": [
+        -0.007420000154525042,
+        0.05033000186085701
+      ],
+      "puppet": [
+        -0.0002800000074785203,
+        0.049559999257326126
+      ]
+    },
+    "important_limits": "Do not infer physical units, joint-zero corrections or command compensation from fitted stream statistics. Master-state differences can be ordinary tracking/controller effects and are not themselves incompatibility evidence. The left stream is now visually shown to be invalid, not merely suspected from constant values. Right-arm task segments are candidates, not yet a qualified training dataset.",
+    "local_evidence": [
+      "robomind_visual/place_utensils_into_plate/0617_144408/native_arrays.npz",
+      "robomind_visual/place_utensils_into_plate/0617_144408/manifest.json",
+      "utensils_stream_comparison.json"
+    ],
+    "whole_task_single_arm": false,
+    "left_numeric_stream_valid": false,
+    "visual_evidence_update": "Sibling reviewer inspected the left-wrist images: the left gripper physically moves a white plate to the tray while all recorded left arm and gripper numerics are zero. This confirms an invalid/frozen left numeric stream for this episode. Front-view-only impressions of a wholly single-arm task were corrected after wrist inspection.",
+    "candidate_segments": "After the plate is placed, the right-arm fork/knife/spoon segments may form useful single-arm subepisodes if each complete reach/grasp/transfer/release is visible and the left arm no longer contributes. They need explicit segment boundaries and task relabeling; the prepared plate/tray must be part of the initial scene. The whole episode is not eligible as an independent single-arm demonstration."
+  },
+  "derivative_dataset_checks": {
+    "oneworld": {
+      "dataset": "OneWorld-AI/RoboMIND2.0-processed",
+      "revision": "99b62f054a4118f1323483b9a78eac697e7d2e85",
+      "access": "Public; only small metadata, reader and model files plus HTTP ranges were retrieved.",
+      "inspected_episode": {
+        "episode_id": "episode-000096e2e93cd2ce30ca99dffd42cc5b7cce9965a95ab355f52a7a2d6e5ce4e7",
+        "source_task": "open_pot_and_put_corn_with_arms",
+        "source_episode": "0429_160649",
+        "task_semantics": "The source instruction explicitly requires the left arm to open a pot and the right arm to put corn into it; it is not the desired independent one-arm pick/place example.",
+        "source_frames": 1757,
+        "source_fps_measured": 103.29,
+        "retained_frames": 511,
+        "exported_fps": 30.0,
+        "retained_source_indices_start": [
+          0,
+          3,
+          7,
+          10,
+          14,
+          17,
+          21
+        ],
+        "gripper_conversion_documented_in_metadata": "source 0 = closed, 0..~0.07, divided by 0.07",
+        "state_action_note": "state=puppet robot arm, action=master leader arm as recorded, with no added lag",
+        "tar_metadata_range": "data/agilex/train/00000.tar bytes 35503616-35507997",
+        "scope": "This demonstrates the conversion for one inspected episode only, not all gripper scales across RoboMIND."
+      },
+      "eef_models": {
+        "agilex_model": "aloha_new.urdf",
+        "joint_order": [
+          "joint1",
+          "joint2",
+          "joint3",
+          "joint4",
+          "joint5",
+          "joint6"
+        ],
+        "joint_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "joint_offsets": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sha256": "d4a115493af6a67ef969cfb8686b54f2970225b617ec6dd99cf682c0c4c7b6e9",
+        "upstream_mapping_commit": "77d7b311cbf2f16624c941f46b2a75042858ff06",
+        "manufacturer_model_commit": "f799ae0192c0c2bbd502ec4d9bbec8c2633acd1a",
+        "interpretation": "A declared nominal reconstruction model. It is not independent evidence that all AgileX source batches share this morphology or have the same physical zeros as the user's Piper H."
+      },
+      "eef_reader": "Explicit command mode uses corresponding master FK without another temporal shift. Explicit next_state mode uses the next retained achieved state and masks the final target. The latter is a derived target, not the original submitted command. Do not silently substitute it under the current absolute-command contract.",
+      "limits": "This release provides useful auditable metadata and curated files, but the inspected published artifacts did not provide a per-source-batch physical gripper/leader-to-follower calibration that settles the user's current deployment contract."
+    },
+    "axiboai": {
+      "dataset": "axiboai/robomind2-ee",
+      "access": "Public dataset card can be read through web search; raw README endpoint returned 401 and data files are gated. No attempt was made to bypass access controls.",
+      "public_card_relevance": "The card distinguishes Piper-type AgileX data and older ARX5-type data, and discloses some derived next-follower targets where leader streams do not match. These are useful warnings about source heterogeneity and action semantics, not a measured failure rate for all source episodes."
+    }
+  },
+  "training_path_recommendation": [
+    "The bounded public review is complete for this iteration. Use local task demonstrations as the current mainline, while preserving the positively identified public subtask candidates for a later dedicated public-data pilot.",
+    "Collect complete local successful task demonstrations with one wrist RGB stream, measured state and the actually submitted targets. Validate a small pilot before expanding collection. Static observation-only recordings and calibration poses remain ineligible as action demonstrations.",
+    "A local commissioning episode can initially stay out of train/norm. Once local demonstrations are deliberately used for training, call the experiment local adaptation; do not preserve an obsolete zero-local-training claim.",
+    "Use the same task definition and episode/session split for pi0 and pi05. Keep full-parameter training, separate base weights, separate experiment directories and independently computed training-only norm assets. Existing full-training code preparations do not establish that either trained policy already exists.",
+    "Keep RoboMIND original metadata and candidate findings for later public-only baseline or public-plus-local comparison. Report the domain gap from D435i/source wrist mounting to DC1/local mounting and do not promise that hand-eye calibration eliminates it."
+  ],
+  "primary_source_urls": [
+    "https://modelscope.cn/datasets/X-Humanoid/RoboMIND2.0",
+    "https://modelscope.cn/datasets/X-Humanoid/RoboMIND2.0-Agilex",
+    "https://github.com/x-humanoid-robomind/x-humanoid-robomind.github.io/blob/main/static/robomind.yaml",
+    "https://github.com/Open-X-Humanoid/x-humanoid-training-toolchain/blob/main/scripts/configs/all_robot_h5_info.md",
+    "https://github.com/Open-X-Humanoid/RoboMIND-dataset-utils/blob/77d7b311cbf2f16624c941f46b2a75042858ff06/eepose/joint2pose.py",
+    "https://github.com/alibaba-damo-academy/RynnVLA-Latent/blob/main/scripts/rebuild_latent_manifest.py",
+    "https://huggingface.co/datasets/OneWorld-AI/RoboMIND2.0-processed/tree/99b62f054a4118f1323483b9a78eac697e7d2e85",
+    "https://huggingface.co/datasets/axiboai/robomind2-ee",
+    "https://github.com/agilexrobotics/Mobile_aloha_sim/blob/f799ae0192c0c2bbd502ec4d9bbec8c2633acd1a/aloha_new_description/urdf/aloha_new.urdf"
+  ],
+  "retrieved_artifacts": [
+    "oneworld_card.md",
+    "oneworld_repo_info.json",
+    "oneworld_info.json",
+    "oneworld_eef_models.txt",
+    "oneworld_eef_reader.txt",
+    "oneworld_eef_index_sample.txt",
+    "oneworld_first_eef_metadata.bin",
+    "oneworld_first_raw_metadata.json",
+    "official_v2_readme.txt",
+    "official_v2_general_readme.md",
+    "utensils_stream_comparison.json"
+  ],
+  "publication_note": "Compact review evidence. Local retrieval paths may refer to analysis-only source material that was not published; see README.md for the exact published subset. No complete source episode or training dataset is included."
+}

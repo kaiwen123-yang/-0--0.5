@@ -1,0 +1,60 @@
+{
+  "decoded_jpegs": 66,
+  "verified_unique_range_bytes": 10326467,
+  "episodes": [
+    {
+      "source": {
+        "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+        "task": "place_circuit_board_on_tray",
+        "episode": "0623_131736",
+        "revision": "09e542af4b7a2f1bf75e89a9eb12ca4297a746c1",
+        "path": "data/agilex/place_circuit_board_on_tray/success_episodes/0623_131736/data/trajectory.hdf5",
+        "source_size_bytes": 1008990493
+      },
+      "images": 23,
+      "by_camera": {
+        "front": 9,
+        "left": 9,
+        "right": 5
+      },
+      "verified_unique_range_bytes": 3275037,
+      "blocks": 50
+    },
+    {
+      "source": {
+        "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+        "task": "place_utensils_into_plate",
+        "episode": "0617_144408",
+        "revision": "f132a6a3a4af090d8f97b2c440b787aaebaeb66e",
+        "path": "data/agilex/place_utensils_into_plate/success_episodes/0617_144408/data/trajectory.hdf5",
+        "source_size_bytes": 1013801757
+      },
+      "images": 22,
+      "by_camera": {
+        "front": 9,
+        "left": 9,
+        "right": 4
+      },
+      "verified_unique_range_bytes": 3498781,
+      "blocks": 54
+    },
+    {
+      "source": {
+        "dataset": "X-Humanoid/RoboMIND2.0-Agilex",
+        "task": "put_pen_and_scissors_into_bin",
+        "episode": "0415_102035",
+        "revision": "8c8da260725e5293ccbe72a06f6a7657047d21b0",
+        "path": "data/agilex/put_pen_and_scissors_into_bin/success_episodes/0415_102035/data/trajectory.hdf5",
+        "source_size_bytes": 1181169033
+      },
+      "images": 21,
+      "by_camera": {
+        "front": 9,
+        "left": 9,
+        "right": 3
+      },
+      "verified_unique_range_bytes": 3552649,
+      "blocks": 55
+    }
+  ]
+}
