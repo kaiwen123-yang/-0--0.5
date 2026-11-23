@@ -1,0 +1,98 @@
+{
+  "root": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053_commissioning_01",
+  "episode": "ca2fbcb1-de38-4dac-9149-e1d3f710e698",
+  "split": "commissioning",
+  "training_eligible": false,
+  "checked_rows": 7680,
+  "step_ns": 50000000,
+  "first_ns": 125889884764375,
+  "last_ns": 126273834764375,
+  "raw_state_float32_exact_rows": 7680,
+  "wire_action_float32_exact_rows": 7680,
+  "max_float32_state_roundoff": 1.1887428064127903e-07,
+  "max_float32_action_roundoff": 1.1915373088200454e-07,
+  "raw_rgb_pixel_equal_samples": [
+    {
+      "row": 0,
+      "raw_image": 67,
+      "measured_width_mm": 39.500001817941666,
+      "absolute_target_mm": 39.99999910593033
+    },
+    {
+      "row": 1920,
+      "raw_image": 2938,
+      "measured_width_mm": 39.500001817941666,
+      "absolute_target_mm": 39.99999910593033
+    },
+    {
+      "row": 3635,
+      "raw_image": 5502,
+      "measured_width_mm": 39.500001817941666,
+      "absolute_target_mm": 39.99999910593033
+    },
+    {
+      "row": 3715,
+      "raw_image": 5622,
+      "measured_width_mm": 24.800000712275505,
+      "absolute_target_mm": 14.999999664723873
+    },
+    {
+      "row": 3840,
+      "raw_image": 5809,
+      "measured_width_mm": 24.800000712275505,
+      "absolute_target_mm": 14.999999664723873
+    },
+    {
+      "row": 5760,
+      "raw_image": 8680,
+      "measured_width_mm": 24.59999918937683,
+      "absolute_target_mm": 14.999999664723873
+    },
+    {
+      "row": 6706,
+      "raw_image": 10094,
+      "measured_width_mm": 24.59999918937683,
+      "absolute_target_mm": 14.999999664723873
+    },
+    {
+      "row": 6786,
+      "raw_image": 10214,
+      "measured_width_mm": 39.500001817941666,
+      "absolute_target_mm": 39.99999910593033
+    },
+    {
+      "row": 7679,
+      "raw_image": 11549,
+      "measured_width_mm": 39.500001817941666,
+      "absolute_target_mm": 39.99999910593033
+    }
+  ],
+  "reader_samples": 7680,
+  "action_horizon": 10,
+  "final_chunk_repeats_last": true,
+  "rows_with_grip_measurement_vs_target_diff_over_5mm": 3074,
+  "shapes": {
+    "state": [
+      7680,
+      7
+    ],
+    "actions": [
+      7680,
+      7
+    ],
+    "rgb": [
+      7680,
+      480,
+      640,
+      3
+    ]
+  },
+  "npy_sizes": {
+    "actions.npy": 215168,
+    "camera_rgb.npy": 7077888128,
+    "policy_timestamps_ns.npy": 61568,
+    "state.npy": 215168
+  },
+  "npy_total_bytes": 7078380032,
+  "verified_local": "2026-11-23T22:48:54.871386+08:00"
+}

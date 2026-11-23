@@ -1,0 +1,59 @@
+{
+  "episodes": [
+    {
+      "directory": "ca2fbcb1-de38-4dac-9149-e1d3f710e698",
+      "raw_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_223453_601082_block",
+      "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+      "calibration_commit": "479383a9e5945610c1585161e9225406b74738d5",
+      "calibration": "results/calibration-audit/20261122/ssh_multiview/wrist_rgb_calibration.json",
+      "retreat_window": {
+        "source_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+        "operator_selected": true,
+        "end_joint_id": 43901,
+        "selection_kind": "observed_stationary_retreat",
+        "reference_rgb": "rgb/0006527.png",
+        "delta_flange_xyz_mm": [
+          -27.0,
+          3.5,
+          70.8
+        ],
+        "note": "Operator selected actual post-release retreat as episode end; separately return to start between runs."
+      },
+      "reset_between_runs": "separate_confirmed_return",
+      "gripper_basis": "sdk_width_m_with_separate_caliper_endpoints",
+      "pad_measurements": [
+        {
+          "run": "20261123_211437_276532_prepare",
+          "target_m": 0.04,
+          "pad_gap_m": 0.035
+        },
+        {
+          "run": "20261123_212928_021074_width-check",
+          "target_m": 0.024999999999999998,
+          "pad_gap_m": 0.022,
+          "sdk_width_m": 0.0252
+        },
+        {
+          "run": "20261123_213133_675787_width-check",
+          "target_m": 0.015,
+          "pad_gap_m": 0.0145,
+          "sdk_width_m": 0.015099999999999999
+        },
+        {
+          "run": "20261123_213224_745332_width-check",
+          "target_m": 0.04,
+          "pad_gap_m": 0.03471,
+          "sdk_width_m": 0.040299999999999996
+        }
+      ],
+      "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+      "session_id": "15cfe613-408f-4c60-bced-e6999de92412",
+      "placement_id": "A01",
+      "sources": "ca2fbcb1-de38-4dac-9149-e1d3f710e698/row_sources.jsonl"
+    }
+  ],
+  "period_ns": 50000000,
+  "observation": "last received RGB, joint group and gripper at or before t",
+  "action": "latest coherent complete host targets at the end of (t,t+50ms]; bounded by episode",
+  "chunk": "10 rows, repeat final row at episode boundary"
+}

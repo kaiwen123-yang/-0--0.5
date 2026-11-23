@@ -1,0 +1,369 @@
+{
+  "directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_223453_601082_block",
+  "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261123_211053/20261123_215419_277510_teach",
+  "run_id": "ca2fbcb1-de38-4dac-9149-e1d3f710e698",
+  "source_trajectory_id": "00be54fa-8919-4a55-b00b-22863b7a8990",
+  "kind": "block",
+  "use": "commissioning_only",
+  "complete": true,
+  "stop": "arrived_powered_hold",
+  "start_local": "2026-11-23T22:34:53.601307+08:00",
+  "end_local": "2026-11-23T22:41:21.921190+08:00",
+  "wall_s": 388.319883716,
+  "grid_span_s": 384.001588599,
+  "terminal_q_deg": [
+    3.627,
+    127.48100000000002,
+    -114.178,
+    -7.188,
+    66.424,
+    14.585000000000003
+  ],
+  "tx_status": {
+    "host_submitted": 22820
+  },
+  "tx_ids": {
+    "0x472": 6,
+    "0x155": 7603,
+    "0x156": 7603,
+    "0x157": 7603,
+    "0x151": 2,
+    "0x159": 3
+  },
+  "submitted_grips": [
+    {
+      "id": "11:grip",
+      "target_m": 0.04,
+      "force_N": 1.0,
+      "event": "initial_open",
+      "ns": 125889076829378
+    },
+    {
+      "id": "3652:grip",
+      "target_m": 0.015,
+      "force_N": 1.0,
+      "event": "close",
+      "ns": 126072789453053
+    },
+    {
+      "id": "6692:grip",
+      "target_m": 0.04,
+      "force_N": 1.0,
+      "event": "open",
+      "ns": 126226372436147
+    }
+  ],
+  "while_closed": {
+    "count": 30515,
+    "software_width_min_median_max_mm": [
+      24.6,
+      24.7,
+      24.8
+    ],
+    "signed_force_min_median_max_N": [
+      -1.066,
+      -1.043,
+      -1.025
+    ]
+  },
+  "example_rgb_ids": {
+    "before_close": "5531",
+    "after_close": "5581",
+    "before_release": "10100",
+    "after_release": "10175",
+    "terminal": "11551"
+  },
+  "gaps_over_100ms": [
+    {
+      "ms": 1367.436455,
+      "previous_id": "3651:arm",
+      "next_id": "3653:arm"
+    },
+    {
+      "ms": 1364.69292,
+      "previous_id": "6691:arm",
+      "next_id": "6693:arm"
+    }
+  ],
+  "gripper_basis": "sdk_width_m_with_separate_caliper_endpoints",
+  "quality": {
+    "images": 11553,
+    "grid_rows": 7680,
+    "joint_groups": 77650,
+    "gripper_rows": 77655,
+    "host_frames": 22820,
+    "queue_drops": 0,
+    "rejected_triplets": 5,
+    "interface_delta": {
+      "tx_packets": 22820,
+      "rx_packets": 940080,
+      "rx_errors": 0,
+      "tx_errors": 0,
+      "rx_dropped": 0,
+      "tx_dropped": 0
+    },
+    "feedback_age_ms": {
+      "image": {
+        "n": 7680,
+        "min": 0.000803,
+        "p50": 16.7103055,
+        "p95": 31.793786649999994,
+        "max": 37.027406
+      },
+      "joint": {
+        "n": 7680,
+        "min": 0.001028,
+        "p50": 2.383209,
+        "p95": 4.757795299999999,
+        "max": 6.111365
+      },
+      "grip": {
+        "n": 7680,
+        "min": 0.001208,
+        "p50": 2.4382010000000003,
+        "p95": 4.7654731,
+        "max": 5.988504
+      }
+    },
+    "rgb_interval_ms": {
+      "n": 11552,
+      "min": 28.007808,
+      "p50": 32.066096,
+      "p95": 36.4044273,
+      "max": 39.185344
+    },
+    "header_to_receive_ms": {
+      "n": 11553,
+      "min": 1.373252,
+      "p50": 1.71611,
+      "p95": 2.2433764,
+      "max": 6.323324
+    },
+    "triplet_host_span_ms": {
+      "n": 77650,
+      "min": 0.041772,
+      "p50": 0.270597,
+      "p95": 0.35155230000000004,
+      "max": 3.331917
+    },
+    "triplet_wire_span_ms": {
+      "n": 77650,
+      "min": 0.024318695068359375,
+      "p50": 0.23937225341796875,
+      "p95": 0.29015541076660156,
+      "max": 0.6709098815917969
+    },
+    "reference_interval_including_dwell_ms": {
+      "n": 7600,
+      "min": 48.02309,
+      "p50": 50.09702,
+      "p95": 50.300653149999995,
+      "max": 1367.436455
+    },
+    "max_axis_tracking_error_deg": {
+      "n": 7680,
+      "min": 0.0,
+      "p50": 0.09199999999998919,
+      "p95": 0.15100000000000077,
+      "max": 0.39699999999999563
+    },
+    "events": [
+      {
+        "event": "close",
+        "mono_ns": 126073599750761,
+        "target_m": 0.015,
+        "measured_m": 0.0248
+      },
+      {
+        "event": "open",
+        "mono_ns": 126227181724781,
+        "target_m": 0.04,
+        "measured_m": 0.0395
+      }
+    ],
+    "final": {
+      "mono_ns": 126274069510265,
+      "q_rad": [
+        0.06330309196983433,
+        2.2249631837348915,
+        -1.9927820333420856,
+        -0.1254542666333524,
+        1.1593175023447135,
+        0.254556271403373
+      ],
+      "width_m": 0.0395,
+      "arm": {
+        "ctrl_mode": 1,
+        "arm_status": 0,
+        "mode_feedback": 1,
+        "teach_status": 2,
+        "motion_status": 0,
+        "trajectory_num": 0,
+        "err_status": {
+          "joint_1_angle_limit": false,
+          "joint_2_angle_limit": false,
+          "joint_3_angle_limit": false,
+          "joint_4_angle_limit": false,
+          "joint_5_angle_limit": false,
+          "joint_6_angle_limit": false,
+          "communication_status_joint_1": false,
+          "communication_status_joint_2": false,
+          "communication_status_joint_3": false,
+          "communication_status_joint_4": false,
+          "communication_status_joint_5": false,
+          "communication_status_joint_6": false
+        }
+      },
+      "drives": [
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        },
+        {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "collision_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "stall_status": false
+        }
+      ],
+      "gripper": {
+        "value": 0.0395,
+        "force": 0.105,
+        "foc_status": {
+          "voltage_too_low": false,
+          "motor_overheating": false,
+          "driver_overcurrent": false,
+          "driver_overheating": false,
+          "sensor_status": false,
+          "driver_error_status": false,
+          "driver_enable_status": true,
+          "homing_status": false
+        },
+        "mode": "width"
+      }
+    },
+    "pauses": [],
+    "host_submit_duration_ms": {
+      "n": 7603,
+      "min": 0.061268,
+      "p50": 0.088099,
+      "p95": 0.23531639999999998,
+      "max": 2.580586
+    },
+    "representative_association": {
+      "t": 126081884764375,
+      "image": 5809,
+      "image_ns": 126081882117631,
+      "image_header_ns": 1795444689710844063,
+      "q": 39215,
+      "q_ns": 126081882892926,
+      "grip": 39220,
+      "grip_ns": 126081882955530,
+      "state_age_ms": [
+        2.646744,
+        1.871449,
+        1.808845
+      ],
+      "triplet_host_span_ns": 278112,
+      "held_at_ns": 126081884764375,
+      "held": [
+        "3818:arm",
+        "3652:grip"
+      ],
+      "action_at_ns": 126081934764375,
+      "action": [
+        "3819:arm",
+        "3652:grip"
+      ],
+      "action_age_ms": [
+        16.028937,
+        9145.311322
+      ],
+      "valid_from": [
+        126081918735438,
+        126072789453053
+      ],
+      "valid_until_exclusive": [
+        126081968743678,
+        126226372399299
+      ],
+      "measured": [
+        0.05077162794051505,
+        2.1935298039064737,
+        -1.6299106285599445,
+        -0.07087782092348972,
+        1.1221419892772342,
+        0.254556271403373,
+        0.0248
+      ],
+      "submitted_next": [
+        0.05227261109723017,
+        2.1951355068183083,
+        -1.6303120542879033,
+        -0.07112216701876893,
+        1.122822667685512,
+        0.2541722989679342,
+        0.015
+      ],
+      "submitted_hold": [
+        0.05227261109723017,
+        2.1951355068183083,
+        -1.6303120542879033,
+        -0.07112216701876893,
+        1.122822667685512,
+        0.2541722989679342,
+        0.015
+      ]
+    }
+  }
+}

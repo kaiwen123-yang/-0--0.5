@@ -1,6 +1,6 @@
 # Piper H 单腕抓放示范现场操作
 
-测试机是 Ubuntu 主机 `kaiwen-Legion-Y9000P-IAH7H`。本轮 π 工作树在 `/home/kaiwen/research/pi-single-live`，数据留在 `/home/kaiwen/research/pi-q12-data`。11/23 已实际读取六轴限位、实测关节和夹爪反馈，保存一张未经叠字、未经额外去畸变的 640×480 腕图。手拖、夹爪实物尺读、动态重放和首条成功抓放等待操作者到场。当前成功数为 0。
+测试机是 Ubuntu 主机 `kaiwen-Legion-Y9000P-IAH7H`。本轮 π 工作树在 `/home/kaiwen/research/pi-single-live`，数据留在 `/home/kaiwen/research/pi-q12-data`。11/23 已实际读取六轴限位、实测关节和夹爪反馈，保存一张未经叠字、未经额外去畸变的 640×480 腕图。11/23 晚已完成指垫尺读、手拖、空场、独立原路返回与首条成功抓放，导出 1 条 commissioning episode。[实际结果](PI_REAL_TEST_STATE.md)。
 
 ## 1　看腕图，选布局
 
