@@ -155,10 +155,27 @@ def check_route(request):
     first = joint_vector(request["first_target_rad"])
     goal = joint_vector(request.get("goal_q_rad", np.zeros(6)))
     held = joint_vector(request["previous_target_rad"])
-    paths = {"commanded": np.concatenate([segment(start, first), segment(first, goal)])}
-    # The previous CAN target can be present briefly during the control-source change.
-    if request["ctrl_mode"] != 1:
-        paths["previous_target"] = segment(start, held)
+    if "home_waypoints_rad" in request:
+        # Only omit a secondary sweep if the whole possible handoff segment
+        # is part of the commanded path. Keep the legacy format unchanged.
+        points = [joint_vector(q) for q in request["home_waypoints_rad"]]
+        expected = [first]
+        if request["ctrl_mode"] != 1:
+            if np.max(np.abs(np.degrees(held))) > 5.:
+                raise ValueError("Uncovered previous CAN target")
+            if not np.array_equal(held, first):
+                expected.append(held)
+        if not np.array_equal(expected[-1], goal):
+            expected.append(goal)
+        if (not np.array_equal(start, first) or np.any(goal != 0)
+                or not np.array_equal(points, expected)):
+            raise ValueError("Invalid ordered return-to-zero waypoints")
+        legs = [segment(a, b) for a, b in zip(points, points[1:])]
+        paths = {"commanded": np.concatenate(legs) if legs else np.array(points)}
+    else:
+        paths = {"commanded": np.concatenate([segment(start, first), segment(first, goal)])}
+        if request["ctrl_mode"] != 1:
+            paths["previous_target"] = segment(start, held)
     hits = set()
     min_z = min_camera_z = math.inf
     fk_error = 0.

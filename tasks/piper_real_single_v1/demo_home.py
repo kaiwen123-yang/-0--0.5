@@ -40,6 +40,22 @@ def first_home_target(q, bounds):
     return first
 
 
+def home_waypoints(start, first, held, bounds, ctrl_mode, taught_start):
+    """Choose the same ordered references for the geometry checker and the sender."""
+    if start != first:
+        return None  # Keep both sweeps for an initially out-of-bounds measurement.
+    points = [first]
+    if ctrl_mode != 1 and held != ZERO:
+        if (taught_start is None or gap(held, taught_start) > .35 or gap(held, ZERO) > 5.
+                or not all(lo <= v <= hi for v, (lo, hi) in zip(held, bounds, strict=True))):
+            return None  # A different previous target still needs an independent sweep.
+        if held != first:
+            points.append(held)
+    if points[-1] != ZERO:
+        points.append(ZERO)
+    return points
+
+
 def clear_profile(heights, returning_home):
     threshold = .020
     if not isinstance(heights, list) or not heights or any(
@@ -64,7 +80,7 @@ def check_sweep(run, request):
                    env=dict(os.environ, OPENBLAS_NUM_THREADS="1"), check=True)
     route = read(run/"route_check.json")
     profiles = route["clearance_profiles_m"]
-    expected = {"commanded"} if request["ctrl_mode"] == 1 else {"commanded", "previous_target"}
+    expected = {"commanded"} if request["ctrl_mode"] == 1 or "home_waypoints_rad" in request else {"commanded", "previous_target"}
     returning_home = request.get("goal_q_rad", ZERO) == ZERO
     if (set(profiles) != expected or type(route["mesh_pairs"]) is not int or route["mesh_pairs"] <= 0
             or route["intersections"] != [] or not 0 <= route["max_fk_difference"] < 1e-4

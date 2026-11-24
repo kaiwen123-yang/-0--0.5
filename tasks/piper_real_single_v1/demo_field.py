@@ -20,7 +20,7 @@ from uuid import uuid4
 from demo_io import (BOOT, CAL, CAL_SHA, CLOCK, HERE, ROOT, Feedback, PiperDevice,
                      Sender, camera, gap, h0, healthy, read, save, snapshot, stats)
 from demo_path import plan, plan_samples
-from demo_home import ZERO, check_sweep, first_home_target, handoff_at_measured_pose, ramp_joints, released_pose
+from demo_home import ZERO, check_sweep, first_home_target, handoff_at_measured_pose, home_waypoints, ramp_joints, released_pose
 from color_task import COLORS, recorded_task, task_for
 from width_contract import WIDTH, RETREAT, TERMINAL_VERSION, require_setup
 
@@ -164,6 +164,7 @@ def main(argv=None, *, finished_teach=None):
         start, width = row["q_rad"], row["width_m"]
         report.update(use="reposition_only", session_id=cfg["session_id"], previous_hold=read(led))
         pick = None
+        taught_start = None
         if finished_teach is not None:
             prior = read(finished_teach/"run.json")
             release = prior["home_release"]
@@ -174,6 +175,7 @@ def main(argv=None, *, finished_teach=None):
                     or gap(release["q_rad"], start) > .1 or abs(release["width_m"]-width) > .001):
                 raise ValueError("结束示教与自动回零之间的姿态、开口或控制来源发生变化")
             pick = next((m["q"] for m in prior["marks"] if m["event"] == "close"), None)
+            taught_start = next((m["q"] for m in prior["marks"] if m["event"] == "start"), None)
             report.update(source_trajectory_id=prior["run_id"], source_directory=str(finished_teach),
                           source_complete=prior["complete"])
         if row["arm"]["ctrl_mode"] == 1 and gap(start,ZERO) <= .01 and gap(held,ZERO) <= .00051:
@@ -193,8 +195,16 @@ def main(argv=None, *, finished_teach=None):
             raise RuntimeError("限位查询期间接口或主机 TX 改变")
         save(led, dict(read(led), tx_packets=before+6))
         first = first_home_target(start, bounds)
-        check_sweep(run, dict(start_q_rad=start, first_target_rad=first, previous_target_rad=held,
-                              ctrl_mode=int(row["arm"]["ctrl_mode"]), sdk_width_m=width, pick_q_rad=pick))
+        ctrl_mode = int(row["arm"]["ctrl_mode"])
+        request = dict(start_q_rad=start, first_target_rad=first, previous_target_rad=held,
+                       ctrl_mode=ctrl_mode, sdk_width_m=width, pick_q_rad=pick)
+        points = home_waypoints(start, first, held, bounds, ctrl_mode, taught_start)
+        if points is None:
+            points = [first, ZERO]  # Also check the distinct handoff sweep for this case.
+        else:
+            request["home_waypoints_rad"] = points
+        check_sweep(run, request)
+        report["home_waypoints_rad"] = points
         fresh = released_pose(dev, rx, grip)
         if (fresh["arm"] != row["arm"] or gap(fresh["q_rad"],start) > .1
                 or abs(fresh["width_m"]-width) > .001 or line() in ("p","e")):
@@ -214,8 +224,12 @@ def main(argv=None, *, finished_teach=None):
         speed = min(5., *(math.degrees(m["max_rad_s"]) for m in report["limits"]))
         report.update(sdk_speed_percent=50, reference_deg_s=speed, reference_deg_s2=8)
         print(f"SDK 50% 档回零，参考最高 {speed:g}°/s，夹爪保持。P 或 E 回车会在当前参考位结束。", flush=True)
-        target, completed = ramp_joints(dev,rx,grip,sender,first,ZERO,width,speed,
-                                        lambda: line() in ("p","e"),"home_from_fresh_feedback")
+        target, completed = first, True
+        for waypoint in points[1:]:
+            target, completed = ramp_joints(dev,rx,grip,sender,target,waypoint,width,speed,
+                                            lambda: line() in ("p","e"),"home_from_fresh_feedback")
+            if not completed:
+                break
         normal_hold(target)
         final = healthy(dev,rx,grip,allow_disabled_gripper=True)
         if gap(final["q_rad"],target) > .35 or final["arm"]["motion_status"] != 0 or abs(final["width_m"]-width) > .002:
