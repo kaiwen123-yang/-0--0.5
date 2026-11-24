@@ -781,6 +781,7 @@ def main(argv=None, *, finished_run=None):
                     else:
                         print(f"{event}: 静止至少 1 秒，输入 {required.upper()} 并回车，继续静止 1 秒。", flush=True)
                 next_display = 0.
+                success_key_ns = None
                 last_drag = None
                 while True:
                     check()
@@ -813,6 +814,13 @@ def main(argv=None, *, finished_run=None):
                         raise RuntimeError("夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪")
                     last_drag = rx.joint_sample
                     key = None if event == "start" else line()
+                    if passive and event == "end":
+                        if key == "e" and success_key_ns is None:
+                            success_key_ns = CLOCK()
+                            report["operator_success_key_ns"] = success_key_ns
+                            print("E 已收到。保持空爪抬离姿态，看到 end 已记 后再单击灭灯。",flush=True)
+                        if success_key_ns is not None and key not in ("f","b","n"):
+                            key = "e"
                     if manual_gripper and key == "0" and event == "open":
                         print("释放标记请用英文字母 O，再回车。",flush=True)
                     if manual_gripper and key == "f" and event != "end":
@@ -858,7 +866,10 @@ def main(argv=None, *, finished_run=None):
                                 print(f"{event} 标记宽度 {width*1000:.1f} mm",flush=True)
                         if formal and event == "end":
                             if (not passive or key != "f") and not still_and_in_bounds((ident, ns, q)):
-                                print("E 未记录：在关节限位内的抬离位置停稳一秒。",flush=True)
+                                if not passive or time.monotonic() >= next_display:
+                                    print("等待限位内抬离位置停稳一秒。",flush=True)
+                                    next_display = time.monotonic()+3
+                                time.sleep(.02)
                                 continue
                             mark["operator_empty_retreat"] = True  # E is the explicit on-site confirmation
                             mark["operator_task_success"] = key == "e"
@@ -897,7 +908,8 @@ def main(argv=None, *, finished_run=None):
                         or any(st["err_status"].values())):
                     raise RuntimeError(f"等待结束示教期间控制状态改变：{st}")
                 time.sleep(.03)
-            released_pose(dev,rx,grip)
+            if not passive:
+                released_pose(dev,rx,grip)
             termios.tcflush(sys.stdin, termios.TCIFLUSH)
             if pending_end is not None:
                 prompt = ("已灯灭。E 确认放对颜色并抬离，F 失败保存：" if manual_gripper else
@@ -940,12 +952,13 @@ def main(argv=None, *, finished_run=None):
         elif stats()["tx_packets"] != report["interface_before"]["tx_packets"]:
             raise RuntimeError("手拖期间主机 TX 变化；该轨迹需排查")
         if formal:
-            released = released_pose(dev,rx,grip)
+            if not passive:
+                released = released_pose(dev,rx,grip)
             if report["marks"][-1]["event"] == "end":
                 fback.flush()
                 end = report["marks"][-1]
                 report["reposition_only"] = dict(after_joint_id=end["joint_id"], after_ns=end["mono_ns"],
-                                                  scope="independent SDK home after teach")
+                                                  scope="outside recorded task" if passive else "independent SDK home after teach")
                 save(run/"reposition_only.json",report["reposition_only"])
                 report.update(grid_end_ns=end["mono_ns"],stop="demonstration_finished",
                               reset_between_runs="separate_operator_handoff" if manual_gripper else "automatic_direct_home")

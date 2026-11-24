@@ -15,6 +15,11 @@ pi_night_experiment="$2"
 pi_night_output="$(realpath -m -- "${3:-/root/autodl-tmp/robot-repro/piper-real-single-v1/outputs}")"
 pi_night_specs="$pi_night_output/night_specs/$pi_night_experiment"
 
+# This night run is the 50-episode blue/red collection, shared by both families.
+# Check the actual frozen split and complete usable action windows before norm.
+"/root/robot-repro-envs/pi05/bin/python" "$pi_night_task_dir/collection_budget.py" \
+    --frozen "$pi_night_dataset" --require-ready
+
 # These are the existing D57 environments, not new installations.
 /root/robot-repro-envs/pi05/bin/python - "$pi_night_task_dir" "$pi_night_dataset" \
     "$pi_night_experiment" "$pi_night_output" "$pi_night_specs" <<'PY'

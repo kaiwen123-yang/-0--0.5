@@ -1,0 +1,668 @@
+{
+  "as_of": "2026-11-24T20:06:52+08:00",
+  "scope": "six placement/target cells; T01-RB02 and T01-RB03 train, V01-FOUR01 validation",
+  "raw_recording_evidence": "run, task, task_end, review, original RGB/feedback, CAN transactions; missing and failed attempts do not count",
+  "valid_chunk_rule": "20 Hz; 10-step chunk; official exporter masks invalid arm/width/lag/gap rows. Dataset permits terminal padding; marker coverage here counts only full unpadded chunks.",
+  "marker_definition": "count of full valid half-second chunks whose [t,t+0.5s) contains the C/O monotonic marker; local_delta is strongest opening/closing from measured SDK width at chunk start to future target at last row across full valid chunks inside [mark-4s, mark+1s]. This does not prove object retention.",
+  "cells": [
+    {
+      "session": "T01",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "split": "train",
+      "placement": "T01-RB02",
+      "target_color": "blue",
+      "eligible_successes": [
+        {
+          "valid_row_spans_task_s": [
+            [
+              3.35,
+              45.0
+            ],
+            [
+              46.25,
+              55.25
+            ]
+          ],
+          "full_chunks_starting_post_O": 246,
+          "final_full_chunk_end_task_s": 55.25,
+          "raw": "20261124_194909_426207_teach",
+          "run_id": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+          "scene_colors": [
+            "blue",
+            "red"
+          ],
+          "review": "operator_success_key",
+          "reported_actual_color": "blue",
+          "frames": 2270,
+          "task_window_rgb": 1653,
+          "rgb_queue_drops": 0,
+          "rejected_joint_triplets": 0,
+          "gap_count_gt_100ms": 0,
+          "host_tx_delta": 0,
+          "grid_rows": 1105,
+          "valid_rows": 1013,
+          "valid_chunk_starts": 1004,
+          "full_unpadded_starts": 995,
+          "excluded_by_reason": {
+            "joint_outside_controller_limits": 92,
+            "gripper_width_outside_sdk_range": 2
+          },
+          "marks": {
+            "start": {
+              "task_s": 0.0,
+              "width_mm": 47.3
+            },
+            "close": {
+              "task_s": 17.687,
+              "width_mm": 27.1,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": -0.0,
+              "local_chunk_start_relative_to_marker_s": -3.987,
+              "phase_directional_chunks_at_least_1mm": 16,
+              "phase_max_half_second_delta_mm": 20.6,
+              "phase_max_change_start_task_s": 8.55,
+              "plateau_before_marker_s_approx": 8.287,
+              "causal_rgb_index": 1139
+            },
+            "open": {
+              "task_s": 40.779,
+              "width_mm": 56.1,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 0.0,
+              "local_chunk_start_relative_to_marker_s": -3.979,
+              "phase_directional_chunks_at_least_1mm": 25,
+              "phase_max_half_second_delta_mm": 26.0,
+              "phase_max_change_start_task_s": 27.9,
+              "plateau_before_marker_s_approx": 12.429,
+              "causal_rgb_index": 1830
+            },
+            "end": {
+              "task_s": 55.265,
+              "width_mm": 10.8
+            }
+          },
+          "visual_spot_check": {
+            "method": "Decoded original DC1 frames at/before start, C, C-to-O midpoint, O and E; visually inspected.",
+            "rgb_indices": [
+              610,
+              1139,
+              1484,
+              1830,
+              2263
+            ],
+            "observations": "Target-colored block between the fingers at C; same color in the shallow tray region at O; no block held between fingers at E."
+          },
+          "max_rgb_interval_in_task_ms": 39.64
+        }
+      ],
+      "rejected_attempts": [
+        {
+          "raw": "20261124_192516_871579_teach",
+          "marks": [
+            "start",
+            "close"
+          ],
+          "reason": "RuntimeError('手拖中已发送夹爪 0x159，但未收到实际开合反馈；保留记录，不自动切六轴控制模式')"
+        },
+        {
+          "raw": "20261124_194154_565955_teach",
+          "marks": [],
+          "reason": "RuntimeError('夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪')"
+        }
+      ],
+      "open_attempts": [],
+      "status": "success_verified"
+    },
+    {
+      "session": "T01",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "split": "train",
+      "placement": "T01-RB02",
+      "target_color": "red",
+      "eligible_successes": [
+        {
+          "valid_row_spans_task_s": [
+            [
+              7.7,
+              38.7
+            ],
+            [
+              39.4,
+              42.4
+            ],
+            [
+              42.5,
+              44.45
+            ]
+          ],
+          "full_chunks_starting_post_O": 152,
+          "final_full_chunk_end_task_s": 44.45,
+          "raw": "20261124_195138_013150_teach",
+          "run_id": "717893f2-9305-47bc-83b6-e70ae35561df",
+          "scene_colors": [
+            "blue",
+            "red"
+          ],
+          "review": "operator_success_key",
+          "reported_actual_color": "red",
+          "frames": 3525,
+          "task_window_rgb": 1330,
+          "rgb_queue_drops": 0,
+          "rejected_joint_triplets": 0,
+          "gap_count_gt_100ms": 0,
+          "host_tx_delta": 0,
+          "grid_rows": 889,
+          "valid_rows": 719,
+          "valid_chunk_starts": 701,
+          "full_unpadded_starts": 692,
+          "excluded_by_reason": {
+            "joint_outside_controller_limits": 168,
+            "gripper_width_outside_sdk_range": 2
+          },
+          "marks": {
+            "start": {
+              "task_s": 0.0,
+              "width_mm": 10.2
+            },
+            "close": {
+              "task_s": 20.831,
+              "width_mm": 27.5,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": -0.0,
+              "local_chunk_start_relative_to_marker_s": -3.981,
+              "phase_directional_chunks_at_least_1mm": 50,
+              "phase_max_half_second_delta_mm": 28.6,
+              "phase_max_change_start_task_s": 13.1,
+              "plateau_before_marker_s_approx": 6.531,
+              "causal_rgb_index": 2811
+            },
+            "open": {
+              "task_s": 34.687,
+              "width_mm": 36.0,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 4.0,
+              "local_chunk_start_relative_to_marker_s": -3.987,
+              "phase_directional_chunks_at_least_1mm": 14,
+              "phase_max_half_second_delta_mm": 8.9,
+              "phase_max_change_start_task_s": 30.4,
+              "plateau_before_marker_s_approx": 3.837,
+              "causal_rgb_index": 3225
+            },
+            "end": {
+              "task_s": 44.473,
+              "width_mm": 12.9
+            }
+          },
+          "visual_spot_check": {
+            "method": "Decoded original DC1 frames at/before start, C, C-to-O midpoint, O and E; visually inspected.",
+            "rgb_indices": [
+              2188,
+              2811,
+              3018,
+              3225,
+              3518
+            ],
+            "observations": "Target-colored block between the fingers at C; same color in the shallow tray region at O; no block held between fingers at E."
+          },
+          "max_rgb_interval_in_task_ms": 38.815
+        }
+      ],
+      "rejected_attempts": [],
+      "open_attempts": [],
+      "status": "success_verified"
+    },
+    {
+      "session": "T01",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "split": "train",
+      "placement": "T01-RB03",
+      "target_color": "blue",
+      "eligible_successes": [
+        {
+          "valid_row_spans_task_s": [
+            [
+              3.3,
+              4.45
+            ],
+            [
+              4.5,
+              29.55
+            ],
+            [
+              30.85,
+              35.95
+            ]
+          ],
+          "full_chunks_starting_post_O": 136,
+          "final_full_chunk_end_task_s": 35.95,
+          "raw": "20261124_195452_269290_teach",
+          "run_id": "b223b5b5-fb17-4566-8473-11218d5f1773",
+          "scene_colors": [
+            "blue",
+            "red"
+          ],
+          "review": "operator_success_key",
+          "reported_actual_color": "blue",
+          "frames": 1716,
+          "task_window_rgb": 1077,
+          "rgb_queue_drops": 0,
+          "rejected_joint_triplets": 0,
+          "gap_count_gt_100ms": 0,
+          "host_tx_delta": 0,
+          "grid_rows": 719,
+          "valid_rows": 626,
+          "valid_chunk_starts": 608,
+          "full_unpadded_starts": 599,
+          "excluded_by_reason": {
+            "joint_outside_controller_limits": 92,
+            "gripper_width_outside_sdk_range": 3
+          },
+          "marks": {
+            "start": {
+              "task_s": 0.0,
+              "width_mm": 12.9
+            },
+            "close": {
+              "task_s": 14.876,
+              "width_mm": 26.8,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 4.6,
+              "local_chunk_start_relative_to_marker_s": -3.326,
+              "phase_directional_chunks_at_least_1mm": 27,
+              "phase_max_half_second_delta_mm": 67.9,
+              "phase_max_change_start_task_s": 5.5,
+              "plateau_before_marker_s_approx": 2.826,
+              "causal_rgb_index": 1078
+            },
+            "open": {
+              "task_s": 26.901,
+              "width_mm": 33.7,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 0.0,
+              "local_chunk_start_relative_to_marker_s": -3.951,
+              "phase_directional_chunks_at_least_1mm": 13,
+              "phase_max_half_second_delta_mm": 6.4,
+              "phase_max_change_start_task_s": 20.85,
+              "plateau_before_marker_s_approx": 5.601,
+              "causal_rgb_index": 1438
+            },
+            "end": {
+              "task_s": 35.987,
+              "width_mm": 6.2
+            }
+          },
+          "visual_spot_check": {
+            "method": "Decoded original DC1 frames at/before start, C, C-to-O midpoint, O and E; visually inspected.",
+            "rgb_indices": [
+              633,
+              1078,
+              1258,
+              1438,
+              1710
+            ],
+            "observations": "Target-colored block between the fingers at C; same color in the shallow tray region at O; no block held between fingers at E."
+          },
+          "max_rgb_interval_in_task_ms": 37.888
+        }
+      ],
+      "rejected_attempts": [],
+      "open_attempts": [],
+      "status": "success_verified"
+    },
+    {
+      "session": "T01",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "split": "train",
+      "placement": "T01-RB03",
+      "target_color": "red",
+      "eligible_successes": [
+        {
+          "valid_row_spans_task_s": [
+            [
+              1.95,
+              3.3
+            ],
+            [
+              4.25,
+              21.9
+            ],
+            [
+              22.7,
+              23.3
+            ],
+            [
+              23.4,
+              33.8
+            ]
+          ],
+          "full_chunks_starting_post_O": 233,
+          "final_full_chunk_end_task_s": 33.8,
+          "raw": "20261124_195553_081843_teach",
+          "run_id": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+          "scene_colors": [
+            "blue",
+            "red"
+          ],
+          "review": "operator_success_key",
+          "reported_actual_color": "red",
+          "frames": 1852,
+          "task_window_rgb": 1011,
+          "rgb_queue_drops": 0,
+          "rejected_joint_triplets": 0,
+          "gap_count_gt_100ms": 0,
+          "host_tx_delta": 0,
+          "grid_rows": 676,
+          "valid_rows": 600,
+          "valid_chunk_starts": 573,
+          "full_unpadded_starts": 564,
+          "excluded_by_reason": {
+            "joint_outside_controller_limits": 55,
+            "gripper_width_outside_sdk_range": 21
+          },
+          "marks": {
+            "start": {
+              "task_s": 0.0,
+              "width_mm": 6.2
+            },
+            "close": {
+              "task_s": 12.096,
+              "width_mm": 27.5,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": -0.0,
+              "local_chunk_start_relative_to_marker_s": -3.996,
+              "phase_directional_chunks_at_least_1mm": 32,
+              "phase_max_half_second_delta_mm": 58.2,
+              "phase_max_change_start_task_s": 4.25,
+              "plateau_before_marker_s_approx": 4.346,
+              "causal_rgb_index": 1196
+            },
+            "open": {
+              "task_s": 19.881,
+              "width_mm": 48.0,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 13.8,
+              "local_chunk_start_relative_to_marker_s": -3.881,
+              "phase_directional_chunks_at_least_1mm": 28,
+              "phase_max_half_second_delta_mm": 13.8,
+              "phase_max_change_start_task_s": 16.0,
+              "plateau_before_marker_s_approx": 3.381,
+              "causal_rgb_index": 1428
+            },
+            "end": {
+              "task_s": 33.817,
+              "width_mm": 3.6
+            }
+          },
+          "visual_spot_check": {
+            "method": "Decoded original DC1 frames at/before start, C, C-to-O midpoint, O and E; visually inspected.",
+            "rgb_indices": [
+              834,
+              1196,
+              1312,
+              1428,
+              1845
+            ],
+            "observations": "Target-colored block between the fingers at C; same color in the shallow tray region at O; no block held between fingers at E."
+          },
+          "max_rgb_interval_in_task_ms": 37.743
+        }
+      ],
+      "rejected_attempts": [],
+      "open_attempts": [],
+      "status": "success_verified"
+    },
+    {
+      "session": "V01",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "split": "validation",
+      "placement": "V01-FOUR01",
+      "target_color": "blue",
+      "eligible_successes": [
+        {
+          "valid_row_spans_task_s": [
+            [
+              7.5,
+              38.2
+            ]
+          ],
+          "full_chunks_starting_post_O": 25,
+          "final_full_chunk_end_task_s": 38.2,
+          "raw": "20261124_195953_071901_teach",
+          "run_id": "f208d430-c112-4e1d-9466-07222a772f19",
+          "scene_colors": [
+            "blue",
+            "red",
+            "white",
+            "green"
+          ],
+          "review": "operator_success_key",
+          "reported_actual_color": "blue",
+          "frames": 9263,
+          "task_window_rgb": 1491,
+          "rgb_queue_drops": 0,
+          "rejected_joint_triplets": 0,
+          "gap_count_gt_100ms": 0,
+          "host_tx_delta": 0,
+          "grid_rows": 997,
+          "valid_rows": 614,
+          "valid_chunk_starts": 605,
+          "full_unpadded_starts": 605,
+          "excluded_by_reason": {
+            "joint_outside_controller_limits": 157,
+            "gripper_width_outside_sdk_range": 259
+          },
+          "marks": {
+            "start": {
+              "task_s": 0.0,
+              "width_mm": 0.5
+            },
+            "close": {
+              "task_s": 16.506,
+              "width_mm": 27.9,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": -0.0,
+              "local_chunk_start_relative_to_marker_s": -3.956,
+              "phase_directional_chunks_at_least_1mm": 22,
+              "phase_max_half_second_delta_mm": 59.8,
+              "phase_max_change_start_task_s": 7.5,
+              "plateau_before_marker_s_approx": 6.006,
+              "causal_rgb_index": 8259
+            },
+            "open": {
+              "task_s": 36.491,
+              "width_mm": 60.4,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 0.0,
+              "local_chunk_start_relative_to_marker_s": -3.991,
+              "phase_directional_chunks_at_least_1mm": 31,
+              "phase_max_half_second_delta_mm": 33.8,
+              "phase_max_change_start_task_s": 29.2,
+              "plateau_before_marker_s_approx": 6.841,
+              "causal_rgb_index": 8857
+            },
+            "end": {
+              "task_s": 49.862,
+              "width_mm": -0.1
+            }
+          },
+          "visual_spot_check": {
+            "method": "Direct inspection of seven original DC1 frames at start, approach, C, C-to-O midpoint, opening, O and E.",
+            "rgb_indices": [
+              7765,
+              7997,
+              8259,
+              8558,
+              8646,
+              8857,
+              9256
+            ],
+            "observations": "Blue block next to the tray on approach, between fingers at C and over tray during transfer; jaws separated around blue block inside tray at O; fingers empty and moved away at E."
+          },
+          "max_rgb_interval_in_task_ms": 47.002,
+          "completion_recovery": {
+            "original_run": "run.collector_original.json",
+            "original_review": "review.collector_original.json",
+            "reason": "The passive capture has an actual successful E and stopped-teach feedback. The SDK home precondition rejected a -0.1 mm closing sample after the task. No return was requested.",
+            "grid_end_source": "task_end.json:mono_ns",
+            "width_treatment": "Keep original signed samples and exclude windows spanning out-of-range measurements.",
+            "usable_starts_at_recovery": 605,
+            "original_run_sha256": "1a34a09f02db54cb366c35326ca0049411ebe6a38efe5bc4b7893cc6be8913f7",
+            "original_review_sha256": "8a48ae8c2ecc683479cfcb54a7a7a11252932c702fd4fca9f7633cf388c7f1da",
+            "task_end_sha256": "85602469d2694eaa83a042753bd7201a44f05a2a5463ee495b7a50b4af15b7cf",
+            "current_run_sha256": "4f92b4cb04fd250c609dfd026c2555df8007001b0d1fa508d92c12a360c10a44",
+            "current_review_sha256": "be9eb0e8505637cff8916f2636f0a69de412cb0d5c640df25e9317fdd4bfc510",
+            "receipt": "passive_completion_recovery.json",
+            "original_operator_success_and_end_preserved": true,
+            "training_scope": "Only 7.50–38.20 s has retained unpadded windows; E occurred at 49.862 s and the final retreat tail is excluded. 25 usable full windows start after O."
+          }
+        }
+      ],
+      "rejected_attempts": [
+        {
+          "raw": "20261124_195729_469343_teach",
+          "marks": [
+            "start",
+            "close",
+            "open"
+          ],
+          "reason": "示教在 end 阶段结束，缺少确认的任务终点"
+        }
+      ],
+      "open_attempts": [],
+      "status": "success_verified"
+    },
+    {
+      "session": "V01",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "split": "validation",
+      "placement": "V01-FOUR01",
+      "target_color": "red",
+      "eligible_successes": [
+        {
+          "valid_row_spans_task_s": [
+            [
+              2.4,
+              25.8
+            ],
+            [
+              26.35,
+              27.35
+            ],
+            [
+              27.5,
+              28.15
+            ],
+            [
+              28.3,
+              34.4
+            ]
+          ],
+          "full_chunks_starting_post_O": 152,
+          "final_full_chunk_end_task_s": 34.4,
+          "raw": "20261124_195915_083553_teach",
+          "run_id": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+          "scene_colors": [
+            "blue",
+            "red",
+            "white",
+            "green"
+          ],
+          "review": "operator_success_key",
+          "reported_actual_color": "red",
+          "frames": 1049,
+          "task_window_rgb": 1030,
+          "rgb_queue_drops": 0,
+          "rejected_joint_triplets": 0,
+          "gap_count_gt_100ms": 0,
+          "host_tx_delta": 0,
+          "grid_rows": 688,
+          "valid_rows": 623,
+          "valid_chunk_starts": 596,
+          "full_unpadded_starts": 587,
+          "excluded_by_reason": {
+            "joint_outside_controller_limits": 59,
+            "gripper_width_outside_sdk_range": 6
+          },
+          "marks": {
+            "start": {
+              "task_s": 0.0,
+              "width_mm": 1.3
+            },
+            "close": {
+              "task_s": 13.041,
+              "width_mm": 27.7,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": -0.0,
+              "local_chunk_start_relative_to_marker_s": -3.991,
+              "phase_directional_chunks_at_least_1mm": 14,
+              "phase_max_half_second_delta_mm": 12.3,
+              "phase_max_change_start_task_s": 7.75,
+              "plateau_before_marker_s_approx": 4.591,
+              "causal_rgb_index": 402
+            },
+            "open": {
+              "task_s": 24.146,
+              "width_mm": 45.6,
+              "full_chunks_spanning_marker": 10,
+              "strongest_local_directional_width_delta_mm": 13.4,
+              "local_chunk_start_relative_to_marker_s": -3.996,
+              "phase_directional_chunks_at_least_1mm": 26,
+              "phase_max_half_second_delta_mm": 13.4,
+              "phase_max_change_start_task_s": 20.05,
+              "plateau_before_marker_s_approx": 3.596,
+              "causal_rgb_index": 734
+            },
+            "end": {
+              "task_s": 34.447,
+              "width_mm": 0.5
+            }
+          },
+          "visual_spot_check": {
+            "method": "Decoded original DC1 frames at/before start, C, C-to-O midpoint, O and E; visually inspected.",
+            "rgb_indices": [
+              12,
+              402,
+              568,
+              734,
+              1042
+            ],
+            "observations": "Target-colored block between the fingers at C; same color in the shallow tray region at O; no block held between fingers at E."
+          },
+          "max_rgb_interval_in_task_ms": 37.738
+        }
+      ],
+      "rejected_attempts": [],
+      "open_attempts": [],
+      "status": "success_verified"
+    }
+  ],
+  "group_split_checks": {
+    "session_id": {
+      "unique": 2,
+      "cross_split": []
+    },
+    "placement": {
+      "unique": 3,
+      "cross_split": []
+    },
+    "source_trajectory_id": {
+      "unique": 9,
+      "cross_split": []
+    }
+  },
+  "summary": {
+    "approved_cells": 6,
+    "requested_cells": 6,
+    "train_valid_chunk_starts": 2886,
+    "validation_valid_chunk_starts": 1201,
+    "unique_attempts_with_run_id": 9,
+    "cross_split_reuse": false,
+    "marker_coverage_issues": [],
+    "training_and_validation_bluered_successes": true,
+    "successful_train_episodes": 4,
+    "successful_validation_episodes": 2,
+    "visual_spot_checked_episodes": 6,
+    "prior_validation_blue_without_E_remains_excluded": "20261124_195729_469343_teach",
+    "qualification": "The six episodes contribute legal labeled windows. C/O are after-action keys; fit the sampled width on the 20 Hz grid. The recovered validation blue has no usable windows in the final 11.66 s; full physical retreat observation is preserved."
+  }
+}

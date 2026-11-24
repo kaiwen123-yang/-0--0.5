@@ -1,0 +1,206 @@
+{
+  "session": "pickplace_20261124_V01",
+  "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+  "placement": "V01-FOUR01",
+  "split": "validation",
+  "scene_colors": [
+    "blue",
+    "red",
+    "white",
+    "green"
+  ],
+  "verification": "read-only demo_export.analyse with 0..100 mm SDK width and per-run controller bounds",
+  "policy_hz": 20,
+  "arm_action_source": "future_measured_joint_positions",
+  "gripper_action_source": "future_measured_sdk_width",
+  "excluded_attempt": {
+    "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_195729_469343_teach",
+    "target_color": "blue",
+    "operator_success_key_received": false,
+    "reason": "Stopped during end stage; no confirmed terminal mark."
+  },
+  "episodes": [
+    {
+      "run_id": "f208d430-c112-4e1d-9466-07222a772f19",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_195953_071901_teach",
+      "target_color": "blue",
+      "operator_review": {
+        "approved_teach": true,
+        "outcome": "success",
+        "actual_grasped_color": "blue",
+        "intervention": "no",
+        "verdict_source": "operator_success_key"
+      },
+      "duration_s": 49.861884,
+      "source_trajectory_id": "f208d430-c112-4e1d-9466-07222a772f19",
+      "marks": [
+        {
+          "event": "start",
+          "t_s": 0,
+          "joint_sample_ns": 203246179581604,
+          "gripper_sample_ns": 203246179655630,
+          "width_mm": 0.5
+        },
+        {
+          "event": "close",
+          "t_s": 16.505631,
+          "joint_sample_ns": 203262685212512,
+          "gripper_sample_ns": 203262685378396,
+          "width_mm": 27.9
+        },
+        {
+          "event": "open",
+          "t_s": 36.491373,
+          "joint_sample_ns": 203282670954393,
+          "gripper_sample_ns": 203282671102319,
+          "width_mm": 60.4
+        },
+        {
+          "event": "end",
+          "t_s": 49.861884,
+          "joint_sample_ns": 203296041465247,
+          "gripper_sample_ns": 203296041542029,
+          "width_mm": -0.1
+        }
+      ],
+      "task_width_mm_range": [
+        -3.4,
+        101.8
+      ],
+      "raw_rgb_count": 9263,
+      "task_rgb_count": 1491,
+      "raw_joint_groups": 62544,
+      "raw_gripper_frames": 62544,
+      "grid_rows": 997,
+      "valid_rows": 614,
+      "excluded_rows": 383,
+      "excluded_rows_by_reason": {
+        "joint_outside_controller_limits": 157,
+        "gripper_width_outside_sdk_range": 259
+      },
+      "usable_chunk_starts": 605,
+      "action_horizon": 10,
+      "can_tx_delta": 0,
+      "rgb_queue_drops": 0,
+      "can_triplet_rejections": 0,
+      "gaps_over_100ms": 0,
+      "final": {
+        "teach_status": 2,
+        "ctrl_mode": 2,
+        "arm_status": 0,
+        "motion_status": 0,
+        "q_deg": [
+          -2.811,
+          101.33,
+          -57.516,
+          -0.53,
+          49.791,
+          -6.04
+        ],
+        "driver_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "gripper_width_mm": -0.1
+      },
+      "completion_recovery": {
+        "receipt": "passive_completion_recovery.json",
+        "original_run": "run.collector_original.json",
+        "original_review": "review.collector_original.json",
+        "basis": "Original operator success at E and task_end.json before a post-task home check rejected the last reported width of -0.1 mm; invalid width samples are excluded from affected training windows."
+      }
+    },
+    {
+      "run_id": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_195915_083553_teach",
+      "target_color": "red",
+      "operator_review": {
+        "approved_teach": true,
+        "outcome": "success",
+        "actual_grasped_color": "red",
+        "intervention": "no",
+        "verdict_source": "operator_success_key"
+      },
+      "duration_s": 34.446657,
+      "source_trajectory_id": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+      "marks": [
+        {
+          "event": "start",
+          "t_s": 0,
+          "joint_sample_ns": 202948946640052,
+          "gripper_sample_ns": 202948946770630,
+          "width_mm": 1.3
+        },
+        {
+          "event": "close",
+          "t_s": 13.040722,
+          "joint_sample_ns": 202961987362210,
+          "gripper_sample_ns": 202961987407219,
+          "width_mm": 27.7
+        },
+        {
+          "event": "open",
+          "t_s": 24.146178,
+          "joint_sample_ns": 202973092818424,
+          "gripper_sample_ns": 202973092897805,
+          "width_mm": 45.6
+        },
+        {
+          "event": "end",
+          "t_s": 34.446657,
+          "joint_sample_ns": 202983393296795,
+          "gripper_sample_ns": 202983393381371,
+          "width_mm": 0.5
+        }
+      ],
+      "task_width_mm_range": [
+        -3.8,
+        51
+      ],
+      "raw_rgb_count": 1049,
+      "task_rgb_count": 1030,
+      "raw_joint_groups": 7446,
+      "raw_gripper_frames": 7446,
+      "grid_rows": 688,
+      "valid_rows": 623,
+      "excluded_rows": 65,
+      "excluded_rows_by_reason": {
+        "joint_outside_controller_limits": 59,
+        "gripper_width_outside_sdk_range": 6
+      },
+      "usable_chunk_starts": 596,
+      "action_horizon": 10,
+      "can_tx_delta": 0,
+      "rgb_queue_drops": 0,
+      "can_triplet_rejections": 0,
+      "gaps_over_100ms": 0,
+      "final": {
+        "teach_status": 2,
+        "ctrl_mode": 2,
+        "arm_status": 0,
+        "motion_status": 0,
+        "q_deg": [
+          -2.413,
+          100.059,
+          -60.245,
+          -4.2,
+          46.362,
+          0
+        ],
+        "driver_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "gripper_width_mm": 0.5
+      }
+    }
+  ]
+}

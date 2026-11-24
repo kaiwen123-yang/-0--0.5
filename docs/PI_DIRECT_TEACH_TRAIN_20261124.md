@@ -1,5 +1,13 @@
 # 11/24 一次真实手拖示范 → 导出 → π0.5 / π0 全参训练
 
+## 11/24 晚间蓝红 50 条采集与开训条件
+
+今晚先完成 20 个训练布局和另外 5 个独立验证布局。每个布局实际抓蓝一次、复原后抓红一次。T01、T02 各安排 10 对；V01 安排 5 对新摆放。每色 20 条 train、5 条 validation；蓝红合计 40 train、10 validation。保留已经核实的真实成功，失败、未封存、回程和同布局同色重复均不用于凑数。两模型共用一套冻结数据。
+
+当前补齐 V01-FOUR01 之后，用 `tasks/piper_real_single_v1/collect_paired_budget.py` 连续补余下布局，终端显示下一条的颜色、位置和干扰物。保持浅盘固定，新摆放交替覆盖左右、中部以及近远位置。S 开始，真实抓住后 C、实际放下后 O、空爪抬离后 E，看到 end 已记再灭灯。F 保存失败后重录相同指令。再次运行队列读取真实回执并跳过完成项。
+
+`tasks/piper_real_single_v1/collection_budget.py` 按 session、split、placement 和独立来源计算进度。蓝红目标全部达成后执行全库 export、stage-a，冻结视图还须通过 `--frozen ... --require-ready` 后才上传和启动 `night_train.sh`。π0.5、π0 依次各算自身 train-only norm、各 10,000 步全参。白、绿后续各补 12 train、3 validation，四色完整预算 64 train、16 validation。下文较早的少量样本直接开训条件已由本节更新。
+
 同一布局复原并更换目标时，为 `teach --passive-capture` 加 `--start-marker`。待蓝块复原、实体示教绿灯常亮、空臂在公共起点停稳，按 S 回车。S 之前的数据保留在原始记录中，训练窗口从随后记录的 start 开始。
 
 ## 现场最短命令 · T01 三路被动采集抓蓝
