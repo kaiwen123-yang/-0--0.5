@@ -205,12 +205,15 @@ def main(argv=None, *, finished_teach=None):
         state = healthy(dev,rx,grip,allow_disabled_gripper=True)
         if gap(state["q_rad"],start) > .5:
             raise RuntimeError("交接后偏离实测起姿")
-        sender.call("speed",5,lambda:dev.robot.set_speed_percent(5))
+        if fresh["arm"]["ctrl_mode"] == 1:
+            sender.arm(first,"fresh_home_anchor_in_CAN")
+        normal_hold(first)
+        sender.call("speed",50,lambda:dev.robot.set_speed_percent(50))
         sender.call("mode","MOVE_J",lambda:dev.robot.set_motion_mode("j"))
         time.sleep(.15)
-        speed = min(.5, *(math.degrees(m["max_rad_s"]) for m in report["limits"]))
-        report.update(reference_deg_s=speed)
-        print("SDK 回零，夹爪保持。P 或 E 回车会在当前参考位结束。", flush=True)
+        speed = min(2.5, *(math.degrees(m["max_rad_s"]) for m in report["limits"]))
+        report.update(sdk_speed_percent=50, reference_deg_s=speed, reference_deg_s2=8)
+        print(f"SDK 50% 档回零，参考最高 {speed:g}°/s，夹爪保持。P 或 E 回车会在当前参考位结束。", flush=True)
         target, completed = ramp_joints(dev,rx,grip,sender,first,ZERO,width,speed,
                                         lambda: line() in ("p","e"),"home_from_fresh_feedback")
         normal_hold(target)
