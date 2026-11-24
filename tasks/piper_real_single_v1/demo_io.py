@@ -46,8 +46,9 @@ def gap(q, other):
 
 class Feedback:
     """Receive callback after the firmware parser. Never calls any send function."""
-    def __init__(self, file):
+    def __init__(self, file, *, write_samples=True):
         self.csv = csv.writer(file)
+        self.write_samples = write_samples
         self.csv.writerow(("kind", "id", "mono_ns", "first_ns", "wire_first_s", "wire_last_s",
                            "raw_hex", "values"))
         self.pending = []
@@ -72,8 +73,9 @@ class Feedback:
             um, mn = struct.unpack(">ih", raw[:6])
             self.ng += 1
             self.grip = (ns, um * 1e-6)
-            self.csv.writerow(("grip", self.ng, ns, ns, frame.timestamp, frame.timestamp,
-                               raw.hex(), json.dumps([um * 1e-6, mn * .001, *raw[6:]])))
+            if self.write_samples:
+                self.csv.writerow(("grip", self.ng, ns, ns, frame.timestamp, frame.timestamp,
+                                   raw.hex(), json.dumps([um * 1e-6, mn * .001, *raw[6:]])))
         if not 0x2A5 <= fid <= 0x2A7:
             return
         if fid != 0x2A5 + len(self.pending):
@@ -94,8 +96,9 @@ class Feedback:
             self.q = (ns, angles)
             self.joint_sample = (self.nq, ns, angles)
             self.recent_joints.append(self.joint_sample)
-            self.csv.writerow(("arm", self.nq, ns, first, wire, frame.timestamp,
-                               data.hex(), json.dumps(angles)))
+            if self.write_samples:
+                self.csv.writerow(("arm", self.nq, ns, first, wire, frame.timestamp,
+                                   data.hex(), json.dumps(angles)))
 
     def current(self):
         if self.error or not self.q or not self.grip:

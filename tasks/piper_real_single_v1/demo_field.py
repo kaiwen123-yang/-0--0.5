@@ -612,9 +612,24 @@ def main(argv=None, *, finished_teach=None):
                     and recent and ns-recent[0][0] >= 480_000_000
                     and all(gap(pos, q) <= .2 for _, pos in recent))
 
+        if formal:
+            print("起点就绪。单击实体示教键，绿灯常亮后停稳，等 start 已记再手拖。", flush=True)
+            while True:
+                st = snapshot(dev,rx,grip)["arm"]
+                if st["arm_status"] not in (0,11) or any(st["err_status"].values()):
+                    raise RuntimeError(f"等待示教时出现控制器故障：{st}")
+                if st["ctrl_mode"] == 2 and st["teach_status"] == 1:
+                    break
+                if st["ctrl_mode"] not in (0,1,2) or st["teach_status"] not in (0,2):
+                    raise ValueError(f"意外的控制源或示教状态：{st}")
+                time.sleep(.03)
+            previous_hold(strict=True)
+            report["before_drag_recording"] = dict(joint_groups=rx.nq, gripper_frames=rx.ng)
+            rx.write_samples = True
         with camera(run) as check:
-            print("腕图记录已启动。在起点单击实体键，确认绿灯常亮，然后回车。")
-            input()
+            if not formal:
+                print("腕图记录已启动。在起点单击实体键，确认绿灯常亮，然后回车。")
+                input()
             print('如需分段，在静止处 B 回车开始休息；保持同姿态，N 回车接续。全程继续记录。')
             boundary = None
             keys = ("start", "close", "open", "end")
@@ -679,6 +694,8 @@ def main(argv=None, *, finished_teach=None):
                                 continue
                             mark["operator_empty_retreat"] = True  # E is the explicit on-site confirmation
                         report["marks"].append(mark)
+                        if formal and event == "start":
+                            time.sleep(.55)
                         print(event, "已记", flush=True)
                         break
                     time.sleep(.02)
@@ -1043,7 +1060,7 @@ def main(argv=None, *, finished_teach=None):
         dev.feedback, dev.driver_feedback = deque(maxlen=256), deque(maxlen=256)
         grip = dev.robot.init_effector("agx_gripper")
         fback = stack.enter_context((run/"feedback.csv").open("x", newline=""))
-        rx = Feedback(fback)
+        rx = Feedback(fback, write_samples=not (kind == "teach" and task is not None))
         dev.robot.get_context().register_parser_packet_fun(rx.packet)
         def interrupted(*_):
             raise KeyboardInterrupt("operator interrupt")
