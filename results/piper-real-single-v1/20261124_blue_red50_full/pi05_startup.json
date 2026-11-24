@@ -1,0 +1,112 @@
+{
+  "observed_at": "2026-11-24T22:54:24.087587+08:00",
+  "source_commit": "7850136cb28da98ec5e1a5e661eca256e6b17aac",
+  "experiment": "dc1_wrist_blue_red50_full_20261124_v1",
+  "tmux_session": "pi-blue-red50-full-20261124",
+  "run_spec": {
+    "status": "FORMAL_FULL_TRAINING_CONFIG",
+    "model_family": "pi05",
+    "camera_mount": "wrist",
+    "gripper_basis": "piper_h_sdk_width_m_v1",
+    "policy_hz": 20,
+    "action_horizon": 10,
+    "experiment_name": "dc1_wrist_blue_red50_full_20261124_v1",
+    "run_root": "/autodl-fs/data/piper-real-single-v1/outputs",
+    "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1",
+    "openpi_root": "/root/autodl-tmp/robot-repro/pi05/openpi",
+    "base_params": "/root/autodl-tmp/robot-repro/assets/openpi-assets/checkpoints/pi05_base/params",
+    "training": {
+      "ema_enabled": false,
+      "ema_decay": null,
+      "batch_size": 8,
+      "num_workers": 4,
+      "num_train_steps": 10000,
+      "seed": 42,
+      "log_interval": 50,
+      "save_interval": 1000,
+      "keep_period": 5000,
+      "resume": false,
+      "warmup_steps": 500,
+      "peak_lr": 1e-05,
+      "decay_steps": 10000,
+      "decay_lr": 1e-06
+    },
+    "data_contract": {
+      "collection_mode": "kinesthetic_manual_gripper_v1",
+      "arm_action_source": "future_measured_joint_positions",
+      "gripper_action_source": "future_measured_sdk_width"
+    },
+    "normalization": {
+      "gripper_basis": "piper_h_sdk_width_m_v1",
+      "asset_id": "piper_h_wrist_pi05_piper_h_sdk_width_m_v1",
+      "model_family": "pi05",
+      "camera_mount": "wrist",
+      "split": "train",
+      "target_colors": [
+        "blue",
+        "red"
+      ],
+      "normalization": "quantile",
+      "frozen_split_sha256": "6620a26c8e18b3186b1abf9cedb1da0450a2065ae7969fc04bd3646390cec5f1",
+      "action_horizon": 10,
+      "policy_hz": 20
+    },
+    "resolved_paths": {
+      "run_directory": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1",
+      "checkpoint_directory": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1",
+      "norm_directory": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/assets/piper_h_wrist_pi05_piper_h_sdk_width_m_v1"
+    }
+  },
+  "parameter_counts": {
+    "model_family": "pi05",
+    "total_parameters": 3353433872,
+    "trainable_parameters": 3353433872,
+    "all_parameters_trainable": true,
+    "measurement": "actual initialized training state"
+  },
+  "normalization_receipt": {
+    "gripper_basis": "piper_h_sdk_width_m_v1",
+    "asset_id": "piper_h_wrist_pi05_piper_h_sdk_width_m_v1",
+    "model_family": "pi05",
+    "camera_mount": "wrist",
+    "split": "train",
+    "target_colors": [
+      "blue",
+      "red"
+    ],
+    "normalization": "quantile",
+    "frozen_split_sha256": "6620a26c8e18b3186b1abf9cedb1da0450a2065ae7969fc04bd3646390cec5f1",
+    "action_horizon": 10,
+    "policy_hz": 20,
+    "status": "PREPARED_FROM_REAL_TRAINING_EPISODES",
+    "norm_sha256": "3fd6a9ffb8a6c2ac9be9803a5ff1ed0985fd8afe51fd46dfa485d06f9636bfc3",
+    "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1",
+    "timestamp_alignment_source": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1/alignment_manifest.json",
+    "frames": 21163,
+    "raw_frames": 26572,
+    "sampling": "valid_action_starts when declared; otherwise all episode rows",
+    "policy_hz_semantics": "nominal aligned dataset/action grid; not measured runtime frequency",
+    "action_delta_mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "heldout_used": false,
+    "norm_directory": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/assets/piper_h_wrist_pi05_piper_h_sdk_width_m_v1",
+    "training_started": false
+  },
+  "progress": {
+    "first_step": "Step 0: grad_norm=1.4573, loss=0.0988, param_norm=1802.3865",
+    "start_time": "2026-11-24T22:52:41.409000+08:00",
+    "start_completed": 29,
+    "end_time": "2026-11-24T22:54:16.926000+08:00",
+    "end_completed": 153,
+    "steps_per_second": 1.2981982264937133,
+    "eta_training_only": "2026-11-25T01:00:42.054218+08:00",
+    "latest_loss_line": "Step 150: grad_norm=0.5696, loss=0.0298, param_norm=1802.3861"
+  }
+}
