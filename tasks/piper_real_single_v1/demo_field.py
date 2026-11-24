@@ -768,7 +768,8 @@ def main(argv=None, *, finished_run=None):
                 if event != "start":
                     required = {"close":"c","open":"o","end":"e"}[event]
                     if passive:
-                        print({"close":"可以手拖机械臂。实际抓到后按 C；无法抓取可按 F 保存。",
+                        target_name = {"blue":"蓝","red":"红","white":"白","green":"绿"}[task["target_color"]]
+                        print({"close":f"本条抓【{target_name}色】方块。实际夹住{target_name}块后 C 回车；抓错或失败按 F。",
                                "open":"实际释放后按 O；未完成可按 F 保存。",
                                "end":"抓对目标并已放入浅盘、空爪抬离停稳后按 E；否则 F 保存。"}[event],flush=True)
                     elif manual_gripper:

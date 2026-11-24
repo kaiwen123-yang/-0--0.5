@@ -1,0 +1,37 @@
+{
+  "placement": "T01-RB05",
+  "records": [
+    {
+      "directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_201150_553896_teach",
+      "run_id": "c712ed8e-7d96-4406-8dcb-d0fc9023393c",
+      "target_color": "blue",
+      "observed_color": "red",
+      "placement": "T01-RB05",
+      "rgb_frames": {
+        "close": 493,
+        "carry": 642,
+        "open": 792
+      },
+      "numeric_usable_starts_before_color_review": 606,
+      "eligible_training_starts": 0,
+      "operator_success_key": true,
+      "disposition": "wrong_color"
+    },
+    {
+      "directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_201250_382054_teach",
+      "run_id": "bd8b4a0b-b257-4866-946c-35a89ff2f8f4",
+      "target_color": "red",
+      "observed_color": "blue",
+      "placement": "T01-RB05",
+      "rgb_frames": {
+        "close": 490,
+        "carry": 611,
+        "open": 731
+      },
+      "numeric_usable_starts_before_color_review": 585,
+      "eligible_training_starts": 0,
+      "operator_success_key": true,
+      "disposition": "wrong_color"
+    }
+  ]
+}
