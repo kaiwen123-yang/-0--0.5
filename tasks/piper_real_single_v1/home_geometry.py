@@ -44,6 +44,32 @@ def joint_vector(values):
     return q
 
 
+def separating_axis(a, b, previous_axis, margin):
+    """A positive projected gap separates every point of both triangle meshes.
+
+    Search directions using support points of their convex hulls. Failure to
+    find a plane, including overlapping hulls, always falls through to VTK.
+    """
+    axis = a.mean(axis=0) - b.mean(axis=0) if previous_axis is None else previous_axis
+    for _ in range(16):
+        length = np.linalg.norm(axis)
+        if length < 1e-12:
+            break
+        nearest = a[np.argmin(a @ axis)] - b[np.argmax(b @ axis)]
+        if nearest @ axis > (margin + 1e-9) * length:
+            return axis
+        # Move the direction toward the closest point on [axis, nearest].
+        delta = nearest - axis
+        squared = delta @ delta
+        if squared < 1e-24:
+            break
+        step = min(1., -(axis @ delta) / squared)
+        if step <= 0:
+            break
+        axis = axis + step * delta
+    return None
+
+
 def check_route(request):
     tree = ET.parse(MODEL)
     joints = []
@@ -100,15 +126,16 @@ def check_route(request):
             filters[a, b] = test
 
     def boxes(frames):
-        bounds, matrices = {}, {}
+        bounds, matrices, world_hulls = {}, {}, {}
         for name, points in hulls.items():
             tf = frames[name] @ offsets[name]
             xyz = points @ tf[:3, :3].T + tf[:3, 3]
+            world_hulls[name] = xyz
             bounds[name] = xyz.min(axis=0), xyz.max(axis=0)
             matrix = vtk.vtkMatrix4x4()
             matrix.DeepCopy(tf.ravel().tolist())
             matrices[name] = matrix
-        return bounds, matrices
+        return bounds, matrices, world_hulls
 
     def gripper_z(bounds):
         return float(np.min([bounds[name][0][2] for name in ("gripper_base", "gripper_link1", "gripper_link2")]))
@@ -136,6 +163,7 @@ def check_route(request):
     min_z = min_camera_z = math.inf
     fk_error = 0.
     heights = {}
+    previous_axes = {}
     for q in np.concatenate(list(paths.values())):
         key = tuple(q)
         if key in heights:
@@ -148,7 +176,7 @@ def check_route(request):
             raise ValueError("Nonfinite forward kinematics")
         fk_error = max(fk_error, fk)
         min_camera_z = min(min_camera_z, camera_z)
-        bounds, matrices = boxes(frames)
+        bounds, matrices, world_hulls = boxes(frames)
         if not np.isfinite(list(bounds.values())).all():
             raise ValueError("Nonfinite collision geometry")
         z = gripper_z(bounds)
@@ -158,6 +186,11 @@ def check_route(request):
             lo, hi = bounds[a]
             other_lo, other_hi = bounds[b]
             if (hi < other_lo).any() or (other_hi < lo).any():
+                continue
+            axis = separating_axis(world_hulls[a], world_hulls[b], previous_axes.get((a, b)),
+                                   test.GetBoxTolerance())
+            if axis is not None:
+                previous_axes[a, b] = axis
                 continue
             test.SetMatrix(0, matrices[a])
             test.SetMatrix(1, matrices[b])
