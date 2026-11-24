@@ -392,6 +392,7 @@ def main(argv=None, *, finished_teach=None):
                 raise ValueError("起点准备期间实测姿态改变")
             speed = min(.5, *(math.degrees(m["max_rad_s"]) for m in report["limits"]))
             active = True
+            sender.call("speed",5,lambda:dev.robot.set_speed_percent(5))
             final,done = ramp_joints(dev,rx,grip,sender,start,target,width,speed,
                                      lambda: line() in ("p","e"),source)
             normal_hold(final)
