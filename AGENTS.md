@@ -1,6 +1,8 @@
 # π0 / π0.5 当前执行约定
 
-## 最新状态与入口 · 2026-11-23
+## 最新状态与入口 · 2026-11-24
+
+**11/24最新用户要求：已暂停采集，先更新指令；蓝/红/白/绿四颜色都采，第一阶段只训练蓝红。** 首个部署目标是红蓝混摆，按语言抓取可见可达区域内不同位置的蓝块到固定浅盘。新增当前入口 `docs/PI_COLOR_CONDITIONED_COLLECTION_20261124.md`，其中含完整Codex提示词、全库/阶段A划分和实机验收。用户暂停不等于驱动已失能；没有本轮实时硬件读数，不操作历史目标。今天现场可能领先main，先核对实际工作树和记录。
 
 先读 `docs/PI_REAL_TEST_STATE.md`、`docs/PI_DAILY_WORK_LOG.md` 最近记录、`docs/PI_A01_RECORDING_REVIEW_20261123.md` 和 `docs/PI_A01_NEXT_PROMPT_20261123.md`。总计划在 `docs/PI_POST_CALIBRATION_PLAN_20261123.md`，现场操作在 `docs/PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md`。RoboMIND 研究已完成本轮决策，不再重跑。
 
@@ -16,8 +18,16 @@
 2. 在既有模块落实新正式合同 `piper_h_sdk_width_m_v1`，贯通 setup、dataset、norm/run spec、policy metadata、推理和发送端；指垫净距独立记录。无需先拟合全行程净距曲线，也不只改 `commissioning_only` flag 或删硬门。
 3. teach、plan、replay 一致支持正常 `post_release_retreat` 终点，保留完整合法窗口/静止/连续性/起点检查，任务结束和回起点分开。新示教到首次空场之间的独立重定位/模式交接要落实，现有 return-start 依赖已成功同源 empty，不能循环引导。默认优先任务 E 封存后在被动示教下单独人工重定位，近起点再复用已验证交接；不自动扩成非零远位模式切换或任意 home。
 4. 新教紧凑路径，避免旧 A01 的 68.343 s 无任务等待；维持已验证速度/加速度，不事后删帧伪装连续时间。先核查新源及其真实空场，再采下一条并立即审核。3–5 条是起步检查预算，不要求先重复旧六分钟任务凑数。
-5. 正式示范以约 30–50 条多样成功 episode 起步，先建立独立 train / validation 会话。导出器分别禁止 session_id、placement、source_trajectory_id 跨 split；示例 T01/T02 共40训练、V01 10验证，须现实中独立且重新示教，不能改ID或随机拆帧。
+5. 蓝红阶段以约 30–50 条多样成功 episode 起步；全四颜色库的80条参考安排见11/24新文档。先建立独立 train / validation 会话。导出器分别禁止 session_id、placement、source_trajectory_id 跨 split；示例 T01/T02 共40训练、V01 10验证，须现实中独立且重新示教，不能改ID或随机拆帧。
 6. 正式数据合格后，各算 train-only norm、确定当时实际资源与预算，再分别全参微调。其后才是实际检查点推理、在线调度验收和初步实机比较。每轮区分文档设计、代码实现、现场验证和模型运行；未完成项目据实记录。
+
+## 四颜色任务的新增执行约定
+
+- 先查当前现场导出器是否仍把index.prompt写成全局通用PROMPT。基准b6e3f34仍如此；模型reader/transform已有逐episode通路。需要贯通真实任务选择、源示教、run/review、export和推理，不提供不存在的颜色CLI。先完成必要小范围更新再恢复采集。
+- target_color表示指令目标，actual_grasped_color表示实际结果；scene_colors只记录场内任务方块颜色。抓错颜色属于失败，不通过改标签变成功。每次只抓指定一块，每色先各一块。
+- 同时采红蓝-only和四色混摆；同布局换指令、复原场景，交换颜色位置。公共起点尽量一致，新目标位置按真实对应来源/空场核查，不盲放旧轨迹。
+- 全库先按session/placement/source冻结split，再筛资格通过且target_color为blue/red的阶段A；继承原split，白绿目标保留未用。红蓝目标图中可有白绿干扰，原图不裁，不复制动作换标签。两模型各自norm只取阶段A蓝红train。
+- 80条全库（64train/16validation）、其中阶段A40train/10validation是文档起步预算，不是硬性最低量或效果保证。正式训练后必须用真实模型闭环检查新位置的选色和抓放，不能用SDK旧路径重放代替。11/25仅为争取首轮结果的目标，ETA用正式训练日志，不额外容量试跑或保证96GB双全参同时运行。
 
 ## 固定硬件、模型与数据约定
 
@@ -63,4 +73,5 @@ H500、I500 和八条恢复采集已完成，不重跑、续训或扩旧基线�
 - 真实样本读取和实际时序分析是本轮工作；缺少硬件或示范时明确记录边界，不造通过结果。
 
 更多历史结果见 README 和既有报告；验证集已反复用于选择，仿真成绩不冒称实机成功率。
+
 
