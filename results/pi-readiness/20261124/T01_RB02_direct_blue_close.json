@@ -1,0 +1,237 @@
+{
+  "source_commit": "80240a684d36bcf47a4d2f9cd887a446d1b3b076",
+  "session": "pickplace_20261124_T01",
+  "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_192516_871579_teach",
+  "run_id": "fffb478b-77e5-441e-95ac-465d6beedd37",
+  "placement": "T01-RB02",
+  "target_color": "blue",
+  "scene_colors": [
+    "blue",
+    "red"
+  ],
+  "commands": [
+    {
+      "id": "1:grip",
+      "kind": "grip",
+      "requested": [
+        0.04,
+        1.0
+      ],
+      "source": "initial_open",
+      "start_ns": 201202197562538,
+      "result": "host_submitted",
+      "actual": 0.04,
+      "force_N": 1.0,
+      "submitted_ns": 201202197644480,
+      "frames": 1
+    },
+    {
+      "id": "2:grip",
+      "kind": "grip",
+      "requested": [
+        0.015,
+        1.0
+      ],
+      "source": "close",
+      "start_ns": 201226720173060,
+      "result": "host_submitted",
+      "actual": 0.015,
+      "force_N": 1.0,
+      "submitted_ns": 201226720241614,
+      "frames": 1
+    }
+  ],
+  "tx": [
+    {
+      "start_ns": "201202197595460",
+      "end_ns": "201202197644480",
+      "command_id": "1:grip",
+      "can_id": "0x159",
+      "data": "00009c4003e80100",
+      "result": "host_submitted",
+      "error": ""
+    },
+    {
+      "start_ns": "201226720201391",
+      "end_ns": "201226720241614",
+      "command_id": "2:grip",
+      "can_id": "0x159",
+      "data": "00003a9803e80100",
+      "result": "host_submitted",
+      "error": ""
+    }
+  ],
+  "interface_before": {
+    "tx_packets": 77,
+    "rx_packets": 152608,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "interface_after": {
+    "tx_packets": 79,
+    "rx_packets": 925457,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "close_feedback": {
+    "event": "close",
+    "target_m": 0.015,
+    "before_m": 0.0395,
+    "last_measured_m": 0.0395
+  },
+  "close_window": {
+    "origin": "close host submitted_ns",
+    "duration_ms": 2500,
+    "gripper_frame_count": 500,
+    "first_ns": 201226721792000,
+    "last_ns": 201229216831531,
+    "min_width_mm": 39.5,
+    "max_width_mm": 39.5,
+    "max_interframe_gap_ms": 6.4484
+  },
+  "rgb": {
+    "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "camera_id": "CC16762023M",
+    "topic": "/wrist_camera/color/image_raw",
+    "received": 817,
+    "written": 817,
+    "queue_drops": 0,
+    "last_ns": 201229244170535,
+    "error": null
+  },
+  "task_marks": [
+    "start",
+    "close"
+  ],
+  "complete": false,
+  "error": "RuntimeError('手拖中已发送夹爪 0x159，但未收到实际开合反馈；保留记录，不自动切六轴控制模式')",
+  "approved_teach": false,
+  "original_review_verdict_source": "operator_success_key",
+  "corrected_review_verdict_source": "collector_rejection",
+  "operator_success_key_received": false,
+  "operator_failure_key_received": false,
+  "final_q_deg": [
+    -7.03,
+    122.152,
+    -86.559,
+    1.861,
+    53.159,
+    0.0
+  ],
+  "final": {
+    "mono_ns": 201229395759539,
+    "q_rad": [
+      -0.12269664641520137,
+      2.1319545878961135,
+      -1.5107395472337717,
+      0.032480577379614475,
+      0.9277995770676656,
+      0.0
+    ],
+    "width_m": 0.0395,
+    "arm": {
+      "ctrl_mode": 2,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 1,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "drives": [
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      },
+      {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "collision_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "stall_status": false
+      }
+    ],
+    "gripper": {
+      "value": 0.0395,
+      "force": -0.005,
+      "foc_status": {
+        "voltage_too_low": false,
+        "motor_overheating": false,
+        "driver_overcurrent": false,
+        "driver_overheating": false,
+        "sensor_status": false,
+        "driver_error_status": false,
+        "driver_enable_status": true,
+        "homing_status": false
+      },
+      "mode": "width"
+    }
+  },
+  "recorded_end_unix_ns": 1795519837264857130
+}

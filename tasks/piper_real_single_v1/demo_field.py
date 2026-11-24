@@ -1200,10 +1200,15 @@ def main(argv=None, *, finished_run=None):
             save(run / "run.json", report)
             if report.get("collection_mode") == "kinesthetic_direct_v1":
                 success = report["complete"] and report.get("operator_outcome") == "success"
+                verdict_source = "collector_rejection"
+                if success:
+                    verdict_source = "operator_success_key"
+                elif report.get("operator_outcome") == "failed":
+                    verdict_source = "operator_failure_key"
                 save(run/"review.json",dict(run_id=report["run_id"],approved_teach=success,
                     approved_block=False,approved_empty=False,outcome="success" if success else "failed",
                     actual_grasped_color=task["target_color"] if success else "unknown",
-                    intervention="no" if success else "unknown",verdict_source="operator_success_key",
+                    intervention="no" if success else "unknown",verdict_source=verdict_source,
                     intervention_definition="extra rescue beyond intended kinesthetic teaching",
                     source_trajectory_id=report["run_id"],session_id=report["session_id"],
                     placement=a.placement,**task))
