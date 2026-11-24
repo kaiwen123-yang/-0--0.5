@@ -1,0 +1,3242 @@
+{
+  "measured_at": "2026-11-24T21:27:49+08:00",
+  "method": "Reanalysis of every accepted sealed direct capture using the production demo_export.analyse. Width is measured SDK opening in metres; arm/width actions use the measured state at t+50 ms. Measured encoder targets do not encode finger holding force.",
+  "definitions": {
+    "original_rgb": "entire archived recording, includes pre-/post-task frames",
+    "task_rgb": "real RGB timestamps within [start,E]",
+    "grid_rows": "20Hz rows in task grid; invalid values retained in arrays, only valid chunk starts sampled",
+    "chunk_starts": "length-10 label windows, including allowed repeat-last padding at episode end; overlap substantially",
+    "full_unpadded_chunk_starts": "10 actual rows without padding",
+    "marker_coverage": "number of full, valid unpadded chunks covering mark time t_start <= mark < t_start+0.5s; raw C/O clocked annotations can lag physical motion",
+    "motion_chunks": "directional change of at least 1 mm over a full valid half-second window entirely before C or between C and O respectively",
+    "layout_independence": "IDs, sessions and raw source paths verified; exact physical positional independence is not calibrated",
+    "exclusion": "row reasons may overlap; width/joint raw violations counted only between task markers",
+    "rejected_attempts_scope": "all *_teach dirs in three allocated sessions; observation, homing, commissioning and unrelated sessions outside denominator"
+  },
+  "budget": {
+    "ready": true,
+    "counts": {
+      "train": {
+        "blue": 20,
+        "red": 20
+      },
+      "validation": {
+        "blue": 5,
+        "red": 5
+      }
+    },
+    "episode_counts": {
+      "train": {
+        "blue": 20,
+        "red": 20
+      },
+      "validation": {
+        "blue": 5,
+        "red": 5
+      }
+    },
+    "paired_layouts": {
+      "train": 20,
+      "validation": 5
+    },
+    "missing": {
+      "train": {
+        "blue": 0,
+        "red": 0
+      },
+      "validation": {
+        "blue": 0,
+        "red": 0
+      }
+    },
+    "missing_paired_layouts": {
+      "train": 0,
+      "validation": 0
+    },
+    "layouts": {
+      "train": {
+        "T01-RB02": [
+          "blue",
+          "red"
+        ],
+        "T01-RB03": [
+          "blue",
+          "red"
+        ],
+        "T01-RB04": [
+          "blue",
+          "red"
+        ],
+        "T01-RB05": [
+          "blue",
+          "red"
+        ],
+        "T01-FOUR01": [
+          "blue",
+          "red"
+        ],
+        "T01-FOUR02": [
+          "blue",
+          "red"
+        ],
+        "T01-RB06": [
+          "blue",
+          "red"
+        ],
+        "T01-FOUR03": [
+          "blue",
+          "red"
+        ],
+        "T01-FOUR04": [
+          "blue",
+          "red"
+        ],
+        "T01-FOUR05": [
+          "blue",
+          "red"
+        ],
+        "T02-RB01": [
+          "blue",
+          "red"
+        ],
+        "T02-FOUR01": [
+          "blue",
+          "red"
+        ],
+        "T02-RB02": [
+          "blue",
+          "red"
+        ],
+        "T02-FOUR02": [
+          "blue",
+          "red"
+        ],
+        "T02-RB03": [
+          "blue",
+          "red"
+        ],
+        "T02-FOUR03": [
+          "blue",
+          "red"
+        ],
+        "T02-RB04": [
+          "blue",
+          "red"
+        ],
+        "T02-FOUR04b": [
+          "blue",
+          "red"
+        ],
+        "T02-RB05": [
+          "blue",
+          "red"
+        ],
+        "T02-FOUR05": [
+          "blue",
+          "red"
+        ]
+      },
+      "validation": {
+        "V01-FOUR01": [
+          "blue",
+          "red"
+        ],
+        "V01-RB01": [
+          "blue",
+          "red"
+        ],
+        "V01-FOUR02": [
+          "blue",
+          "red"
+        ],
+        "V01-RB02": [
+          "blue",
+          "red"
+        ],
+        "V01-FOUR03": [
+          "blue",
+          "red"
+        ]
+      }
+    }
+  },
+  "attempts_by_disposition": {
+    "older_teach_without_direct_contract": 5,
+    "rejected_direct_attempt": 9,
+    "accepted_paired_episode": 50,
+    "supplemental_unpaired_success": 1
+  },
+  "nonselected": [
+    {
+      "session": "T01",
+      "raw": "20261124_164601_857440_teach",
+      "target": "blue",
+      "scene": "T01-RB01",
+      "reason": "KeyboardInterrupt('operator interrupt')",
+      "category": "older_teach_without_direct_contract"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_170803_682350_teach",
+      "target": "blue",
+      "scene": "T01-RB01b",
+      "reason": "KeyboardInterrupt('operator interrupt')",
+      "category": "older_teach_without_direct_contract"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_173444_392487_teach",
+      "target": "blue",
+      "scene": "T01-RB01b",
+      "reason": "KeyboardInterrupt('operator interrupt')",
+      "category": "older_teach_without_direct_contract"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_174233_088570_teach",
+      "target": "blue",
+      "scene": "T01-RB01b",
+      "reason": "ValueError('操作员未确认')",
+      "category": "older_teach_without_direct_contract"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_180201_105565_teach",
+      "target": "red",
+      "scene": "T01-RB01b",
+      "reason": "Taught sample 12938 outside limits",
+      "category": "older_teach_without_direct_contract"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_192516_871579_teach",
+      "target": "blue",
+      "scene": "T01-RB02",
+      "reason": "RuntimeError('手拖中已发送夹爪 0x159，但未收到实际开合反馈；保留记录，不自动切六轴控制模式')",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_194154_565955_teach",
+      "target": "blue",
+      "scene": "T01-RB02",
+      "reason": "RuntimeError('夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪')",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_200802_390043_teach",
+      "target": "red",
+      "scene": "T01-RB04",
+      "reason": "示教在 close 阶段结束，缺少确认的任务终点",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_201150_553896_teach",
+      "target": "blue",
+      "scene": "T01-RB05",
+      "reason": "wrong_color",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T01",
+      "raw": "20261124_201250_382054_teach",
+      "target": "red",
+      "scene": "T01-RB05",
+      "reason": "wrong_color",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T02",
+      "raw": "20261124_204805_788869_teach",
+      "target": "blue",
+      "scene": "T02-FOUR03",
+      "reason": "示教在 end 阶段结束，缺少确认的任务终点",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T02",
+      "raw": "20261124_205754_137439_teach",
+      "target": "blue",
+      "scene": "T02-FOUR04",
+      "reason": "unpaired_layout_success",
+      "category": "supplemental_unpaired_success"
+    },
+    {
+      "session": "T02",
+      "raw": "20261124_205830_725042_teach",
+      "target": "red",
+      "scene": "T02-FOUR04",
+      "reason": "target_started_in_destination",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "T02",
+      "raw": "20261124_210348_237706_teach",
+      "target": "red",
+      "scene": "T02-FOUR04b",
+      "reason": "示教在 end 阶段结束，缺少确认的任务终点",
+      "category": "rejected_direct_attempt"
+    },
+    {
+      "session": "V01",
+      "raw": "20261124_195729_469343_teach",
+      "target": "blue",
+      "scene": "V01-FOUR01",
+      "reason": "示教在 end 阶段结束，缺少确认的任务终点",
+      "category": "rejected_direct_attempt"
+    }
+  ],
+  "total": {
+    "episodes": 50,
+    "paired_layouts": 25,
+    "task_s": 1669.0796,
+    "original_rgb": 62532,
+    "task_rgb": 49836,
+    "task_joint_samples": 333916,
+    "task_width_samples": 333866,
+    "grid_rows": 33360,
+    "valid_rows": 27614,
+    "excluded_rows": 5746,
+    "chunk_starts": 26569,
+    "full_unpadded_chunk_starts": 26245,
+    "padded_chunk_starts": 324,
+    "excluded_joint_rows": 2734,
+    "excluded_grip_rows": 3558,
+    "negative_width_samples": 25224,
+    "above100mm_width_samples": 9331,
+    "nonfinite_width_samples": 0,
+    "nonfinite_joint_samples": 0,
+    "joint_limit_raw_samples": 26534,
+    "gap_ranges_gt100ms": 0,
+    "rejected_joint_triplets": 2,
+    "rgb_queue_drops": 0,
+    "host_tx": 0,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_errors": 0,
+    "tx_dropped": 0,
+    "valid_row_percent": 82.776,
+    "usable_start_percent": 79.643,
+    "median_task_s": 31.347
+  },
+  "by_split": {
+    "train": {
+      "episodes": 40,
+      "paired_layouts": 20,
+      "task_s": 1329.4452,
+      "original_rgb": 44461,
+      "task_rgb": 39667,
+      "task_joint_samples": 265907,
+      "task_width_samples": 265867,
+      "grid_rows": 26572,
+      "valid_rows": 22032,
+      "excluded_rows": 4540,
+      "chunk_starts": 21163,
+      "full_unpadded_chunk_starts": 20893,
+      "padded_chunk_starts": 270,
+      "excluded_joint_rows": 2080,
+      "excluded_grip_rows": 2838,
+      "negative_width_samples": 19283,
+      "above100mm_width_samples": 8328,
+      "nonfinite_width_samples": 0,
+      "nonfinite_joint_samples": 0,
+      "joint_limit_raw_samples": 20082,
+      "gap_ranges_gt100ms": 0,
+      "rejected_joint_triplets": 2,
+      "rgb_queue_drops": 0,
+      "host_tx": 0,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0,
+      "valid_row_percent": 82.914,
+      "usable_start_percent": 79.644,
+      "median_task_s": 31.588
+    },
+    "validation": {
+      "episodes": 10,
+      "paired_layouts": 5,
+      "task_s": 339.6344,
+      "original_rgb": 18071,
+      "task_rgb": 10169,
+      "task_joint_samples": 68009,
+      "task_width_samples": 67999,
+      "grid_rows": 6788,
+      "valid_rows": 5582,
+      "excluded_rows": 1206,
+      "chunk_starts": 5406,
+      "full_unpadded_chunk_starts": 5352,
+      "padded_chunk_starts": 54,
+      "excluded_joint_rows": 654,
+      "excluded_grip_rows": 720,
+      "negative_width_samples": 5941,
+      "above100mm_width_samples": 1003,
+      "nonfinite_width_samples": 0,
+      "nonfinite_joint_samples": 0,
+      "joint_limit_raw_samples": 6452,
+      "gap_ranges_gt100ms": 0,
+      "rejected_joint_triplets": 0,
+      "rgb_queue_drops": 0,
+      "host_tx": 0,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_errors": 0,
+      "tx_dropped": 0,
+      "valid_row_percent": 82.233,
+      "usable_start_percent": 79.641,
+      "median_task_s": 29.962
+    }
+  },
+  "by_split_color": {
+    "train": {
+      "blue": {
+        "episodes": 20,
+        "paired_layouts": 20,
+        "task_s": 725.0122,
+        "original_rgb": 23131,
+        "task_rgb": 21623,
+        "task_joint_samples": 145011,
+        "task_width_samples": 144991,
+        "grid_rows": 14491,
+        "valid_rows": 11678,
+        "excluded_rows": 2813,
+        "chunk_starts": 11228,
+        "full_unpadded_chunk_starts": 11093,
+        "padded_chunk_starts": 135,
+        "excluded_joint_rows": 1191,
+        "excluded_grip_rows": 1849,
+        "negative_width_samples": 10719,
+        "above100mm_width_samples": 7364,
+        "nonfinite_width_samples": 0,
+        "nonfinite_joint_samples": 0,
+        "joint_limit_raw_samples": 11565,
+        "gap_ranges_gt100ms": 0,
+        "rejected_joint_triplets": 0,
+        "rgb_queue_drops": 0,
+        "host_tx": 0,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0,
+        "valid_row_percent": 80.588,
+        "usable_start_percent": 77.483,
+        "median_task_s": 32.571
+      },
+      "red": {
+        "episodes": 20,
+        "paired_layouts": 20,
+        "task_s": 604.433,
+        "original_rgb": 21330,
+        "task_rgb": 18044,
+        "task_joint_samples": 120896,
+        "task_width_samples": 120876,
+        "grid_rows": 12081,
+        "valid_rows": 10354,
+        "excluded_rows": 1727,
+        "chunk_starts": 9935,
+        "full_unpadded_chunk_starts": 9800,
+        "padded_chunk_starts": 135,
+        "excluded_joint_rows": 889,
+        "excluded_grip_rows": 989,
+        "negative_width_samples": 8564,
+        "above100mm_width_samples": 964,
+        "nonfinite_width_samples": 0,
+        "nonfinite_joint_samples": 0,
+        "joint_limit_raw_samples": 8517,
+        "gap_ranges_gt100ms": 0,
+        "rejected_joint_triplets": 2,
+        "rgb_queue_drops": 0,
+        "host_tx": 0,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0,
+        "valid_row_percent": 85.705,
+        "usable_start_percent": 82.237,
+        "median_task_s": 29.674
+      }
+    },
+    "validation": {
+      "blue": {
+        "episodes": 5,
+        "paired_layouts": 5,
+        "task_s": 173.6444,
+        "original_rgb": 13032,
+        "task_rgb": 5203,
+        "task_joint_samples": 34798,
+        "task_width_samples": 34793,
+        "grid_rows": 3471,
+        "valid_rows": 2785,
+        "excluded_rows": 686,
+        "chunk_starts": 2720,
+        "full_unpadded_chunk_starts": 2693,
+        "padded_chunk_starts": 27,
+        "excluded_joint_rows": 357,
+        "excluded_grip_rows": 416,
+        "negative_width_samples": 3516,
+        "above100mm_width_samples": 528,
+        "nonfinite_width_samples": 0,
+        "nonfinite_joint_samples": 0,
+        "joint_limit_raw_samples": 3533,
+        "gap_ranges_gt100ms": 0,
+        "rejected_joint_triplets": 0,
+        "rgb_queue_drops": 0,
+        "host_tx": 0,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0,
+        "valid_row_percent": 80.236,
+        "usable_start_percent": 78.364,
+        "median_task_s": 30.152
+      },
+      "red": {
+        "episodes": 5,
+        "paired_layouts": 5,
+        "task_s": 165.99,
+        "original_rgb": 5039,
+        "task_rgb": 4966,
+        "task_joint_samples": 33211,
+        "task_width_samples": 33206,
+        "grid_rows": 3317,
+        "valid_rows": 2797,
+        "excluded_rows": 520,
+        "chunk_starts": 2686,
+        "full_unpadded_chunk_starts": 2659,
+        "padded_chunk_starts": 27,
+        "excluded_joint_rows": 297,
+        "excluded_grip_rows": 304,
+        "negative_width_samples": 2425,
+        "above100mm_width_samples": 475,
+        "nonfinite_width_samples": 0,
+        "nonfinite_joint_samples": 0,
+        "joint_limit_raw_samples": 2919,
+        "gap_ranges_gt100ms": 0,
+        "rejected_joint_triplets": 0,
+        "rgb_queue_drops": 0,
+        "host_tx": 0,
+        "rx_errors": 0,
+        "rx_dropped": 0,
+        "tx_errors": 0,
+        "tx_dropped": 0,
+        "valid_row_percent": 84.323,
+        "usable_start_percent": 80.977,
+        "median_task_s": 29.772
+      }
+    }
+  },
+  "by_scene_color_count": {
+    "2": 24,
+    "4": 26
+  },
+  "feedback_age_ms": {
+    "rgb_ms": {
+      "min": 0.0,
+      "p50": 16.77,
+      "p95": 31.891,
+      "max": 47.426
+    },
+    "joint_ms": {
+      "min": 0.0,
+      "p50": 3.892,
+      "p95": 4.875,
+      "max": 11.346
+    },
+    "gripper_ms": {
+      "min": 0.0,
+      "p50": 3.824,
+      "p95": 4.802,
+      "max": 11.233
+    }
+  },
+  "row_exclusion_reasons": {
+    "joint_outside_controller_limits": 2734,
+    "gripper_width_outside_sdk_range": 3558
+  },
+  "raw_joint_axis_limit_violation_counts": [
+    0,
+    13465,
+    17609,
+    0,
+    7343,
+    0
+  ],
+  "worst_valid_fraction": [
+    {
+      "source_run": "20261124_210804_286239_teach",
+      "session": "T02",
+      "placement": "T02-RB05",
+      "target_color": "blue",
+      "valid_row_percent": 48.632,
+      "chunk_starts": 539,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 0,
+      "tail_without_full_chunk_s": 0.0087
+    },
+    {
+      "source_run": "20261124_195953_071901_teach",
+      "session": "V01",
+      "placement": "V01-FOUR01",
+      "target_color": "blue",
+      "valid_row_percent": 61.585,
+      "chunk_starts": 605,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 11.6619
+    },
+    {
+      "source_run": "20261124_211136_160803_teach",
+      "session": "T02",
+      "placement": "T02-FOUR05",
+      "target_color": "blue",
+      "valid_row_percent": 66.359,
+      "chunk_starts": 409,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 3.7519
+    },
+    {
+      "source_run": "20261124_205520_188316_teach",
+      "session": "T02",
+      "placement": "T02-RB04",
+      "target_color": "red",
+      "valid_row_percent": 67.97,
+      "chunk_starts": 356,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 6.4166
+    },
+    {
+      "source_run": "20261124_202534_035193_teach",
+      "session": "T01",
+      "placement": "T01-RB06",
+      "target_color": "blue",
+      "valid_row_percent": 69.64,
+      "chunk_starts": 424,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 6.0499
+    }
+  ],
+  "longest_tail_without_full_chunk": [
+    {
+      "source_run": "20261124_195953_071901_teach",
+      "session": "V01",
+      "placement": "V01-FOUR01",
+      "target_color": "blue",
+      "valid_row_percent": 61.585,
+      "chunk_starts": 605,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 11.6619
+    },
+    {
+      "source_run": "20261124_202338_647362_teach",
+      "session": "T01",
+      "placement": "T01-FOUR02",
+      "target_color": "red",
+      "valid_row_percent": 75.0,
+      "chunk_starts": 448,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 7.0704
+    },
+    {
+      "source_run": "20261124_205520_188316_teach",
+      "session": "T02",
+      "placement": "T02-RB04",
+      "target_color": "red",
+      "valid_row_percent": 67.97,
+      "chunk_starts": 356,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 6.4166
+    },
+    {
+      "source_run": "20261124_202846_732750_teach",
+      "session": "T01",
+      "placement": "T01-FOUR03",
+      "target_color": "blue",
+      "valid_row_percent": 74.456,
+      "chunk_starts": 491,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 6.2142
+    },
+    {
+      "source_run": "20261124_202534_035193_teach",
+      "session": "T01",
+      "placement": "T01-RB06",
+      "target_color": "blue",
+      "valid_row_percent": 69.64,
+      "chunk_starts": 424,
+      "close_mark_chunk_coverage": 10,
+      "open_mark_chunk_coverage": 10,
+      "tail_without_full_chunk_s": 6.0499
+    }
+  ],
+  "flags": {
+    "no_full_chunk_at_close": [],
+    "no_full_chunk_at_open": [
+      {
+        "source_run": "20261124_210804_286239_teach",
+        "session": "T02",
+        "placement": "T02-RB05",
+        "target_color": "blue",
+        "valid_row_percent": 48.632,
+        "chunk_starts": 539,
+        "close_mark_chunk_coverage": 10,
+        "open_mark_chunk_coverage": 0,
+        "tail_without_full_chunk_s": 0.0087
+      }
+    ],
+    "no_observed_closure_in_any_valid_full_chunk": [],
+    "no_observed_release_in_any_valid_full_chunk": [],
+    "no_valid_full_chunk_after_open": [],
+    "partial_marker_coverage_below_ten": [
+      {
+        "source_run": "20261124_201937_300475_teach",
+        "session": "T01",
+        "placement": "T01-FOUR01",
+        "target_color": "blue",
+        "valid_row_percent": 75.883,
+        "chunk_starts": 472,
+        "close_mark_chunk_coverage": 10,
+        "open_mark_chunk_coverage": 4,
+        "tail_without_full_chunk_s": 4.541
+      },
+      {
+        "source_run": "20261124_202246_667455_teach",
+        "session": "T01",
+        "placement": "T01-FOUR02",
+        "target_color": "blue",
+        "valid_row_percent": 70.537,
+        "chunk_starts": 538,
+        "close_mark_chunk_coverage": 10,
+        "open_mark_chunk_coverage": 4,
+        "tail_without_full_chunk_s": 0.0374
+      },
+      {
+        "source_run": "20261124_210804_286239_teach",
+        "session": "T02",
+        "placement": "T02-RB05",
+        "target_color": "blue",
+        "valid_row_percent": 48.632,
+        "chunk_starts": 539,
+        "close_mark_chunk_coverage": 10,
+        "open_mark_chunk_coverage": 0,
+        "tail_without_full_chunk_s": 0.0087
+      }
+    ]
+  },
+  "episode_details": [
+    {
+      "run_id": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_194909_426207_teach",
+      "source_trajectory_id": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 92,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        403,
+        565,
+        0,
+        241,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 17.68673,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 20.6
+        },
+        "open": {
+          "task_s": 40.7787,
+          "width_mm": 56.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 25,
+          "peak_directional_motion_over_any_full_chunk_mm": 26.0
+        }
+      },
+      "start_q_deg": [
+        0.0,
+        0.0,
+        0.417,
+        0.0,
+        0.507,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 0.507
+    },
+    {
+      "run_id": "717893f2-9305-47bc-83b6-e70ae35561df",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_195138_013150_teach",
+      "source_trajectory_id": "717893f2-9305-47bc-83b6-e70ae35561df",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 168,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        1532,
+        1466,
+        0,
+        124,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 20.83148,
+          "width_mm": 27.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 50,
+          "peak_directional_motion_over_any_full_chunk_mm": 28.6
+        },
+        "open": {
+          "task_s": 34.68738,
+          "width_mm": 36.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 8.9
+        }
+      },
+      "start_q_deg": [
+        -2.298,
+        -0.694,
+        0.172,
+        0.865,
+        31.227,
+        -0.906
+      ],
+      "pre_C_closest_to_zero_time_s": 7.5905,
+      "pre_C_minimum_max_abs_joint_deg": 7.787
+    },
+    {
+      "run_id": "b223b5b5-fb17-4566-8473-11218d5f1773",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_195452_269290_teach",
+      "source_trajectory_id": "b223b5b5-fb17-4566-8473-11218d5f1773",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 92,
+        "gripper_width_outside_sdk_range": 3
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        657,
+        623,
+        0,
+        242,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 14.87585,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 27,
+          "peak_directional_motion_over_any_full_chunk_mm": 67.9
+        },
+        "open": {
+          "task_s": 26.90145,
+          "width_mm": 33.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 13,
+          "peak_directional_motion_over_any_full_chunk_mm": 6.4
+        }
+      },
+      "start_q_deg": [
+        -0.428,
+        -3.14,
+        0.98,
+        3.04,
+        2.158,
+        -7.585
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 7.585
+    },
+    {
+      "run_id": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_195553_081843_teach",
+      "source_trajectory_id": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 55,
+        "gripper_width_outside_sdk_range": 21
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        384,
+        0,
+        141,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 12.09566,
+          "width_mm": 27.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 32,
+          "peak_directional_motion_over_any_full_chunk_mm": 58.2
+        },
+        "open": {
+          "task_s": 19.88105,
+          "width_mm": 48.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 28,
+          "peak_directional_motion_over_any_full_chunk_mm": 13.8
+        }
+      },
+      "start_q_deg": [
+        4.214,
+        2.119,
+        1.871,
+        3.477,
+        -3.791,
+        -5.946
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 5.946
+    },
+    {
+      "run_id": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_200643_685888_teach",
+      "source_trajectory_id": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 144,
+        "joint_outside_controller_limits": 83
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        665,
+        0,
+        148,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 18.08066,
+          "width_mm": 27.3,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 13,
+          "peak_directional_motion_over_any_full_chunk_mm": 11.5
+        },
+        "open": {
+          "task_s": 29.84606,
+          "width_mm": 64.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 37.8
+        }
+      },
+      "start_q_deg": [
+        1.022,
+        3.07,
+        0.411,
+        3.423,
+        0.662,
+        -6.04
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 6.04
+    },
+    {
+      "run_id": "37464501-505a-4d02-9817-25f61afb6bb7",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_200830_113987_teach",
+      "source_trajectory_id": "37464501-505a-4d02-9817-25f61afb6bb7",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 98,
+        "gripper_width_outside_sdk_range": 4
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        720,
+        652,
+        0,
+        241,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 13.87051,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 22,
+          "peak_directional_motion_over_any_full_chunk_mm": 22.9
+        },
+        "open": {
+          "task_s": 24.60587,
+          "width_mm": 48.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 23,
+          "peak_directional_motion_over_any_full_chunk_mm": 13.3
+        }
+      },
+      "start_q_deg": [
+        -0.995,
+        -2.645,
+        1.894,
+        6.409,
+        6.459,
+        -7.446
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 7.446
+    },
+    {
+      "run_id": "61effaf4-6147-4b41-9dc4-70996154ad3a",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_201637_763342_teach",
+      "source_trajectory_id": "61effaf4-6147-4b41-9dc4-70996154ad3a",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 123,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        1009,
+        1010,
+        0,
+        189,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 18.79067,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 39,
+          "peak_directional_motion_over_any_full_chunk_mm": 19.8
+        },
+        "open": {
+          "task_s": 27.30581,
+          "width_mm": 64.9,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 37.8
+        }
+      },
+      "start_q_deg": [
+        1.683,
+        -2.451,
+        2.048,
+        4.024,
+        0.0,
+        1.545
+      ],
+      "pre_C_closest_to_zero_time_s": 0.595,
+      "pre_C_minimum_max_abs_joint_deg": 2.451
+    },
+    {
+      "run_id": "887e1721-be63-490b-8ceb-54ca6152cebf",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_201728_036539_teach",
+      "source_trajectory_id": "887e1721-be63-490b-8ceb-54ca6152cebf",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 31,
+        "gripper_width_outside_sdk_range": 3
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        175,
+        0,
+        109,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 16.71552,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 52,
+          "peak_directional_motion_over_any_full_chunk_mm": 18.5
+        },
+        "open": {
+          "task_s": 25.79077,
+          "width_mm": 55.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 23,
+          "peak_directional_motion_over_any_full_chunk_mm": 27.6
+        }
+      },
+      "start_q_deg": [
+        1.017,
+        1.643,
+        1.873,
+        -1.643,
+        2.164,
+        1.432
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 2.164
+    },
+    {
+      "run_id": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_201937_300475_teach",
+      "source_trajectory_id": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 71,
+        "gripper_width_outside_sdk_range": 86
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        522,
+        0,
+        164,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 12.30539,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 25,
+          "peak_directional_motion_over_any_full_chunk_mm": 12.6
+        },
+        "open": {
+          "task_s": 20.61076,
+          "width_mm": 61.6,
+          "full_unpadded_chunks_covering_mark": 4,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 34.8
+        }
+      },
+      "start_q_deg": [
+        0.0,
+        0.747,
+        0.976,
+        -3.657,
+        3.949,
+        1.401
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 3.949
+    },
+    {
+      "run_id": "39fe949a-84d7-409f-be86-d404efd3c23b",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202022_079114_teach",
+      "source_trajectory_id": "39fe949a-84d7-409f-be86-d404efd3c23b",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 67,
+        "joint_outside_controller_limits": 38
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        281,
+        0,
+        0,
+        64,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 11.19743,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 42,
+          "peak_directional_motion_over_any_full_chunk_mm": 26.5
+        },
+        "open": {
+          "task_s": 20.97964,
+          "width_mm": 64.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 40.2
+        }
+      },
+      "start_q_deg": [
+        -2.197,
+        -1.806,
+        -0.371,
+        -0.55,
+        5.208,
+        1.461
+      ],
+      "pre_C_closest_to_zero_time_s": 1.3202,
+      "pre_C_minimum_max_abs_joint_deg": 4.653
+    },
+    {
+      "run_id": "042162c5-879f-40ab-aed0-da0e96ee2e43",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202246_667455_teach",
+      "source_trajectory_id": "042162c5-879f-40ab-aed0-da0e96ee2e43",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 147,
+        "gripper_width_outside_sdk_range": 89
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        1351,
+        0,
+        99,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 19.72887,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 31,
+          "peak_directional_motion_over_any_full_chunk_mm": 33.6
+        },
+        "open": {
+          "task_s": 31.05086,
+          "width_mm": 47.0,
+          "full_unpadded_chunks_covering_mark": 4,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 41.0
+        }
+      },
+      "start_q_deg": [
+        -2.338,
+        8.394,
+        1.834,
+        -4.606,
+        -5.582,
+        2.89
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 8.394
+    },
+    {
+      "run_id": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202338_647362_teach",
+      "source_trajectory_id": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 17,
+        "gripper_width_outside_sdk_range": 139
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        21,
+        0,
+        0,
+        136,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 11.63203,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 19,
+          "peak_directional_motion_over_any_full_chunk_mm": 23.6
+        },
+        "open": {
+          "task_s": 20.24352,
+          "width_mm": 60.3,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 33.1
+        }
+      },
+      "start_q_deg": [
+        -0.481,
+        -1.589,
+        -3.859,
+        -3.945,
+        3.561,
+        6.002
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 6.002
+    },
+    {
+      "run_id": "9c25df99-a407-43e9-9934-9094f5546fe4",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202534_035193_teach",
+      "source_trajectory_id": "9c25df99-a407-43e9-9934-9094f5546fe4",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 178,
+        "joint_outside_controller_limits": 21
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        48,
+        4,
+        0,
+        153,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 12.25183,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 17,
+          "peak_directional_motion_over_any_full_chunk_mm": 10.1
+        },
+        "open": {
+          "task_s": 19.76806,
+          "width_mm": 52.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 19,
+          "peak_directional_motion_over_any_full_chunk_mm": 25.3
+        }
+      },
+      "start_q_deg": [
+        -3.258,
+        -2.626,
+        0.378,
+        -6.769,
+        7.156,
+        8.955
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 8.955
+    },
+    {
+      "run_id": "cca037de-afb3-4283-8331-4065296f5aed",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202623_094718_teach",
+      "source_trajectory_id": "cca037de-afb3-4283-8331-4065296f5aed",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 69,
+        "joint_outside_controller_limits": 40
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        84,
+        50,
+        0,
+        296,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 17.40239,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 25,
+          "peak_directional_motion_over_any_full_chunk_mm": 10.3
+        },
+        "open": {
+          "task_s": 26.61873,
+          "width_mm": 54.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 20,
+          "peak_directional_motion_over_any_full_chunk_mm": 24.9
+        }
+      },
+      "start_q_deg": [
+        -2.378,
+        -2.192,
+        2.061,
+        -2.463,
+        3.172,
+        1.267
+      ],
+      "pre_C_closest_to_zero_time_s": 0.165,
+      "pre_C_minimum_max_abs_joint_deg": 2.463
+    },
+    {
+      "run_id": "16bd17ed-665e-4647-95cd-261e092d78fc",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202846_732750_teach",
+      "source_trajectory_id": "16bd17ed-665e-4647-95cd-261e092d78fc",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 56,
+        "gripper_width_outside_sdk_range": 120
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        402,
+        68,
+        0,
+        145,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 15.42185,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 23,
+          "peak_directional_motion_over_any_full_chunk_mm": 17.7
+        },
+        "open": {
+          "task_s": 23.39787,
+          "width_mm": 61.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 34.3
+        }
+      },
+      "start_q_deg": [
+        1.661,
+        -3.039,
+        1.923,
+        1.872,
+        2.639,
+        -4.458
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 4.458
+    },
+    {
+      "run_id": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_202931_937988_teach",
+      "source_trajectory_id": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 61,
+        "joint_outside_controller_limits": 40
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        275,
+        270,
+        0,
+        101,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 10.05629,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 28,
+          "peak_directional_motion_over_any_full_chunk_mm": 19.1
+        },
+        "open": {
+          "task_s": 17.13198,
+          "width_mm": 62.3,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 35.6
+        }
+      },
+      "start_q_deg": [
+        -0.603,
+        -1.189,
+        1.99,
+        -0.947,
+        4.219,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 1.2802,
+      "pre_C_minimum_max_abs_joint_deg": 1.741
+    },
+    {
+      "run_id": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_203126_049408_teach",
+      "source_trajectory_id": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 7,
+        "joint_outside_controller_limits": 15
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        139,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 13.05147,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 53,
+          "peak_directional_motion_over_any_full_chunk_mm": 29.7
+        },
+        "open": {
+          "task_s": 21.18225,
+          "width_mm": 62.4,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 41.6
+        }
+      },
+      "start_q_deg": [
+        -2.353,
+        9.348,
+        -10.692,
+        -3.161,
+        1.322,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 10.692
+    },
+    {
+      "run_id": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_203206_595966_teach",
+      "source_trajectory_id": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 57,
+        "gripper_width_outside_sdk_range": 94
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        420,
+        414,
+        0,
+        133,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 10.55583,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 10.2
+        },
+        "open": {
+          "task_s": 17.67661,
+          "width_mm": 62.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 20,
+          "peak_directional_motion_over_any_full_chunk_mm": 33.5
+        }
+      },
+      "start_q_deg": [
+        -1.642,
+        -0.789,
+        1.995,
+        0.557,
+        0.46,
+        -1.486
+      ],
+      "pre_C_closest_to_zero_time_s": 1.995,
+      "pre_C_minimum_max_abs_joint_deg": 1.642
+    },
+    {
+      "run_id": "432f6292-6efb-4a42-b34e-bb84a7bdd939",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_203342_223606_teach",
+      "source_trajectory_id": "432f6292-6efb-4a42-b34e-bb84a7bdd939",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 87,
+        "joint_outside_controller_limits": 21
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        185,
+        0,
+        9,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 15.35658,
+          "width_mm": 27.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 22,
+          "peak_directional_motion_over_any_full_chunk_mm": 10.9
+        },
+        "open": {
+          "task_s": 22.16207,
+          "width_mm": 56.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 29.8
+        }
+      },
+      "start_q_deg": [
+        -1.095,
+        4.606,
+        2.034,
+        -3.712,
+        1.336,
+        5.474
+      ],
+      "pre_C_closest_to_zero_time_s": 0.9501,
+      "pre_C_minimum_max_abs_joint_deg": 4.853
+    },
+    {
+      "run_id": "f96c235b-e201-4640-88d1-79d4050a6af9",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_203428_155478_teach",
+      "source_trajectory_id": "f96c235b-e201-4640-88d1-79d4050a6af9",
+      "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 77,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        631,
+        0,
+        115,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 14.85139,
+          "width_mm": 27.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 30.0
+        },
+        "open": {
+          "task_s": 24.4723,
+          "width_mm": 65.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 42.1
+        }
+      },
+      "start_q_deg": [
+        -0.38,
+        0.779,
+        1.938,
+        2.285,
+        3.042,
+        -0.513
+      ],
+      "pre_C_closest_to_zero_time_s": 2.1552,
+      "pre_C_minimum_max_abs_joint_deg": 2.734
+    },
+    {
+      "run_id": "207aab62-a04b-495f-8b61-8badeed1ba80",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_203619_647878_teach",
+      "source_trajectory_id": "207aab62-a04b-495f-8b61-8badeed1ba80",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 50,
+        "gripper_width_outside_sdk_range": 4
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        387,
+        374,
+        0,
+        96,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 11.66602,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 18,
+          "peak_directional_motion_over_any_full_chunk_mm": 37.3
+        },
+        "open": {
+          "task_s": 22.86709,
+          "width_mm": 47.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 20,
+          "peak_directional_motion_over_any_full_chunk_mm": 18.8
+        }
+      },
+      "start_q_deg": [
+        -1.601,
+        -2.689,
+        1.798,
+        2.241,
+        4.352,
+        -6.097
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 6.097
+    },
+    {
+      "run_id": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_203704_496087_teach",
+      "source_trajectory_id": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 56,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        96,
+        0,
+        511,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 13.02607,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 40,
+          "peak_directional_motion_over_any_full_chunk_mm": 28.8
+        },
+        "open": {
+          "task_s": 20.32671,
+          "width_mm": 63.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 40.8
+        }
+      },
+      "start_q_deg": [
+        -5.667,
+        43.145,
+        -31.739,
+        6.587,
+        -6.944,
+        -3.005
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 43.145
+    },
+    {
+      "run_id": "105778ea-7096-4906-9271-a4d7758651ad",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_203846_382434_teach",
+      "source_trajectory_id": "105778ea-7096-4906-9271-a4d7758651ad",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 82,
+        "joint_outside_controller_limits": 34
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        237,
+        204,
+        0,
+        84,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 11.78096,
+          "width_mm": 27.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 13,
+          "peak_directional_motion_over_any_full_chunk_mm": 12.4
+        },
+        "open": {
+          "task_s": 21.00176,
+          "width_mm": 58.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 17,
+          "peak_directional_motion_over_any_full_chunk_mm": 31.1
+        }
+      },
+      "start_q_deg": [
+        1.686,
+        -3.111,
+        1.92,
+        -1.035,
+        6.319,
+        -0.433
+      ],
+      "pre_C_closest_to_zero_time_s": 1.1151,
+      "pre_C_minimum_max_abs_joint_deg": 5.954
+    },
+    {
+      "run_id": "00b3b58d-2650-44ed-a3aa-640502c5e9c6",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_203929_187001_teach",
+      "source_trajectory_id": "00b3b58d-2650-44ed-a3aa-640502c5e9c6",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 17,
+        "gripper_width_outside_sdk_range": 80
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        157,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 7.83065,
+          "width_mm": 27.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 17.3
+        },
+        "open": {
+          "task_s": 16.65138,
+          "width_mm": 39.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 18,
+          "peak_directional_motion_over_any_full_chunk_mm": 12.1
+        }
+      },
+      "start_q_deg": [
+        3.404,
+        15.147,
+        -9.573,
+        -0.702,
+        -7.042,
+        1.525
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 15.147
+    },
+    {
+      "run_id": "53006248-740a-4d6e-a129-366be6ec6f0b",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_204110_084736_teach",
+      "source_trajectory_id": "53006248-740a-4d6e-a129-366be6ec6f0b",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 24,
+        "joint_outside_controller_limits": 21
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        204,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 7.72561,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 13,
+          "peak_directional_motion_over_any_full_chunk_mm": 13.3
+        },
+        "open": {
+          "task_s": 16.90138,
+          "width_mm": 61.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 26,
+          "peak_directional_motion_over_any_full_chunk_mm": 36.9
+        }
+      },
+      "start_q_deg": [
+        -3.461,
+        54.051,
+        -32.282,
+        17.817,
+        2.544,
+        -7.425
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 54.051
+    },
+    {
+      "run_id": "52727b70-342f-42ce-96c6-2dbb625905b1",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_204149_713454_teach",
+      "source_trajectory_id": "52727b70-342f-42ce-96c6-2dbb625905b1",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 38,
+        "joint_outside_controller_limits": 15
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        64,
+        46,
+        0,
+        62,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 8.94057,
+          "width_mm": 26.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 18,
+          "peak_directional_motion_over_any_full_chunk_mm": 1.6
+        },
+        "open": {
+          "task_s": 14.39606,
+          "width_mm": 63.4,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 41.4
+        }
+      },
+      "start_q_deg": [
+        1.011,
+        -3.239,
+        1.88,
+        -2.36,
+        6.982,
+        1.407
+      ],
+      "pre_C_closest_to_zero_time_s": 0.1999,
+      "pre_C_minimum_max_abs_joint_deg": 3.767
+    },
+    {
+      "run_id": "c8e5e43d-5456-4713-ae92-c2d7397dd78c",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_204338_501930_teach",
+      "source_trajectory_id": "c8e5e43d-5456-4713-ae92-c2d7397dd78c",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 14,
+        "gripper_width_outside_sdk_range": 4
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        118,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 9.61071,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 25,
+          "peak_directional_motion_over_any_full_chunk_mm": 26.7
+        },
+        "open": {
+          "task_s": 17.37633,
+          "width_mm": 61.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 41.6
+        }
+      },
+      "start_q_deg": [
+        -4.92,
+        41.315,
+        -40.921,
+        5.078,
+        25.277,
+        -6.463
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 41.315
+    },
+    {
+      "run_id": "ed02e09a-84fb-44e5-b008-12b1147644e5",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_204421_893178_teach",
+      "source_trajectory_id": "ed02e09a-84fb-44e5-b008-12b1147644e5",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 11,
+        "gripper_width_outside_sdk_range": 4
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        98,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 8.19554,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 19,
+          "peak_directional_motion_over_any_full_chunk_mm": 21.5
+        },
+        "open": {
+          "task_s": 14.77602,
+          "width_mm": 63.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 36.0
+        }
+      },
+      "start_q_deg": [
+        -0.104,
+        77.347,
+        -59.369,
+        -5.117,
+        -9.396,
+        1.315
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 77.347
+    },
+    {
+      "run_id": "b11a912b-5190-4a9b-bb8e-978575cab3fa",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_204557_658991_teach",
+      "source_trajectory_id": "b11a912b-5190-4a9b-bb8e-978575cab3fa",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 79,
+        "joint_outside_controller_limits": 8
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        72,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 7.96049,
+          "width_mm": 26.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 23.1
+        },
+        "open": {
+          "task_s": 16.59116,
+          "width_mm": 51.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 24.3
+        }
+      },
+      "start_q_deg": [
+        -11.849,
+        46.343,
+        -40.637,
+        3.514,
+        14.18,
+        -2.595
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 46.343
+    },
+    {
+      "run_id": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_204632_507958_teach",
+      "source_trajectory_id": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 9,
+        "gripper_width_outside_sdk_range": 3
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        74,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 9.64567,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 25.0
+        },
+        "open": {
+          "task_s": 16.96119,
+          "width_mm": 67.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 40.8
+        }
+      },
+      "start_q_deg": [
+        -10.111,
+        45.872,
+        -25.232,
+        -16.982,
+        -18.237,
+        8.567
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 45.872
+    },
+    {
+      "run_id": "9839e690-e73d-4442-9ca5-e3d678fb6fc6",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_205048_671599_teach",
+      "source_trajectory_id": "9839e690-e73d-4442-9ca5-e3d678fb6fc6",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 27,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        239,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 7.32557,
+          "width_mm": 26.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 25,
+          "peak_directional_motion_over_any_full_chunk_mm": 5.7
+        },
+        "open": {
+          "task_s": 14.536,
+          "width_mm": 63.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 37.2
+        }
+      },
+      "start_q_deg": [
+        1.841,
+        55.846,
+        -40.786,
+        -11.63,
+        1.394,
+        2.514
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 55.846
+    },
+    {
+      "run_id": "5b5d9adb-c6a1-4022-813d-4105689baa30",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_205124_261992_teach",
+      "source_trajectory_id": "5b5d9adb-c6a1-4022-813d-4105689baa30",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 29,
+        "gripper_width_outside_sdk_range": 2
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        271,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 10.32078,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 10,
+          "peak_directional_motion_over_any_full_chunk_mm": 2.4
+        },
+        "open": {
+          "task_s": 19.34626,
+          "width_mm": 63.4,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 42.1
+        }
+      },
+      "start_q_deg": [
+        -8.707,
+        120.507,
+        -98.036,
+        -2.416,
+        66.495,
+        2.962
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 120.507
+    },
+    {
+      "run_id": "13499234-8811-42b0-bd23-c14b82887fbf",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_205429_651375_teach",
+      "source_trajectory_id": "13499234-8811-42b0-bd23-c14b82887fbf",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 41,
+        "gripper_width_outside_sdk_range": 93
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        119,
+        66,
+        0,
+        274,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 12.12559,
+          "width_mm": 27.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 13,
+          "peak_directional_motion_over_any_full_chunk_mm": 20.3
+        },
+        "open": {
+          "task_s": 24.14634,
+          "width_mm": 60.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 36,
+          "peak_directional_motion_over_any_full_chunk_mm": 32.7
+        }
+      },
+      "start_q_deg": [
+        -1.776,
+        -3.145,
+        1.947,
+        3.571,
+        4.78,
+        -5.936
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 5.936
+    },
+    {
+      "run_id": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_205520_188316_teach",
+      "source_trajectory_id": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 163,
+        "joint_outside_controller_limits": 32
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        55,
+        0,
+        308,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 9.43053,
+          "width_mm": 26.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 31,
+          "peak_directional_motion_over_any_full_chunk_mm": 19.2
+        },
+        "open": {
+          "task_s": 17.91104,
+          "width_mm": 61.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 26,
+          "peak_directional_motion_over_any_full_chunk_mm": 17.7
+        }
+      },
+      "start_q_deg": [
+        4.444,
+        98.089,
+        -75.337,
+        0.0,
+        -14.31,
+        -12.052
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 98.089
+    },
+    {
+      "run_id": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_210211_167267_teach",
+      "source_trajectory_id": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 102,
+        "gripper_width_outside_sdk_range": 90
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        501,
+        393,
+        0,
+        492,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 31.26693,
+          "width_mm": 27.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 19,
+          "peak_directional_motion_over_any_full_chunk_mm": 67.5
+        },
+        "open": {
+          "task_s": 48.97293,
+          "width_mm": 59.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 33.6
+        }
+      },
+      "start_q_deg": [
+        -1.081,
+        -3.304,
+        1.953,
+        0.479,
+        -0.444,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 1.9751,
+      "pre_C_minimum_max_abs_joint_deg": 3.186
+    },
+    {
+      "run_id": "c0e8c866-57cf-4483-832f-243e1f985d0b",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_210601_515012_teach",
+      "source_trajectory_id": "c0e8c866-57cf-4483-832f-243e1f985d0b",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 16,
+        "gripper_width_outside_sdk_range": 5
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        0,
+        0,
+        145,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 7.60558,
+          "width_mm": 26.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 16.9
+        },
+        "open": {
+          "task_s": 12.7458,
+          "width_mm": 65.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 39.6
+        }
+      },
+      "start_q_deg": [
+        -3.319,
+        64.746,
+        -57.182,
+        6.544,
+        20.325,
+        -11.952
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 64.746
+    },
+    {
+      "run_id": "93678887-7e7b-4ca8-99ba-c286c19f82a2",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_210804_286239_teach",
+      "source_trajectory_id": "93678887-7e7b-4ca8-99ba-c286c19f82a2",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 87,
+        "gripper_width_outside_sdk_range": 534
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        683,
+        574,
+        0,
+        170,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 21.31134,
+          "width_mm": 26.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 31,
+          "peak_directional_motion_over_any_full_chunk_mm": 63.5
+        },
+        "open": {
+          "task_s": 46.6629,
+          "width_mm": 101.5,
+          "full_unpadded_chunks_covering_mark": 0,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 25,
+          "peak_directional_motion_over_any_full_chunk_mm": 44.0
+        }
+      },
+      "start_q_deg": [
+        -1.742,
+        -2.681,
+        1.952,
+        1.458,
+        6.481,
+        1.349
+      ],
+      "pre_C_closest_to_zero_time_s": 2.6302,
+      "pre_C_minimum_max_abs_joint_deg": 2.681
+    },
+    {
+      "run_id": "fad8a140-43a0-4c2b-bdf5-c613ec063312",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_210931_408092_teach",
+      "source_trajectory_id": "fad8a140-43a0-4c2b-bdf5-c613ec063312",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 30,
+        "gripper_width_outside_sdk_range": 84
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        294,
+        236,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 14.23097,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 36,
+          "peak_directional_motion_over_any_full_chunk_mm": 33.9
+        },
+        "open": {
+          "task_s": 28.83676,
+          "width_mm": 65.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 30,
+          "peak_directional_motion_over_any_full_chunk_mm": 22.9
+        }
+      },
+      "start_q_deg": [
+        0.0,
+        -3.253,
+        1.985,
+        3.503,
+        11.115,
+        -4.867
+      ],
+      "pre_C_closest_to_zero_time_s": 1.0401,
+      "pre_C_minimum_max_abs_joint_deg": 9.643
+    },
+    {
+      "run_id": "8b6a6279-1201-4fa6-831e-b2e9db810a0d",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_211136_160803_teach",
+      "source_trajectory_id": "8b6a6279-1201-4fa6-831e-b2e9db810a0d",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 219,
+        "joint_outside_controller_limits": 86
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        854,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 15.82083,
+          "width_mm": 27.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 26,
+          "peak_directional_motion_over_any_full_chunk_mm": 69.7
+        },
+        "open": {
+          "task_s": 25.06638,
+          "width_mm": 66.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 39.4
+        }
+      },
+      "start_q_deg": [
+        0.983,
+        5.426,
+        1.859,
+        -5.431,
+        0.525,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 4.0403,
+      "pre_C_minimum_max_abs_joint_deg": 5.426
+    },
+    {
+      "run_id": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T02/20261124_211228_924725_teach",
+      "source_trajectory_id": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24",
+      "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 146,
+        "joint_outside_controller_limits": 53
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        524,
+        479,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 10.60083,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 21,
+          "peak_directional_motion_over_any_full_chunk_mm": 28.5
+        },
+        "open": {
+          "task_s": 20.11624,
+          "width_mm": 73.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 17,
+          "peak_directional_motion_over_any_full_chunk_mm": 46.5
+        }
+      },
+      "start_q_deg": [
+        2.271,
+        -2.708,
+        2.005,
+        -1.571,
+        7.611,
+        -1.42
+      ],
+      "pre_C_closest_to_zero_time_s": 2.5402,
+      "pre_C_minimum_max_abs_joint_deg": 2.167
+    },
+    {
+      "run_id": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_195915_083553_teach",
+      "source_trajectory_id": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 59,
+        "gripper_width_outside_sdk_range": 6
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        479,
+        444,
+        0,
+        106,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 13.04072,
+          "width_mm": 27.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 12.3
+        },
+        "open": {
+          "task_s": 24.14618,
+          "width_mm": 45.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 26,
+          "peak_directional_motion_over_any_full_chunk_mm": 13.4
+        }
+      },
+      "start_q_deg": [
+        -2.98,
+        -3.093,
+        1.804,
+        -0.734,
+        1.322,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 3.093
+    },
+    {
+      "run_id": "f208d430-c112-4e1d-9466-07222a772f19",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_195953_071901_teach",
+      "source_trajectory_id": "f208d430-c112-4e1d-9466-07222a772f19",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 157,
+        "gripper_width_outside_sdk_range": 259
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        1154,
+        1139,
+        0,
+        395,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 16.50563,
+          "width_mm": 27.9,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 22,
+          "peak_directional_motion_over_any_full_chunk_mm": 59.8
+        },
+        "open": {
+          "task_s": 36.49137,
+          "width_mm": 60.4,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 31,
+          "peak_directional_motion_over_any_full_chunk_mm": 33.8
+        }
+      },
+      "start_q_deg": [
+        1.063,
+        -3.229,
+        1.943,
+        -4.152,
+        4.462,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 4.462
+    },
+    {
+      "run_id": "1dc09f10-4d9f-45c0-b442-425b8a51aae1",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_211504_208526_teach",
+      "source_trajectory_id": "1dc09f10-4d9f-45c0-b442-425b8a51aae1",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 89,
+        "gripper_width_outside_sdk_range": 22
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        889,
+        828,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 12.96574,
+          "width_mm": 26.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 20,
+          "peak_directional_motion_over_any_full_chunk_mm": 46.3
+        },
+        "open": {
+          "task_s": 21.45628,
+          "width_mm": 67.0,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 14,
+          "peak_directional_motion_over_any_full_chunk_mm": 45.5
+        }
+      },
+      "start_q_deg": [
+        -0.979,
+        -3.144,
+        1.93,
+        0.897,
+        9.496,
+        -3.509
+      ],
+      "pre_C_closest_to_zero_time_s": 4.0402,
+      "pre_C_minimum_max_abs_joint_deg": 3.509
+    },
+    {
+      "run_id": "1d09fdd6-0be8-443f-9d15-56a291cd25e2",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_211556_290061_teach",
+      "source_trajectory_id": "1d09fdd6-0be8-443f-9d15-56a291cd25e2",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 135,
+        "joint_outside_controller_limits": 95
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        444,
+        0,
+        478,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 30.26686,
+          "width_mm": 34.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 62,
+          "peak_directional_motion_over_any_full_chunk_mm": 79.3
+        },
+        "open": {
+          "task_s": 41.79261,
+          "width_mm": 69.4,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 23,
+          "peak_directional_motion_over_any_full_chunk_mm": 30.3
+        }
+      },
+      "start_q_deg": [
+        1.57,
+        3.04,
+        1.954,
+        -4.165,
+        5.176,
+        10.474
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 10.474
+    },
+    {
+      "run_id": "fb745413-baa5-471e-ad05-7bc43fa395d4",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_211834_364880_teach",
+      "source_trajectory_id": "fb745413-baa5-471e-ad05-7bc43fa395d4",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 23,
+        "gripper_width_outside_sdk_range": 6
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        0,
+        225,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 16.24607,
+          "width_mm": 27.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 13,
+          "peak_directional_motion_over_any_full_chunk_mm": 12.4
+        },
+        "open": {
+          "task_s": 26.35165,
+          "width_mm": 92.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 33,
+          "peak_directional_motion_over_any_full_chunk_mm": 34.4
+        }
+      },
+      "start_q_deg": [
+        1.656,
+        4.517,
+        1.553,
+        -0.679,
+        3.589,
+        -3.046
+      ],
+      "pre_C_closest_to_zero_time_s": 0.0,
+      "pre_C_minimum_max_abs_joint_deg": 4.517
+    },
+    {
+      "run_id": "3f452222-b445-4590-a9d9-2c81f285993b",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_211936_385688_teach",
+      "source_trajectory_id": "3f452222-b445-4590-a9d9-2c81f285993b",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 49,
+        "gripper_width_outside_sdk_range": 65
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        482,
+        437,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 8.58051,
+          "width_mm": 29.8,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 17,
+          "peak_directional_motion_over_any_full_chunk_mm": 42.5
+        },
+        "open": {
+          "task_s": 16.88099,
+          "width_mm": 68.4,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 15,
+          "peak_directional_motion_over_any_full_chunk_mm": 45.1
+        }
+      },
+      "start_q_deg": [
+        4.068,
+        -3.248,
+        1.884,
+        -2.6,
+        6.889,
+        0.0
+      ],
+      "pre_C_closest_to_zero_time_s": 2.3251,
+      "pre_C_minimum_max_abs_joint_deg": 2.604
+    },
+    {
+      "run_id": "4df32d62-b671-408e-aef6-924981243b90",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_212120_787216_teach",
+      "source_trajectory_id": "4df32d62-b671-408e-aef6-924981243b90",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 79,
+        "joint_outside_controller_limits": 54
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        534,
+        500,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 11.27567,
+          "width_mm": 27.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 29,
+          "peak_directional_motion_over_any_full_chunk_mm": 26.8
+        },
+        "open": {
+          "task_s": 16.92103,
+          "width_mm": 66.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 17,
+          "peak_directional_motion_over_any_full_chunk_mm": 39.5
+        }
+      },
+      "start_q_deg": [
+        -2.249,
+        -3.175,
+        1.903,
+        3.554,
+        7.289,
+        -6.041
+      ],
+      "pre_C_closest_to_zero_time_s": 2.2951,
+      "pre_C_minimum_max_abs_joint_deg": 6.041
+    },
+    {
+      "run_id": "27e15db2-c848-41a4-8b2a-a7fa5388fda3",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_212206_954693_teach",
+      "source_trajectory_id": "27e15db2-c848-41a4-8b2a-a7fa5388fda3",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 32,
+        "gripper_width_outside_sdk_range": 5
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        314,
+        279,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 11.9408,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 35,
+          "peak_directional_motion_over_any_full_chunk_mm": 29.6
+        },
+        "open": {
+          "task_s": 18.54616,
+          "width_mm": 67.6,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 42.2
+        }
+      },
+      "start_q_deg": [
+        5.061,
+        -2.791,
+        1.946,
+        -5.416,
+        7.274,
+        -0.907
+      ],
+      "pre_C_closest_to_zero_time_s": 1.3601,
+      "pre_C_minimum_max_abs_joint_deg": 6.836
+    },
+    {
+      "run_id": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_212402_631042_teach",
+      "source_trajectory_id": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "joint_outside_controller_limits": 34,
+        "gripper_width_outside_sdk_range": 50
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        336,
+        313,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 13.82227,
+          "width_mm": 27.7,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 12,
+          "peak_directional_motion_over_any_full_chunk_mm": 12.2
+        },
+        "open": {
+          "task_s": 21.29421,
+          "width_mm": 63.5,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 22,
+          "peak_directional_motion_over_any_full_chunk_mm": 28.6
+        }
+      },
+      "start_q_deg": [
+        -1.067,
+        -2.209,
+        1.969,
+        1.836,
+        7.81,
+        -6.159
+      ],
+      "pre_C_closest_to_zero_time_s": 1.4351,
+      "pre_C_minimum_max_abs_joint_deg": 6.05
+    },
+    {
+      "run_id": "21c757b1-825b-490d-955f-f8aeeadad81a",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_V01/20261124_212447_218444_teach",
+      "source_trajectory_id": "21c757b1-825b-490d-955f-f8aeeadad81a",
+      "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "scene_colors": [
+        "blue",
+        "red",
+        "white",
+        "green"
+      ],
+      "exclusion_reasons": {
+        "gripper_width_outside_sdk_range": 93,
+        "joint_outside_controller_limits": 62
+      },
+      "raw_joint_axis_limit_violation_counts": [
+        0,
+        616,
+        588,
+        0,
+        0,
+        0
+      ],
+      "mark_diagnostics": {
+        "close": {
+          "task_s": 13.09125,
+          "width_mm": 27.2,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 30,
+          "peak_directional_motion_over_any_full_chunk_mm": 26.1
+        },
+        "open": {
+          "task_s": 22.74366,
+          "width_mm": 67.1,
+          "full_unpadded_chunks_covering_mark": 10,
+          "n_full_chunks_in_phase_with_1mm_measured_movement": 16,
+          "peak_directional_motion_over_any_full_chunk_mm": 40.3
+        }
+      },
+      "start_q_deg": [
+        -1.622,
+        -2.77,
+        1.897,
+        0.547,
+        11.181,
+        -4.398
+      ],
+      "pre_C_closest_to_zero_time_s": 2.867,
+      "pre_C_minimum_max_abs_joint_deg": 4.322
+    }
+  ],
+  "start_poses": {
+    "method": "At the actual recorded task start, compute maximum absolute joint angle and pairwise L-infinity distance across the six joints of the blue/red starts for each declared layout. Minima before C come from actual received complete joint samples. The >30 deg then <10 deg counts below are descriptive, not collection cutoffs or calibrated Cartesian pose bounds.",
+    "max_abs_start_joint_deg_quantiles": {
+      "min": 0.507,
+      "p25": 4.69,
+      "median": 7.128,
+      "p75": 11.165,
+      "max": 120.507
+    },
+    "episodes_start_max_abs_above_30_deg": 11,
+    "paired_max_start_difference_deg": {
+      "T01-RB02": 30.72,
+      "T01-RB03": 5.949,
+      "T01-RB04": 5.797,
+      "T01-RB05": 5.667,
+      "T01-FOUR01": 3.107,
+      "T01-FOUR02": 9.983,
+      "T01-RB06": 7.688,
+      "T01-FOUR03": 4.458,
+      "T01-FOUR04": 12.687,
+      "T01-FOUR05": 5.997,
+      "T02-RB01": 45.834,
+      "T02-FOUR01": 18.258,
+      "T02-RB02": 57.29,
+      "T02-FOUR02": 36.032,
+      "T02-RB03": 32.417,
+      "T02-FOUR03": 65.101,
+      "T02-RB04": 101.234,
+      "T02-FOUR04b": 68.05,
+      "T02-RB05": 6.216,
+      "T02-FOUR05": 8.134,
+      "V01-FOUR01": 4.043,
+      "V01-RB01": 13.983,
+      "V01-FOUR02": 7.765,
+      "V01-RB02": 8.97,
+      "V01-FOUR03": 3.371
+    },
+    "paired_max_start_difference_quantiles_deg": {
+      "min": 3.107,
+      "p25": 5.949,
+      "median": 8.97,
+      "p75": 32.417,
+      "max": 101.234
+    },
+    "episodes_starting_over_30_then_within_10_deg_of_joint_zero_before_C": [
+      {
+        "placement": "T01-RB02",
+        "target_color": "red",
+        "start_max_abs_deg": 31.227,
+        "minimum_to_C_deg": 7.787,
+        "time_to_min_s": 7.591
+      }
+    ]
+  }
+}

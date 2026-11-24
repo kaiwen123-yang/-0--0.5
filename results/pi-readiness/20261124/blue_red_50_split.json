@@ -1,0 +1,628 @@
+{
+  "schema": 1,
+  "selection": "Approved complete direct manual blue/red task runs in allocated T01/T02/V01 sessions.",
+  "contract": {
+    "camera_real_slots": [
+      "left_wrist_0_rgb"
+    ],
+    "camera_serial": "CC16762023M",
+    "camera_mount": "wrist",
+    "calibration_commits": [
+      "479383a9e5945610c1585161e9225406b74738d5"
+    ],
+    "policy_hz": 20,
+    "state": "latest measured six joint angles and SDK gripper width at or before t",
+    "state_units": "rad,m",
+    "action": "latest measured six joint angles and SDK width at or before t+50ms",
+    "action_units": "rad,m",
+    "gripper_basis": "piper_h_sdk_width_m_v1",
+    "gripper_target_source": "future_measured_sdk_width",
+    "arm_target_source": "future_measured_joint_positions",
+    "nominal_horizon": 10,
+    "prompts": [
+      "Pick up the blue block, place it in the shallow tray, release it, and retreat.",
+      "Pick up the red block, place it in the shallow tray, release it, and retreat."
+    ],
+    "recovered_successes": [
+      "20261124_195953_071901_teach"
+    ]
+  },
+  "session_bindings": [
+    {
+      "code": "T01",
+      "id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+      "split": "train",
+      "installation": "A01 Piper H official gripper, same pads and DC1 wrist mount"
+    },
+    {
+      "code": "T02",
+      "id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+      "split": "train",
+      "installation": "A01 Piper H official gripper, same pads and DC1 wrist mount"
+    },
+    {
+      "code": "V01",
+      "id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+      "split": "validation",
+      "installation": "A01 Piper H official gripper, same pads and DC1 wrist mount"
+    }
+  ],
+  "groups": {
+    "all": {
+      "episodes": 50,
+      "layout_pairs": 25,
+      "scene_layout_pairs": {
+        "2": 12,
+        "4": 13
+      },
+      "target_episodes": {
+        "blue": 25,
+        "red": 25
+      },
+      "duration_s": {
+        "min": 19.8113,
+        "p25": 26.932,
+        "median": 31.3466,
+        "p75": 35.7769,
+        "max": 73.3244
+      },
+      "real_task_seconds": 1669.079,
+      "phase_seconds": {
+        "start_to_C": {
+          "min": 7.3256,
+          "p25": 10.3795,
+          "median": 12.6356,
+          "p75": 15.7211,
+          "max": 31.2669
+        },
+        "C_to_O": {
+          "min": 5.1402,
+          "p25": 7.5786,
+          "median": 8.9231,
+          "p75": 11.0129,
+          "max": 25.3516
+        },
+        "O_to_E": {
+          "min": 5.7704,
+          "p25": 7.7029,
+          "median": 9.0756,
+          "p75": 11.2986,
+          "max": 24.3515
+        }
+      },
+      "initial_max_joint_deviation_from_zero_deg": {
+        "min": 0.507,
+        "p25": 4.6898,
+        "median": 7.128,
+        "p75": 11.1645,
+        "max": 120.507
+      },
+      "event_width_mm": {
+        "start": {
+          "min": -0.3,
+          "p25": -0.1,
+          "median": 0.1,
+          "p75": 1.825,
+          "max": 49.5
+        },
+        "close": {
+          "min": 26.7,
+          "p25": 26.8,
+          "median": 27.1,
+          "p75": 27.2,
+          "max": 34.2
+        },
+        "open": {
+          "min": 33.7,
+          "p25": 56.275,
+          "median": 62.35,
+          "p75": 65.375,
+          "max": 101.5
+        },
+        "end": {
+          "min": -0.2,
+          "p25": -0.1,
+          "median": 0.0,
+          "p75": 0.175,
+          "max": 12.9
+        }
+      },
+      "low_motion_windows_all_real_grid": 16812,
+      "total_full_unpadded_grid_windows": 32910,
+      "longest_consecutive_low_motion_seconds_per_episode": {
+        "min": 3.15,
+        "p25": 5.0375,
+        "median": 5.95,
+        "p75": 7.4375,
+        "max": 19.55
+      }
+    },
+    "train": {
+      "episodes": 40,
+      "layout_pairs": 20,
+      "scene_layout_pairs": {
+        "2": 10,
+        "4": 10
+      },
+      "target_episodes": {
+        "blue": 20,
+        "red": 20
+      },
+      "duration_s": {
+        "min": 19.8113,
+        "p25": 26.5304,
+        "median": 31.5877,
+        "p75": 35.3565,
+        "max": 73.3244
+      },
+      "real_task_seconds": 1329.445,
+      "phase_seconds": {
+        "start_to_C": {
+          "min": 7.3256,
+          "p25": 9.9536,
+          "median": 12.1887,
+          "p75": 15.5216,
+          "max": 31.2669
+        },
+        "C_to_O": {
+          "min": 5.1402,
+          "p25": 7.7033,
+          "median": 8.9231,
+          "p75": 10.8518,
+          "max": 25.3516
+        },
+        "O_to_E": {
+          "min": 5.7904,
+          "p25": 8.1042,
+          "median": 9.0756,
+          "p75": 11.1437,
+          "max": 24.3515
+        }
+      },
+      "initial_max_joint_deviation_from_zero_deg": {
+        "min": 0.507,
+        "p25": 5.0205,
+        "median": 6.7315,
+        "p75": 33.749,
+        "max": 120.507
+      },
+      "event_width_mm": {
+        "start": {
+          "min": -0.3,
+          "p25": -0.1,
+          "median": 0.1,
+          "p75": 2.1,
+          "max": 49.5
+        },
+        "close": {
+          "min": 26.7,
+          "p25": 26.8,
+          "median": 27.0,
+          "p75": 27.2,
+          "max": 27.6
+        },
+        "open": {
+          "min": 33.7,
+          "p25": 55.325,
+          "median": 61.55,
+          "p75": 63.85,
+          "max": 101.5
+        },
+        "end": {
+          "min": -0.2,
+          "p25": -0.025,
+          "median": 0.05,
+          "p75": 1.175,
+          "max": 12.9
+        }
+      },
+      "low_motion_windows_all_real_grid": 13568,
+      "total_full_unpadded_grid_windows": 26212,
+      "longest_consecutive_low_motion_seconds_per_episode": {
+        "min": 3.15,
+        "p25": 5.1125,
+        "median": 6.2,
+        "p75": 7.575,
+        "max": 19.55
+      }
+    },
+    "validation": {
+      "episodes": 10,
+      "layout_pairs": 5,
+      "scene_layout_pairs": {
+        "2": 2,
+        "4": 3
+      },
+      "target_episodes": {
+        "red": 5,
+        "blue": 5
+      },
+      "duration_s": {
+        "min": 22.6514,
+        "p25": 27.3728,
+        "median": 29.9619,
+        "p75": 37.466,
+        "max": 53.3984
+      },
+      "real_task_seconds": 339.634,
+      "phase_seconds": {
+        "start_to_C": {
+          "min": 8.5805,
+          "p25": 12.197,
+          "median": 13.066,
+          "p75": 15.6401,
+          "max": 30.2669
+        },
+        "C_to_O": {
+          "min": 5.6454,
+          "p25": 7.6791,
+          "median": 9.0715,
+          "p75": 10.8555,
+          "max": 19.9857
+        },
+        "O_to_E": {
+          "min": 5.7704,
+          "p25": 7.0651,
+          "median": 9.4706,
+          "p75": 11.2794,
+          "max": 13.3705
+        }
+      },
+      "initial_max_joint_deviation_from_zero_deg": {
+        "min": 3.093,
+        "p25": 5.11,
+        "median": 7.2815,
+        "p75": 9.0745,
+        "max": 11.181
+      },
+      "event_width_mm": {
+        "start": {
+          "min": -0.1,
+          "p25": -0.075,
+          "median": 0.05,
+          "p75": 0.4,
+          "max": 1.3
+        },
+        "close": {
+          "min": 26.7,
+          "p25": 27.275,
+          "median": 27.6,
+          "p75": 27.85,
+          "max": 34.2
+        },
+        "open": {
+          "min": 45.6,
+          "p25": 64.275,
+          "median": 67.05,
+          "p75": 68.2,
+          "max": 92.5
+        },
+        "end": {
+          "min": -0.1,
+          "p25": -0.1,
+          "median": 0.0,
+          "p75": 0.0,
+          "max": 0.5
+        }
+      },
+      "low_motion_windows_all_real_grid": 3244,
+      "total_full_unpadded_grid_windows": 6698,
+      "longest_consecutive_low_motion_seconds_per_episode": {
+        "min": 3.15,
+        "p25": 4.475,
+        "median": 5.825,
+        "p75": 6.4125,
+        "max": 12.85
+      }
+    }
+  },
+  "unique_source_ids": 50,
+  "unique_grid_trajectory_sha256": 50,
+  "hash_definition": "SHA-256 of all 20 Hz state and future action columns, ordered [state(7),action(7)] as contiguous little-endian float32; no IDs, RGB or timestamps enter the digest.",
+  "source_times_disjoint": true,
+  "min_gap_between_distinct_task_windows_s": 9.696,
+  "split_independence": "Distinct session, placement and source IDs; one site and one camera/install. Confirmed different physical attempts and distinct action trajectories; exact table-coordinate separation and different operator/hardware are not established.",
+  "low_motion_definition": "For all physically observed unpadded windows of ten grid states (~0.45s between endpoints), all six per-axis ranges <=0.5 degree and width range <=1mm. Computed on all grid states, not solely training-eligible starts; does not certify inactivity or set exclusion criteria.",
+  "worst_low_motion_episode": "20261124_210211_167267_teach",
+  "longest_episode": "20261124_210211_167267_teach",
+  "near_train_close_flange_by_color": [
+    {
+      "validation": "V01-FOUR01",
+      "color": "red",
+      "nearest_training": "T01-RB03",
+      "flange_distance_mm": 17.83
+    },
+    {
+      "validation": "V01-FOUR01",
+      "color": "blue",
+      "nearest_training": "T02-RB01",
+      "flange_distance_mm": 10.28
+    },
+    {
+      "validation": "V01-RB01",
+      "color": "blue",
+      "nearest_training": "T02-FOUR05",
+      "flange_distance_mm": 59.8
+    },
+    {
+      "validation": "V01-RB01",
+      "color": "red",
+      "nearest_training": "T02-FOUR02",
+      "flange_distance_mm": 42.59
+    },
+    {
+      "validation": "V01-FOUR02",
+      "color": "blue",
+      "nearest_training": "T01-FOUR01",
+      "flange_distance_mm": 14.73
+    },
+    {
+      "validation": "V01-FOUR02",
+      "color": "red",
+      "nearest_training": "T01-RB02",
+      "flange_distance_mm": 29.23
+    },
+    {
+      "validation": "V01-RB02",
+      "color": "blue",
+      "nearest_training": "T02-RB03",
+      "flange_distance_mm": 39.36
+    },
+    {
+      "validation": "V01-RB02",
+      "color": "red",
+      "nearest_training": "T01-RB02",
+      "flange_distance_mm": 19.13
+    },
+    {
+      "validation": "V01-FOUR03",
+      "color": "blue",
+      "nearest_training": "T02-RB01",
+      "flange_distance_mm": 28.39
+    },
+    {
+      "validation": "V01-FOUR03",
+      "color": "red",
+      "nearest_training": "T02-RB01",
+      "flange_distance_mm": 35.12
+    }
+  ],
+  "flange_note": "Euclidean base-frame distances from the installed Piper H MDH flange forward kinematics of each C joint mark to the nearest same-color training C. C may follow contact or initial transport. Flange coordinates are not ground-truth cube/TCP positions.",
+  "legacy_and_rejected_attempt_counts": {
+    "legacy_commissioning": 5,
+    "failed_or_unconfirmed": 9,
+    "supplemental_success": 1
+  },
+  "unselected_teach_sources": [
+    {
+      "directory": "20261124_164601_857440_teach",
+      "session": "T01",
+      "category": "legacy_commissioning",
+      "reason": "KeyboardInterrupt('operator interrupt')"
+    },
+    {
+      "directory": "20261124_170803_682350_teach",
+      "session": "T01",
+      "category": "legacy_commissioning",
+      "reason": "KeyboardInterrupt('operator interrupt')"
+    },
+    {
+      "directory": "20261124_173444_392487_teach",
+      "session": "T01",
+      "category": "legacy_commissioning",
+      "reason": "KeyboardInterrupt('operator interrupt')"
+    },
+    {
+      "directory": "20261124_174233_088570_teach",
+      "session": "T01",
+      "category": "legacy_commissioning",
+      "reason": "ValueError('操作员未确认')"
+    },
+    {
+      "directory": "20261124_180201_105565_teach",
+      "session": "T01",
+      "category": "legacy_commissioning",
+      "reason": "Taught sample 12938 outside limits"
+    },
+    {
+      "directory": "20261124_192516_871579_teach",
+      "session": "T01",
+      "category": "failed_or_unconfirmed",
+      "reason": "RuntimeError('手拖中已发送夹爪 0x159，但未收到实际开合反馈；保留记录，不自动切六轴控制模式')"
+    },
+    {
+      "directory": "20261124_194154_565955_teach",
+      "session": "T01",
+      "category": "failed_or_unconfirmed",
+      "reason": "RuntimeError('夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪')"
+    },
+    {
+      "directory": "20261124_200802_390043_teach",
+      "session": "T01",
+      "category": "failed_or_unconfirmed",
+      "reason": "示教在 close 阶段结束，缺少确认的任务终点"
+    },
+    {
+      "directory": "20261124_201150_553896_teach",
+      "session": "T01",
+      "category": "failed_or_unconfirmed",
+      "reason": "wrong_color"
+    },
+    {
+      "directory": "20261124_201250_382054_teach",
+      "session": "T01",
+      "category": "failed_or_unconfirmed",
+      "reason": "wrong_color"
+    },
+    {
+      "directory": "20261124_204805_788869_teach",
+      "session": "T02",
+      "category": "failed_or_unconfirmed",
+      "reason": "示教在 end 阶段结束，缺少确认的任务终点"
+    },
+    {
+      "directory": "20261124_205754_137439_teach",
+      "session": "T02",
+      "category": "supplemental_success",
+      "reason": "unpaired_layout_success"
+    },
+    {
+      "directory": "20261124_205830_725042_teach",
+      "session": "T02",
+      "category": "failed_or_unconfirmed",
+      "reason": "target_started_in_destination"
+    },
+    {
+      "directory": "20261124_210348_237706_teach",
+      "session": "T02",
+      "category": "failed_or_unconfirmed",
+      "reason": "示教在 end 阶段结束，缺少确认的任务终点"
+    },
+    {
+      "directory": "20261124_195729_469343_teach",
+      "session": "V01",
+      "category": "failed_or_unconfirmed",
+      "reason": "示教在 end 阶段结束，缺少确认的任务终点"
+    }
+  ],
+  "frozen_state_action_rows_exact_raw_match": true,
+  "frozen_checked_rows": 33360,
+  "frozen_stage_a": "/home/kaiwen/research/pi-q12-data/blue_red_direct_20261124_50_v1",
+  "starts_over_30deg": [
+    {
+      "session": "T01",
+      "run": "20261124_195138_013150_teach",
+      "placement": "T01-RB02",
+      "color": "red",
+      "start_max_joint_abs_deg": 31.227,
+      "second_joint_start_deg": -0.694,
+      "time_to_within_10deg_all_before_C_s": 7.55,
+      "min_preclose_max_abs_joint_deg": 7.804
+    },
+    {
+      "session": "T02",
+      "run": "20261124_203704_496087_teach",
+      "placement": "T02-RB01",
+      "color": "red",
+      "start_max_joint_abs_deg": 43.14500000000001,
+      "second_joint_start_deg": 43.145,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 43.145
+    },
+    {
+      "session": "T02",
+      "run": "20261124_204110_084736_teach",
+      "placement": "T02-RB02",
+      "color": "blue",
+      "start_max_joint_abs_deg": 54.051,
+      "second_joint_start_deg": 54.051,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 54.051
+    },
+    {
+      "session": "T02",
+      "run": "20261124_204338_501930_teach",
+      "placement": "T02-FOUR02",
+      "color": "blue",
+      "start_max_joint_abs_deg": 41.315,
+      "second_joint_start_deg": 41.315,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 41.315
+    },
+    {
+      "session": "T02",
+      "run": "20261124_204421_893178_teach",
+      "placement": "T02-FOUR02",
+      "color": "red",
+      "start_max_joint_abs_deg": 77.34700000000001,
+      "second_joint_start_deg": 77.347,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 77.347
+    },
+    {
+      "session": "T02",
+      "run": "20261124_204557_658991_teach",
+      "placement": "T02-RB03",
+      "color": "blue",
+      "start_max_joint_abs_deg": 46.343,
+      "second_joint_start_deg": 46.343,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 46.343
+    },
+    {
+      "session": "T02",
+      "run": "20261124_204632_507958_teach",
+      "placement": "T02-RB03",
+      "color": "red",
+      "start_max_joint_abs_deg": 45.872,
+      "second_joint_start_deg": 45.872,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 45.872
+    },
+    {
+      "session": "T02",
+      "run": "20261124_205048_671599_teach",
+      "placement": "T02-FOUR03",
+      "color": "blue",
+      "start_max_joint_abs_deg": 55.846000000000004,
+      "second_joint_start_deg": 55.846,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 55.846
+    },
+    {
+      "session": "T02",
+      "run": "20261124_205124_261992_teach",
+      "placement": "T02-FOUR03",
+      "color": "red",
+      "start_max_joint_abs_deg": 120.507,
+      "second_joint_start_deg": 120.507,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 120.507
+    },
+    {
+      "session": "T02",
+      "run": "20261124_205520_188316_teach",
+      "placement": "T02-RB04",
+      "color": "red",
+      "start_max_joint_abs_deg": 98.089,
+      "second_joint_start_deg": 98.089,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 98.089
+    },
+    {
+      "session": "T02",
+      "run": "20261124_210601_515012_teach",
+      "placement": "T02-FOUR04b",
+      "color": "red",
+      "start_max_joint_abs_deg": 64.746,
+      "second_joint_start_deg": 64.746,
+      "time_to_within_10deg_all_before_C_s": null,
+      "min_preclose_max_abs_joint_deg": 64.746
+    }
+  ],
+  "starts_over_10deg_count": 16,
+  "elapsed_protocol": "C/O are operator completion markers. For S-window initial pose, compare measured joints at S to six-axis zero; these values do not prescribe a physical reposition.",
+  "frozen_independent_readback": {
+    "rows": 33360,
+    "rgb_pixels_checked_frames": 349,
+    "row_sources_checked": 33360,
+    "usable_starts": 26569,
+    "full_usable_starts": 26245,
+    "padded_usable_starts": 324,
+    "low_motion_full_usable": 14475,
+    "by_split": {
+      "train": {
+        "full_usable_starts": 20893,
+        "padded_usable_starts": 270,
+        "low_motion_full_usable": 11817
+      },
+      "validation": {
+        "full_usable_starts": 5352,
+        "padded_usable_starts": 54,
+        "low_motion_full_usable": 2658
+      }
+    },
+    "pixel_sampling": "Exact RGB array vs source PNG at first, quartiles, last, closest C/O grid rows (up to seven unique frames per episode). Every row was checked for causal original RGB ID/time; every joint/width state/target and source ID/time was checked.",
+    "edge_padding": "Reader repeats the final task row when there are fewer than 10 physical rows at the episode end."
+  }
+}

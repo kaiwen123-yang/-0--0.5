@@ -1,0 +1,505 @@
+{
+  "check": "Exact all-row float32 source equality for measured state/future actions, 20Hz grid, 10-step masks including episode padding; seven decoded original RGB comparisons per episode",
+  "episodes": [
+    {
+      "episode": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 1105,
+      "valid_rows": 1013,
+      "starts": 1004,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "717893f2-9305-47bc-83b6-e70ae35561df",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 889,
+      "valid_rows": 719,
+      "starts": 701,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "b223b5b5-fb17-4566-8473-11218d5f1773",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 719,
+      "valid_rows": 626,
+      "starts": 608,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 676,
+      "valid_rows": 600,
+      "starts": 573,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 773,
+      "valid_rows": 613,
+      "starts": 604,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "37464501-505a-4d02-9817-25f61afb6bb7",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 702,
+      "valid_rows": 600,
+      "starts": 577,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "61effaf4-6147-4b41-9dc4-70996154ad3a",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 776,
+      "valid_rows": 651,
+      "starts": 633,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "887e1721-be63-490b-8ceb-54ca6152cebf",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 672,
+      "valid_rows": 638,
+      "starts": 620,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 651,
+      "valid_rows": 494,
+      "starts": 472,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "39fe949a-84d7-409f-be86-d404efd3c23b",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 571,
+      "valid_rows": 495,
+      "starts": 459,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "042162c5-879f-40ab-aed0-da0e96ee2e43",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 801,
+      "valid_rows": 565,
+      "starts": 538,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 624,
+      "valid_rows": 468,
+      "starts": 448,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "9c25df99-a407-43e9-9934-9094f5546fe4",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 639,
+      "valid_rows": 445,
+      "starts": 424,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "cca037de-afb3-4283-8331-4065296f5aed",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 880,
+      "valid_rows": 780,
+      "starts": 760,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "16bd17ed-665e-4647-95cd-261e092d78fc",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 689,
+      "valid_rows": 513,
+      "starts": 491,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 542,
+      "valid_rows": 469,
+      "starts": 447,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 615,
+      "valid_rows": 593,
+      "starts": 565,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 504,
+      "valid_rows": 353,
+      "starts": 330,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "432f6292-6efb-4a42-b34e-bb84a7bdd939",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 614,
+      "valid_rows": 525,
+      "starts": 503,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "f96c235b-e201-4640-88d1-79d4050a6af9",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 691,
+      "valid_rows": 612,
+      "starts": 594,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "207aab62-a04b-495f-8b61-8badeed1ba80",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 629,
+      "valid_rows": 575,
+      "starts": 552,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 634,
+      "valid_rows": 576,
+      "starts": 549,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "105778ea-7096-4906-9271-a4d7758651ad",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 609,
+      "valid_rows": 517,
+      "starts": 494,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "00b3b58d-2650-44ed-a3aa-640502c5e9c6",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 498,
+      "valid_rows": 401,
+      "starts": 374,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "53006248-740a-4d6e-a129-366be6ec6f0b",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 491,
+      "valid_rows": 446,
+      "starts": 423,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "52727b70-342f-42ce-96c6-2dbb625905b1",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 403,
+      "valid_rows": 357,
+      "starts": 333,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "c8e5e43d-5456-4713-ae92-c2d7397dd78c",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 500,
+      "valid_rows": 482,
+      "starts": 461,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "ed02e09a-84fb-44e5-b008-12b1147644e5",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 413,
+      "valid_rows": 398,
+      "starts": 377,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "b11a912b-5190-4a9b-bb8e-978575cab3fa",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 464,
+      "valid_rows": 377,
+      "starts": 355,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 510,
+      "valid_rows": 498,
+      "starts": 473,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "9839e690-e73d-4442-9ca5-e3d678fb6fc6",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 464,
+      "valid_rows": 437,
+      "starts": 417,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "5b5d9adb-c6a1-4022-813d-4105689baa30",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 615,
+      "valid_rows": 586,
+      "starts": 576,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "13499234-8811-42b0-bd23-c14b82887fbf",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 665,
+      "valid_rows": 531,
+      "starts": 507,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 537,
+      "valid_rows": 365,
+      "starts": 356,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 1466,
+      "valid_rows": 1274,
+      "starts": 1229,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "c0e8c866-57cf-4483-832f-243e1f985d0b",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 396,
+      "valid_rows": 375,
+      "starts": 361,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "93678887-7e7b-4ca8-99ba-c286c19f82a2",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 1170,
+      "valid_rows": 569,
+      "starts": 539,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "fad8a140-43a0-4c2b-bdf5-c613ec063312",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 758,
+      "valid_rows": 644,
+      "starts": 621,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "8b6a6279-1201-4fa6-831e-b2e9db810a0d",
+      "split": "train",
+      "target": "blue",
+      "grid_rows": 651,
+      "valid_rows": 432,
+      "starts": 409,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24",
+      "split": "train",
+      "target": "red",
+      "grid_rows": 566,
+      "valid_rows": 420,
+      "starts": 406,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+      "split": "validation",
+      "target": "red",
+      "grid_rows": 688,
+      "valid_rows": 623,
+      "starts": 596,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "f208d430-c112-4e1d-9466-07222a772f19",
+      "split": "validation",
+      "target": "blue",
+      "grid_rows": 997,
+      "valid_rows": 614,
+      "starts": 605,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "1dc09f10-4d9f-45c0-b442-425b8a51aae1",
+      "split": "validation",
+      "target": "blue",
+      "grid_rows": 603,
+      "valid_rows": 492,
+      "starts": 472,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "1d09fdd6-0be8-443f-9d15-56a291cd25e2",
+      "split": "validation",
+      "target": "red",
+      "grid_rows": 1067,
+      "valid_rows": 882,
+      "starts": 833,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "fb745413-baa5-471e-ad05-7bc43fa395d4",
+      "split": "validation",
+      "target": "blue",
+      "grid_rows": 769,
+      "valid_rows": 740,
+      "starts": 729,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "3f452222-b445-4590-a9d9-2c81f285993b",
+      "split": "validation",
+      "target": "red",
+      "grid_rows": 453,
+      "valid_rows": 339,
+      "starts": 329,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "4df32d62-b671-408e-aef6-924981243b90",
+      "split": "validation",
+      "target": "blue",
+      "grid_rows": 543,
+      "valid_rows": 464,
+      "starts": 454,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "27e15db2-c848-41a4-8b2a-a7fa5388fda3",
+      "split": "validation",
+      "target": "red",
+      "grid_rows": 514,
+      "valid_rows": 477,
+      "starts": 464,
+      "padded_starts": 9,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b",
+      "split": "validation",
+      "target": "blue",
+      "grid_rows": 559,
+      "valid_rows": 475,
+      "starts": 460,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    },
+    {
+      "episode": "21c757b1-825b-490d-955f-f8aeeadad81a",
+      "split": "validation",
+      "target": "red",
+      "grid_rows": 595,
+      "valid_rows": 476,
+      "starts": 464,
+      "padded_starts": 0,
+      "sampled_rgb_matches": 7
+    }
+  ]
+}

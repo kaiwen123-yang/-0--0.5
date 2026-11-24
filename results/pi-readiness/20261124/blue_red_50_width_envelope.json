@@ -1,0 +1,34 @@
+{
+  "train": {
+    "window_step_occurrences": 211630,
+    "below_15_mm": 45592,
+    "above_40_mm": 68514,
+    "outside_percent": 53.92,
+    "p05_p50_p95_mm": [
+      0.0,
+      27.2,
+      65.5
+    ]
+  },
+  "validation": {
+    "window_step_occurrences": 54060,
+    "below_15_mm": 8264,
+    "above_40_mm": 20327,
+    "outside_percent": 52.89,
+    "p05_p50_p95_mm": [
+      0.0,
+      29.8,
+      92.5
+    ]
+  },
+  "reference": "demo_io.Sender.width(gripper_basis=WIDTH) 15 to 40 mm; comparison only, no changes to data or controller. Counts include sliding windows and permitted last-row repetitions.",
+  "observed_C_O_markers": {
+    "n": 50,
+    "C_min_mm": 26.7,
+    "C_max_mm": 34.2,
+    "C_outside_15_40_mm": 0,
+    "O_min_mm": 33.7,
+    "O_max_mm": 101.5,
+    "O_above_40_mm": 47
+  }
+}
