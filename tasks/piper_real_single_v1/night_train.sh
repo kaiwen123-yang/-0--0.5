@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Run on D57 after copying a frozen blue/red dataset with rsync -aL.
-# Each family computes its own norm, then starts its full 10,000-step training.
+# Each family computes its own norm, completes full training, then evaluates V01.
 set -euo pipefail
 
 if (( $# < 2 || $# > 3 )); then
@@ -59,5 +59,9 @@ for pi_night_family in pi05 pi0; do
             2>&1 | tee "$pi_night_specs/$pi_night_family.norm.log"
         python -u -m tasks.piper_real_single_v1.train --spec "$pi_night_spec" --stage train \
             2>&1 | tee "$pi_night_specs/$pi_night_family.train.log"
+        # Post-training evaluation only; a separate process loads each retained checkpoint.
+        python -u -m tasks.piper_real_single_v1.evaluate --spec "$pi_night_spec" \
+            --samples-per-episode 64 --seed 20261124 \
+            2>&1 | tee "$pi_night_specs/$pi_night_family.validation.log"
     )
 done

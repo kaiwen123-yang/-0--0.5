@@ -1,0 +1,584 @@
+{
+  "source_commit": "79daaacb8d5c23fed97d32f9d69bbba2221dc81c",
+  "repository": "kaiwen123-yang/-0--0.5",
+  "method": "Actual visual inspection of all 25 paired JPEG contact sheets using GitHub base64 image output; 5 stages for each of 50 episodes. Separately viewed supplementary examples and two excluded-case panels.",
+  "coverage": {
+    "paired_jpegs": 25,
+    "episodes": 50,
+    "phase_cells": 250,
+    "train_episodes": 40,
+    "validation_episodes": 10,
+    "supplemental_panels": 3,
+    "full_video_review": false,
+    "full_rgb_arrays_reviewed": false
+  },
+  "stage_order": [
+    "C_minus_2_seconds_or_start",
+    "C",
+    "mid_C_O",
+    "O",
+    "E"
+  ],
+  "findings": {
+    "target_color": "Across all 50 C cells the object between the jaws is visibly the requested blue or red color; no contrary target observed in this selected set.",
+    "tray_transfer": "Across all pairs, the selected mid/O cells place the requested object in the transparent tray region. T01-FOUR02 blue has already retreated at O; supplementary frame 830 shows the blue object in the tray before O.",
+    "end": "All 50 selected E cells show empty jaws; the tray is usually outside the wrist view at E.",
+    "scope": "The observations support the declared successful transfer. The sheets are not continuous video and cannot independently establish grasp force, exact release timing, no hidden contact between samples, or whole-episode autonomous execution.",
+    "not_reject_all": "No visual contradiction was found requiring rejection of this entire 50-episode collection for first-round imitation training."
+  },
+  "notable": [
+    {
+      "layout": "T01-RB02",
+      "target": "blue",
+      "frames": [
+        1079,
+        1139,
+        1484,
+        1830,
+        2263
+      ],
+      "observation": "Hand covers much of the approach view; C and later cells reveal the blue block. Supplementary 928 is also heavily hand-occluded."
+    },
+    {
+      "layout": "T01-RB05",
+      "target": "both",
+      "observation": "Included replacement pair matches blue/red instructions. Separately inspected excluded color-review panel; that earlier pair really shows red for blue instruction and blue for red instruction."
+    },
+    {
+      "layout": "T01-FOUR02",
+      "target": "blue",
+      "frames": [
+        527,
+        587,
+        756,
+        925,
+        1195
+      ],
+      "observation": "O frame 925 shows empty jaws already away from the tray. Supplementary frame 830 clearly places blue in the tray before O, confirming O is a late event marker rather than a release timestamp."
+    },
+    {
+      "layout": "T01-RB06",
+      "target": "red",
+      "frames": [
+        662,
+        800
+      ],
+      "observation": "An operator finger is visible beside the right jaw during middle/O cells."
+    },
+    {
+      "layout": "T02-RB04",
+      "target": "red",
+      "frames": [
+        227,
+        287,
+        414,
+        541,
+        808
+      ],
+      "observation": "Hand remains on the outside of the left jaw in approach, C and mid-transfer. Cannot infer independent motor grasp force or rule out mechanical assistance from these views. Red target and tray transfer are visible."
+    },
+    {
+      "layout": "T02-FOUR04b",
+      "target": "both",
+      "observation": "Replacement images support correct blue/red transfer; red starts near outside of the tray rim. Excluded FOUR04 panel visibly has red already in the destination tray before its attempted task."
+    },
+    {
+      "layout": "T02-RB05",
+      "target": "blue",
+      "frames": [
+        584,
+        644,
+        1023,
+        1403,
+        1757
+      ],
+      "observation": "Selected images show blue at the grasp, then in the tray and empty-jaw end. Visual success is compatible with the numeric O-mark window exclusion; the JPEG alone cannot establish opening in millimetres."
+    },
+    {
+      "layout": "V01-FOUR01",
+      "target": "blue",
+      "frames": [
+        8199,
+        8259,
+        8558,
+        8857,
+        9256
+      ],
+      "observation": "Selected phases show blue transfer and empty-jaw E despite the separately documented numeric tail exclusion."
+    },
+    {
+      "layout": "V01-FOUR02",
+      "target": "blue",
+      "frames": [
+        434,
+        494,
+        645,
+        796,
+        1158
+      ],
+      "observation": "Blue block changes yaw in the tray after release; consistent with deposition."
+    },
+    {
+      "layout": "all_25_pairs",
+      "observation": "C-minus-2s is often already a close grasp view. These panels omit most S/start wide views and cannot certify matched initial camera view, all four colors visible at start, or metric novelty of held-out layouts."
+    }
+  ],
+  "reviewed_layouts": [
+    {
+      "layout": "T01-RB02",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-RB02.jpg",
+      "blob_sha": "d432d28bf9af9f11bccd6a38606b901696266e33",
+      "episodes": [
+        {
+          "run_id": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+          "target": "blue",
+          "source": "20261124_194909_426207_teach"
+        },
+        {
+          "run_id": "717893f2-9305-47bc-83b6-e70ae35561df",
+          "target": "red",
+          "source": "20261124_195138_013150_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-RB03",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-RB03.jpg",
+      "blob_sha": "ca21073090f159967497e558a3e4fa03ac604327",
+      "episodes": [
+        {
+          "run_id": "b223b5b5-fb17-4566-8473-11218d5f1773",
+          "target": "blue",
+          "source": "20261124_195452_269290_teach"
+        },
+        {
+          "run_id": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+          "target": "red",
+          "source": "20261124_195553_081843_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-RB04",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-RB04.jpg",
+      "blob_sha": "c23b0b7f83f7612c229c50ca96b2c6d28759eed3",
+      "episodes": [
+        {
+          "run_id": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4",
+          "target": "blue",
+          "source": "20261124_200643_685888_teach"
+        },
+        {
+          "run_id": "37464501-505a-4d02-9817-25f61afb6bb7",
+          "target": "red",
+          "source": "20261124_200830_113987_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-RB05",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-RB05.jpg",
+      "blob_sha": "74ffd6aacc314f4c91ff8e9704a88ea6e0ea5489",
+      "episodes": [
+        {
+          "run_id": "61effaf4-6147-4b41-9dc4-70996154ad3a",
+          "target": "blue",
+          "source": "20261124_201637_763342_teach"
+        },
+        {
+          "run_id": "887e1721-be63-490b-8ceb-54ca6152cebf",
+          "target": "red",
+          "source": "20261124_201728_036539_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-FOUR01",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-FOUR01.jpg",
+      "blob_sha": "7b29ee21ccb862ccd591991325bd097a7252d070",
+      "episodes": [
+        {
+          "run_id": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7",
+          "target": "blue",
+          "source": "20261124_201937_300475_teach"
+        },
+        {
+          "run_id": "39fe949a-84d7-409f-be86-d404efd3c23b",
+          "target": "red",
+          "source": "20261124_202022_079114_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-FOUR02",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-FOUR02.jpg",
+      "blob_sha": "5db86568fa67714a2f17b13d18799af4bbefa574",
+      "episodes": [
+        {
+          "run_id": "042162c5-879f-40ab-aed0-da0e96ee2e43",
+          "target": "blue",
+          "source": "20261124_202246_667455_teach"
+        },
+        {
+          "run_id": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e",
+          "target": "red",
+          "source": "20261124_202338_647362_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-RB06",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-RB06.jpg",
+      "blob_sha": "04cc1b8b3c3ac354d200e5e0b98a4902781b7104",
+      "episodes": [
+        {
+          "run_id": "9c25df99-a407-43e9-9934-9094f5546fe4",
+          "target": "blue",
+          "source": "20261124_202534_035193_teach"
+        },
+        {
+          "run_id": "cca037de-afb3-4283-8331-4065296f5aed",
+          "target": "red",
+          "source": "20261124_202623_094718_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-FOUR03",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-FOUR03.jpg",
+      "blob_sha": "02084fc361cfe5c8a2e53c1feb9a93814274ada6",
+      "episodes": [
+        {
+          "run_id": "16bd17ed-665e-4647-95cd-261e092d78fc",
+          "target": "blue",
+          "source": "20261124_202846_732750_teach"
+        },
+        {
+          "run_id": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d",
+          "target": "red",
+          "source": "20261124_202931_937988_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-FOUR04",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-FOUR04.jpg",
+      "blob_sha": "9c472f29343879a0b9205e2b00847b29cb273ba6",
+      "episodes": [
+        {
+          "run_id": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1",
+          "target": "blue",
+          "source": "20261124_203126_049408_teach"
+        },
+        {
+          "run_id": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710",
+          "target": "red",
+          "source": "20261124_203206_595966_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T01-FOUR05",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T01-FOUR05.jpg",
+      "blob_sha": "90d049293f675e9738697f9855ebfc4a9805a724",
+      "episodes": [
+        {
+          "run_id": "432f6292-6efb-4a42-b34e-bb84a7bdd939",
+          "target": "blue",
+          "source": "20261124_203342_223606_teach"
+        },
+        {
+          "run_id": "f96c235b-e201-4640-88d1-79d4050a6af9",
+          "target": "red",
+          "source": "20261124_203428_155478_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-RB01",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-RB01.jpg",
+      "blob_sha": "e559b163c21c59bf49df71cdb809c7063ebe4ef9",
+      "episodes": [
+        {
+          "run_id": "207aab62-a04b-495f-8b61-8badeed1ba80",
+          "target": "blue",
+          "source": "20261124_203619_647878_teach"
+        },
+        {
+          "run_id": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478",
+          "target": "red",
+          "source": "20261124_203704_496087_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-FOUR01",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-FOUR01.jpg",
+      "blob_sha": "18dbce1f7306bb4579c783421ee7631e9572a376",
+      "episodes": [
+        {
+          "run_id": "105778ea-7096-4906-9271-a4d7758651ad",
+          "target": "blue",
+          "source": "20261124_203846_382434_teach"
+        },
+        {
+          "run_id": "00b3b58d-2650-44ed-a3aa-640502c5e9c6",
+          "target": "red",
+          "source": "20261124_203929_187001_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-RB02",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-RB02.jpg",
+      "blob_sha": "727e7451830330af0d647cba8baec28aa9f7bf70",
+      "episodes": [
+        {
+          "run_id": "53006248-740a-4d6e-a129-366be6ec6f0b",
+          "target": "blue",
+          "source": "20261124_204110_084736_teach"
+        },
+        {
+          "run_id": "52727b70-342f-42ce-96c6-2dbb625905b1",
+          "target": "red",
+          "source": "20261124_204149_713454_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-FOUR02",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-FOUR02.jpg",
+      "blob_sha": "0360deb40c12ee0930e47aef43ffc2459674e45d",
+      "episodes": [
+        {
+          "run_id": "c8e5e43d-5456-4713-ae92-c2d7397dd78c",
+          "target": "blue",
+          "source": "20261124_204338_501930_teach"
+        },
+        {
+          "run_id": "ed02e09a-84fb-44e5-b008-12b1147644e5",
+          "target": "red",
+          "source": "20261124_204421_893178_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-RB03",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-RB03.jpg",
+      "blob_sha": "cf1d08a8e360849f43620d191cdaa0bc0a8747f8",
+      "episodes": [
+        {
+          "run_id": "b11a912b-5190-4a9b-bb8e-978575cab3fa",
+          "target": "blue",
+          "source": "20261124_204557_658991_teach"
+        },
+        {
+          "run_id": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87",
+          "target": "red",
+          "source": "20261124_204632_507958_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-FOUR03",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-FOUR03.jpg",
+      "blob_sha": "a6a02122de9883994a26efebcb3eeb548373ae60",
+      "episodes": [
+        {
+          "run_id": "9839e690-e73d-4442-9ca5-e3d678fb6fc6",
+          "target": "blue",
+          "source": "20261124_205048_671599_teach"
+        },
+        {
+          "run_id": "5b5d9adb-c6a1-4022-813d-4105689baa30",
+          "target": "red",
+          "source": "20261124_205124_261992_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-RB04",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-RB04.jpg",
+      "blob_sha": "d5c5cd4e48326e5a3818233e3bcb718735635798",
+      "episodes": [
+        {
+          "run_id": "13499234-8811-42b0-bd23-c14b82887fbf",
+          "target": "blue",
+          "source": "20261124_205429_651375_teach"
+        },
+        {
+          "run_id": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90",
+          "target": "red",
+          "source": "20261124_205520_188316_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-FOUR04b",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-FOUR04b.jpg",
+      "blob_sha": "239d39a57e989a7eac7958873721d494c12d0be5",
+      "episodes": [
+        {
+          "run_id": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05",
+          "target": "blue",
+          "source": "20261124_210211_167267_teach"
+        },
+        {
+          "run_id": "c0e8c866-57cf-4483-832f-243e1f985d0b",
+          "target": "red",
+          "source": "20261124_210601_515012_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-RB05",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-RB05.jpg",
+      "blob_sha": "a01824b4c7bad0c745bdf09d92dab2610bc650a2",
+      "episodes": [
+        {
+          "run_id": "93678887-7e7b-4ca8-99ba-c286c19f82a2",
+          "target": "blue",
+          "source": "20261124_210804_286239_teach"
+        },
+        {
+          "run_id": "fad8a140-43a0-4c2b-bdf5-c613ec063312",
+          "target": "red",
+          "source": "20261124_210931_408092_teach"
+        }
+      ]
+    },
+    {
+      "layout": "T02-FOUR05",
+      "split": "train",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/T02-FOUR05.jpg",
+      "blob_sha": "9edc89edba001992a49af97e4b54f2678d4329b2",
+      "episodes": [
+        {
+          "run_id": "8b6a6279-1201-4fa6-831e-b2e9db810a0d",
+          "target": "blue",
+          "source": "20261124_211136_160803_teach"
+        },
+        {
+          "run_id": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24",
+          "target": "red",
+          "source": "20261124_211228_924725_teach"
+        }
+      ]
+    },
+    {
+      "layout": "V01-FOUR01",
+      "split": "validation",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/V01-FOUR01.jpg",
+      "blob_sha": "152e9a4bea9605a0c04fd3c1cef33410fce31778",
+      "episodes": [
+        {
+          "run_id": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+          "target": "red",
+          "source": "20261124_195915_083553_teach"
+        },
+        {
+          "run_id": "f208d430-c112-4e1d-9466-07222a772f19",
+          "target": "blue",
+          "source": "20261124_195953_071901_teach"
+        }
+      ]
+    },
+    {
+      "layout": "V01-RB01",
+      "split": "validation",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/V01-RB01.jpg",
+      "blob_sha": "0cfc91959333419cf193f38d8ba560725f4306c1",
+      "episodes": [
+        {
+          "run_id": "1dc09f10-4d9f-45c0-b442-425b8a51aae1",
+          "target": "blue",
+          "source": "20261124_211504_208526_teach"
+        },
+        {
+          "run_id": "1d09fdd6-0be8-443f-9d15-56a291cd25e2",
+          "target": "red",
+          "source": "20261124_211556_290061_teach"
+        }
+      ]
+    },
+    {
+      "layout": "V01-FOUR02",
+      "split": "validation",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/V01-FOUR02.jpg",
+      "blob_sha": "a555fcebdccccaab2e16779583afd92a3743fd43",
+      "episodes": [
+        {
+          "run_id": "fb745413-baa5-471e-ad05-7bc43fa395d4",
+          "target": "blue",
+          "source": "20261124_211834_364880_teach"
+        },
+        {
+          "run_id": "3f452222-b445-4590-a9d9-2c81f285993b",
+          "target": "red",
+          "source": "20261124_211936_385688_teach"
+        }
+      ]
+    },
+    {
+      "layout": "V01-RB02",
+      "split": "validation",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/V01-RB02.jpg",
+      "blob_sha": "5dc27f631e21515a3bbc7223add66e9c9c200401",
+      "episodes": [
+        {
+          "run_id": "4df32d62-b671-408e-aef6-924981243b90",
+          "target": "blue",
+          "source": "20261124_212120_787216_teach"
+        },
+        {
+          "run_id": "27e15db2-c848-41a4-8b2a-a7fa5388fda3",
+          "target": "red",
+          "source": "20261124_212206_954693_teach"
+        }
+      ]
+    },
+    {
+      "layout": "V01-FOUR03",
+      "split": "validation",
+      "image_path": "results/pi-readiness/20261124/blue_red_50_review_frames/V01-FOUR03.jpg",
+      "blob_sha": "37791a0ba6903e5b7cafa8c4903bd62b4e6fdcd0",
+      "episodes": [
+        {
+          "run_id": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b",
+          "target": "blue",
+          "source": "20261124_212402_631042_teach"
+        },
+        {
+          "run_id": "21c757b1-825b-490d-955f-f8aeeadad81a",
+          "target": "red",
+          "source": "20261124_212447_218444_teach"
+        }
+      ]
+    }
+  ],
+  "source_reports": [
+    "docs/PI_BLUE_RED_50_CHAT_AUDIT.md",
+    "results/pi-readiness/20261124/blue_red_50_review_frames/README.md",
+    "results/pi-readiness/20261124/blue_red_50_visual.json",
+    "results/pi-readiness/20261124/blue_red_50_quality_report_zh.md"
+  ]
+}

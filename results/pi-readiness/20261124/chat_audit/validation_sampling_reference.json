@@ -1,0 +1,127 @@
+{
+  "scope": "actual released V01 numerical arrays; no trained model or GPU inference",
+  "source_commit": "79daaacb8d5c23fed97d32f9d69bbba2221dc81c",
+  "release_tag": "pi-real-blue-red-50-20261124",
+  "local_numeric_root": "/workspace/scratch/1c7d09da5651/pi50-audit/reviewer",
+  "source_files": [
+    "index.json",
+    "<episode>/valid_action_starts.npy",
+    "<episode>/state.npy",
+    "<episode>/actions.npy"
+  ],
+  "split": "validation",
+  "sampling": {
+    "rule": "choose np.linspace(0,len(valid_action_starts)-1,min(64,len(valid_action_starts)),dtype=np.int64) and map those positions through valid_action_starts",
+    "windows_per_episode": 64,
+    "action_horizon": 10,
+    "tail_rule": "repeat final action row at episode boundary"
+  },
+  "motion_definition": {
+    "joint_deg": 0.5,
+    "gripper_mm": 1,
+    "rule": "moving if any target in the 10-step chunk differs from current measured state by at least either threshold",
+    "purpose": "descriptive evaluation stratum, not an added motion limit"
+  },
+  "baseline": "repeat the current 7D measured state for all 10 future targets",
+  "aggregation": "equal weight per episode; joint MAE averages six joint dimensions and all ten steps; gripper MAE uses SDK width",
+  "total_windows": 640,
+  "moving": 340,
+  "low_motion": 300,
+  "low_motion_fraction": 0.46875,
+  "macro_hold_joint_mae_deg": 0.8047041654586792,
+  "macro_hold_gripper_mae_mm": 1.8989843726158142,
+  "episodes": [
+    {
+      "episode": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+      "target_color": "red",
+      "sampled_windows": 64,
+      "moving": 32,
+      "low_motion": 32,
+      "hold_baseline_joint_mae_deg": 0.819294810295105,
+      "hold_baseline_gripper_mae_mm": 0.6818748712539673
+    },
+    {
+      "episode": "f208d430-c112-4e1d-9466-07222a772f19",
+      "target_color": "blue",
+      "sampled_windows": 64,
+      "moving": 26,
+      "low_motion": 38,
+      "hold_baseline_joint_mae_deg": 0.3998926281929016,
+      "hold_baseline_gripper_mae_mm": 1.3715626001358032
+    },
+    {
+      "episode": "1dc09f10-4d9f-45c0-b442-425b8a51aae1",
+      "target_color": "blue",
+      "sampled_windows": 64,
+      "moving": 26,
+      "low_motion": 38,
+      "hold_baseline_joint_mae_deg": 0.7863940000534058,
+      "hold_baseline_gripper_mae_mm": 2.0514063835144043
+    },
+    {
+      "episode": "1d09fdd6-0be8-443f-9d15-56a291cd25e2",
+      "target_color": "red",
+      "sampled_windows": 64,
+      "moving": 37,
+      "low_motion": 27,
+      "hold_baseline_joint_mae_deg": 0.38070183992385864,
+      "hold_baseline_gripper_mae_mm": 2.704218626022339
+    },
+    {
+      "episode": "fb745413-baa5-471e-ad05-7bc43fa395d4",
+      "target_color": "blue",
+      "sampled_windows": 64,
+      "moving": 23,
+      "low_motion": 41,
+      "hold_baseline_joint_mae_deg": 0.782382071018219,
+      "hold_baseline_gripper_mae_mm": 1.2596874237060547
+    },
+    {
+      "episode": "3f452222-b445-4590-a9d9-2c81f285993b",
+      "target_color": "red",
+      "sampled_windows": 64,
+      "moving": 39,
+      "low_motion": 25,
+      "hold_baseline_joint_mae_deg": 1.061838984489441,
+      "hold_baseline_gripper_mae_mm": 3.3232815265655518
+    },
+    {
+      "episode": "4df32d62-b671-408e-aef6-924981243b90",
+      "target_color": "blue",
+      "sampled_windows": 64,
+      "moving": 39,
+      "low_motion": 25,
+      "hold_baseline_joint_mae_deg": 0.7523834109306335,
+      "hold_baseline_gripper_mae_mm": 1.8456249237060547
+    },
+    {
+      "episode": "27e15db2-c848-41a4-8b2a-a7fa5388fda3",
+      "target_color": "red",
+      "sampled_windows": 64,
+      "moving": 29,
+      "low_motion": 35,
+      "hold_baseline_joint_mae_deg": 0.7497621178627014,
+      "hold_baseline_gripper_mae_mm": 2.65874981880188
+    },
+    {
+      "episode": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b",
+      "target_color": "blue",
+      "sampled_windows": 64,
+      "moving": 47,
+      "low_motion": 17,
+      "hold_baseline_joint_mae_deg": 0.8972650170326233,
+      "hold_baseline_gripper_mae_mm": 1.64328134059906
+    },
+    {
+      "episode": "21c757b1-825b-490d-955f-f8aeeadad81a",
+      "target_color": "red",
+      "sampled_windows": 64,
+      "moving": 42,
+      "low_motion": 22,
+      "hold_baseline_joint_mae_deg": 1.4171267747879028,
+      "hold_baseline_gripper_mae_mm": 1.4501562118530273
+    }
+  ],
+  "model_evaluation_performed": false,
+  "success_rate": null
+}

@@ -5,9 +5,9 @@
   "gripper_basis": "piper_h_sdk_width_m_v1",
   "policy_hz": 20,
   "action_horizon": 10,
-  "experiment_name": "dc1_wrist_direct_blue_red_v1",
+  "experiment_name": "dc1_wrist_blue_red50_full_20261124_v1",
   "run_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/outputs",
-  "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_v1",
+  "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1",
   "openpi_root": "/root/autodl-tmp/robot-repro/pi05/openpi",
   "base_params": "/root/autodl-tmp/robot-repro/assets/openpi-assets/checkpoints/pi05_base/params",
   "training": {
@@ -19,12 +19,16 @@
     "seed": 42,
     "log_interval": 50,
     "save_interval": 1000,
-    "keep_period": null,
+    "keep_period": 5000,
     "resume": false,
     "warmup_steps": 500,
     "peak_lr": 0.00001,
     "decay_steps": 10000,
     "decay_lr": 0.000001
+  },
+  "data_contract": {
+    "collection_mode": "kinesthetic_manual_gripper_v1",
+    "arm_action_source": "future_measured_joint_positions",
+    "gripper_action_source": "future_measured_sdk_width"
   }
 }
-

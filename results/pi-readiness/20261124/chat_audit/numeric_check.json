@@ -1,0 +1,70 @@
+{
+  "source_commit": "79daaacb8d5c23fed97d32f9d69bbba2221dc81c",
+  "source_release": "https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-real-blue-red-50-20261124",
+  "command": "python check_released_dataset.py .",
+  "numeric_package_bytes": 4087761,
+  "scope": "All 50 released numerical episodes; no RGB arrays in this package.",
+  "exit_code": 0,
+  "result": {
+    "validation": "passed",
+    "mode": "numeric_only",
+    "by_split": {
+      "train": {
+        "episodes": 40,
+        "grid_rows": 26572,
+        "valid_rows": 22032,
+        "valid_starts": 21163,
+        "full_unpadded_starts": 20893,
+        "rgb_arrays": 0
+      },
+      "validation": {
+        "episodes": 10,
+        "grid_rows": 6788,
+        "valid_rows": 5582,
+        "valid_starts": 5406,
+        "full_unpadded_starts": 5352,
+        "rgb_arrays": 0
+      }
+    },
+    "colors": {
+      "train": {
+        "blue": 20,
+        "red": 20
+      },
+      "validation": {
+        "red": 5,
+        "blue": 5
+      }
+    },
+    "layouts": 25,
+    "partial_mark_coverage": [
+      {
+        "placement": "T01-FOUR01",
+        "target": "blue",
+        "coverage": {
+          "close": 10,
+          "open": 4
+        }
+      },
+      {
+        "placement": "T01-FOUR02",
+        "target": "blue",
+        "coverage": {
+          "close": 10,
+          "open": 4
+        }
+      },
+      {
+        "placement": "T02-RB05",
+        "target": "blue",
+        "coverage": {
+          "close": 10,
+          "open": 0
+        }
+      }
+    ]
+  },
+  "hardware_commands": 0,
+  "gpu_inference_performed": false,
+  "training_started": false
+}
