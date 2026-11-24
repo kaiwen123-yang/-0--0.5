@@ -37,6 +37,13 @@ def segment(start, end):
     return np.linspace(start, end, count + 1)
 
 
+def joint_vector(values):
+    q = np.asarray(values)
+    if q.shape != (6,) or q.dtype.kind not in "fiu" or not np.isfinite(q).all():
+        raise ValueError("Expected six finite joint coordinates")
+    return q
+
+
 def check_route(request):
     tree = ET.parse(MODEL)
     joints = []
@@ -47,6 +54,10 @@ def check_route(request):
                        joint.find("child").get("link"), origin(joint), vector))
 
     width = request["sdk_width_m"]
+    if type(width) not in (int, float) or not 0 <= width <= .1:
+        raise ValueError("Invalid SDK opening")
+    if type(request["ctrl_mode"]) is not int or request["ctrl_mode"] not in (0, 1, 2):
+        raise ValueError("Invalid starting control mode")
     openings = {"gripper": width, "gripper_joint1": width / 2, "gripper_joint2": -width / 2}
     def transforms(q):
         frames = {"world": np.eye(4)}
@@ -100,36 +111,49 @@ def check_route(request):
         return bounds, matrices
 
     def gripper_z(bounds):
-        return min(bounds[name][0][2] for name in ("gripper_base", "gripper_link1", "gripper_link2"))
+        return float(np.min([bounds[name][0][2] for name in ("gripper_base", "gripper_link1", "gripper_link2")]))
 
     a01 = json.loads((REPO / "results/pi-readiness/20261123/local_commissioning/A01_selected_retreat.json").read_text())
     pick = next(m["q"] for m in a01["marks"] if m["event"] == "close")
     references = [pick]
     if request.get("pick_q_rad") is not None:
         references.append(request["pick_q_rad"])
-    pick_z = max(gripper_z(boxes(transforms(q))[0]) for q in references)
+    pick_z = float(np.max([gripper_z(boxes(transforms(joint_vector(q)))[0]) for q in references]))
+    if not math.isfinite(pick_z):
+        raise ValueError("Invalid pick-height reference")
     mount = json.loads((AUDIT/"ssh_multiview/wrist_rgb_calibration.json").read_text())
     camera = np.asarray(mount["T_flange_camera"])
     mdh = sdk_mdh(RESEARCH/"OSCBF-research/src/pyAgxArm/pyAgxArm/api/constants.py")
-    start = np.asarray(request["start_q_rad"])
-    first = np.asarray(request["first_target_rad"])
-    goal = np.asarray(request.get("goal_q_rad", np.zeros(6)))
-    paths = [segment(start, first), segment(first, goal)]
+    start = joint_vector(request["start_q_rad"])
+    first = joint_vector(request["first_target_rad"])
+    goal = joint_vector(request.get("goal_q_rad", np.zeros(6)))
+    held = joint_vector(request["previous_target_rad"])
+    paths = {"commanded": np.concatenate([segment(start, first), segment(first, goal)])}
     # The previous CAN target can be present briefly during the control-source change.
     if request["ctrl_mode"] != 1:
-        held = np.asarray(request["previous_target_rad"])
-        if not np.array_equal(held, goal) or not np.array_equal(start, first):
-            paths.append(segment(start, held))
+        paths["previous_target"] = segment(start, held)
     hits = set()
     min_z = min_camera_z = math.inf
     fk_error = 0.
-    for q in np.concatenate(paths):
+    heights = {}
+    for q in np.concatenate(list(paths.values())):
+        key = tuple(q)
+        if key in heights:
+            continue
         frames = transforms(q)
         tf = frames["flange_link"]
-        fk_error = max(fk_error, np.abs(tf - flange(np.degrees(q), mdh)).max())
-        min_camera_z = min(min_camera_z, (tf @ camera)[2, 3])
+        fk = np.abs(tf - flange(np.degrees(q), mdh)).max()
+        camera_z = (tf @ camera)[2, 3]
+        if not np.isfinite([fk, camera_z]).all():
+            raise ValueError("Nonfinite forward kinematics")
+        fk_error = max(fk_error, fk)
+        min_camera_z = min(min_camera_z, camera_z)
         bounds, matrices = boxes(frames)
-        min_z = min(min_z, gripper_z(bounds))
+        if not np.isfinite(list(bounds.values())).all():
+            raise ValueError("Nonfinite collision geometry")
+        z = gripper_z(bounds)
+        min_z = min(min_z, z)
+        heights[key] = z - pick_z
         for (a, b), test in filters.items():
             lo, hi = bounds[a]
             other_lo, other_hi = bounds[b]
@@ -140,7 +164,14 @@ def check_route(request):
             test.Update()
             if test.GetNumberOfContacts():
                 hits.add((a, b))
-    return dict(samples=sum(map(len, paths)), mesh_pairs=len(filters), intersections=sorted(hits),
+    # Retain the ordered clearance evidence for each possible complete motion.
+    # A stationary segment or the common endpoint of two segments counts once.
+    profiles = {}
+    for name, path in paths.items():
+        distinct = np.r_[True, np.any(np.diff(path, axis=0) != 0, axis=1)]
+        profiles[name] = [heights[tuple(q)] for q in path[distinct]]
+    return dict(samples=len(heights), mesh_pairs=len(filters), intersections=sorted(hits),
+                clearance_profiles_m=profiles,
                 pick_reference_base_z_m=pick_z, gripper_min_base_z_m=min_z,
                 clearance_above_pick_m=min_z-pick_z, camera_center_min_base_z_m=min_camera_z,
                 max_fk_difference=fk_error, **request)

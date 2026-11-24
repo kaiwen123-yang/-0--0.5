@@ -40,13 +40,37 @@ def first_home_target(q, bounds):
     return first
 
 
+def clear_profile(heights, returning_home):
+    threshold = .020
+    if not isinstance(heights, list) or not heights or any(
+            type(z) not in (float, int) or not math.isfinite(z) for z in heights):
+        raise ValueError("缺少有效的离抓取位高度采样")
+    if min(heights) > threshold:
+        return True
+    if not returning_home or not 0 < heights[0] < threshold or heights[-1] < threshold:
+        return False
+    for previous, current in zip(heights, heights[1:]):
+        if previous < threshold:
+            if current <= previous:
+                return False
+        elif current < threshold:
+            return False
+    return True
+
+
 def check_sweep(run, request):
     save(run/"home_request.json", request)
     subprocess.run(["/usr/bin/python3", "-sB", str(HERE/"home_geometry.py"), str(run)],
                    env=dict(os.environ, OPENBLAS_NUM_THREADS="1"), check=True)
     route = read(run/"route_check.json")
-    if (not route["mesh_pairs"] or route["intersections"] or route["max_fk_difference"] >= 1e-4
-            or route["clearance_above_pick_m"] <= .020):
+    profiles = route["clearance_profiles_m"]
+    expected = {"commanded"} if request["ctrl_mode"] == 1 else {"commanded", "previous_target"}
+    returning_home = request.get("goal_q_rad", ZERO) == ZERO
+    if (set(profiles) != expected or type(route["mesh_pairs"]) is not int or route["mesh_pairs"] <= 0
+            or route["intersections"] != [] or not 0 <= route["max_fk_difference"] < 1e-4
+            or not all(clear_profile(p, returning_home) for p in profiles.values())
+            or any(p[0] != profiles["commanded"][0] for p in profiles.values())
+            or min(min(p) for p in profiles.values()) != route["clearance_above_pick_m"]):
         raise ValueError(f"直达零位的实测起姿几何检查未通过，见 {run/'route_check.json'}")
     return route
 
