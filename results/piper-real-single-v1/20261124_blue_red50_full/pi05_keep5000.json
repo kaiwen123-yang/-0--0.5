@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-11-25T00:23:50.269639+08:00",
+  "experiment": "dc1_wrist_blue_red50_full_20261124_v1",
+  "model_family": "pi05",
+  "last_logged_step": "Step 6650: grad_norm=0.1148, loss=0.0060, param_norm=1802.5898",
+  "progress_line": "00:23:44.996 [I] Progress on: 6.66kit/10.0kit rate:1.3it/s remaining:42:24 elapsed:1:32:51 postfix:- (566055:tqdm_logging.py:145)",
+  "finalized_checkpoints": [
+    {
+      "path": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/5000",
+      "save_completion": "00:08:19.743 [I] Finished asynchronous save (blocking + background) in 399.68 seconds to /autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/5000 (566055:async_checkpointer.py:412)"
+    },
+    {
+      "path": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/6000",
+      "save_completion": "00:21:10.586 [I] Finished asynchronous save (blocking + background) in 376.59 seconds to /autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/6000 (566055:async_checkpointer.py:412)"
+    }
+  ]
+}
