@@ -301,12 +301,27 @@ def main():
         nonlocal active
         cfg = read(session/"setup.json")
         old = read(led)
-        if not cfg.get("commissioning_only") or old["boot_id"] != BOOT:
-            raise ValueError("需要本次启动下已核实指垫端点的同一联调会话")
+        if old["boot_id"] != BOOT:
+            raise ValueError("需要本次启动下的会话")
+        formal = cfg.get("commissioning_only") is False
+        if formal:
+            require_setup(cfg)
+            prep = read(session/cfg["prepare_run"]/"run.json")
+            pending = read(source_file).get("pending")
+            taught = read(session/pending/"run.json") if pending else {}
+            if (prep.get("kind") != "prepare-formal" or not prep.get("complete")
+                    or prep.get("session_id") != cfg["session_id"] or prep.get("boot_id") != BOOT
+                    or taught.get("kind") != "teach" or taught.get("complete") is not False
+                    or taught.get("session_id") != cfg["session_id"]):
+                raise ValueError("正式重录需要已建立的起点和同会话未完成的示教")
+            report.update(use="reposition_only", gripper_basis=WIDTH, terminal_kind=RETREAT,
+                          prior_teach=taught["run_id"], prepare_run=cfg["prepare_run"])
+        elif cfg.get("commissioning_only") is not True:
+            raise ValueError("未知会话合同")
         width, force = cfg["open_m"], cfg["force_N"]
         if not .015 <= cfg["close_m"] < width <= .040 or not 0 < force <= 1:
             raise ValueError("当前开口或力度配置超出已核实范围")
-        expected = old["q"]
+        expected = prep["final"]["q_rad"] if formal else old["q"]
         if source_file.exists():
             src = read(source_file)
             if src.get("retreat_window"):
@@ -324,9 +339,12 @@ def main():
         report.update(previous_hold=old, expected_open_m=width)
         h0.calibration_arrival(dev,start)
         agree(f"已退出示教，空载，手和工具已移开。在当前实测位置保持，复开至 {width*1000:g} mm")
+        before = stats()["tx_packets"]
+        interface = int(Path("/sys/class/net/can0/ifindex").read_text())
         limits()
         q = healthy(dev,rx,grip)["q_rad"]
-        if gap(q,start) > .1:
+        if (gap(q,start) > .1 or stats()["tx_packets"] != before+6
+                or int(Path("/sys/class/net/can0/ifindex").read_text()) != interface):
             raise ValueError("确认期间当前位置发生变化")
         h0.calibration_arrival(dev,q)
         active = True
