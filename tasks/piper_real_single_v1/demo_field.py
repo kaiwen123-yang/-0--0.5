@@ -26,7 +26,7 @@ from width_contract import WIDTH, RETREAT, TERMINAL_VERSION, require_setup
 
 
 def agree(prompt):
-    if input(prompt + "  输入 YES 并回车：").strip() != "YES":
+    if input(prompt + "  输入 yes 并回车（大小写均可）：").strip().lower() != "yes":
         raise ValueError("操作员未确认")
 
 
@@ -632,6 +632,7 @@ def main(argv=None, *, finished_teach=None):
                 input()
             print('如需分段，在静止处 B 回车开始休息；保持同姿态，N 回车接续。全程继续记录。')
             boundary = None
+            j5_warned = False
             keys = ("start", "close", "open", "end")
             for event in keys:
                 if event != "start":
@@ -664,6 +665,14 @@ def main(argv=None, *, finished_teach=None):
                             st["arm_status"] not in (0, 11) or any(st["err_status"].values())):
                         raise RuntimeError(f"未收到正常示教记录状态：{st}")
                     last_drag = rx.joint_sample
+                    if formal:
+                        j5 = math.degrees(row["q_rad"][4])
+                        upper = math.degrees(cfg["bounds"][4][1])
+                        if j5 >= upper - 7.5 and not j5_warned:
+                            print(f"J5 {j5:.1f}°，接近上限 {upper:.1f}°。抬离时少翻腕。", flush=True)
+                            j5_warned = True
+                        elif j5 < upper - 10:
+                            j5_warned = False
                     key = None if event == "start" else line()
                     if key == "b" and boundary is None:
                         ident, ns, q = rx.joint_sample
