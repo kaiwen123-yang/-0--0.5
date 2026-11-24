@@ -211,7 +211,7 @@ def main(argv=None, *, finished_teach=None):
         sender.call("speed",50,lambda:dev.robot.set_speed_percent(50))
         sender.call("mode","MOVE_J",lambda:dev.robot.set_motion_mode("j"))
         time.sleep(.15)
-        speed = min(2.5, *(math.degrees(m["max_rad_s"]) for m in report["limits"]))
+        speed = min(5., *(math.degrees(m["max_rad_s"]) for m in report["limits"]))
         report.update(sdk_speed_percent=50, reference_deg_s=speed, reference_deg_s2=8)
         print(f"SDK 50% 档回零，参考最高 {speed:g}°/s，夹爪保持。P 或 E 回车会在当前参考位结束。", flush=True)
         target, completed = ramp_joints(dev,rx,grip,sender,first,ZERO,width,speed,
