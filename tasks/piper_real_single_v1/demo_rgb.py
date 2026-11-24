@@ -72,6 +72,7 @@ def main():
                                        [cv2.IMWRITE_PNG_COMPRESSION, 1]):
                         raise IOError(path)
                     w.writerow((idx, mono, unix, m.header.stamp.sec * 10**9 + m.header.stamp.nanosec))
+                    f.flush()  # E resolves the latest persisted causal RGB while recording.
                     report["written"] += 1
                     if args.one:
                         stop.set()
