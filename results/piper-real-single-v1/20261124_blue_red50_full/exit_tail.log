@@ -1,0 +1,20 @@
+2026-11-25 01:22:57.728928: W external/xla/xla/tsl/framework/bfc_allocator.cc:501] Allocator (GPU_0_bfc) ran out of memory trying to allocate 15.09GiB (rounded to 16202902784)requested by op 
+2026-11-25 01:22:57.729088: W external/xla/xla/tsl/framework/bfc_allocator.cc:512] ************_____***********************************************************************************
+E1125 01:22:57.729135  616841 pjrt_stream_executor_client.cc:3077] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 16202902744 bytes. [tf-allocator-allocation-error='']
+01:22:57.730 [I] Progress on: -/10000 rate:- remaining:? elapsed:01:26 postfix:-                  (616841:tqdm_logging.py:145)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/robot-repro/pi-blue50-source-7850136/tasks/piper_real_single_v1/train.py", line 236, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/autodl-tmp/robot-repro/pi-blue50-source-7850136/tasks/piper_real_single_v1/train.py", line 231, in main
+    train(spec)
+  File "/root/autodl-tmp/robot-repro/pi-blue50-source-7850136/tasks/piper_real_single_v1/train.py", line 156, in train
+    upstream.main(cfg)
+  File "/root/autodl-tmp/robot-repro/pi0/openpi/scripts/train.py", line 261, in main
+    train_state, info = ptrain_step(train_rng, train_state, batch)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 16202902744 bytes.
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

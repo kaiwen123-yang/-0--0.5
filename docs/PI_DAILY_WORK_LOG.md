@@ -690,6 +690,12 @@ D57 的 π0.5 已在 21,163 个训练起点上生成独立归一化。总参数 
 
 J1 至 J6 的 MAE（°）依次为 0.2708、0.8489、1.0964、0.9661、1.6157、0.2315，保持基线为 0.2379、1.5364、1.1961、0.4402、1.2412、0.1764。这些值衡量离线动作误差。随后执行 π0 独立训练及 V01。 [全部保留 checkpoint 的分组指标](../results/piper-real-single-v1/20261124_blue_red50_full/pi05_summary.json) · [候选逐条结果](../results/piper-real-single-v1/20261124_blue_red50_full/pi05_candidate.json)
 
+
+<!-- dc1_wrist_blue_red50_full_20261124_v1 pi0_startup_stopped -->
+### 11/25 01:23　蓝红全参流水线结束，π0 startup 缺少结果
+
+D57 入口退出码为 `1`。缺少 `pi0_startup` 的正式回执。下一步检查该阶段的真实错误并从已完成阶段接续。[退出日志](../results/piper-real-single-v1/20261124_blue_red50_full/exit_tail.log)
+
 ## 固定证据索引
 
 后续新增日期正文放在本索引之前，按时间递增。本节链接是历史证据，保留固定版本。

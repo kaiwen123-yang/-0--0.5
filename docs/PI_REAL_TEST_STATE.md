@@ -1,5 +1,10 @@
 # π 实机当前状态
 
+<!-- dc1_wrist_blue_red50_full_20261124_v1 pi0_startup_stopped -->
+## 11/25 01:23　蓝红全参流水线结束，π0 startup 缺少结果
+
+D57 入口退出码为 `1`。缺少 `pi0_startup` 的正式回执。下一步检查该阶段的真实错误并从已完成阶段接续。[退出日志](../results/piper-real-single-v1/20261124_blue_red50_full/exit_tail.log)
+
 <!-- dc1_wrist_blue_red50_full_20261124_v1 pi05_validation -->
 ## 11/25 01:20　π0.5 蓝红全参训练与 V01 验证完成
 
