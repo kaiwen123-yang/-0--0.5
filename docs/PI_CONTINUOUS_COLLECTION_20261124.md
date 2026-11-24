@@ -91,7 +91,20 @@ block 正常结束已自动回零。第二次同源重复用 anchor-start 后再
 
 官方来源：[模型表](https://github.com/agilexrobotics/pyAgxArm/blob/d90e234ba8e408cfa964b38aa9120b3131fc9f85/pyAgxArm/api/constants.py)、[软件开关与默认值](https://github.com/agilexrobotics/pyAgxArm/blob/d90e234ba8e408cfa964b38aa9120b3131fc9f85/pyAgxArm/protocols/can_protocol/drivers/core/arm_driver_abstract.py)。
 
-## 已采数据能否使用
+## 训练可用性澄清：未进入当前导出器，不等于算法不能使用
+
+**11/24 后续说明。** 此前“不能参与训练”的表述过于绝对，应区分以下情况：
+
+- π0/π0.5 不要求动作标签必须有历史 CAN 发送回执。当前 host_submitted 来源要求是本项目选择的正式数据合同。基于目标位置动作表示，可以将手拖轨迹的未来实测 q 明确重建为目标动作；这是需适配时间/执行语义的工程方案，不是原始已发送命令，不能冒充后者。
+- 当前 teach 的 C/O 仅追加位置/时间标记，没有调用夹爪开合；真正开合安排在 empty/block 中。TX=0 也不能单独证明夹爪或物体从未被现场手动操作。需要核对原始夹爪反馈及 C/O 前后图像，判断是否真的抓起、搬运和释放。
+- 如果手拖确实完成了真实抓放，可以形成显式重建动作的新训练版本；不因“手拖”或“无主机发送”一概拒绝。若只是空爪走路线，只补 C/O 的 15/40 mm 标签不能补出持物图像和真实夹爪状态；仍可用于合法接近/移动子任务、仿真参考等。
+- 尾部局部 J5 越界不使整条原图和前面的合法轨迹自动作废。处理时保留原值和时间，把触及问题区的未来动作窗口排除或单独标记；只有原图/状态证明在越界前已经完成实际释放和抬离，才能形成有来源的完整任务子窗口。不能拼掉中段后伪称原始连续任务。
+- A01 已有真实成功 block、图像、状态与提交动作，是可纳入训练的数据候选。commissioning 是当时的用途标签，不是算法禁用判定。需要明确旧 SDK 宽度语义、任务指令和训练划分，以新数据版本纳入；保留原始版本及其历史资格，不能只翻标志后声称完成了转换。
+- “当前正式成功 0”是现有导出合同的接收计数，不等于所有已有记录没有训练价值。一条成功示范也可以参与优化；是否能学会蓝红混摆、新位置抓放是另外的泛化问题。
+
+依据：现行 demo_field.py / demo_export.py；A01_episode01/export_validation.json；[OpenPI 动作变换](https://github.com/Physical-Intelligence/openpi/blob/main/src/openpi/transforms.py)与[LeRobot 官方动作表示](https://huggingface.co/docs/lerobot/action_representations)。future-q 重建是基于该表示的工程推论，尚未为本项目四条原始源生成训练版本。此次只更正文档，没有修改资格字段、导出器或启动训练。
+
+## 已采数据能否使用（原正式导出合同的判定）
 
 依据 main@c9e7a52 的现场日志、A01 公开证据和当前代码。今日完整原始数据在现场，本次未逐帧重读。
 
