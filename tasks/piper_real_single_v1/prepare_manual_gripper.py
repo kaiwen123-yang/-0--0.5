@@ -8,14 +8,17 @@ from contextlib import ExitStack
 from datetime import datetime
 from pathlib import Path
 
-from demo_io import BOOT, CLOCK, Feedback, PiperDevice, Sender, gap, healthy, read, save, stats
+from demo_io import BOOT, CLOCK, Feedback, PiperDevice, Sender, gap, h0, healthy, read, save, snapshot, stats
 from width_contract import require_setup
 
 
 def main():
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument("session", type=Path)
-    session = cli.parse_args().session.resolve()
+    cli.add_argument("--in-teach", action="store_true",
+                     help="在已进入实体示教且空爪停稳时，仅放松夹爪")
+    args = cli.parse_args()
+    session = args.session.resolve()
     setup = read(session / "setup.json")
     require_setup(setup)
     if setup["session_id"] != read(session / "session.json")["session_id"]:
@@ -54,21 +57,46 @@ def main():
         dev.feedback, dev.driver_feedback = deque(maxlen=256), deque(maxlen=256)
         grip = dev.robot.init_effector("agx_gripper")
         rx = Feedback(feedback)
-        dev.robot.get_context().register_parser_packet_fun(rx.packet)
+        gripper_bits = deque(maxlen=2048)
+
+        def receive(frame):
+            rx.packet(frame)
+            if (frame.is_rx and not frame.is_remote_frame and not frame.is_error_frame
+                    and frame.arbitration_id == 0x2A8 and len(frame.data) == 8):
+                gripper_bits.append((CLOCK(), frame.timestamp, bool(frame.data[6] & 0x40)))
+
+        dev.robot.get_context().register_parser_packet_fun(receive)
         report = dict(kind="manual_gripper_prepare", use="preparation_only", session=session.name,
                       session_id=setup["session_id"], boot_id=BOOT, hold_before=held,
-                      interface_before=before, complete=False)
+                      interface_before=before, in_teach=args.in_teach, complete=False)
         count = 0
         try:
             dev.connect()
             stack.callback(dev.disconnect)
             sender = Sender(dev, grip, tx, commands)
-            first = healthy(dev, rx, grip, allow_disabled_gripper=True)
+            def read_ready_pose():
+                if not args.in_teach:
+                    row = healthy(dev, rx, grip, allow_disabled_gripper=True)
+                    if row["arm"]["motion_status"] != 0:
+                        raise RuntimeError("Arm has not reached the held CAN target")
+                    return row
+                row = snapshot(dev, rx, grip)
+                st = row["arm"]
+                flags = row["gripper"]["foc_status"]
+                issues = h0.calibration_driver_issues(dev, st, require_can=False)
+                if (st["ctrl_mode"] != 2 or st["teach_status"] != 1 or st["arm_status"] not in (0, 11)
+                        or issues or row["gripper"]["mode"] != "width"
+                        or any(v for k,v in flags.items() if k not in ("homing_status", "driver_enable_status"))):
+                    raise RuntimeError(f"Physical teaching or gripper status changed: {st}, {issues}, {flags}")
+                return row
+
+            first = read_ready_pose()
             report["initial"] = first
             time.sleep(.25)
+
             def stationary():
-                row = healthy(dev, rx, grip, allow_disabled_gripper=True)
-                if (row["arm"]["motion_status"] != 0 or gap(row["q_rad"], first["q_rad"]) > .1
+                row = read_ready_pose()
+                if (gap(row["q_rad"], first["q_rad"]) > .1
                         or gap(row["q_rad"], held["q"]) > .35):
                     raise RuntimeError("Arm has moved from its stationary hold")
                 return row
@@ -88,13 +116,26 @@ def main():
             while True:
                 row = stationary()
                 message = grip.get_gripper_status()
-                if (message and message.timestamp > sent_wall and rx.grip[0] > sent_mono
+                samples = [(ns, enabled) for ns, wire, enabled in list(gripper_bits)
+                           if ns > sent_mono and wire > sent_wall]
+                continuous_ns = 0
+                if samples and not samples[-1][1]:
+                    start_ns = samples[-1][0]
+                    for ns, enabled in reversed(samples[:-1]):
+                        if enabled or start_ns - ns > 100_000_000:
+                            break
+                        start_ns = ns
+                    continuous_ns = samples[-1][0] - start_ns
+                report.update(final=row, fresh_gripper_frames=len(samples),
+                              enabled_gripper_frames=sum(enabled for _, enabled in samples),
+                              continuous_disabled_ms=round(continuous_ns / 1e6, 3))
+                if (continuous_ns >= 350_000_000 and message and message.timestamp > sent_wall
                         and not message.msg.foc_status.driver_enable_status
                         and not row["gripper"]["foc_status"]["driver_enable_status"]):
-                    report["final"] = row
                     break
                 if time.monotonic() >= deadline:
-                    raise RuntimeError("Fresh gripper feedback did not confirm drive release")
+                    raise RuntimeError(f"Gripper release unconfirmed: {report['enabled_gripper_frames']}/"
+                                       f"{len(samples)} new frames enabled, width {row['width_m']*1000:.1f} mm")
                 time.sleep(.02)
             report.update(complete=True, actual_width_mm=round(row["width_m"] * 1000, 3))
         except BaseException as exc:

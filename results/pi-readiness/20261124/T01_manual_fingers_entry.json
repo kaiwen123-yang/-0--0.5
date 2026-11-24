@@ -1,0 +1,44 @@
+{
+  "placement": "T01-RB02",
+  "target_color": "blue",
+  "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_194154_565955_teach",
+  "run_id": "8383e19f-c935-434e-8a78-8b7d077032e3",
+  "prepare_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_194153_484685_manual_gripper_prepare",
+  "prepared_width_m": 0.047299999999999995,
+  "prepared_driver_enabled": false,
+  "prepare_host_frames": 1,
+  "marks": [],
+  "rgb": {
+    "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+    "camera_id": "CC16762023M",
+    "topic": "/wrist_camera/color/image_raw",
+    "received": 9,
+    "written": 9,
+    "queue_drops": 0,
+    "last_ns": 202072754255501,
+    "error": null
+  },
+  "recorded_gripper_frames": 214,
+  "recorded_enabled_gripper_frames": 201,
+  "outcome": "failed",
+  "recording_host_frames": 0,
+  "error": "RuntimeError('夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪')",
+  "post_button_release_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_194550_741939_manual_gripper_prepare",
+  "post_button_release_frames": 1,
+  "fresh_gripper_frames": 503,
+  "enabled_gripper_frames": 503,
+  "continuous_disabled_ms": 0.0,
+  "release_error": "RuntimeError('Gripper release unconfirmed: 503/503 new frames enabled, width 47.3 mm')",
+  "post_button_width_range_mm": [
+    47.3,
+    47.3
+  ],
+  "final_observed_q_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

@@ -693,7 +693,10 @@ def main(argv=None, *, finished_run=None):
                     and all(gap(pos, q) <= .2 for _, pos in recent))
 
         if formal:
-            print("起点就绪。单击实体示教键，绿灯常亮后停稳，等 start 已记再手拖。", flush=True)
+            if manual_gripper and snapshot(dev,rx,grip)["arm"]["teach_status"] == 1:
+                print("实体示教键已开启，请保持起点，等 start 已记再手拖。", flush=True)
+            else:
+                print("起点就绪。单击实体示教键，绿灯常亮后停稳，等 start 已记再手拖。", flush=True)
             while True:
                 st = snapshot(dev,rx,grip)["arm"]
                 if st["arm_status"] not in (0,11) or any(st["err_status"].values()):
@@ -790,11 +793,6 @@ def main(argv=None, *, finished_run=None):
                             grip_ns, width = rx.grip
                             mark.update(grip_ns=grip_ns, width_m=width)
                             if event in ("close", "open"):
-                                prior_width = report["marks"][-1]["width_m"]
-                                delta = prior_width-width if event=="close" else width-prior_width
-                                if delta < .001:
-                                    print(f"宽度 {width*1000:.1f} mm，尚无相应开合变化，已继续录制。",flush=True)
-                                    continue
                                 report["events"].append(dict(event=event, grip_ns=grip_ns, width_m=width))
                                 print(f"{event} 标记宽度 {width*1000:.1f} mm",flush=True)
                         if formal and event == "end":
