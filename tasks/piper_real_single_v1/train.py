@@ -10,6 +10,7 @@ does not schedule a second model, change allocator settings or switch to LoRA.
 """
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -17,6 +18,22 @@ import sys
 import numpy as np
 
 from .dataset import SingleCameraDataset, read_policy_timestamps, training_data_requirements
+
+
+from .width_contract import WIDTH, model_asset_id
+
+
+def split_digest(root):
+    return hashlib.sha256((root/"index.json").read_bytes() + b"\0" +
+                          (root/"alignment_manifest.json").read_bytes()).hexdigest()
+
+
+def norm_metadata(spec):
+    return dict(gripper_basis=spec["gripper_basis"], asset_id=model_asset_id(spec),
+                model_family=spec["model_family"], camera_mount=spec["camera_mount"], split="train",
+                normalization="quantile" if spec["model_family"] == "pi05" else "mean_std",
+                frozen_split_sha256=split_digest(Path(spec["dataset_root"]).expanduser()),
+                action_horizon=spec["action_horizon"], policy_hz=spec["policy_hz"])
 
 
 def prepare_stats(spec):
@@ -46,7 +63,9 @@ def prepare_stats(spec):
     destination = run / "assets" / asset_id(spec)
     normalize.save(destination, {key: value.get_statistics() for key, value in stats.items()})
     report = {
+        **norm_metadata(spec),
         "status": "PREPARED_FROM_REAL_TRAINING_EPISODES",
+        "norm_sha256": hashlib.sha256((destination/"norm_stats.json").read_bytes()).hexdigest(),
         "model_family": spec["model_family"],
         "camera_mount": spec["camera_mount"],
         "dataset_root": str(root),
@@ -61,6 +80,7 @@ def prepare_stats(spec):
         "norm_directory": str(destination),
         "training_started": False,
     }
+    (destination / "width_contract.json").write_text(json.dumps(report, indent=2) + "\n")
     (run / "normalization.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report, indent=2))
 
@@ -93,6 +113,7 @@ def train(spec):
     run.mkdir(parents=True, exist_ok=True)
     recorded_spec = {
         **spec,
+        "normalization": norm_metadata(spec),
         "resolved_paths": {
             "run_directory": str(run),
             "checkpoint_directory": str(cfg.checkpoint_dir),
@@ -121,6 +142,16 @@ def train(spec):
 
     upstream.init_train_state = record_parameter_counts
     upstream.main(cfg)
+    # Upstream serializes norm_stats inside each retained checkpoint. Bind
+    # our metadata only to checkpoints with the same actual statistics.
+    asset = run/"assets"/asset_id(spec)
+    meta = json.loads((asset/"width_contract.json").read_text())
+    expected = json.loads((asset/"norm_stats.json").read_text())
+    for norm in Path(cfg.checkpoint_dir).glob(f"*/assets/{asset_id(spec)}/norm_stats.json"):
+        if json.loads(norm.read_text()) != expected:
+            raise ValueError(f"Retained checkpoint has different normalization: {norm}")
+        binding = dict(meta, norm_sha256=hashlib.sha256(norm.read_bytes()).hexdigest())
+        norm.with_name("width_contract.json").write_text(json.dumps(binding, indent=2) + "\n")
     print(json.dumps({"status": "COMPLETED", "model_family": spec["model_family"],
                       "run_directory": str(run), "checkpoint_directory": str(cfg.checkpoint_dir)}))
 
@@ -136,8 +167,8 @@ def main():
     missing = [f"spec.{key}" for key in required if spec.get(key) is None or spec.get(key) == ""]
     if spec.get("model_family") not in ("pi0", "pi05"):
         missing.append("spec.model_family must be pi0 or pi05")
-    if spec.get("camera_mount") not in ("external_fixed", "wrist"):
-        missing.append("spec.camera_mount must be external_fixed or wrist")
+    if spec.get("gripper_basis") != WIDTH or spec.get("camera_mount") != "wrist" or spec.get("action_horizon") != 10:
+        missing.append("formal wrist spec requires explicit SDK width v1 and action_horizon=10")
     if spec.get("policy_hz") != 20:
         missing.append("spec.policy_hz must be 20 for this dataset/action contract")
     if args.stage == "train":
@@ -159,12 +190,21 @@ def main():
     family = spec["model_family"]
     mount = spec["camera_mount"]
     run = Path(spec["run_root"]).expanduser() / family / spec["experiment_name"]
-    aid = f"piper_h_{mount}_{family}_single_v1"
+    aid = model_asset_id(spec)
     missing = training_data_requirements(spec["dataset_root"], mount, spec["policy_hz"])
     if args.stage == "train":
         norm = run / "assets" / aid / "norm_stats.json"
         if not norm.is_file():
             missing.append(str(norm))
+        metadata = norm.with_name("width_contract.json")
+        if not metadata.is_file():
+            missing.append(str(metadata))
+        elif not missing:
+            saved = json.loads(metadata.read_text())
+            required = norm_metadata(spec)
+            required["norm_sha256"] = hashlib.sha256(norm.read_bytes()).hexdigest()
+            if any(saved.get(k) != v for k,v in required.items()):
+                missing.append("norm metadata, statistics or frozen split mismatch")
         if not Path(spec["base_params"]).expanduser().is_dir():
             missing.append(str(spec["base_params"]))
     if missing:

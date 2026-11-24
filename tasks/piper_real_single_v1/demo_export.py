@@ -13,6 +13,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+from width_contract import CAMERA, REPRESENTATION, RETREAT, TERMINAL_VERSION, WIDTH, require_setup, require_width
+
+
 PERIOD = 50_000_000
 PROMPT = "Pick up the block, place it in the shallow tray, release it, and retreat."
 
@@ -162,7 +165,16 @@ def analyse(path):
     if gap_ms.max() > 100:
         raise ValueError(f"RGB gap {gap_ms.max():.1f} ms")
     moving = [r["ns"] for r in goals.rows if isinstance(r["source"],list)]
-    metrics = dict(images=len(images.rows), grid_rows=len(rows), joint_groups=len(arm.rows),
+    intervals = np.diff(moving)/1e6
+    gaps = []
+    for idx in np.flatnonzero(intervals > 100):
+        start, end_ns = moving[idx:idx+2]
+        events = [r["source"] for r in openings.rows if start <= r["ns"] <= end_ns]
+        pauses = [p["key"] for p in run.get("pauses",[]) if start <= p["at_ns"] <= end_ns]
+        gaps.append(dict(after_ns=start, before_ns=end_ns, ms=float(intervals[idx]),
+                         gripper_events=events, operator_keys=pauses))
+    metrics = dict(arm_submissions=len(goals.rows),gripper_submissions=len(openings.rows),
+        reference_gaps_over_100ms=gaps, images=len(images.rows), grid_rows=len(rows), joint_groups=len(arm.rows),
         gripper_rows=len(grip.rows), host_frames=tx_count, queue_drops=status["queue_drops"],
         rejected_triplets=run["rejected_triplets"], interface_delta=delta, feedback_age_ms={
             k:distribution(v) for k,v in ages.items()}, rgb_interval_ms=distribution(gap_ms),
@@ -202,7 +214,7 @@ def review(path, failed):
             scale = 180/math.pi if i<6 else 1000
             ax.plot((t-t[0])/1e9, held[:,i]*scale, label="submitted hold", lw=1)
             ax.plot((t-t[0])/1e9, state[:,i]*scale, label="measured", lw=.8)
-            ax.set_ylabel(f"J{i+1} (deg)" if i<6 else "Opening (mm)")
+            ax.set_ylabel(f"J{i+1} (deg)" if i<6 else "SDK width (mm)")
         axes.flat[0].legend()
         axes.flat[6].set_xlabel("Time (s)")
         axes.flat[7].set_visible(False)
@@ -240,8 +252,7 @@ def export(a):
     requested = {s:getattr(a,s) or [] for s in ("commissioning","train","validation")}
     if bool(requested["commissioning"]) == bool(requested["train"] or requested["validation"]):
         raise ValueError("联调单独导出；正式集需要 train 和 validation")
-    if bool(requested["train"]) != bool(requested["validation"]):
-        raise ValueError("正式集必须指定两组")
+    formal = not requested["commissioning"]
     seen, groups, entries, manifests = set(), {}, [], []
     out = a.output.resolve()
     if out.exists():
@@ -260,10 +271,30 @@ def export(a):
                     if not rp.exists() or not load(rp).get("approved_block"):
                         continue
                     run,t,rows,states,actions,_,metrics = analyse(path)
-                    if (run["use"]=="commissioning_only") != (split=="commissioning"):
+                    if run["use"] != ("formal" if formal else "commissioning_only"):
                         continue
                     if run["kind"] != "block" or load(rp)["run_id"] != run["run_id"]:
                         raise ValueError("Review/run mismatch")
+                    contract = {}
+                    if formal:
+                        cfg = load(path.parent/"setup.json")
+                        require_setup(cfg)
+                        require_width(run)
+                        taught = load(Path(run["source_directory"])/"run.json")
+                        end = load(Path(run["source_directory"])/"task_end.json")
+                        if (run.get("split") != split or cfg["split"] != split
+                                or run["session_id"] != cfg["session_id"] or run.get("pauses")
+                                or run.get("terminal_kind") != RETREAT or run.get("retreat_window")
+                                or run.get("terminal_version") != TERMINAL_VERSION
+                                or not taught["complete"] or taught["kind"] != "teach"
+                                or taught["run_id"] != run["source_trajectory_id"]
+                                or run.get("task_end") != end or end != taught["marks"][-1]
+                                or taught["placement"] != run["placement"]
+                                or taught["session_id"] != cfg["session_id"]
+                                or not end["operator_empty_retreat"]):
+                            raise ValueError("Formal block, declared split or normal source E mismatch")
+                        contract = dict(gripper_basis=WIDTH, terminal_kind=RETREAT,
+                                        terminal_version=TERMINAL_VERSION, training_eligible=True, split=split)
                     ident = run["run_id"]
                     if ident in seen:
                         raise ValueError("Duplicate episode")
@@ -298,16 +329,20 @@ def export(a):
                         pad_measurements=run.get("pad_measurements",[]),
                         source_trajectory_id=run["source_trajectory_id"], session_id=run["session_id"],
                         placement_id=run["placement"], sources=f"{ident}/row_sources.jsonl"))
-                    entries.append(dict(directory=ident,frames=len(rows),split=split,prompt=PROMPT))
+                    if formal:
+                        manifests[-1].update(contract, installation=cfg["installation"],
+                                             task_end=end, measurement_file=cfg["measurement_file"])
+                    entries.append(dict(directory=ident,frames=len(rows),prompt=PROMPT,**({"split":split} | contract)))
                 if not eligible:
                     raise ValueError(f"No reviewed {split} successes in {item}")
-        write(tmp/"alignment_manifest.json",dict(episodes=manifests,period_ns=PERIOD,
+        dataset_contract = dict(gripper_basis=WIDTH) if formal else {}
+        write(tmp/"alignment_manifest.json",dict(**dataset_contract,episodes=manifests,period_ns=PERIOD,
               observation="last received RGB, joint group and gripper at or before t",
               action="latest coherent complete host targets at the end of (t,t+50ms]; bounded by episode",
               chunk="10 rows, repeat final row at episode boundary"))
         write(tmp/"dataset.json",dict(data_kind="real_demonstrations",camera_mount="wrist",
-              camera_id="CC16762023M",training_eligible=bool(requested["train"]),policy_hz=20,
-              action_representation="absolute_joint_targets_and_total_opening",
+              camera_id=CAMERA,training_eligible=bool(formal),policy_hz=20,**dataset_contract,
+              action_representation=REPRESENTATION if formal else "absolute_joint_targets_and_total_opening",
               timestamp_alignment_source="alignment_manifest.json"))
         write(tmp/"index.json",entries)
         from dataset import SingleCameraDataset

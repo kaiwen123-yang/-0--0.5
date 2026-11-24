@@ -51,6 +51,7 @@ class Feedback:
         self.csv.writerow(("kind", "id", "mono_ns", "first_ns", "wire_first_s", "wire_last_s",
                            "raw_hex", "values"))
         self.pending = []
+        self.recent_joints = deque(maxlen=256)
         self.q = self.grip = self.joint_sample = None
         self.nq = self.ng = self.bad_groups = 0
         self.error = None
@@ -92,6 +93,7 @@ class Feedback:
             self.nq += 1
             self.q = (ns, angles)
             self.joint_sample = (self.nq, ns, angles)
+            self.recent_joints.append(self.joint_sample)
             self.csv.writerow(("arm", self.nq, ns, first, wire, frame.timestamp,
                                data.hex(), json.dumps(angles)))
 
@@ -166,7 +168,11 @@ class Sender:
                 raise ValueError("Measured path outside controller or SDK bounds")
         self.call("arm", q, lambda: self.dev.robot.move_j(list(q)), source=source)
 
-    def width(self, width, force, source):
+    def width(self, width, force, source, *, gripper_basis=None):
+        if gripper_basis is not None:
+            from width_contract import WIDTH
+            if gripper_basis != WIDTH or not .015 <= width <= .040 or not 0 < force <= 1.:
+                raise ValueError("Unknown SDK width contract or target outside verified settings")
         self.call("grip", [width, force],
                   lambda: self.grip.move_gripper_m(value=width, force=force), source=source)
 

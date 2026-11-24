@@ -145,7 +145,7 @@ def main():
             raise ValueError(f"尺读 {value*1000:.2f} mm，反馈 {actual*1000:.2f} mm，相差超过 2 mm")
 
     def grip_at(width, force, label, require_width):
-        sender.width(width, force, label)
+        sender.width(width, force, label, gripper_basis=WIDTH if report.get("terminal_kind") == RETREAT else None)
         sent = CLOCK()
         deadline = time.monotonic()+2.5
         while time.monotonic() < deadline:
@@ -474,7 +474,12 @@ def main():
                         mark = dict(event=event, joint_id=ident, mono_ns=ns, q=q)
                         if formal and event == "end":
                             if any(not lo <= x <= hi for x,(lo,hi) in zip(q,cfg["bounds"],strict=True)):
-                                raise ValueError("抬离点超限")
+                                print("E 未记录，抬离姿态超限。保持被动示教，回到合法位置。",flush=True)
+                                continue
+                            recent = [(t,pos) for _,t,pos in list(rx.recent_joints) if 0 <= ns-t <= 500_000_000]
+                            if not recent or ns-recent[0][0] < 480_000_000 or any(gap(pos,q)>.2 for _,pos in recent):
+                                print("E 未记录，先在抬离位置静止一秒。",flush=True)
+                                continue
                             mark["operator_empty_retreat"] = True  # E is the explicit on-site confirmation
                         report["marks"].append(mark)
                         print(event, "已记", flush=True)
@@ -492,13 +497,13 @@ def main():
                 end.update(image_id=int(prior[-1]["index"]), image_ns=int(prior[-1]["mono_ns"]))
                 fback.flush()
                 save(run/"task_end.json",end)
-                plan_samples(run, report, report["marks"], cfg["bounds"], 2.5)
                 report["reposition_only"] = dict(after_joint_id=end["joint_id"], after_ns=end["mono_ns"],
                                                  scope="all later feedback and RGB excluded from task")
                 save(run/"reposition_only.json",report["reposition_only"])
                 print("E 已封存。保持示教灯亮，独立手拖回已核实的近起点，停稳后 Z 回车。",flush=True)
                 stable_since = None
                 anchor_q = None
+                next_display = 0.
                 while True:
                     check()
                     row = snapshot(dev,rx,grip)
@@ -512,6 +517,10 @@ def main():
                         stable_since = anchor_q = None
                     elif anchor_q is None or gap(q,anchor_q) > .1:
                         stable_since,anchor_q = CLOCK(),q
+                    if time.monotonic() >= next_display:
+                        print("重定位 J1–J6 相对起点 °", [round(math.degrees(x-y),2) for x,y in zip(q,base)],
+                              "范围内" if close else "范围外",flush=True)
+                        next_display = time.monotonic()+1
                     if line() == "z":
                         if stable_since and CLOCK()-stable_since >= 500_000_000:
                             ident, ns, q = rx.joint_sample
@@ -530,6 +539,9 @@ def main():
                        or h0.near_zero_issues(dev,released["q_rad"],st) or gap(released["q_rad"],base) > .35):
             raise ValueError("退出示教后需新鲜、健康的近起点")
         report["released"] = released
+        if formal:
+            fback.flush()
+            plan_samples(run, report, report["marks"], cfg["bounds"], 2.5)
         if stats()["tx_packets"] != report["interface_before"]["tx_packets"]:
             raise RuntimeError("手拖期间主机 TX 变化；该轨迹需排查")
         # Mark the source only after the receive-only run closed cleanly.

@@ -2,6 +2,7 @@
   "status": "PREPARATION_ONLY",
   "model_family": "pi0",
   "camera_mount": "wrist",
+  "gripper_basis": "piper_h_sdk_width_m_v1",
   "policy_hz": 20,
   "action_horizon": 10,
   "experiment_name": "dc1_wrist_pickplace_v1",

@@ -14,11 +14,36 @@ from PIL import Image
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--index", type=Path, required=True)
-    p.add_argument("--stream-index", type=int, required=True)
-    p.add_argument("--prompt", required=True)
+    source = p.add_mutually_exclusive_group(required=True)
+    source.add_argument("--index", type=Path)
+    source.add_argument("--dataset", type=Path, help="Actual exported SDK-width episode")
+    p.add_argument("--episode", help="Run UUID in the dataset index")
+    p.add_argument("--row", type=int, help="Zero-based aligned row")
+    p.add_argument("--stream-index", type=int)
+    p.add_argument("--prompt")
     p.add_argument("--output", type=Path, required=True)
     args = p.parse_args()
+    if args.dataset:
+        if __package__:
+            from .dataset import formal_entries
+            from .width_contract import CAMERA,WIDTH
+        else:
+            from dataset import formal_entries
+            from width_contract import CAMERA,WIDTH
+        entries = formal_entries(args.dataset,"wrist",20)
+        entry = next((e for e in entries if e["directory"] == args.episode), None)
+        if entry is None or args.row is None or not 0 <= args.row < entry["frames"]:
+            p.error("Select an existing --episode and --row in the formal dataset")
+        ep = args.dataset/entry["directory"]
+        rgb,state = [np.load(ep/name,mmap_mode="r",allow_pickle=False)[args.row] for name in ("camera_rgb.npy","state.npy")]
+        args.output.parent.mkdir(parents=True,exist_ok=True)
+        with args.output.open("xb") as f:
+            np.savez(f,camera_rgb=rgb,state=state,prompt=entry["prompt"],gripper_basis=WIDTH,
+                     camera_id=CAMERA,camera_mount="wrist",episode=entry["directory"],row=args.row)
+        print(args.output)
+        return
+    if args.stream_index is None or args.prompt is None:
+        p.error("--index needs --stream-index and --prompt")
     selected = None
     with args.index.open() as stream:
         for line in stream:

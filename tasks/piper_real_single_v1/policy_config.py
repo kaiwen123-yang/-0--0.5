@@ -1,7 +1,7 @@
 """One real RGB camera and two independent, fully trainable OpenPI families.
 
 Reference OpenPI: 215abfb217dbac7d5f1273282331b9b1866c0479.
-Raw state/actions are six joint radians and total gripper opening in metres.
+Raw state/actions are six joint radians and SDK feedback/absolute target width in metres.
 The model retains its pretrained 32-dimensional state/action projections.
 """
 
@@ -20,8 +20,7 @@ IMAGE_SLOTS = ("base_0_rgb", "left_wrist_0_rgb", "right_wrist_0_rgb")
 DELTA_MASK = (True, True, True, True, True, True, False)
 
 
-def asset_id(spec):
-    return f"piper_h_{spec['camera_mount']}_{spec['model_family']}_single_v1"
+from .width_contract import model_asset_id as asset_id, require_width
 
 
 def run_directory(spec):
@@ -80,6 +79,7 @@ def model_config(spec):
 
 
 def policy_metadata(spec):
+    require_width(spec)
     pi05 = spec["model_family"] == "pi05"
     return {
         "model_family": spec["model_family"],
@@ -88,8 +88,10 @@ def policy_metadata(spec):
         "camera_mount": spec["camera_mount"],
         "active_image_slot": CAMERA_SLOTS[spec["camera_mount"]],
         "real_camera_count": 1,
-        "state_units": "6 measured joint rad + measured total opening m",
-        "action_units": "6 absolute joint target rad + absolute total opening m",
+        "gripper_basis": spec["gripper_basis"],
+        "action_delta_mask": list(DELTA_MASK),
+        "state_units": "6 measured joint rad + measured SDK width m",
+        "action_units": "6 absolute joint target rad + absolute SDK width target m",
         "state_input": "discrete" if pi05 else "continuous",
         "normalization": "quantile" if pi05 else "mean_std",
         "policy_hz": 20,

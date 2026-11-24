@@ -3,7 +3,7 @@
 Expected dataset files:
   dataset.json: data_kind='real_demonstrations', camera_mount, policy_hz=20,
                 timestamp_alignment_source (actual alignment report path),
-                action_representation='absolute_joint_targets_and_total_opening'
+                gripper_basis='piper_h_sdk_width_m_v1' for formal data
   index.json: [{directory, frames, split, prompt}, ...]
   <directory>/{state,actions,camera_rgb,policy_timestamps_ns}.npy
 
@@ -21,8 +21,46 @@ from pathlib import Path
 import numpy as np
 
 
+if __package__:
+    from .width_contract import CAMERA, REPRESENTATION, RETREAT, WIDTH
+else:
+    from width_contract import CAMERA, REPRESENTATION, RETREAT, WIDTH
+
+
 POLICY_HZ = 20
 POLICY_PERIOD_NS = 50_000_000
+
+
+def formal_entries(root, camera_mount, policy_hz):
+    metadata = json.loads((root/"dataset.json").read_text())
+    if (metadata.get("training_eligible") is not True or metadata.get("gripper_basis") != WIDTH
+            or metadata.get("action_representation") != REPRESENTATION
+            or metadata.get("data_kind") != "real_demonstrations" or camera_mount != "wrist"
+            or metadata.get("camera_mount") != camera_mount or metadata.get("camera_id") != CAMERA
+            or metadata.get("policy_hz") != POLICY_HZ or policy_hz != POLICY_HZ):
+        raise ValueError("Formal data requires training eligibility and the explicit single wrist SDK width contract")
+    alignment = json.loads((root/metadata["timestamp_alignment_source"]).read_text())
+    entries = json.loads((root/"index.json").read_text())
+    by_id = {a["directory"]:a for a in alignment["episodes"]}
+    ids = [e["directory"] for e in entries]
+    if (alignment.get("gripper_basis") != WIDTH or alignment.get("period_ns") != POLICY_PERIOD_NS
+            or not entries or len(set(ids)) != len(ids) or set(ids) != set(by_id)
+            or len(alignment["episodes"]) != len(entries)):
+        raise ValueError("Index and alignment episode identities or contract differ")
+    groups = {}
+    for e in entries:
+        a = by_id[e["directory"]]
+        for r in (e,a):
+            if (r.get("training_eligible") is not True or r.get("gripper_basis") != WIDTH
+                    or r.get("terminal_kind") != RETREAT or r.get("terminal_version") != 1
+                    or r.get("split") != e["split"] or e["split"] not in ("train","validation")):
+                raise ValueError("Formal episode has incompatible eligibility, split or source contract")
+        if e["frames"] <= 0 or not (root/a["sources"]).is_file():
+            raise ValueError("Missing episode rows or their sources")
+        for key in ("session_id","placement_id","source_trajectory_id"):
+            if not a.get(key) or groups.setdefault((key,a[key]),e["split"]) != e["split"]:
+                raise ValueError(f"Missing group or cross-split reuse: {key}")
+    return entries
 
 
 def training_data_requirements(root, camera_mount, policy_hz):
@@ -31,27 +69,15 @@ def training_data_requirements(root, camera_mount, policy_hz):
     missing = [str(root / name) for name in ("dataset.json", "index.json") if not (root / name).is_file()]
     if missing:
         return missing
-    metadata = json.loads((root / "dataset.json").read_text())
-    if metadata.get("data_kind") != "real_demonstrations":
-        return ["dataset.json must identify real_demonstrations; observation_only is not labeled training data"]
-    if metadata.get("camera_mount") != camera_mount:
-        return ["dataset camera_mount does not match the selected model input slot"]
-    if metadata.get("action_representation") != "absolute_joint_targets_and_total_opening":
-        return ["actual absolute joint targets and total gripper opening labels have not been declared"]
-    if policy_hz != POLICY_HZ or metadata.get("policy_hz") != policy_hz:
-        return ["dataset.json and spec must declare policy_hz=20 after actual timestamp alignment"]
-    source = metadata.get("timestamp_alignment_source")
-    if not source:
-        return ["dataset.json lacks timestamp_alignment_source for the actual recordings"]
-    if not (root / source).is_file():
-        return [str(root / source)]
-    entries = json.loads((root / "index.json").read_text())
-    training = [entry for entry in entries if entry["split"] == "train"]
-    if not training:
-        return ["index.json contains no labeled training episodes"]
+    try:
+        entries = formal_entries(root,camera_mount,policy_hz)
+    except (ValueError, KeyError, OSError) as exc:
+        return [str(exc)]
+    if {e["split"] for e in entries} != {"train","validation"}:
+        return ["training requires both independent train and validation sessions"]
     return [
         str(root / entry["directory"] / name)
-        for entry in training
+        for entry in entries
         for name in ("state.npy", "actions.npy", "camera_rgb.npy", "policy_timestamps_ns.npy")
         if not (root / entry["directory"] / name).is_file()
     ]
@@ -72,7 +98,15 @@ class SingleCameraDataset:
         metadata = json.loads((self.root / "dataset.json").read_text())
         if policy_hz != POLICY_HZ or metadata.get("policy_hz") != policy_hz:
             raise ValueError("SingleCameraDataset requires explicit, aligned policy_hz=20 data")
-        self.entries = [entry for entry in json.loads((self.root / "index.json").read_text()) if entry["split"] == split]
+        if split in ("train","validation"):
+            entries = formal_entries(self.root,"wrist",policy_hz)
+        elif split == "commissioning" and metadata.get("training_eligible") is False:
+            entries = json.loads((self.root/"index.json").read_text())
+        else:
+            raise ValueError("Unknown split or commissioning eligibility mismatch")
+        self.entries = [e for e in entries if e["split"] == split]
+        if not self.entries:
+            raise ValueError(f"No episodes for split {split}")
         self.ends = np.cumsum([entry["frames"] for entry in self.entries])
         self.horizon = horizon
         self.cache = {}
