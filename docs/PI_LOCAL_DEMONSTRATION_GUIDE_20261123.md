@@ -1,63 +1,21 @@
 # Piper H 单腕抓放示范现场操作
 
-## 11/24 最新：连续采集、3°/s 直接自动回零
+## 11/24 晚间最新：一次手拖直接训练
 
-用户反馈 J2 重启后恢复；本次代码尚未现场执行。[最新执行提示词与数据结论](PI_CONTINUOUS_COLLECTION_20261124.md) 优先于下文历史流程。
+**从现在开始执行 [一次示范与训练完整流程](PI_DIRECT_TEACH_TRAIN_20261124.md)。** 正式 teach 的 C 实际闭合、O 实际张开、E 确认成功并自动保存，正常交接后 3°/s 直接回零；下一条 next-teach。新数据不再做 empty、block 或额外 review。
 
 ~~~bash
 D=/home/kaiwen/research/pi-single-live/tasks/piper_real_single_v1/pi_demo.sh
 Q=/home/kaiwen/research/pi-q12-data
 S=$Q/pickplace_20261124_T01
-
 bash "$D" status
 bash "$D" next-teach "$S"
-bash "$D" teach "$S" T01-RB01b --target-color blue --scene-colors blue red
+bash "$D" teach "$S" T01-RB02 --target-color blue --scene-colors blue red
 ~~~
 
-T01 已有正式会话，T01/T02=train、V01=validation。next-teach 从真实零位准备下一组，上一组完成或被拒均适用；公共起点 [0,2,−2,0,0,0]°。第一次接入读一次当前 status，不能把历史回执当当前状态。确认输入 yes，大小写均可。
+等待 start，实际夹住方块、搬入浅盘、释放、抬离，成功 E，失败 F。同布局换红目标时复原场景；换位置才换 placement。采完 export → stage-a → rsync -aL → night_train.sh；全部命令和现场 Codex 提示词见上述新文档。新代码尚未在现场执行，示教中夹爪是否接受命令由第一次正常 C/O 反馈确认。
 
-1. 起点单击实体示教键，绿灯常亮后停稳，自动开始原图记录并记 start。只教指定颜色，抓取位 C、固定浅盘释放位 O、空爪抬离并停稳处 E。
-2. 结束示教、灯灭并撤手，按现有提示确认交接后，程序自动直回六轴零位。也可先灯灭，再按终端 E 确认最后真实静止终点。无需 Z、手拖收臂或另发 home。未完成源仍保留原始记录，正常完成交接后可独立回零；故障和中断不自动继续运动。
-3. 正式 teach、empty、block 正常完成均接自动回零。回零最高参考 3°/s，SDK 50% 速度档单独记录，50 ms 插值，短暂起停沿用 8°/s²。不运行回零几何规划、20 mm 高度判据或额外途经点。回程保持夹爪当前开口，独立写 *_home，不作为任务训练动作。
-4. 目标角度仅依控制器本次回读范围；不叠加 SDK 可选表或额外角度余量。J5 历史实际回读为 ±89.5°，抬离无需继续翻腕到边界。实际旧越界样本保留，不改数值凑成功。
-
-源通过后移走任务方块，执行：
-
-~~~bash
-bash "$D" anchor-start "$S"
-bash "$D" empty "$S"
-bash "$D" review "$S"
-~~~
-
-empty 正常结束已自动回零。审核通过后，按公共起点照片复原同一布局，执行：
-
-~~~bash
-bash "$D" anchor-start "$S"
-bash "$D" block "$S" --formal --target-color blue --scene-colors blue red
-bash "$D" review "$S"
-~~~
-
-block 正常结束已自动回零；审核实际抓取颜色、是否人工介入和成败。同源第二次实物重复用 anchor-start → block → 自动回零 → review，无需重做同源空场。换颜色或位置用 next-teach，再为对应目标真实示教。红目标示例：
-
-~~~bash
-bash "$D" next-teach "$S"
-bash "$D" teach "$S" T01-RB01b --target-color red --scene-colors blue red
-~~~
-
-同布局换目标保持同 placement；交换位置后保存新布局照片并换 placement。四色混摆用 --scene-colors blue red white green，每条唯一目标分别选 blue/red/white/green。仅当新源通过后继续相应 empty、block 与审核。只有真实成功 block 进入训练。
-
-启动 T02/V01 仍用各自预分配的 session.json 和 prepare-formal，从当前实际保持所属会话交接。布局图使用 scene 保存，不覆盖已有目录。既有相机和 viewer 复用。
-
-### 数据冻结与阶段 A
-
-现场审核后，使用新的导出目录冻结全四颜色库，再筛蓝红目标。阶段 A 继承全库 split，使用相对链接复用数组。
-
-~~~bash
-bash "$D" export "$Q/four_colors_v1" --train "$Q/pickplace_20261124_T01" "$Q/pickplace_20261124_T02" --validation "$Q/pickplace_20261124_V01"
-bash "$D" stage-a "$Q/four_colors_v1" "$Q/blue_red_v1"
-~~~
-
-失败/待审核仍留 attempts；两模型分别用蓝红 train 计算 norm，沿用各自环境/基础权重/输出。完整原图、数组、日志留现场。每轮更新唯一 PI_DAILY_WORK_LOG.md。
+以下保留历史联调过程，不把旧三阶段流程作为本轮新采集前置条件。
 
 ## 11/23 A01 联调记录
 

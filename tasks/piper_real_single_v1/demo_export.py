@@ -1,4 +1,4 @@
-"""Review a whole local replay and export only observed successes on the 50 ms grid."""
+"""Export observed real grasp successes, including a single kinesthetic demonstration."""
 import argparse
 import csv
 import json
@@ -16,6 +16,7 @@ from PIL import Image
 
 from width_contract import CAMERA, REPRESENTATION, RETREAT, TERMINAL_VERSION, WIDTH, require_setup, require_width
 from color_task import BLUE_RED, COLORS, recorded_task
+from dataset import DIRECT_DATA_KIND, DIRECT_MODE, FUTURE_JOINT_SOURCE, GRIP_COMMAND_SOURCE
 
 
 PERIOD = 50_000_000
@@ -59,7 +60,7 @@ class Stream:
         return self.rows[i]
 
 
-def submissions(path):
+def submissions(path, *, require_arm=True):
     tx = defaultdict(list)
     for f in csvrows(path / "tx.csv"):
         if f["result"] != "host_submitted" or f["error"]:
@@ -93,12 +94,17 @@ def submissions(path):
     for entries in groups.values():
         for i,entry in enumerate(entries):
             entry["until"] = entries[i+1]["start"] if i+1<len(entries) else None
-    return Stream(groups["arm"]), Stream(groups["grip"]), sum(map(len,tx.values()))
+    arm = Stream(groups["arm"]) if groups["arm"] or require_arm else None
+    return arm, Stream(groups["grip"]), sum(map(len,tx.values()))
 
 
 def analyse(path):
     run = load(path/"run.json")
-    if run["kind"] not in ("block","empty") or not run["complete"] or run["stop"] != "arrived_powered_hold":
+    direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+    if direct:
+        if not run["complete"] or run["use"] != "formal":
+            raise ValueError("Not a completed direct kinesthetic demonstration")
+    elif run["kind"] not in ("block","empty") or not run["complete"] or run["stop"] != "arrived_powered_hold":
         raise ValueError("Not a normally completed task replay")
     status = load(path/"rgb_status.json")
     if (status["boot_id"] != run["boot_id"] or status["camera_id"] != "CC16762023M" or
@@ -115,9 +121,12 @@ def analyse(path):
             first=int(r["first_ns"]), wire_span_ms=(float(r["wire_last_s"])-float(r["wire_first_s"]))*1e3,
             value=json.loads(r["values"])))
     arm, grip = Stream(sources["arm"]), Stream(sources["grip"])
-    goals, openings, tx_count = submissions(path)
+    goals, openings, tx_count = submissions(path, require_arm=not direct)
+    if direct and goals is not None:
+        raise ValueError("Direct kinesthetic recording unexpectedly contains arm commands")
     delta = {k:v-run["interface_before"][k] for k,v in run["interface_after"].items()}
-    if delta["tx_packets"] != tx_count or any(delta[k] for k in ("tx_errors","rx_errors","tx_dropped","rx_dropped")):
+    counter_errors = ("tx_errors", "tx_dropped") if direct else ("tx_errors","rx_errors","tx_dropped","rx_dropped")
+    if delta["tx_packets"] != tx_count or any(delta[k] for k in counter_errors):
         raise ValueError(f"Unexpected CAN counters {delta}, sender frames {tx_count}")
     if [r["source"] for r in openings.rows] != ["initial_open","close","open"]:
         raise ValueError("Missing actual gripper sequence")
@@ -127,6 +136,14 @@ def analyse(path):
     times = np.arange(begin,end-PERIOD+1,PERIOD,dtype=np.int64)
     rows, states, actions, held = [], [], [], []
     ages = defaultdict(list)
+    bad_ranges = []
+    if direct:
+        bounds = np.asarray(run["bounds"])
+        measured = np.asarray([r["value"] for r in arm.rows])
+        bad_joint_times = arm.times[np.any((measured < bounds[:,0]) | (measured > bounds[:,1]), axis=1)]
+        for name, stream in (("image", images), ("joint", arm), ("grip", grip)):
+            for j in np.flatnonzero(np.diff(stream.times) > 100_000_000):
+                bad_ranges.append((int(stream.times[j]), int(stream.times[j+1]), name))
 
     def coherent(t):
         # A bin may end while a 3-frame update is in flight. Use the last
@@ -142,18 +159,38 @@ def analyse(path):
     for tick in times:
         t = int(tick)
         i,q,g = images.at(t),arm.at(t),grip.at(t)
+        excluded = []
         for name,r in (("image",i),("joint",q),("grip",g)):
             age = (t-r["ns"])/1e6
             ages[name].append(age)
             if age > 100:
-                raise ValueError(f"{name} stale at {t}: {age:.2f} ms")
-        held_t, hq, hg = coherent(t)
-        at,aq,ag = coherent(t+PERIOD)
-        if at <= t:
-            raise ValueError("No coherent target time in policy interval")
+                if not direct:
+                    raise ValueError(f"{name} stale at {t}: {age:.2f} ms")
+                excluded.append(f"{name}_stale")
+        if direct:
+            at = t + PERIOD
+            aq, ag = arm.at(at), openings.at(at)
+            held_t, hq, hg = t, q, openings.at(t)
+            if aq["ns"] <= t or at-aq["ns"] > 100_000_000:
+                excluded.append("no_fresh_future_joint_sample")
+            if ag["until"] is not None and ag["until"] <= at:
+                # The interval edge falls inside the next gripper transmission.
+                at = ag["until"] - 1
+                aq = arm.at(at)
+                if at <= t or aq["ns"] <= t:
+                    excluded.append("no_coherent_future_target")
+            lo, hi = np.searchsorted(bad_joint_times, [q["ns"], t+PERIOD], side="left")
+            if hi > lo or np.any(np.asarray(aq["value"]) < bounds[:,0]) or np.any(np.asarray(aq["value"]) > bounds[:,1]):
+                excluded.append("joint_outside_controller_limits")
+            excluded.extend(f"{name}_gap" for left,right,name in bad_ranges if left < t+PERIOD and right > t)
+        else:
+            held_t, hq, hg = coherent(t)
+            at,aq,ag = coherent(t+PERIOD)
+            if at <= t:
+                raise ValueError("No coherent target time in policy interval")
         states.append(q["value"]+[g["value"][0]])
         actions.append(aq["value"]+[ag["value"]])
-        held.append(hq["value"]+[hg["value"]])
+        held.append((aq if direct else hq)["value"]+[hg["value"]])
         rows.append(dict(t=t, image=i["id"], image_ns=i["ns"], image_header_ns=i["header"],
             q=q["id"], q_ns=q["ns"], grip=g["id"], grip_ns=g["ns"],
             state_age_ms=[ages[k][-1] for k in ("image","joint","grip")],
@@ -161,12 +198,21 @@ def analyse(path):
             held=[hq["id"],hg["id"]], action_at_ns=at, action=[aq["id"],ag["id"]],
             action_age_ms=[(at-aq["ns"])/1e6,(at-ag["ns"])/1e6],
             valid_from=[aq["ns"],ag["ns"]], valid_until_exclusive=[
-                min(aq["until"] or end+1,end+1),min(ag["until"] or end+1,end+1)]))
+                min(aq.get("until") or end+1,end+1),min(ag["until"] or end+1,end+1)]))
+        if direct:
+            rows[-1].update(arm_action_source=FUTURE_JOINT_SOURCE,
+                gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD,
+                future_joint_id=aq["id"], future_joint_ns=aq["ns"],
+                gripper_command_id=ag["id"], gripper_command_ns=ag["ns"],
+                held_gripper_command_id=hg["id"],
+                training_row_valid=not excluded, excluded_reasons=sorted(set(excluded)))
+            rows[-1].pop("held")
+            rows[-1]["valid_until_exclusive"][0] = None  # A future measurement is not a held arm command.
     states, actions, held = map(np.asarray,(states,actions,held))
     gap_ms = np.diff(images.times)/1e6
-    if gap_ms.max() > 100:
+    if gap_ms.max() > 100 and not direct:
         raise ValueError(f"RGB gap {gap_ms.max():.1f} ms")
-    moving = [r["ns"] for r in goals.rows if isinstance(r["source"],list)]
+    moving = [r["ns"] for r in goals.rows if isinstance(r["source"],list)] if goals else []
     intervals = np.diff(moving)/1e6
     gaps = []
     for idx in np.flatnonzero(intervals > 100):
@@ -175,7 +221,7 @@ def analyse(path):
         pauses = [p["key"] for p in run.get("pauses",[]) if start <= p["at_ns"] <= end_ns]
         gaps.append(dict(after_ns=start, before_ns=end_ns, ms=float(intervals[idx]),
                          gripper_events=events, operator_keys=pauses))
-    metrics = dict(arm_submissions=len(goals.rows),gripper_submissions=len(openings.rows),
+    metrics = dict(arm_submissions=len(goals.rows) if goals else 0,gripper_submissions=len(openings.rows),
         reference_gaps_over_100ms=gaps, images=len(images.rows), grid_rows=len(rows), joint_groups=len(arm.rows),
         gripper_rows=len(grip.rows), host_frames=tx_count, queue_drops=status["queue_drops"],
         rejected_triplets=run["rejected_triplets"], interface_delta=delta, feedback_age_ms={
@@ -184,31 +230,43 @@ def analyse(path):
         triplet_host_span_ms=distribution([(q["ns"]-q["first"])/1e6 for q in arm.rows]),
         triplet_wire_span_ms=distribution([q["wire_span_ms"] for q in arm.rows]),
         reference_interval_including_dwell_ms=distribution(np.diff(moving)/1e6),
-        max_axis_tracking_error_deg=distribution(np.max(np.abs(np.degrees(states[:,:6]-held[:,:6])),axis=1)),
-        events=run["events"], final=run["final"], pauses=run.get("pauses",[]),
-        host_submit_duration_ms=distribution([(r['ns']-r['start'])/1e6 for r in goals.rows]),
+        max_axis_tracking_error_deg=None if direct else distribution(np.max(np.abs(np.degrees(states[:,:6]-held[:,:6])),axis=1)),
+        events=run.get("events",run.get("marks",[])), final=run["final"], pauses=run.get("pauses",[]),
+        host_submit_duration_ms=distribution([(r['ns']-r['start'])/1e6 for r in goals.rows]) if goals else None,
         representative_association=dict(rows[len(rows)//2], measured=states[len(rows)//2].tolist(),
                                         submitted_next=actions[len(rows)//2].tolist(),
                                         submitted_hold=held[len(rows)//2].tolist()))
+    if direct:
+        valid = np.array([r["training_row_valid"] for r in rows], dtype=bool)
+        starts = [j for j in range(len(rows)) if valid[j:min(j+10,len(rows))].all()]
+        metrics.update(collection_mode=DIRECT_MODE, arm_action_source=FUTURE_JOINT_SOURCE,
+                       gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD,
+                       excluded_rows=int((~valid).sum()), usable_starts=len(starts), action_horizon=10,
+                       gap_ranges=[dict(start_ns=a,end_ns=b,stream=n) for a,b,n in bad_ranges],
+                       future_joint_step_deg=distribution(np.max(np.abs(np.degrees(actions[:,:6]-states[:,:6])),axis=1)))
+        example = metrics["representative_association"]
+        example["reconstructed_next_target"] = example.pop("submitted_next")
+        example["submitted_gripper_hold"] = example.pop("submitted_hold")[6]
     return run,times,rows,states,actions,held,metrics
 
 
 def review(path, failed, actual, intervention):
     path = path.resolve()
     if not (path/"run.json").exists():
-        candidates = sorted([p for p in path.iterdir() if p.name.endswith(("_empty","_block"))])
+        candidates = sorted([p for p in path.iterdir() if p.name.endswith(("_empty","_block","_teach"))])
         if not candidates:
-            raise ValueError("此会话尚无空场或实物重放")
+            raise ValueError("此会话尚无示范或重放")
         path = candidates[-1]
     print("复核", path)
     run = load(path/"run.json")
-    color_block = run["kind"] == "block" and "target_color" in run
+    direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+    color_block = (run["kind"] == "block" or direct) and "target_color" in run
     if color_block and (path/"review.json").exists():
         raise FileExistsError("该实物运行已有审核；原判定保留在 " + str(path/"review.json"))
-    result = dict(approved_empty=False, approved_block=False)
+    result = dict(approved_empty=False, approved_block=False, approved_teach=False)
     def observed_result():
         grasped = actual or input("实际夹起颜色 blue/red/white/green，抓空 none，看不清 unknown：").strip()
-        assisted = intervention or input("人工介入 yes/no，无法判定 unknown：").strip()
+        assisted = intervention or input("额外救场 yes/no，无法判定 unknown（正常手拖不计救场）：").strip()
         if grasped not in (*COLORS, "none", "unknown") or assisted not in ("yes", "no", "unknown"):
             raise ValueError("请选择实际观测值；无法判定填 unknown")
         result.update(recorded_task(run), actual_grasped_color=grasped, intervention=assisted,
@@ -231,7 +289,8 @@ def review(path, failed, actual, intervention):
         fig, axes = plt.subplots(4,2,figsize=(11,9),sharex=True)
         for i,ax in enumerate(axes.flat[:7]):
             scale = 180/math.pi if i<6 else 1000
-            ax.plot((t-t[0])/1e9, held[:,i]*scale, label="submitted hold", lw=1)
+            ax.plot((t-t[0])/1e9, held[:,i]*scale,
+                    label="future measured target" if direct and i<6 else "submitted hold", lw=1)
             ax.plot((t-t[0])/1e9, state[:,i]*scale, label="measured", lw=.8)
             ax.set_ylabel(f"J{i+1} (deg)" if i<6 else "SDK width (mm)")
         axes.flat[0].legend()
@@ -252,7 +311,7 @@ def review(path, failed, actual, intervention):
             print("核对无方块、盘沿/线缆间隙、实际开合、P/R 暂停恢复和末端保持。")
             ok = run["pause_resume_verified"]
         else:
-            print("核对夹起、转移、落盘、张开后留盘、退回，全程无人介入。")
+            print("核对夹起、转移、落盘、张开后留盘、抬离；无额外救场，正常手拖不计救场。")
             ok = not run.get("pauses")
             if color_block:
                 print("本条原始指令", run["prompt"])
@@ -272,7 +331,8 @@ def review(path, failed, actual, intervention):
                 verdict = "paused_block"
         result.update(verdict=verdict, run_id=run["run_id"], use=run["use"],
                       approved_empty=approved and run["kind"]=="empty",
-                      approved_block=approved and run["kind"]=="block")
+                      approved_block=approved and run["kind"]=="block",
+                      approved_teach=approved and direct)
         print("审核通过" if approved else "保留原始记录，未通过审核")
     except Exception as exc:
         result["error"] = repr(exc)
@@ -287,7 +347,7 @@ def review(path, failed, actual, intervention):
 
 
 def freeze_attempts(requested):
-    """Assign all formal block attempts to their session split before selecting successes."""
+    """Freeze real session groups before selecting successful direct or replay episodes."""
     attempts, groups = {}, {}
     for split in ("train", "validation"):
         if not requested[split]:
@@ -297,16 +357,17 @@ def freeze_attempts(requested):
             allocation = load(session/"session.json")
             if allocation["split"] != split:
                 raise ValueError(f"Wrong split for {session}")
-            for path in sorted(session.glob("*_block")):
+            for path in sorted([*session.glob("*_block"), *session.glob("*_teach")]):
                 run = load(path/"run.json")
-                if run["kind"] != "block" or run["use"] != "formal":
+                direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+                if (run["kind"] != "block" and not direct) or run["use"] != "formal":
                     continue
                 ident = run["run_id"]
                 if ident in attempts or run.get("session_id", allocation["session_id"]) != allocation["session_id"]:
                     raise ValueError(f"Duplicate run or session mismatch: {path}")
                 record = dict(run_id=ident, raw_directory=str(path), split=split,
                               session_id=allocation["session_id"], complete=run["complete"])
-                for key in ("placement", "source_trajectory_id", "requested_task"):
+                for key in ("placement", "source_trajectory_id", "requested_task", "collection_mode"):
                     if key in run:
                         record[key] = run[key]
                 for key in ("session_id", "placement", "source_trajectory_id"):
@@ -315,22 +376,24 @@ def freeze_attempts(requested):
                 if "target_color" in run:
                     record.update(recorded_task(run))
                 review_file = path/"review.json"
-                record.update(approved_block=False, outcome="unreviewed", actual_grasped_color="unknown",
+                record.update(approved_block=False, approved_teach=False, approved_episode=False,
+                              outcome="unreviewed", actual_grasped_color="unknown",
                               intervention="unknown")
                 if review_file.is_file():
                     reviewed = load(review_file)
                     if reviewed.get("run_id") != ident:
                         raise ValueError(f"Review does not identify this run: {path}")
-                    record.update({k:reviewed[k] for k in ("outcome", "approved_block", "verdict", "operator_verdict",
+                    record.update({k:reviewed[k] for k in ("outcome", "approved_block", "approved_teach", "verdict", "operator_verdict", "verdict_source",
                                   "actual_grasped_color", "intervention") if k in reviewed})
                     if "target_color" in run and recorded_task(reviewed) != recorded_task(run):
                         raise ValueError(f"Review changed the original task: {path}")
-                    if record["approved_block"] and (record["outcome"] != "success" or not run["complete"]
+                    record["approved_episode"] = bool(record["approved_teach"] if direct else record["approved_block"])
+                    if record["approved_episode"] and (record["outcome"] != "success" or not run["complete"]
                             or not record.get("target_color") or record["intervention"] != "no"
                             or record["actual_grasped_color"] != record["target_color"]):
                         raise ValueError(f"Success review missing matching observed result: {path}")
                 attempts[ident] = record
-    if {a["split"] for a in attempts.values() if a["approved_block"]} != {"train","validation"}:
+    if {a["split"] for a in attempts.values() if a["approved_episode"]} != {"train","validation"}:
         raise ValueError("Need reviewed formal successes in both independent splits")
     return attempts
 
@@ -357,55 +420,62 @@ def export(a):
         for split,items in requested.items():
             for item in items:
                 item = item.resolve()
-                paths = [item] if (item/"run.json").is_file() else sorted(item.glob("*_block"))
+                paths = ([item] if (item/"run.json").is_file() else
+                         sorted([*item.glob("*_block"), *item.glob("*_teach")]))
                 eligible = 0
                 for path in paths:
                     rp = path/"review.json"
                     if formal:
-                        if not attempts.get(load(path/"run.json")["run_id"], {}).get("approved_block"):
+                        if not attempts.get(load(path/"run.json")["run_id"], {}).get("approved_episode"):
                             continue
                     elif not rp.exists() or not load(rp).get("approved_block"):
                         continue
                     run,t,rows,states,actions,_,metrics = analyse(path)
+                    direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
                     if run["use"] != ("formal" if formal else "commissioning_only"):
                         continue
-                    if run["kind"] != "block" or load(rp)["run_id"] != run["run_id"]:
+                    if (run["kind"] != "block" and not direct) or load(rp)["run_id"] != run["run_id"]:
                         raise ValueError("Review/run mismatch")
                     contract = {}
                     if formal:
                         cfg = load(path.parent/"setup.json")
                         require_setup(cfg)
                         require_width(run)
-                        taught = load(Path(run["source_directory"])/"run.json")
+                        source_path = path if direct else Path(run["source_directory"])
+                        taught = run if direct else load(source_path/"run.json")
                         task = recorded_task(run)
-                        for raw_dir, raw_record in ((path, run), (Path(run["source_directory"]), taught)):
+                        for raw_dir, raw_record in ((path, run), (source_path, taught)):
                             intent_file = raw_dir/"task.json"
                             if intent_file.exists():
                                 intent = load(intent_file)
                                 if (recorded_task(intent) != task or intent["run_id"] != raw_record["run_id"]
                                         or intent["session_id"] != raw_record["session_id"]
                                         or intent["placement"] != raw_record["placement"]
-                                        or intent.get("source_trajectory_id") != raw_record.get("source_trajectory_id")):
+                                        or (not direct and intent.get("source_trajectory_id") != raw_record.get("source_trajectory_id"))):
                                     raise ValueError(f"Stored pre-action instruction differs: {intent_file}")
                         if recorded_task(taught) != task:
                             raise ValueError(f"Instruction differs from taught source: {path}")
-                        end = load(Path(run["source_directory"])/"task_end.json")
+                        end = load(source_path/"task_end.json")
                         if (run.get("split") != split or cfg["split"] != split
                                 or run["session_id"] != cfg["session_id"] or run.get("pauses")
                                 or run.get("terminal_kind") != RETREAT or run.get("retreat_window")
                                 or run.get("terminal_version") != TERMINAL_VERSION
                                 or not taught["complete"] or taught["kind"] != "teach"
                                 or taught["run_id"] != run["source_trajectory_id"]
-                                or run.get("task_end") != end or end != taught["marks"][-1]
+                                or (not direct and run.get("task_end") != end) or end != taught["marks"][-1]
                                 or taught["placement"] != run["placement"]
                                 or taught["session_id"] != cfg["session_id"]
                                 or not end["operator_empty_retreat"]):
-                            raise ValueError("Formal block, declared split or normal source E mismatch")
+                            raise ValueError("Demonstration, declared split or normal task E mismatch")
                         contract = dict(gripper_basis=WIDTH, terminal_kind=RETREAT,
                                         terminal_version=TERMINAL_VERSION, training_eligible=True, split=split)
                         attempt = attempts[run["run_id"]]
                         contract.update(task, run_id=run["run_id"], actual_grasped_color=attempt["actual_grasped_color"],
                                         intervention=attempt["intervention"], outcome=attempt["outcome"])
+                        if direct:
+                            contract.update(collection_mode=DIRECT_MODE, data_kind=DIRECT_DATA_KIND,
+                                            arm_action_source=FUTURE_JOINT_SOURCE,
+                                            gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD)
                     ident = run["run_id"]
                     if ident in seen:
                         raise ValueError("Duplicate episode")
@@ -420,6 +490,15 @@ def export(a):
                     for name,arr in (("state",states.astype("float32")),("actions",actions.astype("float32")),
                                      ("policy_timestamps_ns",t)):
                         np.save(ep/f"{name}.npy",arr,allow_pickle=False)
+                    if direct:
+                        valid = np.array([r["training_row_valid"] for r in rows], dtype=bool)
+                        starts = np.array([j for j in range(len(rows)) if valid[j:min(j+10,len(rows))].all()], dtype=np.int64)
+                        np.save(ep/"valid_action_starts.npy", starts, allow_pickle=False)
+                        contract.update(valid_action_starts="valid_action_starts.npy", usable_starts=len(starts),
+                                        action_horizon=10, excluded_rows=int((~valid).sum()))
+                        write(ep/"quality.json",metrics)
+                        if not len(starts):
+                            raise ValueError(f"No usable ten-step chunks in {path}; original recording is preserved")
                     rgb = np.lib.format.open_memmap(ep/"camera_rgb.npy",mode="w+",dtype="uint8",
                                                     shape=(len(rows),480,640,3))
                     for j,r in enumerate(rows):
@@ -448,15 +527,23 @@ def export(a):
                 if not eligible and not formal:
                     raise ValueError(f"No reviewed {split} successes in {item}")
         if formal:
-            if seen != {ident for ident, attempt in attempts.items() if attempt["approved_block"]}:
+            if seen != {ident for ident, attempt in attempts.items() if attempt["approved_episode"]}:
                 raise ValueError("Exported episodes differ from the frozen success reviews")
             write(tmp/"attempts.json",list(attempts.values()))
         dataset_contract = dict(gripper_basis=WIDTH, collection_view="all_colors") if formal else {}
+        all_direct = bool(entries) and all(e.get("collection_mode") == DIRECT_MODE for e in entries)
+        any_direct = any(e.get("collection_mode") == DIRECT_MODE for e in entries)
+        if all_direct:
+            dataset_contract.update(collection_mode=DIRECT_MODE, arm_action_source=FUTURE_JOINT_SOURCE,
+                                    gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD)
         write(tmp/"alignment_manifest.json",dict(**dataset_contract,episodes=manifests,period_ns=PERIOD,
               observation="last received RGB, joint group and gripper at or before t",
-              action="latest coherent complete host targets at the end of (t,t+50ms]; bounded by episode",
+              action=("per-episode source: direct teach uses measured joint positions at/before t+50ms as reconstructed targets, "
+                      "plus the actual submitted SDK gripper target held at that action time; replay uses actual submitted targets"
+                      if any_direct else "latest coherent complete host targets at the end of (t,t+50ms]; bounded by episode"),
+              row_selection="valid_action_starts selects whole valid chunks without removing or retiming original rows" if any_direct else "all rows",
               chunk="10 rows, repeat final row at episode boundary"))
-        write(tmp/"dataset.json",dict(data_kind="real_demonstrations",camera_mount="wrist",
+        write(tmp/"dataset.json",dict(data_kind=DIRECT_DATA_KIND if all_direct else "real_demonstrations",camera_mount="wrist",
               camera_id=CAMERA,training_eligible=bool(formal),policy_hz=20,**dataset_contract,
               action_representation=REPRESENTATION if formal else "absolute_joint_targets_and_total_opening",
               timestamp_alignment_source="alignment_manifest.json"))
@@ -464,11 +551,12 @@ def export(a):
         from dataset import SingleCameraDataset
         for split in set(e["split"] for e in entries):
             ds = SingleCameraDataset(tmp,split,10,20)
-            for entry, idx in zip(ds.entries, ds.ends-1, strict=True):
+            for entry, idx, starts in zip(ds.entries, ds.ends-1, ds.starts, strict=True):
                 row = ds[int(idx)]
                 if row["prompt"] != entry["prompt"]:
                     raise ValueError("Reader changed the episode instruction")
-                if not np.all(row["actions"] == row["actions"][0]):
+                last_frame = int(starts[-1]) if starts is not None else entry["frames"]-1
+                if last_frame == entry["frames"]-1 and not np.all(row["actions"] == row["actions"][0]):
                     raise ValueError("Reader did not pad at episode boundary")
         tmp.rename(out)
     print(out, "episodes",len(entries),"rows",sum(e["frames"] for e in entries))

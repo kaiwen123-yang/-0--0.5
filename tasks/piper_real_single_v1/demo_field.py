@@ -1,4 +1,4 @@
-"""本机首批示范。status 只接收。prepare、empty、block 只在现场终端确认后控制。"""
+"""一次手拖真实抓放：C 控制夹爪闭合，O 张开，E 成功保存并独立回零。"""
 import argparse
 import csv
 import fcntl
@@ -19,7 +19,7 @@ from uuid import uuid4
 
 from demo_io import (BOOT, CAL, CAL_SHA, CLOCK, HERE, ROOT, Feedback, PiperDevice,
                      Sender, camera, gap, h0, healthy, read, save, snapshot, stats)
-from demo_path import plan, validate_source
+from demo_path import plan
 from demo_home import ZERO, first_home_target, handoff_at_measured_pose, ramp_joints, released_pose
 from color_task import COLORS, recorded_task, task_for
 from width_contract import WIDTH, RETREAT, TERMINAL_VERSION, require_setup
@@ -45,7 +45,7 @@ def main(argv=None, *, finished_run=None):
     sub.add_parser("status", help="读取两秒实测反馈；TX=0")
     sub.add_parser("limits", help="仅查询六轴当前控制器限位")
     modes = {"return-start": "沿已执行空场目标倒序返回，保持夹爪张开", "restart-teach": "重新建立本次实测保持位并复开夹爪", "prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
-             "teach": "被动手拖记录", "empty": "移走方块后核查新路径",
+             "teach": "一次手拖真实抓放：C 闭合、O 张开、E 成功结束并回零", "empty": "移走方块后核查新路径",
              "block": "按原布局抓放一次"}
     modes.update({"home": "停止示教后经 SDK 自动回到六轴零位，独立保存回程",
                   "next-teach": "从零位准备下一组示教，适用于上一组完成或重录",
@@ -81,6 +81,8 @@ def main(argv=None, *, finished_run=None):
     task = None
     if kind in ("teach", "block"):
         formal_setup = "terminal_kind" in read(session / "setup.json")
+        if kind == "teach" and not formal_setup:
+            p.error("一次真实示范请使用已准备的 T01/T02/V01 正式会话，并指定目标与场景颜色")
         if formal_setup or a.target_color or a.scene_colors:
             if not formal_setup or not a.target_color or not a.scene_colors:
                 p.error("正式示教/实物运行须指定 --target-color 与 --scene-colors，并已完成 prepare-formal")
@@ -459,6 +461,7 @@ def main(argv=None, *, finished_run=None):
         before = stats()["tx_packets"]
         interface = int(Path("/sys/class/net/can0/ifindex").read_text())
         cfg["bounds"] = limits()
+        cfg["bounds_run"] = run.name
         save(session/"setup.json",cfg)
         q = healthy(dev,rx,grip)["q_rad"]
         if (gap(q,start) > .1 or stats()["tx_packets"] != before+6
@@ -597,17 +600,69 @@ def main(argv=None, *, finished_run=None):
             require_setup(cfg)
             previous_hold(strict=True)
             report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
-                          split=cfg["split"], initial_hold_run=read(led)["run"])
+                          split=cfg["split"], initial_hold_run=read(led)["run"], use="formal",
+                          collection_mode="kinesthetic_direct_v1",
+                          source_trajectory_id=report["run_id"], source_directory=str(run),
+                          arm_action_source="future_measured_joint_positions",
+                          gripper_action_source="actual_submitted_sdk_width_target",
+                          future_offset_ns=50_000_000, bounds=cfg["bounds"],
+                          bounds_run=cfg.get("bounds_run",cfg["prepare_run"]),
+                          events=[], gripper_command_feedback=[])
             report.update(task)
             save(run/"task.json", dict(run_id=report["run_id"], session_id=cfg["session_id"],
                                        placement=a.placement, **task))
             print(a.placement, task["scene_colors"], task["prompt"], flush=True)
-            print("看腕图，核对每色各一块、目标及接近区域清楚可达。仅教指定目标，C 抓取位、O 释放位、E 空爪抬离；每处静止一秒。")
-            agree("已讲解按键、核对新布局和腕图，准备被动示教")
+            print("一次录成训练示范：C 实际闭合，夹住指定方块后手拖搬运；O 实际张开，把方块放进浅盘。")
+            print("抬离后 E 表示指定颜色已成功入盘、无额外救场；失败用 F 保存。手拖本身不算人工救场。")
+            agree("核对目标、布局和腕图，开始一次真实手拖抓放")
         save(source_file, dict(pending=run.name))
         save(clear_file, dict(pending=run.name))
         stopped_during = None
         pending_end = None
+
+        def teach_gripper(event, check):
+            # Only 0x159 is sent here. The six arm joints stay in physical teaching mode.
+            before = snapshot(dev,rx,grip)
+            width = cfg["close_m"] if event == "close" else cfg["open_m"]
+            sender.width(width,cfg["force_N"],event,gripper_basis=WIDTH)
+            sent = CLOCK()
+            deadline = time.monotonic()+2.5
+            last_width = None
+            stable_since = None
+            stable_width = None
+            while time.monotonic() < deadline:
+                check()
+                row = snapshot(dev,rx,grip)
+                st = row["arm"]
+                flags = row["gripper"]["foc_status"]
+                if (st["ctrl_mode"] != 2 or st["teach_status"] != 1 or st["arm_status"] not in (0,11)
+                        or any(st["err_status"].values())
+                        or any(v for k,v in flags.items() if k not in ("driver_enable_status","homing_status"))):
+                    raise RuntimeError(f"夹爪动作期间示教/驱动状态改变：{st}, {flags}")
+                measured = row["width_m"]
+                moved = (before["width_m"]-measured >= .001) if event == "close" else abs(measured-width) <= .002
+                fresh = rx.grip[0] > sent+300_000_000 and flags["driver_enable_status"]
+                if fresh and moved:
+                    if stable_since is None or abs(measured-stable_width) > .0005:
+                        stable_since = time.monotonic()
+                        stable_width = measured
+                    elif stable_since is not None and time.monotonic()-stable_since >= .15:
+                        item = dict(event=event, mono_ns=row["mono_ns"], target_m=width,
+                                    measured_m=measured, before_m=before["width_m"],
+                                    feedback_confirmed=True, command_id=sender.command_id)
+                        report["gripper_command_feedback"].append(item)
+                        if event in ("close","open"):
+                            report["events"].append(item)
+                        print(event,"已实际执行，目标/反馈 mm",round(width*1000,2),
+                              round(measured*1000,2),flush=True)
+                        return
+                else:
+                    stable_since = None
+                last_width = measured
+                time.sleep(.02)
+            report["gripper_command_not_executed"] = dict(event=event,target_m=width,
+                before_m=before["width_m"], last_measured_m=last_width)
+            raise RuntimeError("手拖中已发送夹爪 0x159，但未收到实际开合反馈；保留记录，不自动切六轴控制模式")
 
         def still_and_in_bounds(sample):
             _, ns, q = sample
@@ -631,6 +686,8 @@ def main(argv=None, *, finished_run=None):
             report["before_drag_recording"] = dict(joint_groups=rx.nq, gripper_frames=rx.ng)
             rx.write_samples = True
         with camera(run) as check:
+            if formal:
+                teach_gripper("initial_open",check)
             if not formal:
                 print("腕图记录已启动。在起点单击实体键，确认绿灯常亮，然后回车。")
                 input()
@@ -641,8 +698,11 @@ def main(argv=None, *, finished_run=None):
                 if event != "start":
                     required = {"close":"c","open":"o","end":"e"}[event]
                     if formal and event == "end":
-                        print("空爪抬离后停稳一秒，在终点单击结束示教并撤手。可先用 E 标记终点。")
-                    print(f"{event}: 静止至少 1 秒，输入 {required.upper()} 并回车，继续静止 1 秒。", flush=True)
+                        print("放好目标色方块并空爪抬离：E 成功 / F 失败，随后结束实体示教、撤手并自动回零。")
+                    elif formal:
+                        print(f"{required.upper()} 回车将实际{'闭合夹住方块' if event=='close' else '张开放下方块'}；停稳后操作。",flush=True)
+                    else:
+                        print(f"{event}: 静止至少 1 秒，输入 {required.upper()} 并回车，继续静止 1 秒。", flush=True)
                 next_display = 0.
                 last_drag = None
                 while True:
@@ -683,7 +743,7 @@ def main(argv=None, *, finished_run=None):
                             print("同姿态接续，继续手拖。", flush=True)
                         time.sleep(.02)
                         continue
-                    if event == "start" or key == required:
+                    if event == "start" or key == required or (formal and event == "end" and key == "f"):
                         if (event == "start" or (event == "end" and not formal)) and gap(row["q_rad"],base) > .35:
                             if event == "start":
                                 raise ValueError("示教起点偏离已建立的保持位")
@@ -697,9 +757,14 @@ def main(argv=None, *, finished_run=None):
                                 print("E 未记录：在关节限位内的抬离位置停稳一秒。",flush=True)
                                 continue
                             mark["operator_empty_retreat"] = True  # E is the explicit on-site confirmation
+                            mark["operator_task_success"] = key == "e"
+                            report["operator_outcome"] = "success" if key == "e" else "failed"
                         report["marks"].append(mark)
                         if formal and event == "start":
+                            report["grid_start_ns"] = ns
                             time.sleep(.55)
+                        elif formal and event in ("close","open"):
+                            teach_gripper(event,check)
                         print(event, "已记", flush=True)
                         break
                     time.sleep(.02)
@@ -731,11 +796,13 @@ def main(argv=None, *, finished_run=None):
             released_pose(dev,rx,grip)
             termios.tcflush(sys.stdin, termios.TCIFLUSH)
             if pending_end is not None:
-                key = input("已灯灭。撤手、确认回程净空后，E 回车确认抬离终点并自动回零；H 仅回零：").strip().lower()
-                if key not in ("e","h"):
+                key = input("已灯灭并撤手。E 确认目标色成功入盘 / F 失败保存，均自动回零；H 仅回零：").strip().lower()
+                if key not in ("e","f","h"):
                     raise ValueError("未完成现场交接")
-                if key == "e":
+                if key in ("e","f"):
                     pending_end["operator_empty_retreat"] = True
+                    pending_end["operator_task_success"] = key == "e"
+                    report["operator_outcome"] = "success" if key == "e" else "failed"
                     report["marks"].append(pending_end)
                     save(run/"task_end.json",pending_end)
             else:
@@ -747,7 +814,17 @@ def main(argv=None, *, finished_run=None):
         if st["ctrl_mode"] not in (0,1,2) or (st["ctrl_mode"] == 2 and st["teach_status"] != 2):
             raise RuntimeError(f"灯灭后仍未收到停止示教的状态：{st}")
         report["released"] = released
-        if stats()["tx_packets"] != report["interface_before"]["tx_packets"]:
+        if formal:
+            tx.flush()
+            with (run/"tx.csv").open() as f:
+                submitted = list(csv.DictReader(f))
+            if (any(int(r["can_id"],16) != 0x159 or r["result"] != "host_submitted" for r in submitted)
+                    or stats()["tx_packets"]-report["interface_before"]["tx_packets"] != len(submitted)):
+                raise RuntimeError("单次示教窗口包含夹爪以外的主机发送，保留记录")
+            report["gripper_only_host_frames"] = len(submitted)
+            # Gripper commands do not replace the arm target held before teaching.
+            save(led,dict(read(led),tx_packets=stats()["tx_packets"]))
+        elif stats()["tx_packets"] != report["interface_before"]["tx_packets"]:
             raise RuntimeError("手拖期间主机 TX 变化；该轨迹需排查")
         if formal:
             released = released_pose(dev,rx,grip)
@@ -757,16 +834,14 @@ def main(argv=None, *, finished_run=None):
                 report["reposition_only"] = dict(after_joint_id=end["joint_id"], after_ns=end["mono_ns"],
                                                   scope="independent SDK home after teach")
                 save(run/"reposition_only.json",report["reposition_only"])
-                try:
-                    validate_source(run, report, report["marks"], cfg["bounds"])
-                except ValueError as exc:
-                    report["source_rejection"] = str(exc)
+                report.update(grid_end_ns=end["mono_ns"],stop="demonstration_finished",
+                              reset_between_runs="automatic_direct_home")
             else:
                 report["source_rejection"] = f"示教在 {stopped_during} 阶段结束，缺少确认的任务终点"
             report["home_release"] = dict(q_rad=released["q_rad"], width_m=released["width_m"],
                                           ifindex=int(Path("/sys/class/net/can0/ifindex").read_text()),
                                           confirmed_clear=True, mono_ns=released["mono_ns"])
-        # Mark the source only after the receive-only run closed cleanly.
+        # Save the actual demonstration before the independent arm return.
 
     def return_start():
         nonlocal active
@@ -1077,7 +1152,7 @@ def main(argv=None, *, finished_run=None):
         try:
             dev.connect()
             report["initial"] = snapshot(dev, rx, grip)
-            if kind not in ("teach","status","prepare-pads"):
+            if kind not in ("teach","status","prepare-pads") or (kind == "teach" and task is not None):
                 tx = stack.enter_context((run/"tx.csv").open("x",newline="",buffering=1))
                 commands = stack.enter_context((run/"commands.jsonl").open("x",buffering=1))
                 sender = Sender(dev, grip, tx, commands)
@@ -1123,6 +1198,15 @@ def main(argv=None, *, finished_run=None):
             if rx.error:
                 report.update(complete=False, receive_error=rx.error)
             save(run / "run.json", report)
+            if report.get("collection_mode") == "kinesthetic_direct_v1":
+                success = report["complete"] and report.get("operator_outcome") == "success"
+                save(run/"review.json",dict(run_id=report["run_id"],approved_teach=success,
+                    approved_block=False,approved_empty=False,outcome="success" if success else "failed",
+                    actual_grasped_color=task["target_color"] if success else "unknown",
+                    intervention="no" if success else "unknown",verdict_source="operator_success_key",
+                    intervention_definition="extra rescue beyond intended kinesthetic teaching",
+                    source_trajectory_id=report["run_id"],session_id=report["session_id"],
+                    placement=a.placement,**task))
             if report["complete"] and kind == "teach":
                 save(source_file, dict(run=run.name))
             if report["complete"] and kind == "empty":
@@ -1140,7 +1224,7 @@ def main(argv=None, *, finished_run=None):
         print("采集记录已关闭，按最高 3°/s 直接回零。", flush=True)
         if main(["home", str(session)], finished_run=run):
             return 1
-        print("已回零。复原或更换摆放后，用 next-teach 开始下一组；同源重放用 anchor-start。", flush=True)
+        print("已回零。复原或更换摆放后，用 next-teach 开始下一组；本次成功示范直接用于导出，无需重放。", flush=True)
     return 0 if report["complete"] else 1
 
 

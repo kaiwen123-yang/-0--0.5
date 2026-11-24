@@ -1,4 +1,4 @@
-"""Explicit future full-finetuning entry; no GPU work when real prerequisites are absent.
+"""Full finetuning from reviewed real demonstrations and each model's own statistics.
 
 Run from the repository root with its existing OpenPI Python environment:
   python -m tasks.piper_real_single_v1.train --spec <actual.json> --stage prepare-stats
@@ -25,8 +25,13 @@ from .color_task import BLUE_RED
 
 
 def split_digest(root):
-    return hashlib.sha256((root/"index.json").read_bytes() + b"\0" +
-                          (root/"alignment_manifest.json").read_bytes()).hexdigest()
+    digest = hashlib.sha256((root/"index.json").read_bytes() + b"\0" +
+                            (root/"alignment_manifest.json").read_bytes())
+    for entry in json.loads((root/"index.json").read_text()):
+        if entry.get("valid_action_starts"):
+            digest.update(b"\0" + entry["directory"].encode() + b"\0" +
+                          (root/entry["directory"]/entry["valid_action_starts"]).read_bytes())
+    return digest.hexdigest()
 
 
 def norm_metadata(spec):
@@ -48,18 +53,21 @@ def prepare_stats(spec):
     horizon = int(spec["action_horizon"])
     entries = [entry for entry in json.loads((root / "index.json").read_text()) if entry["split"] == "train"]
     stats = {key: normalize.RunningStats() for key in ("state", "actions")}
-    frames = 0
+    frames = raw_frames = 0
     for entry in entries:
         directory = root / entry["directory"]
         read_policy_timestamps(directory, entry["frames"])
         state = np.load(directory / "state.npy", mmap_mode="r", allow_pickle=False)
         actions = np.load(directory / "actions.npy", mmap_mode="r", allow_pickle=False)
-        indices = np.minimum(np.arange(len(state))[:, None] + np.arange(horizon)[None, :], len(state) - 1)
+        starts = (np.load(directory/entry["valid_action_starts"], allow_pickle=False)
+                  if entry.get("valid_action_starts") else np.arange(len(state)))
+        indices = np.minimum(starts[:, None] + np.arange(horizon)[None, :], len(state) - 1)
         chunks = actions[indices].copy()
-        chunks[:, :, :6] -= state[:, None, :6]
-        stats["state"].update(state)
+        chunks[:, :, :6] -= state[starts, None, :6]
+        stats["state"].update(state[starts])
         stats["actions"].update(chunks.reshape(-1, 7))
-        frames += len(state)
+        frames += len(starts)
+        raw_frames += len(state)
     run = run_directory(spec)
     run.mkdir(parents=True, exist_ok=True)
     destination = run / "assets" / asset_id(spec)
@@ -74,6 +82,8 @@ def prepare_stats(spec):
         "timestamp_alignment_source": str(root / dataset_metadata["timestamp_alignment_source"]),
         "split": "train",
         "frames": frames,
+        "raw_frames": raw_frames,
+        "sampling": "valid_action_starts when declared; otherwise all episode rows",
         "action_horizon": horizon,
         "policy_hz": spec["policy_hz"],
         "policy_hz_semantics": "nominal aligned dataset/action grid; not measured runtime frequency",
@@ -224,3 +234,4 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
