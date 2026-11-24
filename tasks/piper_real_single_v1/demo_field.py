@@ -158,13 +158,13 @@ def main():
         if require_match and not within:
             raise ValueError(f"尺读 {value*1000:.2f} mm，反馈 {actual*1000:.2f} mm，相差超过 2 mm")
 
-    def grip_at(width, force, label, require_width):
+    def grip_at(width, force, label, require_width, *, enable_on_open=False):
         sender.width(width, force, label, gripper_basis=WIDTH if report.get("terminal_kind") == RETREAT else None)
         sent = CLOCK()
         deadline = time.monotonic()+2.5
         while time.monotonic() < deadline:
-            row = healthy(dev, rx, grip)
-            if (rx.grip[0] > sent + 800_000_000 and
+            row = healthy(dev, rx, grip, allow_disabled_gripper=enable_on_open)
+            if (row["gripper"]["foc_status"]["driver_enable_status"] and rx.grip[0] > sent + 800_000_000 and
                     (not require_width or abs(row["width_m"]-width) <= .002)):
                 return row["width_m"]
             time.sleep(.02)
@@ -331,7 +331,7 @@ def main():
                 if src["retreat_window"]["source_id"] != taught["run_id"]:
                     raise ValueError("Source trajectory identity mismatch")
                 expected = taught["marks"][0]["q"]
-        row = healthy(dev, rx, grip)
+        row = healthy(dev, rx, grip, allow_disabled_gripper=formal)
         start = row["q_rad"]
         if (row["arm"]["motion_status"] != 0 or max(map(abs,start)) > math.radians(5)
                 or gap(start,expected) > .35):
@@ -339,6 +339,11 @@ def main():
         report.update(previous_hold=old, expected_open_m=width)
         h0.calibration_arrival(dev,start)
         agree(f"已退出示教，空载，手和工具已移开。在当前实测位置保持，复开至 {width*1000:g} mm")
+        row = healthy(dev, rx, grip, allow_disabled_gripper=formal)
+        if gap(row["q_rad"],start) > .1 or row["arm"]["motion_status"] != 0:
+            raise ValueError("等待确认期间起点发生变化")
+        if not row["gripper"]["foc_status"]["driver_enable_status"]:
+            report["settled_open_m"] = grip_at(width,force,"reopen_before_reteach",True,enable_on_open=True)
         before = stats()["tx_packets"]
         interface = int(Path("/sys/class/net/can0/ifindex").read_text())
         limits()
@@ -350,7 +355,8 @@ def main():
         active = True
         sender.arm(q,"fresh_stationary_anchor_after_interruption")
         normal_hold(q)
-        report["settled_open_m"] = grip_at(width,force,"reopen_before_reteach",True)
+        if "settled_open_m" not in report:
+            report["settled_open_m"] = grip_at(width,force,"reopen_before_reteach",True)
         normal_hold(q)
         record_hold(q)
         active = False

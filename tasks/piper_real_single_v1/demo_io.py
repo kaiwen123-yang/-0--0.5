@@ -208,14 +208,14 @@ def snapshot(dev, rx, grip):
                 drives=[m.msg.foc_status.to_dict() for m in drives], gripper=gr.msg.to_dict())
 
 
-def healthy(dev, rx, grip):
+def healthy(dev, rx, grip, *, allow_disabled_gripper=False):
     row = snapshot(dev, rx, grip)
     st = row["arm"]
     if (st["ctrl_mode"], st["arm_status"], st["mode_feedback"]) != (1, 0, 1):
         raise RuntimeError(f"Not healthy CAN/MOVE_J: {st}")
     issues = h0.calibration_driver_issues(dev, st)
     flags = row["gripper"]["foc_status"]
-    if issues or row['gripper']['mode'] != 'width' or not flags["driver_enable_status"] or any(
+    if issues or row['gripper']['mode'] != 'width' or (not allow_disabled_gripper and not flags["driver_enable_status"]) or any(
             v for k,v in flags.items() if k not in ("homing_status", "driver_enable_status")):
         raise RuntimeError(f"Drive/gripper status: {issues} {flags}")
     return row
