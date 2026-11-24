@@ -1,0 +1,2536 @@
+{
+  "repository": "kaiwen123-yang/-0--0.5",
+  "tag": "pi-real-blue-red-50-20261124",
+  "source_dataset": "blue_red_direct_20261124_50_v1",
+  "description": "Full Stage A, 40 training and 10 independent validation episodes. 50 RGB stacks and all per-episode arrays and source maps. Additional review assets are outside this payload.",
+  "verification": "Each compressed tar creation completed. GitHub Release asset names, uploaded state and byte sizes checked. SHA-256 verification was discontinued by request.",
+  "file_count": 353,
+  "episode_count": 50,
+  "archive_count": 51,
+  "source_bytes": 30772366164,
+  "archive_bytes": 17444106909,
+  "assets": [
+    {
+      "github_asset_id": 787367322,
+      "bytes": 12169,
+      "state": "uploaded",
+      "name": "full-00-metadata.tar.zst",
+      "members": [
+        {
+          "path": "dataset.json",
+          "bytes": 678
+        },
+        {
+          "path": "index.json",
+          "bytes": 51387
+        },
+        {
+          "path": "alignment_manifest.json",
+          "bytes": 126971
+        }
+      ]
+    },
+    {
+      "github_asset_id": 787388085,
+      "bytes": 563346729,
+      "state": "uploaded",
+      "name": "full-01-train-blue-f2d102b3-0dca-4964-a54e-d83ea2d2ff5b.tar.zst",
+      "members": [
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/actions.npy",
+          "bytes": 31068
+        },
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/camera_rgb.npy",
+          "bytes": 1018368128
+        },
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/policy_timestamps_ns.npy",
+          "bytes": 8968
+        },
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/quality.json",
+          "bytes": 8371
+        },
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/row_sources.jsonl",
+          "bytes": 821829
+        },
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/state.npy",
+          "bytes": 31068
+        },
+        {
+          "path": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b/valid_action_starts.npy",
+          "bytes": 8160
+        }
+      ],
+      "episode": {
+        "directory": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB02",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 1105,
+        "usable_starts": 1004
+      }
+    },
+    {
+      "github_asset_id": 787388111,
+      "bytes": 469212253,
+      "state": "uploaded",
+      "name": "full-02-train-red-717893f2-9305-47bc-83b6-e70ae35561df.tar.zst",
+      "members": [
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/actions.npy",
+          "bytes": 25020
+        },
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/camera_rgb.npy",
+          "bytes": 819302528
+        },
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/policy_timestamps_ns.npy",
+          "bytes": 7240
+        },
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/quality.json",
+          "bytes": 8378
+        },
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/row_sources.jsonl",
+          "bytes": 667294
+        },
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/state.npy",
+          "bytes": 25020
+        },
+        {
+          "path": "717893f2-9305-47bc-83b6-e70ae35561df/valid_action_starts.npy",
+          "bytes": 5736
+        }
+      ],
+      "episode": {
+        "directory": "717893f2-9305-47bc-83b6-e70ae35561df",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB02",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 889,
+        "usable_starts": 701
+      }
+    },
+    {
+      "github_asset_id": 787388096,
+      "bytes": 379332854,
+      "state": "uploaded",
+      "name": "full-03-train-blue-b223b5b5-fb17-4566-8473-11218d5f1773.tar.zst",
+      "members": [
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/actions.npy",
+          "bytes": 20260
+        },
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/camera_rgb.npy",
+          "bytes": 662630528
+        },
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/policy_timestamps_ns.npy",
+          "bytes": 5880
+        },
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/quality.json",
+          "bytes": 8392
+        },
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/row_sources.jsonl",
+          "bytes": 534716
+        },
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/state.npy",
+          "bytes": 20260
+        },
+        {
+          "path": "b223b5b5-fb17-4566-8473-11218d5f1773/valid_action_starts.npy",
+          "bytes": 4992
+        }
+      ],
+      "episode": {
+        "directory": "b223b5b5-fb17-4566-8473-11218d5f1773",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB03",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 719,
+        "usable_starts": 608
+      }
+    },
+    {
+      "github_asset_id": 787388155,
+      "bytes": 362910450,
+      "state": "uploaded",
+      "name": "full-04-train-red-22d253b0-f5f5-41e4-a039-1ec7079687ee.tar.zst",
+      "members": [
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/actions.npy",
+          "bytes": 19056
+        },
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/camera_rgb.npy",
+          "bytes": 623001728
+        },
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/policy_timestamps_ns.npy",
+          "bytes": 5536
+        },
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/quality.json",
+          "bytes": 8389
+        },
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/row_sources.jsonl",
+          "bytes": 503007
+        },
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/state.npy",
+          "bytes": 19056
+        },
+        {
+          "path": "22d253b0-f5f5-41e4-a039-1ec7079687ee/valid_action_starts.npy",
+          "bytes": 4712
+        }
+      ],
+      "episode": {
+        "directory": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB03",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 676,
+        "usable_starts": 573
+      }
+    },
+    {
+      "github_asset_id": 787388145,
+      "bytes": 394553970,
+      "state": "uploaded",
+      "name": "full-05-train-blue-dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4.tar.zst",
+      "members": [
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/actions.npy",
+          "bytes": 21772
+        },
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/camera_rgb.npy",
+          "bytes": 712396928
+        },
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/policy_timestamps_ns.npy",
+          "bytes": 6312
+        },
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/quality.json",
+          "bytes": 8432
+        },
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/row_sources.jsonl",
+          "bytes": 577162
+        },
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/state.npy",
+          "bytes": 21772
+        },
+        {
+          "path": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4/valid_action_starts.npy",
+          "bytes": 4960
+        }
+      ],
+      "episode": {
+        "directory": "dc240fb1-82c1-4c93-a2a0-acc0e8ca68e4",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB04",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 773,
+        "usable_starts": 604
+      }
+    },
+    {
+      "github_asset_id": 787402240,
+      "bytes": 364132648,
+      "state": "uploaded",
+      "name": "full-06-train-red-37464501-505a-4d02-9817-25f61afb6bb7.tar.zst",
+      "members": [
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/actions.npy",
+          "bytes": 19784
+        },
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/camera_rgb.npy",
+          "bytes": 646963328
+        },
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/policy_timestamps_ns.npy",
+          "bytes": 5744
+        },
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/quality.json",
+          "bytes": 8383
+        },
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/row_sources.jsonl",
+          "bytes": 520553
+        },
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/state.npy",
+          "bytes": 19784
+        },
+        {
+          "path": "37464501-505a-4d02-9817-25f61afb6bb7/valid_action_starts.npy",
+          "bytes": 4744
+        }
+      ],
+      "episode": {
+        "directory": "37464501-505a-4d02-9817-25f61afb6bb7",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB04",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 702,
+        "usable_starts": 577
+      }
+    },
+    {
+      "github_asset_id": 787388876,
+      "bytes": 409533999,
+      "state": "uploaded",
+      "name": "full-07-train-blue-61effaf4-6147-4b41-9dc4-70996154ad3a.tar.zst",
+      "members": [
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/actions.npy",
+          "bytes": 21856
+        },
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/camera_rgb.npy",
+          "bytes": 715161728
+        },
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/policy_timestamps_ns.npy",
+          "bytes": 6336
+        },
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/quality.json",
+          "bytes": 8398
+        },
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/row_sources.jsonl",
+          "bytes": 575950
+        },
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/state.npy",
+          "bytes": 21856
+        },
+        {
+          "path": "61effaf4-6147-4b41-9dc4-70996154ad3a/valid_action_starts.npy",
+          "bytes": 5192
+        }
+      ],
+      "episode": {
+        "directory": "61effaf4-6147-4b41-9dc4-70996154ad3a",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB05",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 776,
+        "usable_starts": 633
+      }
+    },
+    {
+      "github_asset_id": 787391191,
+      "bytes": 335879137,
+      "state": "uploaded",
+      "name": "full-08-train-red-887e1721-be63-490b-8ceb-54ca6152cebf.tar.zst",
+      "members": [
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/actions.npy",
+          "bytes": 18944
+        },
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/camera_rgb.npy",
+          "bytes": 619315328
+        },
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/policy_timestamps_ns.npy",
+          "bytes": 5504
+        },
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/quality.json",
+          "bytes": 8418
+        },
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/row_sources.jsonl",
+          "bytes": 496051
+        },
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/state.npy",
+          "bytes": 18944
+        },
+        {
+          "path": "887e1721-be63-490b-8ceb-54ca6152cebf/valid_action_starts.npy",
+          "bytes": 5088
+        }
+      ],
+      "episode": {
+        "directory": "887e1721-be63-490b-8ceb-54ca6152cebf",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB05",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 672,
+        "usable_starts": 620
+      }
+    },
+    {
+      "github_asset_id": 787392485,
+      "bytes": 331207162,
+      "state": "uploaded",
+      "name": "full-09-train-blue-f801547a-c031-4a4b-b3dc-ea71d2dfb9e7.tar.zst",
+      "members": [
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/actions.npy",
+          "bytes": 18356
+        },
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/camera_rgb.npy",
+          "bytes": 599961728
+        },
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/policy_timestamps_ns.npy",
+          "bytes": 5336
+        },
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/quality.json",
+          "bytes": 8445
+        },
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/row_sources.jsonl",
+          "bytes": 484727
+        },
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/state.npy",
+          "bytes": 18356
+        },
+        {
+          "path": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7/valid_action_starts.npy",
+          "bytes": 3904
+        }
+      ],
+      "episode": {
+        "directory": "f801547a-c031-4a4b-b3dc-ea71d2dfb9e7",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR01",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 651,
+        "usable_starts": 472
+      }
+    },
+    {
+      "github_asset_id": 787393625,
+      "bytes": 309378135,
+      "state": "uploaded",
+      "name": "full-10-train-red-39fe949a-84d7-409f-be86-d404efd3c23b.tar.zst",
+      "members": [
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/actions.npy",
+          "bytes": 16116
+        },
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/camera_rgb.npy",
+          "bytes": 526233728
+        },
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/policy_timestamps_ns.npy",
+          "bytes": 4696
+        },
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/quality.json",
+          "bytes": 8408
+        },
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/row_sources.jsonl",
+          "bytes": 423933
+        },
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/state.npy",
+          "bytes": 16116
+        },
+        {
+          "path": "39fe949a-84d7-409f-be86-d404efd3c23b/valid_action_starts.npy",
+          "bytes": 3800
+        }
+      ],
+      "episode": {
+        "directory": "39fe949a-84d7-409f-be86-d404efd3c23b",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR01",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 571,
+        "usable_starts": 459
+      }
+    },
+    {
+      "github_asset_id": 787373825,
+      "bytes": 426322679,
+      "state": "uploaded",
+      "name": "full-11-train-blue-042162c5-879f-40ab-aed0-da0e96ee2e43.tar.zst",
+      "members": [
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/actions.npy",
+          "bytes": 22556
+        },
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/camera_rgb.npy",
+          "bytes": 738201728
+        },
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/policy_timestamps_ns.npy",
+          "bytes": 6536
+        },
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/quality.json",
+          "bytes": 8343
+        },
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/row_sources.jsonl",
+          "bytes": 598091
+        },
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/state.npy",
+          "bytes": 22556
+        },
+        {
+          "path": "042162c5-879f-40ab-aed0-da0e96ee2e43/valid_action_starts.npy",
+          "bytes": 4432
+        }
+      ],
+      "episode": {
+        "directory": "042162c5-879f-40ab-aed0-da0e96ee2e43",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR02",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 801,
+        "usable_starts": 538
+      }
+    },
+    {
+      "github_asset_id": 787373260,
+      "bytes": 324056385,
+      "state": "uploaded",
+      "name": "full-12-train-red-00803bd9-d4e6-4839-ae0e-957edf6c2a3e.tar.zst",
+      "members": [
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/actions.npy",
+          "bytes": 17600
+        },
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/camera_rgb.npy",
+          "bytes": 575078528
+        },
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/policy_timestamps_ns.npy",
+          "bytes": 5120
+        },
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/quality.json",
+          "bytes": 8431
+        },
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/row_sources.jsonl",
+          "bytes": 464804
+        },
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/state.npy",
+          "bytes": 17600
+        },
+        {
+          "path": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e/valid_action_starts.npy",
+          "bytes": 3712
+        }
+      ],
+      "episode": {
+        "directory": "00803bd9-d4e6-4839-ae0e-957edf6c2a3e",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR02",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 624,
+        "usable_starts": 448
+      }
+    },
+    {
+      "github_asset_id": 787395875,
+      "bytes": 335663058,
+      "state": "uploaded",
+      "name": "full-13-train-blue-9c25df99-a407-43e9-9934-9094f5546fe4.tar.zst",
+      "members": [
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/actions.npy",
+          "bytes": 18020
+        },
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/camera_rgb.npy",
+          "bytes": 588902528
+        },
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/policy_timestamps_ns.npy",
+          "bytes": 5240
+        },
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/quality.json",
+          "bytes": 8403
+        },
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/row_sources.jsonl",
+          "bytes": 477321
+        },
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/state.npy",
+          "bytes": 18020
+        },
+        {
+          "path": "9c25df99-a407-43e9-9934-9094f5546fe4/valid_action_starts.npy",
+          "bytes": 3520
+        }
+      ],
+      "episode": {
+        "directory": "9c25df99-a407-43e9-9934-9094f5546fe4",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB06",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 639,
+        "usable_starts": 424
+      }
+    },
+    {
+      "github_asset_id": 787396687,
+      "bytes": 441620920,
+      "state": "uploaded",
+      "name": "full-14-train-red-cca037de-afb3-4283-8331-4065296f5aed.tar.zst",
+      "members": [
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/actions.npy",
+          "bytes": 24768
+        },
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/camera_rgb.npy",
+          "bytes": 811008128
+        },
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/policy_timestamps_ns.npy",
+          "bytes": 7168
+        },
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/quality.json",
+          "bytes": 8391
+        },
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/row_sources.jsonl",
+          "bytes": 652118
+        },
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/state.npy",
+          "bytes": 24768
+        },
+        {
+          "path": "cca037de-afb3-4283-8331-4065296f5aed/valid_action_starts.npy",
+          "bytes": 6208
+        }
+      ],
+      "episode": {
+        "directory": "cca037de-afb3-4283-8331-4065296f5aed",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-RB06",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 880,
+        "usable_starts": 760
+      }
+    },
+    {
+      "github_asset_id": 787379080,
+      "bytes": 350406039,
+      "state": "uploaded",
+      "name": "full-15-train-blue-16bd17ed-665e-4647-95cd-261e092d78fc.tar.zst",
+      "members": [
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/actions.npy",
+          "bytes": 19420
+        },
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/camera_rgb.npy",
+          "bytes": 634982528
+        },
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/policy_timestamps_ns.npy",
+          "bytes": 5640
+        },
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/quality.json",
+          "bytes": 8474
+        },
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/row_sources.jsonl",
+          "bytes": 513392
+        },
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/state.npy",
+          "bytes": 19420
+        },
+        {
+          "path": "16bd17ed-665e-4647-95cd-261e092d78fc/valid_action_starts.npy",
+          "bytes": 4056
+        }
+      ],
+      "episode": {
+        "directory": "16bd17ed-665e-4647-95cd-261e092d78fc",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR03",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 689,
+        "usable_starts": 491
+      }
+    },
+    {
+      "github_asset_id": 787379251,
+      "bytes": 292020516,
+      "state": "uploaded",
+      "name": "full-16-train-red-1aee8dde-a6a4-4d22-a91a-3b3f53da473d.tar.zst",
+      "members": [
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/actions.npy",
+          "bytes": 15304
+        },
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/camera_rgb.npy",
+          "bytes": 499507328
+        },
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/policy_timestamps_ns.npy",
+          "bytes": 4464
+        },
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/quality.json",
+          "bytes": 8491
+        },
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/row_sources.jsonl",
+          "bytes": 402515
+        },
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/state.npy",
+          "bytes": 15304
+        },
+        {
+          "path": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d/valid_action_starts.npy",
+          "bytes": 3704
+        }
+      ],
+      "episode": {
+        "directory": "1aee8dde-a6a4-4d22-a91a-3b3f53da473d",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR03",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 542,
+        "usable_starts": 447
+      }
+    },
+    {
+      "github_asset_id": 787398329,
+      "bytes": 319462667,
+      "state": "uploaded",
+      "name": "full-17-train-blue-8ac8e818-b815-4fad-a7e5-e71b5ad654a1.tar.zst",
+      "members": [
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/actions.npy",
+          "bytes": 17348
+        },
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/camera_rgb.npy",
+          "bytes": 566784128
+        },
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/policy_timestamps_ns.npy",
+          "bytes": 5048
+        },
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/quality.json",
+          "bytes": 8430
+        },
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/row_sources.jsonl",
+          "bytes": 453600
+        },
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/state.npy",
+          "bytes": 17348
+        },
+        {
+          "path": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1/valid_action_starts.npy",
+          "bytes": 4648
+        }
+      ],
+      "episode": {
+        "directory": "8ac8e818-b815-4fad-a7e5-e71b5ad654a1",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR04",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 615,
+        "usable_starts": 565
+      }
+    },
+    {
+      "github_asset_id": 787403023,
+      "bytes": 264060092,
+      "state": "uploaded",
+      "name": "full-18-train-red-dedcd1c3-0baa-4d23-968c-0a35b6c1d710.tar.zst",
+      "members": [
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/actions.npy",
+          "bytes": 14240
+        },
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/camera_rgb.npy",
+          "bytes": 464486528
+        },
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/policy_timestamps_ns.npy",
+          "bytes": 4160
+        },
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/quality.json",
+          "bytes": 8437
+        },
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/row_sources.jsonl",
+          "bytes": 376162
+        },
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/state.npy",
+          "bytes": 14240
+        },
+        {
+          "path": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710/valid_action_starts.npy",
+          "bytes": 2768
+        }
+      ],
+      "episode": {
+        "directory": "dedcd1c3-0baa-4d23-968c-0a35b6c1d710",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR04",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 504,
+        "usable_starts": 330
+      }
+    },
+    {
+      "github_asset_id": 787403718,
+      "bytes": 316812007,
+      "state": "uploaded",
+      "name": "full-19-train-blue-432f6292-6efb-4a42-b34e-bb84a7bdd939.tar.zst",
+      "members": [
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/actions.npy",
+          "bytes": 17320
+        },
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/camera_rgb.npy",
+          "bytes": 565862528
+        },
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/policy_timestamps_ns.npy",
+          "bytes": 5040
+        },
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/quality.json",
+          "bytes": 8345
+        },
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/row_sources.jsonl",
+          "bytes": 455795
+        },
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/state.npy",
+          "bytes": 17320
+        },
+        {
+          "path": "432f6292-6efb-4a42-b34e-bb84a7bdd939/valid_action_starts.npy",
+          "bytes": 4152
+        }
+      ],
+      "episode": {
+        "directory": "432f6292-6efb-4a42-b34e-bb84a7bdd939",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR05",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 614,
+        "usable_starts": 503
+      }
+    },
+    {
+      "github_asset_id": 787389121,
+      "bytes": 374336281,
+      "state": "uploaded",
+      "name": "full-20-train-red-f96c235b-e201-4640-88d1-79d4050a6af9.tar.zst",
+      "members": [
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/actions.npy",
+          "bytes": 19476
+        },
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/camera_rgb.npy",
+          "bytes": 636825728
+        },
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/policy_timestamps_ns.npy",
+          "bytes": 5656
+        },
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/quality.json",
+          "bytes": 8320
+        },
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/row_sources.jsonl",
+          "bytes": 511580
+        },
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/state.npy",
+          "bytes": 19476
+        },
+        {
+          "path": "f96c235b-e201-4640-88d1-79d4050a6af9/valid_action_starts.npy",
+          "bytes": 4880
+        }
+      ],
+      "episode": {
+        "directory": "f96c235b-e201-4640-88d1-79d4050a6af9",
+        "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+        "placement_id": "T01-FOUR05",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 691,
+        "usable_starts": 594
+      }
+    },
+    {
+      "github_asset_id": 787382110,
+      "bytes": 335866521,
+      "state": "uploaded",
+      "name": "full-21-train-blue-207aab62-a04b-495f-8b61-8badeed1ba80.tar.zst",
+      "members": [
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/actions.npy",
+          "bytes": 17740
+        },
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/camera_rgb.npy",
+          "bytes": 579686528
+        },
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/policy_timestamps_ns.npy",
+          "bytes": 5160
+        },
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/quality.json",
+          "bytes": 8436
+        },
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/row_sources.jsonl",
+          "bytes": 464978
+        },
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/state.npy",
+          "bytes": 17740
+        },
+        {
+          "path": "207aab62-a04b-495f-8b61-8badeed1ba80/valid_action_starts.npy",
+          "bytes": 4544
+        }
+      ],
+      "episode": {
+        "directory": "207aab62-a04b-495f-8b61-8badeed1ba80",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB01",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 629,
+        "usable_starts": 552
+      }
+    },
+    {
+      "github_asset_id": 787381015,
+      "bytes": 320550686,
+      "state": "uploaded",
+      "name": "full-22-train-red-fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478.tar.zst",
+      "members": [
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/actions.npy",
+          "bytes": 17880
+        },
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/camera_rgb.npy",
+          "bytes": 584294528
+        },
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/policy_timestamps_ns.npy",
+          "bytes": 5200
+        },
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/quality.json",
+          "bytes": 8437
+        },
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/row_sources.jsonl",
+          "bytes": 468851
+        },
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/state.npy",
+          "bytes": 17880
+        },
+        {
+          "path": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478/valid_action_starts.npy",
+          "bytes": 4520
+        }
+      ],
+      "episode": {
+        "directory": "fdea6bdd-4d0a-4a7a-aa2a-a690c72c4478",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB01",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 634,
+        "usable_starts": 549
+      }
+    },
+    {
+      "github_asset_id": 787373304,
+      "bytes": 318856725,
+      "state": "uploaded",
+      "name": "full-23-train-blue-105778ea-7096-4906-9271-a4d7758651ad.tar.zst",
+      "members": [
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/actions.npy",
+          "bytes": 17180
+        },
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/camera_rgb.npy",
+          "bytes": 561254528
+        },
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/policy_timestamps_ns.npy",
+          "bytes": 5000
+        },
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/quality.json",
+          "bytes": 8394
+        },
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/row_sources.jsonl",
+          "bytes": 452387
+        },
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/state.npy",
+          "bytes": 17180
+        },
+        {
+          "path": "105778ea-7096-4906-9271-a4d7758651ad/valid_action_starts.npy",
+          "bytes": 4080
+        }
+      ],
+      "episode": {
+        "directory": "105778ea-7096-4906-9271-a4d7758651ad",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR01",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 609,
+        "usable_starts": 494
+      }
+    },
+    {
+      "github_asset_id": 787373268,
+      "bytes": 251548635,
+      "state": "uploaded",
+      "name": "full-24-train-red-00b3b58d-2650-44ed-a3aa-640502c5e9c6.tar.zst",
+      "members": [
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/actions.npy",
+          "bytes": 14072
+        },
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/camera_rgb.npy",
+          "bytes": 458956928
+        },
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/policy_timestamps_ns.npy",
+          "bytes": 4112
+        },
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/quality.json",
+          "bytes": 8471
+        },
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/row_sources.jsonl",
+          "bytes": 369934
+        },
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/state.npy",
+          "bytes": 14072
+        },
+        {
+          "path": "00b3b58d-2650-44ed-a3aa-640502c5e9c6/valid_action_starts.npy",
+          "bytes": 3120
+        }
+      ],
+      "episode": {
+        "directory": "00b3b58d-2650-44ed-a3aa-640502c5e9c6",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR01",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 498,
+        "usable_starts": 374
+      }
+    },
+    {
+      "github_asset_id": 787404385,
+      "bytes": 236476879,
+      "state": "uploaded",
+      "name": "full-25-train-blue-53006248-740a-4d6e-a129-366be6ec6f0b.tar.zst",
+      "members": [
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/actions.npy",
+          "bytes": 13876
+        },
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/camera_rgb.npy",
+          "bytes": 452505728
+        },
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/policy_timestamps_ns.npy",
+          "bytes": 4056
+        },
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/quality.json",
+          "bytes": 8408
+        },
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/row_sources.jsonl",
+          "bytes": 362987
+        },
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/state.npy",
+          "bytes": 13876
+        },
+        {
+          "path": "53006248-740a-4d6e-a129-366be6ec6f0b/valid_action_starts.npy",
+          "bytes": 3512
+        }
+      ],
+      "episode": {
+        "directory": "53006248-740a-4d6e-a129-366be6ec6f0b",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB02",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 491,
+        "usable_starts": 423
+      }
+    },
+    {
+      "github_asset_id": 787404233,
+      "bytes": 214332260,
+      "state": "uploaded",
+      "name": "full-26-train-red-52727b70-342f-42ce-96c6-2dbb625905b1.tar.zst",
+      "members": [
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/actions.npy",
+          "bytes": 11412
+        },
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/camera_rgb.npy",
+          "bytes": 371404928
+        },
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/policy_timestamps_ns.npy",
+          "bytes": 3352
+        },
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/quality.json",
+          "bytes": 8452
+        },
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/row_sources.jsonl",
+          "bytes": 298357
+        },
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/state.npy",
+          "bytes": 11412
+        },
+        {
+          "path": "52727b70-342f-42ce-96c6-2dbb625905b1/valid_action_starts.npy",
+          "bytes": 2792
+        }
+      ],
+      "episode": {
+        "directory": "52727b70-342f-42ce-96c6-2dbb625905b1",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB02",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 403,
+        "usable_starts": 333
+      }
+    },
+    {
+      "github_asset_id": 787404797,
+      "bytes": 266296129,
+      "state": "uploaded",
+      "name": "full-27-train-blue-c8e5e43d-5456-4713-ae92-c2d7397dd78c.tar.zst",
+      "members": [
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/actions.npy",
+          "bytes": 14128
+        },
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/camera_rgb.npy",
+          "bytes": 460800128
+        },
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/policy_timestamps_ns.npy",
+          "bytes": 4128
+        },
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/quality.json",
+          "bytes": 8375
+        },
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/row_sources.jsonl",
+          "bytes": 368696
+        },
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/state.npy",
+          "bytes": 14128
+        },
+        {
+          "path": "c8e5e43d-5456-4713-ae92-c2d7397dd78c/valid_action_starts.npy",
+          "bytes": 3816
+        }
+      ],
+      "episode": {
+        "directory": "c8e5e43d-5456-4713-ae92-c2d7397dd78c",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR02",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 500,
+        "usable_starts": 461
+      }
+    },
+    {
+      "github_asset_id": 787406507,
+      "bytes": 201285851,
+      "state": "uploaded",
+      "name": "full-28-train-red-ed02e09a-84fb-44e5-b008-12b1147644e5.tar.zst",
+      "members": [
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/actions.npy",
+          "bytes": 11692
+        },
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/camera_rgb.npy",
+          "bytes": 380620928
+        },
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/policy_timestamps_ns.npy",
+          "bytes": 3432
+        },
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/quality.json",
+          "bytes": 8344
+        },
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/row_sources.jsonl",
+          "bytes": 304443
+        },
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/state.npy",
+          "bytes": 11692
+        },
+        {
+          "path": "ed02e09a-84fb-44e5-b008-12b1147644e5/valid_action_starts.npy",
+          "bytes": 3144
+        }
+      ],
+      "episode": {
+        "directory": "ed02e09a-84fb-44e5-b008-12b1147644e5",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR02",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 413,
+        "usable_starts": 377
+      }
+    },
+    {
+      "github_asset_id": 787407336,
+      "bytes": 237165667,
+      "state": "uploaded",
+      "name": "full-29-train-blue-b11a912b-5190-4a9b-bb8e-978575cab3fa.tar.zst",
+      "members": [
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/actions.npy",
+          "bytes": 13120
+        },
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/camera_rgb.npy",
+          "bytes": 427622528
+        },
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/policy_timestamps_ns.npy",
+          "bytes": 3840
+        },
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/quality.json",
+          "bytes": 8382
+        },
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/row_sources.jsonl",
+          "bytes": 344516
+        },
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/state.npy",
+          "bytes": 13120
+        },
+        {
+          "path": "b11a912b-5190-4a9b-bb8e-978575cab3fa/valid_action_starts.npy",
+          "bytes": 2968
+        }
+      ],
+      "episode": {
+        "directory": "b11a912b-5190-4a9b-bb8e-978575cab3fa",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB03",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 464,
+        "usable_starts": 355
+      }
+    },
+    {
+      "github_asset_id": 787407239,
+      "bytes": 259220141,
+      "state": "uploaded",
+      "name": "full-30-train-red-2d5e8f04-2e3b-40f7-b922-35c13d88ba87.tar.zst",
+      "members": [
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/actions.npy",
+          "bytes": 14408
+        },
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/camera_rgb.npy",
+          "bytes": 470016128
+        },
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/policy_timestamps_ns.npy",
+          "bytes": 4208
+        },
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/quality.json",
+          "bytes": 8421
+        },
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/row_sources.jsonl",
+          "bytes": 375879
+        },
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/state.npy",
+          "bytes": 14408
+        },
+        {
+          "path": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87/valid_action_starts.npy",
+          "bytes": 3912
+        }
+      ],
+      "episode": {
+        "directory": "2d5e8f04-2e3b-40f7-b922-35c13d88ba87",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB03",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 510,
+        "usable_starts": 473
+      }
+    },
+    {
+      "github_asset_id": 787409480,
+      "bytes": 234437314,
+      "state": "uploaded",
+      "name": "full-31-train-blue-9839e690-e73d-4442-9ca5-e3d678fb6fc6.tar.zst",
+      "members": [
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/actions.npy",
+          "bytes": 13120
+        },
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/camera_rgb.npy",
+          "bytes": 427622528
+        },
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/policy_timestamps_ns.npy",
+          "bytes": 3840
+        },
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/quality.json",
+          "bytes": 8390
+        },
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/row_sources.jsonl",
+          "bytes": 342509
+        },
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/state.npy",
+          "bytes": 13120
+        },
+        {
+          "path": "9839e690-e73d-4442-9ca5-e3d678fb6fc6/valid_action_starts.npy",
+          "bytes": 3464
+        }
+      ],
+      "episode": {
+        "directory": "9839e690-e73d-4442-9ca5-e3d678fb6fc6",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR03",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 464,
+        "usable_starts": 417
+      }
+    },
+    {
+      "github_asset_id": 787410191,
+      "bytes": 317075130,
+      "state": "uploaded",
+      "name": "full-32-train-red-5b5d9adb-c6a1-4022-813d-4105689baa30.tar.zst",
+      "members": [
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/actions.npy",
+          "bytes": 17348
+        },
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/camera_rgb.npy",
+          "bytes": 566784128
+        },
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/policy_timestamps_ns.npy",
+          "bytes": 5048
+        },
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/quality.json",
+          "bytes": 8343
+        },
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/row_sources.jsonl",
+          "bytes": 453909
+        },
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/state.npy",
+          "bytes": 17348
+        },
+        {
+          "path": "5b5d9adb-c6a1-4022-813d-4105689baa30/valid_action_starts.npy",
+          "bytes": 4736
+        }
+      ],
+      "episode": {
+        "directory": "5b5d9adb-c6a1-4022-813d-4105689baa30",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR03",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 615,
+        "usable_starts": 576
+      }
+    },
+    {
+      "github_asset_id": 787373772,
+      "bytes": 336645300,
+      "state": "uploaded",
+      "name": "full-33-train-blue-13499234-8811-42b0-bd23-c14b82887fbf.tar.zst",
+      "members": [
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/actions.npy",
+          "bytes": 18748
+        },
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/camera_rgb.npy",
+          "bytes": 612864128
+        },
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/policy_timestamps_ns.npy",
+          "bytes": 5448
+        },
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/quality.json",
+          "bytes": 8408
+        },
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/row_sources.jsonl",
+          "bytes": 494256
+        },
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/state.npy",
+          "bytes": 18748
+        },
+        {
+          "path": "13499234-8811-42b0-bd23-c14b82887fbf/valid_action_starts.npy",
+          "bytes": 4184
+        }
+      ],
+      "episode": {
+        "directory": "13499234-8811-42b0-bd23-c14b82887fbf",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB04",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 665,
+        "usable_starts": 507
+      }
+    },
+    {
+      "github_asset_id": 787410461,
+      "bytes": 277179513,
+      "state": "uploaded",
+      "name": "full-34-train-red-cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90.tar.zst",
+      "members": [
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/actions.npy",
+          "bytes": 15164
+        },
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/camera_rgb.npy",
+          "bytes": 494899328
+        },
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/policy_timestamps_ns.npy",
+          "bytes": 4424
+        },
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/quality.json",
+          "bytes": 8448
+        },
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/row_sources.jsonl",
+          "bytes": 401976
+        },
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/state.npy",
+          "bytes": 15164
+        },
+        {
+          "path": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90/valid_action_starts.npy",
+          "bytes": 2976
+        }
+      ],
+      "episode": {
+        "directory": "cc4b91e1-f5f2-4103-9ac2-d7c355dd4f90",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB04",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 537,
+        "usable_starts": 356
+      }
+    },
+    {
+      "github_asset_id": 787414667,
+      "bytes": 709725548,
+      "state": "uploaded",
+      "name": "full-35-train-blue-2e0f532e-7eb4-4d84-9147-bf029aa9bf05.tar.zst",
+      "members": [
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/actions.npy",
+          "bytes": 41176
+        },
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/camera_rgb.npy",
+          "bytes": 1351065728
+        },
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/policy_timestamps_ns.npy",
+          "bytes": 11856
+        },
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/quality.json",
+          "bytes": 8323
+        },
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/row_sources.jsonl",
+          "bytes": 1090520
+        },
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/state.npy",
+          "bytes": 41176
+        },
+        {
+          "path": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05/valid_action_starts.npy",
+          "bytes": 9960
+        }
+      ],
+      "episode": {
+        "directory": "2e0f532e-7eb4-4d84-9147-bf029aa9bf05",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR04b",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 1466,
+        "usable_starts": 1229
+      }
+    },
+    {
+      "github_asset_id": 787415163,
+      "bytes": 206078834,
+      "state": "uploaded",
+      "name": "full-36-train-red-c0e8c866-57cf-4483-832f-243e1f985d0b.tar.zst",
+      "members": [
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/actions.npy",
+          "bytes": 11216
+        },
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/camera_rgb.npy",
+          "bytes": 364953728
+        },
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/policy_timestamps_ns.npy",
+          "bytes": 3296
+        },
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/quality.json",
+          "bytes": 8309
+        },
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/row_sources.jsonl",
+          "bytes": 292098
+        },
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/state.npy",
+          "bytes": 11216
+        },
+        {
+          "path": "c0e8c866-57cf-4483-832f-243e1f985d0b/valid_action_starts.npy",
+          "bytes": 3016
+        }
+      ],
+      "episode": {
+        "directory": "c0e8c866-57cf-4483-832f-243e1f985d0b",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR04b",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 396,
+        "usable_starts": 361
+      }
+    },
+    {
+      "github_asset_id": 787415332,
+      "bytes": 616299362,
+      "state": "uploaded",
+      "name": "full-37-train-blue-93678887-7e7b-4ca8-99ba-c286c19f82a2.tar.zst",
+      "members": [
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/actions.npy",
+          "bytes": 32888
+        },
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/camera_rgb.npy",
+          "bytes": 1078272128
+        },
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/policy_timestamps_ns.npy",
+          "bytes": 9488
+        },
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/quality.json",
+          "bytes": 8493
+        },
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/row_sources.jsonl",
+          "bytes": 884811
+        },
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/state.npy",
+          "bytes": 32888
+        },
+        {
+          "path": "93678887-7e7b-4ca8-99ba-c286c19f82a2/valid_action_starts.npy",
+          "bytes": 4440
+        }
+      ],
+      "episode": {
+        "directory": "93678887-7e7b-4ca8-99ba-c286c19f82a2",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB05",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 1170,
+        "usable_starts": 539
+      }
+    },
+    {
+      "github_asset_id": 787381227,
+      "bytes": 422236645,
+      "state": "uploaded",
+      "name": "full-38-train-red-fad8a140-43a0-4c2b-bdf5-c613ec063312.tar.zst",
+      "members": [
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/actions.npy",
+          "bytes": 21352
+        },
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/camera_rgb.npy",
+          "bytes": 698572928
+        },
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/policy_timestamps_ns.npy",
+          "bytes": 6192
+        },
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/quality.json",
+          "bytes": 8413
+        },
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/row_sources.jsonl",
+          "bytes": 562200
+        },
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/state.npy",
+          "bytes": 21352
+        },
+        {
+          "path": "fad8a140-43a0-4c2b-bdf5-c613ec063312/valid_action_starts.npy",
+          "bytes": 5096
+        }
+      ],
+      "episode": {
+        "directory": "fad8a140-43a0-4c2b-bdf5-c613ec063312",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-RB05",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 758,
+        "usable_starts": 621
+      }
+    },
+    {
+      "github_asset_id": 787415395,
+      "bytes": 374774842,
+      "state": "uploaded",
+      "name": "full-39-train-blue-8b6a6279-1201-4fa6-831e-b2e9db810a0d.tar.zst",
+      "members": [
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/actions.npy",
+          "bytes": 18356
+        },
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/camera_rgb.npy",
+          "bytes": 599961728
+        },
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/policy_timestamps_ns.npy",
+          "bytes": 5336
+        },
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/quality.json",
+          "bytes": 8295
+        },
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/row_sources.jsonl",
+          "bytes": 489753
+        },
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/state.npy",
+          "bytes": 18356
+        },
+        {
+          "path": "8b6a6279-1201-4fa6-831e-b2e9db810a0d/valid_action_starts.npy",
+          "bytes": 3400
+        }
+      ],
+      "episode": {
+        "directory": "8b6a6279-1201-4fa6-831e-b2e9db810a0d",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR05",
+        "split": "train",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 651,
+        "usable_starts": 409
+      }
+    },
+    {
+      "github_asset_id": 787415894,
+      "bytes": 288954927,
+      "state": "uploaded",
+      "name": "full-40-train-red-451a0a0e-8f04-49e5-be7b-4d0914cdcc24.tar.zst",
+      "members": [
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/actions.npy",
+          "bytes": 15976
+        },
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/camera_rgb.npy",
+          "bytes": 521625728
+        },
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/policy_timestamps_ns.npy",
+          "bytes": 4656
+        },
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/quality.json",
+          "bytes": 8437
+        },
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/row_sources.jsonl",
+          "bytes": 423524
+        },
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/state.npy",
+          "bytes": 15976
+        },
+        {
+          "path": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24/valid_action_starts.npy",
+          "bytes": 3376
+        }
+      ],
+      "episode": {
+        "directory": "451a0a0e-8f04-49e5-be7b-4d0914cdcc24",
+        "session_id": "67809f4a-e43e-4d7f-8a95-6ab6a02642f7",
+        "placement_id": "T02-FOUR05",
+        "split": "train",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 566,
+        "usable_starts": 406
+      }
+    },
+    {
+      "github_asset_id": 787416065,
+      "bytes": 378366109,
+      "state": "uploaded",
+      "name": "full-41-validation-red-d8bc2a3c-295c-417e-af84-4c77690e2b82.tar.zst",
+      "members": [
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/actions.npy",
+          "bytes": 19392
+        },
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/camera_rgb.npy",
+          "bytes": 634060928
+        },
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/policy_timestamps_ns.npy",
+          "bytes": 5632
+        },
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/quality.json",
+          "bytes": 8280
+        },
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/row_sources.jsonl",
+          "bytes": 508969
+        },
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/state.npy",
+          "bytes": 19392
+        },
+        {
+          "path": "d8bc2a3c-295c-417e-af84-4c77690e2b82/valid_action_starts.npy",
+          "bytes": 4896
+        }
+      ],
+      "episode": {
+        "directory": "d8bc2a3c-295c-417e-af84-4c77690e2b82",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-FOUR01",
+        "split": "validation",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 688,
+        "usable_starts": 596
+      }
+    },
+    {
+      "github_asset_id": 787416429,
+      "bytes": 536591989,
+      "state": "uploaded",
+      "name": "full-42-validation-blue-f208d430-c112-4e1d-9466-07222a772f19.tar.zst",
+      "members": [
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/actions.npy",
+          "bytes": 28044
+        },
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/camera_rgb.npy",
+          "bytes": 918835328
+        },
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/policy_timestamps_ns.npy",
+          "bytes": 8104
+        },
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/quality.json",
+          "bytes": 8441
+        },
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/row_sources.jsonl",
+          "bytes": 756059
+        },
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/state.npy",
+          "bytes": 28044
+        },
+        {
+          "path": "f208d430-c112-4e1d-9466-07222a772f19/valid_action_starts.npy",
+          "bytes": 4968
+        }
+      ],
+      "episode": {
+        "directory": "f208d430-c112-4e1d-9466-07222a772f19",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-FOUR01",
+        "split": "validation",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 997,
+        "usable_starts": 605
+      }
+    },
+    {
+      "github_asset_id": 787381488,
+      "bytes": 336700448,
+      "state": "uploaded",
+      "name": "full-43-validation-blue-1dc09f10-4d9f-45c0-b442-425b8a51aae1.tar.zst",
+      "members": [
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/actions.npy",
+          "bytes": 17012
+        },
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/camera_rgb.npy",
+          "bytes": 555724928
+        },
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/policy_timestamps_ns.npy",
+          "bytes": 4952
+        },
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/quality.json",
+          "bytes": 8445
+        },
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/row_sources.jsonl",
+          "bytes": 447811
+        },
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/state.npy",
+          "bytes": 17012
+        },
+        {
+          "path": "1dc09f10-4d9f-45c0-b442-425b8a51aae1/valid_action_starts.npy",
+          "bytes": 3904
+        }
+      ],
+      "episode": {
+        "directory": "1dc09f10-4d9f-45c0-b442-425b8a51aae1",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-RB01",
+        "split": "validation",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 603,
+        "usable_starts": 472
+      }
+    },
+    {
+      "github_asset_id": 787380148,
+      "bytes": 546745025,
+      "state": "uploaded",
+      "name": "full-44-validation-red-1d09fdd6-0be8-443f-9d15-56a291cd25e2.tar.zst",
+      "members": [
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/actions.npy",
+          "bytes": 30004
+        },
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/camera_rgb.npy",
+          "bytes": 983347328
+        },
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/policy_timestamps_ns.npy",
+          "bytes": 8664
+        },
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/quality.json",
+          "bytes": 8379
+        },
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/row_sources.jsonl",
+          "bytes": 794794
+        },
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/state.npy",
+          "bytes": 30004
+        },
+        {
+          "path": "1d09fdd6-0be8-443f-9d15-56a291cd25e2/valid_action_starts.npy",
+          "bytes": 6792
+        }
+      ],
+      "episode": {
+        "directory": "1d09fdd6-0be8-443f-9d15-56a291cd25e2",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-RB01",
+        "split": "validation",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 1067,
+        "usable_starts": 833
+      }
+    },
+    {
+      "github_asset_id": 787381022,
+      "bytes": 410630813,
+      "state": "uploaded",
+      "name": "full-45-validation-blue-fb745413-baa5-471e-ad05-7bc43fa395d4.tar.zst",
+      "members": [
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/actions.npy",
+          "bytes": 21660
+        },
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/camera_rgb.npy",
+          "bytes": 708710528
+        },
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/policy_timestamps_ns.npy",
+          "bytes": 6280
+        },
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/quality.json",
+          "bytes": 8363
+        },
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/row_sources.jsonl",
+          "bytes": 567523
+        },
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/state.npy",
+          "bytes": 21660
+        },
+        {
+          "path": "fb745413-baa5-471e-ad05-7bc43fa395d4/valid_action_starts.npy",
+          "bytes": 5960
+        }
+      ],
+      "episode": {
+        "directory": "fb745413-baa5-471e-ad05-7bc43fa395d4",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-FOUR02",
+        "split": "validation",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 769,
+        "usable_starts": 729
+      }
+    },
+    {
+      "github_asset_id": 787416526,
+      "bytes": 260982120,
+      "state": "uploaded",
+      "name": "full-46-validation-red-3f452222-b445-4590-a9d9-2c81f285993b.tar.zst",
+      "members": [
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/actions.npy",
+          "bytes": 12812
+        },
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/camera_rgb.npy",
+          "bytes": 417484928
+        },
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/policy_timestamps_ns.npy",
+          "bytes": 3752
+        },
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/quality.json",
+          "bytes": 8412
+        },
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/row_sources.jsonl",
+          "bytes": 337316
+        },
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/state.npy",
+          "bytes": 12812
+        },
+        {
+          "path": "3f452222-b445-4590-a9d9-2c81f285993b/valid_action_starts.npy",
+          "bytes": 2760
+        }
+      ],
+      "episode": {
+        "directory": "3f452222-b445-4590-a9d9-2c81f285993b",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-FOUR02",
+        "split": "validation",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 453,
+        "usable_starts": 329
+      }
+    },
+    {
+      "github_asset_id": 787416509,
+      "bytes": 278766725,
+      "state": "uploaded",
+      "name": "full-47-validation-blue-4df32d62-b671-408e-aef6-924981243b90.tar.zst",
+      "members": [
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/actions.npy",
+          "bytes": 15332
+        },
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/camera_rgb.npy",
+          "bytes": 500428928
+        },
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/policy_timestamps_ns.npy",
+          "bytes": 4472
+        },
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/quality.json",
+          "bytes": 8390
+        },
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/row_sources.jsonl",
+          "bytes": 404309
+        },
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/state.npy",
+          "bytes": 15332
+        },
+        {
+          "path": "4df32d62-b671-408e-aef6-924981243b90/valid_action_starts.npy",
+          "bytes": 3760
+        }
+      ],
+      "episode": {
+        "directory": "4df32d62-b671-408e-aef6-924981243b90",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-RB02",
+        "split": "validation",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 543,
+        "usable_starts": 454
+      }
+    },
+    {
+      "github_asset_id": 787416975,
+      "bytes": 290012398,
+      "state": "uploaded",
+      "name": "full-48-validation-red-27e15db2-c848-41a4-8b2a-a7fa5388fda3.tar.zst",
+      "members": [
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/actions.npy",
+          "bytes": 14520
+        },
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/camera_rgb.npy",
+          "bytes": 473702528
+        },
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/policy_timestamps_ns.npy",
+          "bytes": 4240
+        },
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/quality.json",
+          "bytes": 8419
+        },
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/row_sources.jsonl",
+          "bytes": 379652
+        },
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/state.npy",
+          "bytes": 14520
+        },
+        {
+          "path": "27e15db2-c848-41a4-8b2a-a7fa5388fda3/valid_action_starts.npy",
+          "bytes": 3840
+        }
+      ],
+      "episode": {
+        "directory": "27e15db2-c848-41a4-8b2a-a7fa5388fda3",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-RB02",
+        "split": "validation",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red"
+        ],
+        "frames": 514,
+        "usable_starts": 464
+      }
+    },
+    {
+      "github_asset_id": 787419201,
+      "bytes": 307151481,
+      "state": "uploaded",
+      "name": "full-49-validation-blue-7f4e286d-31df-4a51-ac48-c129b4cfaa3b.tar.zst",
+      "members": [
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/actions.npy",
+          "bytes": 15780
+        },
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/camera_rgb.npy",
+          "bytes": 515174528
+        },
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/policy_timestamps_ns.npy",
+          "bytes": 4600
+        },
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/quality.json",
+          "bytes": 8418
+        },
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/row_sources.jsonl",
+          "bytes": 414450
+        },
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/state.npy",
+          "bytes": 15780
+        },
+        {
+          "path": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b/valid_action_starts.npy",
+          "bytes": 3808
+        }
+      ],
+      "episode": {
+        "directory": "7f4e286d-31df-4a51-ac48-c129b4cfaa3b",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-FOUR03",
+        "split": "validation",
+        "target_color": "blue",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 559,
+        "usable_starts": 460
+      }
+    },
+    {
+      "github_asset_id": 787419589,
+      "bytes": 308892742,
+      "state": "uploaded",
+      "name": "full-50-validation-red-21c757b1-825b-490d-955f-f8aeeadad81a.tar.zst",
+      "members": [
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/actions.npy",
+          "bytes": 16788
+        },
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/camera_rgb.npy",
+          "bytes": 548352128
+        },
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/policy_timestamps_ns.npy",
+          "bytes": 4888
+        },
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/quality.json",
+          "bytes": 8460
+        },
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/row_sources.jsonl",
+          "bytes": 443404
+        },
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/state.npy",
+          "bytes": 16788
+        },
+        {
+          "path": "21c757b1-825b-490d-955f-f8aeeadad81a/valid_action_starts.npy",
+          "bytes": 3840
+        }
+      ],
+      "episode": {
+        "directory": "21c757b1-825b-490d-955f-f8aeeadad81a",
+        "session_id": "18d1ecf3-edc5-4d52-a253-ab659322e7ee",
+        "placement_id": "V01-FOUR03",
+        "split": "validation",
+        "target_color": "red",
+        "scene_colors": [
+          "blue",
+          "red",
+          "white",
+          "green"
+        ],
+        "frames": 595,
+        "usable_starts": 464
+      }
+    }
+  ]
+}

@@ -630,6 +630,8 @@ V01 最初一条蓝示范按 E 时未停稳，未形成有效终点，仍算失�
 
 **21:48–21:49 D57 数据交付完成。** 用户随后撤销 SHA-256 比对，已停止远端逐文件比对。rsync 已正常传完 30,772,366,164 字节源数据，D57 收到 353 个真实文件、0 个软链；21:48:58 发布最终数据目录。正式数据读取器在 50 条示范各取首尾两例，100 次读通，未初始化模型。norm 和训练仍未启动。GitHub 完整分包继续上传至草稿。[D57 回执](../results/pi-readiness/20261124/blue_red_50_upload_receipt.json) · [Chat 查验入口](PI_BLUE_RED_50_CHAT_AUDIT.md)。
 
+**22:04 发布完成。** 已授权公开的[GitHub Release](https://github.com/kaiwen123-yang/-0--0.5/releases/tag/pi-real-blue-red-50-20261124) 于北京时间 22:04:21 正式公开，tag 指向 `db08a41`。51 个 tar.zst（50 条示范和顶层元数据）共 17,444,106,909 字节，连同 reviewer-numeric.zip、清单和恢复说明，共 54 个附件，GitHub 均显示 uploaded。全量恢复大小为 30,772,366,164 字节。按用户最新指令，最终按状态、个数和大小确认，未继续执行 SHA-256 比对。D57 最终数据目录与报告保留，22:04 未见该实验的 norm/训练进程或启动记录。[分包清单](../results/pi-readiness/20261124/blue_red_50_release_manifest.json)。
+
 ## 固定证据索引
 
 后续新增日期正文放在本索引之前，按时间递增。本节链接是历史证据，保留固定版本。
