@@ -1,0 +1,24 @@
+{
+  "published_at": "2026-11-24T21:48:58+08:00",
+  "inspected_at": "2026-11-24T21:49:18.297826+08:00",
+  "host": "autodl-container-bja8c0fs46-3b3b4908",
+  "data_directory": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1",
+  "report_directory": "/root/autodl-tmp/robot-repro/piper-real-single-v1/reports/blue_red_direct_20261124_50_v1",
+  "file_count": 353,
+  "size_bytes": 30772366164,
+  "symlinks": 0,
+  "reader": {
+    "train": {
+      "episodes": 40,
+      "windows": 21163,
+      "sampled_reader_calls": 80
+    },
+    "validation": {
+      "episodes": 10,
+      "windows": 5406,
+      "sampled_reader_calls": 20
+    }
+  },
+  "checks": "rsync completed; regular file count and file bytes match source; normal reader read first and last window of each episode. Full remote SHA comparison discontinued at operator request.",
+  "present_training_or_norm_run_directories": []
+}
