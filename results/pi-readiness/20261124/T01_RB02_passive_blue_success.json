@@ -1,0 +1,172 @@
+{
+  "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_194909_426207_teach",
+  "run_id": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+  "source_trajectory_id": "f2d102b3-0dca-4964-a54e-d83ea2d2ff5b",
+  "session": "pickplace_20261124_T01",
+  "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+  "split": "train",
+  "placement": "T01-RB02",
+  "target_color": "blue",
+  "scene_colors": [
+    "blue",
+    "red"
+  ],
+  "destination": "fixed_shallow_tray",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "recorder_started": "2026-11-24T19:49:09.426+08:00",
+  "recorder_ended": "2026-11-24T19:50:31.853+08:00",
+  "operator_review": {
+    "approved_teach": true,
+    "outcome": "success",
+    "actual_grasped_color": "blue",
+    "verdict_source": "operator_success_key",
+    "intervention": "no"
+  },
+  "task": {
+    "grid_start_mono_ns": 202363292664364,
+    "grid_end_mono_ns": 202418557591083,
+    "duration_s": 55.264927,
+    "marks": [
+      {
+        "event": "start",
+        "joint_id": 4338,
+        "joint_receive_mono_ns": 202363292664364,
+        "gripper_receive_mono_ns": 202363292802688,
+        "task_offset_s": 0.0,
+        "width_mm": 47.3,
+        "gripper_drive_enabled": true
+      },
+      {
+        "event": "close",
+        "joint_id": 7875,
+        "joint_receive_mono_ns": 202380979393631,
+        "gripper_receive_mono_ns": 202380979437545,
+        "task_offset_s": 17.686729,
+        "width_mm": 27.1,
+        "gripper_drive_enabled": true
+      },
+      {
+        "event": "open",
+        "joint_id": 12493,
+        "joint_receive_mono_ns": 202404071368371,
+        "gripper_receive_mono_ns": 202404071438162,
+        "task_offset_s": 40.778704,
+        "width_mm": 56.1,
+        "gripper_drive_enabled": true
+      },
+      {
+        "event": "end",
+        "joint_id": 15390,
+        "joint_receive_mono_ns": 202418557591083,
+        "gripper_receive_mono_ns": 202418557696283,
+        "task_offset_s": 55.264927,
+        "width_mm": 10.8,
+        "gripper_drive_enabled": true
+      }
+    ]
+  },
+  "collection": {
+    "camera_id": "CC16762023M",
+    "image_slot": "left_wrist_0_rgb",
+    "raw_rgb_frames": 2270,
+    "rgb_frames_in_task_window": 1653,
+    "raw_joint_groups": 16355,
+    "raw_gripper_frames": 16355,
+    "can_tx_delta": 0,
+    "rgb_queue_drops": 0,
+    "rejected_can_triplets": 0
+  },
+  "alignment": {
+    "verification": "read-only demo_export.analyse",
+    "policy_hz": 20,
+    "action_horizon": 10,
+    "arm_action_source": "future_measured_joint_positions",
+    "gripper_action_source": "future_measured_sdk_width",
+    "future_offset_ns": 50000000,
+    "grid_rows": 1105,
+    "valid_rows": 1013,
+    "excluded_rows_by_reason": {
+      "joint_outside_controller_limits": 92
+    },
+    "usable_chunk_starts": 1004,
+    "gaps_over_100ms": 0,
+    "bounds_run": "20261124_193904_227241_home",
+    "raw_out_of_bounds_by_joint": {
+      "J2": {
+        "count": 403,
+        "first_task_s": 1.315183,
+        "last_task_s": 3.325342,
+        "min_deg": -0.082,
+        "max_deg": -0.082
+      },
+      "J3": {
+        "count": 565,
+        "first_task_s": 0.0,
+        "last_task_s": 2.820262,
+        "min_deg": 0.076,
+        "max_deg": 0.417
+      },
+      "J5": {
+        "count": 241,
+        "first_task_s": 45.019045,
+        "last_task_s": 46.219195,
+        "min_deg": 89.508,
+        "max_deg": 89.886
+      }
+    }
+  },
+  "last_snapshot": {
+    "stop": "demonstration_finished",
+    "arm": {
+      "ctrl_mode": 2,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "q_deg": [
+      -9.07,
+      107.604,
+      -69.154,
+      6.484,
+      59.966,
+      -18.136
+    ],
+    "gripper_width_mm": 10.8,
+    "gripper_driver_enabled": true,
+    "axes_enabled": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "source_files": [
+    "run.json",
+    "review.json",
+    "task.json",
+    "task_end.json",
+    "feedback.csv",
+    "rgb.csv",
+    "rgb_status.json",
+    "tx.csv",
+    "commands.jsonl"
+  ]
+}

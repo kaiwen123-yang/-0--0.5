@@ -68,6 +68,10 @@ def main(argv=None, *, finished_run=None):
                             help="从零位进入公共起点 J2 +2°、J3 −2°")
         if kind == "teach":
             sp.add_argument("placement", help="摆放编号")
+            sp.add_argument("--start-marker", action="store_true",
+                            help="被动预录期间复原布局，在实体示教的公共起点按 S 开始任务窗口")
+            sp.add_argument("--passive-capture", action="store_true",
+                            help="从实测起点被动记录三路数据和驱动状态，C/O 仅对实际事件打标")
             sp.add_argument("--manual-gripper", action="store_true",
                             help="手动夹指，C/O 仅标记，完整记录实测开口")
         if kind in ("teach", "block"):
@@ -77,7 +81,10 @@ def main(argv=None, *, finished_run=None):
             sp.add_argument("--formal", action="store_true", help="首批逐条质检通过后采正式示范")
     a = p.parse_args(argv)
     kind = a.kind
-    manual_gripper = kind == "teach" and a.manual_gripper
+    passive = kind == "teach" and a.passive_capture
+    manual_gripper = kind == "teach" and (a.manual_gripper or passive)
+    if kind == "teach" and a.start_marker and not passive:
+        p.error("--start-marker 仅用于 --passive-capture")
     if kind == "width-check" and not 15 <= a.target_mm <= 40:
         p.error("单点空夹目标须在 15–40 mm 内")
     if kind not in ("status", "limits") and not sys.stdin.isatty():
@@ -596,7 +603,7 @@ def main(argv=None, *, finished_run=None):
         report["stop"] = "arrived_powered_hold"
 
     def teach():
-        base = previous_hold()
+        base = rx.current()[0] if passive else previous_hold()
         cfg = read(session / "setup.json")
         if not manual_gripper and abs(rx.current()[1]-cfg["open_m"]) > .002:
             raise ValueError("请先完成张开与开口实测")
@@ -604,7 +611,8 @@ def main(argv=None, *, finished_run=None):
         formal = "terminal_kind" in cfg
         if formal:
             require_setup(cfg)
-            previous_hold(strict=True)
+            if not passive:
+                previous_hold(strict=True)
             report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
                           split=cfg["split"], initial_hold_run=read(led)["run"], use="formal",
                           collection_mode="kinesthetic_direct_v1",
@@ -619,7 +627,10 @@ def main(argv=None, *, finished_run=None):
                               gripper_action_source="future_measured_sdk_width",
                               gripper_operation="operator_backdrives_fingers",
                               initial_measured_width_m=rx.current()[1])
-                if snapshot(dev, rx, grip)["gripper"]["foc_status"]["driver_enable_status"]:
+                if passive:
+                    report.update(gripper_operation="operator_marked_observed_events", read_only=True,
+                                  initial_measured_q_rad=base, gripper_flags_source="feedback.csv:0x2A8 byte6")
+                elif snapshot(dev, rx, grip)["gripper"]["foc_status"]["driver_enable_status"]:
                     raise ValueError("夹爪驱动仍使能，先在任务外完成夹爪释放")
                 # Use the most recent controller limits from the actual hold when available.
                 held_run = read(session / read(led)["run"] / "run.json")
@@ -630,12 +641,15 @@ def main(argv=None, *, finished_run=None):
             save(run/"task.json", dict(run_id=report["run_id"], session_id=cfg["session_id"],
                                        placement=a.placement, **task))
             print(a.placement, task["scene_colors"], task["prompt"], flush=True)
-            if manual_gripper:
+            if passive:
+                print("三路只读采集。按实体键示教后可拖动六轴。夹爪使能时手指远离夹口。")
+            elif manual_gripper:
                 print("手动夹住指定色方块后按 C 标记；手动放入浅盘后按 O 标记。录制期间主机只接收。")
             else:
                 print("一次录成训练示范：C 实际闭合，夹住指定方块后手拖搬运；O 实际张开，把方块放进浅盘。")
             print("抬离后 E 表示指定颜色已成功入盘、无额外救场；失败用 F 保存。手拖本身不算人工救场。")
-            agree("核对目标、布局和腕图，开始一次真实手拖抓放")
+            if not passive:
+                agree("核对目标、布局和腕图，开始一次真实手拖抓放")
         save(source_file, dict(pending=run.name))
         save(clear_file, dict(pending=run.name))
         stopped_during = None
@@ -692,24 +706,42 @@ def main(argv=None, *, finished_run=None):
                     and recent and ns-recent[0][0] >= 480_000_000
                     and all(gap(pos, q) <= .2 for _, pos in recent))
 
-        if formal:
-            if manual_gripper and snapshot(dev,rx,grip)["arm"]["teach_status"] == 1:
+        def wait_for_physical_teach(check=None):
+            if passive and a.start_marker:
+                print("已预录。复原布局并回到公共起点，实体示教绿灯常亮、停稳后，S 回车开始任务。",flush=True)
+            elif manual_gripper and snapshot(dev,rx,grip)["arm"]["teach_status"] == 1:
                 print("实体示教键已开启，请保持起点，等 start 已记再手拖。", flush=True)
             else:
                 print("起点就绪。单击实体示教键，绿灯常亮后停稳，等 start 已记再手拖。", flush=True)
             while True:
+                if check is not None:
+                    check()
                 st = snapshot(dev,rx,grip)["arm"]
                 if st["arm_status"] not in (0,11) or any(st["err_status"].values()):
                     raise RuntimeError(f"等待示教时出现控制器故障：{st}")
                 if st["ctrl_mode"] == 2 and st["teach_status"] == 1:
-                    break
+                    if not (passive and a.start_marker) or line() == "s":
+                        break
+                    time.sleep(.03)
+                    continue
+                if passive and a.start_marker:
+                    line()  # Discard input typed outside the physical teaching state.
                 if st["ctrl_mode"] not in (0,1,2) or st["teach_status"] not in (0,2):
                     raise ValueError(f"意外的控制源或示教状态：{st}")
                 time.sleep(.03)
-            previous_hold(strict=True)
+            if not passive:
+                previous_hold(strict=True)
             report["before_drag_recording"] = dict(joint_groups=rx.nq, gripper_frames=rx.ng)
             rx.write_samples = True
+        if formal and not passive:
+            wait_for_physical_teach()
+        if passive:
+            rx.write_samples = True
         with camera(run) as check:
+            if passive:
+                print("腕图、六轴、夹爪开口已开始记录。", flush=True)
+                wait_for_physical_teach(check)
+                base = rx.current()[0]
             if formal and not manual_gripper:
                 teach_gripper("initial_open",check)
             if not formal:
@@ -721,7 +753,11 @@ def main(argv=None, *, finished_run=None):
             for event in keys:
                 if event != "start":
                     required = {"close":"c","open":"o","end":"e"}[event]
-                    if manual_gripper:
+                    if passive:
+                        print({"close":"可以手拖机械臂。实际抓到后按 C；无法抓取可按 F 保存。",
+                               "open":"实际释放后按 O；未完成可按 F 保存。",
+                               "end":"抓对目标并已放入浅盘、空爪抬离停稳后按 E；否则 F 保存。"}[event],flush=True)
+                    elif manual_gripper:
                         print({"close":"手动夹住后 C 回车标记；失败 F 回车。", "open":"手动释放后 O 回车标记；失败 F 回车。",
                                "end":"空爪抬离并停稳，目标色成功入盘 E 回车，失败 F 回车。"}[event], flush=True)
                     elif formal and event == "end":
@@ -735,6 +771,8 @@ def main(argv=None, *, finished_run=None):
                 while True:
                     check()
                     row = snapshot(dev, rx, grip)
+                    if passive and event == "close":
+                        report["max_open_before_close_m"] = max(row["width_m"], report.get("max_open_before_close_m",report["marks"][0]["width_m"]))
                     if event == 'end' and not formal and time.monotonic() >= next_display:
                         err = [round(math.degrees(v-b),2) for v,b in zip(row['q_rad'],base)]
                         print('示教中，当前减起点 J1–J6 (°)', err, '夹爪 mm',
@@ -757,10 +795,12 @@ def main(argv=None, *, finished_run=None):
                     if (st["ctrl_mode"] != 2 or st["teach_status"] != 1 or
                             st["arm_status"] not in (0, 11) or any(st["err_status"].values())):
                         raise RuntimeError(f"未收到正常示教记录状态：{st}")
-                    if manual_gripper and row["gripper"]["foc_status"]["driver_enable_status"]:
+                    if manual_gripper and not passive and row["gripper"]["foc_status"]["driver_enable_status"]:
                         raise RuntimeError("夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪")
                     last_drag = rx.joint_sample
                     key = None if event == "start" else line()
+                    if manual_gripper and key == "0" and event == "open":
+                        print("释放标记请用英文字母 O，再回车。",flush=True)
                     if manual_gripper and key == "f" and event != "end":
                         report["operator_outcome"] = "failed"
                         stopped_during = event
@@ -791,12 +831,19 @@ def main(argv=None, *, finished_run=None):
                         mark = dict(event=event, joint_id=ident, mono_ns=ns, q=q)
                         if manual_gripper:
                             grip_ns, width = rx.grip
-                            mark.update(grip_ns=grip_ns, width_m=width)
+                            mark.update(grip_ns=grip_ns, width_m=width,
+                                        gripper_drive_enabled=row["gripper"]["foc_status"]["driver_enable_status"])
+                            if passive and event=="end" and key=="e":
+                                start,close,opened = report["marks"]
+                                if (report["max_open_before_close_m"]-close["width_m"] < .001
+                                        or opened["width_m"]-close["width_m"] < .001):
+                                    print("C/O 标记缺少实际闭合或张开的宽度变化，本条可用 F 保存。",flush=True)
+                                    continue
                             if event in ("close", "open"):
                                 report["events"].append(dict(event=event, grip_ns=grip_ns, width_m=width))
                                 print(f"{event} 标记宽度 {width*1000:.1f} mm",flush=True)
                         if formal and event == "end":
-                            if not still_and_in_bounds((ident, ns, q)):
+                            if (not passive or key != "f") and not still_and_in_bounds((ident, ns, q)):
                                 print("E 未记录：在关节限位内的抬离位置停稳一秒。",flush=True)
                                 continue
                             mark["operator_empty_retreat"] = True  # E is the explicit on-site confirmation
@@ -844,6 +891,10 @@ def main(argv=None, *, finished_run=None):
                 key = input(prompt).strip().lower()
                 if key not in ("e","f","h"):
                     raise ValueError("未完成现场交接")
+                if passive and key=="e":
+                    start,closed,opened = report["marks"]
+                    if report["max_open_before_close_m"]-closed["width_m"] < .001 or opened["width_m"]-closed["width_m"] < .001:
+                        raise ValueError("C/O 标记缺少实际夹爪开合反馈，保留数据，本条未通过")
                 if key in ("e","f"):
                     pending_end["operator_empty_retreat"] = True
                     pending_end["operator_task_success"] = key == "e"
@@ -1204,7 +1255,10 @@ def main(argv=None, *, finished_run=None):
             if kind not in ("teach","status","prepare-pads") or (kind == "teach" and task is not None):
                 tx = stack.enter_context((run/"tx.csv").open("x",newline="",buffering=1))
                 commands = stack.enter_context((run/"commands.jsonl").open("x",buffering=1))
-                sender = Sender(dev, grip, tx, commands)
+                if passive:
+                    csv.writer(tx).writerow(("start_ns","end_ns","command_id","can_id","data","result","error"))
+                else:
+                    sender = Sender(dev, grip, tx, commands)
             if kind == "status":
                 time.sleep(2)
             elif kind == "limits":
