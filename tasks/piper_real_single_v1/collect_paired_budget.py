@@ -111,6 +111,14 @@ def check_recorder_available():
             raise RuntimeError("当前采集器正在使用，请等本条封存后再接队列") from None
 
 
+def missing_task_end(run):
+    """A stopped passive demonstration with no confirmed end can be retried at S."""
+    return (run.get("read_only") is True and not run.get("complete")
+            and not any(run.get(k) for k in ("error", "receive_error", "final_unknown"))
+            and (run.get("source_rejection") or "").endswith("缺少确认的任务终点")
+            and run.get("final", {}).get("arm", {}).get("teach_status") == 2)
+
+
 def collect():
     allocation = allocations()
     existing = {}
@@ -181,11 +189,19 @@ def collect():
                     consecutive_abnormal = 0
                     print("按 F 的失败示范已保留，复原本布局后重录同一目标。", flush=True)
                     continue
+                if missing_task_end(run):
+                    consecutive_abnormal = 0
+                    print("灯已灭，但未记到完整终点。原始数据已保存，进度不变；复原后按 S 重录。", flush=True)
+                    continue
                 consecutive_abnormal += 1
                 if consecutive_abnormal >= 2:
                     raise RuntimeError("同一目标连续异常两次，已停止，请核对最近的录制回执")
-                if input("排除原因后输入 retry 重录同一目标，其他输入停止队列：").strip().lower() != "retry":
-                    return 1
+                while True:
+                    answer = input("排除原因后输入 retry 重录，或 Q 退出：").strip().lower()
+                    if answer == "retry":
+                        break
+                    if answer == "q":
+                        return 1
     print("已完成全部 50 个真实蓝红配对目标：训练 20 对、独立验证 5 对。", flush=True)
     return 0
 
