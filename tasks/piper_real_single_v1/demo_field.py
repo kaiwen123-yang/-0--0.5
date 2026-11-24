@@ -18,7 +18,8 @@ from uuid import uuid4
 
 from demo_io import (BOOT, CAL, CAL_SHA, CLOCK, HERE, ROOT, Feedback, PiperDevice,
                      Sender, camera, gap, h0, healthy, read, save, snapshot, stats)
-from demo_path import plan
+from demo_path import plan, plan_samples
+from width_contract import WIDTH, RETREAT, TERMINAL_VERSION, require_setup
 
 
 def agree(prompt):
@@ -43,9 +44,13 @@ def main():
     modes = {"return-start": "沿已执行空场目标倒序返回，保持夹爪张开", "restart-teach": "重新建立本次实测保持位并复开夹爪", "prepare-pads": "以实测指垫端点接续联调（只接收）", "prepare": "建立本次起点，核实开口", "width-check": "单点空夹卡尺核查",
              "teach": "被动手拖记录", "empty": "移走方块后核查新路径",
              "block": "按原布局抓放一次"}
+    modes.update({"prepare-formal": "沿用同一安装的卡尺记录，在新会话建立近起点保持",
+                  "anchor-start": "被动重定位并退出示教后，近起点交接与同位锚定"})
     for kind, help_text in modes.items():
         sp = sub.add_parser(kind, help=help_text)
         sp.add_argument("session", type=Path)
+        if kind == "prepare-formal":
+            sp.add_argument("held_session", type=Path, help="拥有当前真实保持记录的会话")
         if kind == "prepare-pads":
             sp.add_argument("--first-open-mm", required=True, type=float, help="首次张开独立卡尺净距")
             sp.add_argument("--object-mm", required=True, type=float, help="同一夹持方向的实物宽")
@@ -108,12 +113,21 @@ def main():
                        tx_packets=stats()["tx_packets"],
                        run=run.name, command_file=str(run / "commands.jsonl")))
 
-    def previous_hold():
-        h = read(led)
+    def previous_hold(ledger=led, *, strict=False):
+        h = read(ledger)
         link_index = int(Path("/sys/class/net/can0/ifindex").read_text())
         if (h["boot_id"] != BOOT or h["tx_packets"] != stats()["tx_packets"]
                 or h.get("ifindex",link_index) != link_index):
             raise RuntimeError("保持目标的 boot/TX 计数已变化，请重新建立本次起点")
+        if strict:
+            if h.get("ifindex") != link_index:
+                raise RuntimeError("当前接口身份缺失或变化")
+            commands = Path(h["command_file"])
+            with commands.open() as f:
+                arm = [c for line in f if (c := json.loads(line))["kind"] == "arm"]
+            if (not arm or arm[-1]["result"] != "host_submitted" or arm[-1]["frames"] != 3
+                    or gap(arm[-1]["actual"], h["q"]) > .00051):
+                raise RuntimeError("保持账本与末次真实六轴提交不符")
         if gap(rx.current()[0], h["q"]) > .35:
             raise RuntimeError("实测姿态距先前有提交记录的起点超过 0.35°")
         return h["q"]
@@ -309,12 +323,104 @@ def main():
         record_hold(q)
         active = False
 
+    def prepare_formal():
+        nonlocal active
+        allocation = read(session / "session.json")
+        if (allocation["split"] not in ("train", "validation") or (session/"setup.json").exists()
+                or led.exists() or a.held_session.resolve() == session):
+            raise ValueError("需要独立、已分配 split 的新会话")
+        evidence = ROOT/"pi-q12-data/pickplace_20261123_211053/setup.json"
+        prior = read(evidence)
+        cfg = dict(session_id=allocation["session_id"], split=allocation["split"], gripper_basis=WIDTH,
+                   terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION, commissioning_only=False,
+                   installation="A01 Piper H official gripper, same pads and DC1 wrist mount",
+                   measurement_file=str(evidence), pad_measurements=prior["pad_measurements"],
+                   open_m=prior["open_m"], close_m=prior["close_m"], force_N=prior["force_N"])
+        require_setup(cfg)
+        ledger = a.held_session.resolve()/"hold.json"
+        agree("确认与 A01 同一夹爪、指垫、腕部安装和蓝块；空爪已张开，手和工具撤离。将查询限位、提交当前实测同位保持")
+        base = previous_hold(ledger, strict=True)
+        row = healthy(dev,rx,grip)
+        if (max(map(abs,base)) > math.radians(5) or row["arm"]["motion_status"] != 0
+                or abs(row["width_m"]-cfg["open_m"]) > .002):
+            raise ValueError("需要已张开并到位的健康近起点")
+        normal_hold(base)
+        previous_hold(ledger, strict=True)
+        count = stats()["tx_packets"]
+        cfg["bounds"] = limits()
+        if stats()["tx_packets"] != count + 6:
+            raise RuntimeError("限位查询期间出现额外 TX")
+        q = healthy(dev,rx,grip)["q_rad"]
+        if gap(q,base) > .35 or max(map(abs,q)) > math.radians(5):
+            raise ValueError("查询后起点发生变化")
+        if any(not lo <= x <= hi for x,(lo,hi) in zip(q,cfg["bounds"],strict=True)):
+            raise ValueError("实测起点超限")
+        active = True
+        sender.arm(q,"formal_measured_start")
+        normal_hold(q)
+        record_hold(q)
+        active = False
+        cfg["prepare_run"] = run.name
+        report.update(cfg, inherited_ledger=str(ledger))
+        save(session/"setup.json",cfg)
+
+    def anchor_start():
+        nonlocal active
+        cfg = read(session/"setup.json")
+        require_setup(cfg)
+        source = session/read(source_file)["run"]
+        taught = read(source/"run.json")
+        if (not taught["complete"] or taught.get("terminal_kind") != RETREAT
+                or taught["session_id"] != cfg["session_id"] or not taught.get("released")
+                or taught["boot_id"] != BOOT or not taught["reposition_only"].get("end")
+                or read(led)["run"] != taught["initial_hold_run"]):
+            raise ValueError("需要当前同源正常 E、独立手拖接续和灯灭记录")
+        agree("已单击退出示教，灯灭，空夹张开，人手及工具撤离，当前近起点净空。执行交接和同位保持")
+        expected = previous_hold(strict=True)
+        row = snapshot(dev,rx,grip)
+        q, st = row["q_rad"], row["arm"]
+        if (st["teach_status"] != 2 or st["arm_status"] or st["motion_status"]
+                or abs(row["width_m"]-cfg["open_m"]) > .002 or h0.near_zero_issues(dev,q,st)
+                or gap(q,taught["marks"][0]["q"]) > .35):
+            raise ValueError("灯灭或健康近起点条件不符，保留记录，勿自动回零")
+        before = stats()["tx_packets"]
+        bounds = limits()
+        time.sleep(.3)
+        fresh = snapshot(dev,rx,grip)
+        if (stats()["tx_packets"] != before+6 or fresh["arm"] != st or gap(fresh["q_rad"],q) > .1
+                or gap(fresh["q_rad"],expected) > .35
+                or any(not lo <= x <= hi for x,(lo,hi) in zip(fresh["q_rad"],bounds,strict=True))):
+            raise ValueError("近起点交接前反馈、限位或 TX 不符")
+        report.update(use="reposition_only", source_trajectory_id=taught["run_id"], gripper_basis=WIDTH)
+        if st["ctrl_mode"] != 1:
+            active = True
+            sender.call("handoff",st["ctrl_mode"],lambda: h0.handoff_near_zero(dev,q,st,
+                lambda name,**kw: report.setdefault("handoff",[]).append(dict(stage=name,**kw))))
+        row = healthy(dev,rx,grip)
+        anchor = row["q_rad"]
+        if gap(anchor,q) > .35 or gap(anchor,taught["marks"][0]["q"]) > .35 or row["arm"]["motion_status"]:
+            raise RuntimeError("交接后偏离起点")
+        active = True
+        sender.arm(anchor,"measured_anchor_after_passive_reposition")
+        normal_hold(anchor)
+        record_hold(anchor)
+        active = False
+        report["stop"] = "arrived_powered_hold"
+
     def teach():
         base = previous_hold()
         cfg = read(session / "setup.json")
         if abs(rx.current()[1]-cfg["open_m"]) > .002:
             raise ValueError("请先完成张开与开口实测")
         report.update(placement=a.placement, session_id=cfg["session_id"], marks=[], breaks=[])
+        formal = "terminal_kind" in cfg
+        if formal:
+            require_setup(cfg)
+            previous_hold(strict=True)
+            report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
+                          split=cfg["split"], initial_hold_run=read(led)["run"])
+            print("开始前看腕图，确认完整蓝块和指尖。C 抓取位、O 释放位、E 空爪抬离；每处静止一秒。")
+            agree("已讲解按键、核对新布局和腕图，准备被动示教")
         save(source_file, dict(pending=run.name))
         save(clear_file, dict(pending=run.name))
         with camera(run) as check:
@@ -326,12 +432,14 @@ def main():
             for event in keys:
                 if event != "start":
                     required = {"close":"c","open":"o","end":"e"}[event]
+                    if formal and event == "end":
+                        print("释放后空爪抬离，现场确认已离开盘沿；E 回车封存真实终点，保持示教灯亮。")
                     print(f"{event}: 静止至少 1 秒，输入 {required.upper()} 并回车，继续静止 1 秒。", flush=True)
                 next_display = 0.
                 while True:
                     check()
                     row = snapshot(dev, rx, grip)
-                    if event == 'end' and time.monotonic() >= next_display:
+                    if event == 'end' and not formal and time.monotonic() >= next_display:
                         err = [round(math.degrees(v-b),2) for v,b in zip(row['q_rad'],base)]
                         print('示教中，当前减起点 J1–J6 (°)', err, '夹爪 mm',
                               round(row['width_m']*1000,2), flush=True)
@@ -356,16 +464,61 @@ def main():
                         time.sleep(.02)
                         continue
                     if event == "start" or key == required:
-                        if event in ("start","end") and gap(row["q_rad"],base) > .35:
+                        if (event == "start" or (event == "end" and not formal)) and gap(row["q_rad"],base) > .35:
                             if event == "start":
                                 raise ValueError("示教起点偏离已建立的保持位")
                             print("请手拖回原起点后再输入 E。", flush=True)
                             continue
                         # The receive thread publishes these three fields together.
                         ident, ns, q = rx.joint_sample
-                        report["marks"].append(dict(event=event, joint_id=ident, mono_ns=ns, q=q))
+                        mark = dict(event=event, joint_id=ident, mono_ns=ns, q=q)
+                        if formal and event == "end":
+                            if any(not lo <= x <= hi for x,(lo,hi) in zip(q,cfg["bounds"],strict=True)):
+                                raise ValueError("抬离点超限")
+                            mark["operator_empty_retreat"] = True  # E is the explicit on-site confirmation
+                        report["marks"].append(mark)
                         print(event, "已记", flush=True)
                         break
+                    time.sleep(.02)
+            if formal:
+                end = report["marks"][-1]
+                # Drain the camera CSV through the E frame before reading its causal predecessor.
+                time.sleep(.15)
+                check()
+                with (run/"rgb.csv").open() as f:
+                    prior = [r for r in csv.DictReader(f) if int(r["mono_ns"]) <= end["mono_ns"]]
+                if not prior or end["mono_ns"]-int(prior[-1]["mono_ns"]) > 100_000_000:
+                    raise ValueError("E 缺少新鲜原图来源")
+                end.update(image_id=int(prior[-1]["index"]), image_ns=int(prior[-1]["mono_ns"]))
+                fback.flush()
+                save(run/"task_end.json",end)
+                plan_samples(run, report, report["marks"], cfg["bounds"], 2.5)
+                report["reposition_only"] = dict(after_joint_id=end["joint_id"], after_ns=end["mono_ns"],
+                                                 scope="all later feedback and RGB excluded from task")
+                save(run/"reposition_only.json",report["reposition_only"])
+                print("E 已封存。保持示教灯亮，独立手拖回已核实的近起点，停稳后 Z 回车。",flush=True)
+                stable_since = None
+                anchor_q = None
+                while True:
+                    check()
+                    row = snapshot(dev,rx,grip)
+                    st = row["arm"]
+                    if st["ctrl_mode"] != 2 or st["teach_status"] != 1 or st["arm_status"] not in (0,11) or any(st["err_status"].values()):
+                        raise RuntimeError("重定位间示教状态改变")
+                    q = row["q_rad"]
+                    close = (gap(q,base) <= .35 and max(map(abs,q)) <= math.radians(5)
+                             and all(lo <= x <= hi for x,(lo,hi) in zip(q,cfg["bounds"],strict=True)))
+                    if not close:
+                        stable_since = anchor_q = None
+                    elif anchor_q is None or gap(q,anchor_q) > .1:
+                        stable_since,anchor_q = CLOCK(),q
+                    if line() == "z":
+                        if stable_since and CLOCK()-stable_since >= 500_000_000:
+                            ident, ns, q = rx.joint_sample
+                            report["reposition_only"]["end"] = dict(joint_id=ident,mono_ns=ns,q=q)
+                            save(run/"reposition_only.json",report["reposition_only"])
+                            break
+                        print("近起点/静止条件未满足；偏差°",round(gap(q,base),3),flush=True)
                     time.sleep(.02)
             print("软件记录结束。单击实体键退出示教，确认灯灭。不要双击。", flush=True)
         input("确认实体示教灯已经熄灭后回车：")
@@ -373,6 +526,9 @@ def main():
         st = released["arm"]
         if st["ctrl_mode"] not in (0,1,2) or (st["ctrl_mode"] == 2 and st["teach_status"] != 2):
             raise RuntimeError(f"灯灭后仍未收到停止示教的状态：{st}")
+        if formal and (st["teach_status"] != 2 or st["arm_status"] or st["motion_status"]
+                       or h0.near_zero_issues(dev,released["q_rad"],st) or gap(released["q_rad"],base) > .35):
+            raise ValueError("退出示教后需新鲜、健康的近起点")
         report["released"] = released
         if stats()["tx_packets"] != report["interface_before"]["tx_packets"]:
             raise RuntimeError("手拖期间主机 TX 变化；该轨迹需排查")
@@ -388,6 +544,13 @@ def main():
         quality = read(empty_path/"quality.json")
         held = previous_hold()
         last_run = read(session/read(led)["run"]/"run.json")
+        if "terminal_kind" in cfg:
+            require_setup(cfg)
+            previous_hold(strict=True)
+            reviewed = read(empty_path/"review.json")
+            if (not reviewed["approved_empty"] or reviewed["run_id"] != empty["run_id"]
+                    or empty.get("gripper_basis") != WIDTH or empty.get("terminal_kind") != RETREAT):
+                raise ValueError("需要同源正式合同的已审核空场")
         if (not empty["complete"] or empty["kind"] != "empty" or not empty["pause_resume_verified"]
                 or empty["stop"] != "arrived_powered_hold" or not last_run["complete"]
                 or empty["source_directory"] != str(session/source["run"])
@@ -442,6 +605,11 @@ def main():
             if line() in ("p","e"):
                 normal_hold(goal)
                 active = False
+                if c is targets[0]:
+                    prior = read(led)
+                    save(led, dict(prior, tx_packets=stats()["tx_packets"], stop_run=run.name))
+                else:
+                    record_hold(goal)
                 report["stop"] = "operator_ended_in_hold"
                 raise ValueError("中止独立返回，已确认保持")
             goal = c["actual"]
@@ -455,6 +623,12 @@ def main():
     def replay():
         nonlocal active
         cfg = read(session / "setup.json")
+        formal_source = "terminal_kind" in cfg
+        if formal_source or report["use"] == "formal":
+            require_setup(cfg)
+            report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
+                          pad_measurements=cfg["pad_measurements"], installation=cfg["installation"],
+                          split=cfg["split"], measurement_file=cfg["measurement_file"])
         if cfg.get("commissioning_only"):
             if report["use"] == "formal":
                 raise ValueError("此会话仅核实了指垫端点，正式训练需先确定物理开口契约")
@@ -471,6 +645,18 @@ def main():
             report.update(retreat_window=window,reset_between_runs="separate_confirmed_return")
         report.update(source_trajectory_id=taught["run_id"], source_directory=str(path),
                       placement=taught["placement"], session_id=cfg["session_id"])
+        if formal_source:
+            hold = read(led)
+            anchor = read(session/hold["run"]/"run.json")
+            if (window or taught.get("terminal_kind") != RETREAT or taught.get("gripper_basis") != WIDTH
+                    or taught["session_id"] != cfg["session_id"] or taught["split"] != cfg["split"]
+                    or not anchor["complete"] or anchor["stop"] != "arrived_powered_hold"
+                    or anchor["kind"] not in ("anchor-start","return-start")
+                    or anchor["source_trajectory_id"] != taught["run_id"]):
+                raise ValueError("需要此正常源的近起点锚定或同源空场实际返回")
+            previous_hold(strict=True)
+            report.update(start_hold_run=hold["run"], task_end=taught["marks"][-1],
+                          reset_between_runs="separate_confirmed_return")
         if kind == "empty":
             save(clear_file, dict(pending=run.name))
         if kind == "block":
@@ -498,7 +684,7 @@ def main():
         report.update(reference_deg_s=speed, reference_deg_s2=8, retained_points=len(points))
         print("源关节点", points[-1]["id"]-points[0]["id"]+1, "保留节点", len(points),
               "计划轨迹秒", sum(p["ticks"] for p in points)*.05, flush=True)
-        if gap(base,points[0]["q"]) > .35 or (not window and gap(base,points[-1]["q"]) > .35):
+        if gap(base,points[0]["q"]) > .35 or (not window and not formal_source and gap(base,points[-1]["q"]) > .35):
             raise ValueError("起点与实测保持位不符，或未经选择的末端偏离起点")
         agree("确认以上路径与时间，启动本次低速执行")
         with camera(run) as check:
@@ -558,6 +744,8 @@ def main():
                                                                         prior_motion_deg=excursion))
                             if key == "e":
                                 active = False
+                                record_hold(last)
+                                report["stop"] = "operator_ended_in_hold"
                                 raise ValueError("现场提前结束，已确认保持")
                             print("暂停，保持已确认。R 回车继续，E 回车结束。", flush=True)
                             while True:
@@ -569,7 +757,10 @@ def main():
                                     break
                                 time.sleep(.05)
                             if key == "e":
+                                normal_hold(last)
                                 active = False
+                                record_hold(last)
+                                report["stop"] = "operator_ended_in_hold"
                                 raise ValueError("暂停后提前结束，已确认保持")
                             paused = paused or excursion > .1
                             # Restart the remaining part of this same chord from rest.
@@ -644,6 +835,10 @@ def main():
                 time.sleep(2)
             elif kind == "limits":
                 print(json.dumps(limits(), ensure_ascii=False))
+            elif kind == "prepare-formal":
+                prepare_formal()
+            elif kind == "anchor-start":
+                anchor_start()
             elif kind == "prepare":
                 prepare()
             elif kind == "width-check":
@@ -671,6 +866,8 @@ def main():
             dev.disconnect()
             report.update(interface_after=stats(), joint_groups=rx.nq, gripper_frames=rx.ng,
                           rejected_triplets=rx.bad_groups, ended_unix_ns=time.time_ns())
+            if kind in ("teach","anchor-start","prepare-formal") and "final_unknown" in report:
+                report["complete"] = False
             if rx.error:
                 report.update(complete=False, receive_error=rx.error)
             save(run / "run.json", report)

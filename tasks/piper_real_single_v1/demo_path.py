@@ -6,6 +6,9 @@ import math
 from demo_io import gap, read
 
 
+from width_contract import RETREAT, TERMINAL_VERSION, require_width
+
+
 def plan(path, bounds, speed_deg_s, retreat_window=None):
     teach = read(path / "run.json")
     if teach["kind"] != "teach":
@@ -26,6 +29,24 @@ def plan(path, bounds, speed_deg_s, retreat_window=None):
                 not marks[-1]["joint_id"] < retreat_window["end_joint_id"] <= observed_end["joint_id"]):
             raise ValueError("Selected retreat requires a traceable, receive-only operator-ended recording")
         marks.append(dict(event="end",joint_id=retreat_window["end_joint_id"]))
+    return plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window)
+
+
+def plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window=None):
+    terminal = teach.get("terminal_kind")
+    if terminal is not None:
+        require_width(teach)
+        if terminal != RETREAT or teach.get("terminal_version") != TERMINAL_VERSION or retreat_window:
+            raise ValueError("Unknown or mixed task terminal")
+        end = read(path / "task_end.json")
+        if end != marks[-1] or not end.get("operator_empty_retreat"):
+            raise ValueError("Missing recorded normal E at retreat")
+        with (path / "rgb.csv").open() as f:
+            image = next((r for r in csv.DictReader(f) if int(r["index"]) == end["image_id"]), None)
+        if (not image or int(image["mono_ns"]) != end["image_ns"]
+                or not 0 <= end["mono_ns"] - end["image_ns"] <= 100_000_000
+                or not (path / "rgb" / f"{end['image_id']:07d}.png").is_file()):
+            raise ValueError("No causal original RGB for E")
     if [m["event"] for m in marks] != ["start", "close", "open", "end"]:
         raise ValueError("Expected start, close, open, end")
     with (path / "feedback.csv").open() as f:
@@ -41,7 +62,10 @@ def plan(path, bounds, speed_deg_s, retreat_window=None):
             raise ValueError(f"Taught sample {rows[i][0]} outside limits")
         if i and (not 0 < ns-rows[i-1][1] <= 50_000_000 or gap(q, rows[i-1][2]) > 2):
             raise ValueError(f"Gap or discontinuity near taught sample {rows[i][0]}")
-    if retreat_window is None and gap(rows[0][2], rows[-1][2]) > .35:
+    if terminal == RETREAT and any((rows[k][1],rows[k][2]) != (m["mono_ns"],m["q"])
+                                      for k,m in zip(locked,marks,strict=True)):
+        raise ValueError("Task mark differs from recorded feedback")
+    if terminal is None and retreat_window is None and gap(rows[0][2], rows[-1][2]) > .35:
         raise ValueError("End the taught path at its measured starting hold (within 0.35 deg)")
     for k in locked:
         window = [r for r in rows if abs(r[1]-rows[k][1]) <= 500_000_000]
