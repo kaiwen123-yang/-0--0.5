@@ -10,8 +10,8 @@ Expected dataset files:
 
 Each index entry is one complete episode. State and actions are [N,7]; RGB
 is [N,H,W,3] uint8. Direct kinesthetic episodes explicitly label future measured
-joint positions as targets and retain actual submitted gripper targets. This
-reader consumes those exported labels; it does not claim they were arm commands.
+joint positions as targets. The gripper target is a submitted width for powered
+grasping or a future measured width for manual finger demonstrations.
 An optional valid_action_starts.npy selects complete usable chunks while keeping
 the original arrays and 50 ms sequence, including excluded rows, unchanged.
 Rows must already be aligned to a 50 ms policy grid, with original source
@@ -39,6 +39,9 @@ DIRECT_MODE = "kinesthetic_direct_v1"
 DIRECT_DATA_KIND = "real_kinesthetic_demonstrations"
 FUTURE_JOINT_SOURCE = "future_measured_joint_positions"
 GRIP_COMMAND_SOURCE = "actual_submitted_sdk_width_target"
+MANUAL_MODE = "kinesthetic_manual_gripper_v1"
+FUTURE_GRIP_SOURCE = "future_measured_sdk_width"
+GRIP_SOURCES = {DIRECT_MODE: GRIP_COMMAND_SOURCE, MANUAL_MODE: FUTURE_GRIP_SOURCE}
 
 
 def formal_entries(root, camera_mount, policy_hz):
@@ -60,7 +63,10 @@ def formal_entries(root, camera_mount, policy_hz):
     groups = {}
     for e in entries:
         a = by_id[e["directory"]]
-        direct = e.get("collection_mode") == DIRECT_MODE
+        mode = e.get("collection_mode")
+        direct = mode in GRIP_SOURCES
+        if a.get("collection_mode") != mode:
+            raise ValueError("Index and alignment disagree on the episode collection mode")
         if metadata.get("data_kind") == DIRECT_DATA_KIND and not direct:
             raise ValueError("Kinesthetic collection contains an episode without its action-source contract")
         if metadata.get("collection_view") in ("all_colors", "blue_red"):
@@ -76,9 +82,8 @@ def formal_entries(root, camera_mount, policy_hz):
                     or r.get("terminal_kind") != RETREAT or r.get("terminal_version") != 1
                     or r.get("split") != e["split"] or e["split"] not in ("train","validation")):
                 raise ValueError("Formal episode has incompatible eligibility, split or source contract")
-            if direct and (r.get("collection_mode") != DIRECT_MODE
-                           or r.get("arm_action_source") != FUTURE_JOINT_SOURCE
-                           or r.get("gripper_action_source") != GRIP_COMMAND_SOURCE
+            if direct and (r.get("arm_action_source") != FUTURE_JOINT_SOURCE
+                           or r.get("gripper_action_source") != GRIP_SOURCES[mode]
                            or r.get("future_offset_ns") != POLICY_PERIOD_NS):
                 raise ValueError("Kinesthetic target provenance differs from its 50 ms contract")
         if e["frames"] <= 0 or not (root/a["sources"]).is_file():

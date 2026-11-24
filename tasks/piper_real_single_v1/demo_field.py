@@ -68,6 +68,8 @@ def main(argv=None, *, finished_run=None):
                             help="从零位进入公共起点 J2 +2°、J3 −2°")
         if kind == "teach":
             sp.add_argument("placement", help="摆放编号")
+            sp.add_argument("--manual-gripper", action="store_true",
+                            help="手动夹指，C/O 仅标记，完整记录实测开口")
         if kind in ("teach", "block"):
             sp.add_argument("--target-color", choices=COLORS, help="该条真实指令的唯一目标")
             sp.add_argument("--scene-colors", nargs="+", choices=COLORS, help="实际混摆，各色一块")
@@ -75,6 +77,7 @@ def main(argv=None, *, finished_run=None):
             sp.add_argument("--formal", action="store_true", help="首批逐条质检通过后采正式示范")
     a = p.parse_args(argv)
     kind = a.kind
+    manual_gripper = kind == "teach" and a.manual_gripper
     if kind == "width-check" and not 15 <= a.target_mm <= 40:
         p.error("单点空夹目标须在 15–40 mm 内")
     if kind not in ("status", "limits") and not sys.stdin.isatty():
@@ -595,7 +598,7 @@ def main(argv=None, *, finished_run=None):
     def teach():
         base = previous_hold()
         cfg = read(session / "setup.json")
-        if abs(rx.current()[1]-cfg["open_m"]) > .002:
+        if not manual_gripper and abs(rx.current()[1]-cfg["open_m"]) > .002:
             raise ValueError("请先完成张开与开口实测")
         report.update(placement=a.placement, session_id=cfg["session_id"], marks=[], breaks=[])
         formal = "terminal_kind" in cfg
@@ -611,11 +614,26 @@ def main(argv=None, *, finished_run=None):
                           future_offset_ns=50_000_000, bounds=cfg["bounds"],
                           bounds_run=cfg.get("bounds_run",cfg["prepare_run"]),
                           events=[], gripper_command_feedback=[])
+            if manual_gripper:
+                report.update(collection_mode="kinesthetic_manual_gripper_v1",
+                              gripper_action_source="future_measured_sdk_width",
+                              gripper_operation="operator_backdrives_fingers",
+                              initial_measured_width_m=rx.current()[1])
+                if snapshot(dev, rx, grip)["gripper"]["foc_status"]["driver_enable_status"]:
+                    raise ValueError("夹爪驱动仍使能，先在任务外完成夹爪释放")
+                # Use the most recent controller limits from the actual hold when available.
+                held_run = read(session / read(led)["run"] / "run.json")
+                if held_run.get("limits"):
+                    report.update(bounds=[item["usable"] for item in held_run["limits"]],
+                                  bounds_run=read(led)["run"])
             report.update(task)
             save(run/"task.json", dict(run_id=report["run_id"], session_id=cfg["session_id"],
                                        placement=a.placement, **task))
             print(a.placement, task["scene_colors"], task["prompt"], flush=True)
-            print("一次录成训练示范：C 实际闭合，夹住指定方块后手拖搬运；O 实际张开，把方块放进浅盘。")
+            if manual_gripper:
+                print("手动夹住指定色方块后按 C 标记；手动放入浅盘后按 O 标记。录制期间主机只接收。")
+            else:
+                print("一次录成训练示范：C 实际闭合，夹住指定方块后手拖搬运；O 实际张开，把方块放进浅盘。")
             print("抬离后 E 表示指定颜色已成功入盘、无额外救场；失败用 F 保存。手拖本身不算人工救场。")
             agree("核对目标、布局和腕图，开始一次真实手拖抓放")
         save(source_file, dict(pending=run.name))
@@ -689,7 +707,7 @@ def main(argv=None, *, finished_run=None):
             report["before_drag_recording"] = dict(joint_groups=rx.nq, gripper_frames=rx.ng)
             rx.write_samples = True
         with camera(run) as check:
-            if formal:
+            if formal and not manual_gripper:
                 teach_gripper("initial_open",check)
             if not formal:
                 print("腕图记录已启动。在起点单击实体键，确认绿灯常亮，然后回车。")
@@ -700,7 +718,10 @@ def main(argv=None, *, finished_run=None):
             for event in keys:
                 if event != "start":
                     required = {"close":"c","open":"o","end":"e"}[event]
-                    if formal and event == "end":
+                    if manual_gripper:
+                        print({"close":"手动夹住后 C 回车标记；失败 F 回车。", "open":"手动释放后 O 回车标记；失败 F 回车。",
+                               "end":"空爪抬离并停稳，目标色成功入盘 E 回车，失败 F 回车。"}[event], flush=True)
+                    elif formal and event == "end":
                         print("放好目标色方块并空爪抬离：E 成功 / F 失败，随后结束实体示教、撤手并自动回零。")
                     elif formal:
                         print(f"{required.upper()} 回车将实际{'闭合夹住方块' if event=='close' else '张开放下方块'}；停稳后操作。",flush=True)
@@ -726,12 +747,22 @@ def main(argv=None, *, finished_run=None):
                                 and gap(row["q_rad"],last_drag[2]) <= .2 and still_and_in_bounds(last_drag)):
                             ident, ns, q = last_drag
                             pending_end = dict(event="end", joint_id=ident, mono_ns=ns, q=q)
+                            if manual_gripper:
+                                grip_ns, width = rx.grip
+                                pending_end.update(grip_ns=grip_ns, width_m=width)
                         break
                     if (st["ctrl_mode"] != 2 or st["teach_status"] != 1 or
                             st["arm_status"] not in (0, 11) or any(st["err_status"].values())):
                         raise RuntimeError(f"未收到正常示教记录状态：{st}")
+                    if manual_gripper and row["gripper"]["foc_status"]["driver_enable_status"]:
+                        raise RuntimeError("夹爪驱动已使能，已停止被动录制，请勿徒手对抗夹爪")
                     last_drag = rx.joint_sample
                     key = None if event == "start" else line()
+                    if manual_gripper and key == "f" and event != "end":
+                        report["operator_outcome"] = "failed"
+                        stopped_during = event
+                        print("F 已记录。请单击实体键结束示教、确认灯灭。",flush=True)
+                        break
                     if key == "b" and boundary is None:
                         ident, ns, q = rx.joint_sample
                         boundary = dict(joint_id=ident, mono_ns=ns, q=q)
@@ -755,6 +786,17 @@ def main(argv=None, *, finished_run=None):
                         # The receive thread publishes these three fields together.
                         ident, ns, q = rx.joint_sample
                         mark = dict(event=event, joint_id=ident, mono_ns=ns, q=q)
+                        if manual_gripper:
+                            grip_ns, width = rx.grip
+                            mark.update(grip_ns=grip_ns, width_m=width)
+                            if event in ("close", "open"):
+                                prior_width = report["marks"][-1]["width_m"]
+                                delta = prior_width-width if event=="close" else width-prior_width
+                                if delta < .001:
+                                    print(f"宽度 {width*1000:.1f} mm，尚无相应开合变化，已继续录制。",flush=True)
+                                    continue
+                                report["events"].append(dict(event=event, grip_ns=grip_ns, width_m=width))
+                                print(f"{event} 标记宽度 {width*1000:.1f} mm",flush=True)
                         if formal and event == "end":
                             if not still_and_in_bounds((ident, ns, q)):
                                 print("E 未记录：在关节限位内的抬离位置停稳一秒。",flush=True)
@@ -766,7 +808,7 @@ def main(argv=None, *, finished_run=None):
                         if formal and event == "start":
                             report["grid_start_ns"] = ns
                             time.sleep(.55)
-                        elif formal and event in ("close","open"):
+                        elif formal and not manual_gripper and event in ("close","open"):
                             teach_gripper(event,check)
                         print(event, "已记", flush=True)
                         break
@@ -799,7 +841,9 @@ def main(argv=None, *, finished_run=None):
             released_pose(dev,rx,grip)
             termios.tcflush(sys.stdin, termios.TCIFLUSH)
             if pending_end is not None:
-                key = input("已灯灭并撤手。E 确认目标色成功入盘 / F 失败保存，均自动回零；H 仅回零：").strip().lower()
+                prompt = ("已灯灭。E 确认放对颜色并抬离，F 失败保存：" if manual_gripper else
+                          "已灯灭并撤手。E 确认目标色成功入盘 / F 失败保存，均自动回零；H 仅回零：")
+                key = input(prompt).strip().lower()
                 if key not in ("e","f","h"):
                     raise ValueError("未完成现场交接")
                 if key in ("e","f"):
@@ -808,7 +852,7 @@ def main(argv=None, *, finished_run=None):
                     report["operator_outcome"] = "success" if key == "e" else "failed"
                     report["marks"].append(pending_end)
                     save(run/"task_end.json",pending_end)
-            else:
+            elif not manual_gripper:
                 agree("已灯灭。空爪，手和工具已撤离整个回程范围，结束示教并自动回零")
         else:
             input("确认实体示教灯已经熄灭后回车：")
@@ -821,12 +865,15 @@ def main(argv=None, *, finished_run=None):
             tx.flush()
             with (run/"tx.csv").open() as f:
                 submitted = list(csv.DictReader(f))
+            if manual_gripper and submitted:
+                raise RuntimeError("手动夹指任务期间出现主机命令")
             if (any(int(r["can_id"],16) != 0x159 or r["result"] != "host_submitted" for r in submitted)
                     or stats()["tx_packets"]-report["interface_before"]["tx_packets"] != len(submitted)):
                 raise RuntimeError("单次示教窗口包含夹爪以外的主机发送，保留记录")
             report["gripper_only_host_frames"] = len(submitted)
             # Gripper commands do not replace the arm target held before teaching.
-            save(led,dict(read(led),tx_packets=stats()["tx_packets"]))
+            if not manual_gripper:
+                save(led,dict(read(led),tx_packets=stats()["tx_packets"]))
         elif stats()["tx_packets"] != report["interface_before"]["tx_packets"]:
             raise RuntimeError("手拖期间主机 TX 变化；该轨迹需排查")
         if formal:
@@ -838,12 +885,13 @@ def main(argv=None, *, finished_run=None):
                                                   scope="independent SDK home after teach")
                 save(run/"reposition_only.json",report["reposition_only"])
                 report.update(grid_end_ns=end["mono_ns"],stop="demonstration_finished",
-                              reset_between_runs="automatic_direct_home")
+                              reset_between_runs="separate_operator_handoff" if manual_gripper else "automatic_direct_home")
             else:
                 report["source_rejection"] = f"示教在 {stopped_during} 阶段结束，缺少确认的任务终点"
-            report["home_release"] = dict(q_rad=released["q_rad"], width_m=released["width_m"],
-                                          ifindex=int(Path("/sys/class/net/can0/ifindex").read_text()),
-                                          confirmed_clear=True, mono_ns=released["mono_ns"])
+            if not manual_gripper:
+                report["home_release"] = dict(q_rad=released["q_rad"], width_m=released["width_m"],
+                                              ifindex=int(Path("/sys/class/net/can0/ifindex").read_text()),
+                                              confirmed_clear=True, mono_ns=released["mono_ns"])
         # Save the actual demonstration before the independent arm return.
 
     def return_start():
@@ -1201,7 +1249,10 @@ def main(argv=None, *, finished_run=None):
             if rx.error:
                 report.update(complete=False, receive_error=rx.error)
             save(run / "run.json", report)
-            if report.get("collection_mode") == "kinesthetic_direct_v1":
+            if manual_gripper and report["interface_after"]["tx_packets"] != report["interface_before"]["tx_packets"]:
+                report.update(complete=False, source_rejection="手动夹指示教期间主机发送计数发生变化")
+                save(run/"run.json", report)
+            if report.get("collection_mode") in ("kinesthetic_direct_v1","kinesthetic_manual_gripper_v1"):
                 success = report["complete"] and report.get("operator_outcome") == "success"
                 verdict_source = "collector_rejection"
                 if success:

@@ -16,7 +16,7 @@ from PIL import Image
 
 from width_contract import CAMERA, REPRESENTATION, RETREAT, TERMINAL_VERSION, WIDTH, require_setup, require_width
 from color_task import BLUE_RED, COLORS, recorded_task
-from dataset import DIRECT_DATA_KIND, DIRECT_MODE, FUTURE_JOINT_SOURCE, GRIP_COMMAND_SOURCE
+from dataset import DIRECT_DATA_KIND, FUTURE_JOINT_SOURCE, GRIP_SOURCES, MANUAL_MODE
 
 
 PERIOD = 50_000_000
@@ -100,7 +100,7 @@ def submissions(path, *, require_arm=True):
 
 def analyse(path):
     run = load(path/"run.json")
-    direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+    direct = run["kind"] == "teach" and run.get("collection_mode") in GRIP_SOURCES
     if direct:
         if not run["complete"] or run["use"] != "formal":
             raise ValueError("Not a completed direct kinesthetic demonstration")
@@ -117,18 +117,37 @@ def analyse(path):
         raise ValueError("Incomplete original image sequence")
     sources = defaultdict(list)
     for r in csvrows(path/"feedback.csv"):
+        values = json.loads(r["values"])
         sources[r["kind"]].append(dict(ns=int(r["mono_ns"]), id=int(r["id"]),
             first=int(r["first_ns"]), wire_span_ms=(float(r["wire_last_s"])-float(r["wire_first_s"]))*1e3,
-            value=json.loads(r["values"])))
+            value=values[0] if r["kind"] == "grip" else values))
     arm, grip = Stream(sources["arm"]), Stream(sources["grip"])
-    goals, openings, tx_count = submissions(path, require_arm=not direct)
+    mode = run.get("collection_mode")
+    manual = direct and mode == MANUAL_MODE
+    if direct and (run.get("gripper_action_source") != GRIP_SOURCES[mode]
+                   or run.get("arm_action_source") != FUTURE_JOINT_SOURCE
+                   or run.get("future_offset_ns") != PERIOD):
+        raise ValueError("Recorded action source differs from the direct teaching mode")
+    if manual:
+        if next(csvrows(path/"tx.csv"), None) is not None or (path/"commands.jsonl").stat().st_size:
+            raise ValueError("Manual finger teaching contains a host command")
+        marks = run["marks"]
+        if [m["event"] for m in marks] != ["start", "close", "open", "end"]:
+            raise ValueError("Manual finger demonstration is missing task markers")
+        for mark in marks[1:3]:
+            sample = grip.at(mark["grip_ns"])
+            if sample["ns"] != mark["grip_ns"] or sample["value"] != mark["width_m"]:
+                raise ValueError("Manual finger marker disagrees with the recorded width feedback")
+        goals, openings, tx_count = None, grip, 0
+    else:
+        goals, openings, tx_count = submissions(path, require_arm=not direct)
     if direct and goals is not None:
         raise ValueError("Direct kinesthetic recording unexpectedly contains arm commands")
     delta = {k:v-run["interface_before"][k] for k,v in run["interface_after"].items()}
     counter_errors = ("tx_errors", "tx_dropped") if direct else ("tx_errors","rx_errors","tx_dropped","rx_dropped")
     if delta["tx_packets"] != tx_count or any(delta[k] for k in counter_errors):
         raise ValueError(f"Unexpected CAN counters {delta}, sender frames {tx_count}")
-    if [r["source"] for r in openings.rows] != ["initial_open","close","open"]:
+    if not manual and [r["source"] for r in openings.rows] != ["initial_open","close","open"]:
         raise ValueError("Missing actual gripper sequence")
     begin, end = run["grid_start_ns"], run["grid_end_ns"]
     if end-begin < 10*PERIOD or images.times[0]>begin or images.times[-1]<end-PERIOD:
@@ -173,7 +192,9 @@ def analyse(path):
             held_t, hq, hg = t, q, openings.at(t)
             if aq["ns"] <= t or at-aq["ns"] > 100_000_000:
                 excluded.append("no_fresh_future_joint_sample")
-            if ag["until"] is not None and ag["until"] <= at:
+            if manual and ag["ns"] <= t:
+                excluded.append("no_fresh_future_gripper_sample")
+            if not manual and ag["until"] is not None and ag["until"] <= at:
                 # The interval edge falls inside the next gripper transmission.
                 at = ag["until"] - 1
                 aq = arm.at(at)
@@ -188,7 +209,7 @@ def analyse(path):
             at,aq,ag = coherent(t+PERIOD)
             if at <= t:
                 raise ValueError("No coherent target time in policy interval")
-        states.append(q["value"]+[g["value"][0]])
+        states.append(q["value"]+[g["value"]])
         actions.append(aq["value"]+[ag["value"]])
         held.append((aq if direct else hq)["value"]+[hg["value"]])
         rows.append(dict(t=t, image=i["id"], image_ns=i["ns"], image_header_ns=i["header"],
@@ -198,14 +219,18 @@ def analyse(path):
             held=[hq["id"],hg["id"]], action_at_ns=at, action=[aq["id"],ag["id"]],
             action_age_ms=[(at-aq["ns"])/1e6,(at-ag["ns"])/1e6],
             valid_from=[aq["ns"],ag["ns"]], valid_until_exclusive=[
-                min(aq.get("until") or end+1,end+1),min(ag["until"] or end+1,end+1)]))
+                min(aq.get("until") or end+1,end+1),min(ag.get("until") or end+1,end+1)]))
         if direct:
             rows[-1].update(arm_action_source=FUTURE_JOINT_SOURCE,
-                gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD,
+                gripper_action_source=GRIP_SOURCES[mode], future_offset_ns=PERIOD,
                 future_joint_id=aq["id"], future_joint_ns=aq["ns"],
-                gripper_command_id=ag["id"], gripper_command_ns=ag["ns"],
-                held_gripper_command_id=hg["id"],
                 training_row_valid=not excluded, excluded_reasons=sorted(set(excluded)))
+            if manual:
+                rows[-1].update(future_grip_id=ag["id"], future_grip_ns=ag["ns"])
+                rows[-1]["valid_until_exclusive"][1] = None
+            else:
+                rows[-1].update(gripper_command_id=ag["id"], gripper_command_ns=ag["ns"],
+                                held_gripper_command_id=hg["id"])
             rows[-1].pop("held")
             rows[-1]["valid_until_exclusive"][0] = None  # A future measurement is not a held arm command.
     states, actions, held = map(np.asarray,(states,actions,held))
@@ -221,7 +246,7 @@ def analyse(path):
         pauses = [p["key"] for p in run.get("pauses",[]) if start <= p["at_ns"] <= end_ns]
         gaps.append(dict(after_ns=start, before_ns=end_ns, ms=float(intervals[idx]),
                          gripper_events=events, operator_keys=pauses))
-    metrics = dict(arm_submissions=len(goals.rows) if goals else 0,gripper_submissions=len(openings.rows),
+    metrics = dict(arm_submissions=len(goals.rows) if goals else 0,gripper_submissions=0 if manual else len(openings.rows),
         reference_gaps_over_100ms=gaps, images=len(images.rows), grid_rows=len(rows), joint_groups=len(arm.rows),
         gripper_rows=len(grip.rows), host_frames=tx_count, queue_drops=status["queue_drops"],
         rejected_triplets=run["rejected_triplets"], interface_delta=delta, feedback_age_ms={
@@ -231,7 +256,7 @@ def analyse(path):
         triplet_wire_span_ms=distribution([q["wire_span_ms"] for q in arm.rows]),
         reference_interval_including_dwell_ms=distribution(np.diff(moving)/1e6),
         max_axis_tracking_error_deg=None if direct else distribution(np.max(np.abs(np.degrees(states[:,:6]-held[:,:6])),axis=1)),
-        events=run.get("events",run.get("marks",[])), final=run["final"], pauses=run.get("pauses",[]),
+        events=run["marks"] if manual else run.get("events",run.get("marks",[])), final=run["final"], pauses=run.get("pauses",[]),
         host_submit_duration_ms=distribution([(r['ns']-r['start'])/1e6 for r in goals.rows]) if goals else None,
         representative_association=dict(rows[len(rows)//2], measured=states[len(rows)//2].tolist(),
                                         submitted_next=actions[len(rows)//2].tolist(),
@@ -239,14 +264,16 @@ def analyse(path):
     if direct:
         valid = np.array([r["training_row_valid"] for r in rows], dtype=bool)
         starts = [j for j in range(len(rows)) if valid[j:min(j+10,len(rows))].all()]
-        metrics.update(collection_mode=DIRECT_MODE, arm_action_source=FUTURE_JOINT_SOURCE,
-                       gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD,
+        metrics.update(collection_mode=mode, arm_action_source=FUTURE_JOINT_SOURCE,
+                       gripper_action_source=GRIP_SOURCES[mode], future_offset_ns=PERIOD,
                        excluded_rows=int((~valid).sum()), usable_starts=len(starts), action_horizon=10,
                        gap_ranges=[dict(start_ns=a,end_ns=b,stream=n) for a,b,n in bad_ranges],
                        future_joint_step_deg=distribution(np.max(np.abs(np.degrees(actions[:,:6]-states[:,:6])),axis=1)))
         example = metrics["representative_association"]
         example["reconstructed_next_target"] = example.pop("submitted_next")
-        example["submitted_gripper_hold"] = example.pop("submitted_hold")[6]
+        held_width = example.pop("submitted_hold")[6]
+        if not manual:
+            example["submitted_gripper_hold"] = held_width
     return run,times,rows,states,actions,held,metrics
 
 
@@ -259,7 +286,7 @@ def review(path, failed, actual, intervention):
         path = candidates[-1]
     print("复核", path)
     run = load(path/"run.json")
-    direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+    direct = run["kind"] == "teach" and run.get("collection_mode") in GRIP_SOURCES
     color_block = (run["kind"] == "block" or direct) and "target_color" in run
     if color_block and (path/"review.json").exists():
         raise FileExistsError("该实物运行已有审核；原判定保留在 " + str(path/"review.json"))
@@ -289,8 +316,10 @@ def review(path, failed, actual, intervention):
         fig, axes = plt.subplots(4,2,figsize=(11,9),sharex=True)
         for i,ax in enumerate(axes.flat[:7]):
             scale = 180/math.pi if i<6 else 1000
-            ax.plot((t-t[0])/1e9, held[:,i]*scale,
-                    label="future measured target" if direct and i<6 else "submitted hold", lw=1)
+            measured_target = direct and (i < 6 or run["collection_mode"] == MANUAL_MODE)
+            reference = act if measured_target else held
+            ax.plot((t-t[0])/1e9, reference[:,i]*scale,
+                    label="future measured target" if measured_target else "submitted hold", lw=1)
             ax.plot((t-t[0])/1e9, state[:,i]*scale, label="measured", lw=.8)
             ax.set_ylabel(f"J{i+1} (deg)" if i<6 else "SDK width (mm)")
         axes.flat[0].legend()
@@ -359,7 +388,7 @@ def freeze_attempts(requested):
                 raise ValueError(f"Wrong split for {session}")
             for path in sorted([*session.glob("*_block"), *session.glob("*_teach")]):
                 run = load(path/"run.json")
-                direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+                direct = run["kind"] == "teach" and run.get("collection_mode") in GRIP_SOURCES
                 if (run["kind"] != "block" and not direct) or run["use"] != "formal":
                     continue
                 ident = run["run_id"]
@@ -431,7 +460,7 @@ def export(a):
                     elif not rp.exists() or not load(rp).get("approved_block"):
                         continue
                     run,t,rows,states,actions,_,metrics = analyse(path)
-                    direct = run["kind"] == "teach" and run.get("collection_mode") == DIRECT_MODE
+                    direct = run["kind"] == "teach" and run.get("collection_mode") in GRIP_SOURCES
                     if run["use"] != ("formal" if formal else "commissioning_only"):
                         continue
                     if (run["kind"] != "block" and not direct) or load(rp)["run_id"] != run["run_id"]:
@@ -473,9 +502,9 @@ def export(a):
                         contract.update(task, run_id=run["run_id"], actual_grasped_color=attempt["actual_grasped_color"],
                                         intervention=attempt["intervention"], outcome=attempt["outcome"])
                         if direct:
-                            contract.update(collection_mode=DIRECT_MODE, data_kind=DIRECT_DATA_KIND,
+                            contract.update(collection_mode=run["collection_mode"], data_kind=DIRECT_DATA_KIND,
                                             arm_action_source=FUTURE_JOINT_SOURCE,
-                                            gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD)
+                                            gripper_action_source=run["gripper_action_source"], future_offset_ns=PERIOD)
                     ident = run["run_id"]
                     if ident in seen:
                         raise ValueError("Duplicate episode")
@@ -531,15 +560,18 @@ def export(a):
                 raise ValueError("Exported episodes differ from the frozen success reviews")
             write(tmp/"attempts.json",list(attempts.values()))
         dataset_contract = dict(gripper_basis=WIDTH, collection_view="all_colors") if formal else {}
-        all_direct = bool(entries) and all(e.get("collection_mode") == DIRECT_MODE for e in entries)
-        any_direct = any(e.get("collection_mode") == DIRECT_MODE for e in entries)
+        modes = {e.get("collection_mode") for e in entries}
+        all_direct = bool(modes) and modes.issubset(GRIP_SOURCES)
+        any_direct = bool(modes.intersection(GRIP_SOURCES))
         if all_direct:
-            dataset_contract.update(collection_mode=DIRECT_MODE, arm_action_source=FUTURE_JOINT_SOURCE,
-                                    gripper_action_source=GRIP_COMMAND_SOURCE, future_offset_ns=PERIOD)
+            dataset_contract.update(arm_action_source=FUTURE_JOINT_SOURCE, future_offset_ns=PERIOD)
+            if len(modes) == 1:
+                mode, = modes
+                dataset_contract.update(collection_mode=mode, gripper_action_source=GRIP_SOURCES[mode])
         write(tmp/"alignment_manifest.json",dict(**dataset_contract,episodes=manifests,period_ns=PERIOD,
               observation="last received RGB, joint group and gripper at or before t",
               action=("per-episode source: direct teach uses measured joint positions at/before t+50ms as reconstructed targets, "
-                      "plus the actual submitted SDK gripper target held at that action time; replay uses actual submitted targets"
+                      "with future measured width for manual fingers or submitted width for commanded grips; replay uses submitted targets"
                       if any_direct else "latest coherent complete host targets at the end of (t,t+50ms]; bounded by episode"),
               row_selection="valid_action_starts selects whole valid chunks without removing or retiming original rows" if any_direct else "all rows",
               chunk="10 rows, repeat final row at episode boundary"))

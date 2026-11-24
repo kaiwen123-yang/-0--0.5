@@ -1,5 +1,27 @@
 # 11/24 一次真实手拖示范 → 导出 → π0.5 / π0 全参训练
 
+## 11/24 现场手动夹指 · T01 抓蓝
+
+19:39 的 T01 回零回执实测六轴均为 0.000°，夹爪宽度 47.3 mm。本条复用既有保持和正式会话。开始前确认夹爪空载、手已离开夹指，检查当前红蓝摆放及固定浅盘。保持状态、实测开口和夹爪驱动状态以本次准备回读为准。
+
+在现场交互终端运行以下命令。`PLACEMENT` 填本条真实摆放编号，同一摆放沿用原编号。准备程序核实原六轴保持来源及当前姿态，如夹爪驱动仍使能，则单独发出夹爪释放命令；程序收到新鲜失能反馈后结束。进入手动 teach 后主机只接收 CAN。
+
+~~~bash
+TASK=/home/kaiwen/research/pi-single-live/tasks/piper_real_single_v1
+S=/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01
+SDK=/home/kaiwen/research/OSCBF-research/envs/piper-sdk/bin/python
+: "${PLACEMENT:?请先设置本条真实摆放编号}"
+env -u LD_LIBRARY_PATH "$SDK" -EBs "$TASK/prepare_manual_gripper.py" "$S" &&
+  bash "$TASK/pi_demo.sh" teach "$S" "$PLACEMENT" --manual-gripper --target-color blue --scene-colors blue red
+~~~
+
+1. 核对指令和腕图后单击实体示教键，在起点停稳。等终端打印 **`start 已记`** 再手拖。
+2. 手拖至蓝块，人工闭合夹指，实际夹住蓝块后按 **C** 回车。把蓝块移入固定浅盘，人工打开夹指释放蓝块后按 **O** 回车。C/O 只标记已发生的动作，采集器持续记录整个开口变化。
+3. 蓝块成功入盘，空爪抬离且停稳后按 **E** 回车。失败用 **F**。按终端提示单击实体键结束示教，确认灯灭、撤手。正式成功由 E 确认，采集器保存本条结果；回程独立交接，手动模式不会在非零末姿自动切 CAN。
+4. 原始腕图、六轴和 0x2A8 夹爪开口按接收时刻保存。导出时，20 Hz 的状态取时刻 `t` 的最近实测值，动作取不晚于 `t + 50 ms` 的未来实测关节位置与 SDK 宽度。标签来源为 `future_measured_joint_positions` 和 `future_measured_sdk_width`，保留反馈时刻及原始数值。沿用有效 10 步 chunk、T01/T02 训练和 V01 独立验证的既有流程。
+
+以下保留先前电控夹爪方案及通用导出、训练说明。
+
 ## 当前决定与完成边界
 
 用户要把一次示教直接录成训练示范，今晚采完后启动正式训练。本页替代此前“teach 只录路径，再 empty → block → review”的新数据流程；旧记录不删除。当前提交实现了采集、动作标签、有效 chunk、各自 norm 和正式全参入口。云端只完成源码衔接检查；尚未在现场执行这个版本、导出新数据或启动 D57 训练。
