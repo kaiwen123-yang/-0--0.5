@@ -1,0 +1,119 @@
+{
+  "raw_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_171940_sdk_home_X8Mxkt",
+  "kind": "home",
+  "use": "reposition_only",
+  "complete": true,
+  "stop": "arrived_powered_hold",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "mode_acknowledgements": [
+    0,
+    1
+  ],
+  "route": {
+    "start_q_deg": [
+      -2.293,
+      -0.313,
+      -1.127,
+      0.762,
+      17.617000000000004,
+      0
+    ],
+    "samples": 72,
+    "urdf": "/home/kaiwen/research/OSCBF-research/models/piper_h_with_gripper.urdf",
+    "compared_nonadjacent_mesh_pairs": 39,
+    "intersections": [],
+    "max_urdf_sdk_fk_element_difference": 8.082034364670365e-8,
+    "nominal_pick_gripper_min_base_z_m": -0.002835128583037823,
+    "route_gripper_min_base_z_m": 0.14846603461077557,
+    "gripper_min_height_relative_to_pick_mm": 151.3011631938134,
+    "first_tenth_gripper_lift_mm": 3.56832305002297,
+    "camera_center_min_base_z_m": 0.25221998258058026,
+    "width_m": 0.0298
+  },
+  "start_q_rad": [
+    -0.040020399748229976,
+    -0.005462880558742251,
+    -0.019669860669976093,
+    0.01329940890019679,
+    0.3074746543238411,
+    0
+  ],
+  "final_q_rad": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "sdk_width_m": 0.0298,
+  "final_arm": {
+    "ctrl_mode": 1,
+    "arm_status": 0,
+    "mode_feedback": 1,
+    "teach_status": 2,
+    "motion_status": 0,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "interface_before": {
+    "tx_packets": 10,
+    "rx_packets": 2371010,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "interface_after": {
+    "tx_packets": 3200,
+    "rx_packets": 2505027,
+    "rx_errors": 0,
+    "tx_errors": 0,
+    "rx_dropped": 0,
+    "tx_dropped": 0
+  },
+  "host_frames_by_id": {
+    "0x472": 6,
+    "0x151": 4,
+    "0x155": 1060,
+    "0x156": 1060,
+    "0x157": 1060
+  },
+  "host_submitted_frames": 3190,
+  "first_to_last_host_tx_s": 54.22729382,
+  "independent_read": {
+    "run": "pi-demo-checks/20261124_172220_553589_status/run.json",
+    "complete": true,
+    "q_rad": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "width_m": 0.0298,
+    "drive_enable": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "tx_delta": 0
+  }
+}
