@@ -434,6 +434,8 @@ def main():
             report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
                           split=cfg["split"], initial_hold_run=read(led)["run"])
             report.update(task)
+            save(run/"task.json", dict(run_id=report["run_id"], session_id=cfg["session_id"],
+                                       placement=a.placement, **task))
             print(a.placement, task["scene_colors"], task["prompt"], flush=True)
             print("看腕图，核对每色各一块、目标及接近区域清楚可达。仅教指定目标，C 抓取位、O 释放位、E 空爪抬离；每处静止一秒。")
             agree("已讲解按键、核对新布局和腕图，准备被动示教")
@@ -679,6 +681,9 @@ def main():
                 if task != source_task:
                     raise ValueError("本条指令或实物场景与当前示教源不同，请复原或为新目标示教")
                 report.update(task)
+                save(run/"task.json", dict(run_id=report["run_id"], session_id=cfg["session_id"],
+                                           placement=taught["placement"], source_trajectory_id=taught["run_id"],
+                                           **task))
             else:
                 report["planned_block_task"] = source_task
             print(taught["placement"], source_task["scene_colors"], source_task["prompt"], flush=True)

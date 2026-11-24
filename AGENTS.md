@@ -2,7 +2,7 @@
 
 ## 最新状态与入口 · 2026-11-24
 
-**11/24最新用户要求：已暂停采集，先更新指令；蓝/红/白/绿四颜色都采，第一阶段只训练蓝红。** 首个部署目标是红蓝混摆，按语言抓取可见可达区域内不同位置的蓝块到固定浅盘。新增当前入口 `docs/PI_COLOR_CONDITIONED_COLLECTION_20261124.md`，其中含完整Codex提示词、全库/阶段A划分和实机验收。用户暂停不等于驱动已失能；没有本轮实时硬件读数，不操作历史目标。今天现场可能领先main，先核对实际工作树和记录。
+11/24 现场已部署逐 episode 颜色指令、正常抬离和 SDK 宽度合同。采蓝、红、白、绿，固定浅盘，红蓝及四色混摆，首阶段训练蓝红。按 `docs/PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md` 顶部的命令、`docs/PI_REAL_TEST_STATE.md` 和唯一日志接续当天实际步骤。计划和实机验收见 `docs/PI_COLOR_CONDITIONED_COLLECTION_20261124.md` 第 8 节。T01 已建立正式保持；首次抓蓝源因越限及缺少正常 E 未通过，操作者请求回零后重教；重入时查进程、账本和现场反馈。
 
 先读 `docs/PI_REAL_TEST_STATE.md`、`docs/PI_DAILY_WORK_LOG.md` 最近记录、`docs/PI_A01_RECORDING_REVIEW_20261123.md` 和 `docs/PI_A01_NEXT_PROMPT_20261123.md`。总计划在 `docs/PI_POST_CALIBRATION_PLAN_20261123.md`，现场操作在 `docs/PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md`。RoboMIND 研究已完成本轮决策，不再重跑。
 
@@ -12,7 +12,7 @@
 
 11/23 23:28 测试机末次独立实测为六轴零位、全使能、CAN/MOVE_J 到位，夹爪宽度反馈 39.5 mm。重新接入时先运行只读 status；动作入口管理实际控制器限位查询，不在既有保持账本后先单独 limits 改变 TX。23:27 经已核查的直接 SDK 路径从 A01 抬离位回零，回零后相机与 viewer 仍运行。下次操作时复读当前状态。H0 普通到位超时的修复见 `docs/PI_PIPER_H_START_DIAGNOSIS_20261122.md`，实际代码参考 `dog-and-arm@cf01b434011db7c443e2fc88b3b458dc280ef984`。该修复不证明任意动态停止或在线策略跟踪已经验收。
 
-## 下一轮具体工作
+## 11/23 接续记录（11/24 进展见顶部）
 
 1. 11/23 `main@0ee2d2ecc6783ffcfdec115079a83db3944caeb5` 已交付首条 A01 实物成功：11,553 原图、7,680 个 20 Hz 行，现场逐行复核通过。采集/SDK 重放/审核/导出入口均已存在。保留该条 commissioning，不把 SDK 重放当成 π 策略成功。当前审查只改文档，未修改运行代码或新增实测。
 2. 在既有模块落实新正式合同 `piper_h_sdk_width_m_v1`，贯通 setup、dataset、norm/run spec、policy metadata、推理和发送端；指垫净距独立记录。无需先拟合全行程净距曲线，也不只改 `commissioning_only` flag 或删硬门。
@@ -33,7 +33,7 @@
 
 - 只使用一台真实 DC1 `CC16762023M`，腕部安装 `camera_mount=wrist`，唯一有效槽 `left_wrist_0_rgb`。不等待或推荐第二台相机。收到的 RGB 保持本次处理链，不悄悄新增去畸变。
 - 未使用模型图像槽 `mask=False`，允许协议要求的零占位；不得将复制图/黑图标为有效真实第二视角。
-- 正式数据设计采用 `piper_h_sdk_width_m_v1`：`state` 为六实测关节 rad＋SDK 实测宽度 m；`action` 为六实际提交绝对关节目标 rad＋SDK 绝对宽度目标 m。SDK 宽度不是卡尺指垫净距，后者单独留档。新合同尚待代码贯通；旧数据保留原定义。请求值、提交值和反馈分开，接触时目标与反馈可不同；完整七维保持目标需有真实来源。
+- 正式数据设计采用 `piper_h_sdk_width_m_v1`：`state` 为六实测关节 rad＋SDK 实测宽度 m；`action` 为六实际提交绝对关节目标 rad＋SDK 绝对宽度目标 m。SDK 宽度不是卡尺指垫净距，后者单独留档。正式路径已贯通该定义，旧数据保留原定义。请求值、提交值和反馈分开，接触时目标与反馈可不同；完整七维保持目标需有真实来源。
 - 历史 180 秒和 3 秒观测记录没有真实任务 action，仍为 `observation_only`；标定、手拖反馈和空场轨迹检查不自动成为成功训练示范。
 - 20 Hz 是 50 ms 数据/动作时间网格，10 步 chunk 约 0.5 s，不是已测得的模型推理速度。前六维 delta 在现有 transform 内处理，执行端消费还原一次的绝对目标。
 - π0 / π0.5 均保持全参、非 LoRA，分别使用自身基础权重、资产、norm 和输出。π0 连续状态/mean-std，π0.5 离散状态/quantile；同数据 split，不相互套用资产。

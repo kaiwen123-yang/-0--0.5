@@ -1,5 +1,63 @@
 # Piper H 单腕抓放示范现场操作
 
+## 11/24 四色采集的现场命令
+
+在 Ubuntu 现场终端设置下列变量。T01、T02 预分配给 train，V01 预分配给 validation。每个布局的照片存入对应会话的 `layouts`，复原时以同一公共起点下的原图和桌面标记为参照。T01 第一组的照片已保存为 `layouts/T01-RB01/rgb/0000000.png`。
+
+```bash
+D=/home/kaiwen/research/pi-single-live/tasks/piper_real_single_v1/pi_demo.sh
+Q=/home/kaiwen/research/pi-q12-data
+S=$Q/pickplace_20261124_T01
+```
+
+T01 已完成 `prepare-formal`。首条 T01-RB01 已结束，J2 越限，源未通过。回零并重新核实两块布局后，在 Ubuntu 终端用下面的命令重教，系统会新建时间戳目录。第一张布局照保留为历史；重录的摆放与复原使用新起点照片。现场动作逐项执行。
+
+```bash
+bash "$D" teach "$S" T01-RB01 --target-color blue --scene-colors blue red
+```
+
+1. 核对终端显示的场景、抓蓝指令和固定盘。提示记录已启动后，起点单击实体键，绿灯常亮，回车记 start。手拖到蓝块抓取位，停稳后 `C` 回车；到浅盘释放位，`O` 回车；空爪抬离、避开盘沿、停稳后 `E` 回车。各标记前后保持一秒。按现场显示确认标记已记下。
+2. 正常 E 封存任务后，保持示教灯亮，按屏幕关节偏差手拖回已核实的近起点，停稳后 `Z` 回车。按屏幕提示单击退出示教、确认灯灭、回车。该段单独记录为重定位。
+3. 移走全部方块，固定浅盘与底座保持原位。清空手和工具，按下列命令逐条进行近起点交接、新源空场和审核。空场在实际运动段按 `P` 回车暂停，确认保持后 `R` 回车恢复。完整查看腕图和轨迹，按真实观察审核。审核入口在 Ubuntu 桌面播放。
+
+```bash
+bash "$D" anchor-start "$S"
+bash "$D" empty "$S"
+bash "$D" review "$S"
+```
+
+4. 同源空场通过且桌面已清空，单独执行 `bash "$D" return-start "$S"`。回到起点后按布局照片放回两块、撤手，再运行一次：
+
+```bash
+bash "$D" block "$S" --formal --target-color blue --scene-colors blue red
+bash "$D" review "$S"
+```
+
+实物审核记录实际夹起颜色和人工介入。抓空填 `none`，视线遮挡无法判定填 `unknown`。例如指定蓝却抓红且无人介入，可在该条为最近运行时直接执行 `bash "$D" review "$S" --failed 抓错红块 --actual-grasped-color red --intervention no`。这条会保留蓝色指令、实际红色和失败结果。也可将 `"$S"` 换成该次运行的完整目录，避免选错条目。
+
+5. 每次回程前清空方块，经同源 `return-start` 回到公共起点。第二次蓝色重复可复用同源已通过的空场。复原同布局后改抓红色，需要为红目标实际示教，使用 **同一个** placement：
+
+```bash
+bash "$D" teach "$S" T01-RB01 --target-color red --scene-colors blue red
+```
+
+对红色新源重复第 2–4 步，实物命令中也指定 `--target-color red`。蓝红交换位置算一个新布局，保存新照片并换 placement。四色布局如 `T01-C401`，每色各一块，逐条使用 `--scene-colors blue red white green`，分别以 `blue`、`red`、`white`、`green` 为唯一目标。每次复原后再教下一个目标。布局变化与轻微朝向变化始终在腕图可辨、机械臂可达的范围内。
+
+启动 T02 或 V01 时，先用 `status` 核对实际近起点与前一会话的保持来源，再运行 `bash "$D" prepare-formal "$新会话" "$当前保持所属会话"`。第二个参数取当时实际持有保持账本的会话。新布局拍照命令为 `bash "$D" scene "$S/layouts/$L"`，其中 `L` 是新布局号，先用 `mkdir -p "$S/layouts"` 建父目录，保留每个已有照片目录。
+
+### 数据冻结与阶段 A
+
+现场审核结束后，用三个真实会话一次冻结全库。导出目录必须是新目录。主库 `attempts.json` 保留实物成功、失败与待审核条目及原始目录。合格成功 episode 的数组、逐行来源和四色指令保存在主库。两模型共用第二条命令生成的蓝红视图，其相对符号链接引用相邻主库。将数据交付到训练机时保持两个目录的相对位置与链接有效。
+
+```bash
+bash "$D" export "$Q/four_colors_v1" --train "$Q/pickplace_20261124_T01" "$Q/pickplace_20261124_T02" --validation "$Q/pickplace_20261124_V01"
+bash "$D" stage-a "$Q/four_colors_v1" "$Q/blue_red_v1"
+```
+
+核对每个 split 的目标颜色、场景、复原对照、位置覆盖和源轨迹，两个模型分别从同一 `blue_red_v1` 的 train 计算 norm。数据合格后在各自 D57 环境填写正式预算，直接启动全参训练；首次编译后的正式日志用于估算剩余时间。[预算与新布局实机验收](PI_COLOR_CONDITIONED_COLLECTION_20261124.md)
+
+## 11/23 A01 联调记录
+
 测试机是 Ubuntu 主机 `kaiwen-Legion-Y9000P-IAH7H`。π 工作树在 `/home/kaiwen/research/pi-single-live`，数据留在 `/home/kaiwen/research/pi-q12-data`。11/23 晚已完成指垫尺读、手拖、空场、独立原路返回与首条成功抓放，导出 1 条 `commissioning` episode，`training_eligible=false`。[首条记录审查与下一步](PI_A01_RECORDING_REVIEW_20261123.md) · [下一轮 Codex 执行提示词](PI_A01_NEXT_PROMPT_20261123.md) · [实际状态](PI_REAL_TEST_STATE.md)。
 
 **现有 A01 可以按已验证流程继续联调；正式采集入口仍被代码阻断。** A01 同时采用 `prepare-pads` 生成的 `commissioning_only` 配置和事后选择的 `selected_retreat` 窗口，两者各自禁止正式执行。已有 `--formal` 参数不表示本会话可以使用它；不能删除限制、手改资格字段或把旧 A01 改名后投入训练。本轮文档提出的 `piper_h_sdk_width_m_v1` 正式契约、正常 `post_release_retreat` 结束方式，以及新源首次空场前的模式交接和首次返回，均待下一轮实现与现场验收，当前不是可直接运行的新命令。

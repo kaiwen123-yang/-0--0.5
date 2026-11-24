@@ -294,14 +294,10 @@ def freeze_attempts(requested):
             raise ValueError(f"Missing {split} sessions")
         for item in requested[split]:
             session = item.resolve()
-            single = (session/"run.json").is_file()
-            if single:
-                session = session.parent
             allocation = load(session/"session.json")
             if allocation["split"] != split:
                 raise ValueError(f"Wrong split for {session}")
-            paths = [item.resolve()] if single else sorted(session.glob("*_block"))
-            for path in paths:
+            for path in sorted(session.glob("*_block")):
                 run = load(path/"run.json")
                 if run["kind"] != "block" or run["use"] != "formal":
                     continue
@@ -334,6 +330,8 @@ def freeze_attempts(requested):
                             or record["actual_grasped_color"] != record["target_color"]):
                         raise ValueError(f"Success review missing matching observed result: {path}")
                 attempts[ident] = record
+    if {a["split"] for a in attempts.values() if a["approved_block"]} != {"train","validation"}:
+        raise ValueError("Need reviewed formal successes in both independent splits")
     return attempts
 
 
@@ -342,6 +340,11 @@ def export(a):
     if bool(requested["commissioning"]) == bool(requested["train"] or requested["validation"]):
         raise ValueError("联调单独导出；正式集需要 train 和 validation")
     formal = not requested["commissioning"]
+    if formal:
+        for split in ("train", "validation"):
+            # A run path selects its session. Include failed and unreviewed siblings in the freeze.
+            requested[split] = sorted({p.parent if (p/"run.json").is_file() else p
+                                       for p in map(Path.resolve, requested[split])})
     seen, groups, entries, manifests = set(), {}, [], []
     out = a.output.resolve()
     if out.exists():
@@ -375,6 +378,15 @@ def export(a):
                         require_width(run)
                         taught = load(Path(run["source_directory"])/"run.json")
                         task = recorded_task(run)
+                        for raw_dir, raw_record in ((path, run), (Path(run["source_directory"]), taught)):
+                            intent_file = raw_dir/"task.json"
+                            if intent_file.exists():
+                                intent = load(intent_file)
+                                if (recorded_task(intent) != task or intent["run_id"] != raw_record["run_id"]
+                                        or intent["session_id"] != raw_record["session_id"]
+                                        or intent["placement"] != raw_record["placement"]
+                                        or intent.get("source_trajectory_id") != raw_record.get("source_trajectory_id")):
+                                    raise ValueError(f"Stored pre-action instruction differs: {intent_file}")
                         if recorded_task(taught) != task:
                             raise ValueError(f"Instruction differs from taught source: {path}")
                         end = load(Path(run["source_directory"])/"task_end.json")
@@ -436,8 +448,8 @@ def export(a):
                 if not eligible and not formal:
                     raise ValueError(f"No reviewed {split} successes in {item}")
         if formal:
-            if {e["split"] for e in entries} != {"train","validation"}:
-                raise ValueError("Need reviewed formal successes in both independent splits")
+            if seen != {ident for ident, attempt in attempts.items() if attempt["approved_block"]}:
+                raise ValueError("Exported episodes differ from the frozen success reviews")
             write(tmp/"attempts.json",list(attempts.values()))
         dataset_contract = dict(gripper_basis=WIDTH, collection_view="all_colors") if formal else {}
         write(tmp/"alignment_manifest.json",dict(**dataset_contract,episodes=manifests,period_ns=PERIOD,
