@@ -54,6 +54,8 @@ def main(argv=None, *, finished_run=None):
     for kind, help_text in modes.items():
         sp = sub.add_parser(kind, help=help_text)
         sp.add_argument("session", type=Path)
+        if kind == "home":
+            sp.add_argument("--from-zero-pose", action="store_true", help="从现场已摆好的六轴零位姿态收齐传感器余差")
         if kind == "prepare-formal":
             sp.add_argument("held_session", type=Path, help="拥有当前真实保持记录的会话")
         if kind == "prepare-pads":
@@ -197,7 +199,8 @@ def main(argv=None, *, finished_run=None):
         if stats()["tx_packets"] != before+6 or read(led)["ifindex"] != int(Path("/sys/class/net/can0/ifindex").read_text()):
             raise RuntimeError("限位查询期间接口或主机 TX 改变")
         save(led, dict(read(led), tx_packets=before+6))
-        first = first_home_target(start, bounds)
+        first = first_home_target(start, bounds, from_zero_pose=a.from_zero_pose)
+        report["from_operator_zero_pose"] = a.from_zero_pose
         report.update(return_path="direct_joint_segment", home_waypoints_rad=[first, ZERO])
         fresh = released_pose(dev, rx, grip)
         if (fresh["arm"] != row["arm"] or gap(fresh["q_rad"],start) > .1
@@ -207,7 +210,7 @@ def main(argv=None, *, finished_run=None):
         active = True
         handoff_at_measured_pose(dev, rx, grip, sender, fresh["arm"], start, first, report)
         state = healthy(dev,rx,grip,allow_disabled_gripper=True)
-        if gap(state["q_rad"],start) > .5:
+        if min(gap(state["q_rad"],start), gap(state["q_rad"],first)) > .5:
             raise RuntimeError("交接后偏离实测起姿")
         if fresh["arm"]["ctrl_mode"] == 1:
             sender.arm(first,"fresh_home_anchor_in_CAN")

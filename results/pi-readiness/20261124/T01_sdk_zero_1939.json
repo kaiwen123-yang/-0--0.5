@@ -1,0 +1,72 @@
+{
+  "raw_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_193904_227241_home",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "run_id": "59b3e006-470c-4bc3-a1c8-e90ef2c82530",
+  "use": "reposition_only",
+  "complete": true,
+  "stop": "arrived_powered_hold",
+  "mode_acknowledgements": [
+    0,
+    1
+  ],
+  "initial_q_deg": [
+    -1.002,
+    -0.568,
+    0.483,
+    2.334,
+    -2.107,
+    -1.417
+  ],
+  "first_target_deg": [
+    -1.002,
+    0.0,
+    0.0,
+    2.334,
+    -2.107,
+    -1.417
+  ],
+  "reference_deg_s": 3.0,
+  "sdk_speed_percent": 50,
+  "final_q_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "width_mm": 47.3,
+  "final_mode": {
+    "ctrl_mode": 1,
+    "arm_status": 0,
+    "mode_feedback": 1,
+    "teach_status": 2,
+    "motion_status": 0,
+    "trajectory_num": 0,
+    "err_status": {
+      "joint_1_angle_limit": false,
+      "joint_2_angle_limit": false,
+      "joint_3_angle_limit": false,
+      "joint_4_angle_limit": false,
+      "joint_5_angle_limit": false,
+      "joint_6_angle_limit": false,
+      "communication_status_joint_1": false,
+      "communication_status_joint_2": false,
+      "communication_status_joint_3": false,
+      "communication_status_joint_4": false,
+      "communication_status_joint_5": false,
+      "communication_status_joint_6": false
+    }
+  },
+  "drives_enabled": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "host_gripper_frames": 0,
+  "host_frames": 87,
+  "final_time": "2026-11-24T19:39:08.155821+08:00"
+}

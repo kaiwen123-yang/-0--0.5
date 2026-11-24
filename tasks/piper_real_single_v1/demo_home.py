@@ -22,13 +22,22 @@ def released_pose(dev, rx, grip):
     return row
 
 
-def first_home_target(q, bounds):
+def first_home_target(q, bounds, *, from_zero_pose=False):
+    first = list(q)
+    if from_zero_pose and gap(q, ZERO) > 3.:
+        raise ValueError("现场零位收尾要求全部六轴在零位姿态附近")
     for i, (v, (lo, hi)) in enumerate(zip(q, bounds, strict=True)):
         if not lo <= 0 <= hi:
             raise ValueError(f"零目标不在 J{i+1} 控制器回读范围内")
         if not lo <= v <= hi:
-            raise ValueError(f"实测 J{i+1} 在控制器回读范围外；保留原值")
-    return list(q)
+            # The field-tested zero-end recovery targets the legal endpoint.
+            # The measured pose in the receipt retains its signed error.
+            j2_zero_end = i == 1 and lo == 0 and -math.radians(1) <= v < 0
+            j3_zero_end = i == 2 and hi == 0 and 0 < v <= math.radians(1)
+            if not from_zero_pose or not (j2_zero_end or j3_zero_end):
+                raise ValueError(f"实测 J{i+1} 在控制器回读范围外；保留原值")
+            first[i] = 0.
+    return first
 
 
 def handoff_at_measured_pose(dev, rx, grip, sender, initial, start, first_target, report):
@@ -45,7 +54,10 @@ def handoff_at_measured_pose(dev, rx, grip, sender, initial, start, first_target
             row = snapshot(dev, rx, grip)
             status = row["arm"]
             issues = h0.calibration_driver_issues(dev, status, require_can=False)
-            if issues or gap(row["q_rad"], start) > .5 or int(status["ctrl_mode"]) not in (prior, mode):
+            deviation = gap(row["q_rad"], start)
+            if anchored:
+                deviation = min(deviation, gap(row["q_rad"], first_target))
+            if issues or deviation > .5 or int(status["ctrl_mode"]) not in (prior, mode):
                 raise RuntimeError(f"Unexpected state in control handoff: {status}, {issues}")
             fresh = dev.robot.get_arm_status().timestamp > sent and all(
                 dev.robot.get_driver_states(j).timestamp > sent for j in range(1, 7))
