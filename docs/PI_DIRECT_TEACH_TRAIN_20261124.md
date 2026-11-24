@@ -153,3 +153,7 @@ bash tasks/piper_real_single_v1/night_train.sh \
 变更涉及 demo_field、demo_export、dataset、train、两份 pickplace 全参配置和 night_train.sh，以及当前指南/状态/唯一日志。未更改控制器角度、电流或硬件保护，不新增额外工作区限位；正常回零复用既有单段 3°/s 实现。
 
 此前真实成功 A01 和手拖记录保留。它们不因 TX=0 或 commissioning 标签天然失去训练价值，也不能只改 flag 冒充本次“真实 C/O”新合同。已有数据的来源适配可后续处理，今晚首先把新采的每条录成可训练真实成功，避免再花时间重复一次任务。
+
+### 当晚 50 条达标后的自动提交
+
+在第二平台从 π 仓库运行 `bash tasks/piper_real_single_v1/stage_and_submit_50.sh --wait` 可等待 20 个训练配对和 5 个验证配对。省略 `--wait` 时，未达标直接退出。达标后核对冻结的真实独立来源及有效十步窗口，按 `rsync -aL` 解析传输阶段 A 视图，D57 核验完整性后在 tmux 中运行 `night_train.sh`。实验名为 `dc1_wrist_direct_blue_red_20261124_50_v1`，两模型分别留下 norm、训练日志和检查点。
