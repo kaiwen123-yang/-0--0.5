@@ -1,0 +1,791 @@
+{
+  "status": "COMPLETED",
+  "model_family": "pi05",
+  "evaluation": "open_loop_action_imitation",
+  "not_a_robot_success_rate": true,
+  "selection_rule": "lowest episode-macro seven-dimensional train-normalized MSE on moving validation windows",
+  "validation_selected_checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/9999",
+  "selection_scope": "retained checkpoints only; validation-selected, not an independent test result",
+  "checkpoints": [
+    {
+      "checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/5000",
+      "report": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/evaluation/5000/report.json",
+      "overall": {
+        "all": {
+          "contributing_episodes": 10,
+          "sampled_windows": 640,
+          "model": {
+            "joint_mae_deg": 0.8562171876430511,
+            "joint_rmse_deg": 2.4145224928855895,
+            "per_joint_mae_deg": [
+              0.29636800587177276,
+              1.0818916141986847,
+              1.1258710324764252,
+              0.9022831380367279,
+              1.5160304486751557,
+              0.2148587979376316
+            ],
+            "gripper_mae_mm": 3.031221926212311,
+            "gripper_rmse_mm": 7.13056514263153,
+            "first_step_joint_mae_deg": 0.20438450425863267,
+            "first_step_gripper_mae_mm": 1.0938889503479003,
+            "last_step_joint_mae_deg": 1.449325281381607,
+            "last_step_gripper_mae_mm": 5.0897639989852905,
+            "normalized_mse7": 0.10597973557517244
+          },
+          "hold_current_state_baseline": {
+            "joint_mae_deg": 0.8047041654586792,
+            "joint_rmse_deg": 3.172670292854309,
+            "per_joint_mae_deg": [
+              0.23793993443250655,
+              1.536384266614914,
+              1.1960617125034332,
+              0.4402157723903656,
+              1.2412156462669373,
+              0.17640745937824248
+            ],
+            "gripper_mae_mm": 1.8989843726158142,
+            "gripper_rmse_mm": 7.034769749641418,
+            "first_step_joint_mae_deg": 0.15246327221393585,
+            "first_step_gripper_mae_mm": 0.3249999493360519,
+            "last_step_joint_mae_deg": 1.4203423261642456,
+            "last_step_gripper_mae_mm": 3.707968831062317,
+            "normalized_mse7": 0.11597926434332595
+          }
+        },
+        "moving": {
+          "contributing_episodes": 10,
+          "sampled_windows": 340,
+          "model": {
+            "joint_mae_deg": 1.4745834529399873,
+            "joint_rmse_deg": 3.306270146369934,
+            "per_joint_mae_deg": [
+              0.5243598461151123,
+              1.8831744849681855,
+              1.9959535956382752,
+              1.4353701174259186,
+              2.620158040523529,
+              0.38848469592630863
+            ],
+            "gripper_mae_mm": 4.575877928733826,
+            "gripper_rmse_mm": 9.120135164260864,
+            "first_step_joint_mae_deg": 0.324706169962883,
+            "first_step_gripper_mae_mm": 1.349746298789978,
+            "last_step_joint_mae_deg": 2.507381820678711,
+            "last_step_gripper_mae_mm": 7.941641807556152,
+            "normalized_mse7": 0.20222370818993
+          },
+          "hold_current_state_baseline": {
+            "joint_mae_deg": 1.5365209460258484,
+            "joint_rmse_deg": 4.4023717045784,
+            "per_joint_mae_deg": [
+              0.44913479834795,
+              2.940664458274841,
+              2.2882987201213836,
+              0.8308056175708771,
+              2.381921100616455,
+              0.3283006489276886
+            ],
+            "gripper_mae_mm": 3.6749788165092467,
+            "gripper_rmse_mm": 9.78160264492035,
+            "first_step_joint_mae_deg": 0.28774750232696533,
+            "first_step_gripper_mae_mm": 0.6358944714069367,
+            "last_step_joint_mae_deg": 2.715582621097565,
+            "last_step_gripper_mae_mm": 7.157715511322022,
+            "normalized_mse7": 0.2205995988877935
+          }
+        },
+        "low_motion": {
+          "contributing_episodes": 10,
+          "sampled_windows": 300,
+          "model": {
+            "joint_mae_deg": 0.18700679391622543,
+            "joint_rmse_deg": 0.5607890784740448,
+            "per_joint_mae_deg": [
+              0.06329274754971266,
+              0.22246587723493577,
+              0.19586215019226075,
+              0.3648869410157204,
+              0.2567245841026306,
+              0.01880855020135641
+            ],
+            "gripper_mae_mm": 1.148608183860779,
+            "gripper_rmse_mm": 2.4756508737802507,
+            "first_step_joint_mae_deg": 0.06777881383895874,
+            "first_step_gripper_mae_mm": 0.7632089510560036,
+            "last_step_joint_mae_deg": 0.3296845927834511,
+            "last_step_gripper_mae_mm": 1.5625861555337905,
+            "normalized_mse7": 0.007178321124801329
+          },
+          "hold_current_state_baseline": {
+            "joint_mae_deg": 0.0045520880696130915,
+            "joint_rmse_deg": 0.031631292589008805,
+            "per_joint_mae_deg": [
+              0.0020546886255033312,
+              0.0016230419394560158,
+              0.0,
+              0.011473421170376242,
+              0.008631288085598498,
+              0.003530088477418758
+            ],
+            "gripper_mae_mm": 0.00293383686512243,
+            "gripper_rmse_mm": 0.015985485073179005,
+            "first_step_joint_mae_deg": 0.0017180059861857445,
+            "first_step_gripper_mae_mm": 0.0028000025078654288,
+            "last_step_joint_mae_deg": 0.007446590496692806,
+            "last_step_gripper_mae_mm": 0.0036120311822742225,
+            "normalized_mse7": 7.849154030147312e-05
+          }
+        }
+      },
+      "by_color": {
+        "blue": {
+          "all": {
+            "contributing_episodes": 5,
+            "sampled_windows": 320,
+            "model": {
+              "joint_mae_deg": 0.8296184539794922,
+              "joint_rmse_deg": 2.3594023466110228,
+              "per_joint_mae_deg": [
+                0.2565828084945679,
+                1.1006565809249877,
+                1.0828524112701416,
+                0.7676295280456543,
+                1.582915186882019,
+                0.1870741069316864
+              ],
+              "gripper_mae_mm": 2.9271721839904785,
+              "gripper_rmse_mm": 6.725293588638306,
+              "first_step_joint_mae_deg": 0.19005201756954193,
+              "first_step_gripper_mae_mm": 1.1371543169021607,
+              "last_step_joint_mae_deg": 1.397969114780426,
+              "last_step_gripper_mae_mm": 4.758887863159179,
+              "normalized_mse7": 0.0896292146158017
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.7236634254455566,
+              "joint_rmse_deg": 2.9612330198287964,
+              "per_joint_mae_deg": [
+                0.20561622232198715,
+                1.3685172080993653,
+                1.1052802801132202,
+                0.3348068594932556,
+                1.1857243180274963,
+                0.14203560054302217
+              ],
+              "gripper_mae_mm": 1.6343125343322753,
+              "gripper_rmse_mm": 6.49338665008545,
+              "first_step_joint_mae_deg": 0.13061511367559434,
+              "first_step_gripper_mae_mm": 0.3103124976158142,
+              "last_step_joint_mae_deg": 1.283660364151001,
+              "last_step_gripper_mae_mm": 3.131562519073486,
+              "normalized_mse7": 0.08931170578542759
+            }
+          },
+          "moving": {
+            "contributing_episodes": 5,
+            "sampled_windows": 161,
+            "model": {
+              "joint_mae_deg": 1.504116427898407,
+              "joint_rmse_deg": 3.347115421295166,
+              "per_joint_mae_deg": [
+                0.486819863319397,
+                1.997046160697937,
+                1.98883855342865,
+                1.3628718495368957,
+                2.797945499420166,
+                0.3911761850118637
+              ],
+              "gripper_mae_mm": 4.2270057678222654,
+              "gripper_rmse_mm": 8.443545246124268,
+              "first_step_joint_mae_deg": 0.3168238580226898,
+              "first_step_gripper_mae_mm": 1.28616783618927,
+              "last_step_joint_mae_deg": 2.541763520240784,
+              "last_step_gripper_mae_mm": 7.107482624053955,
+              "normalized_mse7": 0.20150808650101032
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 1.5056835293769837,
+              "joint_rmse_deg": 4.279893112182617,
+              "per_joint_mae_deg": [
+                0.4128763318061829,
+                2.810411524772644,
+                2.3181455612182615,
+                0.7003992438316345,
+                2.4752283573150633,
+                0.3170402407646179
+              ],
+              "gripper_mae_mm": 3.4355752944946287,
+              "gripper_rmse_mm": 9.412049674987793,
+              "first_step_joint_mae_deg": 0.26822211444377897,
+              "first_step_gripper_mae_mm": 0.6564908981323242,
+              "last_step_joint_mae_deg": 2.6735219717025758,
+              "last_step_gripper_mae_mm": 6.586659908294678,
+              "normalized_mse7": 0.19943056791746683
+            }
+          },
+          "low_motion": {
+            "contributing_episodes": 5,
+            "sampled_windows": 159,
+            "model": {
+              "joint_mae_deg": 0.19472728818655013,
+              "joint_rmse_deg": 0.6297931253910065,
+              "per_joint_mae_deg": [
+                0.055699143931269644,
+                0.22923173606395722,
+                0.25943408608436586,
+                0.27693191468715667,
+                0.3287481337785721,
+                0.018318722769618035
+              ],
+              "gripper_mae_mm": 1.33019677400589,
+              "gripper_rmse_mm": 2.827768510580063,
+              "first_step_joint_mae_deg": 0.06155523508787155,
+              "first_step_gripper_mae_mm": 0.896574267745018,
+              "last_step_joint_mae_deg": 0.36982570588588715,
+              "last_step_gripper_mae_mm": 1.8598875939846038,
+              "normalized_mse7": 0.006011647285511269
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.004909557057544589,
+              "joint_rmse_deg": 0.03546189814805985,
+              "per_joint_mae_deg": [
+                0.002839982765726745,
+                0.0019887135829776527,
+                0.0,
+                0.010240862192586065,
+                0.012236323137767614,
+                0.0021514585998374967
+              ],
+              "gripper_mae_mm": 0.0058105309726670384,
+              "gripper_rmse_mm": 0.030901926942169665,
+              "first_step_joint_mae_deg": 0.0017863592831417919,
+              "first_step_gripper_mae_mm": 0.0056000050157308575,
+              "last_step_joint_mae_deg": 0.008537761215120555,
+              "last_step_gripper_mae_mm": 0.006652634777128697,
+              "normalized_mse7": 5.979302985699783e-05
+            }
+          }
+        },
+        "red": {
+          "all": {
+            "contributing_episodes": 5,
+            "sampled_windows": 320,
+            "model": {
+              "joint_mae_deg": 0.8828159213066101,
+              "joint_rmse_deg": 2.4696426391601562,
+              "per_joint_mae_deg": [
+                0.3361532032489777,
+                1.0631266474723815,
+                1.1688896536827087,
+                1.0369367480278016,
+                1.4491457104682923,
+                0.24264348894357682
+              ],
+              "gripper_mae_mm": 3.135271668434143,
+              "gripper_rmse_mm": 7.535836696624756,
+              "first_step_joint_mae_deg": 0.2187169909477234,
+              "first_step_gripper_mae_mm": 1.0506235837936402,
+              "last_step_joint_mae_deg": 1.5006814479827881,
+              "last_step_gripper_mae_mm": 5.420640134811402,
+              "normalized_mse7": 0.12233025653454317
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.8857449054718017,
+              "joint_rmse_deg": 3.384107565879822,
+              "per_joint_mae_deg": [
+                0.270263646543026,
+                1.7042513251304627,
+                1.2868431448936462,
+                0.5456246852874755,
+                1.2967069745063782,
+                0.21077931821346282
+              ],
+              "gripper_mae_mm": 2.163656210899353,
+              "gripper_rmse_mm": 7.5761528491973875,
+              "first_step_joint_mae_deg": 0.17431143075227737,
+              "first_step_gripper_mae_mm": 0.3396874010562897,
+              "last_step_joint_mae_deg": 1.5570242881774903,
+              "last_step_gripper_mae_mm": 4.284375143051148,
+              "normalized_mse7": 0.1426468229012243
+            }
+          },
+          "moving": {
+            "contributing_episodes": 5,
+            "sampled_windows": 179,
+            "model": {
+              "joint_mae_deg": 1.4450504779815674,
+              "joint_rmse_deg": 3.265424871444702,
+              "per_joint_mae_deg": [
+                0.5618998289108277,
+                1.7693028092384337,
+                2.0030686378479006,
+                1.5078683853149415,
+                2.442370581626892,
+                0.3857932068407536
+              ],
+              "gripper_mae_mm": 4.924750089645386,
+              "gripper_rmse_mm": 9.796725082397462,
+              "first_step_joint_mae_deg": 0.33258848190307616,
+              "first_step_gripper_mae_mm": 1.413324761390686,
+              "last_step_joint_mae_deg": 2.4730001211166384,
+              "last_step_gripper_mae_mm": 8.77580099105835,
+              "normalized_mse7": 0.2029393298788497
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 1.5673583626747132,
+              "joint_rmse_deg": 4.524850296974182,
+              "per_joint_mae_deg": [
+                0.4853932648897171,
+                3.0709173917770385,
+                2.2584518790245056,
+                0.9612119913101196,
+                2.2886138439178465,
+                0.3395610570907593
+              ],
+              "gripper_mae_mm": 3.9143823385238647,
+              "gripper_rmse_mm": 10.151155614852906,
+              "first_step_joint_mae_deg": 0.3072728902101517,
+              "first_step_gripper_mae_mm": 0.615298044681549,
+              "last_step_joint_mae_deg": 2.7576432704925535,
+              "last_step_gripper_mae_mm": 7.728771114349366,
+              "normalized_mse7": 0.24176862985812023
+            }
+          },
+          "low_motion": {
+            "contributing_episodes": 5,
+            "sampled_windows": 141,
+            "model": {
+              "joint_mae_deg": 0.17928629964590073,
+              "joint_rmse_deg": 0.49178503155708314,
+              "per_joint_mae_deg": [
+                0.07088635116815567,
+                0.2157000184059143,
+                0.13229021430015564,
+                0.45284196734428406,
+                0.18470103442668914,
+                0.019298377633094787
+              ],
+              "gripper_mae_mm": 0.9670195937156677,
+              "gripper_rmse_mm": 2.123533236980438,
+              "first_step_joint_mae_deg": 0.07400239259004593,
+              "first_step_gripper_mae_mm": 0.6298436343669891,
+              "last_step_joint_mae_deg": 0.289543479681015,
+              "last_step_gripper_mae_mm": 1.2652847170829773,
+              "normalized_mse7": 0.008344994964091388
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.004194619081681594,
+              "joint_rmse_deg": 0.02780068702995777,
+              "per_joint_mae_deg": [
+                0.0012693944852799177,
+                0.001257370295934379,
+                0.0,
+                0.012705980148166419,
+                0.005026253033429384,
+                0.004908718355000019
+              ],
+              "gripper_mae_mm": 5.714275757782161e-05,
+              "gripper_rmse_mm": 0.0010690432041883468,
+              "first_step_joint_mae_deg": 0.001649652689229697,
+              "first_step_gripper_mae_mm": 0.0,
+              "last_step_joint_mae_deg": 0.006355419778265059,
+              "last_step_gripper_mae_mm": 0.0005714275874197483,
+              "normalized_mse7": 9.719005074594843e-05
+            }
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/9999",
+      "report": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/evaluation/9999/report.json",
+      "overall": {
+        "all": {
+          "contributing_episodes": 10,
+          "sampled_windows": 640,
+          "model": {
+            "joint_mae_deg": 0.8382411986589432,
+            "joint_rmse_deg": 2.2615934014320374,
+            "per_joint_mae_deg": [
+              0.27079347893595695,
+              0.8489450931549072,
+              1.0964291751384736,
+              0.9661344707012176,
+              1.6156758248806,
+              0.23146901428699493
+            ],
+            "gripper_mae_mm": 3.4505634188652037,
+            "gripper_rmse_mm": 7.664165925979614,
+            "first_step_joint_mae_deg": 0.16716399639844895,
+            "first_step_gripper_mae_mm": 0.9936300694942475,
+            "last_step_joint_mae_deg": 1.5082582473754882,
+            "last_step_gripper_mae_mm": 6.170708870887756,
+            "normalized_mse7": 0.10670469540734318
+          },
+          "hold_current_state_baseline": {
+            "joint_mae_deg": 0.8047041654586792,
+            "joint_rmse_deg": 3.172670292854309,
+            "per_joint_mae_deg": [
+              0.23793993443250655,
+              1.536384266614914,
+              1.1960617125034332,
+              0.4402157723903656,
+              1.2412156462669373,
+              0.17640745937824248
+            ],
+            "gripper_mae_mm": 1.8989843726158142,
+            "gripper_rmse_mm": 7.034769749641418,
+            "first_step_joint_mae_deg": 0.15246327221393585,
+            "first_step_gripper_mae_mm": 0.3249999493360519,
+            "last_step_joint_mae_deg": 1.4203423261642456,
+            "last_step_gripper_mae_mm": 3.707968831062317,
+            "normalized_mse7": 0.11597926434332595
+          }
+        },
+        "moving": {
+          "contributing_episodes": 10,
+          "sampled_windows": 340,
+          "model": {
+            "joint_mae_deg": 1.3716542422771454,
+            "joint_rmse_deg": 3.010470175743103,
+            "per_joint_mae_deg": [
+              0.45448421835899355,
+              1.461191827058792,
+              1.8230959236621858,
+              1.4355539977550507,
+              2.636920166015625,
+              0.4186791330575943
+            ],
+            "gripper_mae_mm": 4.991428923606873,
+            "gripper_rmse_mm": 9.519636344909667,
+            "first_step_joint_mae_deg": 0.26842857003211973,
+            "first_step_gripper_mae_mm": 1.1812215387821197,
+            "last_step_joint_mae_deg": 2.4304228901863096,
+            "last_step_gripper_mae_mm": 9.029841327667237,
+            "normalized_mse7": 0.1968967768757553
+          },
+          "hold_current_state_baseline": {
+            "joint_mae_deg": 1.5365209460258484,
+            "joint_rmse_deg": 4.4023717045784,
+            "per_joint_mae_deg": [
+              0.44913479834795,
+              2.940664458274841,
+              2.2882987201213836,
+              0.8308056175708771,
+              2.381921100616455,
+              0.3283006489276886
+            ],
+            "gripper_mae_mm": 3.6749788165092467,
+            "gripper_rmse_mm": 9.78160264492035,
+            "first_step_joint_mae_deg": 0.28774750232696533,
+            "first_step_gripper_mae_mm": 0.6358944714069367,
+            "last_step_joint_mae_deg": 2.715582621097565,
+            "last_step_gripper_mae_mm": 7.157715511322022,
+            "normalized_mse7": 0.2205995988877935
+          }
+        },
+        "low_motion": {
+          "contributing_episodes": 10,
+          "sampled_windows": 300,
+          "model": {
+            "joint_mae_deg": 0.2972265999764204,
+            "joint_rmse_deg": 0.7878650583326816,
+            "per_joint_mae_deg": [
+              0.09234748911112547,
+              0.21201017424464225,
+              0.4213124394416809,
+              0.5019596211612225,
+              0.5366528019309044,
+              0.019077426427975296
+            ],
+            "gripper_mae_mm": 1.5899761855602264,
+            "gripper_rmse_mm": 3.5568857818841932,
+            "first_step_joint_mae_deg": 0.056755805388092995,
+            "first_step_gripper_mae_mm": 0.7288763701915741,
+            "last_step_joint_mae_deg": 0.6145509086549282,
+            "last_step_gripper_mae_mm": 2.642168852686882,
+            "normalized_mse7": 0.015344755844224494
+          },
+          "hold_current_state_baseline": {
+            "joint_mae_deg": 0.0045520880696130915,
+            "joint_rmse_deg": 0.031631292589008805,
+            "per_joint_mae_deg": [
+              0.0020546886255033312,
+              0.0016230419394560158,
+              0.0,
+              0.011473421170376242,
+              0.008631288085598498,
+              0.003530088477418758
+            ],
+            "gripper_mae_mm": 0.00293383686512243,
+            "gripper_rmse_mm": 0.015985485073179005,
+            "first_step_joint_mae_deg": 0.0017180059861857445,
+            "first_step_gripper_mae_mm": 0.0028000025078654288,
+            "last_step_joint_mae_deg": 0.007446590496692806,
+            "last_step_gripper_mae_mm": 0.0036120311822742225,
+            "normalized_mse7": 7.849154030147312e-05
+          }
+        }
+      },
+      "by_color": {
+        "blue": {
+          "all": {
+            "contributing_episodes": 5,
+            "sampled_windows": 320,
+            "model": {
+              "joint_mae_deg": 0.8424280226230622,
+              "joint_rmse_deg": 2.221178913116455,
+              "per_joint_mae_deg": [
+                0.2493979588150978,
+                0.8651261925697327,
+                1.1376156210899353,
+                0.8368023633956909,
+                1.7631315350532533,
+                0.2024945482611656
+              ],
+              "gripper_mae_mm": 3.117946743965149,
+              "gripper_rmse_mm": 7.031803989410401,
+              "first_step_joint_mae_deg": 0.15568930953741072,
+              "first_step_gripper_mae_mm": 1.0074378371238708,
+              "last_step_joint_mae_deg": 1.5161481618881225,
+              "last_step_gripper_mae_mm": 5.523651838302612,
+              "normalized_mse7": 0.09393141877078742
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.7236634254455566,
+              "joint_rmse_deg": 2.9612330198287964,
+              "per_joint_mae_deg": [
+                0.20561622232198715,
+                1.3685172080993653,
+                1.1052802801132202,
+                0.3348068594932556,
+                1.1857243180274963,
+                0.14203560054302217
+              ],
+              "gripper_mae_mm": 1.6343125343322753,
+              "gripper_rmse_mm": 6.49338665008545,
+              "first_step_joint_mae_deg": 0.13061511367559434,
+              "first_step_gripper_mae_mm": 0.3103124976158142,
+              "last_step_joint_mae_deg": 1.283660364151001,
+              "last_step_gripper_mae_mm": 3.131562519073486,
+              "normalized_mse7": 0.08931170578542759
+            }
+          },
+          "moving": {
+            "contributing_episodes": 5,
+            "sampled_windows": 161,
+            "model": {
+              "joint_mae_deg": 1.3812417149543763,
+              "joint_rmse_deg": 2.9780922412872313,
+              "per_joint_mae_deg": [
+                0.4236327350139618,
+                1.5351855993270873,
+                1.8048801660537719,
+                1.3156219601631165,
+                2.789742946624756,
+                0.4183861553668976
+              ],
+              "gripper_mae_mm": 4.489893007278442,
+              "gripper_rmse_mm": 8.747369956970214,
+              "first_step_joint_mae_deg": 0.257941871881485,
+              "first_step_gripper_mae_mm": 1.0962034821510316,
+              "last_step_joint_mae_deg": 2.4213011026382447,
+              "last_step_gripper_mae_mm": 8.02818021774292,
+              "normalized_mse7": 0.197323214163109
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 1.5056835293769837,
+              "joint_rmse_deg": 4.279893112182617,
+              "per_joint_mae_deg": [
+                0.4128763318061829,
+                2.810411524772644,
+                2.3181455612182615,
+                0.7003992438316345,
+                2.4752283573150633,
+                0.3170402407646179
+              ],
+              "gripper_mae_mm": 3.4355752944946287,
+              "gripper_rmse_mm": 9.412049674987793,
+              "first_step_joint_mae_deg": 0.26822211444377897,
+              "first_step_gripper_mae_mm": 0.6564908981323242,
+              "last_step_joint_mae_deg": 2.6735219717025758,
+              "last_step_gripper_mae_mm": 6.586659908294678,
+              "normalized_mse7": 0.19943056791746683
+            }
+          },
+          "low_motion": {
+            "contributing_episodes": 5,
+            "sampled_windows": 159,
+            "model": {
+              "joint_mae_deg": 0.41064577996730806,
+              "joint_rmse_deg": 1.0329658150672913,
+              "per_joint_mae_deg": [
+                0.12480545751750469,
+                0.24200419932603837,
+                0.7341904744505883,
+                0.4812761902809143,
+                0.8633481323719024,
+                0.01825097743421793
+              ],
+              "gripper_mae_mm": 1.35270653963089,
+              "gripper_rmse_mm": 3.19118093252182,
+              "first_step_joint_mae_deg": 0.060504145175218585,
+              "first_step_gripper_mae_mm": 0.8169187664985657,
+              "last_step_joint_mae_deg": 0.8651970475912094,
+              "last_step_gripper_mae_mm": 2.1832077860832215,
+              "normalized_mse7": 0.01982023634746193
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.004909557057544589,
+              "joint_rmse_deg": 0.03546189814805985,
+              "per_joint_mae_deg": [
+                0.002839982765726745,
+                0.0019887135829776527,
+                0.0,
+                0.010240862192586065,
+                0.012236323137767614,
+                0.0021514585998374967
+              ],
+              "gripper_mae_mm": 0.0058105309726670384,
+              "gripper_rmse_mm": 0.030901926942169665,
+              "first_step_joint_mae_deg": 0.0017863592831417919,
+              "first_step_gripper_mae_mm": 0.0056000050157308575,
+              "last_step_joint_mae_deg": 0.008537761215120555,
+              "last_step_gripper_mae_mm": 0.006652634777128697,
+              "normalized_mse7": 5.979302985699783e-05
+            }
+          }
+        },
+        "red": {
+          "all": {
+            "contributing_episodes": 5,
+            "sampled_windows": 320,
+            "model": {
+              "joint_mae_deg": 0.8340543746948242,
+              "joint_rmse_deg": 2.3020078897476197,
+              "per_joint_mae_deg": [
+                0.2921889990568161,
+                0.8327639937400818,
+                1.0552427291870117,
+                1.0954665780067443,
+                1.4682201147079468,
+                0.26044348031282427
+              ],
+              "gripper_mae_mm": 3.783180093765259,
+              "gripper_rmse_mm": 8.296527862548828,
+              "first_step_joint_mae_deg": 0.17863868325948715,
+              "first_step_gripper_mae_mm": 0.979822301864624,
+              "last_step_joint_mae_deg": 1.500368332862854,
+              "last_step_gripper_mae_mm": 6.817765903472901,
+              "normalized_mse7": 0.11947797204389894
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.8857449054718017,
+              "joint_rmse_deg": 3.384107565879822,
+              "per_joint_mae_deg": [
+                0.270263646543026,
+                1.7042513251304627,
+                1.2868431448936462,
+                0.5456246852874755,
+                1.2967069745063782,
+                0.21077931821346282
+              ],
+              "gripper_mae_mm": 2.163656210899353,
+              "gripper_rmse_mm": 7.5761528491973875,
+              "first_step_joint_mae_deg": 0.17431143075227737,
+              "first_step_gripper_mae_mm": 0.3396874010562897,
+              "last_step_joint_mae_deg": 1.5570242881774903,
+              "last_step_gripper_mae_mm": 4.284375143051148,
+              "normalized_mse7": 0.1426468229012243
+            }
+          },
+          "moving": {
+            "contributing_episodes": 5,
+            "sampled_windows": 179,
+            "model": {
+              "joint_mae_deg": 1.3620667695999145,
+              "joint_rmse_deg": 3.0428481101989746,
+              "per_joint_mae_deg": [
+                0.4853357017040253,
+                1.3871980547904967,
+                1.8413116812705994,
+                1.5554860353469848,
+                2.484097385406494,
+                0.418972110748291
+              ],
+              "gripper_mae_mm": 5.492964839935302,
+              "gripper_rmse_mm": 10.29190273284912,
+              "first_step_joint_mae_deg": 0.2789152681827545,
+              "first_step_gripper_mae_mm": 1.266239595413208,
+              "last_step_joint_mae_deg": 2.439544677734375,
+              "last_step_gripper_mae_mm": 10.031502437591552,
+              "normalized_mse7": 0.19647033958840154
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 1.5673583626747132,
+              "joint_rmse_deg": 4.524850296974182,
+              "per_joint_mae_deg": [
+                0.4853932648897171,
+                3.0709173917770385,
+                2.2584518790245056,
+                0.9612119913101196,
+                2.2886138439178465,
+                0.3395610570907593
+              ],
+              "gripper_mae_mm": 3.9143823385238647,
+              "gripper_rmse_mm": 10.151155614852906,
+              "first_step_joint_mae_deg": 0.3072728902101517,
+              "first_step_gripper_mae_mm": 0.615298044681549,
+              "last_step_joint_mae_deg": 2.7576432704925535,
+              "last_step_gripper_mae_mm": 7.728771114349366,
+              "normalized_mse7": 0.24176862985812023
+            }
+          },
+          "low_motion": {
+            "contributing_episodes": 5,
+            "sampled_windows": 141,
+            "model": {
+              "joint_mae_deg": 0.18380741998553277,
+              "joint_rmse_deg": 0.5427643015980721,
+              "per_joint_mae_deg": [
+                0.05988952070474625,
+                0.18201614916324615,
+                0.10843440443277359,
+                0.5226430520415306,
+                0.20995747148990632,
+                0.019903875421732664
+              ],
+              "gripper_mae_mm": 1.827245831489563,
+              "gripper_rmse_mm": 3.9225906312465666,
+              "first_step_joint_mae_deg": 0.053007465600967404,
+              "first_step_gripper_mae_mm": 0.6408339738845825,
+              "last_step_joint_mae_deg": 0.363904769718647,
+              "last_step_gripper_mae_mm": 3.1011299192905426,
+              "normalized_mse7": 0.010869275340987061
+            },
+            "hold_current_state_baseline": {
+              "joint_mae_deg": 0.004194619081681594,
+              "joint_rmse_deg": 0.02780068702995777,
+              "per_joint_mae_deg": [
+                0.0012693944852799177,
+                0.001257370295934379,
+                0.0,
+                0.012705980148166419,
+                0.005026253033429384,
+                0.004908718355000019
+              ],
+              "gripper_mae_mm": 5.714275757782161e-05,
+              "gripper_rmse_mm": 0.0010690432041883468,
+              "first_step_joint_mae_deg": 0.001649652689229697,
+              "first_step_gripper_mae_mm": 0.0,
+              "last_step_joint_mae_deg": 0.006355419778265059,
+              "last_step_gripper_mae_mm": 0.0005714275874197483,
+              "normalized_mse7": 9.719005074594843e-05
+            }
+          }
+        }
+      }
+    }
+  ]
+}
