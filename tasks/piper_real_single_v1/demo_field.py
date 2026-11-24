@@ -19,6 +19,7 @@ from uuid import uuid4
 from demo_io import (BOOT, CAL, CAL_SHA, CLOCK, HERE, ROOT, Feedback, PiperDevice,
                      Sender, camera, gap, h0, healthy, read, save, snapshot, stats)
 from demo_path import plan, plan_samples
+from color_task import COLORS, recorded_task, task_for
 from width_contract import WIDTH, RETREAT, TERMINAL_VERSION, require_setup
 
 
@@ -58,6 +59,9 @@ def main():
             sp.add_argument("target_mm", type=float, help="本次空夹目标 mm，15 至 40")
         if kind == "teach":
             sp.add_argument("placement", help="摆放编号")
+        if kind in ("teach", "block"):
+            sp.add_argument("--target-color", choices=COLORS, help="该条真实指令的唯一目标")
+            sp.add_argument("--scene-colors", nargs="+", choices=COLORS, help="实际混摆，各色一块")
         if kind == "block":
             sp.add_argument("--formal", action="store_true", help="首批逐条质检通过后采正式示范")
     a = p.parse_args()
@@ -67,6 +71,15 @@ def main():
     if kind not in ("status", "limits") and not sys.stdin.isatty():
         p.error("在能观察机械臂的交互终端运行")
     session = getattr(a, "session", ROOT / "pi-q12-data/pi-demo-checks").resolve()
+    task = None
+    if kind in ("teach", "block"):
+        formal_setup = "terminal_kind" in read(session / "setup.json")
+        if formal_setup or a.target_color or a.scene_colors:
+            if not formal_setup or not a.target_color or not a.scene_colors:
+                p.error("正式示教/实物运行须指定 --target-color 与 --scene-colors，并已完成 prepare-formal")
+            if kind == "block" and not a.formal:
+                p.error("此正式会话的实物运行须加 --formal")
+            task = task_for(a.target_color, a.scene_colors)
     if kind == "prepare":
         session.mkdir(parents=True)
     elif kind in ("status", "limits"):
@@ -82,6 +95,7 @@ def main():
                   interface_before=stats(), started_unix_ns=time.time_ns())
     if getattr(a, "formal", False):
         report["use"] = "formal"
+        report["requested_task"] = task
     active = False
     dev = rx = grip = sender = None
     led = session / "hold.json"
@@ -338,7 +352,7 @@ def main():
                    open_m=prior["open_m"], close_m=prior["close_m"], force_N=prior["force_N"])
         require_setup(cfg)
         ledger = a.held_session.resolve()/"hold.json"
-        agree("确认与 A01 同一夹爪、指垫、腕部安装和蓝块；空爪已张开，手和工具撤离。将查询限位、提交当前实测同位保持")
+        agree("确认沿用 A01 夹爪、指垫、腕部安装及固定浅盘，方块适用原夹持尺寸；空爪已张开，手和工具撤离。将查询限位、提交当前实测同位保持")
         base = previous_hold(ledger, strict=True)
         row = healthy(dev,rx,grip)
         if (max(map(abs,base)) > math.radians(5) or row["arm"]["motion_status"] != 0
@@ -419,7 +433,9 @@ def main():
             previous_hold(strict=True)
             report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
                           split=cfg["split"], initial_hold_run=read(led)["run"])
-            print("开始前看腕图，确认完整蓝块和指尖。C 抓取位、O 释放位、E 空爪抬离；每处静止一秒。")
+            report.update(task)
+            print(a.placement, task["scene_colors"], task["prompt"], flush=True)
+            print("看腕图，核对每色各一块、目标及接近区域清楚可达。仅教指定目标，C 抓取位、O 释放位、E 空爪抬离；每处静止一秒。")
             agree("已讲解按键、核对新布局和腕图，准备被动示教")
         save(source_file, dict(pending=run.name))
         save(clear_file, dict(pending=run.name))
@@ -658,6 +674,14 @@ def main():
         report.update(source_trajectory_id=taught["run_id"], source_directory=str(path),
                       placement=taught["placement"], session_id=cfg["session_id"])
         if formal_source:
+            source_task = recorded_task(taught)
+            if kind == "block":
+                if task != source_task:
+                    raise ValueError("本条指令或实物场景与当前示教源不同，请复原或为新目标示教")
+                report.update(task)
+            else:
+                report["planned_block_task"] = source_task
+            print(taught["placement"], source_task["scene_colors"], source_task["prompt"], flush=True)
             hold = read(led)
             anchor = read(session/hold["run"]/"run.json")
             if (window or taught.get("terminal_kind") != RETREAT or taught.get("gripper_basis") != WIDTH

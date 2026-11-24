@@ -19,6 +19,7 @@ import numpy as np
 
 
 from .width_contract import CAMERA, WIDTH, model_asset_id
+from .color_task import BLUE_RED, stage_a_prompt
 
 
 def create_policy(spec, checkpoint):
@@ -33,7 +34,7 @@ def create_policy(spec, checkpoint):
     asset = checkpoint/"assets"/model_asset_id(spec)
     metadata = json.loads((asset/"width_contract.json").read_text())
     expected = dict(gripper_basis=WIDTH, model_family=spec["model_family"], camera_mount="wrist",
-                    asset_id=asset.name, split="train", action_horizon=10, policy_hz=20,
+                    asset_id=asset.name, split="train", target_colors=list(BLUE_RED), action_horizon=10, policy_hz=20,
                     normalization="quantile" if spec["model_family"]=="pi05" else "mean_std",
                     norm_sha256=hashlib.sha256((asset/"norm_stats.json").read_bytes()).hexdigest())
     if any(metadata.get(k) != v for k,v in expected.items()) or not metadata.get("frozen_split_sha256"):
@@ -46,6 +47,7 @@ def main():
     parser.add_argument("--spec", required=True)
     parser.add_argument("--checkpoint", required=True)
     parser.add_argument("--observation", required=True)
+    parser.add_argument("--instruction", help="本次蓝/红规范指令；省略时使用观测自带的阶段 A 指令")
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     spec = json.loads(Path(args.spec).read_text())
@@ -77,7 +79,7 @@ def main():
         observation = {
             "camera_rgb": sample["camera_rgb"].copy(),
             "state": sample["state"].copy(),
-            "prompt": str(sample["prompt"].item()),
+            "prompt": stage_a_prompt(args.instruction if args.instruction is not None else str(sample["prompt"].item())),
         }
     policy = create_policy(spec, checkpoint)
     started = time.perf_counter_ns()

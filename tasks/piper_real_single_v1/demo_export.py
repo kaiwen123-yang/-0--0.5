@@ -3,6 +3,7 @@ import argparse
 import csv
 import json
 import math
+import os
 import subprocess
 import struct
 import tempfile
@@ -14,10 +15,11 @@ import numpy as np
 from PIL import Image
 
 from width_contract import CAMERA, REPRESENTATION, RETREAT, TERMINAL_VERSION, WIDTH, require_setup, require_width
+from color_task import BLUE_RED, COLORS, recorded_task
 
 
 PERIOD = 50_000_000
-PROMPT = "Pick up the block, place it in the shallow tray, release it, and retreat."
+LEGACY_PROMPT = "Pick up the block, place it in the shallow tray, release it, and retreat."
 
 
 def load(path):
@@ -191,7 +193,7 @@ def analyse(path):
     return run,times,rows,states,actions,held,metrics
 
 
-def review(path, failed):
+def review(path, failed, actual, intervention):
     path = path.resolve()
     if not (path/"run.json").exists():
         candidates = sorted([p for p in path.iterdir() if p.name.endswith(("_empty","_block"))])
@@ -199,10 +201,27 @@ def review(path, failed):
             raise ValueError("此会话尚无空场或实物重放")
         path = candidates[-1]
     print("复核", path)
+    run = load(path/"run.json")
+    color_block = run["kind"] == "block" and "target_color" in run
+    if color_block and (path/"review.json").exists():
+        raise FileExistsError("该实物运行已有审核；原判定保留在 " + str(path/"review.json"))
     result = dict(approved_empty=False, approved_block=False)
+    def observed_result():
+        grasped = actual or input("实际夹起颜色 blue/red/white/green，抓空 none，看不清 unknown：").strip()
+        assisted = intervention or input("人工介入 yes/no，无法判定 unknown：").strip()
+        if grasped not in (*COLORS, "none", "unknown") or assisted not in ("yes", "no", "unknown"):
+            raise ValueError("请选择实际观测值；无法判定填 unknown")
+        result.update(recorded_task(run), actual_grasped_color=grasped, intervention=assisted,
+                      source_trajectory_id=run["source_trajectory_id"], session_id=run["session_id"],
+                      placement=run["placement"])
+        return grasped == run["target_color"] and assisted == "no"
+
     try:
         if failed:
+            if color_block:
+                observed_result()
             result.update(run_id=load(path/'run.json')['run_id'], verdict=failed)
+            result["outcome"] = "failed"
             print('已保留失败阶段与原因。')
             return
         run,t,rows,state,act,held,metrics = analyse(path)
@@ -235,8 +254,22 @@ def review(path, failed):
         else:
             print("核对夹起、转移、落盘、张开后留盘、退回，全程无人介入。")
             ok = not run.get("pauses")
+            if color_block:
+                print("本条原始指令", run["prompt"])
+                matched = observed_result()
+                ok = ok and matched
         verdict = input("完整观看并符合以上条件输入 PASS；其余输入失败阶段/原因：").strip()
         approved = verdict=="PASS" and bool(ok)
+        result["outcome"] = "success" if approved else "failed"
+        if color_block and not approved:
+            result["operator_verdict"] = verdict
+            grasped = result["actual_grasped_color"]
+            if grasped != run["target_color"]:
+                verdict = {"none":"no_grasp", "unknown":"unknown_grasp"}.get(grasped, "wrong_color")
+            elif result["intervention"] != "no":
+                verdict = "intervention_" + result["intervention"]
+            elif verdict == "PASS":
+                verdict = "paused_block"
         result.update(verdict=verdict, run_id=run["run_id"], use=run["use"],
                       approved_empty=approved and run["kind"]=="empty",
                       approved_block=approved and run["kind"]=="block")
@@ -245,7 +278,63 @@ def review(path, failed):
         result["error"] = repr(exc)
         raise
     finally:
-        write(path/"review.json",result)
+        if color_block:
+            if "run_id" in result:
+                with (path/"review.json").open("x") as f:
+                    json.dump(result, f, ensure_ascii=False, indent=2)
+        else:
+            write(path/"review.json",result)
+
+
+def freeze_attempts(requested):
+    """Assign all formal block attempts to their session split before selecting successes."""
+    attempts, groups = {}, {}
+    for split in ("train", "validation"):
+        if not requested[split]:
+            raise ValueError(f"Missing {split} sessions")
+        for item in requested[split]:
+            session = item.resolve()
+            single = (session/"run.json").is_file()
+            if single:
+                session = session.parent
+            allocation = load(session/"session.json")
+            if allocation["split"] != split:
+                raise ValueError(f"Wrong split for {session}")
+            paths = [item.resolve()] if single else sorted(session.glob("*_block"))
+            for path in paths:
+                run = load(path/"run.json")
+                if run["kind"] != "block" or run["use"] != "formal":
+                    continue
+                ident = run["run_id"]
+                if ident in attempts or run.get("session_id", allocation["session_id"]) != allocation["session_id"]:
+                    raise ValueError(f"Duplicate run or session mismatch: {path}")
+                record = dict(run_id=ident, raw_directory=str(path), split=split,
+                              session_id=allocation["session_id"], complete=run["complete"])
+                for key in ("placement", "source_trajectory_id", "requested_task"):
+                    if key in run:
+                        record[key] = run[key]
+                for key in ("session_id", "placement", "source_trajectory_id"):
+                    if key in record and groups.setdefault((key,record[key]),split) != split:
+                        raise ValueError(f"Group crosses splits: {key}={record[key]}")
+                if "target_color" in run:
+                    record.update(recorded_task(run))
+                review_file = path/"review.json"
+                record.update(approved_block=False, outcome="unreviewed", actual_grasped_color="unknown",
+                              intervention="unknown")
+                if review_file.is_file():
+                    reviewed = load(review_file)
+                    if reviewed.get("run_id") != ident:
+                        raise ValueError(f"Review does not identify this run: {path}")
+                    record.update({k:reviewed[k] for k in ("outcome", "approved_block", "verdict", "operator_verdict",
+                                  "actual_grasped_color", "intervention") if k in reviewed})
+                    if "target_color" in run and recorded_task(reviewed) != recorded_task(run):
+                        raise ValueError(f"Review changed the original task: {path}")
+                    if record["approved_block"] and (record["outcome"] != "success" or not run["complete"]
+                            or not record.get("target_color") or record["intervention"] != "no"
+                            or record["actual_grasped_color"] != record["target_color"]):
+                        raise ValueError(f"Success review missing matching observed result: {path}")
+                attempts[ident] = record
+    return attempts
 
 
 def export(a):
@@ -257,6 +346,7 @@ def export(a):
     out = a.output.resolve()
     if out.exists():
         raise FileExistsError(out)
+    attempts = freeze_attempts(requested) if formal else {}
     out.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(dir=out.parent) as stage:
         tmp = Path(stage)/"dataset"
@@ -268,7 +358,10 @@ def export(a):
                 eligible = 0
                 for path in paths:
                     rp = path/"review.json"
-                    if not rp.exists() or not load(rp).get("approved_block"):
+                    if formal:
+                        if not attempts.get(load(path/"run.json")["run_id"], {}).get("approved_block"):
+                            continue
+                    elif not rp.exists() or not load(rp).get("approved_block"):
                         continue
                     run,t,rows,states,actions,_,metrics = analyse(path)
                     if run["use"] != ("formal" if formal else "commissioning_only"):
@@ -281,6 +374,9 @@ def export(a):
                         require_setup(cfg)
                         require_width(run)
                         taught = load(Path(run["source_directory"])/"run.json")
+                        task = recorded_task(run)
+                        if recorded_task(taught) != task:
+                            raise ValueError(f"Instruction differs from taught source: {path}")
                         end = load(Path(run["source_directory"])/"task_end.json")
                         if (run.get("split") != split or cfg["split"] != split
                                 or run["session_id"] != cfg["session_id"] or run.get("pauses")
@@ -295,6 +391,9 @@ def export(a):
                             raise ValueError("Formal block, declared split or normal source E mismatch")
                         contract = dict(gripper_basis=WIDTH, terminal_kind=RETREAT,
                                         terminal_version=TERMINAL_VERSION, training_eligible=True, split=split)
+                        attempt = attempts[run["run_id"]]
+                        contract.update(task, run_id=run["run_id"], actual_grasped_color=attempt["actual_grasped_color"],
+                                        intervention=attempt["intervention"], outcome=attempt["outcome"])
                     ident = run["run_id"]
                     if ident in seen:
                         raise ValueError("Duplicate episode")
@@ -332,10 +431,15 @@ def export(a):
                     if formal:
                         manifests[-1].update(contract, installation=cfg["installation"],
                                              task_end=end, measurement_file=cfg["measurement_file"])
-                    entries.append(dict(directory=ident,frames=len(rows),prompt=PROMPT,**({"split":split} | contract)))
-                if not eligible:
+                    entries.append(dict(directory=ident,frames=len(rows), **({"split":split,
+                                        "prompt":run.get("prompt",LEGACY_PROMPT)} | contract)))
+                if not eligible and not formal:
                     raise ValueError(f"No reviewed {split} successes in {item}")
-        dataset_contract = dict(gripper_basis=WIDTH) if formal else {}
+        if formal:
+            if {e["split"] for e in entries} != {"train","validation"}:
+                raise ValueError("Need reviewed formal successes in both independent splits")
+            write(tmp/"attempts.json",list(attempts.values()))
+        dataset_contract = dict(gripper_basis=WIDTH, collection_view="all_colors") if formal else {}
         write(tmp/"alignment_manifest.json",dict(**dataset_contract,episodes=manifests,period_ns=PERIOD,
               observation="last received RGB, joint group and gripper at or before t",
               action="latest coherent complete host targets at the end of (t,t+50ms]; bounded by episode",
@@ -348,12 +452,44 @@ def export(a):
         from dataset import SingleCameraDataset
         for split in set(e["split"] for e in entries):
             ds = SingleCameraDataset(tmp,split,10,20)
-            for idx in ds.ends-1:
+            for entry, idx in zip(ds.entries, ds.ends-1, strict=True):
                 row = ds[int(idx)]
+                if row["prompt"] != entry["prompt"]:
+                    raise ValueError("Reader changed the episode instruction")
                 if not np.all(row["actions"] == row["actions"][0]):
                     raise ValueError("Reader did not pad at episode boundary")
         tmp.rename(out)
     print(out, "episodes",len(entries),"rows",sum(e["frames"] for e in entries))
+
+
+def blue_red_view(master, output):
+    from dataset import formal_entries, training_data_requirements
+    master, output = master.resolve(), output.resolve()
+    metadata = load(master/"dataset.json")
+    if metadata.get("collection_view") != "all_colors" or not (master/"attempts.json").is_file():
+        raise ValueError("Stage A requires a frozen full collection")
+    if output == master or master in output.parents or output.exists():
+        raise ValueError("Choose a new output outside the full collection")
+    entries = [e for e in formal_entries(master,"wrist",20) if e["target_color"] in BLUE_RED]
+    alignment = load(master/metadata["timestamp_alignment_source"])
+    ids = {e["directory"] for e in entries}
+    alignment["episodes"] = [m for m in alignment["episodes"] if m["directory"] in ids]
+    alignment["collection_view"] = "blue_red"
+    output.parent.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=output.parent) as stage:
+        tmp = Path(stage)
+        for ident in ids:
+            (tmp/ident).symlink_to(os.path.relpath(master/ident, tmp), target_is_directory=True)
+        write(tmp/"index.json",entries)
+        write(tmp/"alignment_manifest.json",alignment)
+        write(tmp/"dataset.json",dict(metadata, collection_view="blue_red",
+              master_directory=os.path.relpath(master, tmp), target_colors=list(BLUE_RED)))
+        missing = training_data_requirements(tmp, "wrist", 20)
+        if missing:
+            raise ValueError(missing)
+        tmp.rename(output)
+    print(output, {s:{c:sum(e["split"] == s and e["target_color"] == c for e in entries)
+                          for c in BLUE_RED} for s in ("train","validation")})
 
 
 def main():
@@ -362,13 +498,20 @@ def main():
     sp = sub.add_parser("review",help="检查一次重放；会话目录自动选最近执行")
     sp.add_argument("path",type=Path)
     sp.add_argument('--failed', metavar='原因', help='保留失败阶段和人工介入原因')
+    sp.add_argument("--actual-grasped-color", choices=(*COLORS, "none", "unknown"))
+    sp.add_argument("--intervention", choices=("yes", "no", "unknown"))
     sp = sub.add_parser("export",help="导出审核通过的完整真机数据")
     sp.add_argument("output",type=Path)
     for name in ("commissioning","train","validation"):
         sp.add_argument("--"+name,type=Path,nargs="+")
+    sp = sub.add_parser("stage-a",help="从已冻结的四色主库派生蓝红目标视图")
+    sp.add_argument("master",type=Path)
+    sp.add_argument("output",type=Path)
     a = p.parse_args()
     if a.op=="review":
-        review(a.path,a.failed)
+        review(a.path,a.failed,a.actual_grasped_color,a.intervention)
+    elif a.op == "stage-a":
+        blue_red_view(a.master,a.output)
     else:
         export(a)
 

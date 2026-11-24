@@ -18,7 +18,7 @@ case "${1:-}" in
         exec bash /home/kaiwen/research/dog-and-arm/scripts/h0_ros_env.sh /usr/bin/python3 -B "$here/demo_rgb.py" "$1" --one ;;
     view)
         exec bash /home/kaiwen/research/dog-and-arm/scripts/h0_ros_env.sh ros2 run rqt_image_view rqt_image_view /wrist_camera/color/image_raw ;;
-    review|export)
+    review|export|stage-a)
         exec /usr/bin/python3 -B "$here/demo_export.py" "$@" ;;
     play)
         shift

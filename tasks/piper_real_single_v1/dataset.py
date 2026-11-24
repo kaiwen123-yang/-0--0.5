@@ -22,8 +22,10 @@ import numpy as np
 
 
 if __package__:
+    from .color_task import BLUE_RED, recorded_task
     from .width_contract import CAMERA, REPRESENTATION, RETREAT, WIDTH
 else:
+    from color_task import BLUE_RED, recorded_task
     from width_contract import CAMERA, REPRESENTATION, RETREAT, WIDTH
 
 
@@ -50,6 +52,14 @@ def formal_entries(root, camera_mount, policy_hz):
     groups = {}
     for e in entries:
         a = by_id[e["directory"]]
+        if metadata.get("collection_view") in ("all_colors", "blue_red"):
+            if (recorded_task(e) != recorded_task(a) or a["sources"] != f"{e['directory']}/row_sources.jsonl"
+                    or alignment.get("collection_view") != metadata["collection_view"]):
+                raise ValueError("Episode instruction or row provenance differs from alignment")
+            for record in (e, a):
+                if (record["run_id"] != e["directory"] or record["actual_grasped_color"] != e["target_color"]
+                        or record["intervention"] != "no" or record["outcome"] != "success"):
+                    raise ValueError("Episode does not have a matching reviewed success")
         for r in (e,a):
             if (r.get("training_eligible") is not True or r.get("gripper_basis") != WIDTH
                     or r.get("terminal_kind") != RETREAT or r.get("terminal_version") != 1
@@ -71,6 +81,12 @@ def training_data_requirements(root, camera_mount, policy_hz):
         return missing
     try:
         entries = formal_entries(root,camera_mount,policy_hz)
+        metadata = json.loads((root/"dataset.json").read_text())
+        if metadata.get("collection_view") != "blue_red" or metadata.get("target_colors") != list(BLUE_RED):
+            return ["Stage A requires the frozen blue_red view of the full collection"]
+        for split in ("train", "validation"):
+            if {e["target_color"] for e in entries if e["split"] == split} != set(BLUE_RED):
+                return [f"Stage A {split} needs reviewed blue and red targets only"]
     except (ValueError, KeyError, OSError) as exc:
         return [str(exc)]
     if {e["split"] for e in entries} != {"train","validation"}:

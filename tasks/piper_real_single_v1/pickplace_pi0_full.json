@@ -5,9 +5,9 @@
   "gripper_basis": "piper_h_sdk_width_m_v1",
   "policy_hz": 20,
   "action_horizon": 10,
-  "experiment_name": "dc1_wrist_pickplace_v1",
+  "experiment_name": "dc1_wrist_blue_red_v1",
   "run_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/outputs",
-  "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/dc1_wrist_pickplace_v1",
+  "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_v1",
   "openpi_root": "/root/autodl-tmp/robot-repro/pi0/openpi",
   "base_params": "/root/autodl-tmp/robot-repro/assets/openpi-assets/checkpoints/pi0_base/params",
   "training": {

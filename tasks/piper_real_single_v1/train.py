@@ -21,6 +21,7 @@ from .dataset import SingleCameraDataset, read_policy_timestamps, training_data_
 
 
 from .width_contract import WIDTH, model_asset_id
+from .color_task import BLUE_RED
 
 
 def split_digest(root):
@@ -31,6 +32,7 @@ def split_digest(root):
 def norm_metadata(spec):
     return dict(gripper_basis=spec["gripper_basis"], asset_id=model_asset_id(spec),
                 model_family=spec["model_family"], camera_mount=spec["camera_mount"], split="train",
+                target_colors=list(BLUE_RED),
                 normalization="quantile" if spec["model_family"] == "pi05" else "mean_std",
                 frozen_split_sha256=split_digest(Path(spec["dataset_root"]).expanduser()),
                 action_horizon=spec["action_horizon"], policy_hz=spec["policy_hz"])
