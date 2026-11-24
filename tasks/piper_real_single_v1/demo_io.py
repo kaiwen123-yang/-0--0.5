@@ -113,6 +113,10 @@ class Sender:
     """One SDK comm for the arm and its gripper. H0 wraps the actual bus send."""
     def __init__(self, dev, grip, txfile, commands):
         self.dev, self.grip = dev, grip
+        # Official SDK default: controller readback is the joint-range authority.
+        # This local setting sends no CAN and changes no controller protection.
+        dev.robot.set_joint_limits_enabled(False)
+        dev.robot.set_auto_set_motion_mode_enabled(False)
         self.writer = csv.writer(txfile)
         self.writer.writerow(("start_ns", "end_ns", "command_id", "can_id", "data", "result", "error"))
         self.frames = []
@@ -165,10 +169,17 @@ class Sender:
             item["frames"] = len(self.frames)
             self.commands.write(json.dumps(item) + "\n")
 
+    def move_j_mode(self, speed_percent, *, kind="mode"):
+        """Select CAN, MOVE_J and its speed together; never emit move_mode=0xFF."""
+        msg = self.dev.robot._MSG_ModeCtrl(ctrl_mode=1, move_mode=1,
+                                           move_spd_rate_ctrl=speed_percent)
+        self.dev.robot._msg_mode = msg
+        return self.call(kind, speed_percent, lambda: self.dev.robot._send_msg(msg))
+
     def arm(self, q, source):
         for value, (lo, hi) in zip(q, self.bounds, strict=True):
             if not math.isfinite(value) or not lo <= value <= hi:
-                raise ValueError("Measured path outside controller or SDK bounds")
+                raise ValueError("Joint target outside controller readback limits")
         self.call("arm", q, lambda: self.dev.robot.move_j(list(q)), source=source)
 
     def width(self, width, force, source, *, gripper_basis=None):
@@ -195,7 +206,8 @@ class Sender:
                 raise ValueError(f"J{j} has no positive controller speed limit")
             bounds.append(dict(joint=j, received_unix_s=result.timestamp, controller=[lo, hi],
                                max_rad_s=speed,
-                               sdk=sdk, usable=[max(lo,sdk[0]), min(hi,sdk[1])]))
+                               sdk=sdk, usable=[lo, hi], source="controller_readback",
+                               sdk_software_limits_enabled=self.dev.robot.get_joint_limits_enabled()))
         self.bounds = [r["usable"] for r in bounds]
         return bounds
 
@@ -251,3 +263,4 @@ def camera(directory):
                 proc.send_signal(signal.SIGTERM)
             if proc.wait() != 0:
                 raise RuntimeError(f"Camera writer failed: {directory}/camera.log")
+

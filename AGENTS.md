@@ -1,12 +1,22 @@
 # π0 / π0.5 当前执行约定
 
-正式 teach 收尾已改为灯灭、空爪、撤手清场后自动 SDK 回零，取消手拖对准和 Z。当前实际结果与入口见每日工作日志 11/24 会话 4 及现场指南。
+## 用户最新执行要求 · 2026-11-24
+
+用户反馈 J2 重启后恢复，要求直接推进连续采集：每组正常结束后自动单段直回六轴零位，最高关节参考速度 3°/s；不再耗时规划回零路径，不新增防御性编程、测试或无关工作。当前接续入口为 `docs/PI_CONTINUOUS_COLLECTION_20261124.md`，其中含可直接交给现场 Codex 的提示词。代码已在本次提交准备，尚未在现场执行；不能写成实机验证通过。
+
+- 当前正式 teach、empty、block 正常完成均接独立自动 home；next-teach 准备下一组，同源重复用 anchor-start。回程不混入任务训练窗口。中断/故障不算正常完成。
+- 回零不运行 home_geometry、20 mm 高度条件、多支路几何扫描或旧保持位路点；50% SDK 档与 3°/s 参考分开记录。公共示教起点为 [0,2,−2,0,0,0]°，回零是六轴全零。
+- 只按本次控制器回读的角度范围生成目标，不叠加 SDK 可选模型表、URDF 或额外角度余量。本实例恢复 SDK 默认关闭模型夹限；不改控制器限位/电流参数或硬件保护。本机原始回执 J5 确实是 ±89.5°，不能称人为添加。
+- 颜色/SDK 宽度/正常 E/stage-a 已实现，直接使用现有入口；不重做这些已完成工作。继续四色采集、蓝红先训练的既定分组。
+- 现有四条手拖源是观察与路径来源，正式成功仍以现场 block 审核为准。可用于当前单腕仿真参考，但不得把其反馈伪装为已提交 action 或把旧双相机合成数据当本机真机示范。
+
+以下较早状态和历史约定若与上述最新要求冲突，以本节及连续采集提示词为准。
 
 ## 最新状态与入口 · 2026-11-24
 
 11/24 现场已部署逐 episode 颜色指令、正常抬离和 SDK 宽度合同。采蓝、红、白、绿，固定浅盘，红蓝及四色混摆，首阶段训练蓝红。按 `docs/PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md` 顶部的命令、`docs/PI_REAL_TEST_STATE.md` 和唯一日志接续当天实际步骤。计划和实机验收见 `docs/PI_COLOR_CONDITIONED_COLLECTION_20261124.md` 第 8 节。T01 已建立正式保持；首次抓蓝源因越限及缺少正常 E 未通过，操作者请求回零后重教；重入时查进程、账本和现场反馈。
 
-先读 `docs/PI_REAL_TEST_STATE.md`、`docs/PI_DAILY_WORK_LOG.md` 最近记录、`docs/PI_A01_RECORDING_REVIEW_20261123.md` 和 `docs/PI_A01_NEXT_PROMPT_20261123.md`。总计划在 `docs/PI_POST_CALIBRATION_PLAN_20261123.md`，现场操作在 `docs/PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md`。RoboMIND 研究已完成本轮决策，不再重跑。
+先读 `docs/PI_CONTINUOUS_COLLECTION_20261124.md`、`docs/PI_REAL_TEST_STATE.md` 和 `docs/PI_DAILY_WORK_LOG.md` 最近记录。A01 审查与旧提示词作为历史来源。总计划在 `docs/PI_POST_CALIBRATION_PLAN_20261123.md`，现场操作在 `docs/PI_LOCAL_DEMONSTRATION_GUIDE_20261123.md`。RoboMIND 研究已完成本轮决策，不再重跑。
 
 **用户最新选择：先核查 RoboMIND，能可靠用于当前任务就使用；不直接适用就采本地训练示范。** 本轮已完成有边界的实样检查，确认有可留用子任务，但尚未形成到本机 Piper H 的合格训练集。当前主线为本机轻质物体放浅盘示范与训练数据，公开数据保留作后续迁移/对比。旧文档中“暂不讨论示教”和坚持零本地训练的表述不再适用；正式本地训练示范已有用户授权。
 
@@ -25,7 +35,7 @@
 
 ## 四颜色任务的新增执行约定
 
-- 先查当前现场导出器是否仍把index.prompt写成全局通用PROMPT。基准b6e3f34仍如此；模型reader/transform已有逐episode通路。需要贯通真实任务选择、源示教、run/review、export和推理，不提供不存在的颜色CLI。先完成必要小范围更新再恢复采集。
+- 逐 episode 颜色通路已在 11/24 实现并部署，teach/block 使用 --target-color 与 --scene-colors。沿用真实 task/run/review/export 身份，不重复实现旧的全局 PROMPT 修复。
 - target_color表示指令目标，actual_grasped_color表示实际结果；scene_colors只记录场内任务方块颜色。抓错颜色属于失败，不通过改标签变成功。每次只抓指定一块，每色先各一块。
 - 同时采红蓝-only和四色混摆；同布局换指令、复原场景，交换颜色位置。公共起点尽量一致，新目标位置按真实对应来源/空场核查，不盲放旧轨迹。
 - 全库先按session/placement/source冻结split，再筛资格通过且target_color为blue/red的阶段A；继承原split，白绿目标保留未用。红蓝目标图中可有白绿干扰，原图不裁，不复制动作换标签。两模型各自norm只取阶段A蓝红train。

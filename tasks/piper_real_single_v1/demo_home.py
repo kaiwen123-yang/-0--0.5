@@ -1,10 +1,8 @@
 """Piper H direct MOVE_J return to six-axis zero, independent of task actions."""
 import math
-import os
-import subprocess
 import time
 
-from demo_io import HERE, gap, h0, healthy, read, save, snapshot
+from demo_io import gap, h0, healthy, snapshot
 
 
 ZERO = [0.] * 6
@@ -25,70 +23,12 @@ def released_pose(dev, rx, grip):
 
 
 def first_home_target(q, bounds):
-    first = list(q)
     for i, (v, (lo, hi)) in enumerate(zip(q, bounds, strict=True)):
         if not lo <= 0 <= hi:
-            raise ValueError(f"零目标不在 J{i+1} 当前限位内")
+            raise ValueError(f"零目标不在 J{i+1} 控制器回读范围内")
         if not lo <= v <= hi:
-            # This is the measured zero-end recovery used on the real H. Every
-            # transmitted target remains legal. It never changes a taught sample.
-            near_j2 = i == 1 and lo == 0 and -math.radians(1) <= v < 0
-            near_j3 = i == 2 and hi == 0 and 0 < v <= math.radians(1)
-            if not (near_j2 or near_j3):
-                raise ValueError(f"实测 J{i+1} 不在已验证回零起始范围内")
-            first[i] = 0.
-    return first
-
-
-def home_waypoints(start, first, held, bounds, ctrl_mode, taught_start):
-    """Choose the same ordered references for the geometry checker and the sender."""
-    if start != first:
-        return None  # Keep both sweeps for an initially out-of-bounds measurement.
-    points = [first]
-    if ctrl_mode != 1 and held != ZERO:
-        if (taught_start is None or gap(held, taught_start) > .35 or gap(held, ZERO) > 5.
-                or not all(lo <= v <= hi for v, (lo, hi) in zip(held, bounds, strict=True))):
-            return None  # A different previous target still needs an independent sweep.
-        if held != first:
-            points.append(held)
-    if points[-1] != ZERO:
-        points.append(ZERO)
-    return points
-
-
-def clear_profile(heights, returning_home):
-    threshold = .020
-    if not isinstance(heights, list) or not heights or any(
-            type(z) not in (float, int) or not math.isfinite(z) for z in heights):
-        raise ValueError("缺少有效的离抓取位高度采样")
-    if min(heights) > threshold:
-        return True
-    if not returning_home or not 0 < heights[0] < threshold or heights[-1] < threshold:
-        return False
-    for previous, current in zip(heights, heights[1:]):
-        if previous < threshold:
-            if current <= previous:
-                return False
-        elif current < threshold:
-            return False
-    return True
-
-
-def check_sweep(run, request):
-    save(run/"home_request.json", request)
-    subprocess.run(["/usr/bin/python3", "-sB", str(HERE/"home_geometry.py"), str(run)],
-                   env=dict(os.environ, OPENBLAS_NUM_THREADS="1"), check=True)
-    route = read(run/"route_check.json")
-    profiles = route["clearance_profiles_m"]
-    expected = {"commanded"} if request["ctrl_mode"] == 1 or "home_waypoints_rad" in request else {"commanded", "previous_target"}
-    returning_home = request.get("goal_q_rad", ZERO) == ZERO
-    if (set(profiles) != expected or type(route["mesh_pairs"]) is not int or route["mesh_pairs"] <= 0
-            or route["intersections"] != [] or not 0 <= route["max_fk_difference"] < 1e-4
-            or not all(clear_profile(p, returning_home) for p in profiles.values())
-            or any(p[0] != profiles["commanded"][0] for p in profiles.values())
-            or min(min(p) for p in profiles.values()) != route["clearance_above_pick_m"]):
-        raise ValueError(f"直达零位的实测起姿几何检查未通过，见 {run/'route_check.json'}")
-    return route
+            raise ValueError(f"实测 J{i+1} 在控制器回读范围外；保留原值")
+    return list(q)
 
 
 def handoff_at_measured_pose(dev, rx, grip, sender, initial, start, first_target, report):
@@ -126,10 +66,18 @@ def handoff_at_measured_pose(dev, rx, grip, sender, initial, start, first_target
         prior = mode
 
 
-def ramp_joints(dev, rx, grip, sender, first, goal, width, speed, stop_requested, source):
-    # Same smoothstep and 50 ms update used by the supervised SDK return.
+def ramp_joints(dev, rx, grip, sender, first, goal, width, speed, stop_requested, source,
+                *, profile="smoothstep"):
+    # One joint-space segment, sampled every 50 ms; speed is degrees/second.
     distance = gap(first, goal)
-    seconds = max(1.5 * distance / speed, math.sqrt(6 * distance / 8))
+    if profile == "trapezoid":
+        acceleration = 8.
+        acceleration_time = min(speed / acceleration, math.sqrt(distance / acceleration))
+        peak_speed = acceleration * acceleration_time
+        cruise_time = max(0., distance / speed - speed / acceleration)
+        seconds = 2 * acceleration_time + cruise_time
+    else:
+        seconds = max(1.5 * distance / speed, math.sqrt(6 * distance / 8))
     steps = max(1, math.ceil(seconds / .05))
     previous = first
     last = time.monotonic()
@@ -146,9 +94,20 @@ def ramp_joints(dev, rx, grip, sender, first, goal, width, speed, stop_requested
             sender.arm(previous, "operator_requested_reposition_hold")
             return previous, False
         u = i / steps
-        weight = 1 - u*u*(3 - 2*u)
+        if profile == "trapezoid":
+            elapsed = seconds * u
+            if elapsed <= acceleration_time:
+                travelled = .5 * acceleration * elapsed * elapsed
+            elif elapsed >= seconds - acceleration_time:
+                travelled = distance - .5 * acceleration * (seconds - elapsed)**2
+            else:
+                travelled = .5 * acceleration * acceleration_time**2 + peak_speed * (elapsed - acceleration_time)
+            weight = 1 - travelled / distance if distance else 0.
+        else:
+            weight = 1 - u*u*(3 - 2*u)
         target = [end + (v-end)*weight for v,end in zip(first,goal,strict=True)] if i < steps else goal
         sender.arm(target, source)
         previous = target
         time.sleep(max(0., .05 - (time.monotonic() - tick)))
     return previous, True
+

@@ -1,68 +1,63 @@
 # Piper H 单腕抓放示范现场操作
 
-## 11/24 四色采集的现场命令
+## 11/24 最新：连续采集、3°/s 直接自动回零
 
-在 Ubuntu 现场终端设置下列变量。T01、T02 预分配给 train，V01 预分配给 validation。每个布局的照片存入对应会话的 `layouts`，复原时以同一公共起点下的原图和桌面标记为参照。T01 第一组的照片已保存为 `layouts/T01-RB01/rgb/0000000.png`。
+用户反馈 J2 重启后恢复；本次代码尚未现场执行。[最新执行提示词与数据结论](PI_CONTINUOUS_COLLECTION_20261124.md) 优先于下文历史流程。
 
-```bash
+~~~bash
 D=/home/kaiwen/research/pi-single-live/tasks/piper_real_single_v1/pi_demo.sh
 Q=/home/kaiwen/research/pi-q12-data
 S=$Q/pickplace_20261124_T01
-```
 
-T01 已完成 prepare-formal。11/24 17:22 已实测 SDK 独立回零。首个布局更新为 T01-RB01b，红左蓝右。17:34 开始用界内公共起点重教抓蓝；查看现有窗口、source/empty/hold 和最新记录，再接续当前环节。
-
-终端提示确认时输入完整的 `yes` 并回车，大小写均可，其他输入会结束这次操作。正式手拖期间，J5 达到 82° 时终端提示“抬离时少翻腕”（本机上限 89.5°）。保持在提示区间时只提醒一次。
-
-```bash
-# 前一条手拖中断、已回零，准备下一条
-bash "$D" restart-teach "$S" --inside-start
+bash "$D" status
+bash "$D" next-teach "$S"
 bash "$D" teach "$S" T01-RB01b --target-color blue --scene-colors blue red
-```
+~~~
 
-1. 操作者可直接接管 Ubuntu 终端。起点单击实体键，绿灯常亮后停稳，程序自动启动腕图记录并记下 start。在抓蓝位和浅盘释放位各停稳，分别记 C、O。界内公共起点为 J2 +2°、J3 −2°，其余轴为 0°。
-2. 空爪抬离、停稳一秒，在选定终点单击实体键结束示教，撤手、清空回程范围。在灯灭后的终端提示输入 E 并回车，确认最后一组真实的稳定手拖反馈作为任务终点，程序随即独立回零。也可先在绿灯状态记 E；此时按灯灭后的提示输入 YES 并回车，程序即启动回程。若提前结束或没有合格的任务终点，仍可保留未完成源并独立回零。正常结束不需要手拖回起点、按 Z 或另发 home 命令。断线、急停、相机故障不会自行发起回程。
-3. 回程运行单独写入 `*_home`，保留上次保持目标、真实起姿、实际限位、路线、模式反馈、真实提交和最终状态。它保持夹爪当前宽度。只有源通过校验时才继续：移走方块，执行 `anchor-start`，由 SDK 张开空爪并回到该源记录的公共起点，然后做新路径空场和审核。空场运动段 P 回车暂停，确认保持后 R 回车恢复。
+T01 已有正式会话，T01/T02=train、V01=validation。next-teach 从真实零位准备下一组，上一组完成或被拒均适用；公共起点 [0,2,−2,0,0,0]°。第一次接入读一次当前 status，不能把历史回执当当前状态。确认输入 yes，大小写均可。
 
-```bash
+1. 起点单击实体示教键，绿灯常亮后停稳，自动开始原图记录并记 start。只教指定颜色，抓取位 C、固定浅盘释放位 O、空爪抬离并停稳处 E。
+2. 结束示教、灯灭并撤手，按现有提示确认交接后，程序自动直回六轴零位。也可先灯灭，再按终端 E 确认最后真实静止终点。无需 Z、手拖收臂或另发 home。未完成源仍保留原始记录，正常完成交接后可独立回零；故障和中断不自动继续运动。
+3. 正式 teach、empty、block 正常完成均接自动回零。回零最高参考 3°/s，SDK 50% 速度档单独记录，50 ms 插值，短暂起停沿用 8°/s²。不运行回零几何规划、20 mm 高度判据或额外途经点。回程保持夹爪当前开口，独立写 *_home，不作为任务训练动作。
+4. 目标角度仅依控制器本次回读范围；不叠加 SDK 可选表或额外角度余量。J5 历史实际回读为 ±89.5°，抬离无需继续翻腕到边界。实际旧越界样本保留，不改数值凑成功。
+
+源通过后移走任务方块，执行：
+
+~~~bash
 bash "$D" anchor-start "$S"
 bash "$D" empty "$S"
 bash "$D" review "$S"
-```
+~~~
 
-回零在 CAN 接管并确认起姿后使用 SDK 50% 速度档；同步 MOVE_J 参考最高 5°/s、8°/s²，并服从该机实际限速。公共起点准备使用独立的 5% 速度档。
+empty 正常结束已自动回零。审核通过后，按公共起点照片复原同一布局，执行：
 
-单独中止示教后，也可在现场终端用 `bash "$D" home "$S"` 完成一次独立回零。已由真实命令保持在零位时只复核到位。
-
-4. 同源空场通过且桌面已清空，单独执行 `bash "$D" return-start "$S"`。回到起点后按布局照片放回两块、撤手，再运行一次：
-
-```bash
+~~~bash
+bash "$D" anchor-start "$S"
 bash "$D" block "$S" --formal --target-color blue --scene-colors blue red
 bash "$D" review "$S"
-```
+~~~
 
-实物审核记录实际夹起颜色和人工介入。抓空填 `none`，视线遮挡无法判定填 `unknown`。例如指定蓝却抓红且无人介入，可在该条为最近运行时直接执行 `bash "$D" review "$S" --failed 抓错红块 --actual-grasped-color red --intervention no`。这条会保留蓝色指令、实际红色和失败结果。也可将 `"$S"` 换成该次运行的完整目录，避免选错条目。
+block 正常结束已自动回零；审核实际抓取颜色、是否人工介入和成败。同源第二次实物重复用 anchor-start → block → 自动回零 → review，无需重做同源空场。换颜色或位置用 next-teach，再为对应目标真实示教。红目标示例：
 
-5. 每次回程前清空方块，经同源 `return-start` 回到公共起点。第二次蓝色重复可复用同源已通过的空场。复原同布局后改抓红色，需要为红目标实际示教，使用 **同一个** placement：
-
-```bash
+~~~bash
+bash "$D" next-teach "$S"
 bash "$D" teach "$S" T01-RB01b --target-color red --scene-colors blue red
-```
+~~~
 
-对红色新源重复第 2–4 步，实物命令中也指定 `--target-color red`。蓝红交换位置算一个新布局，保存新照片并换 placement。四色布局如 `T01-C401`，每色各一块，逐条使用 `--scene-colors blue red white green`，分别以 `blue`、`red`、`white`、`green` 为唯一目标。每次复原后再教下一个目标。布局变化与轻微朝向变化始终在腕图可辨、机械臂可达的范围内。
+同布局换目标保持同 placement；交换位置后保存新布局照片并换 placement。四色混摆用 --scene-colors blue red white green，每条唯一目标分别选 blue/red/white/green。仅当新源通过后继续相应 empty、block 与审核。只有真实成功 block 进入训练。
 
-启动 T02 或 V01 时，先用 `status` 核对实际近起点与前一会话的保持来源，再运行 `bash "$D" prepare-formal "$新会话" "$当前保持所属会话"`。第二个参数取当时实际持有保持账本的会话。新布局拍照命令为 `bash "$D" scene "$S/layouts/$L"`，其中 `L` 是新布局号，先用 `mkdir -p "$S/layouts"` 建父目录，保留每个已有照片目录。
+启动 T02/V01 仍用各自预分配的 session.json 和 prepare-formal，从当前实际保持所属会话交接。布局图使用 scene 保存，不覆盖已有目录。既有相机和 viewer 复用。
 
 ### 数据冻结与阶段 A
 
-现场审核结束后，用三个真实会话一次冻结全库。导出目录必须是新目录。主库 `attempts.json` 保留实物成功、失败与待审核条目及原始目录。合格成功 episode 的数组、逐行来源和四色指令保存在主库。两模型共用第二条命令生成的蓝红视图，其相对符号链接引用相邻主库。将数据交付到训练机时保持两个目录的相对位置与链接有效。
+现场审核后，使用新的导出目录冻结全四颜色库，再筛蓝红目标。阶段 A 继承全库 split，使用相对链接复用数组。
 
-```bash
+~~~bash
 bash "$D" export "$Q/four_colors_v1" --train "$Q/pickplace_20261124_T01" "$Q/pickplace_20261124_T02" --validation "$Q/pickplace_20261124_V01"
 bash "$D" stage-a "$Q/four_colors_v1" "$Q/blue_red_v1"
-```
+~~~
 
-核对每个 split 的目标颜色、场景、复原对照、位置覆盖和源轨迹，两个模型分别从同一 `blue_red_v1` 的 train 计算 norm。数据合格后在各自 D57 环境填写正式预算，直接启动全参训练；首次编译后的正式日志用于估算剩余时间。[预算与新布局实机验收](PI_COLOR_CONDITIONED_COLLECTION_20261124.md)
+失败/待审核仍留 attempts；两模型分别用蓝红 train 计算 norm，沿用各自环境/基础权重/输出。完整原图、数组、日志留现场。每轮更新唯一 PI_DAILY_WORK_LOG.md。
 
 ## 11/23 A01 联调记录
 

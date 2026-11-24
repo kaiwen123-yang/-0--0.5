@@ -32,7 +32,7 @@ def plan(path, bounds, speed_deg_s, retreat_window=None):
     return plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window)
 
 
-def plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window=None):
+def validate_source(path, teach, marks, bounds, retreat_window=None):
     terminal = teach.get("terminal_kind")
     if terminal is not None:
         require_width(teach)
@@ -79,6 +79,11 @@ def plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window=None):
             raise ValueError("Discontinuity across taught sections")
         boundaries.update((i,j))
 
+    return rows, boundaries
+
+
+def plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window=None):
+    rows, boundaries = validate_source(path, teach, marks, bounds, retreat_window)
     # Split where linear interpolation in recorded time misses any measured joint
     # by more than 0.08 degree. Every source sample participates in this check.
     kept = set(boundaries)
@@ -114,3 +119,4 @@ def plan_samples(path, teach, marks, bounds, speed_deg_s, retreat_window=None):
     if max(gap(p["q"], points[0]["q"]) for p in points) <= .5:
         raise ValueError("No substantive task path")
     return points
+
