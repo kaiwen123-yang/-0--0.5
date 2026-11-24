@@ -611,16 +611,25 @@ def main(argv=None, *, finished_run=None):
         formal = "terminal_kind" in cfg
         if formal:
             require_setup(cfg)
+            if cfg.get("passive_setup"):
+                if not passive:
+                    raise ValueError("此会话设置仅用于 --passive-capture，无六轴保持")
+                if (cfg["bounds_boot_id"] != BOOT
+                        or cfg["bounds_ifindex"] != int(Path("/sys/class/net/can0/ifindex").read_text())):
+                    raise ValueError("被动会话限位来源与当前启动或 CAN 接口不一致")
+                report["bounds_source_file"] = cfg["bounds_source_file"]
             if not passive:
                 previous_hold(strict=True)
+            if not passive or led.is_file():
+                report["initial_hold_run"] = read(led)["run"]
             report.update(gripper_basis=WIDTH, terminal_kind=RETREAT, terminal_version=TERMINAL_VERSION,
-                          split=cfg["split"], initial_hold_run=read(led)["run"], use="formal",
+                          split=cfg["split"], use="formal",
                           collection_mode="kinesthetic_direct_v1",
                           source_trajectory_id=report["run_id"], source_directory=str(run),
                           arm_action_source="future_measured_joint_positions",
                           gripper_action_source="actual_submitted_sdk_width_target",
                           future_offset_ns=50_000_000, bounds=cfg["bounds"],
-                          bounds_run=cfg.get("bounds_run",cfg["prepare_run"]),
+                          bounds_run=cfg["bounds_run"] if "bounds_run" in cfg else cfg["prepare_run"],
                           events=[], gripper_command_feedback=[])
             if manual_gripper:
                 report.update(collection_mode="kinesthetic_manual_gripper_v1",
@@ -633,10 +642,12 @@ def main(argv=None, *, finished_run=None):
                 elif snapshot(dev, rx, grip)["gripper"]["foc_status"]["driver_enable_status"]:
                     raise ValueError("夹爪驱动仍使能，先在任务外完成夹爪释放")
                 # Use the most recent controller limits from the actual hold when available.
-                held_run = read(session / read(led)["run"] / "run.json")
-                if held_run.get("limits"):
-                    report.update(bounds=[item["usable"] for item in held_run["limits"]],
-                                  bounds_run=read(led)["run"])
+                if not cfg.get("passive_setup") and led.is_file():
+                    bounds_path = session / read(led)["run"] / "run.json"
+                    held_run = read(bounds_path)
+                    if held_run.get("limits"):
+                        report.update(bounds=[item["usable"] for item in held_run["limits"]],
+                                      bounds_run=bounds_path.parent.name, bounds_source_file=str(bounds_path))
             report.update(task)
             save(run/"task.json", dict(run_id=report["run_id"], session_id=cfg["session_id"],
                                        placement=a.placement, **task))
@@ -702,11 +713,12 @@ def main(argv=None, *, finished_run=None):
         def still_and_in_bounds(sample):
             _, ns, q = sample
             recent = [(t, pos) for _, t, pos in list(rx.recent_joints) if 0 <= ns-t <= 500_000_000]
-            return (all(lo <= v <= hi for v, (lo, hi) in zip(q, cfg["bounds"], strict=True))
+            return (all(lo <= v <= hi for v, (lo, hi) in zip(q, report["bounds"], strict=True))
                     and recent and ns-recent[0][0] >= 480_000_000
                     and all(gap(pos, q) <= .2 for _, pos in recent))
 
         def wait_for_physical_teach(check=None):
+            start_requested = False
             if passive and a.start_marker:
                 print("已预录。复原布局并回到公共起点，实体示教绿灯常亮、停稳后，S 回车开始任务。",flush=True)
             elif manual_gripper and snapshot(dev,rx,grip)["arm"]["teach_status"] == 1:
@@ -719,13 +731,15 @@ def main(argv=None, *, finished_run=None):
                 st = snapshot(dev,rx,grip)["arm"]
                 if st["arm_status"] not in (0,11) or any(st["err_status"].values()):
                     raise RuntimeError(f"等待示教时出现控制器故障：{st}")
+                if passive and a.start_marker and not start_requested:
+                    start_requested = line() == "s"
+                    if start_requested and st["teach_status"] != 1:
+                        print("S 已收到，等实体示教绿灯常亮。", flush=True)
                 if st["ctrl_mode"] == 2 and st["teach_status"] == 1:
-                    if not (passive and a.start_marker) or line() == "s":
+                    if not (passive and a.start_marker) or start_requested:
                         break
                     time.sleep(.03)
                     continue
-                if passive and a.start_marker:
-                    line()  # Discard input typed outside the physical teaching state.
                 if st["ctrl_mode"] not in (0,1,2) or st["teach_status"] not in (0,2):
                     raise ValueError(f"意外的控制源或示教状态：{st}")
                 time.sleep(.03)

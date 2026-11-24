@@ -20,6 +20,7 @@ from dataset import DIRECT_DATA_KIND, FUTURE_JOINT_SOURCE, GRIP_SOURCES, MANUAL_
 
 
 PERIOD = 50_000_000
+MANUAL_WIDTH_BOUNDS_M = (0., .10)  # Same measured SDK range as released_pose().
 LEGACY_PROMPT = "Pick up the block, place it in the shallow tray, release it, and retreat."
 
 
@@ -136,8 +137,13 @@ def analyse(path):
             raise ValueError("Manual finger demonstration is missing task markers")
         for mark in marks[1:3]:
             sample = grip.at(mark["grip_ns"])
-            if sample["ns"] != mark["grip_ns"] or sample["value"] != mark["width_m"]:
+            matches_width = (sample["value"] == mark["width_m"] or
+                             (math.isnan(sample["value"]) and math.isnan(mark["width_m"])))
+            if sample["ns"] != mark["grip_ns"] or not matches_width:
                 raise ValueError("Manual finger marker disagrees with the recorded width feedback")
+        widths = np.asarray([sample["value"] for sample in grip.rows])
+        low, high = MANUAL_WIDTH_BOUNDS_M
+        bad_width_times = grip.times[~np.isfinite(widths) | (widths < low) | (widths > high)]
         goals, openings, tx_count = None, grip, 0
     else:
         goals, openings, tx_count = submissions(path, require_arm=not direct)
@@ -192,8 +198,15 @@ def analyse(path):
             held_t, hq, hg = t, q, openings.at(t)
             if aq["ns"] <= t or at-aq["ns"] > 100_000_000:
                 excluded.append("no_fresh_future_joint_sample")
-            if manual and ag["ns"] <= t:
-                excluded.append("no_fresh_future_gripper_sample")
+            if manual:
+                if ag["ns"] <= t:
+                    excluded.append("no_fresh_future_gripper_sample")
+                # Include the actual causal state, the future target, and brief
+                # out-of-range samples between them even if both endpoints look valid.
+                left = bad_width_times.searchsorted(g["ns"], side="left")
+                right = bad_width_times.searchsorted(at, side="right")
+                if left < right:
+                    excluded.append("gripper_width_outside_sdk_range")
             if not manual and ag["until"] is not None and ag["until"] <= at:
                 # The interval edge falls inside the next gripper transmission.
                 at = ag["until"] - 1
@@ -272,7 +285,13 @@ def analyse(path):
         example = metrics["representative_association"]
         example["reconstructed_next_target"] = example.pop("submitted_next")
         held_width = example.pop("submitted_hold")[6]
-        if not manual:
+        if manual:
+            metrics["manual_gripper_width_bounds_m"] = list(MANUAL_WIDTH_BOUNDS_M)
+            if not np.isfinite(widths).all():
+                # Nonfinite values remain unchanged in the source and .npy
+                # arrays. Spell them out in the representative JSON diagnostics.
+                metrics = json.loads(json.dumps(metrics), parse_constant=str)
+        else:
             example["submitted_gripper_hold"] = held_width
     return run,times,rows,states,actions,held,metrics
 

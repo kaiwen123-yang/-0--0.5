@@ -1,0 +1,192 @@
+{
+  "session": "pickplace_20261124_T01",
+  "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+  "placement": "T01-RB03",
+  "split": "train",
+  "scene_colors": [
+    "blue",
+    "red"
+  ],
+  "verification": "read-only demo_export.analyse with 0..100 mm SDK width and per-run controller bounds",
+  "policy_hz": 20,
+  "arm_action_source": "future_measured_joint_positions",
+  "gripper_action_source": "future_measured_sdk_width",
+  "episodes": [
+    {
+      "run_id": "b223b5b5-fb17-4566-8473-11218d5f1773",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_195452_269290_teach",
+      "target_color": "blue",
+      "operator_review": {
+        "approved_teach": true,
+        "outcome": "success",
+        "actual_grasped_color": "blue",
+        "intervention": "no",
+        "verdict_source": "operator_success_key"
+      },
+      "duration_s": 35.987041,
+      "source_trajectory_id": "b223b5b5-fb17-4566-8473-11218d5f1773",
+      "marks": [
+        {
+          "event": "start",
+          "t_s": 0,
+          "joint_sample_ns": 202706908674088,
+          "gripper_sample_ns": 202706908721874,
+          "width_mm": 12.9
+        },
+        {
+          "event": "close",
+          "t_s": 14.875854,
+          "joint_sample_ns": 202721784528433,
+          "gripper_sample_ns": 202721784684835,
+          "width_mm": 26.8
+        },
+        {
+          "event": "open",
+          "t_s": 26.901452,
+          "joint_sample_ns": 202733810125590,
+          "gripper_sample_ns": 202733810206485,
+          "width_mm": 33.7
+        },
+        {
+          "event": "end",
+          "t_s": 35.987041,
+          "joint_sample_ns": 202742895715559,
+          "gripper_sample_ns": 202742895783992,
+          "width_mm": 6.2
+        }
+      ],
+      "task_width_mm_range": [
+        -2.9,
+        102.4
+      ],
+      "raw_rgb_count": 1716,
+      "task_rgb_count": 1077,
+      "raw_joint_groups": 12009,
+      "raw_gripper_frames": 12009,
+      "grid_rows": 719,
+      "valid_rows": 626,
+      "excluded_rows": 93,
+      "excluded_rows_by_reason": {
+        "joint_outside_controller_limits": 92,
+        "gripper_width_outside_sdk_range": 3
+      },
+      "usable_chunk_starts": 608,
+      "action_horizon": 10,
+      "can_tx_delta": 0,
+      "rgb_queue_drops": 0,
+      "can_triplet_rejections": 0,
+      "gaps_over_100ms": 0,
+      "final": {
+        "teach_status": 2,
+        "ctrl_mode": 2,
+        "arm_status": 0,
+        "motion_status": 0,
+        "q_deg": [
+          -5.102,
+          100.135,
+          -58.502,
+          3.197,
+          49.835,
+          -6.055
+        ],
+        "driver_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "gripper_width_mm": 6.2
+      }
+    },
+    {
+      "run_id": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+      "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_195553_081843_teach",
+      "target_color": "red",
+      "operator_review": {
+        "approved_teach": true,
+        "outcome": "success",
+        "actual_grasped_color": "red",
+        "intervention": "no",
+        "verdict_source": "operator_success_key"
+      },
+      "duration_s": 33.816879,
+      "source_trajectory_id": "22d253b0-f5f5-41e4-a039-1ec7079687ee",
+      "marks": [
+        {
+          "event": "start",
+          "t_s": 0,
+          "joint_sample_ns": 202774432537997,
+          "gripper_sample_ns": 202774432614387,
+          "width_mm": 6.2
+        },
+        {
+          "event": "close",
+          "t_s": 12.095664,
+          "joint_sample_ns": 202786528202283,
+          "gripper_sample_ns": 202786528270267,
+          "width_mm": 27.5
+        },
+        {
+          "event": "open",
+          "t_s": 19.881046,
+          "joint_sample_ns": 202794313583617,
+          "gripper_sample_ns": 202794313771299,
+          "width_mm": 48
+        },
+        {
+          "event": "end",
+          "t_s": 33.816879,
+          "joint_sample_ns": 202808249417174,
+          "gripper_sample_ns": 202808249465240,
+          "width_mm": 3.6
+        }
+      ],
+      "task_width_mm_range": [
+        -2.3,
+        101.7
+      ],
+      "raw_rgb_count": 1852,
+      "task_rgb_count": 1011,
+      "raw_joint_groups": 13023,
+      "raw_gripper_frames": 13023,
+      "grid_rows": 676,
+      "valid_rows": 600,
+      "excluded_rows": 76,
+      "excluded_rows_by_reason": {
+        "joint_outside_controller_limits": 55,
+        "gripper_width_outside_sdk_range": 21
+      },
+      "usable_chunk_starts": 573,
+      "action_horizon": 10,
+      "can_tx_delta": 0,
+      "rgb_queue_drops": 0,
+      "can_triplet_rejections": 0,
+      "gaps_over_100ms": 0,
+      "final": {
+        "teach_status": 2,
+        "ctrl_mode": 2,
+        "arm_status": 0,
+        "motion_status": 0,
+        "q_deg": [
+          -10.4,
+          100.225,
+          -59.165,
+          10.882,
+          47.09,
+          -19.303
+        ],
+        "driver_enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "gripper_width_mm": 3.6
+      }
+    }
+  ]
+}

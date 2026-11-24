@@ -1,0 +1,205 @@
+{
+  "source_directory": "/home/kaiwen/research/pi-q12-data/pickplace_20261124_T01/20261124_195138_013150_teach",
+  "run_id": "717893f2-9305-47bc-83b6-e70ae35561df",
+  "source_trajectory_id": "717893f2-9305-47bc-83b6-e70ae35561df",
+  "session": "pickplace_20261124_T01",
+  "session_id": "36c24164-eed9-48a4-be43-c48cc0c180ea",
+  "split": "train",
+  "placement": "T01-RB02",
+  "target_color": "red",
+  "scene_colors": [
+    "blue",
+    "red"
+  ],
+  "destination": "fixed_shallow_tray",
+  "boot_id": "31a35341-964f-47c9-a5d9-17d9c4bfe36a",
+  "recorder_started": "2026-11-24T19:51:38.013+08:00",
+  "recorder_ended": "2026-11-24T19:54:31.148+08:00",
+  "operator_review": {
+    "approved_teach": true,
+    "outcome": "success",
+    "actual_grasped_color": "red",
+    "verdict_source": "operator_success_key",
+    "intervention": "no"
+  },
+  "task": {
+    "grid_start_mono_ns": 202564614118188,
+    "grid_end_mono_ns": 202609087305503,
+    "duration_s": 44.473187,
+    "marks": [
+      {
+        "event": "start",
+        "joint_id": 14884,
+        "joint_receive_mono_ns": 202564614118188,
+        "gripper_receive_mono_ns": 202564614194593,
+        "task_offset_s": 0.0,
+        "width_mm": 10.2,
+        "gripper_drive_enabled": true
+      },
+      {
+        "event": "close",
+        "joint_id": 19050,
+        "joint_receive_mono_ns": 202585445596416,
+        "gripper_receive_mono_ns": 202585445677431,
+        "task_offset_s": 20.831478,
+        "width_mm": 27.5,
+        "gripper_drive_enabled": true
+      },
+      {
+        "event": "open",
+        "joint_id": 21821,
+        "joint_receive_mono_ns": 202599301500004,
+        "gripper_receive_mono_ns": 202599301627568,
+        "task_offset_s": 34.687382,
+        "width_mm": 36.0,
+        "gripper_drive_enabled": true
+      },
+      {
+        "event": "end",
+        "joint_id": 23778,
+        "joint_receive_mono_ns": 202609087305503,
+        "gripper_receive_mono_ns": 202609087353068,
+        "task_offset_s": 44.473187,
+        "width_mm": 12.9,
+        "gripper_drive_enabled": true
+      }
+    ]
+  },
+  "collection": {
+    "camera_id": "CC16762023M",
+    "image_slot": "left_wrist_0_rgb",
+    "raw_rgb_frames": 3525,
+    "rgb_frames_in_task_window": 1330,
+    "raw_joint_groups": 34501,
+    "raw_gripper_frames": 34501,
+    "can_tx_delta": 0,
+    "rgb_queue_drops": 0,
+    "rejected_can_triplets": 0
+  },
+  "alignment": {
+    "verification": "read-only demo_export.analyse",
+    "policy_hz": 20,
+    "action_horizon": 10,
+    "arm_action_source": "future_measured_joint_positions",
+    "gripper_action_source": "future_measured_sdk_width",
+    "future_offset_ns": 50000000,
+    "grid_rows": 889,
+    "valid_rows": 719,
+    "excluded_rows_by_reason": {
+      "joint_outside_controller_limits": 168,
+      "gripper_width_outside_sdk_range": 2
+    },
+    "usable_chunk_starts": 701,
+    "gaps_over_100ms": 0,
+    "bounds_run": "20261124_193904_227241_home",
+    "raw_out_of_bounds_by_joint": {
+      "J2": {
+        "count": 1532,
+        "first_task_s": 0.0,
+        "last_task_s": 7.655555,
+        "min_deg": -0.694,
+        "max_deg": -0.138
+      },
+      "J3": {
+        "count": 1466,
+        "first_task_s": 0.0,
+        "last_task_s": 7.345479,
+        "min_deg": 0.07,
+        "max_deg": 0.172
+      },
+      "J5": {
+        "count": 124,
+        "first_task_s": 38.732702,
+        "last_task_s": 39.347719,
+        "min_deg": 89.504,
+        "max_deg": 90.334
+      }
+    },
+    "width_recheck": {
+      "prior_alignment_without_width_mask": {
+        "valid_rows": 721,
+        "excluded_rows_by_reason": {
+          "joint_outside_controller_limits": 168
+        },
+        "usable_chunk_starts": 712
+      },
+      "measured_sdk_width_range_m": [
+        0.0,
+        0.1
+      ],
+      "scope": "raw feedback inside [task start, task end]; each row checks the inclusive interval from causal gripper sample through action time",
+      "task_window_gripper_frames": 8894,
+      "negative_width_samples": 8,
+      "above_0_10_m_samples": 0,
+      "nonfinite_width_samples": 0,
+      "whole_record_negative_width_samples": 8,
+      "min_task_width_mm": -4.0,
+      "max_task_width_mm": 79.8,
+      "invalid_sample_windows": [
+        {
+          "first_task_s": 42.433045,
+          "last_task_s": 42.468104,
+          "samples": 8
+        }
+      ],
+      "width_masked_rows": 2,
+      "excluded_rows_total": 170,
+      "all_excluded_chunk_starts": 188,
+      "additional_excluded_chunk_starts": 11
+    }
+  },
+  "last_snapshot": {
+    "stop": "demonstration_finished",
+    "arm": {
+      "ctrl_mode": 2,
+      "arm_status": 0,
+      "mode_feedback": 1,
+      "teach_status": 2,
+      "motion_status": 0,
+      "trajectory_num": 0,
+      "err_status": {
+        "joint_1_angle_limit": false,
+        "joint_2_angle_limit": false,
+        "joint_3_angle_limit": false,
+        "joint_4_angle_limit": false,
+        "joint_5_angle_limit": false,
+        "joint_6_angle_limit": false,
+        "communication_status_joint_1": false,
+        "communication_status_joint_2": false,
+        "communication_status_joint_3": false,
+        "communication_status_joint_4": false,
+        "communication_status_joint_5": false,
+        "communication_status_joint_6": false
+      }
+    },
+    "q_deg": [
+      -6.294,
+      101.972,
+      -59.202,
+      0.527,
+      46.79,
+      -7.582
+    ],
+    "gripper_width_mm": 12.9,
+    "gripper_driver_enabled": true,
+    "axes_enabled": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "source_files": [
+    "run.json",
+    "review.json",
+    "task.json",
+    "task_end.json",
+    "feedback.csv",
+    "rgb.csv",
+    "rgb_status.json",
+    "tx.csv",
+    "commands.jsonl"
+  ]
+}

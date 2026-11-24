@@ -86,7 +86,8 @@
     "grid_rows": 1105,
     "valid_rows": 1013,
     "excluded_rows_by_reason": {
-      "joint_outside_controller_limits": 92
+      "joint_outside_controller_limits": 92,
+      "gripper_width_outside_sdk_range": 2
     },
     "usable_chunk_starts": 1004,
     "gaps_over_100ms": 0,
@@ -113,6 +114,38 @@
         "min_deg": 89.508,
         "max_deg": 89.886
       }
+    },
+    "width_recheck": {
+      "prior_alignment_without_width_mask": {
+        "valid_rows": 1013,
+        "excluded_rows_by_reason": {
+          "joint_outside_controller_limits": 92
+        },
+        "usable_chunk_starts": 1004
+      },
+      "measured_sdk_width_range_m": [
+        0.0,
+        0.1
+      ],
+      "scope": "raw feedback inside [task start, task end]; each row checks the inclusive interval from causal gripper sample through action time",
+      "task_window_gripper_frames": 11052,
+      "negative_width_samples": 10,
+      "above_0_10_m_samples": 0,
+      "nonfinite_width_samples": 0,
+      "whole_record_negative_width_samples": 10,
+      "min_task_width_mm": -3.9,
+      "max_task_width_mm": 56.1,
+      "invalid_sample_windows": [
+        {
+          "first_task_s": 45.389219,
+          "last_task_s": 45.434195,
+          "samples": 10
+        }
+      ],
+      "width_masked_rows": 2,
+      "excluded_rows_total": 92,
+      "all_excluded_chunk_starts": 101,
+      "additional_excluded_chunk_starts": 0
     }
   },
   "last_snapshot": {
