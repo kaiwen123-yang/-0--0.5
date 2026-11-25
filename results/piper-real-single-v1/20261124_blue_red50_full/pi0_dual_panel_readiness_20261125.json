@@ -1,0 +1,73 @@
+{
+  "archive_verified_at": "2026-11-25T12:22:39.378090+08:00",
+  "archive_files": 135,
+  "archive_bytes": 73874054411,
+  "archive_all_source_sha256_matched": true,
+  "archive_retained_steps": [
+    5000,
+    9999
+  ],
+  "buttons": [
+    "π0 抓取",
+    "π0.5 抓取",
+    "SDK 自动回零"
+  ],
+  "shared_control": "single-view overview, near wrist localization and SDK; direct home",
+  "physical_grasp_in_this_preparation": false,
+  "policies": {
+    "pi0": {
+      "identity": {
+        "model_family": "pi0",
+        "checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi0/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi0_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/9999",
+        "norm_sha256": "3fd6a9ffb8a6c2ac9be9803a5ff1ed0985fd8afe51fd46dfa485d06f9636bfc3",
+        "normalization": "mean_std",
+        "asset_id": "piper_h_wrist_pi0_piper_h_sdk_width_m_v1"
+      },
+      "selected_to_ready_s": 42.681495210999856,
+      "real_wrist_colors": [
+        "blue",
+        "red",
+        "blue",
+        "red"
+      ],
+      "latencies_ms": [
+        338.910911,
+        341.714573,
+        347.601457,
+        342.641373
+      ],
+      "action_shape": [
+        10,
+        7
+      ],
+      "can_tx_delta": 0
+    },
+    "pi05": {
+      "identity": {
+        "model_family": "pi05",
+        "checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/9999",
+        "norm_sha256": "3fd6a9ffb8a6c2ac9be9803a5ff1ed0985fd8afe51fd46dfa485d06f9636bfc3",
+        "normalization": "quantile",
+        "asset_id": "piper_h_wrist_pi05_piper_h_sdk_width_m_v1"
+      },
+      "selected_to_ready_s": 42.782929527020315,
+      "real_wrist_colors": [
+        "blue",
+        "red",
+        "blue",
+        "red"
+      ],
+      "latencies_ms": [
+        388.414152,
+        388.627895,
+        390.491985,
+        390.342958
+      ],
+      "action_shape": [
+        10,
+        7
+      ],
+      "can_tx_delta": 0
+    }
+  }
+}
