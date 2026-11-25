@@ -1,0 +1,55 @@
+{
+  "status": "planned_only",
+  "model_family": "pi05",
+  "initial_checkpoint": "dc1_wrist_blue_red50_full_20261124_v1/9999",
+  "norm_sha256": "3fd6a9ffb8a6c2ac9be9803a5ff1ed0985fd8afe51fd46dfa485d06f9636bfc3",
+  "frozen_local_split_sha256": "6620a26c8e18b3186b1abf9cedb1da0450a2065ae7969fc04bd3646390cec5f1",
+  "eligible_data_now": {
+    "train": "local_episodes.csv:split=train",
+    "validation": "local_episodes.csv:split=validation",
+    "external": []
+  },
+  "initialization": "same 9999 parameters, fresh optimizer and step counter",
+  "updates": 1000,
+  "batch": 8,
+  "seed": 42,
+  "paired_replication_seed": 43,
+  "peak_lr": 0.000002,
+  "decay_lr": 0.000001,
+  "warmup_updates": 100,
+  "schedule": "linear warmup then cosine to final update",
+  "finetuning": "full",
+  "ema": false,
+  "source_sampler": "uniform episode, then uniform valid start with replacement",
+  "comparisons": {
+    "L": {
+      "local": 8
+    },
+    "LA": {
+      "local": 6,
+      "A": 2
+    },
+    "LB": {
+      "local": 6,
+      "stack-bowls": 2
+    }
+  },
+  "external_ready": {
+    "A": false,
+    "stack-bowls": false,
+    "C": false
+  },
+  "evaluation": {
+    "legacy64_per_episode": 64,
+    "all_v01_starts": 5406,
+    "omit_padded_slots_from_new_per_horizon_metrics": true,
+    "bootstrap_unit": "placement",
+    "current_state_hold_baseline": true
+  },
+  "real_robot": {
+    "status": "planned_only",
+    "schedule": "field_schedule.csv",
+    "new_layouts": 6,
+    "trials": 36
+  }
+}

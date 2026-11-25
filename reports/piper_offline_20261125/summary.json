@@ -1,0 +1,143 @@
+{
+  "A": {
+    "episodes": 200,
+    "derived": 200,
+    "raw_rows": 150107,
+    "grid_rows": 100107,
+    "valid_rows": 99907,
+    "starts": 98107,
+    "candidate_episodes": 109,
+    "candidate_starts": 53469,
+    "outcomes": {
+      "complete_visible": 109,
+      "uncertain_terminal": 17,
+      "partial_evidence": 73,
+      "complete_with_setup": 1
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "stack-bowls": {
+    "episodes": 500,
+    "derived": 500,
+    "raw_rows": 129612,
+    "grid_rows": 86277,
+    "valid_rows": 85768,
+    "starts": 81199,
+    "candidate_episodes": 36,
+    "candidate_starts": 6058,
+    "outcomes": {
+      "complete_visible": 36,
+      "uncertain_unreviewed": 460,
+      "uncertain_terminal": 3,
+      "partial_only": 1
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "hang-cup": {
+    "episodes": 500,
+    "derived": 0,
+    "raw_rows": 149372,
+    "grid_rows": 0,
+    "valid_rows": 0,
+    "starts": 0,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {
+      "not_reviewed_for_adaptation": 500
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "fold-towel": {
+    "episodes": 500,
+    "derived": 0,
+    "raw_rows": 213047,
+    "grid_rows": 0,
+    "valid_rows": 0,
+    "starts": 0,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {
+      "not_reviewed_for_adaptation": 500
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "press-button": {
+    "episodes": 500,
+    "derived": 0,
+    "raw_rows": 67955,
+    "grid_rows": 0,
+    "valid_rows": 0,
+    "starts": 0,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {
+      "not_reviewed_for_adaptation": 500
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "C": {
+    "episodes": 120,
+    "derived": 120,
+    "raw_rows": 27903,
+    "grid_rows": 18601,
+    "valid_rows": 18481,
+    "starts": 17401,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {
+      "partial_evidence": 15,
+      "uncertain_unreviewed": 103,
+      "complete_visible": 2
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "D": {
+    "episodes": 125,
+    "derived": 0,
+    "raw_rows": 71702,
+    "grid_rows": 0,
+    "valid_rows": 0,
+    "starts": 0,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {
+      "not_reviewed_for_adaptation": 125
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "E": {
+    "episodes": 5,
+    "derived": 0,
+    "raw_rows": 17315,
+    "grid_rows": 0,
+    "valid_rows": 0,
+    "starts": 0,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {
+      "not_reviewed_for_adaptation": 5
+    },
+    "padded_slots": 0,
+    "local_eligible": 0
+  },
+  "E_community": {
+    "episodes": 0,
+    "derived": 0,
+    "raw_rows": 0,
+    "grid_rows": 0,
+    "valid_rows": 0,
+    "starts": 0,
+    "candidate_episodes": 0,
+    "candidate_starts": 0,
+    "outcomes": {},
+    "padded_slots": 0,
+    "local_eligible": 0
+  }
+}

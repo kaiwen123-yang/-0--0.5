@@ -1,0 +1,15 @@
+{
+  "episodes": 820,
+  "verified_rows": 204156,
+  "verified_windows": 196707,
+  "source_reader_examples": 12,
+  "local_reader_splits": [
+    "train",
+    "validation"
+  ],
+  "transforms": [
+    "SingleCameraInputs(wrist)",
+    "DeltaActions(DELTA_MASK)"
+  ],
+  "model_loaded": false
+}

@@ -1,0 +1,8 @@
+{
+  "version": "future_source_state_v1", "period_ns": 50000000, "horizon": 10, "max_gap_ns": 40000000,
+  "sources": {
+    "A": {"revision":"867554b0b60c78d779e048203acb28e19fab650b","state":"observation.state","action":"action","dims":7,"camera":"observation.images.cam_gripper","clock":"nominal_frame_30hz","local_eligible":false,"reason":"joint sign, zero, scale and gripper-to-H feedback calibration unknown"},
+    "stack-bowls": {"revision":"f81ff5e07c31053b39e64aa621882d6d17705d52","state":"observation.state","action":"action","dims":14,"camera":"observation.images.right_wrist","clock":"real_observation_timestamp_s","local_eligible":false,"reason":"PiPER-X to H joint and gripper calibration absent; working wrist association observational"},
+    "C": {"revision":"8d5ee5d2a44dfe1798489d13c1fc0bdd168be12e","state":"state","action":"actions","dims":7,"camera":"wrist_image","clock":"nominal_frame_30hz","local_eligible":false,"reason":"dataset licence, robot variant, joint zero/sign, width transfer and wrist visibility unresolved"}
+  }
+}
