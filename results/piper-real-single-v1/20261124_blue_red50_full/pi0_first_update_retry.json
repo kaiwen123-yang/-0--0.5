@@ -1,0 +1,67 @@
+{
+  "observed_at": "2026-11-25T09:02:24.809984+08:00",
+  "first_attempt_exit": 1,
+  "error": "jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 16202902744 bytes.",
+  "first_attempt_gpu": [
+    "name, memory.total [MiB], memory.used [MiB], utilization.gpu [%]",
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 56566 MiB, 100 %"
+  ],
+  "first_attempt_processes": [
+    "pid, process_name, used_gpu_memory [MiB]",
+    "605967, /root/autodl-tmp/MCP-RL/work/envs/d57/bin/python, 706 MiB",
+    "605966, /root/autodl-tmp/MCP-RL/work/envs/d57/bin/python, 706 MiB",
+    "587175, python, 54976 MiB"
+  ],
+  "retry_gpu": [
+    "name, memory.total [MiB], memory.used [MiB], utilization.gpu [%]",
+    "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 157 MiB, 0 %"
+  ],
+  "retry_processes": [
+    "pid, process_name, used_gpu_memory [MiB]"
+  ],
+  "normalization": {
+    "gripper_basis": "piper_h_sdk_width_m_v1",
+    "asset_id": "piper_h_wrist_pi0_piper_h_sdk_width_m_v1",
+    "model_family": "pi0",
+    "camera_mount": "wrist",
+    "split": "train",
+    "target_colors": [
+      "blue",
+      "red"
+    ],
+    "normalization": "mean_std",
+    "frozen_split_sha256": "6620a26c8e18b3186b1abf9cedb1da0450a2065ae7969fc04bd3646390cec5f1",
+    "action_horizon": 10,
+    "policy_hz": 20,
+    "status": "PREPARED_FROM_REAL_TRAINING_EPISODES",
+    "norm_sha256": "3fd6a9ffb8a6c2ac9be9803a5ff1ed0985fd8afe51fd46dfa485d06f9636bfc3",
+    "dataset_root": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1",
+    "timestamp_alignment_source": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1/alignment_manifest.json",
+    "frames": 21163,
+    "raw_frames": 26572,
+    "sampling": "valid_action_starts when declared; otherwise all episode rows",
+    "policy_hz_semantics": "nominal aligned dataset/action grid; not measured runtime frequency",
+    "action_delta_mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "heldout_used": false,
+    "norm_directory": "/autodl-fs/data/piper-real-single-v1/outputs/pi0/dc1_wrist_blue_red50_full_20261124_v1/assets/piper_h_wrist_pi0_piper_h_sdk_width_m_v1",
+    "training_started": false
+  },
+  "parameter_counts_first_attempt": {
+    "model_family": "pi0",
+    "total_parameters": 3238048528,
+    "trainable_parameters": 3238048528,
+    "all_parameters_trainable": true,
+    "measurement": "actual initialized training state"
+  },
+  "first_attempt_source": "/root/autodl-tmp/robot-repro/pi-blue50-source-7850136/pi0_before_first_step_0122",
+  "training_spec": "/autodl-fs/data/piper-real-single-v1/outputs/night_specs/dc1_wrist_blue_red50_full_20261124_v1/pi0.json",
+  "checkpoint_count_before_retry": 0
+}

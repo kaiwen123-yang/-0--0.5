@@ -1,5 +1,10 @@
 # π 实机当前状态
 
+<!-- dc1_wrist_blue_red50_full_20261124_v1 pi0_formal_retry -->
+## 11/25 09:02　π0 首次更新显存不足，GPU 空闲后恢复正式训练
+
+11 月 25 日 01:22，π0 在首次梯度更新中申请 15.09 GiB 显存时退出。启动快照显示显卡已用 56,566 MiB。此次尝试尚无完成的训练 step 或 checkpoint。09:01 恢复时已用 157 MiB，GPU 进程表为空。已保留首次日志和退出码，用原实验、原 spec、batch 8、已有的 π0 train-only mean/std 归一化，从基础权重重新执行 10,000 步全参训练。恢复时未调整超参数、重算 norm 或终止其他进程。π0.5 的 10,000 步和 V01 已完成，验证选中的 checkpoint 为 9999。 [首次失败与恢复回执](../results/piper-real-single-v1/20261124_blue_red50_full/pi0_first_update_retry.json) · [π0.5 的 V01 结果](../results/piper-real-single-v1/20261124_blue_red50_full/pi05_summary.json)
+
 <!-- dc1_wrist_blue_red50_full_20261124_v1 pi0_startup_stopped -->
 ## 11/25 01:23　蓝红全参流水线结束，π0 startup 缺少结果
 
