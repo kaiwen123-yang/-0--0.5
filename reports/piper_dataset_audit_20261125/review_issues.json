@@ -1,0 +1,74 @@
+[
+  {
+    "source": "A",
+    "episode": 152,
+    "code": "scene_setup_in_recording",
+    "path": "videos/chunk-000/observation.images.cam_global/episode_000152.mp4",
+    "location": "20–70",
+    "detail": "手入场放置绿块并整理盒内物体，任务开始前的布置进入录像。"
+  },
+  {
+    "source": "A",
+    "episode": 152,
+    "code": "release_unconfirmed",
+    "path": "videos/chunk-000/observation.images.cam_gripper/episode_000152.mp4",
+    "location": "655–750",
+    "detail": "末段夹指和绿块仍在盒口附近，未见清楚的空爪撤离和稳定投放。"
+  },
+  {
+    "source": "stack-bowls",
+    "episode": 260,
+    "code": "stack_not_demonstrated",
+    "path": "videos/chunk-000/observation.images.head/episode_000260.mp4",
+    "location": "0–100",
+    "detail": "开头两碗已套叠，完整视频只见接近和撤离。"
+  },
+  {
+    "source": "fold-towel",
+    "episode": 41,
+    "code": "no_demonstrated_transition",
+    "path": "videos/chunk-000/observation.images.front_view/episode_000041.mp4",
+    "location": "0",
+    "detail": "仅一帧展开的毛巾，无折叠过程。"
+  },
+  {
+    "source": "press-button",
+    "episode": 217,
+    "code": "press_not_demonstrated",
+    "path": "videos/chunk-000/observation.images.head/episode_000217.mp4",
+    "location": "0–13",
+    "detail": "四路全程无按压接触。"
+  },
+  {
+    "source": "D",
+    "episode": 77,
+    "code": "annotation_projection_sentinel",
+    "path": "piper/dataset/piper_aaai_4task/meta/cot/cot_chunk_000.parquet",
+    "location": "episode=77; frame=111..114",
+    "detail": "两项夹爪投影坐标均为负，RGB 和主表仍有对应帧。"
+  },
+  {
+    "source": "E",
+    "episode": "0707_115509",
+    "code": "language_disagreement",
+    "path": "data/agilex/pick_red_yellow_buttons_and_place_in_box/success_episodes/0707_115509/data/trajectory.hdf5",
+    "location": "metadata.language_instruction; camera_front/left/right",
+    "detail": "目录中文要求红色与黄色按钮，HDF 指令指定绿色。原生 JPEG 显示的按钮呈蓝紫/青色，颜色约定尚待查证。"
+  },
+  {
+    "source": "E",
+    "episode": "2024_12_12-10_29_11-173637122753700320.00",
+    "code": "placeholder_language_scale",
+    "path": "data/agilex/place_pomegranate_in_white_plate/success_episodes/2024_12_12-10_29_11-173637122753700320.00/data/trajectory.hdf5",
+    "location": "metadata.language_instruction; puppet/end_effector_right_position_align/data",
+    "detail": "指令为 xxxx，右侧末端位置标量最大约 5.31，不能按已知米制总开口解释。"
+  },
+  {
+    "source": "E",
+    "episode": "0605_150646",
+    "code": "language_color_uncertain",
+    "path": "data/agilex/place_colored_items_on_matching_plates/success_episodes/0605_150646/data/trajectory.hdf5",
+    "location": "metadata.language_instruction; three RGB views",
+    "detail": "任务名匹配彩盘，内嵌指令指定绿色/橙色按钮及绿/黄盘，原生 JPEG 渲染显示的配色不同。"
+  }
+]

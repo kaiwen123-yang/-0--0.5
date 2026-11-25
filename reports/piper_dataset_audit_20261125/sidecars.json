@@ -1,0 +1,596 @@
+[
+ {
+  "source": "A",
+  "path": "meta/episodes.jsonl",
+  "type": "list",
+  "n": 200,
+  "nonfinite": 0
+ },
+ {
+  "source": "A",
+  "path": "meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 200,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 800
+  },
+  "mismatches": []
+ },
+ {
+  "source": "A",
+  "path": "meta/info.json",
+  "type": "dict",
+  "n": 13,
+  "nonfinite": 0
+ },
+ {
+  "source": "A",
+  "path": "meta/tasks.jsonl",
+  "type": "list",
+  "n": 1,
+  "nonfinite": 0
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/episodes.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 2000
+  },
+  "mismatches": []
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/info.json",
+  "type": "dict",
+  "n": 14,
+  "nonfinite": 0
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/modality.json",
+  "type": "dict",
+  "n": 4,
+  "nonfinite": 0
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/stats_gr00t.json",
+  "type": "dict",
+  "n": 15,
+  "nonfinite": 0
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/steps_data_index.pkl",
+  "opcodes": {
+   "PROTO": 1,
+   "FRAME": 19,
+   "EMPTY_DICT": 1,
+   "MEMOIZE": 131133,
+   "MARK": 132,
+   "SHORT_BINUNICODE": 14,
+   "EMPTY_LIST": 1,
+   "STACK_GLOBAL": 2,
+   "NEWFALSE": 2,
+   "NEWTRUE": 1,
+   "TUPLE3": 1,
+   "REDUCE": 501,
+   "BININT1": 121756,
+   "NONE": 3,
+   "BININT": 3,
+   "TUPLE": 1,
+   "BUILD": 1,
+   "SHORT_BINBYTES": 500,
+   "TUPLE2": 130112,
+   "BINGET": 1379,
+   "BININT2": 7859,
+   "LONG_BINGET": 128731,
+   "APPENDS": 130,
+   "SETITEMS": 1,
+   "STOP": 1
+  },
+  "keys": [
+   "config_key",
+   "steps",
+   "num_trajectories",
+   "total_steps",
+   "computed_timestamp",
+   "delete_pause_frame"
+  ],
+  "rows": 129612,
+  "order_or_bounds_issues": 0,
+  "count_mismatch": {}
+ },
+ {
+  "source": "stack-bowls",
+  "path": "meta/tasks.jsonl",
+  "type": "list",
+  "n": 1,
+  "nonfinite": 0
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/episodes.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 2000
+  },
+  "mismatches": []
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/info.json",
+  "type": "dict",
+  "n": 14,
+  "nonfinite": 0
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/modality.json",
+  "type": "dict",
+  "n": 4,
+  "nonfinite": 0
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/stats_gr00t.json",
+  "type": "dict",
+  "n": 15,
+  "nonfinite": 0
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/steps_data_index.pkl",
+  "opcodes": {
+   "PROTO": 1,
+   "FRAME": 21,
+   "EMPTY_DICT": 1,
+   "MEMOIZE": 150893,
+   "MARK": 152,
+   "SHORT_BINUNICODE": 14,
+   "EMPTY_LIST": 1,
+   "STACK_GLOBAL": 2,
+   "NEWFALSE": 2,
+   "NEWTRUE": 1,
+   "TUPLE3": 1,
+   "REDUCE": 501,
+   "BININT1": 125233,
+   "NONE": 3,
+   "BININT": 3,
+   "TUPLE": 1,
+   "BUILD": 1,
+   "SHORT_BINBYTES": 500,
+   "TUPLE2": 149872,
+   "BINGET": 1391,
+   "BININT2": 24142,
+   "LONG_BINGET": 148479,
+   "APPENDS": 150,
+   "SETITEMS": 1,
+   "STOP": 1
+  },
+  "keys": [
+   "config_key",
+   "steps",
+   "num_trajectories",
+   "total_steps",
+   "computed_timestamp",
+   "delete_pause_frame"
+  ],
+  "rows": 149372,
+  "order_or_bounds_issues": 0,
+  "count_mismatch": {}
+ },
+ {
+  "source": "hang-cup",
+  "path": "meta/tasks.jsonl",
+  "type": "list",
+  "n": 1,
+  "nonfinite": 0
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/episodes.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 2000
+  },
+  "mismatches": []
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/info.json",
+  "type": "dict",
+  "n": 14,
+  "nonfinite": 0
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/modality.json",
+  "type": "dict",
+  "n": 4,
+  "nonfinite": 0
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/stats_gr00t.json",
+  "type": "dict",
+  "n": 15,
+  "nonfinite": 0
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/steps_data_index.pkl",
+  "opcodes": {
+   "PROTO": 1,
+   "FRAME": 31,
+   "EMPTY_DICT": 1,
+   "MEMOIZE": 214568,
+   "MARK": 216,
+   "SHORT_BINUNICODE": 14,
+   "EMPTY_LIST": 1,
+   "STACK_GLOBAL": 2,
+   "NEWFALSE": 2,
+   "NEWTRUE": 1,
+   "TUPLE3": 1,
+   "REDUCE": 501,
+   "BININT1": 127747,
+   "NONE": 3,
+   "BININT": 3,
+   "TUPLE": 1,
+   "BUILD": 1,
+   "SHORT_BINBYTES": 500,
+   "TUPLE2": 213547,
+   "BINGET": 1521,
+   "BININT2": 85303,
+   "LONG_BINGET": 212024,
+   "APPENDS": 214,
+   "SETITEMS": 1,
+   "STOP": 1
+  },
+  "keys": [
+   "config_key",
+   "steps",
+   "num_trajectories",
+   "total_steps",
+   "computed_timestamp",
+   "delete_pause_frame"
+  ],
+  "rows": 213047,
+  "order_or_bounds_issues": 0,
+  "count_mismatch": {}
+ },
+ {
+  "source": "fold-towel",
+  "path": "meta/tasks.jsonl",
+  "type": "list",
+  "n": 1,
+  "nonfinite": 0
+ },
+ {
+  "source": "press-button",
+  "path": "meta/episodes.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0
+ },
+ {
+  "source": "press-button",
+  "path": "meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 500,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 2000
+  },
+  "mismatches": []
+ },
+ {
+  "source": "press-button",
+  "path": "meta/info.json",
+  "type": "dict",
+  "n": 14,
+  "nonfinite": 0
+ },
+ {
+  "source": "press-button",
+  "path": "meta/modality.json",
+  "type": "dict",
+  "n": 4,
+  "nonfinite": 0
+ },
+ {
+  "source": "press-button",
+  "path": "meta/stats_gr00t.json",
+  "type": "dict",
+  "n": 15,
+  "nonfinite": 0
+ },
+ {
+  "source": "press-button",
+  "path": "meta/steps_data_index.pkl",
+  "opcodes": {
+   "PROTO": 1,
+   "FRAME": 10,
+   "EMPTY_DICT": 1,
+   "MEMOIZE": 69476,
+   "MARK": 70,
+   "SHORT_BINUNICODE": 14,
+   "EMPTY_LIST": 1,
+   "STACK_GLOBAL": 2,
+   "NEWFALSE": 2,
+   "NEWTRUE": 1,
+   "TUPLE3": 1,
+   "REDUCE": 501,
+   "BININT1": 67957,
+   "NONE": 3,
+   "BININT": 3,
+   "TUPLE": 1,
+   "BUILD": 1,
+   "SHORT_BINBYTES": 500,
+   "TUPLE2": 68455,
+   "BINGET": 1368,
+   "LONG_BINGET": 67085,
+   "APPENDS": 68,
+   "BININT2": 1,
+   "SETITEMS": 1,
+   "STOP": 1
+  },
+  "keys": [
+   "config_key",
+   "steps",
+   "num_trajectories",
+   "total_steps",
+   "computed_timestamp",
+   "delete_pause_frame"
+  ],
+  "rows": 67955,
+  "order_or_bounds_issues": 0,
+  "count_mismatch": {}
+ },
+ {
+  "source": "press-button",
+  "path": "meta/tasks.jsonl",
+  "type": "list",
+  "n": 1,
+  "nonfinite": 0
+ },
+ {
+  "source": "C",
+  "path": "conversion_notes.json",
+  "type": "dict",
+  "n": 15,
+  "nonfinite": 0
+ },
+ {
+  "source": "C",
+  "path": "meta/episodes.jsonl",
+  "type": "list",
+  "n": 120,
+  "nonfinite": 0
+ },
+ {
+  "source": "C",
+  "path": "meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 120,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 480
+  },
+  "mismatches": []
+ },
+ {
+  "source": "C",
+  "path": "meta/info.json",
+  "type": "dict",
+  "n": 13,
+  "nonfinite": 0
+ },
+ {
+  "source": "C",
+  "path": "meta/tasks.jsonl",
+  "type": "list",
+  "n": 12,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/cot/cot_chunk_000.parquet",
+  "n": 71702,
+  "schema": "episode_index: int64\nframe_index: int64\nlong_plan: string\nreason: string\nmovement: string\ngripper_u: double\ngripper_v: double",
+  "nulls": {
+   "episode_index": 0,
+   "frame_index": 0,
+   "long_plan": 0,
+   "reason": 0,
+   "movement": 0,
+   "gripper_u": 0,
+   "gripper_v": 0
+  },
+  "empty_text": {
+   "long_plan": 0,
+   "reason": 0,
+   "movement": 0
+  },
+  "nonfinite": {
+   "gripper_u": 0,
+   "gripper_v": 0
+  },
+  "negative_uv": {
+   "gripper_u": 4,
+   "gripper_v": 4
+  },
+  "duplicate_keys": 0,
+  "episode_mismatch": [],
+  "negative_uv_keys": [
+   [
+    77,
+    111
+   ],
+   [
+    77,
+    112
+   ],
+   [
+    77,
+    113
+   ],
+   [
+    77,
+    114
+   ]
+  ]
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/cot/cot_index.json",
+  "type": "dict",
+  "n": 6,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/episodes.jsonl",
+  "type": "list",
+  "n": 125,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/episodes_stats.jsonl",
+  "type": "list",
+  "n": 125,
+  "nonfinite": 0,
+  "missing_or_extra_episode_ids": [],
+  "comparisons": {
+   "checked": 500
+  },
+  "mismatches": []
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/info.json",
+  "type": "dict",
+  "n": 13,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/modality.json",
+  "type": "dict",
+  "n": 4,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/piper_demo_pools.json",
+  "type": "dict",
+  "n": 3,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/piper_hx_demo_pools.json",
+  "type": "dict",
+  "n": 3,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/stats_gr00t_joint_delta.json",
+  "type": "dict",
+  "n": 3,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/steps_data_index_0f61cb7a7ae4.pkl",
+  "opcodes": {
+   "PROTO": 1,
+   "FRAME": 11,
+   "EMPTY_DICT": 1,
+   "MEMOIZE": 72098,
+   "MARK": 74,
+   "SHORT_BINUNICODE": 14,
+   "EMPTY_LIST": 1,
+   "STACK_GLOBAL": 2,
+   "NEWFALSE": 2,
+   "NEWTRUE": 1,
+   "TUPLE3": 1,
+   "REDUCE": 126,
+   "BININT1": 32003,
+   "NONE": 3,
+   "BININT": 3,
+   "TUPLE": 1,
+   "BUILD": 1,
+   "SHORT_BINBYTES": 125,
+   "TUPLE2": 71827,
+   "BINGET": 672,
+   "BININT2": 39702,
+   "LONG_BINGET": 71153,
+   "APPENDS": 72,
+   "SETITEMS": 1,
+   "STOP": 1
+  },
+  "keys": [
+   "config_key",
+   "steps",
+   "num_trajectories",
+   "total_steps",
+   "computed_timestamp",
+   "delete_pause_frame"
+  ],
+  "rows": 71702,
+  "order_or_bounds_issues": 0,
+  "count_mismatch": {}
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/meta/tasks.jsonl",
+  "type": "list",
+  "n": 4,
+  "nonfinite": 0
+ },
+ {
+  "source": "D",
+  "path": "piper/dataset/piper_aaai_4task/norm_stats.json",
+  "type": "dict",
+  "n": 1,
+  "nonfinite": 0
+ }
+]

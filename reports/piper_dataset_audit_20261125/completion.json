@@ -1,0 +1,248 @@
+{
+ "sources": [
+  {
+   "source": "A",
+   "repo": "DRMNmadhan/piper_pickdrop_200",
+   "sha": "867554b0b60c78d779e048203acb28e19fab650b",
+   "locked_utc": "2026-11-25T02:35:00.193535+00:00",
+   "file_count": 606,
+   "bytes": 1427597997,
+   "episodes": 200,
+   "rows": 150107,
+   "streams": 400,
+   "decoded_images": 300214,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:05.936162+00:00",
+   "last_verify_utc": "2026-11-25T03:21:59.804015+00:00"
+  },
+  {
+   "source": "stack-bowls",
+   "repo": "Ray0v0/cl-piper-single-stack-bowls",
+   "sha": "f81ff5e07c31053b39e64aa621882d6d17705d52",
+   "locked_utc": "2026-11-25T02:35:01.219146+00:00",
+   "file_count": 2509,
+   "bytes": 2504280406,
+   "episodes": 500,
+   "rows": 129612,
+   "streams": 2000,
+   "decoded_images": 518448,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:04.934525+00:00",
+   "last_verify_utc": "2026-11-25T03:22:44.483362+00:00"
+  },
+  {
+   "source": "hang-cup",
+   "repo": "Ray0v0/cl-piper-single-hang-cup",
+   "sha": "f78ac4a1c8ce11355094e617f424c2e91a7d5772",
+   "locked_utc": "2026-11-25T02:35:01.753827+00:00",
+   "file_count": 2508,
+   "bytes": 3045459007,
+   "episodes": 500,
+   "rows": 149372,
+   "streams": 2000,
+   "decoded_images": 597488,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:05.712401+00:00",
+   "last_verify_utc": "2026-11-25T03:23:54.469689+00:00"
+  },
+  {
+   "source": "fold-towel",
+   "repo": "Ray0v0/cl-piper-single-fold-towel",
+   "sha": "311f308e21338ba6b46566b81c5dfb3c7b3f767f",
+   "locked_utc": "2026-11-25T02:35:02.489845+00:00",
+   "file_count": 2508,
+   "bytes": 4661242802,
+   "episodes": 500,
+   "rows": 213047,
+   "streams": 2000,
+   "decoded_images": 852188,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:05.719002+00:00",
+   "last_verify_utc": "2026-11-25T03:22:44.411258+00:00"
+  },
+  {
+   "source": "press-button",
+   "repo": "Ray0v0/cl-piper-single-press-button",
+   "sha": "d4c8c116d0c70f82ca131d4230f4616f9e7890aa",
+   "locked_utc": "2026-11-25T02:35:03.174502+00:00",
+   "file_count": 2508,
+   "bytes": 1170317908,
+   "episodes": 500,
+   "rows": 67955,
+   "streams": 2000,
+   "decoded_images": 271820,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:06.004400+00:00",
+   "last_verify_utc": "2026-11-25T03:22:45.062060+00:00"
+  },
+  {
+   "source": "C",
+   "repo": "tianxiwei/piper-four-color-block-sorting",
+   "sha": "8d5ee5d2a44dfe1798489d13c1fc0bdd168be12e",
+   "locked_utc": "2026-11-25T02:35:03.758902+00:00",
+   "file_count": 367,
+   "bytes": 78169609,
+   "episodes": 120,
+   "rows": 27903,
+   "streams": 240,
+   "decoded_images": 55806,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:07.321057+00:00",
+   "last_verify_utc": "2026-11-25T03:22:45.112872+00:00"
+  },
+  {
+   "source": "D",
+   "repo": "siyuhsu/openpi_lab",
+   "sha": "c2e5619878c2bf2188e6d04d727deee605fdd1e2",
+   "locked_utc": "2026-11-25T02:35:04.118495+00:00",
+   "file_count": 389,
+   "bytes": 305105284,
+   "episodes": 125,
+   "rows": 71702,
+   "streams": 250,
+   "decoded_images": 143404,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T02:35:07.377542+00:00",
+   "last_verify_utc": "2026-11-25T03:22:45.229949+00:00"
+  },
+  {
+   "source": "E",
+   "repo": "X-Humanoid/RoboMIND2.0-Agilex",
+   "sha": "5cb0e3a4fa5cf144f75ec4927c9c1d23ccd5c382",
+   "locked_utc": "2026-11-25T03:03:31.564877+00:00",
+   "file_count": 12,
+   "bytes": 6054642828,
+   "episodes": 5,
+   "rows": 17315,
+   "streams": 30,
+   "decoded_images": 103890,
+   "frame_or_decode_errors": [],
+   "first_verify_utc": "2026-11-25T03:03:31.568231+00:00",
+   "last_verify_utc": "2026-11-25T03:07:07.740594+00:00"
+  }
+ ],
+ "sync": {
+  "A": {
+   "episodes": 200,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 8.900960288826809e-07,
+   "relative_pts_error_per_video_q": [
+    8.900960288826809e-07,
+    8.900960288826809e-07,
+    8.900960288826809e-07,
+    8.900960288826809e-07,
+    8.900960288826809e-07
+   ],
+   "max_timestamp_minus_real_observation_s": null,
+   "wrist_motion_order": {},
+   "exceptions_to_right_greater": []
+  },
+  "stack-bowls": {
+   "episodes": 500,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 5.000000005139782e-07,
+   "relative_pts_error_per_video_q": [
+    4.856719972856638e-07,
+    4.907367515588623e-07,
+    4.987576007753347e-07,
+    4.999694827034773e-07,
+    5.000000005139782e-07
+   ],
+   "max_timestamp_minus_real_observation_s": 4.7680805437266827e-07,
+   "wrist_motion_order": {
+    "right greater": 500
+   },
+   "exceptions_to_right_greater": []
+  },
+  "hang-cup": {
+   "episodes": 500,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 5.000000005139782e-07,
+   "relative_pts_error_per_video_q": [
+    4.862976075159509e-07,
+    4.894076536299252e-07,
+    4.988403319305945e-07,
+    4.999999996257998e-07,
+    5.000000005139782e-07
+   ],
+   "max_timestamp_minus_real_observation_s": 9.492214303463697e-07,
+   "wrist_motion_order": {
+    "right greater": 500
+   },
+   "exceptions_to_right_greater": []
+  },
+  "fold-towel": {
+   "episodes": 500,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 5.000000005139782e-07,
+   "relative_pts_error_per_video_q": [
+    0.0,
+    4.93710326869845e-07,
+    4.991455079261797e-07,
+    5.000000000743299e-07,
+    5.000000005139782e-07
+   ],
+   "max_timestamp_minus_real_observation_s": 9.536452125757933e-07,
+   "wrist_motion_order": {
+    "right greater": 499,
+    "no transition": 1
+   },
+   "exceptions_to_right_greater": [
+    [
+     41,
+     "no transition"
+    ]
+   ]
+  },
+  "press-button": {
+   "episodes": 500,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 5.00000000069889e-07,
+   "relative_pts_error_per_video_q": [
+    4.778137205896371e-07,
+    4.829992675536854e-07,
+    4.974555970482797e-07,
+    4.999695204077614e-07,
+    5.00000000069889e-07
+   ],
+   "max_timestamp_minus_real_observation_s": 2.3838947527110577e-07,
+   "wrist_motion_order": {
+    "right greater": 500
+   },
+   "exceptions_to_right_greater": []
+  },
+  "C": {
+   "episodes": 120,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 4.4504801444134046e-07,
+   "relative_pts_error_per_video_q": [
+    2.2252400722067023e-07,
+    2.2252400722067023e-07,
+    2.2252400722067023e-07,
+    4.4504801444134046e-07,
+    4.4504801444134046e-07
+   ],
+   "max_timestamp_minus_real_observation_s": null,
+   "wrist_motion_order": {},
+   "exceptions_to_right_greater": []
+  },
+  "D": {
+   "episodes": 125,
+   "max_cross_camera_pts_spread_s": 0.0,
+   "max_relative_pts_vs_array_s": 1.7801920577653618e-06,
+   "relative_pts_error_per_video_q": [
+    4.4504801444134046e-07,
+    4.4504801444134046e-07,
+    4.4504801444134046e-07,
+    1.7801920577653618e-06,
+    1.7801920577653618e-06
+   ],
+   "max_timestamp_minus_real_observation_s": null,
+   "wrist_motion_order": {},
+   "exceptions_to_right_greater": []
+  }
+ },
+ "sha256_verified": 11407,
+ "bytes": 19246815841,
+ "episodes": 2450
+}

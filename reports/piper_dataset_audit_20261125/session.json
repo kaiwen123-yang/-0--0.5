@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-25",
+  "timezone": "Asia/Shanghai",
+  "repository": "https://github.com/kaiwen123-yang/-0--0.5",
+  "published_branch": "codex/piper-dataset-audit-20261125",
+  "branch_base": "99183da2bfe77ea48b4475e37df072bee879d714",
+  "field_checkout": {
+    "path": "/home/kaiwen/research/pi-single-live",
+    "head": "79daaacb8d5c23fed97d32f9d69bbba2221dc81c",
+    "status": "main...origin/main [ahead 1] (field's own tracking ref)",
+    "collector_sha256": "2560aca2b6057a1f7c406379b010d24a437c82f562d77f560a8aae3b42e7ce3e",
+    "exporter_sha256": "fa05fd7bf293f3088b1f2e92d01a402d30bf3e152f634261341789d2f24d4bdf",
+    "raw_reference": "/home/kaiwen/research/pi-q12-data",
+    "frozen_reference": "/root/autodl-tmp/robot-repro/piper-real-single-v1/data/blue_red_direct_20261124_50_v1"
+  },
+  "start_resource_snapshot": {
+    "host": "autodl-d57",
+    "data_free_GiB_approx": 74,
+    "shared_fs_free_GiB_approx": 82,
+    "root_free_GiB_approx": 3.9,
+    "cpu_quota_cores": 25,
+    "cgroup_memory_GiB": 120,
+    "existing_activity": [
+      "GPU training",
+      "two other GPU python processes",
+      "data transfer/rsync"
+    ],
+    "gpu_utilization_percent": 100
+  },
+  "audit_root": "/root/autodl-tmp/robot-repro/piper-dataset-audit-20261125",
+  "python": "/root/autodl-tmp/robot-repro/pi0/openpi/.venv/bin/python",
+  "upstream_code": {
+    "RoboNever": "f5a2f5f649947b71c0aa431b750d547e86c1a36f",
+    "ContinualVLA": "d84ed7a811f95218e79ac5f0906465147ad7e1e3",
+    "paper": "arXiv:2605.26820v3 (v1 compared)"
+  },
+  "reviewed_episodes": 67,
+  "exhaustive_visual_camera_sequences_episodes": 13
+}
