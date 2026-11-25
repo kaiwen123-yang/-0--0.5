@@ -702,6 +702,16 @@ D57 入口退出码为 `1`。缺少 `pi0_startup` 的正式回执。下一步检
 
 11 月 25 日 01:22，π0 在首次梯度更新中申请 15.09 GiB 显存时退出。启动快照显示显卡已用 56,566 MiB。此次尝试尚无完成的训练 step 或 checkpoint。09:01 恢复时已用 157 MiB，GPU 进程表为空。已保留首次日志和退出码，用原实验、原 spec、batch 8、已有的 π0 train-only mean/std 归一化，从基础权重重新执行 10,000 步全参训练。恢复时未调整超参数、重算 norm 或终止其他进程。π0.5 的 10,000 步和 V01 已完成，验证选中的 checkpoint 为 9999。 [首次失败与恢复回执](../results/piper-real-single-v1/20261124_blue_red50_full/pi0_first_update_retry.json) · [π0.5 的 V01 结果](../results/piper-real-single-v1/20261124_blue_red50_full/pi05_summary.json)
 
+
+<!-- dc1_wrist_blue_red50_full_20261124_v1 pi0_startup -->
+### 11/25 09:04　π0 蓝红全参训练已进入稳定更新
+
+D57 的 π0 已在 21,163 个训练起点上生成独立归一化。总参数 3,238,048,528，可训练 3,238,048,528，`all_parameters_trainable=true`。首条更新为 `Step 0: grad_norm=2.8832, loss=0.0862, param_norm=1377.8652`。北京时间 09:02:56 至 09:04:08，完成计数从 35 到 142，实测 1.494 step/s。按此训练速度外推到 11/25 10:54；检查点写盘和后续验证会影响实际时间。
+
+40 条训练、10 条 V01，训练/验证有效起点 21,163/5,406。六轴及 SDK 夹爪宽度均取未来 50 ms 实测值。每个模型全参 10,000 步，batch 8、warmup 500、峰值学习率 1e-5、keep_period 5,000。π0.5 的 V01 已完成，下一项为 π0 的 V01。
+
+实验 `dc1_wrist_blue_red50_full_20261124_v1`，训练 tmux `pi-blue-red50-full-20261124`，代码基线 `7850136`。D57 原源码目录保留现场修改，本次训练使用独立源码目录。启动时本地数据盘余 81 GiB、私有挂载余 178 GiB，完整结果保存在 D57；默认 outputs 下有同名入口。本次仅使用记录数据。[π0 训练回执](../results/piper-real-single-v1/20261124_blue_red50_full/pi0_startup.json)
+
 ## 固定证据索引
 
 后续新增日期正文放在本索引之前，按时间递增。本节链接是历史证据，保留固定版本。
