@@ -1,0 +1,93 @@
+{
+  "source_commit": "158c1e163374046d75fc4f4289c94779cbf43653",
+  "source_receipt": "results/piper-real-single-v1/20261124_blue_red50_full/pi05_blue_sdk_field_20261125.json",
+  "source_state": "docs/PI_REAL_TEST_STATE.md",
+  "source_daily_log": "docs/PI_DAILY_WORK_LOG.md",
+  "review_method": "Read-only review of committed field receipt and matching state/daily-log paragraphs. No new inference, hardware access or full-video review.",
+  "field_event_beijing": "2026-11-25 09:58",
+  "platform": "kaiwen-Legion-Y9000P-IAH7H",
+  "hardware": "RTX 3060 Laptop 6144 MiB; Piper H; wrist DC1 CC16762023M",
+  "source_checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/9999",
+  "deployment_evidence": {
+    "original_orbax_checkpoint_inference_recorded": true,
+    "runtime_as_reported": "Orbax/JAX unified memory, restore_concurrent_gb=3",
+    "onnx_required_for_this_observed_run": false,
+    "all_weights_resident_in_gpu_proven": false,
+    "peak_vram_mib": null,
+    "peak_host_ram_mib": null,
+    "swap_usage_mib": null,
+    "local_checkpoint_path_recorded": false,
+    "complete_runtime_launch_recipe_recorded": false,
+    "interpretation": "The previous 6.246 GiB ideal FP16/BF16 weight-size bound still rules out fitting all dense parameters and runtime in 6 GiB VRAM, but does not rule out execution via unified/host memory. This field record provides evidence of local execution."
+  },
+  "latency_evidence": {
+    "narrative_typical_seconds": [
+      0.4,
+      0.5
+    ],
+    "source": "PI_REAL_TEST_STATE.md and PI_DAILY_WORK_LOG.md matching 09:58 paragraph; not a numeric latency field in the JSON receipt.",
+    "sample_count": null,
+    "measurement_scope": null,
+    "warmup_excluded": null,
+    "p50_seconds": null,
+    "p95_seconds": null,
+    "max_seconds": null,
+    "measured_end_to_end_control_rate_hz": null,
+    "interpretation": "May report typical inference described as 0.4–0.5 s, not claim measured P50/P95, stable 2–2.5 Hz end-to-end, or 20 Hz model inference."
+  },
+  "policy_guided_phase": {
+    "policy_updates": 81,
+    "sdk_arm_submissions": 1522,
+    "sdk_gripper_submissions": 69,
+    "requested_speed_deg_s": 5,
+    "maximum_displacement_per_model_update_deg": 2.5,
+    "measured_width_after_approach_m": 0.0269,
+    "limits_scope": "Recorded settings for this actual field attempt; not official hardware limits and not automatic requirements for future trials."
+  },
+  "sdk_assisted_phase": {
+    "closure_target_m": 0.015,
+    "closure_force_setting_n": 1,
+    "jaw_width_after_grasp_m": 0.024399999999999998,
+    "jaw_force_feedback_after_grasp_n_raw": -1.046,
+    "measured_lift_delta_m": [
+      0.00006471817282643899,
+      0.000008835469184328981,
+      0.054430174753232946
+    ],
+    "horizontal_planned_m": [
+      0.07995281497571899,
+      -0.0651724445333422
+    ],
+    "outcome_as_reported": "blue block lifted, transported, released inside tray, empty gripper retreated",
+    "interpretation": "Active SDK closure/lift/transfer/release worked in this assisted episode; width feedback differs from commanded close target. This validates one assisted grasp, not learned autonomous gripper commands over the full training 0–100 mm width distribution. Negative force feedback is preserved as reported, not reinterpreted as calibrated contact force."
+  },
+  "autonomy": {
+    "complete_sequence_autonomous": false,
+    "model_only_success_rate": null,
+    "language_color_selection_success_rate": null,
+    "new_layout_generalization_success_rate": null,
+    "classification": "policy-guided approach with SDK-assisted grasp/transport/release/retreat",
+    "earlier_short_attempts": "State/daily-log paragraph records two earlier stops due to image change and waiting for arrived status; no enough detail to reconstruct denominators or autonomous success rates."
+  },
+  "end_state_as_recorded": {
+    "end_q_rad": [
+      -0.014974924982111348,
+      2.2583164257405026,
+      -2.091131336691966,
+      0.09220574438286043,
+      1.1616213369573458,
+      -0.1522276173589454
+    ],
+    "end_width_m": 0.0395,
+    "end_arm_status": 0,
+    "end_motion_status": 0,
+    "not_current_live_reading": true
+  },
+  "plan_implications": [
+    "Reuse the already successful local original-checkpoint runtime as the first deployment baseline.",
+    "Capture the actual existing local checkpoint path, runtime/environment recipe and current processes before extending it; do not invent equivalent launch flags.",
+    "Measure latency distribution and memory during the next real local task, retaining original raw timestamps.",
+    "Distinguish learned-policy-only runs from SDK-assisted completions in saved trial metadata and reported results.",
+    "ONNX/TensorRT/quantization remains an optional optimization compared against this observed original runtime; it is no longer a prerequisite for first local inference."
+  ]
+}

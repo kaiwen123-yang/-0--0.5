@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "researched_at_utc": "2026-11-25",
+  "scope": "Read-only primary-source review of pi0.5 deployment, ONNX/TensorRT, mixed INT4 and JAX unified memory. No GPU execution, environment installation or robot action was performed by this research task.",
+  "project_evidence_update": {
+    "repository": "kaiwen123-yang/-0--0.5",
+    "latest_commit_reported_by_lead_agent": "158c1e163374046d75fc4f4289c94779cbf43653",
+    "receipt_summary": "Lead agent verified a new receipt reporting original checkpoint 9999 running on RTX 3060 Laptop GPU 6 GiB with runtime='Orbax/JAX unified memory, restore_concurrent_gb=3'; log describes typical inference around 0.4-0.5 s.",
+    "evidence_boundary": "This research task did not independently execute or profile that run. Treat the receipt as project evidence, not a general benchmark or proof of physical all-GPU residency.",
+    "revised_recommendation": "Preserve the already successful local JAX unified-memory path for the first real test. ONNX and mixed INT4 are optional optimization branches; remote OpenPI serving remains an available fallback rather than a prerequisite.",
+    "supersedes": "The earlier recommendation to use remote inference first was made before the new local-success receipt became available."
+  },
+  "model_contract": {
+    "parameter_count": 3353433872,
+    "active_camera": "left_wrist_0_rgb",
+    "state_dim": 7,
+    "model_action_dim": 32,
+    "action_horizon": 10,
+    "output_action_dim": 7,
+    "pi05": true,
+    "discrete_state_input": true,
+    "preprocessing": "Preserve project RGB resize/padding and pixel convention, prompt/state tokenization, and original train-set quantile normalization.",
+    "postprocessing": "Restore six arm-joint deltas to absolute targets exactly once using the observation state; keep the gripper action absolute. Generic third-party unnormalization/slicing is not a replacement.",
+    "timing": "A 20 Hz data grid and ten predicted steps imply a nominal 0.5 s action horizon; they do not establish 20 Hz policy replanning or actual closed-loop latency."
+  },
+  "weight_storage_arithmetic": {
+    "definition": "N * bits / 8, ideal weight storage only; excludes mixed-precision exceptions, scales/zero-points, activations, KV cache, temporary buffers and backend workspace.",
+    "fp32_gib": 12.492514669895172,
+    "fp16_or_bf16_gib": 6.246257334947586,
+    "int8_gib": 3.123128667473793,
+    "int4_gib": 1.5615643337368965,
+    "interpretation": "6.246 GiB excludes a simple all-weights-resident 16-bit allocation within 6 GiB, but does not exclude unified-memory oversubscription, CPU offload, streaming or component residency. ONNX serialization alone does not provide quantization or offload. Mixed INT4 runtime memory cannot be inferred from the all-INT4 ideal."
+  },
+  "jax_unified_memory": {
+    "current_source_commit": "dc51a54e50eca1a6e290d6aa6a89fdc123aeb941",
+    "actual_installed_version": "Must be taken from the successful field environment; current upstream source is explanatory evidence and is not proof of the installed build.",
+    "findings": [
+      "OpenXLA's GPU BFC allocator reads TF_FORCE_UNIFIED_MEMORY and selects MemorySpace::kUnified when enabled.",
+      "In the inspected source, the unified-memory allocator budget is total physical device memory multiplied by max(1.0, start_fraction); the code explicitly permits memory_fraction > 1 for oversubscription.",
+      "On supported CUDA systems, managed allocations may exceed physical GPU memory and migrate between host and device. A larger virtual allocation therefore does not imply all weights reside in VRAM simultaneously.",
+      "Disabling JAX preallocation alone does not enable host spill. The allocation mode, unified-memory flag and memory-fraction settings have distinct roles.",
+      "The latest JAX docs use XLA_CLIENT_MEM_FRACTION and describe XLA_PYTHON_CLIENT_MEM_FRACTION as a deprecated alias. Capture whichever variables the installed successful environment actually uses; do not replace working settings with upstream defaults.",
+      "Do not infer the field run's exact page residency, host-memory cost, migration pattern or speed penalty from the receipt label alone."
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/openxla/xla/blob/dc51a54e50eca1a6e290d6aa6a89fdc123aeb941/xla/pjrt/gpu/gpu_helpers.cc",
+        "anchors": [
+          "CreateBFCAllocator",
+          "TF_FORCE_UNIFIED_MEMORY",
+          "MemorySpace::kUnified",
+          "allocator_memory"
+        ]
+      },
+      {
+        "url": "https://docs.jax.dev/en/latest/201/gpu-memory.html",
+        "purpose": "Preallocation, memory-fraction and allocator meanings; version-sensitive defaults."
+      },
+      {
+        "url": "https://docs.nvidia.com/cuda/archive/13.2.0/cuda-programming-guide/02-basics/understanding-memory.html",
+        "purpose": "Managed-memory migration and oversubscription; support depends on platform and device capabilities."
+      },
+      {
+        "url": "https://github.com/google-deepmind/alphafold3/blob/main/docs/performance.md",
+        "purpose": "Official JAX application example of unified memory using TF_FORCE_UNIFIED_MEMORY, preallocation=false and memory fraction > 1. This is not a pi0.5-specific recommended parameter set."
+      }
+    ]
+  },
+  "orbax_restore": {
+    "current_source_commit": "2c821e89e3566e26312fab1b8c0950cb235a2349",
+    "meaning": "restore_concurrent_gb limits how many checkpoint bytes may be restored concurrently. It reduces concurrent restore pressure; it is not final-model memory, a runtime VRAM cap, compression, or a change in policy precision.",
+    "units_in_inspected_source": "_concurrent_bytes multiplies the setting by 10**9; 3 means 3,000,000,000 bytes, not 3 GiB.",
+    "implementation": "PyTreeCheckpointHandler converts the setting to bytes and passes it to BasePyTreeCheckpointHandler; the latter creates a shared byte limiter for deserialization.",
+    "cautions": "The process must still hold restored model arrays and other buffers; total RAM/VRAM can exceed the configured concurrent restore amount. Confirm the installed Orbax version and actual handler invocation.",
+    "sources": [
+      {
+        "url": "https://orbax.readthedocs.io/en/stable/api_reference/checkpoint.handlers.html",
+        "anchors": [
+          "PyTreeCheckpointHandler",
+          "restore_concurrent_gb"
+        ]
+      },
+      {
+        "url": "https://github.com/google/orbax/blob/2c821e89e3566e26312fab1b8c0950cb235a2349/checkpoint/orbax/checkpoint/_src/handlers/pytree_checkpoint_handler.py",
+        "anchors": [
+          "_concurrent_bytes",
+          "PyTreeCheckpointHandler.__init__"
+        ]
+      },
+      {
+        "url": "https://github.com/google/orbax/blob/2c821e89e3566e26312fab1b8c0950cb235a2349/checkpoint/orbax/checkpoint/_src/handlers/base_pytree_checkpoint_handler.py",
+        "anchors": [
+          "_restore_concurrent_bytes",
+          "_maybe_deserialize",
+          "limits.get_byte_limiter"
+        ]
+      }
+    ]
+  },
+  "field_receipt_to_preserve": {
+    "purpose": "Collect these facts during the existing actual inference/control task and retain the successful launch recipe; no separate capacity-test project is implied.",
+    "launch": [
+      "Exact command, working directory, environment entry point and checkpoint 9999 path/hash.",
+      "Only relevant environment variables: TF_FORCE_UNIFIED_MEMORY, XLA_PYTHON_CLIENT_PREALLOCATE, XLA_CLIENT_MEM_FRACTION, XLA_PYTHON_CLIENT_MEM_FRACTION, XLA_PYTHON_CLIENT_ALLOCATOR, TF_GPU_ALLOCATOR, XLA_FLAGS, CUDA_VISIBLE_DEVICES, JAX_PLATFORMS and compilation-cache settings. Preserve unset versus set values; do not dump unrelated secrets.",
+      "Actual restore_concurrent_gb setting and source change or constructor call that applies it.",
+      "Python, jax, jaxlib, CUDA plugin/PJRT and orbax-checkpoint versions; CUDA driver, OS/kernel, exact GPU name and memory total.",
+      "Runtime JAX device/backend, model config, inference denoising steps, loaded dtype distribution, original norm/assets hashes and input preprocessing."
+    ],
+    "memory": [
+      "Available system RAM and swap before launch; process RSS/high-water mark and system available RAM during restore, first compile/warmup and ongoing inference.",
+      "GPU memory used/peak during those same phases, including display and other-process usage.",
+      "Loaded array byte accounting and dtype distribution may describe virtual logical storage, not physical CUDA-managed page residency.",
+      "If exact spill behavior is claimed later, retain an actual relevant trace; do not infer it from nvidia-smi alone."
+    ],
+    "latency": [
+      "Keep cold restore/compile separate from warmed inference; retain sample count, median/P95/max and input shape.",
+      "A JAX call can return before device work finishes. Time through block_until_ready or host materialization of the action array; service response timing may already synchronize but must be verified from the actual code.",
+      "For the robot, retain observation capture/receive time, policy completion, target dispatch and execution timing. Distinguish policy duration from complete observation-to-action age.",
+      "The reported typical 0.4-0.5 s is not yet a P95, a worst-case guarantee, a 20 Hz policy rate or proof of full task success."
+    ],
+    "timing_source": "https://docs.jax.dev/en/latest/async_dispatch.html"
+  },
+  "openpi": {
+    "commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "findings": [
+      "Official README reference inference requirement is >8 GB; this is a documented reference requirement rather than an impossibility theorem for every offload configuration.",
+      "Official PyTorch support and JAX-to-PyTorch conversion are available; remote WebSocket serving is documented.",
+      "The inspected converter advertises float16 in its type annotation but its dtype branch only accepts float32 and bfloat16. Do not prescribe --precision float16 with this commit.",
+      "Use the project's actual model config and assets rather than a stock DROID config."
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/README.md"
+      },
+      {
+        "url": "https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/docs/remote_inference.md"
+      },
+      {
+        "url": "https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/examples/convert_jax_model_to_pytorch.py"
+      }
+    ]
+  },
+  "phyai_mixed_int4": {
+    "repository": "mingti-org/phyai",
+    "commit": "bcb6bc312b52cc12ba5fa64201d5a36409e4616c",
+    "evidence_level": "Original implementation and presets inspected; no RTX 3060 Laptop 6 GiB run or this custom checkpoint evaluation was established.",
+    "findings": [
+      "The Humming W4A16 preset targets NVIDIA SM80+ and applies load-time symmetric RTN INT4 weight quantization with block shape [1,128] to language/action-expert attention and MLP linear projections.",
+      "Vision, token embeddings, action/time heads and norms remain at higher precision. Activations remain BF16/FP16. This is mixed precision, not an all-weights INT4 model.",
+      "PI05Config defaults chunk_size to 50 and discards unknown configuration keys. Blindly reading OpenPI's action_horizon=10 does not set chunk_size=10; map this explicitly.",
+      "The processor's output path unnormalizes, slices actions and moves to CPU. It does not implement this project's six-joint AbsoluteActions restoration.",
+      "Without the correct dataset statistics, generic normalization may be identity. Preserve this project's own quantiles, state-tokenization and pixel convention.",
+      "The example script can use random observations; that does not validate the trained Piper policy.",
+      "Explicit noise is supported by the request path, permitting reproducible action comparison on the real held-out observations."
+    ],
+    "next_use": "Only if optimizing beyond the successful local JAX baseline: convert the actual checkpoint, adapt the exact model/pre/postprocessing contract, compare fixed-noise actions on existing V01 observations, then measure real 3060 memory/latency. No promised fit, FPS or task success.",
+    "sources": [
+      {
+        "url": "https://github.com/mingti-org/phyai/blob/bcb6bc312b52cc12ba5fa64201d5a36409e4616c/examples/pi05/kernel_policies/humming_w4a16.yaml"
+      },
+      {
+        "url": "https://github.com/mingti-org/phyai/blob/bcb6bc312b52cc12ba5fa64201d5a36409e4616c/phyai/src/phyai/models/pi05/configuration_pi05.py"
+      },
+      {
+        "url": "https://github.com/mingti-org/phyai/blob/bcb6bc312b52cc12ba5fa64201d5a36409e4616c/phyai/src/phyai/models/pi05/main_pi05.py"
+      },
+      {
+        "url": "https://github.com/mingti-org/phyai/blob/bcb6bc312b52cc12ba5fa64201d5a36409e4616c/phyai-utils-tools/src/phyai_utils_tools/models/pi05/processor_pi05.py"
+      },
+      {
+        "url": "https://github.com/mingti-org/phyai/blob/bcb6bc312b52cc12ba5fa64201d5a36409e4616c/phyai/src/phyai/models/pi05/scheduler_pi05.py"
+      },
+      {
+        "url": "https://github.com/mingti-org/phyai/blob/bcb6bc312b52cc12ba5fa64201d5a36409e4616c/examples/pi05/run_pi05.py"
+      }
+    ]
+  },
+  "nvidia_tensorrt_edge_llm": {
+    "version": "0.12.0",
+    "commit": "513dcd18291e587c80928911a480761352f3c2d8",
+    "evidence_level": "Official experimental export/runtime source inspected; no benchmark for this custom single-wrist Piper checkpoint on RTX 3060 6 GiB was established.",
+    "findings": [
+      "Official experimental pi0.5 export splits visual, prefix, action and cond ONNX components from a converted PyTorch checkpoint; documented examples are FP16.",
+      "Supported policy contracts are pi05_libero (state8/action7/horizon10/two cameras), pi05_droid (state8/action8/horizon15/two cameras) and pi05_aloha (state14/action14/horizon50/high camera with optional wrist cameras). None is this project's state7/single-wrist contract.",
+      "Matching LIBERO horizon10/action7 is insufficient: this project uses discrete_state_input=True and its own Piper normalization and delta-to-absolute contract.",
+      "The token embedding sidecar is not a CPU-resident lookup in the inspected runtime: loadTokenEmbeddings calls loadSafetensors without a device override; its default device is GPU; runtime embeddingLookup is a GPU kernel.",
+      "Separating the embedding file from ONNX does not remove its GPU memory. Explicit CPU offload would be an additional implementation.",
+      "The support matrix includes x86 Linux developer targets and SM86-capable builds, but does not establish model fit or speed on a 6 GiB 3060."
+    ],
+    "sources": [
+      {
+        "url": "https://nvidia.github.io/TensorRT-Edge-LLM/0.12.0/user_guide/examples/vla/pi05.html"
+      },
+      {
+        "url": "https://nvidia.github.io/TensorRT-Edge-LLM/0.12.0/user_guide/getting_started/support-matrix.html"
+      },
+      {
+        "url": "https://github.com/NVIDIA/TensorRT-Edge-LLM/blob/513dcd18291e587c80928911a480761352f3c2d8/experimental_models/pi05/cpp/runtime/pi05Runtime.cpp",
+        "anchors": [
+          "loadTokenEmbeddings",
+          "kernel::embeddingLookup"
+        ]
+      },
+      {
+        "url": "https://github.com/NVIDIA/TensorRT-Edge-LLM/blob/513dcd18291e587c80928911a480761352f3c2d8/cpp/common/safetensorsUtils.h",
+        "anchors": [
+          "loadSafetensors",
+          "DeviceType::kGPU"
+        ]
+      },
+      {
+        "url": "https://github.com/NVIDIA/TensorRT-Edge-LLM/blob/513dcd18291e587c80928911a480761352f3c2d8/cpp/common/safetensorsUtils.cpp"
+      },
+      {
+        "url": "https://github.com/NVIDIA/TensorRT-Edge-LLM/blob/513dcd18291e587c80928911a480761352f3c2d8/docs/source/developer_guide/models/pi05.md"
+      }
+    ]
+  },
+  "quantization_notes": {
+    "findings": [
+      "RTX 3060 is Ampere SM86. Hardware/backend support must be assessed by precision and operator; Blackwell FP4/FP8 results are not evidence for 3060.",
+      "ONNX is a graph/weight exchange format; ONNX Runtime CUDA, TensorRT and third-party W4A16 kernels are distinct backends.",
+      "A W4A16 RTN weight-only preset need not consume activation calibration data. Other PTQ methods may require representative observations; existing training episodes can supply them while V01 stays held out.",
+      "Quantization calibration is unrelated to camera or hand-eye calibration and does not imply retraining the full policy or recapturing the entire dataset."
+    ],
+    "sources": [
+      {
+        "url": "https://docs.nvidia.com/cuda/cuda-programming-guide/05-appendices/compute-capabilities.html"
+      },
+      {
+        "url": "https://onnxruntime.ai/docs/performance/quantization"
+      },
+      {
+        "url": "https://docs.nvidia.com/deeplearning/tensorrt/latest/inference-library/capabilities.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "status": "PLAN_UPDATED_AFTER_REPORTED_LOCAL_JAX_AND_ASSISTED_FIELD_RUN",
+  "authored_date_beijing": "2026-11-25",
+  "source_commit": "158c1e163374046d75fc4f4289c94779cbf43653",
+  "user_platform": {
+    "hostname": "kaiwen-Legion-Y9000P-IAH7H",
+    "gpu": "RTX 3060 Laptop",
+    "vram_reported_MiB": 6144,
+    "os": null,
+    "driver": null,
+    "host_ram_GB": null,
+    "observed_live_by_this_review": false
+  },
+  "model": {
+    "family": "pi05",
+    "checkpoint": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/checkpoints/pi05_piper_real_single_full/dc1_wrist_blue_red50_full_20261124_v1/9999",
+    "comparison_step": 5000,
+    "run_spec": "/autodl-fs/data/piper-real-single-v1/outputs/pi05/dc1_wrist_blue_red50_full_20261124_v1/run_spec.json",
+    "asset_id": "piper_h_wrist_pi05_piper_h_sdk_width_m_v1",
+    "parameter_count": 3353433872,
+    "discrete_state_input": true,
+    "action_dim_internal": 32,
+    "action_horizon": 10,
+    "flow_sampling_steps": 10,
+    "policy_grid_hz": 20,
+    "measured_inference_hz": null
+  },
+  "io": {
+    "camera_serial": "CC16762023M",
+    "camera_mount": "wrist",
+    "active_image_slot": "left_wrist_0_rgb",
+    "rgb_topic": "/wrist_camera/color/image_raw",
+    "image": "uint8 RGB HWC, received processing chain",
+    "state": "six measured joint radians plus measured SDK width metres",
+    "output": "10x7 absolute joint radians plus SDK width metres, unnormalized and absolute restored once",
+    "gripper_basis": "piper_h_sdk_width_m_v1"
+  },
+  "primary_route": {
+    "model_host": "existing RTX3060 second platform",
+    "model_backend": "reuse actual successful Orbax/JAX unified memory runtime",
+    "next_work": "retrieve and preserve existing field code/command/config, then complete full-policy grasp/place",
+    "on_site_inference_reported": true,
+    "on_site_assisted_grasp_reported": true,
+    "full_policy_success_reported": false,
+    "remote_original_model": "fallback only, subject to actual available host resources"
+  },
+  "first_control": {
+    "mode": "reuse existing continuous SDK follower after reading actual implementation and timing",
+    "chunk_consumption": "derive from existing run evidence; no compulsory new two-step limit",
+    "reported_prior_speed_deg_s": 5,
+    "reported_prior_increment_deg": 2.5,
+    "prior_settings_are_official_limits": false,
+    "sender_lock": "/tmp/dog_and_arm_piper_motion.lock",
+    "hardware_actions_performed_this_review": 0,
+    "normal_pause": "existing verified powered hold, independent of model worker",
+    "stale_policy": "no backlog of obsolete chunks"
+  },
+  "gripper": {
+    "status": "ONE_SDK_ASSISTED_ACTIVE_GRASP_REPORTED_POLICY_CONTRACT_TO_RECONCILE",
+    "known_published_sender_range_mm": [
+      15,
+      40
+    ],
+    "known_published_force_upper_N": 1,
+    "reported_assisted_close_m": 0.015,
+    "reported_assisted_force_setting_N": 1,
+    "measured_width_after_grasp_m": 0.0244,
+    "reported_force_feedback_N": -1.046,
+    "force_feedback_interpretation": "retain sign; no calibrated contact force claim",
+    "deployment_range_mm": null,
+    "required_change": "inspect actual field implementation and model-to-SDK mapping; resolve old setup binding only if still present, use official SDK contract and existing grasp evidence"
+  },
+  "first_episode_budget": {
+    "familiar_layouts": 2,
+    "new_layouts": 3,
+    "targets_per_layout": [
+      "blue",
+      "red"
+    ],
+    "attempts": 10,
+    "scope": "diagnostic initial model trials; not a success guarantee"
+  },
+  "local_optimization": {
+    "status": "NOT_RUN",
+    "preferred_research_path": "correct JAX-to-PyTorch conversion then mixed W4A16, optional ONNX/TensorRT backend",
+    "ideal_all_params_fp16_GiB": 6.246257334947586,
+    "ideal_all_params_int8_GiB": 3.123128667473793,
+    "ideal_all_params_int4_GiB": 1.5615643337368965,
+    "storage_scope": "only parameter storage; not measured peak VRAM",
+    "onnx_exported": false,
+    "quantized": false,
+    "target_gpu_measured": false,
+    "nvidia_reference": "NVIDIA/TensorRT-Edge-LLM@513dcd18291e587c80928911a480761352f3c2d8",
+    "w4a16_reference": "mingti-org/phyai@bcb6bc312b52cc12ba5fa64201d5a36409e4616c",
+    "comparison": "same real V01 observations/noise against original 9999; train-only calibration data when required",
+    "reference": "existing RTX3060 original JAX unified-memory run",
+    "measurement_scope": "false refers to optimized/quantized candidate, not existing original JAX run"
+  },
+  "existing_field_result": {
+    "source_commit": "158c1e163374046d75fc4f4289c94779cbf43653",
+    "receipt": "results/piper-real-single-v1/20261124_blue_red50_full/pi05_blue_sdk_field_20261125.json",
+    "runtime": "Orbax/JAX unified memory, restore_concurrent_gb=3",
+    "policy_updates": 81,
+    "arm_submissions_approach": 1522,
+    "gripper_submissions_approach": 69,
+    "reported_typical_inference_seconds": [
+      0.4,
+      0.5
+    ],
+    "latency_source": "narrative state/log, not per-request timings",
+    "complete_sequence_autonomous": false,
+    "active_grasp_sdk_request_m": 0.015,
+    "measured_after_grasp_m": 0.0244,
+    "model_local_path": null,
+    "runtime_recipe_published": false
+  }
+}

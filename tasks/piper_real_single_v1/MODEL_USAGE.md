@@ -1,6 +1,10 @@
 # 单相机 π0 / π0.5 模型接口与正式训练入口
 
-当前状态：**PREPARATION_ONLY**。本轮完成源码和配置准备，没有启动训练、模型推理或 GPU 工作。真实观测尚不能替代带实际动作标签的训练示范。接口以现有 OpenPI `215abfb217dbac7d5f1273282331b9b1866c0479` 为依据，独立于旧 `tasks/piper_color_v1` 和 B 资产。
+**2026-11-25当前状态：π0.5全参10,000步及V01完成，候选9999；3060 Laptop6GiB已用原始Orbax/JAX统一内存完成本地推理与模型引导、SDK辅助抓放。完整策略自主抓放待接续。** 详见[部署计划与执行提示词](../../docs/PI05_FIRST_REAL_DEPLOYMENT_20261125.md)及[09:58现场回执](../../results/piper-real-single-v1/20261124_blue_red50_full/pi05_blue_sdk_field_20261125.json)。
+
+先保留第二平台已跑的入口、环境与本地资产路径，不把旧PREPARATION_ONLY模板当当前实验状态。下文通用格式保留为接口说明；本批冻结数据为kinesthetic_manual_gripper_v1，六轴与夹爪监督来自未来50ms实测位置，不冒称主动CAN命令或力监督。当前实际配置为wrist；π0与π0.5各用自己的norm。
+
+接口以OpenPI `215abfb217dbac7d5f1273282331b9b1866c0479`为依据，独立于旧`tasks/piper_color_v1`和B资产。ONNX／量化不是当前实机接续前置条件。
 
 ## 1. 模型输入、动作与时间约定
 
@@ -9,7 +13,7 @@
 | `camera_rgb` | 一台真实相机的 RGB、HWC、uint8；不要传 BGR |
 | `state` | 7 维：六个实测关节角 rad，随后为实测夹爪总开口 m |
 | `prompt` | 当前任务的字符串指令 |
-| `actions` | 训练时的实际绝对目标，六个关节 rad 加夹爪总开口 m；观测与推理不要求此字段 |
+| `actions` | 七维监督目标，六关节rad＋SDK宽度m；本批kinesthetic合同取未来50ms实测值，其他来源须保留真实动作语义；观测/推理不要求此字段 |
 | `camera_mount=external_fixed` | 真实图映射 `base_0_rgb` |
 | `camera_mount=wrist` | 真实图映射 `left_wrist_0_rgb` |
 | 其余图像槽 | 零占位且 `image_mask=False`，不构造第二视角 |
